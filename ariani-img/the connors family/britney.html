@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Britney Connor — A Era da Extinção</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0e2016;--sage:#2d6e3a;--mint:#7ec8a0;
+  --gold:#c9963a;--cream:#e8f0e0;--ash:#90a898;
+  --dark:#080f0a;--panel:#101a12;--panel2:#162018;
+  --line:rgba(126,200,160,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden;font-size:17px;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(8,15,10,0.95),transparent);backdrop-filter:blur(8px);}
+.nav-back{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--ash);text-decoration:none;text-transform:uppercase;transition:color 0.2s;}
+.nav-back:hover{color:var(--mint);}
+.nav-name{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--mint);font-style:italic;}
+.nav-org{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;}
+#hero{position:cover;inset:0;width:100%;height:500%;object-fit:contain;object-position:center center;}
+#hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;}
+.hero-photo{position:absolute;inset:0;width:100%;height:200%;object-fit:cover;object-position:center top;}
+.hero-photo-placeholder{font-family:'DM Serif Display',serif;font-size:20rem;color:rgba(126,200,160,0.04);font-style:italic;user-select:none;}
+
+
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(126,200,160,0.06) 1px,transparent 1px);background-size:40px 40px;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,15,10,0.9) 0%,rgba(8,15,10,0.4) 60%,rgba(8,15,10,0.1) 100%);}
+.hero-overlay-b{position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(8,15,10,1) 100%);}
+.hero-vline{position:absolute;left:3.5rem;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--mint) 30%,var(--mint) 70%,transparent);opacity:0.2;}
+
+.hero-content{position:relative;z-index:2;padding:0 5rem;}
+.hero-tag{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.4em;color:var(--mint);text-transform:uppercase;margin-bottom:1.5rem;opacity:0.7;}
+.hero-name{font-family:'DM Serif Display',serif;font-size:clamp(3.5rem,8vw,7rem);line-height:0.95;color:var(--cream);}
+.hero-name em{color:var(--mint);font-style:italic;}
+.hero-sub{font-family:'Cinzel',serif;font-size:0.63rem;letter-spacing:0.35em;color:var(--ash);text-transform:uppercase;margin-top:1.2rem;margin-bottom:2rem;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.hero-badge{font-family:'DM Sans',sans-serif;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;padding:0.3rem 0.9rem;border:1px solid rgba(126,200,160,0.25);color:var(--mint);}
+.hero-badge.gold{border-color:rgba(201,150,58,0.3);color:var(--gold);}
+
+#stats{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-item{padding:2.5rem 2rem;text-align:center;border-right:1px solid var(--line);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--mint);line-height:1;display:block;}
+.stat-label{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;margin-top:0.4rem;display:block;}
+
+.page-section{padding:7rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.5em;color:var(--mint);text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:1rem;opacity:0.75;}
+.section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--mint),transparent);}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-style:italic;color:var(--cream);margin-bottom:3rem;}
+
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.profile-card{background:var(--panel);border:1px solid var(--line);padding:2.5rem;}
+.profile-card.full{grid-column:1/-1;}
+.pc-label{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.3em;color:var(--mint);text-transform:uppercase;margin-bottom:0.8rem;display:block;opacity:0.75;}
+.pc-title{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--cream);margin-bottom:1rem;}
+.pc-text{color:var(--ash);line-height:1.85;}
+.pc-text strong{color:var(--cream);}
+
+.trait-row{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.7rem;}
+.trait-dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);flex-shrink:0;}
+.trait-name{font-family:'Cinzel',serif;font-size:0.57rem;letter-spacing:0.15em;color:var(--ash);text-transform:uppercase;}
+.trait-val{font-family:'DM Sans',sans-serif;font-size:0.78rem;color:var(--cream);margin-left:auto;font-weight:500;}
+
+.skill-item{margin-bottom:1.4rem;}
+.skill-top{display:flex;justify-content:space-between;margin-bottom:0.5rem;}
+.skill-name{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;color:var(--ash);text-transform:uppercase;}
+.skill-pct{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--mint);}
+.skill-track{height:2px;background:rgba(255,255,255,0.06);}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--forest),var(--sage),var(--mint));width:0;transition:width 1.4s cubic-bezier(.22,1,.36,1);box-shadow:0 0 8px rgba(126,200,160,0.25);}
+.skill-fill.animated{width:var(--w);}
+
+.big-quote{background:var(--panel2);border-left:2px solid var(--mint);padding:3rem;margin:3px 0;position:relative;}
+.big-quote::before{content:'"';position:absolute;top:-2rem;left:1rem;font-family:'DM Serif Display',serif;font-size:14rem;color:rgba(126,200,160,0.04);line-height:1;pointer-events:none;font-style:italic;}
+.bq-text{font-family:'DM Serif Display',serif;font-size:1.5rem;font-style:italic;color:var(--cream);line-height:1.5;position:relative;z-index:1;}
+.bq-author{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.3em;color:var(--mint);text-transform:uppercase;margin-top:1.5rem;display:block;opacity:0.7;}
+
+.vtimeline{position:relative;padding-left:2.5rem;}
+.vtimeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--mint) 10%,var(--mint) 90%,transparent);opacity:0.4;}
+.vt-item{position:relative;margin-bottom:3rem;opacity:0;transform:translateY(16px);transition:opacity 0.6s,transform 0.6s;}
+.vt-item.visible{opacity:1;transform:translateY(0);}
+.vt-item::before{content:'';position:absolute;left:-2.5rem;top:0.5rem;width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 8px rgba(126,200,160,0.4);}
+.vt-year{font-family:'DM Serif Display',serif;font-size:0.9rem;color:var(--mint);margin-bottom:0.3rem;font-style:italic;}
+.vt-title{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--cream);margin-bottom:0.5rem;}
+.vt-text{color:var(--ash);font-size:0.93rem;line-height:1.7;}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.gallery-item{position:relative;height:280px;background:var(--panel2);overflow:hidden;border:1px solid var(--line);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;}
+.gallery-placeholder span{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;color:rgba(126,200,160,0.2);text-transform:uppercase;border:1px dashed rgba(126,200,160,0.12);padding:0.3rem 0.7rem;}
+.gallery-placeholder .gp-letter{font-family:'DM Serif Display',serif;font-size:5rem;color:rgba(126,200,160,0.05);font-style:italic;}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(8,15,10,0.9));font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;color:var(--ash);text-transform:uppercase;transform:translateY(100%);transition:transform 0.3s;}
+.gallery-item:hover .gallery-caption{transform:translateY(0);}
+
+.back-section{background:var(--panel);border-top:1px solid var(--line);padding:3rem 2rem;text-align:center;}
+.back-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
+.char-link{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1px solid var(--line);color:var(--ash);text-decoration:none;transition:all 0.2s;}
+.char-link:hover,.char-link.active{border-color:var(--mint);color:var(--mint);}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){.hero-content{padding:0 1.5rem;}.stats-inner{grid-template-columns:repeat(2,1fr);}.profile-grid{grid-template-columns:1fr;}.profile-card.full{grid-column:auto;}.gallery{grid-template-columns:1fr 1fr;}}
+
+.gallery-loop {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.gallery-loop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery-loop img.active {
+  opacity: 1;
+}
+
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← Família Connor</a>
+  <span class="nav-name">Hellsings</span>
+  <span class="nav-org">A Era da Extinção</span>
+</nav>
+<div class="back-section">
+  <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--ash);text-transform:uppercase;">Outros Personagens</p>
+  <div class="back-links">
+    <a href="jack.html" class="char-link">Jack</a>
+    <a href="alice.html" class="char-link">Alice</a>
+    <a href="mark.html" class="char-link">Mark</a>
+    <a href="ariani.html" class="char-link">Ariani</a>
+    <a href="britney.html" class="char-link active">Britney</a>
+    <a href="jully.html" class="char-link">Jully</a>
+    <a href="index.html" class="char-link">← Início</a>
+  </div>
+</div>
+<section id="hero">
+  <div class="hero-photo">
+    <img id="hero-img" src="img/britney1.png" alt="Britney Connor">
+            
+    <div class="hero-photo-placeholder">BC</div>
+  </div>
+  <div class="hero-dots"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-b"></div>
+  <div class="hero-vline"></div>
+  <div class="hero-content">
+    <p class="hero-tag">03 — Connor · Estudante</p>
+    <h1 class="hero-name">BRITNEY<br><em>Connor</em></h1>
+    <p class="hero-sub">Terceira Filha · Estudante · Mora com Mark</p>
+    <div class="hero-badges">
+      <span class="hero-badge">Estudante</span>
+      <span class="hero-badge">Futura Médica</span>
+      <span class="hero-badge gold">Olhos: Verde Escuro · Loira</span>
+      <span class="hero-badge">Britânica</span>
+    </div>
+  </div>
+</section>
+
+<div id="stats">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><span class="stat-num">Idade</span><span class="stat-label">23 anos</span></div>
+    <div class="stat-item reveal"><span class="stat-num">Altura</span><span class="stat-label">1,68 m</span></div>
+    <div class="stat-item reveal"><span class="stat-num">Futura Dr.</span><span class="stat-label">Estuda Medicina</span></div>
+    <div class="stat-item reveal"><span class="stat-num">∞</span><span class="stat-label">Amor pela família</span></div>
+  </div>
+</div>
+
+<section class="page-section">
+  <p class="section-label reveal">Perfil</p>
+  <h2 class="section-title reveal">Identidade</h2>
+  <div class="profile-grid">
+    <div class="profile-card reveal">
+      <span class="pc-label">Aparência</span>
+      <h3 class="pc-title">Traços Físicos</h3>
+      <div class="trait-row"><div class="trait-dot" style="background:#2d6e2d"></div><span class="trait-name">Olhos</span><span class="trait-val">Verde Escuro (como Jack)</span></div>
+      <div class="trait-row"><div class="trait-dot" style="background:#d4b96a"></div><span class="trait-name">Cabelo</span><span class="trait-val">Loiro</span></div>
+      <div class="trait-row"><div class="trait-dot" style="background:#d4b296"></div><span class="trait-name">Pele</span><span class="trait-val">Branca</span></div>
+      <div class="trait-row"><div class="trait-dot" style="background:#888"></div><span class="trait-name">Óculos</span><span class="trait-val">Grau baixo, para letura</span></div>
+      <br>
+      <p class="pc-text">Os mesmos olhos verde-escuros do irmão Jack — um traço que a conecta ao primogênito mesmo em aparência. Loira, usa óculos de grau que se tornaram parte da sua identidade.</p>
+    </div>
+    <div class="profile-card reveal">
+      <span class="pc-label">Vida Atual</span>
+      <h3 class="pc-title">Casa, Estudos & Jully</h3>
+      <p class="pc-text">Britney é estudante e mora com o irmão <strong>Mark Connor</strong> e a irmã <strong>Jully</strong>. Essa casa é um ponto de equilíbrio entre a intensidade entre irmãos e a vida mais simples que Britney e Jully constroem no dia a dia.<br><br>A amizade com <strong>Jully</strong> é central na vida de Britney — uma parceria que vai além da convivência.</p>
+    </div>
+    <div class="profile-card full reveal">
+      <span class="pc-label">Biografia</span>
+      <h3 class="pc-title">A História de Britney Connor</h3>
+      <p class="pc-text">Britney Connor é a do meio — e como toda filha do meio, aprendeu cedo que seu espaço precisava ser conquistado entre a força imponente de Jack e a determinação silenciosa de Mark.<br><br>Cresceu sob o cuidado do irmão mais velho em uma casa que teve de se reinventar depois da perda dos pais. Aprendeu a ser resiliente sem perceber. Aprendeu a sorrir mesmo quando custava.<br><br>Hoje ela é estudante, e mora com o seu irmão Mark e com a sua irmã ,<strong> Jully </strong> a mais nova.<br> Antes, as duas moravam com o Jack, até Mark voltar da marinha americana e chamar ela para irem morar com ele, pois ele não queria ficar sozinho, e assim elas foram..<br><br><em>Britney passou uma fase complicadan em sua vida, várias superações dentre elas, uma depressão pesada.</em></p>
+    </div>
+  </div>
+</section>
+
+<section class="page-section" style="background:var(--panel);padding:5rem 2rem;max-width:100%;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p class="section-label reveal">Capacidades</p>
+    <h2 class="section-title reveal">Habilidades</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+      <div class="reveal">
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Estudos Acadêmicos</span><span class="skill-pct">88</span></div><div class="skill-track"><div class="skill-fill" style="--w:88%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Empatia</span><span class="skill-pct">95</span></div><div class="skill-track"><div class="skill-fill" style="--w:95%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Comunicação</span><span class="skill-pct">90</span></div><div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div></div>
+      </div>
+      <div class="reveal">
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Resiliência</span><span class="skill-pct">92</span></div><div class="skill-track"><div class="skill-fill" style="--w:92%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Amizade</span><span class="skill-pct">99</span></div><div class="skill-track"><div class="skill-fill" style="--w:99%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Lealdade à família</span><span class="skill-pct">100</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="big-quote reveal" style="max-width:1100px;margin:3px auto;">
+  <p class="bq-text">"Cresci entre gigantes. Aprendi que não preciso ser o maior — só precisa ser eu."</p>
+  <span class="bq-author">Britney Connor</span>
+</div>
+
+<section class="page-section">
+  <p class="section-label reveal">Cronologia</p>
+  <h2 class="section-title reveal">Linha do Tempo</h2>
+  <div class="vtimeline">
+    <div class="vt-item"><span class="vt-year">Infância</span><h3 class="vt-title">Sob o Cuidado de Jack</h3><p class="vt-text">Após a perda dos pais, Britney cresce com o irmão Jack como guardião. Uma infância que ensina sobre força sem palavras.</p></div>
+    <div class="vt-item"><span class="vt-year">Adolescência</span><h3 class="vt-title">A Do Meio</h3><p class="vt-text">Entre Jack e Mark, Britney encontra seu próprio espaço. Os óculos chegam. Os estudos começam a definir quem ela está se tornando.</p></div>
+    <div class="vt-item"><span class="vt-year">Hoje</span><h3 class="vt-title">Com Mark e Jully</h3><p class="vt-text">Britney mora com Mark e com a Jully. Uma casa que mistura a vida normal dos estudantes com a bagunça diaria dos irmãos.</p></div>
+    <div class="vt-item" style="opacity:0.35;"><span class="vt-year">[ Em Branco ]</span><h3 class="vt-title">Aguardando o autor</h3><p class="vt-text">Adicione os próximos capítulos da história de Britney.</p></div>
+  </div>
+</section>
+
+<section class="page-section" style="padding-top:2rem;"   class="gallery-loop">
+  <p class="section-label reveal">Galeria</p>
+  <h2 class="section-title reveal">Fotos</h2>
+ <div class="gallery-loop">
+  <img src="img/brit.png" alt="Britney 1" class="active">
+  <img src="img/brit2.png " alt="Britney 2">
+  <img src="img/brit4.png " alt="Britney 3">
+  <img src="img/britconnor.png " alt="Britney 4">
+  <img src="img/britney.png" alt="Britney 5">
+  <img src="img/britney1.png" alt="Britney 6">
+  <img src="img/britney2.png" alt="Britney 6">
+  <img src="img/universidade.png " alt="Britney 7">
+  <img src="img/britjull1.png " alt="Britney 9">
+  <img src="img/britjull0.png " alt="Britney 10">
+  <img src="img/britjul.png " alt="Britney 11">
+  <img src="img/britney&jully.png " alt="Briney 12">
+
+</div>
+</section>
+
+<script>
+const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>{e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));},i*80);obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+const images = document.querySelectorAll('.gallery-loop img');
+let current = 0;
+
+function showNextImage() {
+  images[current].classList.remove('active');
+  current = (current + 1) % images.length;
+  images[current].classList.add('active');
+}
+
+setInterval(showNextImage, 4000); // troca a cada 4 segundos
+</script>
+</body>
+</html>

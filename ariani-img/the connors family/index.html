@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Era da Extinção</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:100%;height:100%;overflow:hidden;}
+
+body{
+  background:#050403;
+  font-family:'Crimson Pro',Georgia,serif;
+  cursor:none;
+}
+
+/* ─── CURSOR CUSTOM ─── */
+#cursor{
+  position:fixed;width:6px;height:6px;
+  background:var(--gold,#c9963a);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform 0.1s;
+}
+#cursor-ring{
+  position:fixed;width:32px;height:32px;
+  border:1px solid rgba(201,150,58,0.4);border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:all 0.15s ease;
+}
+body:hover #cursor-ring{opacity:1;}
+
+/* ─── NOISE ─── */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9997;opacity:0.6;
+}
+
+/* ─── MAIN CONTAINER ─── */
+#scene{
+  position:fixed;inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ─── MANSÃO — IMAGEM DE FUNDO ─── */
+#mansion-bg{
+  position:absolute;inset:0;
+  background:#080604;
+  overflow:hidden;
+}
+
+/* Imagem da mansão:
+   Quando tiver a imagem, adicione dentro do #mansion-bg:
+   <img id="mansion-img" src="mansao-connor.jpg" alt="Mansão Connor">
+   com o CSS abaixo já preparado */
+#mansion-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center center;
+  animation:slow-zoom 30s ease-in-out infinite alternate;
+  filter:brightness(0.55) contrast(1.1) saturate(0.85);
+}
+
+/* Placeholder enquanto não tem imagem */
+#mansion-placeholder{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(139,26,26,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 40% at 30% 40%, rgba(20,12,6,0.8) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(12,8,4,0.6) 0%, transparent 60%),
+    linear-gradient(180deg, #0a0806 0%, #1a0e08 30%, #0a0604 60%, #050403 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.placeholder-text{
+  font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;
+  color:rgba(201,150,58,0.15);text-transform:uppercase;text-align:center;
+  line-height:2.5;
+  border:1px dashed rgba(201,150,58,0.08);padding:1.5rem 2.5rem;
+}
+
+/* ─── ANIMAÇÃO ZOOM LENTO ─── */
+@keyframes slow-zoom{
+  from{transform:scale(1.0);}
+  to{transform:scale(1.08);}
+}
+
+/* ─── CAMADAS DE OVERLAY ─── */
+/* Vinheta escura nas bordas */
+#vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 85% 85% at 50% 50%, transparent 40%, rgba(5,4,3,0.85) 100%);
+  pointer-events:none;
+}
+/* Gradiente base para o conteúdo */
+#gradient-base{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(5,4,3,0.6) 0%,
+    rgba(5,4,3,0.1) 30%,
+    rgba(5,4,3,0.15) 60%,
+    rgba(5,4,3,0.92) 100%
+  );
+  pointer-events:none;
+}
+/* Linha horizontal sutil no centro */
+#scanline{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:70%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,150,58,0.06),transparent);
+  pointer-events:none;
+}
+
+/* ─── PARTICLES ─── */
+#particles{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.particle{
+  position:absolute;
+  width:1px;height:1px;
+  background:rgba(201,150,58,0.6);
+  border-radius:50%;
+  animation:particle-float linear infinite;
+}
+@keyframes particle-float{
+  0%{transform:translateY(100vh) translateX(0);opacity:0;}
+  10%{opacity:1;}
+  90%{opacity:0.3;}
+  100%{transform:translateY(-10vh) translateX(var(--drift));opacity:0;}
+}
+
+/* ─── CONTENT LAYER ─── */
+#content{
+  position:relative;z-index:10;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  width:100%;height:100%;
+  padding:2rem;
+}
+
+/* Top bar */
+#top-bar{
+  position:absolute;top:0;left:0;right:0;
+  padding:2rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  opacity:0;animation:fade-in 2s 0.5s both;
+}
+.top-tag{
+  font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.45em;
+  color:rgba(201,150,58,0.4);text-transform:uppercase;
+}
+.top-line{
+  flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,150,58,0.15),transparent);
+  margin:0 2rem;
+}
+
+/* Centro — Emblema + Título */
+#center-block{
+  display:flex;flex-direction:column;
+  align-items:center;text-align:center;
+  gap:0;
+}
+
+/* Emblema hexagonal */
+#emblem{
+  position:relative;margin-bottom:2.5rem;
+  opacity:0;animation:emblem-appear 2s 0.8s cubic-bezier(.22,1,.36,1) both;
+}
+.emblem-hex{
+  width:100px;height:100px;
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  border:1px solid rgba(201,150,58,0.35);
+  background:rgba(201,150,58,0.03);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(201,150,58,0.1),inset 0 0 30px rgba(201,150,58,0.04);
+  position:relative;
+}
+.emblem-hex-inner{
+  width:68px;height:68px;
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  border:1px solid rgba(201,150,58,0.15);
+  display:flex;align-items:center;justify-content:center;
+}
+.emblem-letter{
+  font-family:'Bebas Neue',sans-serif;font-size:2.2rem;
+  color:#c9963a;
+  text-shadow:0 0 20px rgba(201,150,58,0.5);
+  line-height:1;
+}
+/* Anel rotativo */
+.emblem-orbit{
+  position:absolute;
+  width:140px;height:140px;
+  border-radius:50%;
+  border:1px dashed rgba(201,150,58,0.1);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  animation:orbit-spin 20s linear infinite;
+}
+.emblem-orbit-2{
+  position:absolute;
+  width:170px;height:170px;
+  border-radius:50%;
+  border:1px solid rgba(201,150,58,0.05);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  animation:orbit-spin 35s linear infinite reverse;
+}
+@keyframes orbit-spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes emblem-appear{
+  from{opacity:0;transform:scale(0.6) rotate(-20deg);}
+  to{opacity:1;transform:scale(1) rotate(0deg);}
+}
+
+/* Eyebrow */
+#eyebrow{
+  font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.6em;
+  color:rgba(201,150,58,0.6);text-transform:uppercase;
+  margin-bottom:1.2rem;
+  opacity:0;animation:fade-up 1.2s 1.4s both;
+}
+
+/* Título principal */
+#main-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3.5rem,10vw,8.5rem);
+  letter-spacing:0.08em;line-height:0.85;
+  color:#e8dfc8;
+  text-shadow:0 2px 60px rgba(201,150,58,0.12);
+  opacity:0;animation:title-reveal 1.5s 1.8s cubic-bezier(.22,1,.36,1) both;
+  position:relative;
+}
+#main-title span{color:#c9963a;}
+#main-title::after{
+  content:'';
+  position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);
+  width:0;height:1px;
+  background:linear-gradient(90deg,transparent,#c9963a,transparent);
+  animation:line-expand 1s 3s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes line-expand{from{width:0;}to{width:100%;}}
+
+/* Subtítulo */
+#subtitle{
+  font-family:'Crimson Pro',serif;font-style:italic;
+  font-size:clamp(0.9rem,2vw,1.2rem);
+  color:rgba(176,168,152,0.7);
+  margin-top:1.5rem;letter-spacing:0.05em;
+  opacity:0;animation:fade-up 1s 2.8s both;
+  max-width:460px;line-height:1.6;
+}
+
+/* Divider ornamental */
+#ornament{
+  display:flex;align-items:center;gap:1.2rem;
+  margin:2.5rem 0;
+  opacity:0;animation:fade-up 1s 3.2s both;
+  width:min(320px,70%);
+}
+#ornament::before,#ornament::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,150,58,0.3),transparent);
+}
+.orn-diamond{width:5px;height:5px;background:#c9963a;transform:rotate(45deg);flex-shrink:0;}
+.orn-text{
+  font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.4em;
+  color:rgba(201,150,58,0.4);text-transform:uppercase;white-space:nowrap;
+}
+
+/* ─── BOTÃO ENTRAR ─── */
+#enter-btn{
+  position:relative;
+  font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.55em;text-transform:uppercase;
+  color:#c9963a;
+  background:transparent;
+  border:1px solid rgba(201,150,58,0.35);
+  padding:1rem 3rem;
+  cursor:pointer;
+  overflow:hidden;
+  transition:color 0.4s,border-color 0.4s;
+  opacity:0;animation:fade-up 1s 3.6s both;
+  text-decoration:none;display:inline-block;
+}
+#enter-btn::before{
+  content:'';
+  position:absolute;inset:0;
+  background:rgba(201,150,58,0.06);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+#enter-btn:hover::before{transform:scaleX(1);}
+#enter-btn:hover{
+  color:#e8dfc8;
+  border-color:rgba(201,150,58,0.7);
+}
+/* Glow pulse no botão */
+#enter-btn::after{
+  content:'';
+  position:absolute;inset:-2px;
+  border:1px solid rgba(201,150,58,0.1);
+  animation:btn-pulse 3s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes btn-pulse{
+  0%,100%{opacity:0;transform:scale(1);}
+  50%{opacity:1;transform:scale(1.03);}
+}
+
+/* Hint de scroll/clique */
+#hint{
+  font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.35em;
+  color:rgba(176,168,152,0.3);text-transform:uppercase;
+  margin-top:1.5rem;
+  opacity:0;animation:fade-up 1s 4.2s both;
+}
+
+/* ─── BOTTOM BAR ─── */
+#bottom-bar{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:1.8rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  opacity:0;animation:fade-in 2s 1s both;
+}
+.bottom-tag{
+  font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.35em;
+  color:rgba(201,150,58,0.25);text-transform:uppercase;
+}
+/* Indicador de capítulo */
+.chapter-indicator{
+  display:flex;align-items:center;gap:0.8rem;
+}
+.ci-label{
+  font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.3em;
+  color:rgba(201,150,58,0.2);text-transform:uppercase;
+}
+.ci-dots{display:flex;gap:0.4rem;}
+.ci-dot{
+  width:20px;height:1px;background:rgba(201,150,58,0.15);
+  transition:background 0.3s,width 0.3s;
+}
+.ci-dot.active{background:rgba(201,150,58,0.5);width:35px;}
+
+/* ─── SIDE VERTICAL TEXT ─── */
+.side-text-left{
+  position:absolute;left:2rem;top:50%;
+  transform:translateY(-50%) rotate(-90deg);
+  font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.5em;
+  color:rgba(201,150,58,0.18);text-transform:uppercase;
+  white-space:nowrap;
+  opacity:0;animation:fade-in 2s 2s both;
+}
+.side-text-right{
+  position:absolute;right:2rem;top:50%;
+  transform:translateY(-50%) rotate(90deg);
+  font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.5em;
+  color:rgba(201,150,58,0.18);text-transform:uppercase;
+  white-space:nowrap;
+  opacity:0;animation:fade-in 2s 2s both;
+}
+
+/* ─── ANIMAÇÕES BASE ─── */
+@keyframes fade-up{
+  from{opacity:0;transform:translateY(16px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fade-in{
+  from{opacity:0;}to{opacity:1;}
+}
+@keyframes title-reveal{
+  from{opacity:0;transform:translateY(30px) skewY(2deg);}
+  to{opacity:1;transform:translateY(0) skewY(0);}
+}
+
+/* ─── TRANSIÇÃO DE SAÍDA ─── */
+#scene{transition:opacity 0.8s ease,filter 0.8s ease;}
+#scene.exit{opacity:0;filter:brightness(2);}
+
+/* ─── LOADING LINE ─── */
+#loader{
+  position:fixed;bottom:0;left:0;right:0;height:2px;z-index:9996;
+  background:rgba(201,150,58,0.06);
+}
+#loader-fill{
+  height:100%;background:linear-gradient(90deg,transparent,#c9963a,transparent);
+  width:0;animation:load-fill 2.5s cubic-bezier(.22,1,.36,1) 0.2s both;
+}
+@keyframes load-fill{from{width:0;}to{width:100%;}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:600px){
+  #top-bar,#bottom-bar{padding:1.2rem 1.5rem;}
+  .side-text-left,.side-text-right{display:none;}
+  #enter-btn{padding:0.9rem 2rem;font-size:0.65rem;}
+}
+</style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="../audio/epic.mp3" type="audio/mpeg" />
+  </audio>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- LOADER -->
+<div id="loader"><div id="loader-fill"></div></div>
+
+<div id="scene">
+
+  <!-- FUNDO — MANSÃO -->
+  <div id="mansion-bg">
+
+      <div class="placeholder-text">
+        <img id="mansion-img" src="img/mansao.png" alt="Mansão Connor">
+      </div>
+    </div>
+
+  <!-- VINHETA & GRADIENTE -->
+  <div id="vignette"></div>
+  <div id="gradient-base"></div>
+  <div id="scanline"></div>
+
+  <!-- PARTÍCULAS -->
+  <div id="particles"></div>
+
+  <!-- TEXTO LATERAL -->
+  <span class="side-text-left">A Era da Extinção · Família Connor</span>
+  <span class="side-text-right">Hellsings · Est. by Jack Connor</span>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="content">
+
+    <!-- BARRA SUPERIOR -->
+    <div id="top-bar">
+      <span class="top-tag">A Era da Extinção</span>
+      <div class="top-line"></div>
+      <span class="top-tag">Família Connor</span>
+    </div>
+
+    <!-- CENTRO -->
+    <div id="center-block">
+
+      <!-- EMBLEMA -->
+      <div id="emblem">
+        <div class="emblem-orbit-2"></div>
+        <div class="emblem-orbit"></div>
+        <div class="emblem-hex">
+          <div class="emblem-hex-inner">
+            <span class="emblem-letter">H</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <p id="eyebrow">Bem-vindo à Mansão Connor</p>
+
+      <h1 id="main-title">A ERA DA<br><span>EXTINÇÃO</span></h1>
+
+      <p id="subtitle">
+        "Um mundo que terminou. Uma família que sobreviveu.<br>
+        Uma organização que nunca parou de lutar."
+      </p>
+
+      <!-- ORNAMENTO -->
+      <div id="ornament">
+        <div class="orn-diamond"></div>
+        <span class="orn-text">Hellsings · Connor · Reino Unido</span>
+        <div class="orn-diamond"></div>
+      </div>
+
+      <!-- BOTÃO ENTRAR -->
+      <a id="enter-btn" href="telainicial.html">
+        Entrar
+      </a>
+
+      <p id="hint">Clique para entrar · Era do Passado</p>
+
+    </div>
+
+    <!-- BARRA INFERIOR -->
+    <div id="bottom-bar">
+      <span class="bottom-tag">© A Era da Extinção — Fan Site</span>
+      <div class="chapter-indicator">
+        <span class="ci-label">Capítulo</span>
+        <div class="ci-dots">
+          <div class="ci-dot active"></div>
+          <div class="ci-dot"></div>
+          <div class="ci-dot"></div>
+        </div>
+      </div>
+      <span class="bottom-tag">O Passado · Família Connor</span>
+    </div>
+
+  </div>
+</div>
+<input type="text" id="username" placeholder="Digite seu nome">
+<button id="enterBtn">Entrar</button>
+<script>
+// ─── CURSOR CUSTOMIZADO ───
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx + 'px';
+  cursor.style.top  = my + 'px';
+});
+
+// Ring com lag suave
+function animateRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px';
+  ring.style.top  = ry + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+// Cursor hover no botão
+const enterBtn = document.getElementById('enter-btn');
+enterBtn.addEventListener('click', enterSite);
+enterBtn.addEventListener('mouseenter', () => {
+  ring.style.width = '50px';
+  ring.style.height = '50px';
+  ring.style.borderColor = 'rgba(201,150,58,0.7)';
+});
+enterBtn.addEventListener('mouseleave', () => {
+  ring.style.width = '32px';
+  ring.style.height = '32px';
+  ring.style.borderColor = 'rgba(201,150,58,0.4)';
+});
+
+// ─── PARTÍCULAS ───
+const particlesContainer = document.getElementById('particles');
+const NUM_PARTICLES = 18;
+
+for (let i = 0; i < NUM_PARTICLES; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  const x = Math.random() * 100;
+  const dur = 12 + Math.random() * 20;
+  const delay = Math.random() * 15;
+  const drift = (Math.random() - 0.5) * 80;
+  const size = Math.random() > 0.7 ? 2 : 1;
+  p.style.cssText = `
+    left:${x}%;
+    width:${size}px;height:${size}px;
+    animation-duration:${dur}s;
+    animation-delay:-${delay}s;
+    --drift:${drift}px;
+    opacity:${0.3 + Math.random() * 0.5};
+  `;
+  particlesContainer.appendChild(p);
+}
+
+// ─── TRANSIÇÃO DE ENTRADA ───
+function enterSite(e) {
+  if (e && typeof e.preventDefault === 'function') {
+    e.preventDefault();
+  }
+  const dest = document.getElementById('enter-btn').href;
+  const scene = document.getElementById('scene');
+
+  // Flash breve + fade
+  scene.classList.add('exit');
+
+  // Som de clique visual — pulse no emblema
+  const hex = document.querySelector('.emblem-hex');
+  if (hex) {
+    hex.style.boxShadow = '0 0 80px rgba(201,150,58,0.5), inset 0 0 40px rgba(201,150,58,0.1)';
+  }
+
+  setTimeout(() => {
+    window.location.href = dest;
+  }, 200);
+}
+
+// ─── PARALLAX SUTIL NA IMAGEM ───
+document.addEventListener('mousemove', e => {
+  const xPct = (e.clientX / window.innerWidth - 0.5) * 2;
+  const yPct = (e.clientY / window.innerHeight - 0.5) * 2;
+  const img = document.getElementById('mansion-img') || document.getElementById('mansion-placeholder');
+  if (img) {
+    img.style.transform = `scale(1.04) translate(${xPct * 6}px, ${yPct * 4}px)`;
+  }
+});
+
+// ─── TECLA ENTER TAMBÉM ENTRA ───
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    enterBtn.focus();
+    enterBtn.click();
+  }
+});
+
+// ─── ANIMAÇÃO DE TEXTO GLITCH SUTIL NO TÍTULO ───
+const title = document.getElementById('main-title');
+let glitchTimer;
+function scheduleGlitch() {
+  const delay = 4000 + Math.random() * 6000;
+  glitchTimer = setTimeout(() => {
+    title.style.textShadow = `
+      2px 0 rgba(201,74,26,0.4),
+      -2px 0 rgba(42,160,200,0.3),
+      0 0 60px rgba(201,150,58,0.15)
+    `;
+    setTimeout(() => {
+      title.style.textShadow = '0 2px 60px rgba(201,150,58,0.12)';
+      scheduleGlitch();
+    }, 80);
+  }, delay);
+}
+// Inicia após animações carregarem
+setTimeout(scheduleGlitch, 5000);
+</script>
+
+
+<script>
+  const input = document.getElementById('username');
+  const button = document.getElementById('enterBtn');
+
+  // Função que você já usa para entrar
+  function entrar() {
+    const nome = input.value.trim();
+    if (nome !== "") {
+      // redireciona ou inicia a página
+      window.location.href = "home.html"; 
+    }
+  }
+
+  // Pressionar Enter no teclado
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      entrar();
+    }
+  });
+
+  // Clicar no botão
+  button.addEventListener("click", entrar);
+</script>
+</body>
+</html>

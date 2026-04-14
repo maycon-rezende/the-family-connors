@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alice Myers Connor — A Era da Extinção</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2a1040;--violet:#6b3fa0;--lavender:#c4a8e0;
+  --gold:#c9963a;--bone:#f0e8d8;--ash:#b8a8c0;
+  --dark:#0c080f;--panel:#140e1a;--panel2:#1c1224;
+  --line:rgba(196,168,224,0.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--bone);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden;font-size:18px;}
+
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(12,8,15,0.95),transparent);backdrop-filter:blur(8px);}
+.nav-back{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--ash);text-decoration:none;text-transform:uppercase;transition:color 0.2s;}
+.nav-back:hover{color:var(--lavender);}
+.nav-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.2em;color:var(--lavender);}
+.nav-org{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;}
+/* HERO */
+#hero-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top; 
+}
+#hero{
+  position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;}
+.hero-photo{position:absolute;inset:0;background:linear-gradient(135deg,#140e1a,#1c1228,#0c080f);display:flex;align-items:center;justify-content:center;}
+.hero-photo-placeholder{font-family:'Cormorant Garamond',serif;font-size:18rem;color:rgba(224, 184, 168, 0.04);font-style:italic;user-select:none;}
+/* IMAGEM ALICE:
+   <img id="hero-img" src="alice-hero.jpg" alt="Alice Connor"
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;"> */
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,8,15,0.92) 0%,rgba(12,8,15,0.5) 50%,rgba(12,8,15,0.2) 100%);}
+.hero-overlay-bottom{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(12,8,15,1) 100%);}
+
+/* Ornamento floral/médico */
+.hero-ornament{position:absolute;top:50%;right:8%;transform:translateY(-50%);width:300px;height:300px;border:1px solid rgba(196,168,224,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.hero-ornament::before{content:'';position:absolute;inset:20px;border:1px solid rgba(196,168,224,0.05);border-radius:50%;}
+.hero-ornament-text{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:rgba(196,168,224,0.2);text-transform:uppercase;text-align:center;line-height:2;}
+
+.hero-content{position:relative;z-index:2;padding:0 5rem;}
+.hero-tag{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.5em;color:var(--lavender);text-transform:uppercase;margin-bottom:1.5rem;opacity:0.7;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:300;line-height:0.95;color:var(--bone);}
+.hero-name em{color:blue;font-style:italic;}
+.hero-name .hero-last{color:red;}
+.hero-born{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.35em;color:var(--ash);text-transform:uppercase;margin-top:1.2rem;margin-bottom:2rem;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.hero-badge{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.9rem;border:1px solid rgba(196,168,224,0.25);color:var(--lavender);}
+
+/* Linha decorativa vertical */
+.hero-vline{position:absolute;left:3rem;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--lavender) 30%,var(--lavender) 70%,transparent);opacity:0.3;}
+
+/* STATS */
+#stats{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-item{padding:2.5rem 2rem;text-align:center;border-right:1px solid var(--line);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--lavender);line-height:1;display:block;font-weight:300;}
+.stat-label{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;margin-top:0.4rem;display:block;}
+
+/* SECTIONS */
+.page-section{padding:7rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.5em;color:var(--lavender);text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:1rem;opacity:0.8;}
+.section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--lavender),transparent);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;font-style:italic;color:var(--bone);margin-bottom:3rem;}
+
+/* PROFILE CARDS */
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.profile-card{background:var(--panel);border:1px solid var(--line);padding:2.5rem;}
+.profile-card.full{grid-column:1/-1;}
+.pc-label{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.3em;color:var(--lavender);text-transform:uppercase;margin-bottom:0.8rem;display:block;opacity:0.8;}
+.pc-title{font-family:'Cinzel',serif;font-size:1rem;color:var(--bone);font-weight:600;margin-bottom:1rem;}
+.pc-text{color:var(--ash);line-height:1.85;font-size:1rem;}
+.pc-text strong{color:var(--bone);}
+
+/* SKILL BARS */
+.skill-item{margin-bottom:1.4rem;}
+.skill-top{display:flex;justify-content:space-between;margin-bottom:0.5rem;}
+.skill-name{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.2em;color:var(--ash);text-transform:uppercase;}
+.skill-pct{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--lavender);}
+.skill-track{height:1px;background:rgba(255,255,255,0.06);}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--plum),var(--violet),var(--lavender));width:0;transition:width 1.4s cubic-bezier(.22,1,.36,1);box-shadow:0 0 10px rgba(196,168,224,0.3);}
+.skill-fill.animated{width:var(--w);}
+
+/* QUOTE */
+.big-quote{background:var(--panel2);border-left:2px solid var(--lavender);padding:3rem;margin:3px 0;position:relative;overflow:hidden;}
+.big-quote::before{content:'"';position:absolute;top:-2rem;left:1rem;font-family:'Cormorant Garamond',serif;font-size:14rem;color:rgba(196,168,224,0.04);line-height:1;pointer-events:none;font-style:italic;}
+.bq-text{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;color:var(--bone);line-height:1.5;position:relative;z-index:1;font-weight:300;}
+.bq-author{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--lavender);text-transform:uppercase;margin-top:1.5rem;display:block;opacity:0.7;}
+
+/* VTIMELINE */
+.vtimeline{position:relative;padding-left:2.5rem;}
+.vtimeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--lavender) 10%,var(--lavender) 90%,transparent);opacity:0.5;}
+.vt-item{position:relative;margin-bottom:3rem;opacity:0;transform:translateY(16px);transition:opacity 0.6s,transform 0.6s;}
+.vt-item.visible{opacity:1;transform:translateY(0);}
+.vt-item::before{content:'';position:absolute;left:-2.5rem;top:0.4rem;width:7px;height:7px;background:var(--lavender);border-radius:50%;box-shadow:0 0 10px rgba(196,168,224,0.4);}
+.vt-year{font-family:'Cormorant Garamond',serif;font-size:0.85rem;letter-spacing:0.3em;color:var(--lavender);margin-bottom:0.3rem;font-style:italic;}
+.vt-title{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--bone);font-weight:600;margin-bottom:0.5rem;}
+.vt-text{color:var(--ash);font-size:0.95rem;line-height:1.7;}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.gallery-item{position:relative;height:280px;background:var(--panel2);overflow:hidden;border:1px solid var(--line);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.5s cubic-bezier(.22,1,.36,1);}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;}
+.gallery-placeholder span{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;color:rgba(196,168,224,0.2);text-transform:uppercase;border:1px dashed rgba(196,168,224,0.12);padding:0.3rem 0.7rem;}
+.gallery-placeholder .gp-letter{font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(196,168,224,0.05);font-style:italic;}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(12,8,15,0.9));font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;color:var(--ash);text-transform:uppercase;transform:translateY(100%);transition:transform 0.3s;}
+.gallery-item:hover .gallery-caption{transform:translateY(0);}
+
+/* BACK */
+.back-section{background:var(--panel);border-top:1px solid var(--line);padding:3rem 2rem;text-align:center;}
+.back-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
+.char-link{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1px solid var(--line);color:var(--ash);text-decoration:none;transition:all 0.2s;}
+.char-link:hover{border-color:var(--lavender);color:var(--lavender);}
+.char-link.active{border-color:var(--lavender);color:var(--lavender);}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  .hero-content{padding:0 1.5rem;}
+  .hero-ornament{display:none;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .profile-grid{grid-template-columns:1fr;}
+  .profile-card.full{grid-column:auto;}
+  .gallery{grid-template-columns:1fr 1fr;}
+}
+
+.gallery-loop {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.gallery-loop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery-loop img.active {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="back-section">
+  <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--ash);text-transform:uppercase;">Outros Personagens</p>
+  <div class="back-links">
+    <a href="jack.html" class="char-link">Jack</a>
+    <a href="alice.html" class="char-link active">Alice</a>
+    <a href="mark.html" class="char-link">Mark</a>
+    <a href="ariani.html" class="char-link">Ariani</a>
+    <a href="britney.html" class="char-link">Britney</a>
+    <a href="jully.html" class="char-link">Jully</a>
+    <a href="index.html" class="char-link">← Início</a>
+  </div>
+</div>
+<nav>
+  <a href="index.html" class="nav-back">← Família Connor</a>
+  <span class="nav-name">HELLSINGS</span>
+  <span class="nav-org">A Era da Extinção</span>
+</nav>
+
+<section id="hero">
+  <div class="hero-photo">
+    <img id="hero-img" src="img/lice.png" alt="Alice Connor">
+    <!-- FOTO DE FUNDO ALICE:
+              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;"> -->
+    <div class="hero-photo-placeholder">A</div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-bottom"></div>
+  <div class="hero-vline"></div>
+  <div class="hero-ornament">
+    <div class="hero-ornament-text">Médica<br>·<br>Londres<br>·<br>Connor</div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">Esposa de Jack · Médica</p>
+    <h1 class="hero-name">ALICE<br><em>Myers</em><br><span class="hero-last">CONNOR</span></h1>
+    <p class="hero-born">Medicina · Londres · Mãe de Cinco</p>
+    <div class="hero-badges">
+      <span class="hero-badge">Médica</span>
+      <span class="hero-badge">Formada em Londres</span>
+      <span class="hero-badge">5 Filhos</span>
+      <span class="hero-badge">Esposa de Jack</span>
+    </div>
+  </div>
+</section>
+
+<div id="stats">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><span class="stat-num">5</span><span class="stat-label">Filhos Connor</span></div>
+    <div class="stat-item reveal"><span class="stat-num">Md.</span><span class="stat-label">Formada em Londres</span></div>
+    <div class="stat-item reveal"><span class="stat-num">∞</span><span class="stat-label">Amor por Jack</span></div>
+    <div class="stat-item reveal"><span class="stat-num">1ª</span><span class="stat-label">Médica da Família</span></div>
+  </div>
+</div>
+
+<section class="page-section">
+  <p class="section-label reveal">Perfil</p>
+  <h2 class="section-title reveal">Identidade</h2>
+  <div class="profile-grid">
+    <div class="profile-card reveal">
+      <span class="pc-label">Família</span>
+      <h3 class="pc-title">Os Filhos de Alice & Jack</h3>
+      <p class="pc-text">
+        <strong>Alucard Connor</strong> — o mais velho<br><br>
+        <strong>Nicolai Connor</strong><br><br>
+        <strong>Mary Connor</strong><br><br>
+        <strong>Diana Connor</strong><br><br>
+        <em style="color:rgba(196,168,224,0.5);">[+ Adicionar quinto filho]</em>
+      </p>
+    </div>
+    <div class="profile-card reveal">
+      <span class="pc-label">Trajetória</span>
+      <h3 class="pc-title">Da Escola a Londres</h3>
+      <p class="pc-text">Era a <strong>menos popular da escola</strong> quando Jack Connor a enxergou — e foi exatamente essa vulnerabilidade que os uniu.<br><br>Estudou <strong>medicina em Londres</strong>, construindo uma carreira sólida enquanto o marido servia no FBI. Hoje é o pilar de saúde e equilíbrio da família Connor.</p>
+    </div>
+    <div class="profile-card full reveal">
+      <span class="pc-label">Biografia</span>
+      <h3 class="pc-title">A História de Alice Myers Connor</h3>
+      <p class="pc-text">Alice Myers cresceu na invisibilidade. Na escola, era aquela que os outros não viam — não pela falta de valor, mas pela abundância de profundidade que o mundo raso ao redor dela não sabia apreciar. Jack Connor, no entanto, sempre soube ver além do óbvio.<br><br>O que começou como um amor silencioso na adolescência tornou-se a fundação de uma vida inteira. Enquanto Jack seguia para o FBI, Alice viajou até <strong>Londres</strong> para estudar medicina — determinada a construir algo só seu. Voltou doutora, esposa e, em breve, mãe.<br><br>Ao lado de Jack, criou cinco filhos e manteve a família Connor unida nos momentos em que a pressão poderia tê-la partido. É ela quem cuida quando o mundo lá fora sangra — e quem lembra aos Hellsings que por trás de cada missão, há uma família esperando em casa.<br><br><em>[Aguardando mais conteúdo do autor]</em></p>
+    </div>
+  </div>
+</section>
+
+<section class="page-section" style="background:var(--panel);padding:5rem 2rem;max-width:100%;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p class="section-label reveal">Capacidades</p>
+    <h2 class="section-title reveal">Habilidades</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+      <div class="reveal">
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Medicina & Cirurgia</span><span class="skill-pct">96</span></div><div class="skill-track"><div class="skill-fill" style="--w:96%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Diagnóstico Clínico</span><span class="skill-pct">94</span></div><div class="skill-track"><div class="skill-fill" style="--w:94%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Medicina de Campo</span><span class="skill-pct">88</span></div><div class="skill-track"><div class="skill-fill" style="--w:88%"></div></div></div>
+      </div>
+      <div class="reveal">
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Empatia & Cuidado</span><span class="skill-pct">99</span></div><div class="skill-track"><div class="skill-fill" style="--w:99%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Equilíbrio Emocional</span><span class="skill-pct">91</span></div><div class="skill-track"><div class="skill-fill" style="--w:91%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Lealdade</span><span class="skill-pct">100</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="big-quote reveal" style="max-width:1100px;margin:3px auto;">
+  <p class="bq-text">"Ele me enxergou quando eu era invisível para o mundo inteiro. Isso não tem preço."</p>
+  <span class="bq-author">Alice Myers Connor</span>
+</div>
+
+<section class="page-section">
+  <p class="section-label reveal">Cronologia</p>
+  <h2 class="section-title reveal">Linha do Tempo</h2>
+  <div class="vtimeline">
+    <div class="vt-item"><span class="vt-year">Escola</span><h3 class="vt-title">A Menos Popular</h3><p class="vt-text">Alice era invisível para a maioria. Até que Jack Connor decidiu enxergá-la — e tudo mudou.</p></div>
+    <div class="vt-item"><span class="vt-year">Londres</span><h3 class="vt-title">Faculdade de Medicina</h3><p class="vt-text">Alice parte para Londres para estudar medicina. Determinada a construir sua própria identidade além do amor que a aguardava.</p></div>
+    <div class="vt-item"><span class="vt-year">Casamento</span><h3 class="vt-title">Alice & Jack</h3><p class="vt-text">Jack e Alice se casam. O início de uma família que cresceria para além do que qualquer um deles havia imaginado.</p></div>
+    <div class="vt-item"><span class="vt-year">Família</span><h3 class="vt-title">Os Filhos Connor</h3><p class="vt-text">Alice e Jack constroem sua família. Cinco filhos, uma casa cheia de vida — e sempre um lugar seguro para os Hellsings retornarem.</p></div>
+    <div class="vt-item" style="opacity:0.35;"><span class="vt-year">[ Em Branco ]</span><h3 class="vt-title">Aguardando o autor</h3><p class="vt-text">Adicione os próximos capítulos da história de Alice.</p></div>
+  </div>
+</section>
+<section class="page-section" style="padding-top:2rem;"   class="gallery-loop">
+  <p class="section-label reveal">Galeria</p>
+  <h2 class="section-title reveal">Fotos</h2>
+ <div class="gallery-loop">
+  <img src="img/licemedica.png" alt="Alice 1" class="active">
+  <img src="img/licejack.png " alt="Alice 2">
+  <img src="img/licefamilia.png " alt="Alice 3">
+  <img src="img/familiajack.png" alt="Alice 4">
+  <img src="img/licefamilia.png " alt="Alice 5">
+  <img src="img/alice2.png " alt="Alice 6">
+  <img src="img/fenix.png " alt="Alice 8">
+  <img src="img/lice.png " alt="Alice 9">
+  <img src="img/lice2.png " alt="Alice 10">
+
+</div>
+</section>
+ <footer>
+    <p class="footer-logo">HELLSINGS</p>
+    <p class="footer-sub">A Era da Extinção &nbsp;·&nbsp; Família Connor &nbsp;·&nbsp; Fan Site</p>
+  </footer>
+<script>
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>{e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));},i*80);
+      obs.unobserve(e.target);
+    }
+  });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+const images = document.querySelectorAll('.gallery-loop img');
+let current = 0;
+
+function showNextImage() {
+  images[current].classList.remove('active');
+  current = (current + 1) % images.length;
+  images[current].classList.add('active');
+}
+
+setInterval(showNextImage, 4000); // troca a cada 4 segundos
+</script>
+</body>
+</html>

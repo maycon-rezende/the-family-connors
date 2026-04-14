@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack Connor — A Era da Extinção</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#8b1a1a;--ember:#c94a1a;--gold:#c9963a;
+  --bone:#e8dfc8;--ash:#b0a898;
+  --dark:#080604;--panel:#110d0a;--panel2:#1a1208;
+  --line:rgba(201,150,58,0.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--bone);font-family:'Crimson Pro',Georgia,serif;overflow-x:hidden;}
+
+
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(8,6,4,0.95),transparent);backdrop-filter:blur(8px);}
+.nav-back{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--ash);text-decoration:none;text-transform:uppercase;transition:color 0.2s;}
+.nav-back:hover{color:var(--gold);}
+.nav-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.2em;color:var(--gold);}
+.nav-org{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;}
+
+/* HERO */
+#hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:flex-end;}
+
+.hero-photo{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,#1a1208,#2a1a08,#0a0806);
+  display:flex;align-items:center;justify-content:center;
+}
+#hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
+/* IMAGEM DO JACK: substitua o .hero-photo-placeholder por:
+   <img id="hero-img" src="jack.jpg" alt="Jack Connor">
+   com o CSS: #hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;} */
+.hero-photo-placeholder{font-family:'Bebas Neue',sans-serif;font-size:20rem;color:rgba(201,150,58,0.04);letter-spacing:-0.05em;user-select:none;}
+
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,4,0.3) 0%,rgba(8,6,4,0.1) 40%,rgba(8,6,4,0.85) 75%,rgba(8,6,4,1) 100%);}
+.hero-overlay-left{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,6,4,0.7) 0%,transparent 50%);}
+
+/* Linhas decorativas */
+.hero-lines{position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,transparent,var(--ember) 30%,var(--gold) 70%,transparent);}
+
+.hero-content{position:relative;z-index:2;padding:0 4rem 5rem;max-width:900px;}
+.hero-tag{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.5em;color:var(--ember);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
+.hero-tag::before{content:'';display:block;width:40px;height:1px;background:var(--ember);}
+.hero-number{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,12vw,10rem);line-height:0.85;color:transparent;-webkit-text-stroke:1px rgba(201,150,58,0.2);letter-spacing:-0.02em;margin-bottom:-1rem;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,10vw,8rem);line-height:0.9;color:var(--bone);letter-spacing:0.02em;text-shadow:0 0 60px rgba(201,150,58,0.15);}
+.hero-name span{color:var(--gold);}
+.hero-subtitle{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.4em;color:var(--ash);text-transform:uppercase;margin-top:1.2rem;margin-bottom:2rem;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.hero-badge{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.9rem;border:1px solid rgba(201,150,58,0.3);color:var(--gold);}
+.hero-badge.red{border-color:rgba(139,26,26,0.5);color:var(--ember);}
+
+/* Scroll indicator */
+.scroll-ind{position:absolute;bottom:2rem;right:3rem;display:flex;flex-direction:column;align-items:center;gap:0.5rem;z-index:2;}
+.scroll-ind span{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.3em;color:var(--ash);opacity:0.5;writing-mode:vertical-rl;}
+.scroll-line{width:1px;height:50px;background:linear-gradient(var(--gold),transparent);animation:scrollpulse 2s ease-in-out infinite;}
+@keyframes scrollpulse{0%,100%{opacity:0.3;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.1);}}
+
+/* STATS STRIP */
+#stats{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-item{padding:2.5rem 2rem;text-align:center;border-right:1px solid var(--line);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1;display:block;}
+.stat-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;margin-top:0.4rem;display:block;}
+
+/* SECTIONS */
+.page-section{padding:7rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.5em;color:var(--ember);text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:1rem;}
+.section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--ember),transparent);}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:0.05em;color:var(--bone);margin-bottom:3rem;}
+
+/* PROFILE GRID */
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.profile-card{background:var(--panel);border:1px solid var(--line);padding:2.5rem;}
+.profile-card.full{grid-column:1/-1;}
+.pc-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.3em;color:var(--ember);text-transform:uppercase;margin-bottom:0.8rem;display:block;}
+.pc-title{font-family:'Cinzel',serif;font-size:1rem;color:var(--gold);font-weight:600;margin-bottom:1rem;}
+.pc-text{color:var(--ash);line-height:1.8;font-size:0.97rem;}
+.pc-text strong{color:var(--bone);}
+
+/* COLOR TRAIT */
+.trait-row{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.7rem;}
+.trait-dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);flex-shrink:0;}
+.trait-name{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.18em;color:var(--ash);text-transform:uppercase;}
+.trait-val{font-family:'Cinzel',serif;font-size:0.6rem;color:var(--bone);margin-left:auto;}
+
+/* SKILL BARS */
+.skill-item{margin-bottom:1.4rem;}
+.skill-top{display:flex;justify-content:space-between;margin-bottom:0.5rem;}
+.skill-name{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.2em;color:var(--ash);text-transform:uppercase;}
+.skill-pct{font-family:'Bebas Neue',sans-serif;font-size:0.9rem;color:var(--gold);letter-spacing:0.1em;}
+.skill-track{height:2px;background:rgba(255,255,255,0.06);position:relative;}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--ember),var(--gold));width:0;transition:width 1.4s cubic-bezier(.22,1,.36,1);box-shadow:0 0 10px rgba(201,150,58,0.4);}
+.skill-fill.animated{width:var(--w);}
+
+/* TIMELINE VERTICAL */
+.vtimeline{position:relative;padding-left:2.5rem;}
+.vtimeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--gold) 10%,var(--gold) 90%,transparent);}
+.vt-item{position:relative;margin-bottom:3rem;opacity:0;transform:translateY(16px);transition:opacity 0.6s,transform 0.6s;}
+.vt-item.visible{opacity:1;transform:translateY(0);}
+.vt-item::before{content:'';position:absolute;left:-2.5rem;top:0.4rem;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px rgba(201,150,58,0.5);}
+.vt-year{font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.2em;color:var(--ember);margin-bottom:0.3rem;}
+.vt-title{font-family:'Cinzel',serif;font-size:1rem;color:var(--bone);font-weight:600;margin-bottom:0.5rem;}
+.vt-text{color:var(--ash);font-size:0.93rem;line-height:1.7;}
+
+/* QUOTE */
+.big-quote{background:var(--panel2);border-left:3px solid var(--gold);padding:3rem;margin:3px 0;position:relative;overflow:hidden;}
+.big-quote::before{content:'"';position:absolute;top:-1rem;left:1rem;font-family:'Bebas Neue',sans-serif;font-size:12rem;color:rgba(201,150,58,0.05);line-height:1;pointer-events:none;}
+.bq-text{font-family:'Crimson Pro',serif;font-size:1.5rem;font-style:italic;color:var(--bone);line-height:1.5;position:relative;z-index:1;}
+.bq-author{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-top:1.5rem;display:block;}
+
+/* PHOTO GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3px;}
+.gallery-item{position:relative;height:280px;background:var(--panel2);overflow:hidden;border:1px solid var(--line);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.5s cubic-bezier(.22,1,.36,1);}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;}
+.gallery-placeholder span{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;color:rgba(201,150,58,0.2);text-transform:uppercase;border:1px dashed rgba(201,150,58,0.15);padding:0.3rem 0.7rem;}
+.gallery-placeholder .gp-letter{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:rgba(201,150,58,0.06);}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(8,6,4,0.9));font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;color:var(--ash);text-transform:uppercase;transform:translateY(100%);transition:transform 0.3s;}
+.gallery-item:hover .gallery-caption{transform:translateY(0);}
+
+/* BACK TO FAMILY */
+.back-section{background:var(--panel);border-top:1px solid var(--line);padding:3rem 2rem;text-align:center;}
+.back-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
+.char-link{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1px solid var(--line);color:var(--ash);text-decoration:none;transition:all 0.2s;}
+.char-link:hover{border-color:var(--gold);color:var(--gold);}
+.char-link.active{border-color:var(--gold);color:var(--gold);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  .hero-content{padding:0 1.5rem 4rem;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .profile-grid{grid-template-columns:1fr;}
+  .profile-card.full{grid-column:auto;}
+  .gallery{grid-template-columns:1fr 1fr;}
+  .back-section{padding:2rem 1rem;}
+}
+
+/* ===== Premium V4 Enhancements ===== */
+html{scroll-padding-top:90px;}
+body{overflow-x:hidden;}
+a,button{touch-action:manipulation;}
+img{max-width:100%;height:auto;}
+nav{border-bottom:1px solid rgba(255,255,255,0.04)!important;}
+nav::after{content:"";position:absolute;left:1.25rem;right:1.25rem;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,150,58,0.18),transparent);pointer-events:none;}
+.page-section,.section,.hero-content,#content,main{width:min(100%, 100%);}
+.hero-badges,.hero-content,.stats-inner,.profile-grid,.gallery,.gallery-loop,.manifesto-grid,.singles-row,.couple-row,.album-header,.filter-inner{min-width:0;}
+.hero-badge,.badge,.filter-btn,.nav-links a,.nav-back,.nav-logo,.nav-name{transition:all .25s ease;}
+.hero-badge:hover,.badge:hover{transform:translateY(-1px);}
+.page-section,.section{padding-left:max(1rem, env(safe-area-inset-left));padding-right:max(1rem, env(safe-area-inset-right));}
+.profile-card,.member-card,.manifesto-card,.photo-item,.secret-panel,.ethics-panel,.timeline-card,.stat-card{box-shadow:0 10px 30px rgba(0,0,0,.12);}
+.gallery-loop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch;}
+.gallery-loop img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.06);box-shadow:0 8px 24px rgba(0,0,0,.25);}
+.vtimeline,.timeline,.timeline-grid{min-width:0;}
+.big-quote,.secret-panel,.ethics-panel{border-radius:20px;overflow:hidden;}
+.footer-logo,.footer-sub,footer p{text-align:center;}
+.premium-mobile-toggle{display:none;appearance:none;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:inherit;border-radius:12px;padding:.72rem .8rem;line-height:1;cursor:pointer;min-width:48px;min-height:48px;backdrop-filter:blur(10px);}
+.premium-mobile-toggle span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;border-radius:2px;transition:transform .25s ease, opacity .25s ease;}
+nav.premium-open .premium-mobile-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+nav.premium-open .premium-mobile-toggle span:nth-child(2){opacity:0;}
+nav.premium-open .premium-mobile-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.premium-mobile-panel{display:none;position:fixed;left:1rem;right:1rem;top:74px;z-index:250;padding:1rem;border-radius:18px;background:rgba(10,8,6,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08);box-shadow:0 18px 50px rgba(0,0,0,.35);}
+.premium-mobile-panel a{display:block;padding:.9rem .75rem;border-radius:12px;text-decoration:none;color:inherit;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;}
+.premium-mobile-panel a + a{margin-top:.25rem;}
+.premium-mobile-panel a:hover{background:rgba(255,255,255,.04);}
+body.premium-menu-open{overflow:hidden;}
+@media (max-width:1100px){
+  .stats-inner{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .manifesto-grid,.couple-row,.singles-row{grid-template-columns:1fr!important;}
+  .couple-divider{display:none!important;}
+}
+@media (max-width:900px){
+  nav{padding:1rem 1rem!important;gap:.75rem;}
+  .hero-content{padding:0 1.25rem 3rem!important;max-width:100%!important;}
+  #hero,.hero,.hero-section{min-height:100svh;height:auto!important;}
+  .hero-number{margin-bottom:0!important;}
+  .scroll-ind,.scroll-hint{display:none!important;}
+  .profile-grid,.gallery,.grid-layout-1,.grid-layout-2,.grid-layout-3,.grid-layout-4,.grid-layout-5{grid-template-columns:1fr!important;}
+  .photo-item.wide,.photo-item.tall{grid-column:auto!important;grid-row:auto!important;}
+  .album-header{display:block!important;}
+  .album-number{margin-bottom:.5rem;}
+  .gallery-loop{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;}
+  .gallery-loop img{min-height:220px!important;}
+  .hero-ornament,.hero-ring1,.hero-ring2,.hero-emblem,.hero-hlines,.hero-accent,.hero-vline,.hero-lines{opacity:.45;transform:none!important;}
+}
+@media (max-width:768px){
+  .premium-mobile-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;}
+  .premium-mobile-panel.show{display:block;}
+  .nav-links{display:none!important;}
+  .nav-org{display:none!important;}
+  .nav-name,.nav-logo{font-size:.95rem!important;letter-spacing:.16em!important;}
+  .hero-content,.page-section,#content,main{padding-left:1rem!important;padding-right:1rem!important;}
+  .page-section{padding-top:4.5rem!important;padding-bottom:4.5rem!important;}
+  .hero-name{font-size:clamp(2.5rem,13vw,4rem)!important;line-height:.95!important;}
+  .hero-subtitle,.hero-sub,.hero-born,.hero-tag,.hero-eyebrow{letter-spacing:.22em!important;font-size:.62rem!important;}
+  .section-title{font-size:clamp(2rem,9vw,3rem)!important;line-height:1.02!important;}
+  .section-label{font-size:.56rem!important;letter-spacing:.28em!important;gap:.65rem!important;}
+  .profile-card,.manifesto-card,.member-card,.ethics-panel,.secret-panel{padding:1.35rem!important;border-radius:18px!important;}
+  .stats-inner{grid-template-columns:1fr 1fr!important;}
+  .stat-item{padding:1.4rem .8rem!important;}
+  .stat-num{font-size:2rem!important;}
+  .hero-badges,.hellsings-badges{gap:.45rem!important;}
+  .hero-badge,.badge{font-size:.54rem!important;padding:.38rem .72rem!important;letter-spacing:.14em!important;}
+  .skill-top,.trait-row{gap:.5rem;}
+  .skill-name,.trait-name,.pc-label{font-size:.55rem!important;letter-spacing:.14em!important;}
+  footer{padding-left:1rem!important;padding-right:1rem!important;}
+}
+@media (max-width:520px){
+  html,body{max-width:100%;}
+  nav{padding:.85rem .85rem!important;}
+  nav::after{left:.85rem;right:.85rem;}
+  .stats-inner{grid-template-columns:1fr!important;}
+  .gallery-loop{grid-template-columns:1fr!important;}
+  .gallery-loop img{min-height:200px!important;}
+  .hero-content{padding:0 .9rem 2rem!important;}
+  .page-section{padding:3.5rem .9rem!important;}
+  .hero-name{font-size:clamp(2.2rem,12vw,3.2rem)!important;}
+  .hero-number{font-size:clamp(3rem,16vw,5rem)!important;}
+  .hero-title{font-size:clamp(2.5rem,14vw,4rem)!important;}
+  .hero-desc,.pc-text,.mc-text,.sp-text,.vt-text,p{font-size:.98rem!important;line-height:1.7!important;}
+  .filter-btn{padding:.9rem .95rem!important;}
+}
+@media (hover:none) and (pointer:coarse){
+  body{cursor:auto!important;}
+  #cursor,#cursor-ring{display:none!important;}
+}
+
+
+/* ===== Responsive Mobile + Tablet Pack ===== */
+:root{--mobile-nav-offset:78px;}
+html,body{max-width:100%;overflow-x:hidden;}
+img,video,canvas,svg{max-width:100%;height:auto;}
+body{overflow-wrap:break-word;-webkit-text-size-adjust:100%;}
+a,button,[role="button"]{touch-action:manipulation;}
+.nav-links--fallback{display:none !important;}
+
+.swipe-menu-shell{
+  display:none;
+  position:fixed;
+  left:0; right:0;
+  top:var(--mobile-nav-offset);
+  z-index:180;
+  padding:.55rem .85rem .35rem;
+  background:linear-gradient(180deg, rgba(10,8,6,.94), rgba(10,8,6,.72));
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.swipe-menu{
+  display:flex;
+  gap:.55rem;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  scroll-snap-type:x proximity;
+  padding-bottom:.2rem;
+  touch-action:pan-x;
+}
+.swipe-menu::-webkit-scrollbar{display:none;}
+.swipe-menu a{
+  flex:0 0 auto;
+  scroll-snap-align:start;
+  white-space:nowrap;
+  text-decoration:none;
+  padding:.72rem .95rem;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  color:inherit;
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.swipe-menu a.is-current{
+  border-color:rgba(201,150,58,.45);
+  box-shadow:0 0 0 1px rgba(201,150,58,.15) inset;
+}
+body.touch-device #cursor,
+body.touch-device #cursor-ring{display:none !important;}
+
+@media (max-width: 1024px){
+  nav{padding:1rem 1.25rem !important; gap:.8rem;}
+  .page-section, section, main, #content{padding-left:1.25rem !important; padding-right:1.25rem !important;}
+  .stats-inner{grid-template-columns:repeat(2, minmax(0,1fr)) !important;}
+  .gallery{grid-template-columns:repeat(2, minmax(0,1fr)) !important;}
+  .profile-grid, .manifesto-grid, .members-grid, .family-grid, .couple-row, .singles-row, .album-grid{grid-template-columns:1fr !important;}
+  .hero-content{max-width:min(100%, 760px) !important; padding-left:1.25rem !important; padding-right:1.25rem !important;}
+  .hero-ornament, .hero-ring1, .hero-ring2{transform:scale(.8) translateY(-50%);}
+}
+
+@media (max-width: 768px){
+  :root{--mobile-nav-offset:74px;}
+  nav{
+    min-height:74px;
+    align-items:center !important;
+    justify-content:space-between !important;
+    flex-wrap:nowrap !important;
+    gap:.75rem;
+  }
+  nav .nav-back, nav .nav-logo, nav .nav-name{
+    min-width:0;
+    max-width:56%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  nav .nav-org{display:none !important;}
+  nav .nav-links{display:none !important;}
+  .swipe-menu-shell{display:block;}
+  #filter-bar{top:118px !important;}
+  #hero, .hero, .hero-section{min-height:100svh !important; height:auto !important;}
+  .hero-content{padding-bottom:2.5rem !important; text-align:left !important;}
+  .hero-number{margin-bottom:-.35rem !important;}
+  .hero-tag, .hero-sub, .hero-subtitle, .hero-born{letter-spacing:.22em !important;}
+  .hero-badges{gap:.4rem !important; justify-content:flex-start !important;}
+  .hero-badge{font-size:.58rem !important; padding:.32rem .7rem !important;}
+  .hero-vline, .hero-lines, .hero-accent, .hero-ornament, .scroll-ind, .scroll-hint, .hero-hlines{display:none !important;}
+  .section-title, .hero-title, .hero-name{word-break:break-word;}
+  .section-title{margin-bottom:1.8rem !important;}
+  .stats-inner{grid-template-columns:1fr 1fr !important;}
+  .stat-item{padding:1.4rem .8rem !important;}
+  .profile-card, .member-card, .manifesto-card, .album-card, .gallery-item{padding:1.1rem !important; height:auto;}
+  .gallery{grid-template-columns:1fr !important;}
+  .gallery-item{min-height:220px;}
+  .gallery-caption{transform:none !important;}
+  .back-links, .hero-badges{overflow-x:auto; scrollbar-width:none;}
+  .back-links::-webkit-scrollbar, .hero-badges::-webkit-scrollbar{display:none;}
+  .big-quote{padding:1.6rem !important;}
+  .bq-text{font-size:1.15rem !important;}
+  .vtimeline{padding-left:1.4rem !important;}
+  .vt-item::before{left:-1.4rem !important;}
+  .top-line{display:none !important;}
+  #top-bar{padding:1rem 1.25rem !important; gap:.75rem;}
+  #content{padding:1rem !important;}
+  .placeholder-text{padding:1rem 1.2rem !important; font-size:.5rem !important;}
+}
+
+@media (max-width: 560px){
+  .stats-inner{grid-template-columns:1fr !important;}
+  .hero-content{padding-left:1rem !important; padding-right:1rem !important;}
+  .page-section, section, main{padding-left:1rem !important; padding-right:1rem !important;}
+  .hero-title, .hero-name{font-size:clamp(2.2rem, 11vw, 3.5rem) !important; line-height:1 !important;}
+  .hero-number{font-size:clamp(3rem, 18vw, 5rem) !important;}
+  .hero-sub, .hero-subtitle, .hero-born{font-size:.62rem !important;}
+  .hero-divider{gap:.8rem !important; margin:1.25rem auto !important;}
+  .section-label, .pc-label, .stat-label, .hero-tag{font-size:.52rem !important;}
+  .trait-row{gap:.55rem !important;}
+}
+
+</style>
+</head>
+<body>
+    <!-- NAVEGAÇÃO ENTRE PERSONAGENS -->
+<div class="back-section">
+  <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:var(--ash);text-transform:uppercase;">Outros Personagens</p>
+  <div class="back-links">
+    <a href="jack.html" class="char-link active">Jack</a>
+    <a href="alice.html" class="char-link">Alice</a>
+    <a href="mark.html" class="char-link">Mark</a>
+    <a href="ariani.html" class="char-link">Ariani</a>
+    <a href="britney.html" class="char-link">Britney</a>
+    <a href="jully.html" class="char-link">Jully</a>
+    <a href="telainicial.html" class="char-link">← Início</a>
+  </div>
+</div>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-back">← Família Connor</a>
+  <span class="nav-name">JACK CONNOR</span>
+  <span class="nav-org">A Era da Extinção</span>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <img id="hero-img" src="jack-img/jack.png" alt="Jack Connor">
+   
+    <div class="hero-photo-placeholder">JC</div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-left"></div>
+  <div class="hero-lines"></div>
+
+  <div class="hero-content">
+    <p class="hero-tag">01 — Família Connor</p>
+    <div class="hero-number">01</div>
+    <h1 class="hero-name">JACK<br><span>CONNOR</span></h1>
+    <p class="hero-subtitle">Primogênito · Ex-FBI · Fundador dos Hellsings</p>
+    <div class="hero-badges">
+      <span class="hero-badge">1,93m</span>
+      <span class="hero-badge">Bodybuilder</span>
+      <span class="hero-badge red">FBI — Forças Especiais</span>
+      <span class="hero-badge">Britânico</span>
+      <span class="hero-badge">5 Filhos</span>
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <span>Explorar</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <span class="stat-num">01</span>
+      <span class="stat-label">Primogênito Connor</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num">Altura</span>
+      <span class="stat-label">1,93m</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num">05</span>
+      <span class="stat-label">Filhos com Alice</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num">∞</span>
+      <span class="stat-label">Lealdade à família</span>
+    </div>
+  </div>
+</div>
+
+<!-- PERFIL -->
+<section class="page-section">
+  <p class="section-label reveal">Perfil</p>
+  <h2 class="section-title reveal">IDENTIDADE</h2>
+
+  <div class="profile-grid">
+    <!-- APARÊNCIA -->
+    <div class="profile-card reveal">
+      <span class="pc-label">Aparência</span>
+      <h3 class="pc-title">Traços Físicos</h3>
+      <div class="trait-row"><div class="trait-dot" style="background:#2d6e2d"></div><span class="trait-name">Olhos</span><span class="trait-val">Verde Escuro</span></div>
+      <div class="trait-row"><div class="trait-dot" style="background:#c95a1a"></div><span class="trait-name">Cabelo</span><span class="trait-val">Ruivo Laranjado</span></div>
+      <div class="trait-row"><div class="trait-dot" style="background:#d4b296"></div><span class="trait-name">Pele</span><span class="trait-val">Branca</span></div>
+      <div class="trait-row"><div class="trait-dot" style="background:#c95a1a"></div><span class="trait-name">Sobrancelhas</span><span class="trait-val">Ruivas Laranjadas</span></div>
+      <br>
+      <p class="pc-text">Corpo de <strong>bodybuilder</strong>, estatura imponente de <strong>1,93m</strong>. Presença física que domina qualquer ambiente que entra.</p>
+    </div>
+
+    <!-- ORIGEM -->
+    <div class="profile-card reveal">
+      <span class="pc-label">Origem</span>
+      <h3 class="pc-title">Histórico Familiar</h3>
+      <p class="pc-text">
+        Nascido na <strong>Inglaterra</strong>, Jack é o primogênito dos Connor. Perdeu o pai ainda bebê, e a mãe faleceu anos depois — tornando-o o guardião dos irmãos <strong>Mark, Britney e Elisabeth</strong> desde muito cedo.<br><br>
+        Casado com <strong>Alice Myers Connor</strong>, médica formada em Londres. Juntos têm cinco filhos: <strong>Alucard, Nicolai, Mary e Diana</strong>.
+      </p>
+    </div>
+
+    <!-- BIO -->
+    <div class="profile-card full reveal">
+      <span class="pc-label">Biografia</span>
+      <h3 class="pc-title">A História de Jack Connor</h3>
+      <p class="pc-text">
+        Jack Connor cresceu carregando um peso que nenhuma criança deveria suportar. Com a perda prematura do pai e, anos depois, da mãe, assumiu o papel de guardião dos irmãos antes mesmo de entender completamente o que isso significava. Essa responsabilidade forjou seu caráter — disciplinado, leal, implacável quando necessário, mas profundamente protetor com aqueles que ama.<br><br>
+        Na escola, conheceu <strong>Alice Myers</strong> — a menos popular da turma. Enquanto todos a ignoravam, Jack enxergou algo que os outros não conseguiam ver. Um amor que resistiria a tudo.<br><br>
+        Seguiu a carreira do FBI e se especializou nas <strong>Forças Especiais</strong>, tornando-se um dos agentes mais qualificados de sua geração. Após deixar o bureau, não descansou — fundou os <strong>Hellsings</strong>, reunindo agentes com habilidades únicas em uma organização que opera nas sombras com um código de honra rígido.<br><br>
+        <em>[Aguardando mais conteúdo do autor]</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
+<section class="page-section" style="background:var(--panel);padding:5rem 2rem;max-width:100%;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p class="section-label reveal">Capacidades</p>
+    <h2 class="section-title reveal">HABILIDADES</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+      <div class="reveal">
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Combate Corpo a Corpo</span><span class="skill-pct">95</span></div><div class="skill-track"><div class="skill-fill" style="--w:95%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Liderança</span><span class="skill-pct">97</span></div><div class="skill-track"><div class="skill-fill" style="--w:97%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Estratégia Tática</span><span class="skill-pct">92</span></div><div class="skill-track"><div class="skill-fill" style="--w:92%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Armas de Fogo</span><span class="skill-pct">96</span></div><div class="skill-track"><div class="skill-fill" style="--w:96%"></div></div></div>
+      </div>
+      <div class="reveal">
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Inteligência Operacional</span><span class="skill-pct">89</span></div><div class="skill-track"><div class="skill-fill" style="--w:89%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Gestão de Equipe</span><span class="skill-pct">94</span></div><div class="skill-track"><div class="skill-fill" style="--w:94%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Resistência Física</span><span class="skill-pct">98</span></div><div class="skill-track"><div class="skill-fill" style="--w:98%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Lealdade</span><span class="skill-pct">100</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="big-quote reveal" style="max-width:1100px;margin:3px auto;">
+  <p class="bq-text">"Não escolhi ser o mais velho. Mas escolho, todos os dias, ser quem eles precisam que eu seja."</p>
+  <span class="bq-author">Jack Connor — Fundador dos Hellsings</span>
+</div>
+
+<!-- TIMELINE -->
+<section class="page-section">
+  <p class="section-label reveal">Cronologia</p>
+  <h2 class="section-title reveal">LINHA DO TEMPO</h2>
+  <div class="vtimeline">
+    <div class="vt-item"><span class="vt-year">Infância</span><h3 class="vt-title">A Perda dos Pais</h3><p class="vt-text">O pai falece quando Jack ainda é bebê. Anos depois, a mãe também parte. Jack assume a guarda dos irmãos.</p></div>
+    <div class="vt-item"><span class="vt-year">Escola</span><h3 class="vt-title">Conhece Alice Myers</h3><p class="vt-text">Na escola, enquanto todos ignoravam Alice — a menos popular — Jack a enxergou. O começo de um amor que duraria para sempre.</p></div>
+    <div class="vt-item"><span class="vt-year">Carreira</span><h3 class="vt-title">Ingresso no FBI</h3><p class="vt-text">Jack entra para o FBI e se especializa nas Forças Especiais, tornando-se um dos agentes mais qualificados de sua geração.</p></div>
+    <div class="vt-item"><span class="vt-year">Casamento</span><h3 class="vt-title">Jack & Alice</h3><p class="vt-text">Jack e Alice se casam. Alice vai estudar medicina em Londres. A família Connor começa a crescer.</p></div>
+    <div class="vt-item"><span class="vt-year">Nova Fase</span><h3 class="vt-title">Fundação dos Hellsings</h3><p class="vt-text">Após deixar o FBI, Jack reúne agentes com habilidades únicas e funda a organização Hellsings — mercenários com princípios.</p></div>
+    <div class="vt-item" style="opacity:0.35;"><span class="vt-year">[ Em Branco ]</span><h3 class="vt-title">Aguardando o autor</h3><p class="vt-text">Adicione aqui os próximos capítulos da história de Jack.</p></div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="page-section" style="padding-top:2rem;">
+  <p class="section-label reveal">Galeria</p>
+  <h2 class="section-title reveal">FOTOS</h2>
+  <div class="gallery reveal">
+    <div class="gallery-item">
+        <img src="img/jack2.png" alt="Jack Connor">
+      <!-- <img src="jack-1.jpg" alt="Jack"> -->
+      <div class="gallery-placeholder"><span class="gp-letter">J</span><span>↑ Inserir Foto</span></div>
+      <div class="gallery-caption">Jack Connor</div>
+    </div>
+    <div class="gallery-item">
+    <img src="img/jackconner.png" alt="Jack Connor">
+      <!-- <img src="jack-2.jpg" alt="Jack em ação"> -->
+      <div class="gallery-placeholder"><span class="gp-letter">J</span><span>↑ Inserir Foto</span></div>
+      <div class="gallery-caption">Em Ação</div>
+    </div>
+    <div class="gallery-item">
+        <img src="img/licefamilia.png" alt="Jack Connor">
+      <!-- <img src="jack-3.jpg" alt="Jack e família"> -->
+      <div class="gallery-placeholder"><span class="gp-letter">J</span><span>↑ Inserir Foto</span></div>
+      <div class="gallery-caption">Com a Família</div>
+    </div>
+  </div>
+</section>
+ <footer>
+    <p class="footer-logo">HELLSINGS</p>
+    <p class="footer-sub">A Era da Extinção &nbsp;·&nbsp; Família Connor &nbsp;·&nbsp; Fan Site</p>
+  </footer>
+<script>
+// SCROLL REVEAL
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting){
+      setTimeout(()=>{
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));
+      }, i*80);
+      obs.unobserve(e.target);
+    }
+  });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
+
+// PARALLAX HERO
+const heroImg = document.querySelector('.hero-photo-placeholder, #hero-img');
+window.addEventListener('scroll',()=>{
+  const y = window.scrollY;
+  if(heroImg) heroImg.style.transform=`translateY(${y*0.25}px)`;
+},{passive:true});
+</script>
+
+<script>
+(function(){
+  const nav = document.querySelector('nav');
+  if(!nav) return;
+  const links = nav.querySelector('.nav-links');
+  if (links && !nav.querySelector('.premium-mobile-toggle')) {
+    const btn = document.createElement('button');
+    btn.className = 'premium-mobile-toggle';
+    btn.setAttribute('aria-label','Abrir menu');
+    btn.setAttribute('aria-expanded','false');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    nav.appendChild(btn);
+
+    const panel = document.createElement('div');
+    panel.className = 'premium-mobile-panel';
+    panel.innerHTML = links.innerHTML;
+    document.body.appendChild(panel);
+
+    const closeMenu = () => {
+      nav.classList.remove('premium-open');
+      panel.classList.remove('show');
+      document.body.classList.remove('premium-menu-open');
+      btn.setAttribute('aria-expanded','false');
+    };
+    const openMenu = () => {
+      nav.classList.add('premium-open');
+      panel.classList.add('show');
+      document.body.classList.add('premium-menu-open');
+      btn.setAttribute('aria-expanded','true');
+    };
+    btn.addEventListener('click', () => panel.classList.contains('show') ? closeMenu() : openMenu());
+    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); }, {passive:true});
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  }
+
+  const cards = document.querySelectorAll('.member-card,.profile-card,.manifesto-card,.photo-item,.gallery-loop img');
+  cards.forEach(el => {
+    el.style.transition = (el.style.transition ? el.style.transition + ',' : '') + 'transform .25s ease, box-shadow .25s ease';
+    el.addEventListener('mouseenter', () => { if (window.innerWidth > 768) el.style.transform = 'translateY(-3px)'; });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const fileName = (location.pathname.split('/').pop() || '').toLowerCase();
+  const defaultLinks = [
+    ['telainicial.html','Início'],
+    ['hellsing.html','Hellsings'],
+    ['galeria.html','Galeria'],
+    ['jack.html','Jack'],
+    ['alice.html','Alice'],
+    ['mark.html','Mark'],
+    ['ariani.html','Ariani'],
+    ['britney.html','Britney'],
+    ['jully.html','Jully']
+  ];
+
+  const nav = document.querySelector('nav');
+  if (nav) {
+    let links = nav.querySelector('.nav-links');
+
+    if (!links) {
+      links = document.createElement('ul');
+      links.className = 'nav-links nav-links--fallback';
+      links.innerHTML = defaultLinks.map(([href,label]) => `<li><a href="${href}">${label}</a></li>`).join('');
+      nav.appendChild(links);
+    }
+
+    if (!nav.querySelector('.premium-mobile-toggle')) {
+      const btn = document.createElement('button');
+      btn.className = 'premium-mobile-toggle';
+      btn.type = 'button';
+      btn.setAttribute('aria-label','Abrir menu');
+      btn.setAttribute('aria-expanded','false');
+      btn.innerHTML = '<span></span><span></span><span></span>';
+      nav.appendChild(btn);
+
+      const panel = document.createElement('div');
+      panel.className = 'premium-mobile-panel';
+      panel.innerHTML = Array.from(links.querySelectorAll('a')).map(a => a.outerHTML).join('');
+      document.body.appendChild(panel);
+
+      const closeMenu = () => {
+        nav.classList.remove('premium-open');
+        panel.classList.remove('show');
+        document.body.classList.remove('premium-menu-open');
+        btn.setAttribute('aria-expanded','false');
+      };
+      const openMenu = () => {
+        nav.classList.add('premium-open');
+        panel.classList.add('show');
+        document.body.classList.add('premium-menu-open');
+        btn.setAttribute('aria-expanded','true');
+      };
+
+      btn.addEventListener('click', () => panel.classList.contains('show') ? closeMenu() : openMenu());
+      panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+      window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); }, { passive:true });
+    }
+
+    if (!document.querySelector('.swipe-menu-shell')) {
+      const shell = document.createElement('div');
+      shell.className = 'swipe-menu-shell';
+      const scroller = document.createElement('div');
+      scroller.className = 'swipe-menu';
+      scroller.innerHTML = Array.from(links.querySelectorAll('a')).map(a => a.outerHTML).join('');
+      shell.appendChild(scroller);
+      document.body.appendChild(shell);
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      const startDrag = (x) => {
+        isDown = true;
+        startX = x;
+        scrollLeft = scroller.scrollLeft;
+      };
+      const moveDrag = (x) => {
+        if (!isDown) return;
+        const walk = x - startX;
+        scroller.scrollLeft = scrollLeft - walk;
+      };
+      const stopDrag = () => { isDown = false; };
+
+      scroller.addEventListener('mousedown', e => startDrag(e.pageX));
+      scroller.addEventListener('mousemove', e => moveDrag(e.pageX));
+      window.addEventListener('mouseup', stopDrag);
+      scroller.addEventListener('mouseleave', stopDrag);
+
+      let touchX = 0;
+      let touchScroll = 0;
+      scroller.addEventListener('touchstart', e => {
+        touchX = e.touches[0].pageX;
+        touchScroll = scroller.scrollLeft;
+      }, { passive:true });
+      scroller.addEventListener('touchmove', e => {
+        const walk = e.touches[0].pageX - touchX;
+        scroller.scrollLeft = touchScroll - walk;
+      }, { passive:true });
+
+      const currentAnchors = scroller.querySelectorAll('a');
+      currentAnchors.forEach(a => {
+        const href = (a.getAttribute('href') || '').toLowerCase();
+        if (href && (href === fileName || href.endsWith('/' + fileName))) {
+          a.classList.add('is-current');
+        }
+      });
+    }
+
+    nav.querySelectorAll('a').forEach(a => {
+      const href = (a.getAttribute('href') || '').toLowerCase();
+      if (href && (href === fileName || href.endsWith('/' + fileName))) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+
+  if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+    document.body.classList.add('touch-device');
+  }
+})();
+</script>
+
+</body>
+</html>

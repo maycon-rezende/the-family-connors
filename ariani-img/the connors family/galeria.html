@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria — Família Connor</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#c9963a;--ember:#c94a1a;
+  --bone:#e8dfc8;--ash:#9a9080;--dim:#5a5248;
+  --dark:#070504;--panel:#100c09;--panel2:#160f0b;
+  --line:rgba(201,150,58,0.14);--lineb:rgba(201,150,58,0.07);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--bone);font-family:'Crimson Pro',Georgia,serif;overflow-x:hidden;}
+
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(7,5,4,0.97),transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.2em;color:var(--gold);text-decoration:none;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;}
+.nav-links a{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.nav-back{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--gold);}
+@media(max-width:768px){nav{padding:1rem 1.2rem;}.nav-links{display:none;}}
+
+/* HERO */
+#hero{position:relative;height:70vh;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 80%,rgba(122,21,21,0.25) 0%,transparent 65%),linear-gradient(180deg,#070504 0%,#130908 50%,#070504 100%);}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(var(--lineb) 1px,transparent 1px),linear-gradient(90deg,var(--lineb) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,black,transparent);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,5,4,1) 100%);}
+.hero-content{position:relative;z-index:2;padding:0 2rem;}
+.hero-eyebrow{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.55em;color:var(--ember);text-transform:uppercase;margin-bottom:1rem;display:block;animation:fade-up 1s 0.2s both;}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,11vw,9rem);letter-spacing:0.06em;color:var(--bone);line-height:0.9;animation:fade-up 1s 0.4s both;}
+.hero-title span{color:var(--gold);}
+.hero-sub{font-family:'Crimson Pro',serif;font-style:italic;font-size:1.1rem;color:var(--ash);margin-top:1.2rem;animation:fade-up 1s 0.6s both;}
+.hero-divider{display:flex;align-items:center;gap:1.5rem;margin:2rem auto;width:min(350px,80%);animation:fade-up 1s 0.8s both;}
+.hero-divider::before,.hero-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.hero-diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+
+@keyframes fade-up{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* FILTER BAR */
+#filter-bar{position:sticky;top:62px;z-index:100;background:rgba(7,5,4,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 2rem;}
+.filter-inner{max-width:1200px;margin:0 auto;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+.filter-inner::-webkit-scrollbar{display:none;}
+.filter-btn{
+  font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;
+  padding:1.1rem 1.5rem;color:var(--ash);background:none;border:none;
+  border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:color 0.2s,border-color 0.2s;flex-shrink:0;
+}
+.filter-btn:hover{color:var(--bone);}
+.filter-btn.active{color:var(--gold);border-bottom-color:var(--gold);}
+
+/* MAIN GALLERY */
+main{max-width:1200px;margin:0 auto;padding:4rem 2rem 8rem;}
+
+/* ALBUM SECTION */
+.album{margin-bottom:6rem;}
+.album-header{display:flex;align-items:baseline;gap:2rem;margin-bottom:2.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line);}
+.album-number{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:rgba(201,150,58,0.1);line-height:1;flex-shrink:0;}
+.album-info{}
+.album-tag{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--ember);text-transform:uppercase;display:block;margin-bottom:0.3rem;}
+.album-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:0.06em;color:var(--bone);line-height:1;}
+.album-count{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.25em;color:var(--dim);text-transform:uppercase;margin-top:0.3rem;display:block;}
+
+/* GRID LAYOUTS — cada álbum tem layout diferente */
+.grid-layout-1{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.grid-layout-2{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3px;}
+.grid-layout-3{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.grid-layout-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:3px;}
+.grid-layout-5{display:grid;grid-template-columns:1fr 2fr 1fr;gap:3px;}
+
+/* PHOTO ITEM */
+.photo-item{
+  position:relative;overflow:hidden;cursor:pointer;
+  background:var(--panel);border:1px solid var(--lineb);
+}
+.photo-item.tall{grid-row:span 2;}
+.photo-item.wide{grid-column:span 2;}
+
+/* Imagem real */
+.photo-item img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transition:transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+.photo-item:hover img{transform:scale(1.06);}
+
+/* Placeholder */
+.photo-placeholder{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;
+  min-height:260px;
+}
+.pp-letter{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(201,150,58,0.07);letter-spacing:0.05em;}
+.pp-add{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.22em;color:rgba(201,150,58,0.2);text-transform:uppercase;border:1px dashed rgba(201,150,58,0.14);padding:0.3rem 0.7rem;}
+
+/* Photo overlay on hover */
+.photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(7,5,4,0.92) 100%);
+  opacity:0;transition:opacity 0.35s;
+}
+.photo-item:hover .photo-overlay{opacity:1;}
+.photo-caption{
+  position:absolute;bottom:0;left:0;right:0;padding:1.2rem;
+  transform:translateY(8px);opacity:0;transition:transform 0.35s,opacity 0.35s;
+}
+.photo-item:hover .photo-caption{transform:translateY(0);opacity:1;}
+.pc-names{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:0.2rem;}
+.pc-desc{font-family:'Crimson Pro',serif;font-size:0.85rem;font-style:italic;color:var(--ash);}
+
+/* ADD PHOTO GUIDE BADGE */
+.add-guide{
+  position:absolute;top:0.8rem;right:0.8rem;
+  font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.15em;
+  text-transform:uppercase;padding:0.25rem 0.5rem;
+  border:1px dashed rgba(201,150,58,0.2);color:rgba(201,150,58,0.3);
+  background:rgba(7,5,4,0.6);backdrop-filter:blur(4px);
+  z-index:2;pointer-events:none;
+}
+
+/* LIGHTBOX */
+#lightbox{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(7,5,4,0.97);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity 0.3s;
+  padding:2rem;
+}
+#lightbox.open{opacity:1;pointer-events:all;}
+.lb-inner{position:relative;max-width:900px;width:100%;max-height:90vh;}
+#lb-img{
+  display:block;max-width:100%;max-height:75vh;
+  object-fit:contain;margin:0 auto;
+  border:1px solid var(--line);
+}
+.lb-placeholder{
+  width:100%;height:500px;background:var(--panel);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:1rem;
+}
+.lb-placeholder span:first-child{font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(201,150,58,0.06);}
+.lb-placeholder span:last-child{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;color:rgba(201,150,58,0.25);text-transform:uppercase;}
+.lb-info{padding:1.2rem 0;text-align:center;border-top:1px solid var(--line);margin-top:1rem;}
+.lb-title{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:0.3rem;}
+.lb-desc{font-family:'Crimson Pro',serif;font-size:0.95rem;font-style:italic;color:var(--ash);}
+.lb-close{
+  position:absolute;top:-2.5rem;right:0;
+  font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--ash);background:none;border:1px solid var(--line);padding:0.4rem 0.9rem;
+  cursor:pointer;transition:color 0.2s,border-color 0.2s;
+}
+.lb-close:hover{color:var(--gold);border-color:var(--gold);}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
+  color:rgba(201,150,58,0.4);background:rgba(7,5,4,0.7);border:1px solid var(--line);
+  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:color 0.2s,border-color 0.2s;border-radius:0;
+}
+.lb-nav:hover{color:var(--gold);border-color:var(--gold);}
+.lb-prev{left:-56px;}
+.lb-next{right:-56px;}
+@media(max-width:768px){.lb-prev{left:0;}.lb-next{right:0;}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ADD PHOTO GUIDE */
+.guide-box{background:var(--panel2);border:1px dashed rgba(201,150,58,0.15);padding:2.5rem;margin-top:6rem;text-align:center;}
+.gb-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.1em;color:var(--gold);margin-bottom:1rem;}
+.gb-text{color:var(--ash);font-size:0.93rem;line-height:1.8;max-width:700px;margin:0 auto;}
+.gb-code{font-family:monospace;font-size:0.82rem;background:rgba(201,150,58,0.06);border:1px solid var(--lineb);padding:0.2rem 0.5rem;color:var(--bone);border-radius:2px;}
+
+@media(max-width:900px){
+  .grid-layout-2,.grid-layout-5{grid-template-columns:1fr 1fr;}
+  .grid-layout-4{grid-template-columns:1fr 1fr;}
+  .photo-item.wide{grid-column:span 1;}
+  .lb-prev,.lb-next{display:none;}
+}
+@media(max-width:600px){
+  .grid-layout-1,.grid-layout-2,.grid-layout-3,.grid-layout-4,.grid-layout-5{grid-template-columns:1fr;}
+  .photo-item.tall{grid-row:span 1;}
+}
+
+.gallery-loop {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.gallery-loop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery-loop img.active {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-back">← Início</a>
+  <a href="galeria.html" class="nav-logo">GALERIA</a>
+  <ul class="nav-links">
+    <li><a href="#album-irmaos" class="active">Irmãos</a></li>
+    <li><a href="#album-jack">Jack & Alice</a></li>
+    <li><a href="#album-mark">Mark & Ariani</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">A Era da Extinção — Família Connor</span>
+    <h1 class="hero-title">GA<span>LERIA</span></h1>
+    <p class="hero-sub">"Toda fotografia é um certificado de presença." — Roland Barthes</p>
+    <div class="hero-divider"><div class="hero-diamond"></div></div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="filterAlbum('all', this)">Todos</button>
+    <button class="filter-btn" onclick="filterAlbum('irmaos', this)">Os Irmãos Connor</button>
+    <button class="filter-btn" onclick="filterAlbum('jack', this)">Jack &amp; Alice</button>
+    <button class="filter-btn" onclick="filterAlbum('mark', this)">Mark &amp; Ariani</button>
+    <button class="filter-btn" onclick="filterAlbum('filhos', this)">Filhos</button>
+    <button class="filter-btn" onclick="filterAlbum('hellsings', this)">Hellsings</button>
+    <button class="filter-btn" onclick="filterAlbum('momentos', this)">Momentos</button>
+  </div>
+</div>
+
+<main>
+
+  <!-- ══════════════════════════════════
+       ÁLBUM 1 — OS IRMÃOS CONNOR
+       ══════════════════════════════════ -->
+  <div class="album reveal" id="album-irmaos" data-album="irmaos">
+    <div class="album-header">
+      <span class="album-number">01</span>
+      <div class="album-info">
+        <span class="album-tag">Família Connor</span>
+        <h2 class="album-title">Os Irmãos Connor</h2>
+        <span class="album-count">Jack · Mark · Britney · Jully</span>
+      </div>
+    </div>
+
+    <!-- Layout 1: 2fr + 1fr + 1fr com foto grande à esquerda -->
+    <div class="grid-layout-2">
+
+      <div class="photo-item tall" onclick="openLightbox('irmãos-1', 'Os Irmãos Connor', 'Jack, Mark, Britney e Elisabeth — os quatro irmãos Connor reunidos.')">
+        <img src="img/family.png" alt="Os Irmãos Connor">
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Os Quatro Irmãos</span>
+          <span class="pc-desc">Jack, Mark, Britney e Elisabeth Connor</span>
+        </div>
+        <!-- Para adicionar: <img src="foto.jpg" alt="Os irmãos Connor"> -->
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmãos-2', 'Jack & Mark', 'Os dois irmãos mais velhos — o líder e o soldado.')">
+        <img src="img/brothers2.png" alt="Os Irmãos Connor">
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Jack & Mark</span>
+          <span class="pc-desc">O líder e o soldado</span>
+        </div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmãos-3', 'Britney & Elisa', 'As duas irmãs mais novas — a do meio e a caçula.')">
+        <img src="img/brothers.png" alt="Os Irmãos Connor">
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Britney & Elisabeth</span>
+          <span class="pc-desc">A do meio e a caçula</span>
+        </div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmãos-3', 'Britney & Elisa', 'As duas irmãs mais novas — a do meio e a caçula.')">
+        <img src="img/brothers4.png" alt="Os Irmãos Connor">
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Britney & Elisabeth</span>
+          <span class="pc-desc">A do meio e a caçula</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ÁLBUM 2 — JACK & ALICE (FAMÍLIA)
+       ══════════════════════════════════ -->
+  <div class="album reveal" id="album-jack" data-album="jack">
+    <div class="album-header">
+      <span class="album-number">02</span>
+      <div class="album-info">
+        <span class="album-tag">Casal & Família</span>
+        <h2 class="album-title">Jack & Alice Connor</h2>
+        <span class="album-count">Jack · Alice · Alucard · Nicolai · Mary · Diana</span>
+      </div>
+    </div>
+
+    <div class="grid-layout-5">
+
+      <div class="photo-item" onclick="openLightbox('jack-1', 'Jack Connor', 'Jack Connor — líder dos Hellsings e pai de família.')">
+       <img src="img/jackconner.png" alt="Jack Connor">
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Jack Connor</span><span class="pc-desc">Pai & Líder</span></div>
+      </div>
+
+      <div class="photo-item tall wide" onclick="openLightbox('jack-2', 'Jack & Alice', 'O casal Connor — unidos desde a escola.')">
+        <img src="img/licefamilia.png" alt="Jack & Alice">
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Jack & Alice Connor</span>
+          <span class="pc-desc">Desde a escola até sempre.</span>
+        </div>
+      </div>
+
+
+      <div class="photo-item" onclick="openLightbox('jack-4', 'Família Connor Completa', 'Jack, Alice e os cinco filhos — a família completa.')">
+       <img src="img/fenix.png" alt="Família Connor">
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Família Connor</span><span class="pc-desc">Jack, Alice e os filhos</span></div>
+      </div>
+
+  </div>
+
+  <div class="album reveal" id="album-mark" data-album="mark">
+    <div class="album-header">
+      <span class="album-number">03</span>
+      <div class="album-info">
+        <span class="album-tag">Casal & Família</span>
+        <h2 class="album-title">Mark & Ariani</h2>
+        <span class="album-count">Mark Connor · Ariani Salvatore · Filho</span>
+      </div>
+    </div>
+
+    <div class="grid-layout-2" style="grid-template-columns:1fr 1fr 1fr;">
+
+      <div class="photo-item tall" onclick="openLightbox('mark-1', 'Mark & Ariani', 'O amor que sobreviveu ao silêncio e aos anos de distância.')">
+        <div class="photo-placeholder"><span class="pp-letter">M&A</span><span class="pp-add">↑ Mark & Ariani</span></div>
+        <div><img src="img/arimarkdrink.png" alt="Mark & Ariani"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Mark & Ariani</span>
+          <span class="pc-desc">O amor que sobreviveu ao silêncio.</span>
+        </div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('mark-2', 'Mark Connor', 'Mark Connor — o soldado que voltou.')">
+        <div class="photo-placeholder"><span class="pp-letter">M</span><span class="pp-add">↑ Mark Connor</span></div>
+        <div class="photo-overlay"></div>
+         <div><img src="img/arimarkpraia.png" alt="Mark & Ariani"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Ariani e Mark</span><span class="pc-desc">Lua de mel</span></div>
+      </div>
+
+
+      <div class="photo-item" onclick="openLightbox('mark-4', 'Família de Mark', 'Mark, Ariani e o filho — a família que surgiu do segredo.')">
+        <img src="img/markfam.png" alt="Família de Mark">
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">Mark, Ariani & Filho</span>
+          <span class="pc-desc">A família que surgiu do segredo.</span>
+        </div>
+      </div>
+
+
+     
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ÁLBUM 4 — BRITNEY, JULLY 
+       ══════════════════════════════════ -->
+    <div class="grid-layout-3">
+
+      <div class="photo-item" onclick="openLightbox('irmas-1', 'Britney & Jully', 'As melhores amigas — que se tornaram família.')">
+        <img src="img/universidade.png" alt="Britney & Jully">
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Britney & Jully</span><span class="pc-desc">Melhores amigas. Família.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmas-1', 'Britney & Jully', 'As melhores amigas — que se tornaram família.')">
+        <img src="jully-img/jullybrit.png" alt="Britney & Jully">
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Britney & Jully</span><span class="pc-desc">Melhores amigas. Família.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmas-2', 'Elisabeth Connor', 'Elisa — a caçula ruiva de olhos ciano.')">
+        <img src="jully-img/jullybrit2.jpeg" alt="Britney & Jully">
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Elisabeth Connor</span><span class="pc-desc">A caçula. Ruiva. Olhos ciano.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmas-3', 'Britney Connor', 'Britney — loira, óculos, sorriso verde como o de Jack.')">
+        
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Britney Connor</span><span class="pc-desc">A do meio. Com óculos.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('irmas-5', 'Jully', 'Jully — a amiga que se tornou parte da família.')">
+        <div class="photo-placeholder"><span class="pp-letter">Ju</span><span class="pp-add">↑ Jully</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Jully</span><span class="pc-desc">A amiga que se tornou família.</span></div>
+      </div>
+
+    </div>
+  </div>
+ <section class="page-section" style="padding-top:2rem;">
+ <div class="gallery-loop">
+  <img src="casa/portao.png" alt="casa 1" class="active">
+  <img src="casa/entrada.png" alt="casa 2">
+  <img src="casa/hall.png" alt="casa 3">
+  <img src="casa/sala.png" alt="casa 4">
+  <img src="casa/sala-de-estar.png" alt="casa 5">
+  <img src="casa/cozinha.png" alt="casa 6">
+  <img src="casa/escritorio.png" alt="casa 7">
+  <img src="casa/cozinha.png" alt="casa 8">
+  <img src="casa/salajogos.png" alt="casa 9">
+  <img src="casa/bibliotecageek.png" alt="casa 10">
+  <img src="casa/cinema.png" alt="casa 11">
+  <img src="casa/piscina.png" alt="casa 12">
+  <img src="casa/areagourmet.png" alt="casa 13">
+  <img src="casa/academia.png" alt="casa 14">
+  <img src="casa/treinorecuperação.png" alt="casa 15">
+  <img src="casa/garagem1.png" alt="casa 16">
+  <img src="casa/garagem2.png" alt="casa 17">
+  <img src="casa/adegabar.png" alt="casa 18">
+  <img src="casa/quartocasal.png" alt="casa 19">
+  <img src="casa/quartocasalclosset.png" alt="casa 20">
+  <img src="casa/quartomeninos.png" alt="casa 21">
+  <img src="casa/quartomeninas.png" alt="casa 22">
+  <img src="casa/quartohosp.png" alt="casa 23">
+  <img src="casa/quartohosp2.png" alt="casa 24">
+
+</div>
+</section>
+ 
+    <div class="grid-layout-4">
+
+      <div class="photo-item" onclick="openLightbox('m-1', 'Família Reunida', 'Todos os Connor juntos — um momento raro e precioso.')">
+        <div class="photo-placeholder"><span class="pp-letter">Todos</span><span class="pp-add">↑ Inserir foto</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Família Reunida</span><span class="pc-desc">Um momento raro e precioso.</span></div>
+      </div>
+
+      <div class="photo-item wide tall" onclick="openLightbox('m-2', 'Grande Família Connor', 'Os Connor, Alice, Ariani, Jully e os filhos — a família cresceu.')">
+        <div class="photo-placeholder"><span class="pp-letter">Connor Family</span><span class="pp-add">↑ Grande foto da família</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption">
+          <span class="pc-names">A Grande Família Connor</span>
+          <span class="pc-desc">Os irmãos, os casais, os filhos. A família que sobreviveu a tudo.</span>
+        </div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('m-3', 'Natal Connor', 'A família Connor no Natal — uma tradição que Jack nunca deixou acabar.')">
+        <div class="photo-placeholder"><span class="pp-letter">Natal</span><span class="pp-add">↑ Inserir foto</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Natal Connor</span><span class="pc-desc">Uma tradição que Jack nunca deixou acabar.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('m-4', 'Memória', 'Um momento do passado — guardado para sempre.')">
+        <div class="photo-placeholder"><span class="pp-letter">Memória</span><span class="pp-add">↑ Inserir foto</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Memória</span><span class="pc-desc">Guardada para sempre.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('m-5', 'Jack & os Irmãos', 'Jack com Mark, Britney e Elisa — o guardião e sua família.')">
+        <div class="photo-placeholder"><span class="pp-letter">J+Irmãos</span><span class="pp-add">↑ Inserir foto</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Jack & os Irmãos</span><span class="pc-desc">O guardião e sua família.</span></div>
+      </div>
+
+      <div class="photo-item" onclick="openLightbox('m-6', 'Momento Livre', 'Adicione aqui qualquer foto especial.')">
+        <div class="photo-placeholder"><span class="pp-letter">+</span><span class="pp-add">↑ Adicionar foto</span></div>
+        <div class="photo-overlay"></div>
+        <div class="add-guide">Inserir foto</div>
+        <div class="photo-caption"><span class="pc-names">Seu Momento</span><span class="pc-desc">Adicione aqui uma foto especial.</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="closeLightbox()">✕ Fechar</button>
+    <button class="lb-nav lb-prev" onclick="navLightbox(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="navLightbox(1)">›</button>
+    <div class="lb-placeholder" id="lb-placeholder">
+      <span id="lb-letter">J</span>
+      <span>Foto não adicionada ainda</span>
+    </div>
+    <img id="lb-img" src="" alt="" style="display:none;">
+    <div class="lb-info">
+      <span class="lb-title" id="lb-title">Título</span>
+      <span class="lb-desc" id="lb-desc">Descrição</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── LIGHTBOX ──
+let currentItems = [];
+let currentIndex = 0;
+
+function openLightbox(id, title, desc) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lb-title').textContent = title;
+  document.getElementById('lb-desc').textContent = desc;
+  document.getElementById('lb-letter').textContent = title.slice(0, 2).toUpperCase();
+
+  // Coleta todos os photo-items visíveis para navegação
+  currentItems = [...document.querySelectorAll('.photo-item:not([style*="display:none"])')]
+    .map(el => ({
+      title: el.querySelector('.pc-names')?.textContent || '',
+      desc: el.querySelector('.pc-desc')?.textContent || '',
+      letter: (el.querySelector('.pp-letter')?.textContent || '?').slice(0, 3)
+    }));
+
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function navLightbox(dir) {
+  currentIndex = (currentIndex + dir + currentItems.length) % currentItems.length;
+  const item = currentItems[currentIndex];
+  if (item) {
+    document.getElementById('lb-title').textContent = item.title;
+    document.getElementById('lb-desc').textContent = item.desc;
+    document.getElementById('lb-letter').textContent = item.letter;
+  }
+}
+
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
+
+// ── FILTER ──
+function filterAlbum(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.album').forEach(album => {
+    if (type === 'all' || album.dataset.album === type) {
+      album.style.display = 'block';
+    } else {
+      album.style.display = 'none';
+    }
+  });
+}
+
+// ── SCROLL REVEAL ──
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// ── NAVBAR ──
+const navbar = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  navbar.style.background = window.scrollY > 60 ? 'rgba(7,5,4,0.97)' : 'linear-gradient(180deg,rgba(7,5,4,0.97),transparent)';
+}, { passive: true });
+</script>
+
+
+ <script>
+const images = Array.from(document.querySelectorAll('.gallery-loop img'));
+let current = 0;
+
+function initGalleryLoop() {
+  if (!images.length) {
+    console.warn('Gallery loop: nenhuma imagem encontrada');
+    return;
+  }
+  console.log('Gallery loop: imagens encontradas', images.length);
+  images.forEach((img, index) => {
+    img.classList.toggle('active', index === 0);
+  });
+  current = 0;
+}
+
+function showNextImage() {
+  if (!images.length) return;
+  images.forEach(img => img.classList.remove('active'));
+  current = (current + 1) % images.length;
+  images[current].classList.add('active');
+  console.log('Gallery loop: imagem atual', current + 1, 'de', images.length, images[current].src);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  initGalleryLoop();
+  setInterval(showNextImage, 4000); // troca a cada 4 segundos
+});
+</script>
+</body>
+</html>
