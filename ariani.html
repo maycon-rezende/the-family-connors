@@ -25,11 +25,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:
 .nav-org{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.25em;color:var(--ash);text-transform:uppercase;}
 
 /* HERO */
-#hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:flex-end;}
-.hero-photo{position:absolute;inset:0;background:linear-gradient(135deg,#1e0f12,#280f15,#120808);display:flex;align-items:center;justify-content:center;}
-.hero-photo-placeholder{font-family:'Playfair Display',serif;font-size:20rem;color:rgba(212,120,154,0.04);font-style:italic;user-select:none;}
-
-.hero-photo{position:absolute;inset:0;width:100%;height:200%;object-fit:cover;object-position:center top;}
+#hero-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top; 
+}
+#hero{
+  position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;}
+.hero-photo{position:absolute;inset:0;background:linear-gradient(135deg,#140e1a,#1c1228,#0c080f);display:flex;align-items:center;justify-content:center;}
+.hero-photo-placeholder{font-family:'Cormorant Garamond',serif;font-size:18rem;color:rgba(224, 184, 168, 0.04);font-style:italic;user-select:none;}
 
 /* Padrão geométrico sutil */
 .hero-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(212,120,154,0.02) 0px,rgba(212,120,154,0.02) 1px,transparent 1px,transparent 40px);}
