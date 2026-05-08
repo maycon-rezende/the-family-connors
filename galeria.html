@@ -1,53 +1,884 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galeria — Irmãos Connor & Mansão</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-<style>
-:root{--gold:#c9963a;--ember:#c94a1a;--bone:#e8dfc8;--ash:#9a9080;--dark:#070504;--panel:#100c09;--panel2:#160f0b;--line:rgba(201,150,58,.15);--line2:rgba(201,150,58,.07)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--dark);color:var(--bone);font-family:'Crimson Pro',Georgia,serif;overflow-x:hidden;font-size:18px}body:after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(7,5,4,.97),transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.logo{font-family:'Bebas Neue';letter-spacing:.22em;color:var(--gold);font-size:1.35rem;text-decoration:none}.nav-links{display:flex;gap:1.4rem;list-style:none}.nav-links a,.back{font-family:'Cinzel';font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ash);text-decoration:none}.nav-links a:hover,.back:hover{color:var(--gold)}
-#hero{min-height:88vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:8rem 2rem 5rem}.hslide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s,transform 7s;transform:scale(1.03)}.hslide.active{opacity:1;transform:scale(1.1)}.hslide img{width:100%;height:100%;object-fit:cover}.veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(7,5,4,.2),rgba(7,5,4,.9) 70%,#070504),linear-gradient(180deg,rgba(7,5,4,.25),#070504)}.grid{position:absolute;inset:0;background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black,transparent 70%)}.hero-content{position:relative;z-index:2;max-width:900px}.eyebrow{font-family:'Cinzel';font-size:.62rem;letter-spacing:.55em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:1rem}.hero-title{font-family:'Bebas Neue';font-size:clamp(4.2rem,11vw,9.4rem);line-height:.86;letter-spacing:.06em}.hero-title span{color:var(--gold)}.hero-sub{max-width:650px;margin:1.3rem auto 0;color:var(--ash);font-style:italic;line-height:1.7;font-size:1.15rem}.actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}.btn{font-family:'Cinzel';font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--bone);border:1px solid var(--line);background:rgba(16,12,9,.6);padding:.85rem 1.05rem;cursor:pointer}.btn:hover{color:var(--gold);border-color:var(--gold)}.counter{position:absolute;right:2rem;bottom:2rem;color:var(--ash);font-family:'Cinzel';font-size:.6rem;letter-spacing:.25em;z-index:3}
-#quickbar{position:sticky;top:61px;z-index:150;background:rgba(7,5,4,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 1rem}.quick-inner{max-width:1240px;margin:auto;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}.quick-inner a{font-family:'Cinzel';font-size:.56rem;letter-spacing:.21em;text-transform:uppercase;padding:1rem 1.18rem;color:var(--ash);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}.quick-inner a:hover{color:var(--gold);border-bottom-color:var(--gold)}
-main{max-width:1260px;margin:auto;padding:4.5rem 1.5rem 7rem}.section-head{display:flex;justify-content:space-between;gap:2rem;align-items:end;border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:1.7rem}.kicker{font-family:'Cinzel';font-size:.58rem;letter-spacing:.4em;color:var(--ember);text-transform:uppercase;margin-bottom:.4rem}.title{font-family:'Bebas Neue';font-size:clamp(2.5rem,5vw,4.7rem);letter-spacing:.06em;line-height:.9}.title span{color:var(--gold)}.desc{max-width:430px;color:var(--ash);font-style:italic;line-height:1.6}
-.featured{display:grid;grid-template-columns:1.05fr .95fr;gap:1.2rem;margin-bottom:5rem}.feature-card,.house{border:1px solid var(--line);background:var(--panel);overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.45)}.feature-card{position:relative;min-height:480px;cursor:pointer}.feature-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:5s}.feature-card:hover img{transform:scale(1.08)}.feature-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(7,5,4,.94)),linear-gradient(90deg,rgba(7,5,4,.76),transparent 55%)}.finfo{position:absolute;z-index:2;left:1.5rem;right:1.5rem;bottom:1.5rem}.meta{font-family:'Cinzel';font-size:.55rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:.55rem}.finfo h2{font-family:'Bebas Neue';font-size:3.5rem;letter-spacing:.06em;line-height:.9}.finfo p{color:var(--ash);line-height:1.55;margin-top:.5rem;max-width:560px}
-.house{display:flex;flex-direction:column}.house-view{position:relative;min-height:350px;background:#050403;overflow:hidden}.house-view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s,transform 4s}.house-view img.active{opacity:1;transform:scale(1.1)}.house-view:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,5,4,.15),rgba(7,5,4,.86))}.house-cap{position:absolute;left:1rem;right:1rem;bottom:1rem;z-index:2}.house-cap h3{font-family:'Bebas Neue';font-size:2.2rem;letter-spacing:.06em}.house-cap p{color:var(--ash);font-style:italic}.progress{height:2px;background:rgba(201,150,58,.1)}.progress span{display:block;height:100%;width:0;background:var(--gold)}.thumbs{display:flex;gap:.55rem;padding:.75rem;overflow-x:auto;scrollbar-width:none}.thumbs::-webkit-scrollbar{display:none}.thumb{width:86px;height:58px;object-fit:cover;border:1px solid var(--line2);opacity:.55;cursor:pointer;flex-shrink:0}.thumb.active,.thumb:hover{opacity:1;border-color:var(--gold)}
-.album{margin-bottom:5rem}.gridcards{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}.card{grid-column:span 3;position:relative;min-height:330px;border:1px solid var(--line2);background:var(--panel);overflow:hidden;cursor:pointer;transition:.25s;box-shadow:0 18px 50px rgba(0,0,0,.24)}.card.wide{grid-column:span 6}.card.medium{grid-column:span 4}.card.tall{grid-row:span 2;min-height:680px}.card:hover{transform:translateY(-6px);border-color:rgba(201,150,58,.55)}.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.7s;filter:saturate(.9) contrast(1.03)}.card:hover img{transform:scale(1.08);filter:saturate(1.04) contrast(1.08)}.card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(7,5,4,.93)),linear-gradient(90deg,rgba(7,5,4,.45),transparent 55%)}.cbody{position:absolute;left:1rem;right:1rem;bottom:1rem;z-index:2}.ccat{font-family:'Cinzel';font-size:.5rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:.35rem}.ctitle{font-family:'Bebas Neue';font-size:1.75rem;letter-spacing:.05em;line-height:.95}.cnote{font-size:.95rem;color:var(--ash);font-style:italic;margin-top:.3rem;line-height:1.35}
-.loopwrap{overflow:hidden;border:1px solid var(--line);background:rgba(16,12,9,.52);padding:1rem;margin-bottom:5rem;box-shadow:0 28px 80px rgba(0,0,0,.45)}.loop{display:flex;gap:1rem;width:max-content;animation:marquee 55s linear infinite}.loopwrap:hover .loop{animation-play-state:paused}.loopcard{width:260px;height:170px;position:relative;overflow:hidden;border:1px solid var(--line2);flex-shrink:0;cursor:pointer}.loopcard img{width:100%;height:100%;object-fit:cover;transition:.35s}.loopcard:hover img{transform:scale(1.08)}.loopcard span{position:absolute;left:.7rem;right:.7rem;bottom:.55rem;font-family:'Cinzel';font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 2px 10px #000}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-#modal{position:fixed;inset:0;background:rgba(4,3,2,.93);z-index:500;display:none;align-items:center;justify-content:center;padding:2rem}#modal.open{display:flex}.modal-box{position:relative;max-width:min(1120px,96vw);width:100%;border:1px solid var(--line);background:#080604;box-shadow:0 40px 120px rgba(0,0,0,.75)}.modal-box img{display:block;width:100%;max-height:78vh;object-fit:contain;background:#000}.minfo{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;border-top:1px solid var(--line)}.minfo h3{font-family:'Bebas Neue';font-size:2rem;letter-spacing:.06em}.minfo p{font-family:'Cinzel';font-size:.55rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}.close{position:absolute;right:.8rem;top:.8rem;width:42px;height:42px;border:1px solid var(--line);background:rgba(7,5,4,.72);color:var(--bone);font-size:1.6rem;cursor:pointer;z-index:2}.footer{border-top:1px solid var(--line);padding:3rem 1.5rem;text-align:center;color:var(--ash);background:var(--panel)}.footer strong{font-family:'Bebas Neue';font-size:2rem;color:var(--gold);letter-spacing:.08em;display:block;margin-bottom:.6rem}
-@media(max-width:980px){.featured{grid-template-columns:1fr}.card,.card.medium{grid-column:span 6}.card.wide{grid-column:span 12}.card.tall{min-height:420px}.section-head{align-items:start;flex-direction:column}}@media(max-width:768px){nav{padding:1rem 1.2rem}.nav-links{display:none}.hero-title{font-size:4.2rem}main{padding-inline:1rem}.card,.card.medium,.card.wide{grid-column:span 12;min-height:350px}.counter{display:none}.feature-card{min-height:420px}.house-view{min-height:290px}}@media(max-width:520px){body{font-size:16px}.quick-inner a{padding:.95rem .85rem;font-size:.52rem}.finfo h2{font-size:2.6rem}.loopcard{width:220px;height:145px}.card{min-height:310px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria — Irmãos Connor & Mansão</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9963a;
+            --ember: #c94a1a;
+            --bone: #e8dfc8;
+            --ash: #9a9080;
+            --dark: #070504;
+            --panel: #100c09;
+            --panel2: #160f0b;
+            --line: rgba(201, 150, 58, .15);
+            --line2: rgba(201, 150, 58, .07)
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--dark);
+            color: var(--bone);
+            font-family: 'Crimson Pro', Georgia, serif;
+            overflow-x: hidden;
+            font-size: 18px
+        }
+
+        body:after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: .5
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            padding: 1rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(7, 5, 4, .97), transparent);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .logo {
+            font-family: 'Bebas Neue';
+            letter-spacing: .22em;
+            color: var(--gold);
+            font-size: 1.35rem;
+            text-decoration: none
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.4rem;
+            list-style: none
+        }
+
+        .nav-links a,
+        .back {
+            font-family: 'Cinzel';
+            font-size: .58rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--ash);
+            text-decoration: none
+        }
+
+        .nav-links a:hover,
+        .back:hover {
+            color: var(--gold)
+        }
+
+        #hero {
+            min-height: 88vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 8rem 2rem 5rem
+        }
+
+        .hslide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.2s, transform 7s;
+            transform: scale(1.03)
+        }
+
+        .hslide.active {
+            opacity: 1;
+            transform: scale(1.1)
+        }
+
+        .hslide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .veil {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(7, 5, 4, .2), rgba(7, 5, 4, .9) 70%, #070504), linear-gradient(180deg, rgba(7, 5, 4, .25), #070504)
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(var(--line2) 1px, transparent 1px), linear-gradient(90deg, var(--line2) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black, transparent 70%)
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px
+        }
+
+        .eyebrow {
+            font-family: 'Cinzel';
+            font-size: .62rem;
+            letter-spacing: .55em;
+            text-transform: uppercase;
+            color: var(--ember);
+            display: block;
+            margin-bottom: 1rem
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue';
+            font-size: clamp(4.2rem, 11vw, 9.4rem);
+            line-height: .86;
+            letter-spacing: .06em
+        }
+
+        .hero-title span {
+            color: var(--gold)
+        }
+
+        .hero-sub {
+            max-width: 650px;
+            margin: 1.3rem auto 0;
+            color: var(--ash);
+            font-style: italic;
+            line-height: 1.7;
+            font-size: 1.15rem
+        }
+
+        .actions {
+            display: flex;
+            gap: .8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem
+        }
+
+        .btn {
+            font-family: 'Cinzel';
+            font-size: .62rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--bone);
+            border: 1px solid var(--line);
+            background: rgba(16, 12, 9, .6);
+            padding: .85rem 1.05rem;
+            cursor: pointer
+        }
+
+        .btn:hover {
+            color: var(--gold);
+            border-color: var(--gold)
+        }
+
+        .counter {
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+            color: var(--ash);
+            font-family: 'Cinzel';
+            font-size: .6rem;
+            letter-spacing: .25em;
+            z-index: 3
+        }
+
+        #quickbar {
+            position: sticky;
+            top: 61px;
+            z-index: 150;
+            background: rgba(7, 5, 4, .96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            padding: 0 1rem
+        }
+
+        .quick-inner {
+            max-width: 1240px;
+            margin: auto;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none
+        }
+
+        .quick-inner a {
+            font-family: 'Cinzel';
+            font-size: .56rem;
+            letter-spacing: .21em;
+            text-transform: uppercase;
+            padding: 1rem 1.18rem;
+            color: var(--ash);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap
+        }
+
+        .quick-inner a:hover {
+            color: var(--gold);
+            border-bottom-color: var(--gold)
+        }
+
+        main {
+            max-width: 1260px;
+            margin: auto;
+            padding: 4.5rem 1.5rem 7rem
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            align-items: end;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 1rem;
+            margin-bottom: 1.7rem
+        }
+
+        .kicker {
+            font-family: 'Cinzel';
+            font-size: .58rem;
+            letter-spacing: .4em;
+            color: var(--ember);
+            text-transform: uppercase;
+            margin-bottom: .4rem
+        }
+
+        .title {
+            font-family: 'Bebas Neue';
+            font-size: clamp(2.5rem, 5vw, 4.7rem);
+            letter-spacing: .06em;
+            line-height: .9
+        }
+
+        .title span {
+            color: var(--gold)
+        }
+
+        .desc {
+            max-width: 430px;
+            color: var(--ash);
+            font-style: italic;
+            line-height: 1.6
+        }
+
+        .featured {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 1.2rem;
+            margin-bottom: 5rem
+        }
+
+        .feature-card,
+        .house {
+            border: 1px solid var(--line);
+            background: var(--panel);
+            overflow: hidden;
+            box-shadow: 0 28px 80px rgba(0, 0, 0, .45)
+        }
+
+        .feature-card {
+            position: relative;
+            min-height: 480px;
+            cursor: pointer
+        }
+
+        .feature-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 5s
+        }
+
+        .feature-card:hover img {
+            transform: scale(1.08)
+        }
+
+        .feature-card:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 35%, rgba(7, 5, 4, .94)), linear-gradient(90deg, rgba(7, 5, 4, .76), transparent 55%)
+        }
+
+        .finfo {
+            position: absolute;
+            z-index: 2;
+            left: 1.5rem;
+            right: 1.5rem;
+            bottom: 1.5rem
+        }
+
+        .meta {
+            font-family: 'Cinzel';
+            font-size: .55rem;
+            letter-spacing: .24em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: .55rem
+        }
+
+        .finfo h2 {
+            font-family: 'Bebas Neue';
+            font-size: 3.5rem;
+            letter-spacing: .06em;
+            line-height: .9
+        }
+
+        .finfo p {
+            color: var(--ash);
+            line-height: 1.55;
+            margin-top: .5rem;
+            max-width: 560px
+        }
+
+        .house {
+            display: flex;
+            flex-direction: column
+        }
+
+        .house-view {
+            position: relative;
+            min-height: 350px;
+            background: #050403;
+            overflow: hidden
+        }
+
+        .house-view img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.04);
+            transition: opacity .7s, transform 4s
+        }
+
+        .house-view img.active {
+            opacity: 1;
+            transform: scale(1.1)
+        }
+
+        .house-view:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(7, 5, 4, .15), rgba(7, 5, 4, .86))
+        }
+
+        .house-cap {
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 2
+        }
+
+        .house-cap h3 {
+            font-family: 'Bebas Neue';
+            font-size: 2.2rem;
+            letter-spacing: .06em
+        }
+
+        .house-cap p {
+            color: var(--ash);
+            font-style: italic
+        }
+
+        .progress {
+            height: 2px;
+            background: rgba(201, 150, 58, .1)
+        }
+
+        .progress span {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: var(--gold)
+        }
+
+        .thumbs {
+            display: flex;
+            gap: .55rem;
+            padding: .75rem;
+            overflow-x: auto;
+            scrollbar-width: none
+        }
+
+        .thumbs::-webkit-scrollbar {
+            display: none
+        }
+
+        .thumb {
+            width: 86px;
+            height: 58px;
+            object-fit: cover;
+            border: 1px solid var(--line2);
+            opacity: .55;
+            cursor: pointer;
+            flex-shrink: 0
+        }
+
+        .thumb.active,
+        .thumb:hover {
+            opacity: 1;
+            border-color: var(--gold)
+        }
+
+        .album {
+            margin-bottom: 5rem
+        }
+
+        .gridcards {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem
+        }
+
+        .card {
+            grid-column: span 3;
+            position: relative;
+            min-height: 330px;
+            border: 1px solid var(--line2);
+            background: var(--panel);
+            overflow: hidden;
+            cursor: pointer;
+            transition: .25s;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .24)
+        }
+
+        .card.wide {
+            grid-column: span 6
+        }
+
+        .card.medium {
+            grid-column: span 4
+        }
+
+        .card.tall {
+            grid-row: span 2;
+            min-height: 680px
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 150, 58, .55)
+        }
+
+        .card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .7s;
+            filter: saturate(.9) contrast(1.03)
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+            filter: saturate(1.04) contrast(1.08)
+        }
+
+        .card:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(7, 5, 4, .93)), linear-gradient(90deg, rgba(7, 5, 4, .45), transparent 55%)
+        }
+
+        .cbody {
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 2
+        }
+
+        .ccat {
+            font-family: 'Cinzel';
+            font-size: .5rem;
+            letter-spacing: .22em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: .35rem
+        }
+
+        .ctitle {
+            font-family: 'Bebas Neue';
+            font-size: 1.75rem;
+            letter-spacing: .05em;
+            line-height: .95
+        }
+
+        .cnote {
+            font-size: .95rem;
+            color: var(--ash);
+            font-style: italic;
+            margin-top: .3rem;
+            line-height: 1.35
+        }
+
+        .loopwrap {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: rgba(16, 12, 9, .52);
+            padding: 1rem;
+            margin-bottom: 5rem;
+            box-shadow: 0 28px 80px rgba(0, 0, 0, .45)
+        }
+
+        .loop {
+            display: flex;
+            gap: 1rem;
+            width: max-content;
+            animation: marquee 55s linear infinite
+        }
+
+        .loopwrap:hover .loop {
+            animation-play-state: paused
+        }
+
+        .loopcard {
+            width: 260px;
+            height: 170px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--line2);
+            flex-shrink: 0;
+            cursor: pointer
+        }
+
+        .loopcard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .35s
+        }
+
+        .loopcard:hover img {
+            transform: scale(1.08)
+        }
+
+        .loopcard span {
+            position: absolute;
+            left: .7rem;
+            right: .7rem;
+            bottom: .55rem;
+            font-family: 'Cinzel';
+            font-size: .5rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px #000
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        #modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 3, 2, .93);
+            z-index: 500;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem
+        }
+
+        #modal.open {
+            display: flex
+        }
+
+        .modal-box {
+            position: relative;
+            max-width: min(1120px, 96vw);
+            width: 100%;
+            border: 1px solid var(--line);
+            background: #080604;
+            box-shadow: 0 40px 120px rgba(0, 0, 0, .75)
+        }
+
+        .modal-box img {
+            display: block;
+            width: 100%;
+            max-height: 78vh;
+            object-fit: contain;
+            background: #000
+        }
+
+        .minfo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            border-top: 1px solid var(--line)
+        }
+
+        .minfo h3 {
+            font-family: 'Bebas Neue';
+            font-size: 2rem;
+            letter-spacing: .06em
+        }
+
+        .minfo p {
+            font-family: 'Cinzel';
+            font-size: .55rem;
+            letter-spacing: .18em;
+            color: var(--gold);
+            text-transform: uppercase
+        }
+
+        .close {
+            position: absolute;
+            right: .8rem;
+            top: .8rem;
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--line);
+            background: rgba(7, 5, 4, .72);
+            color: var(--bone);
+            font-size: 1.6rem;
+            cursor: pointer;
+            z-index: 2
+        }
+
+        .footer {
+            border-top: 1px solid var(--line);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--ash);
+            background: var(--panel)
+        }
+
+        .footer strong {
+            font-family: 'Bebas Neue';
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: .08em;
+            display: block;
+            margin-bottom: .6rem
+        }
+
+        @media(max-width:980px) {
+            .featured {
+                grid-template-columns: 1fr
+            }
+
+            .card,
+            .card.medium {
+                grid-column: span 6
+            }
+
+            .card.wide {
+                grid-column: span 12
+            }
+
+            .card.tall {
+                min-height: 420px
+            }
+
+            .section-head {
+                align-items: start;
+                flex-direction: column
+            }
+        }
+
+        @media(max-width:768px) {
+            nav {
+                padding: 1rem 1.2rem
+            }
+
+            .nav-links {
+                display: none
+            }
+
+            .hero-title {
+                font-size: 4.2rem
+            }
+
+            main {
+                padding-inline: 1rem
+            }
+
+            .card,
+            .card.medium,
+            .card.wide {
+                grid-column: span 12;
+                min-height: 350px
+            }
+
+            .counter {
+                display: none
+            }
+
+            .feature-card {
+                min-height: 420px
+            }
+
+            .house-view {
+                min-height: 290px
+            }
+        }
+
+        @media(max-width:520px) {
+            body {
+                font-size: 16px
+            }
+
+            .quick-inner a {
+                padding: .95rem .85rem;
+                font-size: .52rem
+            }
+
+            .finfo h2 {
+                font-size: 2.6rem
+            }
+
+            .loopcard {
+                width: 220px;
+                height: 145px
+            }
+
+            .card {
+                min-height: 310px
+            }
+        }
+    </style>
 </head>
+
 <body>
-<nav><a class="logo" href="telainicial.html">A Era da Extinção</a><ul class="nav-links"><li><a href="#irmaos">Irmãos</a></li><li><a href="#casa">Mansão</a></li></ul><a class="back" href="index.html">Voltar</a></nav>
-<header id="hero"><div id="heroSlides"></div><div class="veil"></div><div class="grid"></div><div class="hero-content"><span class="eyebrow">Arquivo visual da linhagem Connor</span><h1 class="hero-title">Irmãos <span>Connor</span></h1><p class="hero-sub">Uma galeria mais limpa, focada nos irmãos Connor juntos e nos ambientes da Mansão Connor. Retratos individuais e casais ficam nas páginas próprias dos personagens.</p><div class="actions"><a class="btn" href="#irmaos">Ver irmãos</a><a class="btn" href="#casa">Ver mansão</a></div></div><div class="counter" id="heroCounter">01 / 06</div></header>
-<div id="quickbar"><div class="quick-inner"><a href="#irmaos">Irmãos Connor</a><a href="#casa">Mansão Connor</a><a href="#loop">Loop visual</a></div></div>
-<main>
-<section class="featured"><article class="feature-card" id="featuredCard"></article><section class="house" id="casa"><div class="house-view" id="houseView"><div class="house-cap"><h3 id="houseTitle">Mansão Connor</h3><p id="houseText">Ambientes da casa em looping.</p></div></div><div class="progress"><span id="houseProgress"></span></div><div class="thumbs" id="houseThumbs"></div></section></section>
-<section class="album" id="irmaos"><div class="section-head"><div><div class="kicker">Álbum principal</div><h2 class="title">Irmãos <span>Connor</span></h2></div><p class="desc">Somente imagens em que os irmãos aparecem juntos: Jack, Mark, Jully, Britney e registros coletivos da linhagem Connor.</p></div><div class="gridcards" id="mainGrid"></div></section>
-<section class="album" id="loop"><div class="section-head"><div><div class="kicker">Apresentação contínua</div><h2 class="title">Loop <span>Visual</span></h2></div><p class="desc">Uma faixa animada com os registros dos irmãos, pensada para dar movimento à galeria sem poluir a tela.</p></div><div class="loopwrap"><div class="loop" id="loopRow"></div></div></section>
-</main>
-<div id="modal"><div class="modal-box"><button class="close" id="closeModal">×</button><img id="modalImg" src="" alt=""><div class="minfo"><div><h3 id="modalTitle"></h3><p id="modalCat"></p></div></div></div></div>
-<footer class="footer"><strong>A Era da Extinção</strong><p>Galeria visual dos irmãos Connor e da Mansão Connor.</p></footer>
-<script>
-const brotherItems = [{"src": "galeria-assets/img__brothers.webp", "title": "Irmãos Connor — Praia", "group": "Irmãos Connor", "note": "Registro dos irmãos juntos em um momento casual."}, {"src": "galeria-assets/img__brothers0.webp", "title": "Irmãos Connor — Shopping", "group": "Irmãos Connor", "note": "Os irmãos reunidos em uma cena urbana."}, {"src": "galeria-assets/img__brothers1.webp", "title": "Irmãos Connor — Encontro", "group": "Irmãos Connor", "note": "Momento descontraído entre os irmãos."}, {"src": "galeria-assets/img__brothers2.webp", "title": "Irmãos Connor — Retrato", "group": "Irmãos Connor", "note": "Retrato coletivo da linhagem Connor."}, {"src": "galeria-assets/img__brothers3.webp", "title": "Irmãos Connor — Família", "group": "Irmãos Connor", "note": "Os irmãos lado a lado em clima familiar."}, {"src": "galeria-assets/img__brothers4.webp", "title": "Irmãos Connor — Passeio", "group": "Irmãos Connor", "note": "Registro dos irmãos caminhando juntos."}, {"src": "galeria-assets/img__jackmark.webp", "title": "Jack & Mark Connor", "group": "Irmãos Connor", "note": "Os dois irmãos em uma cena de estrada e ação."}, {"src": "galeria-assets/img__britjull.webp", "title": "Britney & Jully Connor", "group": "Irmãs Connor", "note": "As irmãs Connor em cena elegante."}, {"src": "galeria-assets/img__britjull0.webp", "title": "Britney & Jully — Piscina", "group": "Irmãs Connor", "note": "Registro das irmãs em área externa."}, {"src": "galeria-assets/img__britjull1.webp", "title": "Britney & Jully — Noite", "group": "Irmãs Connor", "note": "As irmãs juntas em ambiente sofisticado."}, {"src": "galeria-assets/img__britney-jully.webp", "title": "Britney & Jully — Mansão", "group": "Irmãs Connor", "note": "Registro das irmãs dentro da mansão."}, {"src": "galeria-assets/jully-img__jullybrit.webp", "title": "Jully & Britney — Café", "group": "Irmãs Connor", "note": "Cena intimista das irmãs Connors."}, {"src": "galeria-assets/jully-img__jullybrit2.webp", "title": "Jully & Britney — Retrato", "group": "Irmãs Connor", "note": "Retrato das irmãs em composição limpa."}];
-const houseItems = [{"src": "galeria-assets/casa__portao.webp", "title": "Portão da Mansão", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__entrada.webp", "title": "Entrada Principal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__hall.webp", "title": "Hall Connor", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__sala.webp", "title": "Sala Principal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__sala-de-estar.webp", "title": "Sala de Estar", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__cozinha.webp", "title": "Cozinha", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__areagourmet.webp", "title": "Área Gourmet", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__cinema.webp", "title": "Cinema Privado", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__bibliotecageek.webp", "title": "Biblioteca Geek", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__adegabar.webp", "title": "Adega & Bar", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__garagem1.webp", "title": "Garagem Subterrânea", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__garagem2.webp", "title": "Garagem Colecionável", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__academia.webp", "title": "Academia", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__treinorecupera-o.webp", "title": "Treino & Recuperação", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__piscina.webp", "title": "Área da Piscina", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__quartocasal.webp", "title": "Quarto do Casal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__quartocasalclosset.webp", "title": "Closet do Casal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__quartomeninas.webp", "title": "Quarto das Meninas", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__quartomeninos.webp", "title": "Quarto dos Meninos", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__quartohosp.webp", "title": "Quarto de Hóspedes", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__quartohosp2.webp", "title": "Suíte de Hóspedes", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__salajogos.webp", "title": "Sala de Jogos", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}, {"src": "galeria-assets/casa__escritorio.webp", "title": "Escritório", "group": "Mansão Connor", "note": "Ambiente da mansão Connor."}];
-const heroPool = [...brotherItems.slice(0,7), ...houseItems.slice(0,3)];
-const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);let hero=0,house=0,timer,prog;
-function openM(it){$('#modalImg').src=it.src;$('#modalImg').alt=it.title;$('#modalTitle').textContent=it.title;$('#modalCat').textContent=it.group;$('#modal').classList.add('open')}
-function closeM(){$('#modal').classList.remove('open')}
-function buildHero(){let w=$('#heroSlides');w.innerHTML=heroPool.map((it,i)=>`<div class="hslide ${i?'':'active'}"><img src="${it.src}" alt="${it.title}"></div>`).join('');setInterval(()=>{let s=$$('.hslide');if(!s.length)return;s[hero].classList.remove('active');hero=(hero+1)%s.length;s[hero].classList.add('active');$('#heroCounter').textContent=String(hero+1).padStart(2,'0')+' / '+String(s.length).padStart(2,'0')},4800)}
-function cls(i){if(i===0||i===6)return'wide';if(i===4)return'tall';if(i%5===0)return'medium';return''}
-function card(it,i){return `<article class="card ${cls(i)}"><img src="${it.src}" alt="${it.title}" loading="lazy"><div class="cbody"><div class="ccat">${it.group}</div><h3 class="ctitle">${it.title}</h3><p class="cnote">${it.note}</p></div></article>`}
-function renderGrid(){$('#mainGrid').innerHTML=brotherItems.map(card).join('');$$('#mainGrid .card').forEach((el,i)=>el.onclick=()=>openM(brotherItems[i]))}
-function buildLoop(){let dup=[...brotherItems,...brotherItems];$('#loopRow').innerHTML=dup.map((it,i)=>`<div class="loopcard"><img src="${it.src}" alt="${it.title}"><span>${it.title}</span></div>`).join('');$$('#loopRow .loopcard').forEach((el,i)=>el.onclick=()=>openM(dup[i]))}
-function buildFeatured(){let it=brotherItems[0];$('#featuredCard').innerHTML=`<img src="${it.src}" alt="${it.title}"><div class="finfo"><div class="meta">Registro destacado</div><h2>${it.title}</h2><p>Imagem de abertura do álbum dos irmãos Connor, mantendo a página mais limpa e focada apenas nos vínculos entre irmãos.</p></div>`;$('#featuredCard').onclick=()=>openM(it)}
-function buildHouse(){let view=$('#houseView');houseItems.forEach((it,i)=>{let im=document.createElement('img');im.src=it.src;im.alt=it.title;if(i===0)im.classList.add('active');view.insertBefore(im, view.querySelector('.house-cap'))});$('#houseThumbs').innerHTML=houseItems.map((it,i)=>`<img class="thumb ${i?'':'active'}" src="${it.src}" alt="${it.title}" data-i="${i}">`).join('');$$('.thumb').forEach(t=>t.onclick=()=>showHouse(+t.dataset.i,true));showHouse(0,false);startLoop()}
-function showHouse(i,manual){let imgs=$$('#houseView > img');if(!imgs.length)return;imgs[house]?.classList.remove('active');$$('.thumb')[house]?.classList.remove('active');house=(i+imgs.length)%imgs.length;imgs[house].classList.add('active');$$('.thumb')[house]?.classList.add('active');let it=houseItems[house];$('#houseTitle').textContent=it.title;$('#houseText').textContent='Ambiente '+String(house+1).padStart(2,'0')+' de '+houseItems.length+' da Mansão Connor.';if(manual)startLoop()}
-function startLoop(){clearInterval(timer);clearInterval(prog);let p=0,bar=$('#houseProgress');bar.style.width='0%';prog=setInterval(()=>{p+=2;bar.style.width=p+'%';if(p>=100)p=0},90);timer=setInterval(()=>showHouse(house+1,false),4500)}
-document.addEventListener('DOMContentLoaded',()=>{buildHero();buildFeatured();buildHouse();renderGrid();buildLoop();$('#closeModal').onclick=closeM;$('#modal').onclick=e=>{if(e.target.id==='modal')closeM()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeM()})});
-</script>
+    <nav><a class="logo" href="telainicial.html">A Era da Extinção</a>
+        <ul class="nav-links">
+            <li><a href="#irmaos">Irmãos</a></li>
+            <li><a href="#casa">Mansão</a></li>
+        </ul><a class="back" href="telainicial.html">Voltar</a>
+    </nav>
+    <header id="hero">
+        <div id="heroSlides"></div>
+        <div class="veil"></div>
+        <div class="grid"></div>
+        <div class="hero-content"><span class="eyebrow">Arquivo visual da linhagem Connor</span>
+            <h1 class="hero-title">Irmãos <span>Connor</span></h1>
+            <p class="hero-sub">Uma galeria mais limpa, focada nos irmãos Connor juntos e nos ambientes da Mansão
+                Connor. Retratos individuais e casais ficam nas páginas próprias dos personagens.</p>
+            <div class="actions"><a class="btn" href="#irmaos">Ver irmãos</a><a class="btn" href="#casa">Ver mansão</a>
+            </div>
+        </div>
+        <div class="counter" id="heroCounter">01 / 06</div>
+    </header>
+    <div id="quickbar">
+        <div class="quick-inner"><a href="#irmaos">Irmãos Connor</a><a href="#casa">Mansão Connor</a><a
+                href="#loop">Loop visual</a></div>
+    </div>
+    <main>
+        <section class="featured">
+            <article class="feature-card" id="featuredCard"></article>
+            <section class="house" id="casa">
+                <div class="house-view" id="houseView">
+                    <div class="house-cap">
+                        <h3 id="houseTitle">Mansão Connor</h3>
+                        <p id="houseText">Ambientes da casa em looping.</p>
+                    </div>
+                </div>
+                <div class="progress"><span id="houseProgress"></span></div>
+                <div class="thumbs" id="houseThumbs"></div>
+            </section>
+        </section>
+        <section class="album" id="irmaos">
+            <div class="section-head">
+                <div>
+                    <div class="kicker">Álbum principal</div>
+                    <h2 class="title">Irmãos <span>Connor</span></h2>
+                </div>
+                <p class="desc">Somente imagens em que os irmãos aparecem juntos: Jack, Mark, Jully, Britney e registros
+                    coletivos da linhagem Connor.</p>
+            </div>
+            <div class="gridcards" id="mainGrid"></div>
+        </section>
+        <section class="album" id="loop">
+            <div class="section-head">
+                <div>
+                    <div class="kicker">Apresentação contínua</div>
+                    <h2 class="title">Loop <span>Visual</span></h2>
+                </div>
+                <p class="desc">Uma faixa animada com os registros dos irmãos, pensada para dar movimento à galeria sem
+                    poluir a tela.</p>
+            </div>
+            <div class="loopwrap">
+                <div class="loop" id="loopRow"></div>
+            </div>
+        </section>
+    </main>
+    <div id="modal">
+        <div class="modal-box"><button class="close" id="closeModal">×</button><img id="modalImg" src="" alt="">
+            <div class="minfo">
+                <div>
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalCat"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"><strong>A Era da Extinção</strong>
+        <p>Galeria visual dos irmãos Connor e da Mansão Connor.</p>
+    </footer>
+    <script>
+        const brotherItems = [{ "src": "galeria-assets/img__brothers.webp", "title": "Irmãos Connor — Praia", "group": "Irmãos Connor", "note": "Registro dos irmãos juntos em um momento casual." }, { "src": "galeria-assets/img__brothers0.webp", "title": "Irmãos Connor — Shopping", "group": "Irmãos Connor", "note": "Os irmãos reunidos em uma cena urbana." }, { "src": "galeria-assets/img__brothers1.webp", "title": "Irmãos Connor — Encontro", "group": "Irmãos Connor", "note": "Momento descontraído entre os irmãos." }, { "src": "galeria-assets/img__brothers2.webp", "title": "Irmãos Connor — Retrato", "group": "Irmãos Connor", "note": "Retrato coletivo da linhagem Connor." }, { "src": "galeria-assets/img__brothers3.webp", "title": "Irmãos Connor — Família", "group": "Irmãos Connor", "note": "Os irmãos lado a lado em clima familiar." }, { "src": "galeria-assets/img__brothers4.webp", "title": "Irmãos Connor — Passeio", "group": "Irmãos Connor", "note": "Registro dos irmãos caminhando juntos." }, { "src": "galeria-assets/img__jackmark.webp", "title": "Jack & Mark Connor", "group": "Irmãos Connor", "note": "Os dois irmãos em uma cena de estrada e ação." }, { "src": "galeria-assets/img__britjull.webp", "title": "Britney & Jully Connor", "group": "Irmãs Connor", "note": "As irmãs Connor em cena elegante." }, { "src": "galeria-assets/img__britjull0.webp", "title": "Britney & Jully — Piscina", "group": "Irmãs Connor", "note": "Registro das irmãs em área externa." }, { "src": "galeria-assets/img__britjull1.webp", "title": "Britney & Jully — Noite", "group": "Irmãs Connor", "note": "As irmãs juntas em ambiente sofisticado." }, { "src": "galeria-assets/img__britney-jully.webp", "title": "Britney & Jully — Mansão", "group": "Irmãs Connor", "note": "Registro das irmãs dentro da mansão." }, { "src": "galeria-assets/jully-img__jullybrit.webp", "title": "Jully & Britney — Café", "group": "Irmãs Connor", "note": "Cena intimista das irmãs Connors." }, { "src": "galeria-assets/jully-img__jullybrit2.webp", "title": "Jully & Britney — Retrato", "group": "Irmãs Connor", "note": "Retrato das irmãs em composição limpa." }];
+        const houseItems = [{ "src": "galeria-assets/casa__portao.webp", "title": "Portão da Mansão", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__entrada.webp", "title": "Entrada Principal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__hall.webp", "title": "Hall Connor", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__sala.webp", "title": "Sala Principal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__sala-de-estar.webp", "title": "Sala de Estar", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__cozinha.webp", "title": "Cozinha", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__areagourmet.webp", "title": "Área Gourmet", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__cinema.webp", "title": "Cinema Privado", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__bibliotecageek.webp", "title": "Biblioteca Geek", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__adegabar.webp", "title": "Adega & Bar", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__garagem1.webp", "title": "Garagem Subterrânea", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__garagem2.webp", "title": "Garagem Colecionável", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__academia.webp", "title": "Academia", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__treinorecupera-o.webp", "title": "Treino & Recuperação", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__piscina.webp", "title": "Área da Piscina", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__quartocasal.webp", "title": "Quarto do Casal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__quartocasalclosset.webp", "title": "Closet do Casal", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__quartomeninas.webp", "title": "Quarto das Meninas", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__quartomeninos.webp", "title": "Quarto dos Meninos", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__quartohosp.webp", "title": "Quarto de Hóspedes", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__quartohosp2.webp", "title": "Suíte de Hóspedes", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__salajogos.webp", "title": "Sala de Jogos", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }, { "src": "galeria-assets/casa__escritorio.webp", "title": "Escritório", "group": "Mansão Connor", "note": "Ambiente da mansão Connor." }];
+        const heroPool = [...brotherItems.slice(0, 7), ...houseItems.slice(0, 3)];
+        const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s); let hero = 0, house = 0, timer, prog;
+        function openM(it) { $('#modalImg').src = it.src; $('#modalImg').alt = it.title; $('#modalTitle').textContent = it.title; $('#modalCat').textContent = it.group; $('#modal').classList.add('open') }
+        function closeM() { $('#modal').classList.remove('open') }
+        function buildHero() { let w = $('#heroSlides'); w.innerHTML = heroPool.map((it, i) => `<div class="hslide ${i ? '' : 'active'}"><img src="${it.src}" alt="${it.title}"></div>`).join(''); setInterval(() => { let s = $$('.hslide'); if (!s.length) return; s[hero].classList.remove('active'); hero = (hero + 1) % s.length; s[hero].classList.add('active'); $('#heroCounter').textContent = String(hero + 1).padStart(2, '0') + ' / ' + String(s.length).padStart(2, '0') }, 4800) }
+        function cls(i) { if (i === 0 || i === 6) return 'wide'; if (i === 4) return 'tall'; if (i % 5 === 0) return 'medium'; return '' }
+        function card(it, i) { return `<article class="card ${cls(i)}"><img src="${it.src}" alt="${it.title}" loading="lazy"><div class="cbody"><div class="ccat">${it.group}</div><h3 class="ctitle">${it.title}</h3><p class="cnote">${it.note}</p></div></article>` }
+        function renderGrid() { $('#mainGrid').innerHTML = brotherItems.map(card).join(''); $$('#mainGrid .card').forEach((el, i) => el.onclick = () => openM(brotherItems[i])) }
+        function buildLoop() { let dup = [...brotherItems, ...brotherItems]; $('#loopRow').innerHTML = dup.map((it, i) => `<div class="loopcard"><img src="${it.src}" alt="${it.title}"><span>${it.title}</span></div>`).join(''); $$('#loopRow .loopcard').forEach((el, i) => el.onclick = () => openM(dup[i])) }
+        function buildFeatured() { let it = brotherItems[0]; $('#featuredCard').innerHTML = `<img src="${it.src}" alt="${it.title}"><div class="finfo"><div class="meta">Registro destacado</div><h2>${it.title}</h2><p>Imagem de abertura do álbum dos irmãos Connor, mantendo a página mais limpa e focada apenas nos vínculos entre irmãos.</p></div>`; $('#featuredCard').onclick = () => openM(it) }
+        function buildHouse() { let view = $('#houseView'); houseItems.forEach((it, i) => { let im = document.createElement('img'); im.src = it.src; im.alt = it.title; if (i === 0) im.classList.add('active'); view.insertBefore(im, view.querySelector('.house-cap')) }); $('#houseThumbs').innerHTML = houseItems.map((it, i) => `<img class="thumb ${i ? '' : 'active'}" src="${it.src}" alt="${it.title}" data-i="${i}">`).join(''); $$('.thumb').forEach(t => t.onclick = () => showHouse(+t.dataset.i, true)); showHouse(0, false); startLoop() }
+        function showHouse(i, manual) { let imgs = $$('#houseView > img'); if (!imgs.length) return; imgs[house]?.classList.remove('active'); $$('.thumb')[house]?.classList.remove('active'); house = (i + imgs.length) % imgs.length; imgs[house].classList.add('active'); $$('.thumb')[house]?.classList.add('active'); let it = houseItems[house]; $('#houseTitle').textContent = it.title; $('#houseText').textContent = 'Ambiente ' + String(house + 1).padStart(2, '0') + ' de ' + houseItems.length + ' da Mansão Connor.'; if (manual) startLoop() }
+        function startLoop() { clearInterval(timer); clearInterval(prog); let p = 0, bar = $('#houseProgress'); bar.style.width = '0%'; prog = setInterval(() => { p += 2; bar.style.width = p + '%'; if (p >= 100) p = 0 }, 90); timer = setInterval(() => showHouse(house + 1, false), 4500) }
+        document.addEventListener('DOMContentLoaded', () => { buildHero(); buildFeatured(); buildHouse(); renderGrid(); buildLoop(); $('#closeModal').onclick = closeM; $('#modal').onclick = e => { if (e.target.id === 'modal') closeM() }; document.addEventListener('keydown', e => { if (e.key === 'Escape') closeM() }) });
+    </script>
 </body>
+
 </html>
