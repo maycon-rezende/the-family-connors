@@ -49,8 +49,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:
 .hero-name .hero-last{color:red;}
 .hero-born{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.35em;color:var(--ash);text-transform:uppercase;margin-top:1.2rem;margin-bottom:2rem;}
 .hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;}
-.hero-badge{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.9rem;border:1px solid rgba(196,168,224,0.25);color:var(--lavender);}
-
+.hero-badge{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.9rem;border:1px solid rgba(196,168,224,0.25);color:var(--lavender);} .hero-actions{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.6rem;}
+ .hero-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.7rem 1rem;border:1px solid rgba(196,168,224,0.25);color:var(--bone);text-decoration:none;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;transition:all 0.2s ease;}
+ .hero-btn:hover{border-color:var(--lavender);color:var(--lavender);transform:translateY(-2px);}
+ .hero-btn.secondary{background:rgba(255,255,255,0.03);}
+ .hero-accent{position:absolute;right:3rem;top:3rem;width:140px;height:140px;border:1px solid rgba(196,168,224,0.12);border-radius:50%;pointer-events:none;}
 /* Linha decorativa vertical */
 .hero-vline{position:absolute;left:3rem;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--lavender) 30%,var(--lavender) 70%,transparent);opacity:0.3;}
 
@@ -402,6 +405,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay-bottom"></div>
+  <div class="hero-accent"></div>
   <div class="hero-vline"></div>
   <div class="hero-ornament">
     <div class="hero-ornament-text">Médica<br>·<br>Londres<br>·<br>Connor</div>
@@ -410,6 +414,10 @@ body.touch-device #cursor-ring{display:none !important;}
     <p class="hero-tag">Esposa de Jack · Médica</p>
     <h1 class="hero-name">ALICE<br><em>Myers</em><br><span class="hero-last">CONNOR</span></h1>
     <p class="hero-born">Medicina · Londres · Mãe de Cinco</p>
+    <div class="hero-actions">
+      <a class="hero-btn" href="#perfil">Ler perfil</a>
+      <a class="hero-btn secondary" href="telainicial.html">Voltar ao início</a>
+    </div>
     <div class="hero-badges">
       <span class="hero-badge">Médica</span>
       <span class="hero-badge">Formada em Londres</span>
@@ -428,7 +436,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </div>
 
-<section class="page-section">
+<section class="page-section" id="perfil">
   <p class="section-label reveal">Perfil</p>
   <h2 class="section-title reveal">Identidade</h2>
   <div class="profile-grid">

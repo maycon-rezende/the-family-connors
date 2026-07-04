@@ -55,8 +55,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:
 .hero-subtitle{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.4em;color:var(--ash);text-transform:uppercase;margin-top:1.2rem;margin-bottom:2rem;}
 .hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;}
 .hero-badge{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.9rem;border:1px solid rgba(201,150,58,0.3);color:var(--gold);}
-.hero-badge.red{border-color:rgba(139,26,26,0.5);color:var(--ember);}
-
+.hero-badge.red{border-color:rgba(139,26,26,0.5);color:var(--ember);} .hero-actions{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.6rem;}
+ .hero-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.7rem 1rem;border:1px solid rgba(201,150,58,0.3);color:var(--bone);text-decoration:none;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;transition:all 0.2s ease;}
+ .hero-btn:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+ .hero-btn.secondary{background:rgba(255,255,255,0.03);}
+ .hero-accent{position:absolute;right:3rem;top:3rem;width:140px;height:140px;border:1px solid rgba(201,150,58,0.12);border-radius:50%;pointer-events:none;}
 /* Scroll indicator */
 .scroll-ind{position:absolute;bottom:2rem;right:3rem;display:flex;flex-direction:column;align-items:center;gap:0.5rem;z-index:2;}
 .scroll-ind span{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.3em;color:var(--ash);opacity:0.5;writing-mode:vertical-rl;}
@@ -394,12 +397,17 @@ body.touch-device #cursor-ring{display:none !important;}
   <div class="hero-overlay"></div>
   <div class="hero-overlay-left"></div>
   <div class="hero-lines"></div>
+  <div class="hero-accent"></div>
 
   <div class="hero-content">
     <p class="hero-tag">01 — Família Connor</p>
     <div class="hero-number">01</div>
     <h1 class="hero-name">JACK<br><span>CONNOR</span></h1>
     <p class="hero-subtitle">Primogênito · Ex-FBI · Fundador dos Hellsings</p>
+    <div class="hero-actions">
+      <a class="hero-btn" href="#perfil">Ver perfil</a>
+      <a class="hero-btn secondary" href="telainicial.html">Voltar ao início</a>
+    </div>
     <div class="hero-badges">
       <span class="hero-badge">1,93m</span>
       <span class="hero-badge">Bodybuilder</span>
@@ -438,7 +446,7 @@ body.touch-device #cursor-ring{display:none !important;}
 </div>
 
 <!-- PERFIL -->
-<section class="page-section">
+<section class="page-section" id="perfil">
   <p class="section-label reveal">Perfil</p>
   <h2 class="section-title reveal">IDENTIDADE</h2>
 

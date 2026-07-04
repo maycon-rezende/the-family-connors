@@ -49,8 +49,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:
 .hero-subtitle{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:var(--ash);text-transform:uppercase;margin-top:1.2rem;margin-bottom:2rem;}
 .hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;}
 .hero-badge{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;padding:0.3rem 0.9rem;border:1px solid rgba(122,184,212,0.3);color:var(--ice);}
-.hero-badge.gold{border-color:rgba(201,150,58,0.3);color:var(--gold);}
-
+.hero-badge.gold{border-color:rgba(201,150,58,0.3);color:var(--gold);} .hero-actions{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.6rem;}
+ .hero-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.7rem 1rem;border:1px solid rgba(122,184,212,0.25);color:var(--bone);text-decoration:none;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;transition:all 0.2s ease;}
+ .hero-btn:hover{border-color:var(--ice);color:var(--ice);transform:translateY(-2px);}
+ .hero-btn.secondary{background:rgba(255,255,255,0.03);}
+ .hero-accent{position:absolute;right:3rem;top:3rem;width:140px;height:140px;border:1px solid rgba(122,184,212,0.12);border-radius:50%;pointer-events:none;}
 .scroll-ind{position:absolute;bottom:2rem;right:3rem;display:flex;flex-direction:column;align-items:center;gap:0.5rem;z-index:2;}
 .scroll-ind span{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.3em;color:var(--ash);opacity:0.5;writing-mode:vertical-rl;}
 .scroll-line{width:1px;height:50px;background:linear-gradient(var(--ice),transparent);animation:scrollpulse 2s ease-in-out infinite;}
@@ -376,12 +379,17 @@ body.touch-device #cursor-ring{display:none !important;}
   <div class="hero-grid-lines"></div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay-side"></div>
+  <div class="hero-accent"></div>
   <div class="hero-hlines"><div class="hero-hline"></div><div class="hero-hline"></div><div class="hero-hline"></div></div>
   <div class="hero-content">
     <p class="hero-rank">Agente Hellsings · Ex-Marinha dos EUA</p>
     <div class="hero-number">02</div>
     <h1 class="hero-name">MARK<br><span>CONNOR</span></h1>
     <p class="hero-subtitle">Segundo Filho · Soldado · Hellsings</p>
+    <div class="hero-actions">
+      <a class="hero-btn" href="#perfil">Explorar perfil</a>
+      <a class="hero-btn secondary" href="telainicial.html">Voltar ao início</a>
+    </div>
     <div class="hero-badges">
       <span class="hero-badge">Marinha Americana</span>
       <span class="hero-badge">Hellsings</span>
@@ -401,7 +409,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </div>
 
-<section class="page-section">
+<section class="page-section" id="perfil">
   <p class="section-label reveal">Perfil</p>
   <h2 class="section-title reveal">IDENTIDADE</h2>
   <div class="profile-grid">

@@ -110,8 +110,11 @@ nav{
 .hero-diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
 .hero-badges{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;animation:fade-up 1s 1.3s both;}
 .hero-badge{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1rem;border:1px solid rgba(201,150,58,0.25);color:var(--gold);}
-.hero-badge.red{border-color:rgba(201,74,26,0.4);color:var(--ember);}
-
+.hero-badge.red{border-color:rgba(201,74,26,0.4);color:var(--ember);} .hero-actions{display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin-top:1.6rem;}
+ .hero-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.7rem 1rem;border:1px solid rgba(201,150,58,0.25);color:var(--bone);text-decoration:none;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;transition:all 0.2s ease;}
+ .hero-btn:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+ .hero-btn.secondary{background:rgba(255,255,255,0.03);}
+ .hero-accent{position:absolute;right:3rem;top:3rem;width:140px;height:140px;border:1px solid rgba(201,150,58,0.12);border-radius:50%;pointer-events:none;}
 /* Scroll indicator */
 .scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;z-index:2;animation:fade-up 1s 1.8s both;}
 .scroll-ind span{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.35em;color:var(--ash);opacity:0.5;text-transform:uppercase;}
@@ -360,6 +363,7 @@ footer{background:var(--dark);border-top:1px solid var(--line);padding:4rem 2rem
   <div class="hero-bg"></div>
   <div class="hero-hex"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-accent"></div>
 
   <div>
     <div class="hero-emblem">
@@ -377,6 +381,10 @@ footer{background:var(--dark);border-top:1px solid var(--line);padding:4rem 2rem
       <h1 class="hero-title">HELL<span>SINGS</span></h1>
       <p class="hero-tagline">"Pagando bem e dentro do código — o trabalho é feito. Sem exceções."</p>
       <div class="hero-divider"><div class="hero-diamond"></div></div>
+      <div class="hero-actions">
+        <a class="hero-btn" href="#manifesto">Ver fundamentos</a>
+        <a class="hero-btn secondary" href="telainicial.html">Voltar ao início</a>
+      </div>
       <div class="hero-badges">
         <span class="hero-badge red">Anti-Contrabando</span>
         <span class="hero-badge">Contratos Governamentais</span>

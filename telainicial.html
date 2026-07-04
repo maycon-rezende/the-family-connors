@@ -241,6 +241,100 @@
       animation: fade-up 1s 1.1s both;
     }
 
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      animation: fade-up 1s 1.2s both;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.35rem;
+      border-radius: 999px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-btn-primary {
+      background: linear-gradient(135deg, var(--ember), var(--gold));
+      color: var(--dark);
+      box-shadow: 0 8px 24px rgba(201, 74, 26, 0.25);
+    }
+
+    .hero-btn-secondary {
+      border: 1px solid var(--gold-dim);
+      color: var(--bone);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .story-brief {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: -2rem auto 0;
+      padding: 0 2rem 4rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .story-brief-card,
+    .story-stats {
+      background: rgba(22, 16, 12, 0.94);
+      border: 1px solid var(--gold-dim);
+      border-radius: 22px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    }
+
+    .story-brief-card p {
+      color: var(--ash);
+      margin-top: 1rem;
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .story-stats {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .story-stat {
+      padding: 1rem 1.1rem;
+      background: rgba(201, 150, 58, 0.05);
+      border: 1px solid rgba(201, 150, 58, 0.16);
+      border-radius: 16px;
+    }
+
+    .story-stat strong {
+      display: block;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .story-stat span {
+      color: var(--ash);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .scroll-hint {
       position: absolute;
       bottom: 2.5rem;
@@ -665,6 +759,30 @@
       font-size: 0.92rem;
       line-height: 1.65;
       flex: 1;
+    }
+
+    .color-dot.green { background: #2d6e2d; }
+    .color-dot.orange { background: #c95a1a; }
+    .color-dot.blue { background: #5aa0d0; }
+    .color-dot.gold { background: #d4b96a; }
+
+    .stat-bar-fill.w-92 { width: 92%; }
+    .stat-bar-fill.w-97 { width: 97%; }
+    .stat-bar-fill.w-88 { width: 88%; }
+    .stat-bar-fill.w-84 { width: 84%; }
+    .stat-bar-fill.w-99 { width: 99%; }
+
+    .timeline-event.pending {
+      opacity: 0.4;
+    }
+
+    .extra-name,
+    .org-highlight {
+      color: var(--gold);
+    }
+
+    .org-highlight {
+      color: var(--bone);
     }
 
     /* STAT BARS */
@@ -1508,10 +1626,37 @@ body.touch-device #cursor-ring{display:none !important;}
     </div>
     <p class="hero-desc">"Cinco irmãos. Um legado forjado em perda. Uma organização construída sobre honra. E um mundo
       que nunca mais será o mesmo."</p>
+    <div class="hero-actions">
+      <a class="hero-btn hero-btn-primary" href="#familia">Conhecer a família</a>
+      <a class="hero-btn hero-btn-secondary" href="galeria.html">Abrir galeria</a>
+    </div>
     <div class="scroll-hint"><span>Explorar</span>
       <div class="scroll-arrow"></div>
     </div>
   </div>
+
+  <section class="story-brief reveal" id="resumo">
+    <div class="story-brief-card">
+      <span class="section-tag">Resumo da saga</span>
+      <h2 class="section-title">Honra, sangue e legado</h2>
+      <p>Os Connor carregam a responsabilidade de proteger o que restou de um mundo em ruínas. Entre laços familiares, missões perigosas e segredos que atravessam gerações, cada personagem possui uma peça essencial nessa história.</p>
+    </div>
+    <div class="story-stats">
+      <div class="story-stat">
+        <strong>5</strong>
+        <span>membros centrais</span>
+      </div>
+      <div class="story-stat">
+        <strong>1</strong>
+        <span>organização de elite</span>
+      </div>
+      <div class="story-stat">
+        <strong>∞</strong>
+        <span>legado em construção</span>
+      </div>
+    </div>
+  </section>
+
   <!-- FAMÍLIA — CARDS INDIVIDUAIS -->
   <section id="familia">
     <div class="section-header reveal">
@@ -1536,11 +1681,11 @@ body.touch-device #cursor-ring{display:none !important;}
           <h2 class="card-name">Jack Connor</h2>
           <p class="card-role">Ex-FBI · Força Especial · Líder dos Hellsings</p>
           <div class="color-dots">
-            <div class="color-dot" style="background:#2d6e2d"></div><span class="color-label">Olhos — Verde
+            <div class="color-dot green"></div><span class="color-label">Olhos — Verde
               Escuro</span>
           </div>
           <div class="color-dots">
-            <div class="color-dot" style="background:#c95a1a"></div><span class="color-label">Cabelo — Ruivo
+            <div class="color-dot orange"></div><span class="color-label">Cabelo — Ruivo
               Laranjado</span>
           </div>
           <div class="card-traits"><span class="trait hi">1,93m</span><span class="trait hi">Bodybuilder</span><span
@@ -1550,17 +1695,17 @@ body.touch-device #cursor-ring{display:none !important;}
             Hellsings após deixar o FBI. Casado com Alice Myers.</p>
           <div class="stat-row"><span class="stat-label">Combate</span>
             <div class="stat-bar-track">
-              <div class="stat-bar-fill" style="--w:92%"></div>
+              <div class="stat-bar-fill w-92" style="--w:92%"></div>
             </div>
           </div>
           <div class="stat-row"><span class="stat-label">Liderança</span>
             <div class="stat-bar-track">
-              <div class="stat-bar-fill" style="--w:97%"></div>
+              <div class="stat-bar-fill w-97" style="--w:97%"></div>
             </div>
           </div>
           <div class="stat-row"><span class="stat-label">Estratégia</span>
             <div class="stat-bar-track">
-              <div class="stat-bar-fill" style="--w:88%"></div>
+              <div class="stat-bar-fill w-88" style="--w:88%"></div>
             </div>
           </div>
         </div>
@@ -1609,10 +1754,10 @@ body.touch-device #cursor-ring{display:none !important;}
           <h2 class="card-name">Mark Connor</h2>
           <p class="card-role">Ex-Marinha dos EUA · Agente Hellsings</p>
           <div class="color-dots">
-            <div class="color-dot" style="background:#5aa0d0"></div><span class="color-label">Olhos — Azul Claro</span>
+            <div class="color-dot blue"></div><span class="color-label">Olhos — Azul Claro</span>
           </div>
           <div class="color-dots">
-            <div class="color-dot" style="background:#d4b96a"></div><span class="color-label">Cabelo — Loiro</span>
+            <div class="color-dot gold"></div><span class="color-label">Cabelo — Loiro</span>
           </div>
           <div class="card-traits"><span class="trait hi">Marinha Americana</span><span class="trait hi">Serviu aos
               18</span><span class="trait">Inglês</span><span class="trait">Hellsings</span></div>
@@ -1620,17 +1765,17 @@ body.touch-device #cursor-ring{display:none !important;}
             retornar, uniu-se aos Hellsings e reencontrou o amor que pensou ter perdido.</p>
           <div class="stat-row"><span class="stat-label">Combate</span>
             <div class="stat-bar-track">
-              <div class="stat-bar-fill" style="--w:88%"></div>
+              <div class="stat-bar-fill w-88" style="--w:88%"></div>
             </div>
           </div>
           <div class="stat-row"><span class="stat-label">Tática Naval</span>
             <div class="stat-bar-track">
-              <div class="stat-bar-fill" style="--w:84%"></div>
+              <div class="stat-bar-fill w-84" style="--w:84%"></div>
             </div>
           </div>
           <div class="stat-row"><span class="stat-label">Lealdade</span>
             <div class="stat-bar-track">
-              <div class="stat-bar-fill" style="--w:99%"></div>
+              <div class="stat-bar-fill w-99" style="--w:99%"></div>
             </div>
           </div>
         </div>
@@ -1678,11 +1823,11 @@ body.touch-device #cursor-ring{display:none !important;}
           <h2 class="card-name">Britney Connor</h2>
           <p class="card-role">Estudante · Mora com Mark</p>
           <div class="color-dots">
-            <div class="color-dot" style="background:#2d6e2d"></div><span class="color-label">Olhos — Verde Escuro (como
+            <div class="color-dot green"></div><span class="color-label">Olhos — Verde Escuro (como
               Jack)</span>
           </div>
           <div class="color-dots">
-            <div class="color-dot" style="background:#d4b96a"></div><span class="color-label">Cabelo — Loiro</span>
+            <div class="color-dot gold"></div><span class="color-label">Cabelo — Loiro</span>
           </div>
           <div class="card-traits"><span class="trait hi">Usa Óculos</span><span class="trait">Estudante</span><span
               class="trait">Inglesa</span></div>
@@ -1713,99 +1858,7 @@ body.touch-device #cursor-ring{display:none !important;}
       </div>
     </div>
   </section>
-  </div>
-  <div class="couple-content">
-    <div class="couple-inner">
-      <div class="partner-detail">
-        <span class="pd-tag">01 — Connor</span>
-        <h3 class="pd-name">Jack Connor</h3>
-        <p class="pd-role">Ex-FBI · Força Especial · Líder dos Hellsings</p>
-        <div class="pd-photo-placeholder"><span>↑ Foto do Jack</span></div>
-        <p class="pd-text">O mais velho dos Connor. Desde criança assumiu a responsabilidade pela família após a
-          perda dos pais. Ingressou no FBI, se especializou em forças especiais e, após sair, fundou os Hellsings.
-        </p>
-        <div class="pd-traits"><span class="trait hi">1,93m · Bodybuilder</span><span class="trait">Verde Escuro ·
-            Ruivo</span><span class="trait">FBI Forças Especiais</span></div>
-        <div class="stat-row"><span class="stat-label">Combate</span>
-          <div class="stat-bar-track">
-            <div class="stat-bar-fill" style="--w:92%"></div>
-          </div>
-        </div>
-        <div class="stat-row"><span class="stat-label">Liderança</span>
-          <div class="stat-bar-track">
-            <div class="stat-bar-fill" style="--w:97%"></div>
-          </div>
-        </div>
-      </div>
-      <div class="partner-detail">
-        <span class="pd-tag">— Myers · Connor</span>
-        <h3 class="pd-name">Alice Myers Connor</h3>
-        <p class="pd-role">Médica · Formada em Londres</p>
-        <img class="pd-photo" src="img/alice.png" alt="Alice">
-        <div class="pd-photo-placeholder"><span>↑ Foto da Alice</span></div>
-        <p class="pd-text">Era a menos popular da escola quando Jack a conheceu. Estudou medicina em Londres e
-          construiu sua carreira ao lado do marido. Juntos, formaram uma família com cinco filhos.</p>
-        <div class="pd-traits"><span class="trait hi">Medicina · Londres</span><span class="trait">Alucard ·
-            Nicolai · Mary · Diana</span></div>
-      </div>
-      <div class="couple-story">
-        <span class="cs-tag">A História Deles</span>
-        <h4 class="cs-title">De alunos a parceiros de vida</h4>
-        <p class="cs-text">[Aguardando conteúdo do autor] — Adicione aqui a história de Jack e Alice: o primeiro
-          encontro na escola, o desenvolvimento do relacionamento, o casamento, a chegada dos filhos e a vida ao
-          lado dos Hellsings.</p>
-        <span class="edit-hint">+ Adicionar História</span>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="couple-content">
-    <div class="couple-inner">
-      <div class="partner-detail">
-        <span class="pd-tag">02 — Connor</span>
-        <h3 class="pd-name">Mark Connor</h3>
-        <p class="pd-role">Ex-Marinha dos EUA · Agente Hellsings</p>
-        <div class="pd-photo-placeholder"><span>↑ Foto do Mark</span></div>
-        <p class="pd-text">Alistou-se na marinha americana aos 18 anos, sem saber que deixava Ariani grávida. Ao
-          retornar, deixou o exército e se juntou ao irmão nos Hellsings. O reencontro com Ariani mudou tudo.</p>
-        <div class="pd-traits"><span class="trait hi">Azul Claro · Loiro</span><span class="trait">Marinha
-            Americana</span><span class="trait">Hellsings</span></div>
-        <div class="stat-row"><span class="stat-label">Combate</span>
-          <div class="stat-bar-track">
-            <div class="stat-bar-fill" style="--w:88%"></div>
-          </div>
-        </div>
-        <div class="stat-row"><span class="stat-label">Lealdade</span>
-          <div class="stat-bar-track">
-            <div class="stat-bar-fill" style="--w:99%"></div>
-          </div>
-        </div>
-      </div>
-      <div class="partner-detail">
-        <span class="pd-tag">— Salvatore</span>
-        <h3 class="pd-name">Ariani Salvatore</h3>
-        <p class="pd-role">Advogada Renomada · Companheira de Mark</p>
-        <img class="pd-photo" src="img/advari.png" alt="Ariani">
-        <div class="pd-photo-placeholder"><span>↑ Foto da Ariani</span></div>
-        <p class="pd-text">Guardou o segredo da gravidez por anos enquanto construía sua carreira como advogada
-          renomada. Criou o filho sozinha. Quando Mark voltou, o reencontro foi inevitável — e transformador.</p>
-        <div class="pd-traits"><span class="trait hi">Advogada Renomada</span><span class="trait">Criou o filho
-            sozinha</span></div>
-      </div>
-      <div class="couple-story">
-        <span class="cs-tag">A História Deles</span>
-        <h4 class="cs-title">O segredo que o tempo não apagou</h4>
-        <p class="cs-text">[Aguardando conteúdo do autor] — Adicione aqui a história de Mark e Ariani: o namoro
-          antes da marinha, a partida de Mark, a gravidez guardada em segredo, os anos separados, o reencontro e a
-          revelação que mudou tudo.</p>
-        <span class="edit-hint">+ Adicionar História</span>
-      </div>
-    </div>
-  </div>
-  </div>
 
-  </div>
-  </div>
   <!-- TIMELINE -->
   <div id="timeline">
     <div class="timeline-inner">
@@ -1863,7 +1916,7 @@ body.touch-device #cursor-ring{display:none !important;}
           <p class="timeline-desc">De volta da marinha, Mark reencontra Ariani. A revelação da gravidez abala tudo. Após
             muitos ocorridos, ficam juntos.</p>
         </div>
-        <div class="timeline-event" style="opacity:0.4;">
+        <div class="timeline-event pending">
           <p class="timeline-who">[ Aguardando autor ]</p>
           <h3 class="timeline-title">Próximo Evento</h3>
           <p class="timeline-desc">Adicione aqui o próximo marco cronológico da narrativa.</p>
@@ -1890,9 +1943,9 @@ body.touch-device #cursor-ring{display:none !important;}
         <div class="extra-card reveal">
           <div class="extra-icon">👨‍👩‍👧‍👦</div>
           <h3 class="extra-title">Filhos de Jack &amp; Alice</h3>
-          <p class="extra-text"><strong style="color:var(--gold)">Alucard</strong> — o mais velho<br><strong
-              style="color:var(--gold)">Nicolai</strong><br><strong style="color:var(--gold)">Mary</strong><br><strong
-              style="color:var(--gold)">Diana</strong></p>
+          <p class="extra-text"><strong class="extra-name">Alucard</strong> — o mais velho<br><strong
+              class="extra-name">Nicolai</strong><br><strong class="extra-name">Mary</strong><br><strong
+              class="extra-name">Diana</strong></p>
           <p class="add-hint">+ Adicionar perfis</p>
         </div>
         <div class="extra-card reveal">
@@ -1931,7 +1984,7 @@ body.touch-device #cursor-ring{display:none !important;}
       <span class="section-tag">A Organização</span>
       <h2 class="section-title">Os Hellsings</h2>
       <div class="section-rule"></div><br><br>
-      <p>Fundada por <strong style="color:var(--bone)">Jack Connor</strong> após sua saída do FBI, a organização
+      <p>Fundada por <strong class="org-highlight">Jack Connor</strong> após sua saída do FBI, a organização
         <em>Hellsings</em> opera nas sombras entre a lei e o caos. Uma equipe de elite formada por agentes com
         habilidades únicas, reunidos por um propósito maior.
       </p>
