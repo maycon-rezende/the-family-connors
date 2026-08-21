@@ -30,6 +30,7 @@
 - `opening.css` e `opening.js`: prólogo e efeitos do `index`.
 - `home-effects.css` e `home-effects.js`: efeitos e seções da tela inicial.
 - `jack-effects.css` e `jack-effects.js`: identidade visual e galeria-dossiê de Jack.
+- `alice-effects.css` e `alice-effects.js`: atmosfera clínica, partículas ambientais e arquivo fotográfico interativo de Alice.
 
 ## Organização realizada
 

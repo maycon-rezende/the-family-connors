@@ -13,6 +13,7 @@ A Mansão Connor representa a entrada do site e da família. Os Hellsings foram 
 - `index.html`: prólogo cinematográfico e entrada da mansão.
 - `telainicial.html`: apresentação da família, mundo anterior ao fim, memórias, cronologia e herança.
 - Páginas individuais: dossiês de Jack, Alice, Mark, Ariani, Britney e Jully.
+- Alice: experiência clínica e emocional com galeria médica interativa exclusiva.
 - `hellsing.html`: página reservada à organização Hellsings.
 - `galeria.html`: arquivo visual da família e da mansão.
 

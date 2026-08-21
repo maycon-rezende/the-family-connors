@@ -13,13 +13,15 @@
 - Árvore de Jack, Alice e seus cinco filhos.
 - Novo hero do dossiê de Jack.
 - Galeria de Jack convertida em arquivo FBI/Interpol com 17 fotografias.
+- Página de Alice reformulada com atmosfera clínica, sinais vitais, varredura luminosa e partículas microscópicas.
+- Galeria exclusiva de Alice convertida em arquivo médico interativo com sete registros e visualização ampliada.
 - Correção de referências quebradas e marcação HTML defeituosa.
 - Limpeza de cópias antigas e assets duplicados.
 
 ## Próximas páginas individuais
 
 1. Finalizar Identidade, Habilidades e Cronologia de Jack.
-2. Reformular Alice com linguagem médica e emocional.
+2. Complementar a história de Alice quando novos detalhes do livro forem definidos.
 3. Reformular Mark com identidade naval.
 4. Reformular Ariani com identidade jurídica.
 5. Reformular Britney e Jully com identidades próprias.

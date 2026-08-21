@@ -374,6 +374,7 @@ body.touch-device #cursor-ring{display:none !important;}
 </style>
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="alice-effects.css">
 </head>
 <body>
   <audio autoplay loop hidden>
@@ -501,21 +502,47 @@ body.touch-device #cursor-ring{display:none !important;}
     <div class="vt-item" style="opacity:0.35;"><span class="vt-year">[ Em Branco ]</span><h3 class="vt-title">Aguardando o autor</h3><p class="vt-text">Adicione os próximos capítulos da história de Alice.</p></div>
   </div>
 </section>
-<section class="page-section gallery-section" style="padding-top:2rem;">
-  <p class="section-label reveal">Galeria</p>
-  <h2 class="section-title reveal">Fotos</h2>
- <div class="gallery-loop">
-  <img src="img/licemedica.png" alt="Alice 1" class="active">
-  <img src="img/licejack.png " alt="Alice 2">
-  <img src="img/licefamilia.png " alt="Alice 3">
-  <img src="img/familiajack.png" alt="Alice 4">
-  <img src="img/licefamilia.png " alt="Alice 5">
-  <img src="img/alice2.png " alt="Alice 6">
-  <img src="img/fenix.png " alt="Alice 8">
-  <img src="img/lice.png " alt="Alice 9">
-  <img src="img/lice2.png " alt="Alice 10">
+<section class="alice-archive" id="arquivo-alice" aria-labelledby="alice-archive-title">
+  <div class="archive-heading reveal">
+    <div>
+      <p class="section-label">Arquivo pessoal · A.M.C.</p>
+      <h2 class="section-title" id="alice-archive-title">Registros de Alice</h2>
+      <p class="archive-intro">Uma coleção dedicada exclusivamente a Alice Myers Connor — médica, mãe e centro vital da família.</p>
+    </div>
+    <div class="archive-status" aria-label="Status do arquivo">
+      <span class="status-pulse"></span>
+      <span>Arquivo clínico ativo</span>
+      <strong>07 registros</strong>
+    </div>
+  </div>
 
-</div>
+  <div class="alice-gallery">
+    <button class="alice-photo alice-photo--featured reveal" type="button" data-full="img/licemedica.png" data-title="Dra. Alice Connor" data-note="Registro profissional · Medicina">
+      <img src="img/licemedica.png" alt="Alice Connor em registro profissional" loading="lazy">
+      <span class="photo-scan" aria-hidden="true"></span>
+      <span class="photo-index">AMC · 001</span>
+      <span class="photo-caption"><strong>Dra. Alice Connor</strong><small>Registro profissional · Medicina</small></span>
+    </button>
+    <button class="alice-photo reveal" type="button" data-full="img/medica.png" data-title="Plantão" data-note="Arquivo médico · Registro 02">
+      <img src="img/medica.png" alt="Alice em ambiente médico" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 002</span><span class="photo-caption"><strong>Plantão</strong><small>Arquivo médico</small></span>
+    </button>
+    <button class="alice-photo reveal" type="button" data-full="img/medica2.png" data-title="Vocação" data-note="Medicina · Registro 03">
+      <img src="img/medica2.png" alt="Retrato profissional de Alice" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 003</span><span class="photo-caption"><strong>Vocação</strong><small>Medicina</small></span>
+    </button>
+    <button class="alice-photo alice-photo--wide reveal" type="button" data-full="img/alicepaisagem.png" data-title="Entre dois mundos" data-note="Arquivo pessoal · Registro 04">
+      <img src="img/alicepaisagem.png" alt="Registro de Alice em paisagem" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 004</span><span class="photo-caption"><strong>Entre dois mundos</strong><small>Arquivo pessoal</small></span>
+    </button>
+    <button class="alice-photo reveal" type="button" data-full="img/alice2.png" data-title="Alice Myers" data-note="Retrato pessoal · Registro 05">
+      <img src="img/alice2.png" alt="Retrato de Alice Myers" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 005</span><span class="photo-caption"><strong>Alice Myers</strong><small>Retrato pessoal</small></span>
+    </button>
+    <button class="alice-photo reveal" type="button" data-full="img/lice.png" data-title="A guardiã" data-note="Família Connor · Registro 06">
+      <img src="img/lice.png" alt="Retrato de Alice Connor" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 006</span><span class="photo-caption"><strong>A guardiã</strong><small>Família Connor</small></span>
+    </button>
+    <button class="alice-photo reveal" type="button" data-full="img/lice2.png" data-title="Pulso firme" data-note="Arquivo pessoal · Registro 07">
+      <img src="img/lice2.png" alt="Segundo retrato de Alice Connor" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 007</span><span class="photo-caption"><strong>Pulso firme</strong><small>Arquivo pessoal</small></span>
+    </button>
+  </div>
+  <p class="archive-hint">Selecione um registro para ampliar</p>
 </section>
  <footer>
     <p class="footer-logo">HELLSINGS</p>
@@ -531,19 +558,6 @@ const obs = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
-</script>
-
-<script>
-const images = document.querySelectorAll('.gallery-loop img');
-let current = 0;
-
-function showNextImage() {
-  images[current].classList.remove('active');
-  current = (current + 1) % images.length;
-  images[current].classList.add('active');
-}
-
-setInterval(showNextImage, 4000); // troca a cada 4 segundos
 </script>
 
 <script>
@@ -718,5 +732,6 @@ setInterval(showNextImage, 4000); // troca a cada 4 segundos
 
 <script src="site-cursor.js" defer></script>
 <script src="site-transmission.js" defer></script>
+<script src="alice-effects.js" defer></script>
 </body>
 </html>
