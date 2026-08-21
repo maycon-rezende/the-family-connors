@@ -17,7 +17,7 @@
 
 ## Pastas de mídia
 
-- `img/`: imagens principais, alternativas de Jack e coleção de Jully.
+- `img/`: imagens organizadas por personagem (`img-jack`, `img-alice`, `img-mark`, `img-ariani`, `img-britney`, `img-jully`) e fotos conjuntas dos irmãos em `img-brothers`.
 - `galeria-assets/`: versões WebP otimizadas para galerias.
 - `casa/`: ambientes da Mansão Connor.
 - `audio/`: trilhas das páginas.
@@ -29,13 +29,15 @@
 - `site-transmission.css` e `site-transmission.js`: interferência global de transmissão.
 - `opening.css` e `opening.js`: prólogo e efeitos do `index`.
 - `home-effects.css` e `home-effects.js`: efeitos e seções da tela inicial.
+- `home-cinematic.css` e `home-cinematic.js`: narrativa principal em oito capítulos, progresso de leitura, revelações e transição até o pós-apocalipse.
 - `jack-effects.css` e `jack-effects.js`: identidade visual e galeria-dossiê de Jack.
 - `alice-effects.css` e `alice-effects.js`: atmosfera clínica, partículas ambientais e arquivo fotográfico interativo de Alice.
+- `book-prologue.css` e `book-prologue.js`: primeiro ato do `index`; o livro permanece fechado e só libera o prólogo narrativo e a abertura nuclear após interação do visitante.
 
 ## Organização realizada
 
 - Remoção da cópia antiga do site que existia dentro de `ariani-img/the connors family`.
 - Remoção de imagens duplicadas confirmadas por hash.
-- Consolidação das imagens de Jully em `img/jully/`.
-- Preservação de imagens alternativas de Jack em `img/jack-alternatives/`.
+- Consolidação das imagens de cada personagem em sua própria pasta dentro de `img/`.
+- Separação das fotos conjuntas dos irmãos Connor em `img/img-brothers/`.
 - Manutenção dos WebP da galeria para reduzir carregamento.

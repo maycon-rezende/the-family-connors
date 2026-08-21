@@ -622,8 +622,26 @@ body.touch-device #cursor-ring{display:none !important;}
 </style>
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="book-prologue.css">
 </head>
 <body>
+  <div class="book-prologue" aria-hidden="false">
+    <div class="book-smoke" aria-hidden="true"></div>
+    <div class="cinema-book" role="dialog" aria-modal="true" aria-labelledby="book-title">
+      <div class="book-spine" aria-hidden="true"></div>
+      <div class="book-cover">
+        <span class="book-kicker">Um romance de sobrevivência</span>
+        <span class="book-sigil">C</span>
+        <h1 id="book-title">A Era da<br><em>Extinção</em></h1>
+        <p>Algumas histórias são contadas.<br>Outras sobrevivem para serem encontradas.</p>
+        <button class="book-open" type="button">Abrir o livro</button>
+        <button class="book-skip" type="button">Pular introdução</button>
+      </div>
+      <div class="book-page book-page--left" aria-hidden="true"><span>Família Connor</span><strong>O mundo<br>antes do fim</strong><small>Volume I · Arquivo recuperado</small></div>
+      <div class="book-page book-page--right" aria-hidden="true"><span>Prólogo</span><blockquote>“Antes da extinção, houve uma família. Antes da esperança, houve uma guerra nas sombras.”</blockquote></div>
+    </div>
+    <p class="book-chapter">Abra o primeiro capítulo</p>
+  </div>
   <div class="cinematic-intro" id="cinematic-intro" aria-label="Prólogo de A Era da Extinção">
     <div class="intro-grain" aria-hidden="true"></div>
     <div class="intro-flare" aria-hidden="true"></div>
@@ -642,6 +660,16 @@ body.touch-device #cursor-ring{display:none !important;}
         <p>Os Connor herdaram uma guerra.</p>
       </section>
       <section class="intro-beat intro-beat--three" data-beat="2">
+        <p class="intro-overline">Na zona escura da sociedade</p>
+        <h2>O governo recuou.<br>Os <em>Hellsings</em> avançaram.</h2>
+        <p>Seus nomes não chegaram às notícias. Chegaram ao submundo.</p>
+      </section>
+      <section class="intro-beat intro-beat--four" data-beat="3">
+        <p class="intro-overline">Muito depois do Dia D</p>
+        <h2>O fogo tentou<br>conter a <em>infecção.</em></h2>
+        <p>As bombas destruíram o mundo. Não destruíram a ameaça.</p>
+      </section>
+      <section class="intro-beat intro-beat--five" data-beat="4">
         <p class="intro-overline">O primeiro presságio</p>
         <h2>Quando o fim chegar,<br><em>eles estarão de pé.</em></h2>
         <span class="intro-code">Sinal Ω // origem desconhecida</span>
@@ -655,7 +683,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 
    <audio id="opening-audio" autoplay loop preload="auto">
-    <source src="audio/inicial.mp3" type="audio/mpeg" />
+    <source src="audio/epic.mp3" type="audio/mpeg" />
   </audio>
 <!-- CURSOR -->
 <div id="cursor"></div>
@@ -670,7 +698,7 @@ body.touch-device #cursor-ring{display:none !important;}
   <div id="mansion-bg">
 
       <div class="placeholder-text">
-        <img id="mansion-img" src="img/mansao.png" alt="Mansão Connor">
+        <img id="mansion-img" src="casa/mansao.png" alt="Mansão Connor">
       </div>
     </div>
 
@@ -728,7 +756,7 @@ body.touch-device #cursor-ring{display:none !important;}
       </div>
 
       <!-- BOTÃO ENTRAR -->
-      <a id="enter-btn" href="telainicial.html">
+      <a id="enter-btn" href="telainicial.html" aria-label="Entrar no site A Era da Extinção">
         Entrar
       </a>
 
@@ -753,6 +781,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </div>
 <script src="opening.js"></script>
+<script src="book-prologue.js"></script>
 <script>
 // ─── CURSOR CUSTOMIZADO ───
 const cursor = document.getElementById('cursor');
@@ -813,15 +842,25 @@ for (let i = 0; i < NUM_PARTICLES; i++) {
 }
 
 // ─── TRANSIÇÃO DE ENTRADA ───
+let entranceStarted = false;
+let entranceTimer;
+
 function enterSite(e) {
   if (e && typeof e.preventDefault === 'function') {
     e.preventDefault();
   }
-  const dest = document.getElementById('enter-btn').href;
+  if (entranceStarted) return;
+  entranceStarted = true;
+
+  const dest = enterBtn.href;
   const scene = document.getElementById('scene');
 
+  enterBtn.classList.add('is-entering');
+  enterBtn.setAttribute('aria-disabled', 'true');
+  enterBtn.textContent = 'Abrindo';
+
   // Flash breve + fade
-  scene.classList.add('exit');
+  scene?.classList.add('exit');
 
   // Som de clique visual — pulse no emblema
   const hex = document.querySelector('.emblem-hex');
@@ -829,9 +868,7 @@ function enterSite(e) {
     hex.style.boxShadow = '0 0 80px rgba(201,150,58,0.5), inset 0 0 40px rgba(201,150,58,0.1)';
   }
 
-  setTimeout(() => {
-    window.location.href = dest;
-  }, 200);
+  entranceTimer = window.setTimeout(() => window.location.assign(dest), 260);
 }
 
 // ─── PARALLAX SUTIL NA IMAGEM ───
@@ -846,11 +883,30 @@ document.addEventListener('mousemove', e => {
 
 // ─── TECLA ENTER TAMBÉM ENTRA ───
 document.addEventListener('keydown', e => {
-  if (document.body.classList.contains('intro-complete') && (e.key === 'Enter' || e.key === ' ')) {
-    e.preventDefault();
-    enterBtn.focus();
-    enterBtn.click();
+  if (e.repeat || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+
+  const activeBook = document.querySelector('.book-prologue:not(.is-gone)');
+  if (activeBook) {
+    const bookControl = e.target.closest?.('.book-open, .book-skip');
+    if (!bookControl) {
+      e.preventDefault();
+      activeBook.querySelector('.book-open')?.click();
+    }
+    return;
   }
+
+  const interactive = e.target.closest?.('button, a, input, textarea, select');
+  if (interactive && interactive !== enterBtn && interactive.id !== 'intro-skip') return;
+
+  e.preventDefault();
+  if (!document.body.classList.contains('intro-complete')) {
+    document.getElementById('intro-skip')?.click();
+    return;
+  }
+
+  enterBtn.focus({ preventScroll: true });
+  enterSite(e);
 });
 
 // ─── ANIMAÇÃO DE TEXTO GLITCH SUTIL NO TÍTULO ───

@@ -15,6 +15,14 @@
 - Galeria de Jack convertida em arquivo FBI/Interpol com 17 fotografias.
 - Página de Alice reformulada com atmosfera clínica, sinais vitais, varredura luminosa e partículas microscópicas.
 - Galeria exclusiva de Alice convertida em arquivo médico interativo com sete registros e visualização ampliada.
+- Biografia de Alice ampliada: carreira hospitalar, medicina de alta classe, caso reservado, Hellsings, artes marciais e gestão financeira.
+- O `index` ganhou prólogo cinematográfico em forma de livro físico, seguido por cinco frases narrativas e pela abertura nuclear da Mansão Connor.
+- A trilha `epic.mp3` passou a conduzir toda a abertura do `index`, subindo a partir da primeira interação.
+- `telainicial.html` reconstruída como uma narrativa cinematográfica completa em oito capítulos.
+- Nova progressão visual: mundo anterior, Família Connor, carreira de Jack, fundação dos Hellsings, despertar de Alice, guerra no submundo, Dia D e Era da Extinção.
+- Formação original dos Hellsings apresentada com funções e codinomes.
+- Transição do mundo elegante para ruínas, radiação e escassez integrada à própria rolagem.
+- Portal futuro “O Futuro Inicia Aqui” introduzido como capítulo bloqueado.
 - Correção de referências quebradas e marcação HTML defeituosa.
 - Limpeza de cópias antigas e assets duplicados.
 

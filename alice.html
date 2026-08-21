@@ -375,6 +375,7 @@ body.touch-device #cursor-ring{display:none !important;}
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
 <link rel="stylesheet" href="alice-effects.css">
+<link rel="stylesheet" href="alice-restructure.css">
 </head>
 <body>
   <audio autoplay loop hidden>
@@ -395,13 +396,13 @@ body.touch-device #cursor-ring{display:none !important;}
 </div>
 <nav>
   <a href="telainicial.html" class="nav-back">← Família Connor</a>
-  <span class="nav-name">HELLSINGS</span>
+  <span class="nav-name">ALICE CONNOR</span>
   <span class="nav-org">A Era da Extinção</span>
 </nav>
 
 <section id="hero">
   <div class="hero-photo">
-    <img id="hero-img" src="img/lice.png" alt="Alice Connor">
+    <img id="hero-img" src="img-alice/lice.png" alt="Alice Connor">
     <!-- FOTO DE FUNDO ALICE:
               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;"> -->
     <div class="hero-photo-placeholder">A</div>
@@ -418,7 +419,7 @@ body.touch-device #cursor-ring{display:none !important;}
     <h1 class="hero-name">ALICE<br><em>Myers</em><br><span class="hero-last">CONNOR</span></h1>
     <p class="hero-born">Medicina · Londres · Mãe de Cinco</p>
     <div class="hero-actions">
-      <a class="hero-btn" href="#perfil">Ler perfil</a>
+      <a class="hero-btn" href="#trajetoria-profissional">Abrir prontuário profissional</a>
       <a class="hero-btn secondary" href="telainicial.html">Voltar ao início</a>
     </div>
     <div class="hero-badges">
@@ -439,6 +440,37 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </div>
 
+<section class="alice-profession" id="trajetoria-profissional" aria-labelledby="alice-profession-title">
+  <div class="medical-grid" aria-hidden="true"></div>
+  <div class="ecg-line" aria-hidden="true"><span></span></div>
+  <header class="profession-heading reveal">
+    <div><span>Prontuário profissional // AMC-01</span><h2 id="alice-profession-title">Três formas de<br><em>salvar uma vida.</em></h2></div>
+    <p>Alice começou tratando corpos, passou a proteger pessoas em campo e terminou sustentando toda uma organização — sem abandonar a medicina que definiu sua vocação.</p>
+  </header>
+  <div class="profession-tabs reveal" role="tablist" aria-label="Fases profissionais de Alice Connor">
+    <button class="profession-tab is-active" type="button" role="tab" aria-selected="true" data-profession="london"><span>01</span><strong>LONDRES</strong><small>Medicina clínica</small></button>
+    <button class="profession-tab" type="button" role="tab" aria-selected="false" data-profession="field"><span>02</span><strong>HELLSINGS</strong><small>Medicina de campo</small></button>
+    <button class="profession-tab" type="button" role="tab" aria-selected="false" data-profession="strategy"><span>03</span><strong>ESTRATÉGIA</strong><small>Estrutura e proteção</small></button>
+  </div>
+  <div class="profession-stage reveal">
+    <article class="profession-panel profession-panel--london is-active" id="profession-london">
+      <a class="medical-seal" href="alice-fotos.html?set=medica" aria-label="Abrir fotografias médicas de Alice">MD</a>
+      <div class="profession-copy"><span>London Medical Record</span><h3>A médica que aprendeu a enxergar o que ninguém dizia.</h3><p>Entre universidades e hospitais de excelência, Alice construiu reputação pela precisão clínica e pela capacidade de perceber dores escondidas atrás de aparências impecáveis.</p><ul><li>Diagnóstico clínico</li><li>Cirurgia</li><li>Atendimento de excelência</li><li>Proteção de pacientes</li></ul></div>
+      <aside class="patient-monitor"><span>PACIENTE // SISTEMA</span><b>72 <small>BPM</small></b><i>O₂ 98%</i><code>&gt; registro estável<br>&gt; acesso clínico autorizado<br>&gt; assinatura: dra. a. connor</code></aside>
+    </article>
+    <article class="profession-panel profession-panel--field" id="profession-field" hidden>
+      <a class="medical-seal" href="alice-fotos.html" aria-label="Abrir fotografias disponíveis de Alice">H+</a>
+      <div class="profession-copy"><span>Hellsings Field Medicine</span><h3>Onde não havia hospital, Alice levou cuidado.</h3><p>Como médica de campo, ela tratou feridos sob risco real, aprendeu defesa e tornou a medicina parte essencial das operações dos Hellsings.</p><ul><li>Trauma em campo</li><li>Triagem operacional</li><li>Defesa pessoal</li><li>Evacuação médica</li></ul></div>
+      <aside class="patient-monitor"><span>MISSÃO // TRIAGEM</span><b>04 <small>PRIORIDADES</small></b><i>CAMPO ATIVO</i><code>&gt; equipe estabilizada<br>&gt; extração preparada<br>&gt; médica: alice connor</code></aside>
+    </article>
+    <article class="profession-panel profession-panel--strategy" id="profession-strategy" hidden>
+      <a class="medical-seal" href="alice-fotos.html?set=pessoal" aria-label="Abrir fotografias pessoais de Alice">AC</a>
+      <div class="profession-copy"><span>Connor Strategic Support</span><h3>Ela deixou o campo, não deixou a missão.</h3><p>Depois da gravidez de Nicolai, Alice assumiu investimentos, empresas, equipamentos e a proteção da família, garantindo a independência financeira dos Hellsings.</p><ul><li>Gestão financeira</li><li>Aquisição de equipamentos</li><li>Logística médica</li><li>Proteção familiar</li></ul></div>
+      <aside class="patient-monitor"><span>ESTRUTURA // CONNOR</span><b>100 <small>%</small></b><i>REDE INDEPENDENTE</i><code>&gt; recursos assegurados<br>&gt; família protegida<br>&gt; operação sustentável</code></aside>
+    </article>
+  </div>
+</section>
+
 <section class="page-section" id="perfil">
   <p class="section-label reveal">Perfil</p>
   <h2 class="section-title reveal">Identidade</h2>
@@ -451,18 +483,18 @@ body.touch-device #cursor-ring{display:none !important;}
         <strong>Nicolai Connor</strong><br><br>
         <strong>Mary Connor</strong><br><br>
         <strong>Diana Connor</strong><br><br>
-        <em style="color:rgba(196,168,224,0.5);">[+ Adicionar quinto filho]</em>
+        <strong>Elisabeth Connor</strong>
       </p>
     </div>
     <div class="profile-card reveal">
       <span class="pc-label">Trajetória</span>
-      <h3 class="pc-title">Da Escola a Londres</h3>
-      <p class="pc-text">Era a <strong>menos popular da escola</strong> quando Jack Connor a enxergou — e foi exatamente essa vulnerabilidade que os uniu.<br><br>Estudou <strong>medicina em Londres</strong>, construindo uma carreira sólida enquanto o marido servia no FBI. Hoje é o pilar de saúde e equilíbrio da família Connor.</p>
+      <h3 class="pc-title">De Londres aos Hellsings</h3>
+      <p class="pc-text">Depois de estudar <strong>medicina em Londres</strong>, Alice construiu sua reputação em diferentes hospitais. Sua competência a levou até uma instituição de alta classe, onde atendia pessoas cercadas de poder e privilégio.<br><br>Foi nesse período que <strong>um acontecimento envolvendo mulheres que precisavam de ajuda</strong> mudou sua forma de enxergar a profissão. O caso permanece reservado, mas despertou nela a necessidade de agir além das paredes de um hospital.</p>
     </div>
     <div class="profile-card full reveal">
       <span class="pc-label">Biografia</span>
       <h3 class="pc-title">A História de Alice Myers Connor</h3>
-      <p class="pc-text">Alice Myers cresceu na invisibilidade. Na escola, era aquela que os outros não viam — não pela falta de valor, mas pela abundância de profundidade que o mundo raso ao redor dela não sabia apreciar. Jack Connor, no entanto, sempre soube ver além do óbvio.<br><br>O que começou como um amor silencioso na adolescência tornou-se a fundação de uma vida inteira. Enquanto Jack seguia para o FBI, Alice viajou até <strong>Londres</strong> para estudar medicina — determinada a construir algo só seu. Voltou doutora, esposa e, em breve, mãe.<br><br>Ao lado de Jack, criou cinco filhos e manteve a família Connor unida nos momentos em que a pressão poderia tê-la partido. É ela quem cuida quando o mundo lá fora sangra — e quem lembra aos Hellsings que por trás de cada missão, há uma família esperando em casa.<br><br><em>[Aguardando mais conteúdo do autor]</em></p>
+      <p class="pc-text">Alice Myers cresceu na invisibilidade. Na escola, era aquela que os outros não viam — não pela falta de valor, mas pela profundidade que o mundo ao redor ainda não sabia reconhecer. Jack Connor, no entanto, sempre soube ver além do óbvio.<br><br>Enquanto Jack seguia para o FBI, Alice viajou até <strong>Londres</strong> para estudar medicina e construir uma identidade própria. Trabalhou em hospitais cada vez mais respeitados até alcançar a medicina de alta classe. Ali, por trás da aparência impecável, presenciou um ocorrido que despertou seu compromisso em ajudar mulheres que o sistema não conseguia proteger.<br><br>A medicina deixou de ser apenas uma carreira. Alice entrou para os <strong>Hellsings</strong> como médica de campo, levando conhecimento clínico para missões onde hospitais não chegavam. Também aprendeu a lutar e a defender a si mesma e às pessoas sob sua proteção.<br><br>Depois de engravidar de Nicolai, deixou as operações de campo, mas não abandonou a organização. Passou a cuidar da família, dos investimentos, das empresas e da aquisição de equipamentos. Ao lado de Jack, tornou os Hellsings financeiramente independentes — e permaneceu como o coração estratégico da família Connor.</p>
     </div>
   </div>
 </section>
@@ -479,8 +511,8 @@ body.touch-device #cursor-ring{display:none !important;}
       </div>
       <div class="reveal">
         <div class="skill-item"><div class="skill-top"><span class="skill-name">Empatia & Cuidado</span><span class="skill-pct">99</span></div><div class="skill-track"><div class="skill-fill" style="--w:99%"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Equilíbrio Emocional</span><span class="skill-pct">91</span></div><div class="skill-track"><div class="skill-fill" style="--w:91%"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Lealdade</span><span class="skill-pct">100</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Defesa & Artes Marciais</span><span class="skill-pct">82</span></div><div class="skill-track"><div class="skill-fill" style="--w:82%"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Gestão & Investimentos</span><span class="skill-pct">92</span></div><div class="skill-track"><div class="skill-fill" style="--w:92%"></div></div></div>
       </div>
     </div>
   </div>
@@ -497,52 +529,12 @@ body.touch-device #cursor-ring{display:none !important;}
   <div class="vtimeline">
     <div class="vt-item"><span class="vt-year">Escola</span><h3 class="vt-title">A Menos Popular</h3><p class="vt-text">Alice era invisível para a maioria. Até que Jack Connor decidiu enxergá-la — e tudo mudou.</p></div>
     <div class="vt-item"><span class="vt-year">Londres</span><h3 class="vt-title">Faculdade de Medicina</h3><p class="vt-text">Alice parte para Londres para estudar medicina. Determinada a construir sua própria identidade além do amor que a aguardava.</p></div>
-    <div class="vt-item"><span class="vt-year">Casamento</span><h3 class="vt-title">Alice & Jack</h3><p class="vt-text">Jack e Alice se casam. O início de uma família que cresceria para além do que qualquer um deles havia imaginado.</p></div>
-    <div class="vt-item"><span class="vt-year">Família</span><h3 class="vt-title">Os Filhos Connor</h3><p class="vt-text">Alice e Jack constroem sua família. Cinco filhos, uma casa cheia de vida — e sempre um lugar seguro para os Hellsings retornarem.</p></div>
-    <div class="vt-item" style="opacity:0.35;"><span class="vt-year">[ Em Branco ]</span><h3 class="vt-title">Aguardando o autor</h3><p class="vt-text">Adicione os próximos capítulos da história de Alice.</p></div>
+    <div class="vt-item"><span class="vt-year">Carreira</span><h3 class="vt-title">Hospitais de Excelência</h3><p class="vt-text">Seu talento a leva por instituições cada vez mais prestigiadas até alcançar um hospital de alta classe.</p></div>
+    <div class="vt-item"><span class="vt-year">Caso reservado</span><h3 class="vt-title">O Despertar</h3><p class="vt-text">Um ocorrido ligado a mulheres que precisavam de ajuda revela os limites da medicina convencional e desperta nela a vontade de agir.</p></div>
+    <div class="vt-item"><span class="vt-year">Hellsings</span><h3 class="vt-title">Médica de Campo</h3><p class="vt-text">Alice entra para a organização, atende feridos durante operações e combina medicina com treinamento de defesa e artes marciais.</p></div>
+    <div class="vt-item"><span class="vt-year">Nicolai</span><h3 class="vt-title">Uma Nova Missão</h3><p class="vt-text">Após engravidar de Nicolai, deixa o campo para proteger a família e assumir a administração financeira dos Hellsings.</p></div>
+    <div class="vt-item"><span class="vt-year">Legado</span><h3 class="vt-title">O Coração da Estrutura</h3><p class="vt-text">Alice administra investimentos, empresas e equipamentos, sustentando a independência da organização ao lado de Jack.</p></div>
   </div>
-</section>
-<section class="alice-archive" id="arquivo-alice" aria-labelledby="alice-archive-title">
-  <div class="archive-heading reveal">
-    <div>
-      <p class="section-label">Arquivo pessoal · A.M.C.</p>
-      <h2 class="section-title" id="alice-archive-title">Registros de Alice</h2>
-      <p class="archive-intro">Uma coleção dedicada exclusivamente a Alice Myers Connor — médica, mãe e centro vital da família.</p>
-    </div>
-    <div class="archive-status" aria-label="Status do arquivo">
-      <span class="status-pulse"></span>
-      <span>Arquivo clínico ativo</span>
-      <strong>07 registros</strong>
-    </div>
-  </div>
-
-  <div class="alice-gallery">
-    <button class="alice-photo alice-photo--featured reveal" type="button" data-full="img/licemedica.png" data-title="Dra. Alice Connor" data-note="Registro profissional · Medicina">
-      <img src="img/licemedica.png" alt="Alice Connor em registro profissional" loading="lazy">
-      <span class="photo-scan" aria-hidden="true"></span>
-      <span class="photo-index">AMC · 001</span>
-      <span class="photo-caption"><strong>Dra. Alice Connor</strong><small>Registro profissional · Medicina</small></span>
-    </button>
-    <button class="alice-photo reveal" type="button" data-full="img/medica.png" data-title="Plantão" data-note="Arquivo médico · Registro 02">
-      <img src="img/medica.png" alt="Alice em ambiente médico" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 002</span><span class="photo-caption"><strong>Plantão</strong><small>Arquivo médico</small></span>
-    </button>
-    <button class="alice-photo reveal" type="button" data-full="img/medica2.png" data-title="Vocação" data-note="Medicina · Registro 03">
-      <img src="img/medica2.png" alt="Retrato profissional de Alice" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 003</span><span class="photo-caption"><strong>Vocação</strong><small>Medicina</small></span>
-    </button>
-    <button class="alice-photo alice-photo--wide reveal" type="button" data-full="img/alicepaisagem.png" data-title="Entre dois mundos" data-note="Arquivo pessoal · Registro 04">
-      <img src="img/alicepaisagem.png" alt="Registro de Alice em paisagem" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 004</span><span class="photo-caption"><strong>Entre dois mundos</strong><small>Arquivo pessoal</small></span>
-    </button>
-    <button class="alice-photo reveal" type="button" data-full="img/alice2.png" data-title="Alice Myers" data-note="Retrato pessoal · Registro 05">
-      <img src="img/alice2.png" alt="Retrato de Alice Myers" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 005</span><span class="photo-caption"><strong>Alice Myers</strong><small>Retrato pessoal</small></span>
-    </button>
-    <button class="alice-photo reveal" type="button" data-full="img/lice.png" data-title="A guardiã" data-note="Família Connor · Registro 06">
-      <img src="img/lice.png" alt="Retrato de Alice Connor" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 006</span><span class="photo-caption"><strong>A guardiã</strong><small>Família Connor</small></span>
-    </button>
-    <button class="alice-photo reveal" type="button" data-full="img/lice2.png" data-title="Pulso firme" data-note="Arquivo pessoal · Registro 07">
-      <img src="img/lice2.png" alt="Segundo retrato de Alice Connor" loading="lazy"><span class="photo-scan" aria-hidden="true"></span><span class="photo-index">AMC · 007</span><span class="photo-caption"><strong>Pulso firme</strong><small>Arquivo pessoal</small></span>
-    </button>
-  </div>
-  <p class="archive-hint">Selecione um registro para ampliar</p>
 </section>
  <footer>
     <p class="footer-logo">HELLSINGS</p>
@@ -733,5 +725,6 @@ document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
 <script src="site-cursor.js" defer></script>
 <script src="site-transmission.js" defer></script>
 <script src="alice-effects.js" defer></script>
+<script src="alice-restructure.js" defer></script>
 </body>
 </html>

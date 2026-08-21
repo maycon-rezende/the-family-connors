@@ -355,6 +355,7 @@ body.touch-device #cursor-ring{display:none !important;}
 </style>
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="jully-restructure.css">
 </head>
 <body>
 
@@ -378,14 +379,14 @@ body.touch-device #cursor-ring{display:none !important;}
 
 <nav>
   <a href="telainicial.html" class="nav-back">← Família Connor</a>
-  <span class="nav-name">HELLSINGS</span>
+  <span class="nav-name">JULLY CONNOR</span>
   <span class="nav-org">Jully Connor — A Caçula</span>
 </nav>
 
 <section id="hero">
   <div class="hero-photo">
-    
-  <img id="hero-img" src="img/jully/jull2.png" alt="Jully Connor">JU</div>
+    <img id="hero-img" src="img-jully/jull2.png" alt="Jully Connor">
+    <span class="hero-monogram" aria-hidden="true">JU</span>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay-side"></div>
@@ -412,6 +413,35 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </div>
 
+<section class="jully-universe" id="universo-jully">
+  <canvas id="jully-stars" aria-hidden="true"></canvas>
+  <div class="universe-inner">
+    <div class="universe-heading reveal">
+      <p class="universe-kicker">Arquivo 04 · A mais nova</p>
+      <h2>Ela cresceu entre<br><em>quatro constelações.</em></h2>
+      <p>Jully observa o caminho dos irmãos sem precisar viver à sombra deles. A caçula carrega os vínculos da família, mas seu futuro ainda é uma página aberta.</p>
+    </div>
+    <div class="constellation-board reveal">
+      <svg class="family-lines" viewBox="0 0 1000 440" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M135 110 L345 285 L585 100 L815 275"/><path d="M345 285 L815 275"/>
+      </svg>
+      <button class="family-star jack-star" type="button" data-family="jack"><i></i><strong>Jack</strong><span>O guardião</span></button>
+      <button class="family-star mark-star" type="button" data-family="mark"><i></i><strong>Mark</strong><span>O retorno</span></button>
+      <button class="family-star britney-star" type="button" data-family="britney"><i></i><strong>Britney</strong><span>A cumplicidade</span></button>
+      <button class="family-star jully-star active" type="button" data-family="jully"><i></i><strong>Jully</strong><span>O futuro</span></button>
+      <div class="constellation-message" aria-live="polite">
+        <span>04 / JULLY</span>
+        <p>A mais nova dos Connor — aquela que mantém a família olhando também para o amanhã.</p>
+      </div>
+    </div>
+    <div class="open-chapter reveal">
+      <span class="chapter-number">04</span>
+      <div><small>PRÓXIMO CAPÍTULO</small><h3>A história ainda está começando.</h3></div>
+      <p>Enquanto os irmãos já carregam missões e passados definidos, Jully representa possibilidades. O que ela escolher será acrescentado aqui sem limitar quem ela pode se tornar.</p>
+    </div>
+  </div>
+</section>
+
 <section class="page-section">
   <p class="section-label reveal">Perfil</p>
   <h2 class="section-title reveal">IDENTIDADE</h2>
@@ -424,12 +454,12 @@ body.touch-device #cursor-ring{display:none !important;}
     <div class="profile-card reveal">
       <span class="pc-label">Hoje</span>
       <h3 class="pc-title">Estudante & Irmã Connor</h3>
-      <p class="pc-text">Como a caçula, Jully cresceu observando tudo — Jack partir para o FBI, Mark partir para a marinha, Britney estudar. Aprendeu com cada um deles o que significa ser Connor: <strong>leal, forte e presente</strong>.<br><br><em>[Aguardando mais detalhes do autor sobre Jully — aparência, personalidade e arco narrativo]</em></p>
+      <p class="pc-text">Como a caçula, Jully cresceu observando tudo — Jack partir para o FBI, Mark partir para a marinha, Britney estudar. Aprendeu com cada um deles o que significa ser Connor: <strong>leal, forte e presente</strong>.<br><br>Agora começa a descobrir quais escolhas serão somente suas, além do sobrenome e dos caminhos já percorridos pelos irmãos.</p>
     </div>
     <div class="profile-card full reveal">
       <span class="pc-label">Biografia</span>
       <h3 class="pc-title">A História de Jully Connor</h3>
-      <p class="pc-text">Jully Connor é a mais nova dos quatro irmãos. Cresceu vendo Jack assumir o papel de guardião — muito cedo demais para uma criança, mas ele nunca reclamou. Essa imagem do irmão mais velho ficou gravada nela como o modelo do que significa cuidar de quem se ama.<br><br>Enquanto Jack foi para o FBI e Mark foi para o mar, Jully e Britney ficaram mais próximas — a irmã do meio e a caçula construindo uma cumplicidade própria. Hoje as duas moram com Mark, que voltou diferente mas ainda reconhecível.<br><br>A casa dos três irmãos tem algo especial: é o único lugar dos Connor onde a vida parece mais comum, mais cotidiana. E Jully, como a mais nova, é frequentemente aquela que lembra a todos que existe mundo além das missões.<br><br><em>[Aguardando mais conteúdo do autor]</em></p>
+      <p class="pc-text">Jully Connor é a mais nova dos quatro irmãos. Cresceu vendo Jack assumir o papel de guardião — muito cedo demais para uma criança, mas ele nunca reclamou. Essa imagem do irmão mais velho ficou gravada nela como o modelo do que significa cuidar de quem se ama.<br><br>Enquanto Jack foi para o FBI e Mark foi para o mar, Jully e Britney ficaram mais próximas — a irmã do meio e a caçula construindo uma cumplicidade própria. Hoje as duas moram com Mark, que voltou diferente mas ainda reconhecível.<br><br>A casa dos três irmãos tem algo especial: é o lugar dos Connor onde a vida parece mais comum, mais cotidiana. E Jully, como a mais nova, é frequentemente aquela que lembra a todos que existe mundo além das missões.</p>
     </div>
   </div>
 </section>
@@ -437,7 +467,7 @@ body.touch-device #cursor-ring{display:none !important;}
 <div class="friendship-panel reveal" style="max-width:1100px;margin:0 auto 3px;">
   <span class="fp-tag">Irmandade</span>
   <h3 class="fp-title">Jully & Britney Connor</h3>
-  <p class="fp-text">Como as duas irmãs mais novas, <strong>Jully e Britney Connor</strong> cresceram com um laço especial. Enquanto Jack e Mark seguiram caminhos de combate — o FBI e a marinha — as duas irmãs ficaram mais próximas, construindo uma cumplicidade própria.<br><br>Hoje moram juntas com Mark. Uma casa de três irmãos Connor — cada um com sua história, reunidos pelo mesmo sobrenome e pelo mesmo amor que Jack sempre garantiu que sobrevivesse.<br><br><em>[Adicione aqui momentos especiais entre Jully e Britney]</em></p>
+  <p class="fp-text">Como as duas irmãs mais novas, <strong>Jully e Britney Connor</strong> cresceram com um laço especial. Enquanto Jack e Mark seguiram caminhos de combate — o FBI e a marinha — as duas irmãs ficaram mais próximas, construindo uma cumplicidade própria.<br><br>Hoje moram juntas com Mark. Uma casa de três irmãos Connor — cada um com sua história, reunidos pelo mesmo sobrenome e pelo mesmo amor que Jack sempre garantiu que sobrevivesse.</p>
 </div>
 
 <section class="page-section" style="background:var(--panel);padding:5rem 2rem;max-width:100%;">
@@ -471,35 +501,14 @@ body.touch-device #cursor-ring{display:none !important;}
     <div class="vt-item"><span class="vt-year">Infância</span><h3 class="vt-title">Crescendo sob o Cuidado de Jack</h3><p class="vt-text">Jully é a caçula. Cresceu vendo Jack assumir o papel de guardião — e internalizou desde cedo o que significa ser parte da família Connor.</p></div>
     <div class="vt-item"><span class="vt-year">Adolescência</span><h3 class="vt-title">Mais Próxima de Britney</h3><p class="vt-text">Com Jack no FBI e Mark na marinha, Jully e Britney ficam mais próximas. A caçula e a irmã do meio constroem sua própria cumplicidade.</p></div>
     <div class="vt-item"><span class="vt-year">Hoje</span><h3 class="vt-title">Casa com Mark & Britney</h3><p class="vt-text">Jully mora com Mark e Britney enquanto estuda. A casa dos três irmãos é um ponto de equilíbrio no universo dos Connor.</p></div>
-    <div class="vt-item" style="opacity:0.35;"><span class="vt-year">[ Em Branco ]</span><h3 class="vt-title">Aguardando o autor</h3><p class="vt-text">Adicione aqui a história completa de Jully — aparência, personalidade e seu papel na narrativa de A Era da Extinção.</p></div>
+    <div class="vt-item future-item"><span class="vt-year">A seguir</span><h3 class="vt-title">O Próprio Caminho</h3><p class="vt-text">O futuro de Jully permanece aberto: não como uma ausência, mas como uma promessa de escolhas que serão somente dela.</p></div>
   </div>
 </section>
 
-<section class="page-section gallery-section" style="padding-top:2rem;">
-  <p class="section-label reveal">Galeria</p>
-  <h2 class="section-title reveal">Fotos</h2>
- <div class="gallery-loop">
-  <img src="img/jully/jully.png" alt="Jully 1" class="active">
-  <img src="img/jully/jully2.png" alt="Jully 2">
-  <img src="img/jully/jully3.png" alt="Jully 3">
-  <img src="img/jully/jull3.png" alt="Jully 4">
-  <img src="img/jully/jull4.png" alt="Jully 5">
-  <img src="img/jully/jullybrit.png" alt="Jully e Britney">
-
-
- </div>
- <script>
-const images = document.querySelectorAll('.gallery-loop img');
-let current = 0;
-
-function showNextImage() {
-  images[current].classList.remove('active');
-  current = (current + 1) % images.length;
-  images[current].classList.add('active');
-}
-
-setInterval(showNextImage, 4000); // troca a cada 4 segundos
-</script>
+<section class="page-section jully-gallery-gate">
+  <div class="jully-gallery-copy reveal"><p class="section-label">Arquivo pessoal</p><h2 class="section-title">Retratos da caçula</h2><p>Uma galeria somente de Jully. As fotografias com Britney e os outros Connor permanecem no arquivo dos irmãos.</p></div>
+  <a class="jully-pass reveal" href="jully-fotos.html"><span>CONSTELAÇÃO / JU-04</span><strong>Abrir arquivo</strong><i>Ver fotografias →</i></a>
+</section>
 
 <script>
 const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>{e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));},i*80);obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
@@ -678,5 +687,6 @@ document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
 
 <script src="site-cursor.js" defer></script>
 <script src="site-transmission.js" defer></script>
+<script src="jully-restructure.js" defer></script>
 </body>
 </html>

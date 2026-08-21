@@ -11,6 +11,7 @@
   let current = 0;
   let timer;
   let finished = false;
+  let introStarted = false;
   let volumeFrame;
 
   function prepareNuclearTitle() {
@@ -104,14 +105,26 @@
   document.addEventListener('pointerdown', unlockSound, { once: true });
   document.addEventListener('keydown', unlockSound, { once: true });
   document.addEventListener('keydown', event => {
-    if (finished) return;
+    if (finished || !introStarted) return;
     if (event.key === 'Escape') finish();
     if (event.key === 'ArrowRight') showBeat(Math.min(current + 1, beats.length - 1));
   });
 
   prepareNuclearTitle();
   createAmbientDust();
-  startSound();
-  requestAnimationFrame(() => intro.classList.add('is-running'));
-  showBeat(0);
+
+  function startIntro() {
+    if (introStarted) return;
+    introStarted = true;
+    intro.style.setProperty('--intro-duration', `${(beats.length * beatDuration) / 1000}s`);
+    startSound();
+    requestAnimationFrame(() => intro.classList.add('is-running'));
+    showBeat(0);
+  }
+
+  if (document.querySelector('.book-prologue')) {
+    document.addEventListener('connor:book-opened', startIntro, { once: true });
+  } else {
+    startIntro();
+  }
 })();

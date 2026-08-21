@@ -86,13 +86,38 @@
 .intro-code { margin-top: 1.6rem; color: rgba(201, 150, 58, .45); font: .5rem/1 'Cinzel', serif; letter-spacing: .32em; text-transform: uppercase; }
 .intro-progress { position: absolute; right: 2rem; bottom: 2rem; left: 2rem; height: 1px; background: rgba(255,255,255,.08); }
 .intro-progress span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, #7e1d0d, #c9963a); box-shadow: 0 0 14px rgba(201,150,58,.4); }
-.cinematic-intro.is-running .intro-progress span { animation: intro-progress 10.5s linear forwards; }
+.cinematic-intro.is-running .intro-progress span { animation: intro-progress var(--intro-duration,17.5s) linear forwards; }
 .intro-controls { position: absolute; right: 2.6rem; bottom: 3.1rem; display: flex; gap: 1.4rem; }
 .intro-controls button { padding: .45rem 0; border: 0; border-bottom: 1px solid rgba(201,150,58,.25); background: transparent; color: rgba(238,229,209,.55); font: .52rem/1 'Cinzel', serif; letter-spacing: .2em; text-transform: uppercase; cursor: pointer; }
 .intro-controls button:hover, .intro-controls button:focus-visible { color: #c9963a; border-color: #c9963a; outline: 0; }
 
 body:not(.intro-complete) #scene { visibility: hidden; }
 body.intro-complete #scene { visibility: visible; animation: scene-reveal 1.6s ease both; }
+
+/* Mantém a entrada acima dos efeitos e garante uma área confiável para mouse e toque. */
+#enter-btn {
+  z-index: 30;
+  min-width: 190px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#enter-btn:focus-visible {
+  outline: 2px solid rgba(232,223,200,.9);
+  outline-offset: 5px;
+  border-color: #c9963a;
+}
+
+#enter-btn.is-entering {
+  pointer-events: none;
+  color: #e8dfc8;
+  border-color: rgba(201,150,58,.85);
+  box-shadow: 0 0 32px rgba(201,150,58,.2);
+}
 
 /* Mantém a apresentação da mansão congelada até o prólogo terminar. */
 body:not(.intro-complete) #scene *,

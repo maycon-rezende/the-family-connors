@@ -4,7 +4,9 @@
 
 - A Mansão Connor é o portal de entrada para a família e para o site.
 - Jack Connor é o primogênito, trabalhou no FBI e na Interpol e fundou os Hellsings.
-- Alice Myers Connor é médica e esposa de Jack.
+- Alice Myers Connor é médica e esposa de Jack. Estudou medicina em Londres, trabalhou em hospitais até chegar a uma instituição de alta classe e entrou para os Hellsings depois de um ocorrido que despertou nela o compromisso de ajudar mulheres.
+- Nos Hellsings, Alice atuou como médica de campo, sabia lutar e possuía treinamento em artes marciais.
+- Após engravidar de Nicolai, Alice deixou as operações, passou a cuidar da família e administrou investimentos, empresas e aquisição de equipamentos da organização.
 - Jack e Alice têm cinco filhos: Alucard, Nicolai, Mary, Diana e Elisabeth.
 - Alucard é o filho mais velho.
 - Mark Connor serviu na Marinha.
@@ -18,7 +20,8 @@
 - Causa e cronologia exatas do apocalipse.
 - Presença definitiva, origem e regras dos zumbis ou infectados.
 - História completa dos descendentes de Jack e Alice.
-- Origem, integrantes, regras, missões e estrutura detalhada dos Hellsings.
+- Detalhes do ocorrido que levou Alice a deixar a medicina hospitalar e ajudar mulheres através dos Hellsings.
+- Regras, missões específicas e estrutura detalhada dos Hellsings.
 - Citações oficiais dos personagens.
 - Funcionamento do futuro portal “O Futuro Inicia Aqui”.
 

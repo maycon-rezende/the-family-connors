@@ -350,16 +350,17 @@ body.touch-device #cursor-ring{display:none !important;}
 </style>
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="britney-restructure.css">
 </head>
 <body>
 
 
-  <audio autoplay loop hidden>
+  <audio id="britney-audio" autoplay loop hidden>
     <source src="audio/musicbrit.mp3" type="audio/mpeg" />
   </audio>
 <nav>
   <a href="index.html" class="nav-back">← Família Connor</a>
-  <span class="nav-name">Hellsings</span>
+  <span class="nav-name">Britney Connor</span>
   <span class="nav-org">A Era da Extinção</span>
 </nav>
 <div class="back-section">
@@ -376,7 +377,7 @@ body.touch-device #cursor-ring{display:none !important;}
 </div>
 <section id="hero">
   <div class="hero-photo">
-    <img id="hero-img" src="img/britney1.png" alt="Britney Connor">
+    <img id="hero-img" src="img-britney/britney1.png" alt="Britney Connor">
             
     <div class="hero-photo-placeholder">BC</div>
   </div>
@@ -405,6 +406,104 @@ body.touch-device #cursor-ring{display:none !important;}
     <div class="stat-item reveal"><span class="stat-num">∞</span><span class="stat-label">Amor pela família</span></div>
   </div>
 </div>
+
+<section class="britney-journey" id="jornada-britney">
+  <div class="journey-glow" aria-hidden="true"></div>
+  <div class="journey-inner">
+    <p class="section-label reveal">Caderno de trajetória</p>
+    <div class="journey-heading reveal">
+      <div>
+        <span class="journey-kicker">Anotações de uma futura médica</span>
+        <h2>Entre o estudo<br>e o <em>recomeço.</em></h2>
+      </div>
+      <p>Britney não é definida apenas pelo que enfrentou. Esta é a história da jovem que continua estudando, cuidando e escolhendo o próximo amanhecer.</p>
+    </div>
+
+    <div class="journey-tabs reveal" role="tablist" aria-label="Fases da trajetória de Britney">
+      <button class="journey-tab active" type="button" role="tab" aria-selected="true" data-journey="universidade"><span>01</span> Universidade</button>
+      <button class="journey-tab" type="button" role="tab" aria-selected="false" data-journey="vocacao"><span>02</span> Vocação</button>
+      <button class="journey-tab" type="button" role="tab" aria-selected="false" data-journey="recomeco"><span>03</span> Recomeço</button>
+    </div>
+
+    <div class="journey-notebook reveal">
+      <div class="notebook-margin" aria-hidden="true"></div>
+      <article class="journey-page active" data-page="universidade">
+        <span class="page-index">CAPÍTULO 01 / UNIVERSIDADE</span>
+        <h3>Conhecimento como caminho</h3>
+        <p>Entre livros, aulas e noites de estudo, Britney constrói uma identidade que pertence somente a ela. Cada página aprendida é também uma página nova da própria história.</p>
+        <div class="study-notes"><span>Anatomia</span><span>Disciplina</span><span>Curiosidade</span></div>
+      </article>
+      <article class="journey-page" data-page="vocacao" hidden>
+        <span class="page-index">CAPÍTULO 02 / MEDICINA</span>
+        <h3>Cuidar também é uma forma de coragem</h3>
+        <p>Sua escolha pela medicina nasce da empatia: compreender a dor, enxergar a pessoa e permanecer presente. O jaleco ainda é futuro, mas a vocação já faz parte dela.</p>
+        <div class="study-notes"><span>Escuta</span><span>Ciência</span><span>Cuidado</span></div>
+      </article>
+      <article class="journey-page" data-page="recomeco" hidden>
+        <span class="page-index">CAPÍTULO 03 / SUPERAÇÃO</span>
+        <h3>A luz não chegou de uma vez</h3>
+        <p>Depois de atravessar uma fase profunda de depressão, Britney aprendeu que recomeçar não é apagar o passado. É seguir, um dia por vez, apoiada por quem ama e pela vida que ainda deseja construir.</p>
+        <div class="study-notes"><span>Tempo</span><span>Apoio</span><span>Esperança</span></div>
+      </article>
+      <div class="notebook-mark" aria-hidden="true">B.C.</div>
+    </div>
+  </div>
+</section>
+
+<section class="britney-digital" id="universo-digital">
+  <div class="digital-marquee" aria-hidden="true">
+    <span>STUDY · STYLE · CREATE · REPEAT · ELECTRONIC SOUL · </span>
+    <span>STUDY · STYLE · CREATE · REPEAT · ELECTRONIC SOUL · </span>
+  </div>
+  <div class="digital-inner">
+    <div class="digital-intro reveal">
+      <div>
+        <p class="digital-overline">Britney online / diário criativo</p>
+        <h2>A vida também<br>acontece em <em>frames.</em></h2>
+      </div>
+      <p>Fora dos livros, Britney transforma rotina em conteúdo: combina moda, universidade, vídeos e música eletrônica em um universo jovem que tem a assinatura dela.</p>
+    </div>
+
+    <div class="creator-grid">
+      <article class="creator-card fashion reveal" data-tilt>
+        <div class="card-counter">01 / STYLE</div>
+        <div class="fashion-shot"><img src="img-britney/britney0.png" alt="Britney e seu estilo" loading="lazy"><span>LOOK<br>OF THE<br>DAY</span></div>
+        <h3>Moda como linguagem</h3>
+        <p>Looks, referências e detalhes que dizem quem ela é antes mesmo de qualquer legenda.</p>
+        <div class="tag-row"><span>#StyleDiary</span><span>#BritneyConnor</span></div>
+      </article>
+
+      <article class="creator-card camera reveal" data-tilt>
+        <div class="record-line"><span class="rec-dot"></span> REC <b>00:23:17</b></div>
+        <div class="camera-frame">
+          <img src="img-britney/brit2.png" alt="Britney criando conteúdo" loading="lazy">
+          <i class="focus tl"></i><i class="focus tr"></i><i class="focus bl"></i><i class="focus br"></i>
+          <span class="camera-title">DAY IN<br>MY LIFE</span>
+        </div>
+        <h3>Câmera ligada</h3>
+        <p>Vlogs, rotina universitária, conversas e pequenos momentos transformados em memória digital.</p>
+        <div class="camera-data"><span>4K</span><span>60 FPS</span><span>AUTO</span></div>
+      </article>
+
+      <article class="creator-card sound reveal" data-tilt>
+        <div class="card-counter">03 / ELECTRONIC</div>
+        <div class="sound-orbit"><span>BC</span><i></i><i></i></div>
+        <h3>Electronic heartbeat</h3>
+        <p>Sintetizadores, graves e luzes neon: a trilha que acompanha seus estudos e sua criação.</p>
+        <div class="equalizer" aria-label="Equalizador decorativo">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <button class="music-control" type="button" aria-pressed="true"><span>❚❚</span> Música da Britney</button>
+      </article>
+    </div>
+
+    <div class="social-strip reveal">
+      <span class="online-dot"></span>
+      <strong>BRITNEY IS ONLINE</strong>
+      <span>Estudante</span><span>Fashion lover</span><span>Video creator</span><span>Electronic music</span>
+    </div>
+  </div>
+</section>
 
 <section class="page-section">
   <p class="section-label reveal">Perfil</p>
@@ -468,41 +567,22 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </section>
 
-<section class="page-section gallery-section" style="padding-top:2rem;">
-  <p class="section-label reveal">Galeria</p>
-  <h2 class="section-title reveal">Fotos</h2>
- <div class="gallery-loop">
-  <img src="img/brit.png" alt="Britney 1" class="active">
-  <img src="img/brit2.png " alt="Britney 2">
-  <img src="img/brit4.png " alt="Britney 3">
-  <img src="img/britconnor.png " alt="Britney 4">
-  <img src="img/britney.png" alt="Britney 5">
-  <img src="img/britney1.png" alt="Britney 6">
-  <img src="img/britney2.png" alt="Britney 6">
-  <img src="img/universidade.png " alt="Britney 7">
-  <img src="img/britjull1.png " alt="Britney 9">
-  <img src="img/britjull0.png " alt="Britney 10">
-  <img src="img/britjull.png" alt="Britney e Jully">
-
-</div>
+<section class="page-section gallery-section britney-gallery-gate">
+  <div class="gallery-gate-copy reveal">
+    <p class="section-label">Arquivo pessoal</p>
+    <h2 class="section-title">Retratos de Britney</h2>
+    <p>Uma coleção dedicada somente a ela. Novas imagens adicionadas à pasta de Britney poderão entrar neste arquivo depois.</p>
+  </div>
+  <a class="gallery-pass reveal" href="britney-fotos.html">
+    <span class="pass-top">Arquivo universitário · BC-03</span>
+    <strong>Abrir galeria</strong>
+    <span class="pass-action">Acessar fotografias <b>→</b></span>
+  </a>
 </section>
 
 <script>
 const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>{e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));},i*80);obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
-</script>
-
-<script>
-const images = document.querySelectorAll('.gallery-loop img');
-let current = 0;
-
-function showNextImage() {
-  images[current].classList.remove('active');
-  current = (current + 1) % images.length;
-  images[current].classList.add('active');
-}
-
-setInterval(showNextImage, 4000); // troca a cada 4 segundos
 </script>
 
 <script>
@@ -677,5 +757,6 @@ setInterval(showNextImage, 4000); // troca a cada 4 segundos
 
 <script src="site-cursor.js" defer></script>
 <script src="site-transmission.js" defer></script>
+<script src="britney-restructure.js" defer></script>
 </body>
 </html>

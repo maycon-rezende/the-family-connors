@@ -349,6 +349,8 @@ body.touch-device #cursor-ring{display:none !important;}
 </style>
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="mark-restructure.css">
+<link rel="stylesheet" href="mark-water.css">
 </head>
 <body>
   <div class="back-section">
@@ -366,13 +368,13 @@ body.touch-device #cursor-ring{display:none !important;}
 
 <nav>
   <a href="telainicial.html" class="nav-back">← Família Connor</a>
-  <span class="nav-name">HELLSINGS</span>
+  <span class="nav-name">MARK CONNOR</span>
   <span class="nav-org">A Era da Extinção</span>
 </nav>
 
 <section id="hero">
   <div class="hero-photo">
-    <img id="hero-img" src="img/mark3.png" alt="Mark Connor">
+    <img id="hero-img" src="img-mark/mark3.png" alt="Mark Connor">
     <!-- FOTO MARK:
          
               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;"> -->
@@ -389,7 +391,7 @@ body.touch-device #cursor-ring{display:none !important;}
     <h1 class="hero-name">MARK<br><span>CONNOR</span></h1>
     <p class="hero-subtitle">Segundo Filho · Soldado · Hellsings</p>
     <div class="hero-actions">
-      <a class="hero-btn" href="#perfil">Explorar perfil</a>
+      <a class="hero-btn" href="#operacoes">Abrir registro operacional</a>
       <a class="hero-btn secondary" href="telainicial.html">Voltar ao início</a>
     </div>
     <div class="hero-badges">
@@ -410,6 +412,21 @@ body.touch-device #cursor-ring{display:none !important;}
     <div class="stat-item reveal"><span class="stat-num">Altura</span><span class="stat-label">1,85m</span></div>
   </div>
 </div>
+
+<section class="naval-command" id="operacoes" aria-labelledby="operations-title">
+  <div class="ocean-grid" aria-hidden="true"></div><div class="sonar-sweep" aria-hidden="true"></div>
+  <header class="operations-heading reveal"><div><span>Registro de serviço // MC-02</span><h2 id="operations-title">Do convés<br><em>às sombras.</em></h2></div><p>O mar ensinou disciplina, distância e sobrevivência. Os Hellsings transformaram esse treinamento em uma arma colocada a serviço da família.</p></header>
+  <div class="operations-tabs reveal" role="tablist" aria-label="Fases operacionais de Mark Connor">
+    <button class="operations-tab is-active" type="button" role="tab" aria-selected="true" data-operation="navy"><span>01</span><strong>MARINHA</strong><small>Serviço naval</small></button>
+    <button class="operations-tab" type="button" role="tab" aria-selected="false" data-operation="return"><span>02</span><strong>RETORNO</strong><small>Terra firme</small></button>
+    <button class="operations-tab" type="button" role="tab" aria-selected="false" data-operation="hellsings"><span>03</span><strong>HELLSINGS</strong><small>Operações especiais</small></button>
+  </div>
+  <div class="operations-stage reveal">
+    <article class="operation-panel operation-panel--navy is-active" id="operation-navy"><a class="naval-seal" href="mark-fotos.html?set=marinha" aria-label="Abrir fotos de Mark na Marinha">USN</a><div class="operation-copy"><span>United States Navy</span><h3>O oceano transformou juventude em disciplina.</h3><p>Aos dezoito anos, Mark trocou a Inglaterra por uma vida definida por hierarquia, resistência e decisões sob pressão.</p><ul><li>Navegação</li><li>Combate naval</li><li>Tática militar</li><li>Resposta de emergência</li></ul></div><aside class="sonar-console"><span>SONAR // UNIT 02</span><b>270°</b><i>ROTA ESTÁVEL</i><code>&gt; profundidade: segura<br>&gt; contato: negativo<br>&gt; unidade: operacional</code></aside></article>
+    <article class="operation-panel operation-panel--return" id="operation-return" hidden><a class="naval-seal" href="mark-fotos.html?set=pessoal" aria-label="Abrir fotos pessoais de Mark">MC</a><div class="operation-copy"><span>Return Protocol</span><h3>Voltar para casa exigiu mais coragem que partir.</h3><p>Em terra firme, Mark encontrou Ariani, a verdade sobre o passado e uma família que havia continuado vivendo durante sua ausência.</p><ul><li>Reintegração</li><li>Reconexão familiar</li><li>Ariani</li><li>Nova responsabilidade</li></ul></div><aside class="sonar-console"><span>HOME SIGNAL // FOUND</span><b>01</b><i>VERDADE RECUPERADA</i><code>&gt; destino: família connor<br>&gt; vínculo: restabelecido<br>&gt; permanência: confirmada</code></aside></article>
+    <article class="operation-panel operation-panel--hellsings" id="operation-hellsings" hidden><a class="naval-seal" href="mark-fotos.html?set=hellsings" aria-label="Abrir fotos de Mark nos Hellsings">H</a><div class="operation-copy"><span>Hellsings Operations</span><h3>O soldado voltou para lutar ao lado do irmão.</h3><p>Jack encontrou em Mark um operador disciplinado e confiável. Nos Hellsings, a experiência naval ganhou novo propósito.</p><ul><li>Operações táticas</li><li>Proteção de equipe</li><li>Armas de fogo</li><li>Comando secundário</li></ul></div><aside class="sonar-console"><span>HELLSINGS // ACTIVE</span><b>99%</b><i>LEALDADE CONFIRMADA</i><code>&gt; comandante: jack connor<br>&gt; operador: mark connor<br>&gt; missão: em andamento</code></aside></article>
+  </div>
+</section>
 
 <section class="page-section" id="perfil">
   <p class="section-label reveal">Perfil</p>
@@ -483,15 +500,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </section>
 
-<section class="page-section" style="padding-top:2rem;">
-  <p class="section-label reveal">Galeria</p>
-  <h2 class="section-title reveal">FOTOS</h2>
-  <div class="gallery reveal">
-    <div class="gallery-item"><img src="img/mark2.png" alt="Mark Connor"><div class="gallery-caption">Mark Connor</div></div>
-    <div class="gallery-item"><img src="img/markmarinha2.png" alt="Mark Connor durante o serviço naval"><div class="gallery-caption">Serviço Naval</div></div>
-    <div class="gallery-item"><img src="img/markhellsing.png" alt="Mark Connor nos Hellsings"><div class="gallery-caption">Hellsings</div></div>
-  </div>
-</section>
+<section class="mark-photo-link reveal"><span>Arquivo visual // MC-02</span><h2>Registros individuais de Mark Connor</h2><p>As fotografias pessoais e operacionais foram transferidas para um arquivo separado.</p><a href="mark-fotos.html">Abrir arquivo fotográfico →</a></section>
 <script>
 const obs = new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>{e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));},i*80);obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
@@ -669,5 +678,7 @@ document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));
 
 <script src="site-cursor.js" defer></script>
 <script src="site-transmission.js" defer></script>
+<script src="mark-restructure.js" defer></script>
+<script src="mark-water.js" defer></script>
 </body>
 </html>
