@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Era da Extinção</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="opening.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html,body{width:100%;height:100%;overflow:hidden;}
@@ -619,9 +620,41 @@ body.touch-device #cursor-ring{display:none !important;}
 }
 
 </style>
+<link rel="stylesheet" href="site-cursor.css">
+<link rel="stylesheet" href="site-transmission.css">
 </head>
 <body>
-   <audio autoplay loop hidden>
+  <div class="cinematic-intro" id="cinematic-intro" aria-label="Prólogo de A Era da Extinção">
+    <div class="intro-grain" aria-hidden="true"></div>
+    <div class="intro-flare" aria-hidden="true"></div>
+    <div class="intro-frame" aria-hidden="true"></div>
+
+    <p class="intro-classification">Arquivo Connor · Registro 00</p>
+
+    <div class="intro-beats" aria-live="polite">
+      <section class="intro-beat intro-beat--one is-active" data-beat="0">
+        <p class="intro-overline">Antes dos Hellsings</p>
+        <h2>O mundo ainda<br>acreditava estar <em>seguro.</em></h2>
+      </section>
+      <section class="intro-beat intro-beat--two" data-beat="1">
+        <p class="intro-overline">Então veio o silêncio</p>
+        <h2>Algumas famílias<br>herdam nomes.</h2>
+        <p>Os Connor herdaram uma guerra.</p>
+      </section>
+      <section class="intro-beat intro-beat--three" data-beat="2">
+        <p class="intro-overline">O primeiro presságio</p>
+        <h2>Quando o fim chegar,<br><em>eles estarão de pé.</em></h2>
+        <span class="intro-code">Sinal Ω // origem desconhecida</span>
+      </section>
+    </div>
+
+    <div class="intro-progress" aria-hidden="true"><span></span></div>
+    <div class="intro-controls">
+      <button id="intro-skip" type="button">Pular prólogo</button>
+    </div>
+  </div>
+
+   <audio id="opening-audio" autoplay loop preload="auto">
     <source src="audio/inicial.mp3" type="audio/mpeg" />
   </audio>
 <!-- CURSOR -->
@@ -719,8 +752,7 @@ body.touch-device #cursor-ring{display:none !important;}
 
   </div>
 </div>
-<input type="text" id="username" placeholder="Digite seu nome">
-<button id="enterBtn">Entrar</button>
+<script src="opening.js"></script>
 <script>
 // ─── CURSOR CUSTOMIZADO ───
 const cursor = document.getElementById('cursor');
@@ -814,7 +846,7 @@ document.addEventListener('mousemove', e => {
 
 // ─── TECLA ENTER TAMBÉM ENTRA ───
 document.addEventListener('keydown', e => {
-  if (e.key === 'Enter' || e.key === ' ') {
+  if (document.body.classList.contains('intro-complete') && (e.key === 'Enter' || e.key === ' ')) {
     e.preventDefault();
     enterBtn.focus();
     enterBtn.click();
@@ -842,30 +874,6 @@ function scheduleGlitch() {
 setTimeout(scheduleGlitch, 5000);
 </script>
 
-
-<script>
-  const input = document.getElementById('username');
-  const button = document.getElementById('enterBtn');
-
-  // Função que você já usa para entrar
-  function entrar() {
-    const nome = input.value.trim();
-    if (nome !== "") {
-      // redireciona ou inicia a página
-      window.location.href = "home.html"; 
-    }
-  }
-
-  // Pressionar Enter no teclado
-  input.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-      entrar();
-    }
-  });
-
-  // Clicar no botão
-  button.addEventListener("click", entrar);
-</script>
 
 <script>
 (function(){
@@ -1037,5 +1045,7 @@ setTimeout(scheduleGlitch, 5000);
 })();
 </script>
 
+<script src="site-cursor.js" defer></script>
+<script src="site-transmission.js" defer></script>
 </body>
 </html>

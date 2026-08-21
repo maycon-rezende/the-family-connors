@@ -363,6 +363,9 @@ body.touch-device #cursor-ring{display:none !important;}
 }
 
 </style>
+<link rel="stylesheet" href="site-cursor.css">
+<link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="jack-effects.css">
 </head>
 <body>
   
@@ -373,9 +376,7 @@ body.touch-device #cursor-ring{display:none !important;}
     <a href="jack.html" class="char-link active">Jack</a>
     <a href="alice.html" class="char-link">Alice</a>
     <a href="mark.html" class="char-link">Mark</a>
-    <a href="ariani.html"  <audio autoplay loop hidden>
-    <source src="audio/epic.mp3" type="audio/mpeg" />
-  </audio> class="char-link">Ariani</a>
+    <a href="ariani.html" class="char-link">Ariani</a>
     <a href="britney.html" class="char-link">Britney</a>
     <a href="jully.html" class="char-link">Jully</a>
     <a href="telainicial.html" class="char-link">← Início</a>
@@ -391,18 +392,20 @@ body.touch-device #cursor-ring{display:none !important;}
 <!-- HERO -->
 <section id="hero">
   <img id="hero-img" src="img/jack2.png" alt="Jack Connor">
-   
-    <div class="hero-photo-placeholder">JC</div>
-  </div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay-left"></div>
   <div class="hero-lines"></div>
   <div class="hero-accent"></div>
+  <div class="jack-grid" aria-hidden="true"></div>
+  <div class="jack-embers" aria-hidden="true"></div>
+  <div class="jack-scan" aria-hidden="true"></div>
+  <span class="jack-hud jack-hud--top" aria-hidden="true">Dossiê 01 // Acesso Connor</span>
+  <span class="jack-hud jack-hud--side" aria-hidden="true">Identificação confirmada</span>
 
   <div class="hero-content">
     <p class="hero-tag">01 — Família Connor</p>
     <div class="hero-number">01</div>
-    <h1 class="hero-name">JACK<br><span>CONNOR</span></h1>
+    <h1 class="hero-name" aria-label="Jack Connor">JACK<br><span>CONNOR</span></h1>
     <p class="hero-subtitle">Primogênito · Ex-FBI · Fundador dos Hellsings</p>
     <div class="hero-actions">
       <a class="hero-btn" href="#perfil">Ver perfil</a>
@@ -529,31 +532,55 @@ body.touch-device #cursor-ring{display:none !important;}
   </div>
 </section>
 
-<!-- GALERIA -->
-<section class="page-section" style="padding-top:2rem;">
-  <p class="section-label reveal">Galeria</p>
-  <h2 class="section-title reveal">FOTOS</h2>
-  <div class="gallery reveal">
-    <div class="gallery-item">
-        <img src="img/jack2.png" alt="Jack Connor">
-      <!-- <img src="jack-1.jpg" alt="Jack"> -->
-      <div class="gallery-placeholder"><span class="gp-letter">J</span><span>↑ Inserir Foto</span></div>
-      <div class="gallery-caption">Jack Connor</div>
+<!-- ARQUIVO FOTOGRÁFICO -->
+<section class="case-archive" id="arquivo-fotografico">
+  <header class="case-head reveal">
+    <div>
+      <span class="case-classification">FBI // INTERPOL // Arquivo Connor 01</span>
+      <h2>Evidências<br><em>fotográficas</em></h2>
     </div>
-    <div class="gallery-item">
-    <img src="img/jackconner.png" alt="Jack Connor">
-      <!-- <img src="jack-2.jpg" alt="Jack em ação"> -->
-      <div class="gallery-placeholder"><span class="gp-letter">J</span><span>↑ Inserir Foto</span></div>
-      <div class="gallery-caption">Em Ação</div>
+    <div class="case-summary">
+      <span><b>17</b> registros recuperados</span>
+      <span><b>03</b> categorias</span>
+      <p>Imagens associadas a Jack Connor, organizadas como material de identificação e vínculos pessoais.</p>
     </div>
-    <div class="gallery-item">
-        <img src="img/licefamilia.png" alt="Jack Connor">
-      <!-- <img src="jack-3.jpg" alt="Jack e família"> -->
-      <div class="gallery-placeholder"><span class="gp-letter">J</span><span>↑ Inserir Foto</span></div>
-      <div class="gallery-caption">Com a Família</div>
-    </div>
+  </header>
+
+  <div class="case-toolbar reveal" role="group" aria-label="Filtrar fotografias">
+    <span>Exibir:</span>
+    <button class="case-filter active" type="button" data-filter="all">Todos</button>
+    <button class="case-filter" type="button" data-filter="identity">Identificação</button>
+    <button class="case-filter" type="button" data-filter="family">Família</button>
+    <button class="case-filter" type="button" data-filter="siblings">Irmãos</button>
+  </div>
+
+  <div class="case-grid">
+    <button class="case-photo case-photo--feature" type="button" data-case-group="identity" data-case-title="Retrato principal" data-case-file="galeria-assets/jack-img__jack2.webp"><img src="galeria-assets/jack-img__jack2.webp" alt="Retrato principal de Jack Connor" loading="lazy"><span class="case-id">JC-001</span><span class="case-stamp">Identificação</span><strong>Retrato principal</strong></button>
+    <button class="case-photo" type="button" data-case-group="identity" data-case-title="Registro Connor" data-case-file="galeria-assets/jack-img__jack.webp"><img src="galeria-assets/jack-img__jack.webp" alt="Jack Connor" loading="lazy"><span class="case-id">JC-002</span><span class="case-stamp">Arquivo pessoal</span><strong>Registro Connor</strong></button>
+    <button class="case-photo" type="button" data-case-group="identity" data-case-title="Identificação 01" data-case-file="galeria-assets/img__jack1.webp"><img src="galeria-assets/img__jack1.webp" alt="Jack Connor em registro individual" loading="lazy"><span class="case-id">JC-003</span><span class="case-stamp">Identificação</span><strong>Identificação 01</strong></button>
+    <button class="case-photo case-photo--tall" type="button" data-case-group="identity" data-case-title="Identificação 02" data-case-file="galeria-assets/img__jack2.webp"><img src="galeria-assets/img__jack2.webp" alt="Jack Connor em segundo registro individual" loading="lazy"><span class="case-id">JC-004</span><span class="case-stamp">Identificação</span><strong>Identificação 02</strong></button>
+    <button class="case-photo" type="button" data-case-group="identity" data-case-title="Registro de campo" data-case-file="galeria-assets/img__jackconner.webp"><img src="galeria-assets/img__jackconner.webp" alt="Jack Connor em registro de campo" loading="lazy"><span class="case-id">JC-005</span><span class="case-stamp">Campo</span><strong>Registro de campo</strong></button>
+    <button class="case-photo" type="button" data-case-group="identity" data-case-title="Arquivo complementar" data-case-file="galeria-assets/img__connorjack.webp"><img src="galeria-assets/img__connorjack.webp" alt="Arquivo complementar de Jack Connor" loading="lazy"><span class="case-id">JC-006</span><span class="case-stamp">Confidencial</span><strong>Arquivo complementar</strong></button>
+
+    <button class="case-photo case-photo--wide" type="button" data-case-group="family" data-case-title="Jack e Alice" data-case-file="galeria-assets/img__licejack.webp"><img src="galeria-assets/img__licejack.webp" alt="Jack e Alice Connor" loading="lazy"><span class="case-id">JC-007</span><span class="case-stamp">Vínculo prioritário</span><strong>Jack &amp; Alice</strong></button>
+    <button class="case-photo" type="button" data-case-group="family" data-case-title="Núcleo familiar" data-case-file="galeria-assets/img__familiajack.webp"><img src="galeria-assets/img__familiajack.webp" alt="Jack com sua família" loading="lazy"><span class="case-id">JC-008</span><span class="case-stamp">Família</span><strong>Núcleo familiar</strong></button>
+    <button class="case-photo" type="button" data-case-group="family" data-case-title="Família Connor" data-case-file="galeria-assets/img__family.webp"><img src="galeria-assets/img__family.webp" alt="Família Connor reunida" loading="lazy"><span class="case-id">JC-009</span><span class="case-stamp">Família</span><strong>Família Connor</strong></button>
+    <button class="case-photo case-photo--wide" type="button" data-case-group="family" data-case-title="Jack, Alice e família" data-case-file="galeria-assets/img__licefamilia.webp"><img src="galeria-assets/img__licefamilia.webp" alt="Jack, Alice e a família" loading="lazy"><span class="case-id">JC-010</span><span class="case-stamp">Registro doméstico</span><strong>Jack, Alice &amp; família</strong></button>
+
+    <button class="case-photo case-photo--wide" type="button" data-case-group="siblings" data-case-title="Jack e Mark" data-case-file="galeria-assets/img__jackmark.webp"><img src="galeria-assets/img__jackmark.webp" alt="Jack e Mark Connor" loading="lazy"><span class="case-id">JC-011</span><span class="case-stamp">Irmãos</span><strong>Jack &amp; Mark</strong></button>
+    <button class="case-photo" type="button" data-case-group="siblings" data-case-title="Irmãos Connor 01" data-case-file="galeria-assets/img__brothers.webp"><img src="galeria-assets/img__brothers.webp" alt="Irmãos Connor reunidos" loading="lazy"><span class="case-id">JC-012</span><span class="case-stamp">Linhagem</span><strong>Irmãos Connor 01</strong></button>
+    <button class="case-photo" type="button" data-case-group="siblings" data-case-title="Irmãos Connor 02" data-case-file="galeria-assets/img__brothers0.webp"><img src="galeria-assets/img__brothers0.webp" alt="Irmãos Connor em registro 02" loading="lazy"><span class="case-id">JC-013</span><span class="case-stamp">Linhagem</span><strong>Irmãos Connor 02</strong></button>
+    <button class="case-photo" type="button" data-case-group="siblings" data-case-title="Irmãos Connor 03" data-case-file="galeria-assets/img__brothers1.webp"><img src="galeria-assets/img__brothers1.webp" alt="Irmãos Connor em registro 03" loading="lazy"><span class="case-id">JC-014</span><span class="case-stamp">Linhagem</span><strong>Irmãos Connor 03</strong></button>
+    <button class="case-photo" type="button" data-case-group="siblings" data-case-title="Irmãos Connor 04" data-case-file="galeria-assets/img__brothers2.webp"><img src="galeria-assets/img__brothers2.webp" alt="Irmãos Connor em registro 04" loading="lazy"><span class="case-id">JC-015</span><span class="case-stamp">Linhagem</span><strong>Irmãos Connor 04</strong></button>
+    <button class="case-photo" type="button" data-case-group="siblings" data-case-title="Irmãos Connor 05" data-case-file="galeria-assets/img__brothers3.webp"><img src="galeria-assets/img__brothers3.webp" alt="Irmãos Connor em registro 05" loading="lazy"><span class="case-id">JC-016</span><span class="case-stamp">Linhagem</span><strong>Irmãos Connor 05</strong></button>
+    <button class="case-photo case-photo--wide" type="button" data-case-group="siblings" data-case-title="Irmãos Connor 06" data-case-file="galeria-assets/img__brothers4.webp"><img src="galeria-assets/img__brothers4.webp" alt="Irmãos Connor em registro 06" loading="lazy"><span class="case-id">JC-017</span><span class="case-stamp">Linhagem</span><strong>Irmãos Connor 06</strong></button>
   </div>
 </section>
+
+<div class="case-lightbox" id="case-lightbox" role="dialog" aria-modal="true" aria-label="Visualizador do arquivo fotográfico" aria-hidden="true">
+  <button class="case-lightbox-close" type="button" aria-label="Fechar imagem">×</button>
+  <div class="case-lightbox-frame"><img src="" alt=""><div><span>FBI // INTERPOL</span><strong></strong><small>Arquivo fotográfico Connor 01</small></div></div>
+</div>
  <footer>
     <p class="footer-logo">HELLSINGS</p>
     <p class="footer-sub">A Era da Extinção &nbsp;·&nbsp; Família Connor &nbsp;·&nbsp; Fan Site</p>
@@ -751,5 +778,8 @@ window.addEventListener('scroll',()=>{
 })();
 </script>
 
+<script src="site-cursor.js" defer></script>
+<script src="site-transmission.js" defer></script>
+<script src="jack-effects.js" defer></script>
 </body>
 </html>

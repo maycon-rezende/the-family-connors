@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="home-effects.css">
   <style>
     :root {
       --ember: #c94a1a;
@@ -1589,6 +1590,8 @@ body.touch-device #cursor-ring{display:none !important;}
 
 </style>
 
+<link rel="stylesheet" href="site-cursor.css">
+<link rel="stylesheet" href="site-transmission.css">
 </head>
 
 <body>
@@ -1597,7 +1600,7 @@ body.touch-device #cursor-ring{display:none !important;}
   </audio>
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#hero" class="nav-logo">H E L L S I N G S</a>
+    <a href="#hero" class="nav-logo">C O N N O R</a>
     <ul class="nav-links">
       <li><a href="hellsing.html">Hellsings</a></li>
       <li><a href="galeria.html">Galeria</a></li>
@@ -1615,12 +1618,16 @@ body.touch-device #cursor-ring{display:none !important;}
   <div id="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
+    <div class="hero-dust" aria-hidden="true"></div>
+    <div class="hero-horizon" aria-hidden="true"></div>
+    <span class="hero-archive hero-archive--left" aria-hidden="true">Arquivo da família · 01</span>
+    <span class="hero-archive hero-archive--right" aria-hidden="true">Acesso autorizado</span>
     <div class="hero-emblem">
-      <div class="emblem-ring"><span class="emblem-h">H</span></div>
+      <div class="emblem-ring"><span class="emblem-h">C</span></div>
     </div>
-    <p class="hero-eyebrow">Família Connor — </p>
+    <p class="hero-eyebrow">Bem-vindo à Família Connor</p>
     <h1 class="hero-title">A Era da<br><span>Extinção</span></h1>
-    <p class="hero-sub">Blood · Honor · Hellsings</p>
+    <p class="hero-sub">Sangue · Honra · Legado</p>
     <div class="hero-divider">
       <div class="hero-diamond"></div>
     </div>
@@ -1637,17 +1644,23 @@ body.touch-device #cursor-ring{display:none !important;}
 
   <section class="story-brief reveal" id="resumo">
     <div class="story-brief-card">
+      <div class="brief-file-head">
+        <span>Connor / registro de linhagem</span>
+        <span class="brief-status"><i></i> Arquivo ativo</span>
+      </div>
       <span class="section-tag">Resumo da saga</span>
       <h2 class="section-title">Honra, sangue e legado</h2>
-      <p>Os Connor carregam a responsabilidade de proteger o que restou de um mundo em ruínas. Entre laços familiares, missões perigosas e segredos que atravessam gerações, cada personagem possui uma peça essencial nessa história.</p>
+      <p class="brief-lead">Os Connor carregam a responsabilidade de proteger o que restou de um mundo em ruínas. Entre laços familiares, missões perigosas e segredos que atravessam gerações, cada personagem possui uma peça essencial nessa história.</p>
+      <a class="brief-link" href="#familia">Abrir arquivos da família <span>→</span></a>
     </div>
     <div class="story-stats">
+      <p class="stats-label">Dados do arquivo</p>
       <div class="story-stat">
-        <strong>5</strong>
+        <strong data-count="5">5</strong>
         <span>membros centrais</span>
       </div>
       <div class="story-stat">
-        <strong>1</strong>
+        <strong data-count="1">1</strong>
         <span>organização de elite</span>
       </div>
       <div class="story-stat">
@@ -1657,8 +1670,186 @@ body.touch-device #cursor-ring{display:none !important;}
     </div>
   </section>
 
-  <!-- FAMÍLIA — CARDS INDIVIDUAIS -->
-  <section id="familia">
+  <!-- LINHAGEM CONNOR — APRESENTAÇÃO CINEMATOGRÁFICA -->
+  <section class="lineage" id="familia">
+    <header class="lineage-header reveal">
+      <div>
+        <span class="section-tag">Arquivos da família</span>
+        <h2 class="lineage-title">A linhagem<br><em>Connor</em></h2>
+      </div>
+      <p>Cada geração herdou uma parte do nome — e um motivo diferente para continuar de pé.</p>
+    </header>
+
+    <article class="lineage-chapter lineage-chapter--founders" data-lineage>
+      <div class="lineage-index" aria-hidden="true"><span>Capítulo</span><strong>01</strong></div>
+      <div class="lineage-copy">
+        <span class="lineage-kicker">O núcleo da família</span>
+        <h3>Jack <i>&amp;</i><br>Alice</h3>
+        <p>Ele transformou a perda em proteção. Ela transformou cuidado em força. Juntos, construíram o centro para onde todos os Connor retornam.</p>
+        <div class="lineage-links">
+          <a href="jack.html">Dossiê de Jack <span>→</span></a>
+          <a href="alice.html">Dossiê de Alice <span>→</span></a>
+        </div>
+      </div>
+      <div class="lineage-portraits">
+        <a class="lineage-person lineage-person--jack" href="jack.html" aria-label="Abrir dossiê de Jack Connor">
+          <img src="img/jack2.png" alt="Jack Connor">
+          <span class="person-file">Arquivo 01</span>
+          <strong>Jack</strong>
+          <small>Fundador · Protetor</small>
+        </a>
+        <a class="lineage-person lineage-person--alice" href="alice.html" aria-label="Abrir dossiê de Alice Connor">
+          <img src="img/lice.png" alt="Alice Myers Connor">
+          <span class="person-file">Arquivo 02</span>
+          <strong>Alice</strong>
+          <small>Médica · Coração da família</small>
+        </a>
+        <span class="lineage-bond" aria-hidden="true">C</span>
+      </div>
+    </article>
+
+    <article class="lineage-chapter lineage-chapter--return" data-lineage>
+      <div class="lineage-index" aria-hidden="true"><span>Capítulo</span><strong>02</strong></div>
+      <div class="lineage-copy">
+        <span class="lineage-kicker">O passado que retornou</span>
+        <h3>Mark <i>&amp;</i><br>Ariani</h3>
+        <p>Uma partida interrompeu a história. O reencontro trouxe de volta o amor, as consequências e verdades que esperaram anos para respirar.</p>
+        <div class="lineage-links">
+          <a href="mark.html">Dossiê de Mark <span>→</span></a>
+          <a href="ariani.html">Dossiê de Ariani <span>→</span></a>
+        </div>
+      </div>
+      <div class="lineage-portraits">
+        <a class="lineage-person" href="mark.html" aria-label="Abrir dossiê de Mark Connor">
+          <img src="img/connormark.png" alt="Mark Connor">
+          <span class="person-file">Arquivo 03</span>
+          <strong>Mark</strong>
+          <small>Ex-Marinha · Irmão</small>
+        </a>
+        <a class="lineage-person" href="ariani.html" aria-label="Abrir dossiê de Ariani Salvatore">
+          <img src="img/aribanner.png" alt="Ariani Salvatore">
+          <span class="person-file">Arquivo 04</span>
+          <strong>Ariani</strong>
+          <small>Advogada · Sobrevivente</small>
+        </a>
+        <span class="lineage-bond" aria-hidden="true">C</span>
+      </div>
+    </article>
+
+    <article class="lineage-chapter lineage-chapter--sisters" data-lineage>
+      <div class="lineage-index" aria-hidden="true"><span>Capítulo</span><strong>03</strong></div>
+      <div class="lineage-copy">
+        <span class="lineage-kicker">A continuidade</span>
+        <h3>Britney <i>&amp;</i><br>Jully</h3>
+        <p>Duas irmãs inseparáveis, duas formas de desafiar o peso do sobrenome e a promessa de que a família ainda possui um futuro.</p>
+        <div class="lineage-links">
+          <a href="britney.html">Dossiê de Britney <span>→</span></a>
+          <a href="jully.html">Dossiê de Jully <span>→</span></a>
+        </div>
+      </div>
+      <div class="lineage-portraits">
+        <a class="lineage-person" href="britney.html" aria-label="Abrir dossiê de Britney Connor">
+          <img src="img/britconnor.png" alt="Britney Connor">
+          <span class="person-file">Arquivo 05</span>
+          <strong>Britney</strong>
+          <small>Observadora · Irmã</small>
+        </a>
+        <a class="lineage-person" href="jully.html" aria-label="Abrir dossiê de Jully Connor">
+          <img src="img/jully/jully2.png" alt="Jully Connor">
+          <span class="person-file">Arquivo 06</span>
+          <strong>Jully</strong>
+          <small>Caçula · Movimento</small>
+        </a>
+        <span class="lineage-bond" aria-hidden="true">C</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- O MUNDO ANTES DO FIM -->
+  <section class="before-fall" id="antes-do-fim">
+    <div class="before-fall-atmosphere" aria-hidden="true"></div>
+    <header class="before-fall-header" data-world-reveal>
+      <span class="before-code">Registro temporal // período anterior</span>
+      <h2>Antes<br><em>do fim</em></h2>
+      <div class="before-intro">
+        <span class="world-status"><i></i> Mundo ativo</span>
+        <p>Antes das estradas virarem silêncio e das cidades perderem seus nomes, os Connor viviam em um mundo que ainda acreditava possuir um amanhã.</p>
+      </div>
+    </header>
+
+    <div class="world-threads" data-world-reveal>
+      <article>
+        <span>01</span>
+        <small>Serviço</small>
+        <h3>Distintivos e uniformes</h3>
+        <p>Jack e Mark construíram caminhos diferentes dentro de instituições que ainda representavam ordem.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <small>Vocação</small>
+        <h3>Medicina e justiça</h3>
+        <p>Alice e Ariani aprenderam a proteger vidas usando conhecimento, disciplina e voz.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <small>Continuidade</small>
+        <h3>Planos para o amanhã</h3>
+        <p>Britney e Jully ainda podiam imaginar futuros que não exigiam apenas sobrevivência.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FRAGMENTOS DE UMA VIDA NORMAL -->
+  <section class="memory-archive" id="memorias">
+    <header class="memory-header" data-world-reveal>
+      <div>
+        <span class="section-tag">Registros preservados</span>
+        <h2>Fragmentos de<br><em>uma vida normal</em></h2>
+      </div>
+      <p>Momentos que pareciam comuns antes de se tornarem provas de que aquele mundo realmente existiu.</p>
+    </header>
+
+    <div class="memory-strip" aria-label="Memórias da família Connor">
+      <article class="memory-card memory-card--wide" data-memory>
+        <img src="galeria-assets/img__family.webp" alt="Família Connor reunida" loading="lazy">
+        <div class="memory-shade"></div>
+        <span class="memory-number">Memória 001</span>
+        <div class="memory-caption"><small>Mansão Connor</small><h3>A família reunida</h3><p>Quando estar juntos ainda era apenas parte da rotina.</p></div>
+      </article>
+      <article class="memory-card" data-memory>
+        <img src="galeria-assets/img__licemedica.webp" alt="Alice durante sua trajetória na medicina" loading="lazy">
+        <div class="memory-shade"></div>
+        <span class="memory-number">Memória 002</span>
+        <div class="memory-caption"><small>Londres</small><h3>A vocação de Alice</h3><p>Conhecimento usado para preservar vidas.</p></div>
+      </article>
+      <article class="memory-card" data-memory>
+        <img src="galeria-assets/img__markmarinha.webp" alt="Mark Connor durante o serviço naval" loading="lazy">
+        <div class="memory-shade"></div>
+        <span class="memory-number">Memória 003</span>
+        <div class="memory-caption"><small>Serviço naval</small><h3>Mark antes do retorno</h3><p>Disciplina, distância e escolhas.</p></div>
+      </article>
+      <article class="memory-card" data-memory>
+        <img src="galeria-assets/img__aritribunal.webp" alt="Ariani em sua carreira jurídica" loading="lazy">
+        <div class="memory-shade"></div>
+        <span class="memory-number">Memória 004</span>
+        <div class="memory-caption"><small>Tribunal</small><h3>A voz de Ariani</h3><p>Uma carreira construída sem esperar pelo retorno de ninguém.</p></div>
+      </article>
+      <article class="memory-card memory-card--wide" data-memory>
+        <img src="galeria-assets/img__universidade.webp" alt="Britney e Jully durante a vida universitária" loading="lazy">
+        <div class="memory-shade"></div>
+        <span class="memory-number">Memória 005</span>
+        <div class="memory-caption"><small>Universidade</small><h3>O futuro ainda aberto</h3><p>Quando os planos eram maiores que o medo.</p></div>
+      </article>
+    </div>
+
+    <div class="memory-footer" data-world-reveal>
+      <span>5 registros selecionados</span>
+      <a href="galeria.html">Acessar arquivo visual completo <b>→</b></a>
+    </div>
+  </section>
+
+  <!-- Versão anterior preservada temporariamente para comparação -->
+  <section id="familia-antigo" hidden>
     <div class="section-header reveal">
       <span class="section-tag">A família</span>
       <h2 class="section-title">Connor</h2>
@@ -1839,7 +2030,7 @@ body.touch-device #cursor-ring{display:none !important;}
       <div class="member-card">
         <div class="card-bg-glow"></div>
         <div class="card-portrait-wrap jully-bg">
-          <a href="jully.html"><img class="portrait-img" src="jully-img/jully2.png" alt="Jully Connor"></a>
+          <a href="jully.html"><img class="portrait-img" src="img/jully/jully2.png" alt="Jully Connor"></a>
           <div class="portrait-img-overlay"></div>
           <div class="portrait-placeholder">
             <div class="portrait-initial">Ju</div><span class="portrait-add-img">↑ Inserir Imagem</span>
@@ -1862,11 +2053,10 @@ body.touch-device #cursor-ring{display:none !important;}
   <!-- TIMELINE -->
   <div id="timeline">
     <div class="timeline-inner">
-      <div class="section-header reveal">
-        <span class="section-tag">Cronologia</span>
-        <h2 class="section-title">Linha do Tempo</h2>
-        <div class="section-rule"></div>
-      </div>
+      <header class="timeline-head reveal">
+        <div><span class="section-tag">Cronologia preservada</span><h2>Linha<br><em>do tempo</em></h2></div>
+        <p>Perdas, encontros e decisões que transformaram um sobrenome em legado.</p>
+      </header>
       <div class="timeline-track">
         <div class="timeline-event">
           <p class="timeline-who">Família Connor</p>
@@ -1917,66 +2107,59 @@ body.touch-device #cursor-ring{display:none !important;}
             muitos ocorridos, ficam juntos.</p>
         </div>
         <div class="timeline-event pending">
-          <p class="timeline-who">[ Aguardando autor ]</p>
+          <p class="timeline-who">[ Registro bloqueado ]</p>
           <h3 class="timeline-title">Próximo Evento</h3>
-          <p class="timeline-desc">Adicione aqui o próximo marco cronológico da narrativa.</p>
+          <p class="timeline-desc">O próximo marco permanece fora do arquivo conhecido.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- EXTRAS -->
-  <div id="extras">
-    <div class="extras-inner">
-      <div class="section-header reveal">
-        <span class="section-tag">Universo</span>
-        <h2 class="section-title">Extras &amp; Lore</h2>
-        <div class="section-rule"></div>
+  <section class="heritage" id="heranca">
+    <header class="heritage-head" data-world-reveal>
+      <div>
+        <span class="section-tag">Registro de linhagem</span>
+        <h2>Herança<br><em>Connor</em></h2>
       </div>
-      <div class="extras-grid">
-        <div class="extra-card reveal">
-          <div class="extra-icon">⚔️</div>
-          <h3 class="extra-title">Regras dos Hellsings</h3>
-          <p class="extra-text">O código interno que define quem são e o que não farão por nenhum preço.</p>
-          <p class="add-hint">O Futuro</p>
+      <p>O que uma família deixa para o mundo depois que seus nomes se tornam memória.</p>
+    </header>
+
+    <div class="heritage-layout">
+      <article class="family-tree" data-world-reveal>
+        <div class="tree-file-head"><span>Árvore familiar // núcleo de Jack</span><span>05 descendentes</span></div>
+        <div class="tree-couple">
+          <a href="jack.html"><small>Patriarca</small><strong>Jack</strong><span>Connor</span></a>
+          <i aria-hidden="true">C</i>
+          <a href="alice.html"><small>Matriarca</small><strong>Alice</strong><span>Myers Connor</span></a>
         </div>
-        <div class="extra-card reveal">
-          <div class="extra-icon">👨‍👩‍👧‍👦</div>
-          <h3 class="extra-title">Filhos de Jack &amp; Alice</h3>
-          <p class="extra-text"><strong class="extra-name">Alucard</strong> — o mais velho<br><strong
-              class="extra-name">Nicolai</strong><br><strong class="extra-name">Mary</strong><br><strong
-              class="extra-name">Diana</strong></p>
-          <p class="add-hint">+ Adicionar perfis</p>
+        <div class="tree-line" aria-hidden="true"></div>
+        <div class="tree-children">
+          <div class="tree-child tree-child--first"><span>01</span><strong>Alucard</strong><small>O mais velho</small></div>
+          <div class="tree-child"><span>02</span><strong>Nicolai</strong><small>Arquivo reservado</small></div>
+          <div class="tree-child"><span>03</span><strong>Mary</strong><small>Arquivo reservado</small></div>
+          <div class="tree-child"><span>04</span><strong>Diana</strong><small>Arquivo reservado</small></div>
+          <div class="tree-child"><span>05</span><strong>Elisabeth</strong><small>Arquivo reservado</small></div>
         </div>
-        <div class="extra-card reveal">
-          <div class="extra-icon">⚖️</div>
-          <h3 class="extra-title">Ariani &amp; O Segredo</h3>
-          <p class="extra-text">O amor que Mark deixou para trás, a gravidez guardada por anos, e o inevitável
-            reencontro.</p>
-          <p class="add-hint">+ Adicionar detalhes</p>
-        </div>
-        <div class="extra-card reveal">
-          <div class="extra-icon">🇬🇧</div>
-          <h3 class="extra-title">Herança Inglesa</h3>
-          <p class="extra-text">A família Connor tem raízes inglesas. Disciplina e lealdade marcam seu modo de vida —
-            mesmo atuando globalmente.</p>
-          <p class="add-hint">+ Adicionar detalhes</p>
-        </div>
-        <div class="extra-card reveal">
-          <div class="extra-icon">🔍</div>
-          <h3 class="extra-title">Galeria de Missões</h3>
-          <p class="extra-text">Missões realizadas pelos Hellsings, casos encerrados e operações em andamento.</p>
-          <p class="add-hint">+ Adicionar missões</p>
-        </div>
-        <div class="extra-card reveal">
-          <div class="extra-icon">💬</div>
-          <h3 class="extra-title">Citações Marcantes</h3>
-          <p class="extra-text">As frases que definem cada personagem — aquelas que ficam na memória do leitor.</p>
-          <p class="add-hint">+ Adicionar citações</p>
-        </div>
-      </div>
+      </article>
+
+      <aside class="heritage-aside">
+        <article class="origin-file" data-world-reveal>
+          <span class="heritage-file-code">Arquivo de origem // Inglaterra</span>
+          <h3>Raízes<br>inglesas</h3>
+          <p>Disciplina e lealdade atravessam a história dos Connor. Datas, antepassados e os primeiros registros da linhagem permanecem reservados para a história oficial.</p>
+          <div class="origin-seal" aria-hidden="true"><b>C</b><span>Connor · England ·</span></div>
+        </article>
+        <article class="voices-file" data-world-reveal>
+          <span class="heritage-file-code">Vozes do legado</span>
+          <div class="voices-lock" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h3>Palavras que permanecem</h3>
+          <p>As vozes da família serão abertas quando suas frases definitivas forem registradas.</p>
+          <span class="locked-label">Conteúdo preservado · aguardando manuscrito</span>
+        </article>
+      </aside>
     </div>
-  </div>
+  </section>
   <!-- HELLSINGS -->
   <div id="hellsings-intro">
 
@@ -2217,6 +2400,9 @@ body.touch-device #cursor-ring{display:none !important;}
 })();
 </script>
 
+<script src="home-effects.js" defer></script>
+<script src="site-cursor.js" defer></script>
+<script src="site-transmission.js" defer></script>
 </body>
 
 </html>
