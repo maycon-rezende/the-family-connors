@@ -2,43 +2,40 @@
 
 ## Concluído
 
-- Abertura nuclear com título formado por poeira e trilha crescente.
-- Cursor global temático em todas as páginas.
-- Interferência global “Transmissão interrompida”.
-- Reestruturação visual da tela inicial.
-- Nova apresentação cinematográfica dos personagens.
-- Seções “Antes do fim” e “Fragmentos de uma vida normal”.
-- Linha do tempo cinematográfica com progresso de leitura.
-- Substituição de “Extras & Lore” por “Herança Connor”.
-- Árvore de Jack, Alice e seus cinco filhos.
-- Novo hero do dossiê de Jack.
-- Galeria de Jack convertida em arquivo FBI/Interpol com 17 fotografias.
-- Página de Alice reformulada com atmosfera clínica, sinais vitais, varredura luminosa e partículas microscópicas.
-- Galeria exclusiva de Alice convertida em arquivo médico interativo com sete registros e visualização ampliada.
-- Biografia de Alice ampliada: carreira hospitalar, medicina de alta classe, caso reservado, Hellsings, artes marciais e gestão financeira.
-- O `index` ganhou prólogo cinematográfico em forma de livro físico, seguido por cinco frases narrativas e pela abertura nuclear da Mansão Connor.
-- A trilha `epic.mp3` passou a conduzir toda a abertura do `index`, subindo a partir da primeira interação.
-- `telainicial.html` reconstruída como uma narrativa cinematográfica completa em oito capítulos.
-- Nova progressão visual: mundo anterior, Família Connor, carreira de Jack, fundação dos Hellsings, despertar de Alice, guerra no submundo, Dia D e Era da Extinção.
-- Formação original dos Hellsings apresentada com funções e codinomes.
-- Transição do mundo elegante para ruínas, radiação e escassez integrada à própria rolagem.
-- Portal futuro “O Futuro Inicia Aqui” introduzido como capítulo bloqueado.
-- Correção de referências quebradas e marcação HTML defeituosa.
-- Limpeza de cópias antigas e assets duplicados.
+- Tela inicial reconstruída com narrativa cinematográfica e efeitos de extinção.
+- Páginas de Jack, Alice, Mark, Ariani, Britney e Jully reformuladas com identidades próprias.
+- Galerias individuais separadas e ampliação em tela cheia.
+- Galeria central reorganizada em cinco álbuns familiares, sem despejar todas as fotos simultaneamente.
+- Mansão Connor catalogada em 24 ambientes navegáveis.
+- Central audiovisual criada com quatro vídeos compartilhados.
+- Links de vídeo inseridos nos perfis relacionados.
+- Galeria de Jack atualizada para 12 registros.
+- Galeria de Jully atualizada para 12 registros, incluindo fases adultas.
+- Cursor global corrigido para permanecer visível dentro de elementos `dialog`.
+- Página dos Hellsings totalmente reconstruída como centro de comando.
+- Formação oficial dos dez integrantes cadastrada.
+- Alice definida como administradora não operacional em campo.
+- Radar animado, dossiês interativos, código interno e escopo operacional adicionados.
+- Cursor exclusivo dos Hellsings criado como mira tática.
+- Imagem de Mark com uniforme Hellsings integrada.
+- Novos uniformes gerados para Jack e Alice e integrados aos dossiês.
+- Imagens reorganizadas em pastas próprias por personagem e núcleo familiar.
 
-## Próximas páginas individuais
+## Decisões visuais atuais
 
-1. Finalizar Identidade, Habilidades e Cronologia de Jack.
-2. Complementar a história de Alice quando novos detalhes do livro forem definidos.
-3. Reformular Mark com identidade naval.
-4. Reformular Ariani com identidade jurídica.
-5. Reformular Britney e Jully com identidades próprias.
+- Jack: uniforme de comandante com detalhes verde-ácido.
+- Mark: uniforme tático preto e grafite.
+- Alice: uniforme executivo-médico com detalhes dourados, sem armamento.
+- Agentes sem retrato: silhuetas biométricas abstratas e assinatura cromática.
+- A página Hellsings não reutiliza a estética dourada da página principal.
 
-## Etapas futuras
+## Próximos passos
 
-- Receber do autor a explicação oficial dos Hellsings.
-- Reconstruir `hellsing.html` com base nessa definição.
-- Criar a Mansão Connor explorável.
-- Revisar ortografia e coerência de todo o conteúdo.
-- Remover definitivamente os blocos antigos ocultos após aprovação visual.
-- Criar posteriormente o portal e o site “O Futuro Inicia Aqui”.
+1. Definir biografias, aparência e funções finais de Naomi, Clhoe e Dimitri.
+2. Criar imagens oficiais dos demais agentes com variações do uniforme Hellsings.
+3. Adicionar vídeos individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
+4. Atualizar automaticamente as galerias quando novas imagens forem adicionadas.
+5. Revisar ortografia, nomes próprios e coerência geral após fechar o manuscrito.
+6. Definir a cronologia da extinção e o futuro portal “O Futuro Inicia Aqui”.
+
+Última atualização: 22 de agosto de 2026.

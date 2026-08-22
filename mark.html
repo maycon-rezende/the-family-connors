@@ -349,6 +349,7 @@ body.touch-device #cursor-ring{display:none !important;}
 </style>
 <link rel="stylesheet" href="site-cursor.css">
 <link rel="stylesheet" href="site-transmission.css">
+<link rel="stylesheet" href="video-record-link.css">
 <link rel="stylesheet" href="mark-restructure.css">
 <link rel="stylesheet" href="mark-water.css">
 </head>
@@ -501,6 +502,10 @@ body.touch-device #cursor-ring{display:none !important;}
 </section>
 
 <section class="mark-photo-link reveal"><span>Arquivo visual // MC-02</span><h2>Registros individuais de Mark Connor</h2><p>As fotografias pessoais e operacionais foram transferidas para um arquivo separado.</p><a href="mark-fotos.html">Abrir arquivo fotográfico →</a></section>
+<section class="video-record reveal" aria-labelledby="mark-video-title">
+  <div class="video-record__signal" aria-hidden="true"><span>REC</span><i></i></div>
+  <div><span class="video-record__label">Registro audiovisual // Mark &amp; Ariani</span><h2 id="mark-video-title">Um amor.<br>Uma história em movimento.</h2><p>Um fragmento preservado da vida que Mark e Ariani construíram depois do reencontro.</p><a href="videos.html#mark-ariani">Assistir ao registro →</a></div>
+</section>
 <script>
 const obs = new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>{e.target.classList.add('visible');e.target.querySelectorAll('.skill-fill').forEach(f=>f.classList.add('animated'));},i*80);obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.vt-item').forEach(el=>obs.observe(el));

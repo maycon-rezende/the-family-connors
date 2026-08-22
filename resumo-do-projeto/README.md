@@ -4,24 +4,26 @@ Site narrativo dedicado à Família Connor e ao universo de **A Era da Extinçã
 
 ## Conceito
 
-A história será ligada futuramente ao universo de **Doomsday**, muitos anos depois dos acontecimentos daquele projeto. O futuro de A Era da Extinção poderá apresentar um mundo pós-apocalíptico com estradas, ruínas, sobreviventes e possíveis infectados, dependendo da versão final do livro.
-
-A Mansão Connor representa a entrada do site e da família. Os Hellsings foram fundados por Jack Connor, mas sua origem, regras e funcionamento ainda serão definidos pelo autor antes da reformulação completa da página da organização.
+A experiência combina drama familiar, espionagem, operações clandestinas e a aproximação de um cenário de extinção. A história poderá ser ligada futuramente ao universo de **Doomsday**, muitos anos depois dos acontecimentos daquele projeto, sem antecipar como fato elementos ainda não definidos no manuscrito.
 
 ## Experiência atual
 
-- `index.html`: prólogo cinematográfico e entrada da mansão.
-- `telainicial.html`: saga cinematográfica em oito capítulos, do mundo anterior ao fim até a Era da Extinção.
-- O `index` começa com um livro cinematográfico que conduz o visitante ao prólogo, à abertura nuclear e então à Mansão Connor.
-- Páginas individuais: dossiês de Jack, Alice, Mark, Ariani, Britney e Jully.
-- Alice: experiência clínica e emocional com galeria médica interativa exclusiva.
-- `hellsing.html`: página reservada à organização Hellsings.
-- `galeria.html`: arquivo visual da família e da mansão.
+- `index.html`: prólogo cinematográfico e entrada da Mansão Connor.
+- `telainicial.html`: narrativa principal e apresentação da Era da Extinção.
+- Páginas individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
+- Galerias fotográficas separadas para Jack, Alice, Mark, Britney e Jully.
+- `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
+- `videos.html`: central audiovisual com registros compartilhados.
+- `hellsing.html`: centro de comando dos Hellsings, com radar, dossiês e formação oficial.
+
+## Hellsings
+
+Os Hellsings são uma unidade privada de operações especiais fundada por Jack Connor. A formação atual possui dez integrantes. Jack ocupa o comando, Mark atua no comando tático e Alice Myers administra contratos, clientes, recursos e negócios; ela não participa mais de operações em campo.
 
 ## Documentos
 
-- [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e arquivos compartilhados.
+- [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
-- [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): trabalho realizado e roteiro futuro.
+- [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 
-Última atualização: 21 de agosto de 2026.
+Última atualização: 22 de agosto de 2026.

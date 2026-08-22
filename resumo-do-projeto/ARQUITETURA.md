@@ -1,43 +1,57 @@
 # Arquitetura do Site
 
-## Páginas ativas
+## Páginas principais
 
 | Arquivo | Função |
 | --- | --- |
-| `index.html` | Abertura cinematográfica e entrada da Mansão Connor |
-| `telainicial.html` | Visão geral da família e do universo |
-| `jack.html` | Dossiê de Jack Connor |
-| `alice.html` | Dossiê de Alice Myers Connor |
-| `mark.html` | Dossiê de Mark Connor |
-| `ariani.html` | Dossiê de Ariani Salvatore |
-| `britney.html` | Dossiê de Britney Connor |
-| `jully.html` | Dossiê de Jully Connor |
-| `hellsing.html` | Organização Hellsings |
-| `galeria.html` | Arquivo visual |
+| `index.html` | Prólogo e entrada da Mansão Connor |
+| `telainicial.html` | Página inicial narrativa |
+| `hellsing.html` | Centro de comando dos Hellsings |
+| `galeria.html` | Álbuns familiares e ambientes da mansão |
+| `videos.html` | Central de registros audiovisuais |
+
+## Personagens
+
+| Perfil | Galeria separada |
+| --- | --- |
+| `jack.html` | `jack-fotos.html` |
+| `alice.html` | `alice-fotos.html` |
+| `mark.html` | `mark-fotos.html` |
+| `ariani.html` | Galeria integrada ao perfil |
+| `britney.html` | `britney-fotos.html` |
+| `jully.html` | `jully-fotos.html` |
 
 ## Pastas de mídia
 
-- `img/`: imagens organizadas por personagem (`img-jack`, `img-alice`, `img-mark`, `img-ariani`, `img-britney`, `img-jully`) e fotos conjuntas dos irmãos em `img-brothers`.
-- `galeria-assets/`: versões WebP otimizadas para galerias.
-- `casa/`: ambientes da Mansão Connor.
+- `img-jack/`, `img-alice/`, `img-mark/`, `img-ariani/`, `img-britney/` e `img-jully/`: imagens individuais.
+- `img-brothers/`: irmãos, casais e núcleos familiares.
+- `casa/`: 24 ambientes da Mansão Connor.
 - `audio/`: trilhas das páginas.
-- `video/`: registros em vídeo.
+- `video/`: vídeos compartilhados.
+- `galeria-assets/`: recursos auxiliares e versões otimizadas anteriores.
+
+## Vídeos catalogados
+
+- `ariani&alice.mp4`: Ariani e Alice.
+- `ariani&mark.mp4`: Mark e Ariani.
+- `brothers.mp4`: irmãos Connor.
+- `jully&brit.mp4`: Britney e Jully.
+
+Os MP4 são reproduzidos apenas em `videos.html`. As páginas individuais usam cartões de acesso, evitando carregar vídeos pesados em várias páginas.
 
 ## Componentes compartilhados
 
-- `site-cursor.css` e `site-cursor.js`: cursor global com brasa, anel, poeira e impacto.
-- `site-transmission.css` e `site-transmission.js`: interferência global de transmissão.
-- `opening.css` e `opening.js`: prólogo e efeitos do `index`.
-- `home-effects.css` e `home-effects.js`: efeitos e seções da tela inicial.
-- `home-cinematic.css` e `home-cinematic.js`: narrativa principal em oito capítulos, progresso de leitura, revelações e transição até o pós-apocalipse.
-- `jack-effects.css` e `jack-effects.js`: identidade visual e galeria-dossiê de Jack.
-- `alice-effects.css` e `alice-effects.js`: atmosfera clínica, partículas ambientais e arquivo fotográfico interativo de Alice.
-- `book-prologue.css` e `book-prologue.js`: primeiro ato do `index`; o livro permanece fechado e só libera o prólogo narrativo e a abertura nuclear após interação do visitante.
+- `site-cursor.*`: cursor global compatível com diálogos em camada superior.
+- `site-transmission.*`: interferência visual global.
+- `video-record-link.css`: cartões de registros audiovisuais.
+- `hellsings-command.*`: formação, radar, dossiês e interações dos Hellsings.
+- `hellsings-cursor.css`: mira tática exclusiva dos Hellsings.
+- `galeria-rebuild.*` e `galeria-polish.css`: álbuns familiares e mansão.
 
-## Organização realizada
+## Uniformes Hellsings
 
-- Remoção da cópia antiga do site que existia dentro de `ariani-img/the connors family`.
-- Remoção de imagens duplicadas confirmadas por hash.
-- Consolidação das imagens de cada personagem em sua própria pasta dentro de `img/`.
-- Separação das fotos conjuntas dos irmãos Connor em `img/img-brothers/`.
-- Manutenção dos WebP da galeria para reduzir carregamento.
+- `img-mark/markhellsing.png`: uniforme tático de Mark.
+- `img-jack/jack-hellsings-commander.png`: uniforme de comandante de Jack.
+- `img-alice/alice-hellsings-admin.png`: uniforme administrativo-médico de Alice.
+
+Os demais agentes permanecem representados por silhuetas cromáticas até receberem imagens oficiais.
