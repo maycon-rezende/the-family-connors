@@ -36,8 +36,10 @@
 - `ariani&mark.mp4`: Mark e Ariani.
 - `brothers.mp4`: irmãos Connor.
 - `jully&brit.mp4`: Britney e Jully.
+- `jack.mp4`: registro individual de Jack.
+- `mark.mp4`: registro individual de Mark.
 
-Os MP4 são reproduzidos apenas em `videos.html`. As páginas individuais usam cartões de acesso, evitando carregar vídeos pesados em várias páginas.
+Os vídeos compartilhados são reproduzidos em `videos.html`. Os registros individuais `jack.mp4` e `mark.mp4` são reproduzidos diretamente nos respectivos perfis, com `preload="metadata"` para limitar o carregamento inicial.
 
 ## Componentes compartilhados
 
@@ -49,6 +51,7 @@ Os MP4 são reproduzidos apenas em `videos.html`. As páginas individuais usam c
 - `hellsings-opening.*`: abertura cinematográfica e autenticação Ômega.
 - `hellsings-bunker.*`: apresentação dos ambientes e setores subterrâneos.
 - `hellsings-typography.*`: efeitos individuais nas letras dos títulos.
+- `hellsings-system.*`: painel operacional, registros, fórum narrativo e pré-contrato local.
 - `home-hellsings-portal.*`: portal visual entre a tela principal e a base.
 - `galeria-rebuild.*` e `galeria-polish.css`: álbuns familiares e mansão.
 

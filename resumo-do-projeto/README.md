@@ -20,7 +20,7 @@ A experiência combina drama familiar, espionagem, operações clandestinas e a 
 
 Os Hellsings são uma unidade privada de operações especiais fundada por Jack Connor. A formação atual possui dez integrantes. Jack ocupa o comando, Mark atua no comando tático e Alice Myers administra contratos, clientes, recursos e negócios; ela não participa mais de operações em campo.
 
-A organização possui retratos oficiais para toda a formação e uma base subterrânea apresentada em doze setores visuais. A tela principal contém um portal pela entrada secreta do bunker; a página dos Hellsings continua a transição pelo interior da instalação.
+A organização possui retratos oficiais para toda a formação e uma base subterrânea apresentada em doze setores visuais. A tela principal contém um portal pela entrada secreta do bunker; a página dos Hellsings continua a transição pelo interior da instalação. O centro de comando também funciona como sistema narrativo, com indicadores operacionais, registros provisórios de missões, fórum interno e geração local de pré-contratos.
 
 ## Documentos
 

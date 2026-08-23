@@ -7,7 +7,7 @@
 - Galerias individuais separadas e ampliação em tela cheia.
 - Galeria central reorganizada em cinco álbuns familiares, sem despejar todas as fotos simultaneamente.
 - Mansão Connor catalogada em 24 ambientes navegáveis.
-- Central audiovisual criada com quatro vídeos compartilhados.
+- Central audiovisual mantém quatro vídeos compartilhados; os registros individuais de Jack e Mark são reproduzidos diretamente em suas páginas.
 - Links de vídeo inseridos nos perfis relacionados.
 - Galeria de Jack atualizada para 12 registros.
 - Galeria de Jully atualizada para 12 registros, incluindo fases adultas.
@@ -24,6 +24,8 @@
 - Portal visual dos Hellsings adicionado à tela principal.
 - Bunker estruturado em doze setores visuais, incluindo comando, operações, arsenal, enfermaria, biblioteca, alojamentos, cozinhas e garagens.
 - Títulos da página dos Hellsings receberam revelação individual por letra.
+- Centro de comando transformado em sistema interativo com taxa de sucesso de 100%, arquivo filtrável de missões, fórum interno e solicitação de operação.
+- Gerador de pré-contrato cria protocolo local sem transmitir informações para servidores.
 - Responsividade dos banners de Jack, Alice, Mark, Britney, Ariani e Jully corrigida.
 - Imagens reorganizadas em pastas próprias por personagem e núcleo familiar.
 
@@ -39,7 +41,7 @@
 
 1. Receber e registrar a lore individual dos integrantes dos Hellsings.
 2. Criar páginas individuais para cada integrante após a definição das biografias.
-3. Adicionar vídeos individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
+3. Adicionar vídeos individuais de Alice, Ariani, Britney e Jully.
 4. Atualizar automaticamente as galerias quando novas imagens forem adicionadas.
 5. Revisar ortografia, nomes próprios e coerência geral após fechar o manuscrito.
 6. Definir a cronologia da extinção e o futuro portal “O Futuro Inicia Aqui”.

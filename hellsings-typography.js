@@ -10,6 +10,10 @@
     '.operation-grid h3',
     '.protocol-copy h2',
     '.agent-info h3'
+    ,'.system-heading h2'
+    ,'.mission-archive h3'
+    ,'.secure-forum h3'
+    ,'.hire-hellsings h3'
   ];
   const titles = [...document.querySelectorAll(selectors.join(','))];
   const heroTitle = document.querySelector('.command-hero .hero-copy h1');
