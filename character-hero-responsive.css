@@ -1,0 +1,105 @@
+/* Mobile-safe character banners. Loaded last so it can normalize legacy hero rules. */
+#hero {
+  isolation: isolate;
+}
+
+#hero > .hero-photo,
+#hero > #hero-img,
+#hero .hero-photo > #hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#hero .hero-photo {
+  overflow: hidden;
+}
+
+#hero #hero-img {
+  display: block;
+  max-width: none;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  #hero {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100svh !important;
+    min-height: 680px;
+    max-height: 920px;
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  #hero > .hero-photo,
+  #hero > #hero-img,
+  #hero .hero-photo > #hero-img {
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  #hero .hero-content {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1.1rem max(2rem, env(safe-area-inset-bottom)) !important;
+  }
+
+  #hero .hero-overlay,
+  #hero .hero-overlay-left,
+  #hero .hero-overlay-side {
+    background:
+      linear-gradient(180deg, rgba(5, 5, 7, .05) 20%, rgba(5, 5, 7, .28) 52%, rgba(5, 5, 7, .96) 86%, rgba(5, 5, 7, 1) 100%) !important;
+  }
+
+  #hero .hero-overlay-bottom,
+  #hero .hero-overlay-b {
+    background: linear-gradient(180deg, transparent 38%, rgba(5, 5, 7, .98) 100%) !important;
+  }
+
+  #hero .hero-photo-placeholder {
+    display: none;
+  }
+
+  /* Focal points preserve faces when a landscape portrait becomes a phone banner. */
+  #hero-img[src*="img-jack/"] { object-position: 57% top !important; }
+  #hero-img[src*="img-alice/"] { object-position: 62% top !important; }
+  #hero-img[src*="img-mark/"] { object-position: 64% top !important; }
+  #hero-img[src*="img-britney/"] { object-position: 67% top !important; }
+  #hero-img[src*="img-ariani/"] { object-position: 62% top !important; }
+  #hero-img[src*="img-jully/"] { object-position: 62% top !important; }
+}
+
+@media (max-width: 520px) {
+  #hero {
+    min-height: 640px;
+    max-height: 860px;
+  }
+
+  #hero .hero-content {
+    padding-inline: .9rem !important;
+  }
+
+  #hero .hero-actions {
+    gap: .55rem;
+  }
+
+  #hero .hero-btn {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  #hero {
+    height: max(100svh, 520px) !important;
+    min-height: 520px;
+    max-height: none;
+  }
+
+  #hero .hero-content {
+    max-width: 62% !important;
+    padding-bottom: 1.25rem !important;
+  }
+}

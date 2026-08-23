@@ -46,6 +46,10 @@ Os MP4 são reproduzidos apenas em `videos.html`. As páginas individuais usam c
 - `video-record-link.css`: cartões de registros audiovisuais.
 - `hellsings-command.*`: formação, radar, dossiês e interações dos Hellsings.
 - `hellsings-cursor.css`: mira tática exclusiva dos Hellsings.
+- `hellsings-opening.*`: abertura cinematográfica e autenticação Ômega.
+- `hellsings-bunker.*`: apresentação dos ambientes e setores subterrâneos.
+- `hellsings-typography.*`: efeitos individuais nas letras dos títulos.
+- `home-hellsings-portal.*`: portal visual entre a tela principal e a base.
 - `galeria-rebuild.*` e `galeria-polish.css`: álbuns familiares e mansão.
 
 ## Uniformes Hellsings
@@ -53,5 +57,7 @@ Os MP4 são reproduzidos apenas em `videos.html`. As páginas individuais usam c
 - `img-mark/markhellsing.png`: uniforme tático de Mark.
 - `img-jack/jack-hellsings-commander.png`: uniforme de comandante de Jack.
 - `img-alice/alice-hellsings-admin.png`: uniforme administrativo-médico de Alice.
+- `img-hellsing/`: retratos oficiais de Boby Johhn, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen.
+- `img-bunker/`: entrada, áreas operacionais, garagens, enfermaria, arsenal, biblioteca, alojamentos e setores de suporte.
 
-Os demais agentes permanecem representados por silhuetas cromáticas até receberem imagens oficiais.
+Todos os dez integrantes possuem imagens oficiais nos cartões e dossiês da organização.
