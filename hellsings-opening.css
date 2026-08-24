@@ -19,5 +19,6 @@ body.hls-opening-active{overflow:hidden}
 .hls-opening .hls-opening-seal{top:28%}
 .hls-opening .hls-opening-seal b{color:#c8923e;-webkit-text-stroke:1px #e0b45d66;text-shadow:0 2px 0 #6f401c,0 0 22px #c8923e61,0 0 55px #8f531f52;filter:drop-shadow(0 12px 22px #000)}
 .hls-opening .hls-opening-seal small{color:#a28b63}
+.hls-brand-emblem{width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 0 24px #c8923e66)}
 @media(max-width:700px){.hls-opening-bunker{background-position:58% center}.hls-opening-corner{top:1rem}.hls-opening-corner--a{left:1rem}.hls-opening-corner--b{right:1rem}.hls-opening-terminal{left:1rem;bottom:5.5rem}.hls-opening-skip{top:3.1rem;right:1rem}.hls-opening-enter{right:1rem;bottom:1rem;left:1rem}.hls-opening-copy{margin-top:230px;padding:0 1rem}.hls-opening-copy h1{letter-spacing:.05em}.hls-opening-copy p{letter-spacing:.22em}.hls-opening .hls-opening-seal{top:25%}}
 @media(prefers-reduced-motion:reduce){.hls-opening *{animation-duration:.01ms!important;animation-delay:0s!important}.hls-opening-progress{display:none}}

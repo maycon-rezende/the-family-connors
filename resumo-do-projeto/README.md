@@ -22,6 +22,13 @@ Os Hellsings são uma unidade privada de operações especiais fundada por Jack 
 
 A organização possui retratos oficiais para toda a formação e uma base subterrânea apresentada em doze setores visuais. A tela principal contém um portal pela entrada secreta do bunker; a página dos Hellsings continua a transição pelo interior da instalação. O centro de comando também funciona como sistema narrativo, com indicadores operacionais, registros provisórios de missões, fórum interno e geração local de pré-contratos.
 
+## Aplicativo e identidade oficial — atualização de 24/08/2026
+
+- `hellsings-app/`: aplicativo mobile em Expo com abertura, comando, agentes, missões, bunker, arquivos secretos, diário e investigação interativa.
+- `img-hellsing/brand/hellsings-emblem.png`: emblema oficial compartilhado pelo site e pelo aplicativo.
+- Alice e Ariani agora possuem registros audiovisuais individuais em seus próprios perfis.
+- As galerias de Alice, Jack e da família foram ampliadas com os novos registros visuais.
+
 ## Documentos
 
 - [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.

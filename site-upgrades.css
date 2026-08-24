@@ -426,3 +426,7 @@
     font-size: .55rem;
   }
 }
+/* Marca oficial Connor / Hellsings */
+.hellsings-brand-mark{display:block!important;width:82%!important;height:82%!important;margin:auto!important;object-fit:contain!important;filter:drop-shadow(0 0 10px rgba(201,150,58,.48))!important;color:transparent!important}
+.lineage-bond .hellsings-brand-mark,.origin-seal .hellsings-brand-mark{width:72%!important;height:72%!important}
+.h-mark i .hellsings-brand-mark{width:100%!important;height:100%!important}

@@ -41,6 +41,13 @@
 
 Os vídeos compartilhados são reproduzidos em `videos.html`. Os registros individuais `jack.mp4` e `mark.mp4` são reproduzidos diretamente nos respectivos perfis, com `preload="metadata"` para limitar o carregamento inicial.
 
+## Atualização mobile e audiovisual — 24/08/2026
+
+- `hellsings-app/`: aplicativo Expo/React Native dos Hellsings.
+- `video/alice.mp4` e `video/ariani.mp4`: registros individuais reproduzidos diretamente nos respectivos perfis.
+- `img-hellsing/brand/hellsings-emblem.png`: emblema oficial usado pelo site e pelo aplicativo.
+- `hellsings-immersive.css` e `hellsings-immersive.js`: impacto visual, interferência, iluminação e tipografia do centro de comando.
+
 ## Componentes compartilhados
 
 - `site-cursor.*`: cursor global compatível com diálogos em camada superior.

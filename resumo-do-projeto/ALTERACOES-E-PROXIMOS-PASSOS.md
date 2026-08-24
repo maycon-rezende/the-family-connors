@@ -29,6 +29,14 @@
 - Responsividade dos banners de Jack, Alice, Mark, Britney, Ariani e Jully corrigida.
 - Imagens reorganizadas em pastas próprias por personagem e núcleo familiar.
 
+## Atualização de 24 de agosto de 2026
+
+- Emblema oficial dos Hellsings criado e aplicado no site e no aplicativo.
+- Aplicativo mobile iniciado em Expo, com abertura, comando, agentes, missões, bunker, arquivos secretos, diário e investigação interativa.
+- Novas fotografias de Alice e Jack catalogadas; registros familiares e do casal Jack/Alice incorporados à galeria central.
+- Vídeos individuais de Alice e Ariani incorporados diretamente aos respectivos perfis.
+- Próximos vídeos individuais pendentes: Britney e Jully.
+
 ## Decisões visuais atuais
 
 - Jack: uniforme de comandante com detalhes verde-ácido.

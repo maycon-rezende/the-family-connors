@@ -310,3 +310,16 @@
     enhanceRevealForInjectedContent();
   });
 })();
+(() => {
+  const emblemSelectors = ['.book-sigil','.emblem-letter','.career-seal','.naval-seal','.hellsings-sigil','.lineage-bond','.tree-couple > i','.origin-seal > b','.h-mark > i'];
+  document.querySelectorAll(emblemSelectors.join(',')).forEach(slot => {
+    const monogram = slot.textContent.trim();
+    if (monogram !== 'C' && monogram !== 'H') return;
+    const logo = document.createElement('img');
+    logo.className = 'hellsings-brand-mark';
+    logo.src = 'img-hellsing/brand/hellsings-emblem.png';
+    logo.alt = slot.getAttribute('aria-hidden') === 'true' ? '' : 'Emblema dos Hellsings';
+    slot.textContent = '';
+    slot.append(logo);
+  });
+})();
