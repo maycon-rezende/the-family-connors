@@ -36,6 +36,10 @@
 - Novas fotografias de Alice e Jack catalogadas; registros familiares e do casal Jack/Alice incorporados à galeria central.
 - Vídeos individuais de Alice e Ariani incorporados diretamente aos respectivos perfis.
 - Próximos vídeos individuais pendentes: Britney e Jully.
+- Cronologia corrigida: as páginas familiares representam o passado, Doomsday representa o Dia Zero e o mundo devastado representa o presente.
+- Portal cinematográfico `ANT-DOOM-00` criado para conectar o site ao projeto Apocalipse/Doomsday.
+- Título da travessia ajustado para `DOOMS` em tonalidade fria e `DAY` em vermelho, na mesma linha.
+- Novo site `era-extincao-presente/` iniciado com abertura, estado do mundo, arquivos envelhecidos e caixa-preta.
 
 ## Decisões visuais atuais
 
@@ -49,9 +53,10 @@
 
 1. Receber e registrar a lore individual dos integrantes dos Hellsings.
 2. Criar páginas individuais para cada integrante após a definição das biografias.
-3. Adicionar vídeos individuais de Alice, Ariani, Britney e Jully.
+3. Adicionar vídeos individuais de Britney e Jully.
 4. Atualizar automaticamente as galerias quando novas imagens forem adicionadas.
 5. Revisar ortografia, nomes próprios e coerência geral após fechar o manuscrito.
-6. Definir a cronologia da extinção e o futuro portal “O Futuro Inicia Aqui”.
+6. Receber a lore do presente: estado do mundo, destinos dos personagens, territórios, veículos e facções.
+7. Expandir o site `era-extincao-presente/` sem transformar possibilidades em fatos antes da definição do autor.
 
-Última atualização: 23 de agosto de 2026.
+Última atualização: 24 de agosto de 2026.

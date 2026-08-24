@@ -9,6 +9,7 @@
 | `hellsing.html` | Centro de comando dos Hellsings |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
+| `era-extincao-presente/index.html` | Novo site do presente devastado dos personagens |
 
 ## Personagens
 
@@ -47,6 +48,15 @@ Os vídeos compartilhados são reproduzidos em `videos.html`. Os registros indiv
 - `video/alice.mp4` e `video/ariani.mp4`: registros individuais reproduzidos diretamente nos respectivos perfis.
 - `img-hellsing/brand/hellsings-emblem.png`: emblema oficial usado pelo site e pelo aplicativo.
 - `hellsings-immersive.css` e `hellsings-immersive.js`: impacto visual, interferência, iluminação e tipografia do centro de comando.
+
+## Ponte temporal
+
+- `timeline-bridge.css` e `timeline-bridge.js`: transição cinematográfica para o Dia Zero de Doomsday.
+- `era-extincao-presente/`: site independente do presente pós-colapso.
+- `era-extincao-presente/extinction-world.css`: atmosfera de deserto, ferrugem, radiação e escassez.
+- `era-extincao-presente/extinction-world.js`: controle da abertura e persistência por sessão.
+
+A navegação segue `passado dos Connor → Dia Zero/Doomsday → presente devastado`.
 
 ## Componentes compartilhados
 

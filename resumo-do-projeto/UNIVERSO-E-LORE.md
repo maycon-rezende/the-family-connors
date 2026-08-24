@@ -38,13 +38,19 @@ Boby Johhn também é representado atualmente com pele em tom marrom, conforme a
 
 ## Elementos ainda não definidos
 
-- Causa e cronologia exatas da extinção.
+- Detalhes completos da causa e da cronologia da extinção além da ligação com o Dia Zero de Doomsday.
 - Existência definitiva, origem e regras de infectados.
 - História completa dos descendentes.
 - Missões históricas específicas dos Hellsings.
 - Biografias completas de Naomi, Clhoe e Dimitri.
 - Funções definitivas dos agentes ainda marcados como provisórios.
-- Funcionamento do futuro portal “O Futuro Inicia Aqui”.
+- Estado do mundo no presente, destinos dos personagens envelhecidos, territórios, veículos e facções.
+
+## Cronologia confirmada
+
+1. As páginas familiares e dos Hellsings representam o passado, antes do Dia D.
+2. O universo **Doomsday/Apocalipse** representa a ruptura e o Dia Zero.
+3. A verdadeira **Era da Extinção** acontece no presente dos personagens, muitos anos depois, quando eles já estão envelhecidos e o mundo está devastado.
 
 ## Diretriz narrativa
 

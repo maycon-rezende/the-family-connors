@@ -4,7 +4,7 @@ Site narrativo dedicado à Família Connor e ao universo de **A Era da Extinçã
 
 ## Conceito
 
-A experiência combina drama familiar, espionagem, operações clandestinas e a aproximação de um cenário de extinção. A história poderá ser ligada futuramente ao universo de **Doomsday**, muitos anos depois dos acontecimentos daquele projeto, sem antecipar como fato elementos ainda não definidos no manuscrito.
+A experiência combina drama familiar, espionagem, operações clandestinas e um mundo devastado. A cronologia oficial possui três momentos: o passado dos Connor antes do colapso, o Dia Zero apresentado em **Doomsday** e o presente dos personagens muitos anos depois, na verdadeira Era da Extinção.
 
 ## Experiência atual
 
@@ -15,6 +15,7 @@ A experiência combina drama familiar, espionagem, operações clandestinas e a 
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
 - `videos.html`: central audiovisual com registros compartilhados.
 - `hellsing.html`: experiência cinematográfica dos Hellsings, com abertura, bunker, radar, dossiês e formação oficial.
+- `era-extincao-presente/index.html`: entrada do presente devastado, depois do Dia Zero.
 
 ## Hellsings
 
@@ -29,10 +30,18 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - Alice e Ariani agora possuem registros audiovisuais individuais em seus próprios perfis.
 - As galerias de Alice, Jack e da família foram ampliadas com os novos registros visuais.
 
+## Ligação com Doomsday e o presente
+
+- A narrativa familiar construída nas páginas principais representa o passado dos personagens.
+- O portal `ANT-DOOM-00` conduz ao site **Apocalipse/Doomsday**, que representa o Dia Zero.
+- O portal “O Presente Inicia Aqui” conduz ao novo site da Era da Extinção.
+- O presente possui identidade pós-colapso própria, com deserto, radiação, escassez e arquivos dos Connor envelhecidos.
+- Destinos, territórios e atividades atuais permanecerão classificados até a entrega da nova lore.
+
 ## Documentos
 
 - [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 
-Última atualização: 23 de agosto de 2026.
+Última atualização: 24 de agosto de 2026.
