@@ -1,10 +1,110 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Galeria Connor — Arquivo da Família</title><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="site-cursor.css"><link rel="stylesheet" href="site-transmission.css"><link rel="stylesheet" href="galeria-rebuild.css"><link rel="stylesheet" href="galeria-polish.css"></head><body>
-<nav><a class="brand" href="telainicial.html">Connor</a><div><a href="#personagens">Personagens</a><a href="#irmaos">Irmãos</a><a href="#mansao">Mansão</a><a href="videos.html#irmaos-connor">Vídeo dos irmãos</a></div><a class="back" href="telainicial.html">← Início</a></nav>
-<header class="archive-hero"><div class="hero-slides" id="heroSlides"></div><div class="hero-grid"></div><div class="hero-copy"><p>Arquivo visual da linhagem Connor</p><h1>Memórias<br><em>não desaparecem.</em></h1><span>Personagens · Irmãos · Lugares</span><a href="#personagens">Entrar no arquivo ↓</a></div><div class="hero-count" id="heroCount">01 / 06</div></header>
-<main><section class="archive-stats"><div><b>05</b><span>Núcleos familiares</span></div><div><b>26</b><span>Registros coletivos</span></div><div><b>24</b><span>Ambientes</span></div><div><b>50</b><span>Entradas indexadas</span></div></section>
-<section class="characters" id="personagens"><div class="section-head"><div><p>Arquivos individuais</p><h2>Escolha um <em>Connor</em></h2></div><span>Cada personagem possui uma coleção própria, separada das fotografias em família.</span></div><div class="character-row">
-<a href="jack-fotos.html" style="--portrait:url('img-jack/jack2.png')"><b>01</b><strong>Jack</strong><span>Abrir arquivo →</span></a><a href="alice-fotos.html" style="--portrait:url('img-alice/alice2.png')"><b>02</b><strong>Alice</strong><span>Abrir arquivo →</span></a><a href="mark-fotos.html" style="--portrait:url('img-mark/mark2.png')"><b>03</b><strong>Mark</strong><span>Abrir arquivo →</span></a><a href="ariani.html" style="--portrait:url('img-ariani/ari2.png')"><b>04</b><strong>Ariani</strong><span>Ver perfil →</span></a><a href="britney-fotos.html" style="--portrait:url('img-britney/britney1.png')"><b>05</b><strong>Britney</strong><span>Abrir arquivo →</span></a><a href="jully-fotos.html" style="--portrait:url('img-jully/jull2.png')"><b>06</b><strong>Jully</strong><span>Abrir arquivo →</span></a></div></section>
-<section class="collection" id="irmaos"><div class="section-head"><div><p>Laços de sangue</p><h2>Álbuns da <em>família</em></h2></div><span>Os irmãos Connor, os dois núcleos familiares, os casais e as irmãs mais novas reunidos por capítulos.</span></div><div class="tools"><div id="filters"><button class="active" data-filter="todos">Todos</button><button data-filter="irmaos">Irmãos Connor</button><button data-filter="jack-familia">Família de Jack</button><button data-filter="jack-alice">Jack & Alice</button><button data-filter="mark-familia">Mark, Ariani & filhos</button><button data-filter="brit-jully">Britney & Jully</button></div><label><span>⌕</span><input id="search" type="search" placeholder="Buscar no arquivo"></label><b id="resultCount"></b></div><div class="memory-grid" id="brotherGrid"></div></section>
-<section class="mansion" id="mansao"><div class="mansion-copy"><p>Mansão Connor / Setor residencial</p><h2>A casa também<br><em>guarda histórias.</em></h2><span id="roomText">Selecione um ambiente para explorar a propriedade.</span><div class="room-controls"><button id="roomPrev">←</button><b id="roomCount">01 / 24</b><button id="roomNext">→</button></div></div><button class="room-stage" id="roomStage"><img id="roomImage" alt="Ambiente da Mansão Connor"><span><small id="roomCode">AMBIENTE 01</small><strong id="roomTitle">Mansão Connor</strong><i>Ampliar ↗</i></span></button><div class="room-strip" id="roomStrip"></div></section></main>
-<footer><strong>A Era da Extinção</strong><span>Arquivo Connor · sangue, memória e legado</span><a href="telainicial.html">Voltar ao início ↑</a></footer>
-<dialog id="viewer"><div class="viewer-top"><span id="viewerCount"></span><button id="viewerClose">×</button></div><button class="viewer-nav prev" id="viewerPrev">←</button><div class="viewer-stage"><img id="viewerImage" alt="Imagem ampliada"><div><small id="viewerGroup"></small><h3 id="viewerTitle"></h3></div></div><button class="viewer-nav next" id="viewerNext">→</button></dialog><script src="site-cursor.js" defer></script><script src="site-transmission.js" defer></script><script src="galeria-rebuild.js" defer></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Galeria Connor — Arquivo da Família</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="site-cursor.css">
+    <link rel="stylesheet" href="site-transmission.css">
+    <link rel="stylesheet" href="galeria-rebuild.css">
+    <link rel="stylesheet" href="galeria-polish.css">
+</head>
+
+<body>
+    <nav><a class="brand" href="telainicial.html">Connor</a>
+        <div><a href="#personagens">Personagens</a><a href="#irmaos">Irmãos</a><a href="#mansao">Mansão</a><a
+                href="videos.html#irmaos-connor">Vídeo dos irmãos</a></div><a class="back" href="telainicial.html">←
+            Início</a>
+    </nav>
+    <header class="archive-hero">
+        <div class="hero-slides" id="heroSlides"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-copy">
+            <p>Arquivo visual da linhagem Connor</p>
+            <h1>Memórias<br><em>não desaparecem.</em></h1><span>Personagens · Irmãos · Lugares</span><a
+                href="#personagens">Entrar no arquivo ↓</a>
+        </div>
+        <div class="hero-count" id="heroCount">01 / 06</div>
+    </header>
+    <main>
+        <section class="archive-stats">
+            <div><b>05</b><span>Núcleos familiares</span></div>
+            <div><b>26</b><span>Registros coletivos</span></div>
+            <div><b>24</b><span>Ambientes</span></div>
+            <div><b>50</b><span>Entradas indexadas</span></div>
+        </section>
+        <section class="characters" id="personagens">
+            <div class="section-head">
+                <div>
+                    <p>Arquivos individuais</p>
+                    <h2>Escolha um <em>Connor</em></h2>
+                </div><span>Cada personagem possui uma coleção própria, separada das fotografias em família.</span>
+            </div>
+            <div class="character-row">
+                <a href="jack-fotos.html"
+                    style="--portrait:url('img-jack/jack2.png')"><b>01</b><strong>Jack</strong><span>Abrir arquivo
+                        →</span></a><a href="alice-fotos.html"
+                    style="--portrait:url('img-alice/alice2.png')"><b>02</b><strong>Alice</strong><span>Abrir arquivo
+                        →</span></a><a href="mark-fotos.html"
+                    style="--portrait:url('img-mark/mark2.png')"><b>03</b><strong>Mark</strong><span>Abrir arquivo
+                        →</span></a><a href="ariani.html"
+                    style="--portrait:url('img-ariani/ari2.png')"><b>04</b><strong>Ariani</strong><span>Ver perfil
+                        →</span></a><a href="britney-fotos.html"
+                    style="--portrait:url('img-britney/britney1.png')"><b>05</b><strong>Britney</strong><span>Abrir
+                        arquivo →</span></a><a href="jully-fotos.html"
+                    style="--portrait:url('img-jully/jull2.png')"><b>06</b><strong>Jully</strong><span>Abrir arquivo
+                        →</span></a>
+            </div>
+        </section>
+        <section class="collection" id="irmaos">
+            <div class="section-head">
+                <div>
+                    <p>Laços de sangue</p>
+                    <h2>Álbuns da <em>família</em></h2>
+                </div><span>Os irmãos Connor, os dois núcleos familiares, os casais e as irmãs mais novas reunidos por
+                    capítulos.</span>
+            </div>
+            <div class="tools">
+                <div id="filters"><button class="active" data-filter="todos">Todos</button><button
+                        data-filter="irmaos">Irmãos Connor</button><button data-filter="jack-familia">Família de
+                        Jack</button><button data-filter="jack-alice">Jack & Alice</button><button
+                        data-filter="mark-familia">Mark, Ariani & filhos</button><button
+                        data-filter="brit-jully">Britney & Jully</button></div><label><span>⌕</span><input id="search"
+                        type="search" placeholder="Buscar no arquivo"></label><b id="resultCount"></b>
+            </div>
+            <div class="memory-grid" id="brotherGrid"></div>
+        </section>
+        <section class="mansion" id="mansao">
+            <div class="mansion-copy">
+                <p>Mansão Connor / Setor residencial</p>
+                <h2>A casa também<br><em>guarda histórias.</em></h2><span id="roomText">Selecione um ambiente para
+                    explorar a propriedade.</span>
+                <div class="room-controls"><button id="roomPrev">←</button><b id="roomCount">01 / 24</b><button
+                        id="roomNext">→</button></div>
+            </div><button class="room-stage" id="roomStage"><img id="roomImage"
+                    alt="Ambiente da Mansão Connor"><span><small id="roomCode">AMBIENTE 01</small><strong
+                        id="roomTitle">Mansão Connor</strong><i>Ampliar ↗</i></span></button>
+            <div class="room-strip" id="roomStrip"></div>
+        </section>
+    </main>
+    <footer><strong>A Era da Extinção</strong><span>Arquivo Connor · sangue, memória e legado</span><a
+            href="telainicial.html">Voltar ao início ↑</a></footer>
+    <dialog id="viewer">
+        <div class="viewer-top"><span id="viewerCount"></span><button id="viewerClose">×</button></div><button
+            class="viewer-nav prev" id="viewerPrev">←</button>
+        <div class="viewer-stage"><img id="viewerImage" alt="Imagem ampliada">
+            <div><small id="viewerGroup"></small>
+                <h3 id="viewerTitle"></h3>
+            </div>
+        </div><button class="viewer-nav next" id="viewerNext">→</button>
+    </dialog>
+    <script src="site-cursor.js" defer></script>
+    <script src="site-transmission.js" defer></script>
+    <script src="galeria-rebuild.js" defer></script>
+</body>
+
+</html>

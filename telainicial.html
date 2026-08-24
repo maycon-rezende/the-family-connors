@@ -175,7 +175,13 @@
       line-height: 1;
       font-weight: 900;
     }
-    .emblem-logo{width:112px;height:112px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(201,150,58,.55))}
+
+    .emblem-logo {
+      width: 112px;
+      height: 112px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(201, 150, 58, .55))
+    }
 
     .hero-eyebrow {
       font-family: 'Cinzel', serif;
@@ -763,16 +769,41 @@
       flex: 1;
     }
 
-    .color-dot.green { background: #2d6e2d; }
-    .color-dot.orange { background: #c95a1a; }
-    .color-dot.blue { background: #5aa0d0; }
-    .color-dot.gold { background: #d4b96a; }
+    .color-dot.green {
+      background: #2d6e2d;
+    }
 
-    .stat-bar-fill.w-92 { width: 92%; }
-    .stat-bar-fill.w-97 { width: 97%; }
-    .stat-bar-fill.w-88 { width: 88%; }
-    .stat-bar-fill.w-84 { width: 84%; }
-    .stat-bar-fill.w-99 { width: 99%; }
+    .color-dot.orange {
+      background: #c95a1a;
+    }
+
+    .color-dot.blue {
+      background: #5aa0d0;
+    }
+
+    .color-dot.gold {
+      background: #d4b96a;
+    }
+
+    .stat-bar-fill.w-92 {
+      width: 92%;
+    }
+
+    .stat-bar-fill.w-97 {
+      width: 97%;
+    }
+
+    .stat-bar-fill.w-88 {
+      width: 88%;
+    }
+
+    .stat-bar-fill.w-84 {
+      width: 84%;
+    }
+
+    .stat-bar-fill.w-99 {
+      width: 99%;
+    }
 
     .timeline-event.pending {
       opacity: 0.4;
@@ -1377,225 +1408,842 @@
         grid-column: auto;
       }
     }
-  
-/* ===== Premium V4 Enhancements ===== */
-html{scroll-padding-top:90px;}
-body{overflow-x:hidden;}
-a,button{touch-action:manipulation;}
-img{max-width:100%;height:auto;}
-nav{border-bottom:1px solid rgba(255,255,255,0.04)!important;}
-nav::after{content:"";position:absolute;left:1.25rem;right:1.25rem;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,150,58,0.18),transparent);pointer-events:none;}
-.page-section,.section,.hero-content,#content,main{width:min(100%, 100%);}
-.hero-badges,.hero-content,.stats-inner,.profile-grid,.gallery,.gallery-loop,.manifesto-grid,.singles-row,.couple-row,.album-header,.filter-inner{min-width:0;}
-.hero-badge,.badge,.filter-btn,.nav-links a,.nav-back,.nav-logo,.nav-name{transition:all .25s ease;}
-.hero-badge:hover,.badge:hover{transform:translateY(-1px);}
-.page-section,.section{padding-left:max(1rem, env(safe-area-inset-left));padding-right:max(1rem, env(safe-area-inset-right));}
-.profile-card,.member-card,.manifesto-card,.photo-item,.secret-panel,.ethics-panel,.timeline-card,.stat-card{box-shadow:0 10px 30px rgba(0,0,0,.12);}
-.gallery-loop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch;}
-.gallery-loop img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.06);box-shadow:0 8px 24px rgba(0,0,0,.25);}
-.vtimeline,.timeline,.timeline-grid{min-width:0;}
-.big-quote,.secret-panel,.ethics-panel{border-radius:20px;overflow:hidden;}
-.footer-logo,.footer-sub,footer p{text-align:center;}
-.premium-mobile-toggle{display:none;appearance:none;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:inherit;border-radius:12px;padding:.72rem .8rem;line-height:1;cursor:pointer;min-width:48px;min-height:48px;backdrop-filter:blur(10px);}
-.premium-mobile-toggle span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;border-radius:2px;transition:transform .25s ease, opacity .25s ease;}
-nav.premium-open .premium-mobile-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg);}
-nav.premium-open .premium-mobile-toggle span:nth-child(2){opacity:0;}
-nav.premium-open .premium-mobile-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
-.premium-mobile-panel{display:none;position:fixed;left:1rem;right:1rem;top:74px;z-index:250;padding:1rem;border-radius:18px;background:rgba(10,8,6,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08);box-shadow:0 18px 50px rgba(0,0,0,.35);}
-.premium-mobile-panel a{display:block;padding:.9rem .75rem;border-radius:12px;text-decoration:none;color:inherit;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;}
-.premium-mobile-panel a + a{margin-top:.25rem;}
-.premium-mobile-panel a:hover{background:rgba(255,255,255,.04);}
-body.premium-menu-open{overflow:hidden;}
-@media (max-width:1100px){
-  .stats-inner{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-  .manifesto-grid,.couple-row,.singles-row{grid-template-columns:1fr!important;}
-  .couple-divider{display:none!important;}
-}
-@media (max-width:900px){
-  nav{padding:1rem 1rem!important;gap:.75rem;}
-  .hero-content{padding:0 1.25rem 3rem!important;max-width:100%!important;}
-  #hero,.hero,.hero-section{min-height:100svh;height:auto!important;}
-  .hero-number{margin-bottom:0!important;}
-  .scroll-ind,.scroll-hint{display:none!important;}
-  .profile-grid,.gallery,.grid-layout-1,.grid-layout-2,.grid-layout-3,.grid-layout-4,.grid-layout-5{grid-template-columns:1fr!important;}
-  .photo-item.wide,.photo-item.tall{grid-column:auto!important;grid-row:auto!important;}
-  .album-header{display:block!important;}
-  .album-number{margin-bottom:.5rem;}
-  .gallery-loop{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;}
-  .gallery-loop img{min-height:220px!important;}
-  .hero-ornament,.hero-ring1,.hero-ring2,.hero-emblem,.hero-hlines,.hero-accent,.hero-vline,.hero-lines{opacity:.45;transform:none!important;}
-}
-@media (max-width:768px){
-  .premium-mobile-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;}
-  .premium-mobile-panel.show{display:block;}
-  .nav-links{display:none!important;}
-  .nav-org{display:none!important;}
-  .nav-name,.nav-logo{font-size:.95rem!important;letter-spacing:.16em!important;}
-  .hero-content,.page-section,#content,main{padding-left:1rem!important;padding-right:1rem!important;}
-  .page-section{padding-top:4.5rem!important;padding-bottom:4.5rem!important;}
-  .hero-name{font-size:clamp(2.5rem,13vw,4rem)!important;line-height:.95!important;}
-  .hero-subtitle,.hero-sub,.hero-born,.hero-tag,.hero-eyebrow{letter-spacing:.22em!important;font-size:.62rem!important;}
-  .section-title{font-size:clamp(2rem,9vw,3rem)!important;line-height:1.02!important;}
-  .section-label{font-size:.56rem!important;letter-spacing:.28em!important;gap:.65rem!important;}
-  .profile-card,.manifesto-card,.member-card,.ethics-panel,.secret-panel{padding:1.35rem!important;border-radius:18px!important;}
-  .stats-inner{grid-template-columns:1fr 1fr!important;}
-  .stat-item{padding:1.4rem .8rem!important;}
-  .stat-num{font-size:2rem!important;}
-  .hero-badges,.hellsings-badges{gap:.45rem!important;}
-  .hero-badge,.badge{font-size:.54rem!important;padding:.38rem .72rem!important;letter-spacing:.14em!important;}
-  .skill-top,.trait-row{gap:.5rem;}
-  .skill-name,.trait-name,.pc-label{font-size:.55rem!important;letter-spacing:.14em!important;}
-  footer{padding-left:1rem!important;padding-right:1rem!important;}
-}
-@media (max-width:520px){
-  html,body{max-width:100%;}
-  nav{padding:.85rem .85rem!important;}
-  nav::after{left:.85rem;right:.85rem;}
-  .stats-inner{grid-template-columns:1fr!important;}
-  .gallery-loop{grid-template-columns:1fr!important;}
-  .gallery-loop img{min-height:200px!important;}
-  .hero-content{padding:0 .9rem 2rem!important;}
-  .page-section{padding:3.5rem .9rem!important;}
-  .hero-name{font-size:clamp(2.2rem,12vw,3.2rem)!important;}
-  .hero-number{font-size:clamp(3rem,16vw,5rem)!important;}
-  .hero-title{font-size:clamp(2.5rem,14vw,4rem)!important;}
-  .hero-desc,.pc-text,.mc-text,.sp-text,.vt-text,p{font-size:.98rem!important;line-height:1.7!important;}
-  .filter-btn{padding:.9rem .95rem!important;}
-}
-@media (hover:none) and (pointer:coarse){
-  body{cursor:auto!important;}
-  #cursor,#cursor-ring{display:none!important;}
-}
+
+    /* ===== Premium V4 Enhancements ===== */
+    html {
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a,
+    button {
+      touch-action: manipulation;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    }
+
+    nav::after {
+      content: "";
+      position: absolute;
+      left: 1.25rem;
+      right: 1.25rem;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 150, 58, 0.18), transparent);
+      pointer-events: none;
+    }
+
+    .page-section,
+    .section,
+    .hero-content,
+    #content,
+    main {
+      width: min(100%, 100%);
+    }
+
+    .hero-badges,
+    .hero-content,
+    .stats-inner,
+    .profile-grid,
+    .gallery,
+    .gallery-loop,
+    .manifesto-grid,
+    .singles-row,
+    .couple-row,
+    .album-header,
+    .filter-inner {
+      min-width: 0;
+    }
+
+    .hero-badge,
+    .badge,
+    .filter-btn,
+    .nav-links a,
+    .nav-back,
+    .nav-logo,
+    .nav-name {
+      transition: all .25s ease;
+    }
+
+    .hero-badge:hover,
+    .badge:hover {
+      transform: translateY(-1px);
+    }
+
+    .page-section,
+    .section {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+
+    .profile-card,
+    .member-card,
+    .manifesto-card,
+    .photo-item,
+    .secret-panel,
+    .ethics-panel,
+    .timeline-card,
+    .stat-card {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    }
+
+    .gallery-loop {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .gallery-loop img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, .06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    }
+
+    .vtimeline,
+    .timeline,
+    .timeline-grid {
+      min-width: 0;
+    }
+
+    .big-quote,
+    .secret-panel,
+    .ethics-panel {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .footer-logo,
+    .footer-sub,
+    footer p {
+      text-align: center;
+    }
+
+    .premium-mobile-toggle {
+      display: none;
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .04);
+      color: inherit;
+      border-radius: 12px;
+      padding: .72rem .8rem;
+      line-height: 1;
+      cursor: pointer;
+      min-width: 48px;
+      min-height: 48px;
+      backdrop-filter: blur(10px);
+    }
+
+    .premium-mobile-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      margin: 4px auto;
+      border-radius: 2px;
+      transition: transform .25s ease, opacity .25s ease;
+    }
+
+    nav.premium-open .premium-mobile-toggle span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    nav.premium-open .premium-mobile-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    nav.premium-open .premium-mobile-toggle span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .premium-mobile-panel {
+      display: none;
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      top: 74px;
+      z-index: 250;
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(10, 8, 6, .94);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .35);
+    }
+
+    .premium-mobile-panel a {
+      display: block;
+      padding: .9rem .75rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      font-size: .8rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .premium-mobile-panel a+a {
+      margin-top: .25rem;
+    }
+
+    .premium-mobile-panel a:hover {
+      background: rgba(255, 255, 255, .04);
+    }
+
+    body.premium-menu-open {
+      overflow: hidden;
+    }
+
+    @media (max-width:1100px) {
+      .stats-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .manifesto-grid,
+      .couple-row,
+      .singles-row {
+        grid-template-columns: 1fr !important;
+      }
+
+      .couple-divider {
+        display: none !important;
+      }
+    }
+
+    @media (max-width:900px) {
+      nav {
+        padding: 1rem 1rem !important;
+        gap: .75rem;
+      }
+
+      .hero-content {
+        padding: 0 1.25rem 3rem !important;
+        max-width: 100% !important;
+      }
+
+      #hero,
+      .hero,
+      .hero-section {
+        min-height: 100svh;
+        height: auto !important;
+      }
+
+      .hero-number {
+        margin-bottom: 0 !important;
+      }
+
+      .scroll-ind,
+      .scroll-hint {
+        display: none !important;
+      }
+
+      .profile-grid,
+      .gallery,
+      .grid-layout-1,
+      .grid-layout-2,
+      .grid-layout-3,
+      .grid-layout-4,
+      .grid-layout-5 {
+        grid-template-columns: 1fr !important;
+      }
+
+      .photo-item.wide,
+      .photo-item.tall {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+
+      .album-header {
+        display: block !important;
+      }
+
+      .album-number {
+        margin-bottom: .5rem;
+      }
+
+      .gallery-loop {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+      }
+
+      .gallery-loop img {
+        min-height: 220px !important;
+      }
+
+      .hero-ornament,
+      .hero-ring1,
+      .hero-ring2,
+      .hero-emblem,
+      .hero-hlines,
+      .hero-accent,
+      .hero-vline,
+      .hero-lines {
+        opacity: .45;
+        transform: none !important;
+      }
+    }
+
+    @media (max-width:768px) {
+      .premium-mobile-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .premium-mobile-panel.show {
+        display: block;
+      }
+
+      .nav-links {
+        display: none !important;
+      }
+
+      .nav-org {
+        display: none !important;
+      }
+
+      .nav-name,
+      .nav-logo {
+        font-size: .95rem !important;
+        letter-spacing: .16em !important;
+      }
+
+      .hero-content,
+      .page-section,
+      #content,
+      main {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .page-section {
+        padding-top: 4.5rem !important;
+        padding-bottom: 4.5rem !important;
+      }
+
+      .hero-name {
+        font-size: clamp(2.5rem, 13vw, 4rem) !important;
+        line-height: .95 !important;
+      }
+
+      .hero-subtitle,
+      .hero-sub,
+      .hero-born,
+      .hero-tag,
+      .hero-eyebrow {
+        letter-spacing: .22em !important;
+        font-size: .62rem !important;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 9vw, 3rem) !important;
+        line-height: 1.02 !important;
+      }
+
+      .section-label {
+        font-size: .56rem !important;
+        letter-spacing: .28em !important;
+        gap: .65rem !important;
+      }
+
+      .profile-card,
+      .manifesto-card,
+      .member-card,
+      .ethics-panel,
+      .secret-panel {
+        padding: 1.35rem !important;
+        border-radius: 18px !important;
+      }
+
+      .stats-inner {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .stat-item {
+        padding: 1.4rem .8rem !important;
+      }
+
+      .stat-num {
+        font-size: 2rem !important;
+      }
+
+      .hero-badges,
+      .hellsings-badges {
+        gap: .45rem !important;
+      }
+
+      .hero-badge,
+      .badge {
+        font-size: .54rem !important;
+        padding: .38rem .72rem !important;
+        letter-spacing: .14em !important;
+      }
+
+      .skill-top,
+      .trait-row {
+        gap: .5rem;
+      }
+
+      .skill-name,
+      .trait-name,
+      .pc-label {
+        font-size: .55rem !important;
+        letter-spacing: .14em !important;
+      }
+
+      footer {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+    }
+
+    @media (max-width:520px) {
+
+      html,
+      body {
+        max-width: 100%;
+      }
+
+      nav {
+        padding: .85rem .85rem !important;
+      }
+
+      nav::after {
+        left: .85rem;
+        right: .85rem;
+      }
+
+      .stats-inner {
+        grid-template-columns: 1fr !important;
+      }
+
+      .gallery-loop {
+        grid-template-columns: 1fr !important;
+      }
+
+      .gallery-loop img {
+        min-height: 200px !important;
+      }
+
+      .hero-content {
+        padding: 0 .9rem 2rem !important;
+      }
+
+      .page-section {
+        padding: 3.5rem .9rem !important;
+      }
+
+      .hero-name {
+        font-size: clamp(2.2rem, 12vw, 3.2rem) !important;
+      }
+
+      .hero-number {
+        font-size: clamp(3rem, 16vw, 5rem) !important;
+      }
+
+      .hero-title {
+        font-size: clamp(2.5rem, 14vw, 4rem) !important;
+      }
+
+      .hero-desc,
+      .pc-text,
+      .mc-text,
+      .sp-text,
+      .vt-text,
+      p {
+        font-size: .98rem !important;
+        line-height: 1.7 !important;
+      }
+
+      .filter-btn {
+        padding: .9rem .95rem !important;
+      }
+    }
+
+    @media (hover:none) and (pointer:coarse) {
+      body {
+        cursor: auto !important;
+      }
+
+      #cursor,
+      #cursor-ring {
+        display: none !important;
+      }
+    }
 
 
-/* ===== Responsive Mobile + Tablet Pack ===== */
-:root{--mobile-nav-offset:78px;}
-html,body{max-width:100%;overflow-x:hidden;}
-img,video,canvas,svg{max-width:100%;height:auto;}
-body{overflow-wrap:break-word;-webkit-text-size-adjust:100%;}
-a,button,[role="button"]{touch-action:manipulation;}
-.nav-links--fallback{display:none !important;}
+    /* ===== Responsive Mobile + Tablet Pack ===== */
+    :root {
+      --mobile-nav-offset: 78px;
+    }
 
-.swipe-menu-shell{
-  display:none;
-  position:fixed;
-  left:0; right:0;
-  top:var(--mobile-nav-offset);
-  z-index:180;
-  padding:.55rem .85rem .35rem;
-  background:linear-gradient(180deg, rgba(10,8,6,.94), rgba(10,8,6,.72));
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.swipe-menu{
-  display:flex;
-  gap:.55rem;
-  overflow-x:auto;
-  overflow-y:hidden;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;
-  scroll-snap-type:x proximity;
-  padding-bottom:.2rem;
-  touch-action:pan-x;
-}
-.swipe-menu::-webkit-scrollbar{display:none;}
-.swipe-menu a{
-  flex:0 0 auto;
-  scroll-snap-align:start;
-  white-space:nowrap;
-  text-decoration:none;
-  padding:.72rem .95rem;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(255,255,255,.04);
-  color:inherit;
-  font-size:.72rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-.swipe-menu a.is-current{
-  border-color:rgba(201,150,58,.45);
-  box-shadow:0 0 0 1px rgba(201,150,58,.15) inset;
-}
-body.touch-device #cursor,
-body.touch-device #cursor-ring{display:none !important;}
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-@media (max-width: 1024px){
-  nav{padding:1rem 1.25rem !important; gap:.8rem;}
-  .page-section, section, main, #content{padding-left:1.25rem !important; padding-right:1.25rem !important;}
-  .stats-inner{grid-template-columns:repeat(2, minmax(0,1fr)) !important;}
-  .gallery{grid-template-columns:repeat(2, minmax(0,1fr)) !important;}
-  .profile-grid, .manifesto-grid, .members-grid, .family-grid, .couple-row, .singles-row, .album-grid{grid-template-columns:1fr !important;}
-  .hero-content{max-width:min(100%, 760px) !important; padding-left:1.25rem !important; padding-right:1.25rem !important;}
-  .hero-ornament, .hero-ring1, .hero-ring2{transform:scale(.8) translateY(-50%);}
-}
+    img,
+    video,
+    canvas,
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
 
-@media (max-width: 768px){
-  :root{--mobile-nav-offset:74px;}
-  nav{
-    min-height:74px;
-    align-items:center !important;
-    justify-content:space-between !important;
-    flex-wrap:nowrap !important;
-    gap:.75rem;
-  }
-  nav .nav-back, nav .nav-logo, nav .nav-name{
-    min-width:0;
-    max-width:56%;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-  nav .nav-org{display:none !important;}
-  nav .nav-links{display:none !important;}
-  .swipe-menu-shell{display:block;}
-  #filter-bar{top:118px !important;}
-  #hero, .hero, .hero-section{min-height:100svh !important; height:auto !important;}
-  .hero-content{padding-bottom:2.5rem !important; text-align:left !important;}
-  .hero-number{margin-bottom:-.35rem !important;}
-  .hero-tag, .hero-sub, .hero-subtitle, .hero-born{letter-spacing:.22em !important;}
-  .hero-badges{gap:.4rem !important; justify-content:flex-start !important;}
-  .hero-badge{font-size:.58rem !important; padding:.32rem .7rem !important;}
-  .hero-vline, .hero-lines, .hero-accent, .hero-ornament, .scroll-ind, .scroll-hint, .hero-hlines{display:none !important;}
-  .section-title, .hero-title, .hero-name{word-break:break-word;}
-  .section-title{margin-bottom:1.8rem !important;}
-  .stats-inner{grid-template-columns:1fr 1fr !important;}
-  .stat-item{padding:1.4rem .8rem !important;}
-  .profile-card, .member-card, .manifesto-card, .album-card, .gallery-item{padding:1.1rem !important; height:auto;}
-  .gallery{grid-template-columns:1fr !important;}
-  .gallery-item{min-height:220px;}
-  .gallery-caption{transform:none !important;}
-  .back-links, .hero-badges{overflow-x:auto; scrollbar-width:none;}
-  .back-links::-webkit-scrollbar, .hero-badges::-webkit-scrollbar{display:none;}
-  .big-quote{padding:1.6rem !important;}
-  .bq-text{font-size:1.15rem !important;}
-  .vtimeline{padding-left:1.4rem !important;}
-  .vt-item::before{left:-1.4rem !important;}
-  .top-line{display:none !important;}
-  #top-bar{padding:1rem 1.25rem !important; gap:.75rem;}
-  #content{padding:1rem !important;}
-  .placeholder-text{padding:1rem 1.2rem !important; font-size:.5rem !important;}
-}
+    body {
+      overflow-wrap: break-word;
+      -webkit-text-size-adjust: 100%;
+    }
 
-@media (max-width: 560px){
-  .stats-inner{grid-template-columns:1fr !important;}
-  .hero-content{padding-left:1rem !important; padding-right:1rem !important;}
-  .page-section, section, main{padding-left:1rem !important; padding-right:1rem !important;}
-  .hero-title, .hero-name{font-size:clamp(2.2rem, 11vw, 3.5rem) !important; line-height:1 !important;}
-  .hero-number{font-size:clamp(3rem, 18vw, 5rem) !important;}
-  .hero-sub, .hero-subtitle, .hero-born{font-size:.62rem !important;}
-  .hero-divider{gap:.8rem !important; margin:1.25rem auto !important;}
-  .section-label, .pc-label, .stat-label, .hero-tag{font-size:.52rem !important;}
-  .trait-row{gap:.55rem !important;}
-}
+    a,
+    button,
+    [role="button"] {
+      touch-action: manipulation;
+    }
 
-</style>
+    .nav-links--fallback {
+      display: none !important;
+    }
 
-<link rel="stylesheet" href="site-cursor.css">
-<link rel="stylesheet" href="site-transmission.css">
+    .swipe-menu-shell {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--mobile-nav-offset);
+      z-index: 180;
+      padding: .55rem .85rem .35rem;
+      background: linear-gradient(180deg, rgba(10, 8, 6, .94), rgba(10, 8, 6, .72));
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    .swipe-menu {
+      display: flex;
+      gap: .55rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      scroll-snap-type: x proximity;
+      padding-bottom: .2rem;
+      touch-action: pan-x;
+    }
+
+    .swipe-menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    .swipe-menu a {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      white-space: nowrap;
+      text-decoration: none;
+      padding: .72rem .95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .10);
+      background: rgba(255, 255, 255, .04);
+      color: inherit;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .swipe-menu a.is-current {
+      border-color: rgba(201, 150, 58, .45);
+      box-shadow: 0 0 0 1px rgba(201, 150, 58, .15) inset;
+    }
+
+    body.touch-device #cursor,
+    body.touch-device #cursor-ring {
+      display: none !important;
+    }
+
+    @media (max-width: 1024px) {
+      nav {
+        padding: 1rem 1.25rem !important;
+        gap: .8rem;
+      }
+
+      .page-section,
+      section,
+      main,
+      #content {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .profile-grid,
+      .manifesto-grid,
+      .members-grid,
+      .family-grid,
+      .couple-row,
+      .singles-row,
+      .album-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-content {
+        max-width: min(100%, 760px) !important;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+
+      .hero-ornament,
+      .hero-ring1,
+      .hero-ring2 {
+        transform: scale(.8) translateY(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --mobile-nav-offset: 74px;
+      }
+
+      nav {
+        min-height: 74px;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        gap: .75rem;
+      }
+
+      nav .nav-back,
+      nav .nav-logo,
+      nav .nav-name {
+        min-width: 0;
+        max-width: 56%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      nav .nav-org {
+        display: none !important;
+      }
+
+      nav .nav-links {
+        display: none !important;
+      }
+
+      .swipe-menu-shell {
+        display: block;
+      }
+
+      #filter-bar {
+        top: 118px !important;
+      }
+
+      #hero,
+      .hero,
+      .hero-section {
+        min-height: 100svh !important;
+        height: auto !important;
+      }
+
+      .hero-content {
+        padding-bottom: 2.5rem !important;
+        text-align: left !important;
+      }
+
+      .hero-number {
+        margin-bottom: -.35rem !important;
+      }
+
+      .hero-tag,
+      .hero-sub,
+      .hero-subtitle,
+      .hero-born {
+        letter-spacing: .22em !important;
+      }
+
+      .hero-badges {
+        gap: .4rem !important;
+        justify-content: flex-start !important;
+      }
+
+      .hero-badge {
+        font-size: .58rem !important;
+        padding: .32rem .7rem !important;
+      }
+
+      .hero-vline,
+      .hero-lines,
+      .hero-accent,
+      .hero-ornament,
+      .scroll-ind,
+      .scroll-hint,
+      .hero-hlines {
+        display: none !important;
+      }
+
+      .section-title,
+      .hero-title,
+      .hero-name {
+        word-break: break-word;
+      }
+
+      .section-title {
+        margin-bottom: 1.8rem !important;
+      }
+
+      .stats-inner {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .stat-item {
+        padding: 1.4rem .8rem !important;
+      }
+
+      .profile-card,
+      .member-card,
+      .manifesto-card,
+      .album-card,
+      .gallery-item {
+        padding: 1.1rem !important;
+        height: auto;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr !important;
+      }
+
+      .gallery-item {
+        min-height: 220px;
+      }
+
+      .gallery-caption {
+        transform: none !important;
+      }
+
+      .back-links,
+      .hero-badges {
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .back-links::-webkit-scrollbar,
+      .hero-badges::-webkit-scrollbar {
+        display: none;
+      }
+
+      .big-quote {
+        padding: 1.6rem !important;
+      }
+
+      .bq-text {
+        font-size: 1.15rem !important;
+      }
+
+      .vtimeline {
+        padding-left: 1.4rem !important;
+      }
+
+      .vt-item::before {
+        left: -1.4rem !important;
+      }
+
+      .top-line {
+        display: none !important;
+      }
+
+      #top-bar {
+        padding: 1rem 1.25rem !important;
+        gap: .75rem;
+      }
+
+      #content {
+        padding: 1rem !important;
+      }
+
+      .placeholder-text {
+        padding: 1rem 1.2rem !important;
+        font-size: .5rem !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .stats-inner {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .page-section,
+      section,
+      main {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .hero-title,
+      .hero-name {
+        font-size: clamp(2.2rem, 11vw, 3.5rem) !important;
+        line-height: 1 !important;
+      }
+
+      .hero-number {
+        font-size: clamp(3rem, 18vw, 5rem) !important;
+      }
+
+      .hero-sub,
+      .hero-subtitle,
+      .hero-born {
+        font-size: .62rem !important;
+      }
+
+      .hero-divider {
+        gap: .8rem !important;
+        margin: 1.25rem auto !important;
+      }
+
+      .section-label,
+      .pc-label,
+      .stat-label,
+      .hero-tag {
+        font-size: .52rem !important;
+      }
+
+      .trait-row {
+        gap: .55rem !important;
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="site-cursor.css">
+  <link rel="stylesheet" href="site-transmission.css">
   <link rel="stylesheet" href="home-cinematic.css">
   <link rel="stylesheet" href="home-apocalypse.css">
   <link rel="stylesheet" href="home-hellsings-portal.css">
+  <link rel="stylesheet" href="timeline-bridge.css">
 </head>
 
 <body class="saga-redesign">
@@ -1636,18 +2284,24 @@ body.touch-device #cursor-ring{display:none !important;}
     <span class="hero-archive hero-archive--left" aria-hidden="true">Arquivo da família · 01</span>
     <span class="hero-archive hero-archive--right" aria-hidden="true">Acesso autorizado</span>
     <div class="hero-emblem">
-      <div class="emblem-ring"><img class="emblem-logo" src="img-hellsing/brand/hellsings-emblem.png" alt="Emblema dos Hellsings"></div>
+      <div class="emblem-ring"><img class="emblem-logo" src="img-hellsing/brand/hellsings-emblem.png"
+          alt="Emblema dos Hellsings"></div>
     </div>
     <p class="hero-eyebrow">Bem-vindo à Família Connor</p>
     <h1 class="hero-title" data-title="A ERA DA EXTINÇÃO">A Era da<br><span>Extinção</span></h1>
     <p class="hero-sub">Sangue · Honra · Legado</p>
-    <div class="hero-divider"><div class="hero-diamond"></div></div>
-    <p class="hero-desc">"Quatro irmãos. Uma organização nascida nas sombras. Uma família diante do fim — e a última esperança de um mundo que não pôde ser salvo."</p>
+    <div class="hero-divider">
+      <div class="hero-diamond"></div>
+    </div>
+    <p class="hero-desc">"Quatro irmãos. Uma organização nascida nas sombras. Uma família diante do fim — e a última
+      esperança de um mundo que não pôde ser salvo."</p>
     <div class="hero-actions">
       <a class="hero-btn hero-btn-primary" href="#saga">Começar a história</a>
       <a class="hero-btn hero-btn-secondary" href="galeria.html">Abrir galeria</a>
     </div>
-    <div class="scroll-hint"><span>Explorar</span><div class="scroll-arrow"></div></div>
+    <div class="scroll-hint"><span>Explorar</span>
+      <div class="scroll-arrow"></div>
+    </div>
   </div>
 
   <main class="connor-saga" id="saga" aria-label="A saga da Família Connor">
@@ -1664,71 +2318,164 @@ body.touch-device #cursor-ring{display:none !important;}
       <div class="saga-copy saga-copy--hero">
         <p class="saga-kicker">A Era da Extinção · Volume I</p>
         <h1>Antes do mundo acabar,<br><em>eles tinham uma vida.</em></h1>
-        <p class="saga-lead">Uma mansão. Quatro irmãos. Amores, escolhas e feridas que ainda pareciam grandes — até o dia em que a humanidade descobriu o verdadeiro significado do fim.</p>
-        <div class="saga-actions"><a href="#familia-connor">Conhecer os Connor</a><a href="#dia-d">Avançar ao Dia D</a></div>
+        <p class="saga-lead">Uma mansão. Quatro irmãos. Amores, escolhas e feridas que ainda pareciam grandes — até o
+          dia em que a humanidade descobriu o verdadeiro significado do fim.</p>
+        <div class="saga-actions"><a href="#familia-connor">Conhecer os Connor</a><a href="#dia-d">Avançar ao Dia D</a>
+        </div>
       </div>
       <span class="world-date">ARQUIVO · MUNDO ANTERIOR</span>
       <span class="scroll-story">Role para virar a página</span>
     </section>
 
     <section class="saga-chapter family-chapter" id="familia-connor" data-roman="II" data-chapter="Sangue Connor">
-      <header class="saga-heading saga-reveal"><p class="saga-kicker">Capítulo II · Sangue</p><h2>Uma família criada<br><em>para permanecer unida.</em></h2><p>Jack assumiu cedo o peso de proteger Mark, Britney e Jully. Antes de liderar agentes, ele já liderava uma família.</p></header>
+      <header class="saga-heading saga-reveal">
+        <p class="saga-kicker">Capítulo II · Sangue</p>
+        <h2>Uma família criada<br><em>para permanecer unida.</em></h2>
+        <p>Jack assumiu cedo o peso de proteger Mark, Britney e Jully. Antes de liderar agentes, ele já liderava uma
+          família.</p>
+      </header>
       <div class="family-cinema">
-        <a class="cinema-person saga-reveal" href="jack.html"><img src="img-jack/jack1.png" alt="Jack Connor"><span>Primogênito · Fundador</span><strong>Jack</strong></a>
-        <a class="cinema-person saga-reveal" href="mark.html"><img src="img-mark/mark1.png" alt="Mark Connor"><span>Marinha · Operações</span><strong>Mark</strong></a>
-        <a class="cinema-person saga-reveal" href="britney.html"><img src="img-britney/britney.png" alt="Britney Connor"><span>Terceira Connor</span><strong>Britney</strong></a>
-        <a class="cinema-person saga-reveal" href="jully.html"><img src="img-jully/jully.png" alt="Jully Connor"><span>A caçula</span><strong>Jully</strong></a>
+        <a class="cinema-person saga-reveal" href="jack.html"><img src="img-jack/jack1.png"
+            alt="Jack Connor"><span>Primogênito · Fundador</span><strong>Jack</strong></a>
+        <a class="cinema-person saga-reveal" href="mark.html"><img src="img-mark/mark1.png"
+            alt="Mark Connor"><span>Marinha · Operações</span><strong>Mark</strong></a>
+        <a class="cinema-person saga-reveal" href="britney.html"><img src="img-britney/britney.png"
+            alt="Britney Connor"><span>Terceira Connor</span><strong>Britney</strong></a>
+        <a class="cinema-person saga-reveal" href="jully.html"><img src="img-jully/jully.png" alt="Jully Connor"><span>A
+            caçula</span><strong>Jully</strong></a>
       </div>
       <blockquote class="chapter-quote saga-reveal">“Antes de serem sobreviventes, eles eram irmãos.”</blockquote>
     </section>
 
     <section class="saga-chapter agent-chapter" id="carreira-jack" data-roman="III" data-chapter="O agente">
-      <div class="agent-portrait saga-reveal"><img src="img-jack/jackconner.png" alt="Jack Connor em sua carreira de agente"><span class="agent-stamp">CLASSIFICADO</span></div>
-      <div class="agent-copy saga-reveal"><p class="saga-kicker">Capítulo III · O sistema</p><h2>FBI.<br>Interpol.<br><em>Ruptura.</em></h2><p>Jack Connor ascendeu rapidamente no FBI, caçando alvos que outros não conseguiam encontrar. Antes de partir, preparou o agente Bradock para ocupar seu lugar. Na Interpol, viu o alcance do crime — e também os limites de quem deveria combatê-lo.</p><ul><li>Agente especial do FBI</li><li>Operações internacionais</li><li>Mentor do agente Bradock</li><li>Fundador de uma força independente</li></ul><a class="text-link" href="jack.html">Abrir dossiê completo →</a></div>
+      <div class="agent-portrait saga-reveal"><img src="img-jack/jackconner.png"
+          alt="Jack Connor em sua carreira de agente"><span class="agent-stamp">CLASSIFICADO</span></div>
+      <div class="agent-copy saga-reveal">
+        <p class="saga-kicker">Capítulo III · O sistema</p>
+        <h2>FBI.<br>Interpol.<br><em>Ruptura.</em></h2>
+        <p>Jack Connor ascendeu rapidamente no FBI, caçando alvos que outros não conseguiam encontrar. Antes de partir,
+          preparou o agente Bradock para ocupar seu lugar. Na Interpol, viu o alcance do crime — e também os limites de
+          quem deveria combatê-lo.</p>
+        <ul>
+          <li>Agente especial do FBI</li>
+          <li>Operações internacionais</li>
+          <li>Mentor do agente Bradock</li>
+          <li>Fundador de uma força independente</li>
+        </ul><a class="text-link" href="jack.html">Abrir dossiê completo →</a>
+      </div>
     </section>
 
-    <section class="saga-chapter hellsings-chapter" id="nascimento-hellsings" data-roman="IV" data-chapter="Nascem os Hellsings">
+    <section class="saga-chapter hellsings-chapter" id="nascimento-hellsings" data-roman="IV"
+      data-chapter="Nascem os Hellsings">
       <div class="hellsings-sigil" aria-hidden="true">H</div>
-      <header class="saga-heading saga-reveal"><p class="saga-kicker">Capítulo IV · Zona escura</p><h2>Quando o governo recua,<br><em>os Hellsings avançam.</em></h2><p>Jack reuniu os melhores especialistas que conheceu durante sua carreira. Uma organização sem bandeira governamental, criada para alcançar pessoas poderosas que acreditavam estar acima de qualquer consequência.</p></header>
+      <header class="saga-heading saga-reveal">
+        <p class="saga-kicker">Capítulo IV · Zona escura</p>
+        <h2>Quando o governo recua,<br><em>os Hellsings avançam.</em></h2>
+        <p>Jack reuniu os melhores especialistas que conheceu durante sua carreira. Uma organização sem bandeira
+          governamental, criada para alcançar pessoas poderosas que acreditavam estar acima de qualquer consequência.
+        </p>
+      </header>
       <div class="operative-grid">
-        <article class="operative saga-reveal"><span>01 · Comando</span><strong>Jack Connor</strong><p>Fundador e estrategista.</p></article>
-        <article class="operative saga-reveal"><span>02 · Medicina</span><strong>Alice Connor</strong><p>Médica de campo e combatente.</p></article>
-        <article class="operative saga-reveal"><span>03 · Operações</span><strong>Mark Connor</strong><p>Veterano da Marinha.</p></article>
-        <article class="operative saga-reveal"><span>04 · Arsenal</span><strong>Taylor “Tank”</strong><p>Armas de fogo e combate pesado.</p></article>
-        <article class="operative saga-reveal"><span>05 · Tecnologia</span><strong>Dimitry</strong><p>Inteligência, invasão e combate.</p></article>
-        <article class="operative saga-reveal"><span>06 · Lâminas</span><strong>Boby Jhon</strong><p>Artes marciais e armas brancas.</p></article>
-        <article class="operative saga-reveal"><span>07 · Espionagem</span><strong>Naomi “Romanoff”</strong><p>Espiã de alto nível.</p></article>
-        <article class="operative saga-reveal"><span>08 · Oráculo</span><strong>Chloe</strong><p>Olhos da inteligência no bunker.</p></article>
+        <article class="operative saga-reveal"><span>01 · Comando</span><strong>Jack Connor</strong>
+          <p>Fundador e estrategista.</p>
+        </article>
+        <article class="operative saga-reveal"><span>02 · Medicina</span><strong>Alice Connor</strong>
+          <p>Médica de campo e combatente.</p>
+        </article>
+        <article class="operative saga-reveal"><span>03 · Operações</span><strong>Mark Connor</strong>
+          <p>Veterano da Marinha.</p>
+        </article>
+        <article class="operative saga-reveal"><span>04 · Arsenal</span><strong>Taylor “Tank”</strong>
+          <p>Armas de fogo e combate pesado.</p>
+        </article>
+        <article class="operative saga-reveal"><span>05 · Tecnologia</span><strong>Dimitry</strong>
+          <p>Inteligência, invasão e combate.</p>
+        </article>
+        <article class="operative saga-reveal"><span>06 · Lâminas</span><strong>Boby Jhon</strong>
+          <p>Artes marciais e armas brancas.</p>
+        </article>
+        <article class="operative saga-reveal"><span>07 · Espionagem</span><strong>Naomi “Romanoff”</strong>
+          <p>Espiã de alto nível.</p>
+        </article>
+        <article class="operative saga-reveal"><span>08 · Oráculo</span><strong>Chloe</strong>
+          <p>Olhos da inteligência no bunker.</p>
+        </article>
       </div>
       <a class="hellsings-portal saga-reveal" href="hellsing.html" aria-label="Acessar a base dos Hellsings">
         <img src="img-bunker/entrada-secreta.png" alt="Entrada secreta do bunker dos Hellsings">
         <span class="portal-shade"></span><span class="portal-scan"></span>
         <span class="portal-code">PORTAL HLS // ACESSO RESTRITO</span>
-        <span class="portal-copy"><small>ENTRADA PARA A ORGANIZAÇÃO</small><strong>Acesso aos<br><em>Hellsings</em></strong><b>Autorizar entrada <i>↗</i></b></span>
+        <span class="portal-copy"><small>ENTRADA PARA A ORGANIZAÇÃO</small><strong>Acesso
+            aos<br><em>Hellsings</em></strong><b>Autorizar entrada <i>↗</i></b></span>
         <span class="portal-status"><i></i> INSTALAÇÃO LOCALIZADA</span>
       </a>
     </section>
 
-    <section class="saga-chapter alice-chapter" id="alice-desperta" data-roman="V" data-chapter="A médica que decidiu agir">
+    <section class="saga-chapter alice-chapter" id="alice-desperta" data-roman="V"
+      data-chapter="A médica que decidiu agir">
       <div class="alice-cinema" aria-hidden="true"><img src="img-alice/licemedica.png" alt=""></div>
-      <div class="alice-story saga-reveal"><p class="saga-kicker">Capítulo V · O chamado</p><h2>A medicina curava feridas.<br><em>Alice queria impedir que acontecessem.</em></h2><p>Depois de Londres, Alice percorreu hospitais até alcançar uma instituição de alta classe. Foi ali que um caso envolvendo mulheres desprotegidas rompeu a distância entre observar e agir.</p><div class="case-redacted"><span>CASO QUE ORIGINOU O CHAMADO</span><strong>ACESSO RESTRITO</strong><i></i></div><p>Ela entrou nos Hellsings como médica de campo, aprendeu a lutar e levou ajuda a lugares onde um hospital jamais chegaria. Após engravidar de Nicolai, deixou o campo e passou a sustentar a organização por meio de investimentos, empresas e logística.</p><a class="text-link" href="alice.html">Conhecer Alice →</a></div>
+      <div class="alice-story saga-reveal">
+        <p class="saga-kicker">Capítulo V · O chamado</p>
+        <h2>A medicina curava feridas.<br><em>Alice queria impedir que acontecessem.</em></h2>
+        <p>Depois de Londres, Alice percorreu hospitais até alcançar uma instituição de alta classe. Foi ali que um caso
+          envolvendo mulheres desprotegidas rompeu a distância entre observar e agir.</p>
+        <div class="case-redacted"><span>CASO QUE ORIGINOU O CHAMADO</span><strong>ACESSO RESTRITO</strong><i></i></div>
+        <p>Ela entrou nos Hellsings como médica de campo, aprendeu a lutar e levou ajuda a lugares onde um hospital
+          jamais chegaria. Após engravidar de Nicolai, deixou o campo e passou a sustentar a organização por meio de
+          investimentos, empresas e logística.</p><a class="text-link" href="alice.html">Conhecer Alice →</a>
+      </div>
     </section>
 
     <section class="saga-chapter shadow-chapter" id="submundo" data-roman="VI" data-chapter="A guerra invisível">
       <div class="shadow-noise" aria-hidden="true"></div>
-      <header class="saga-heading saga-reveal"><p class="saga-kicker">Capítulo VI · Sem manchetes</p><h2>O mundo não conhecia seus nomes.<br><em>O submundo conhecia.</em></h2><p>Tráfico, redes protegidas pelo poder e missões que nunca chegariam às notícias. Cada operação fez o nome Hellsings atravessar fronteiras em sussurros.</p></header>
-      <div class="mission-stream saga-reveal"><span>OPERAÇÃO 07 · DADOS CENSURADOS</span><span>ALVO INTERNACIONAL · LOCALIZAÇÃO NEGADA</span><span>REDE INTERROMPIDA · 03:17:42</span><span>NENHUM REGISTRO OFICIAL</span></div>
+      <header class="saga-heading saga-reveal">
+        <p class="saga-kicker">Capítulo VI · Sem manchetes</p>
+        <h2>O mundo não conhecia seus nomes.<br><em>O submundo conhecia.</em></h2>
+        <p>Tráfico, redes protegidas pelo poder e missões que nunca chegariam às notícias. Cada operação fez o nome
+          Hellsings atravessar fronteiras em sussurros.</p>
+      </header>
+      <div class="mission-stream saga-reveal"><span>OPERAÇÃO 07 · DADOS CENSURADOS</span><span>ALVO INTERNACIONAL ·
+          LOCALIZAÇÃO NEGADA</span><span>REDE INTERROMPIDA · 03:17:42</span><span>NENHUM REGISTRO OFICIAL</span></div>
     </section>
 
     <section class="saga-chapter doomsday-chapter" id="dia-d" data-roman="VII" data-chapter="O último dia">
-      <div class="nuclear-sun" aria-hidden="true"></div><div class="fallout" aria-hidden="true"></div>
-      <div class="doomsday-copy saga-reveal"><p class="saga-kicker">Capítulo VII · Protocolo Doomsday</p><span class="warning-code">TRANSMISSÃO DE EMERGÊNCIA // D-0</span><h2>As bombas deveriam<br><em>conter a infecção.</em></h2><p>Elas falharam.</p><div class="collapse-count"><strong data-collapse="100">100</strong><span>% · civilização restante</span></div></div>
-      <div class="emergency-lines" aria-hidden="true"><span>CONTENÇÃO BIOLÓGICA: FALHA</span><span>RESPOSTA NUCLEAR: AUTORIZADA</span><span>EVACUAÇÃO: IMPOSSÍVEL</span></div>
+      <div class="nuclear-sun" aria-hidden="true"></div>
+      <div class="fallout" aria-hidden="true"></div>
+      <div class="doomsday-copy saga-reveal">
+        <p class="saga-kicker">Capítulo VII · Protocolo Doomsday</p><span class="warning-code">TRANSMISSÃO DE EMERGÊNCIA
+          // D-0</span>
+        <h2>As bombas deveriam<br><em>conter a infecção.</em></h2>
+        <p>Elas falharam.</p>
+        <div class="collapse-count"><strong data-collapse="100">100</strong><span>% · civilização restante</span></div>
+        <a class="future-lock temporal-portal" data-doomsday-portal
+          href="https://maycon-rezende.github.io/apocalipse/"
+          aria-label="Atravessar a linha temporal e entrar em Doomsday">
+          <span>TRANSMISSÃO DO DIA ZERO</span><strong>ENTRAR EM DOOMSDAY</strong>
+          <small><i></i> ANT-DOOM-00 // ARQUIVO RECUPERADO</small>
+        </a>
+      </div>
+      <div class="emergency-lines" aria-hidden="true"><span>CONTENÇÃO BIOLÓGICA: FALHA</span><span>RESPOSTA NUCLEAR:
+          AUTORIZADA</span><span>EVACUAÇÃO: IMPOSSÍVEL</span></div>
     </section>
 
-    <section class="saga-chapter extinction-chapter" id="era-extincao" data-roman="VIII" data-chapter="A Era da Extinção">
+    <section class="saga-chapter extinction-chapter" id="era-extincao" data-roman="VIII"
+      data-chapter="A Era da Extinção">
       <div class="ruin-horizon" aria-hidden="true"></div>
-      <div class="extinction-copy saga-reveal"><p class="saga-kicker">Muitos anos depois do Dia D</p><h2>O mundo terminou.<br><em>A história dos Connor, não.</em></h2><p>Num planeta seco, radioativo e dominado pela escassez, os sobreviventes seguem pistas deixadas entre as ruínas. Eles descobriram quem provocou a catástrofe. Agora querem respostas — e uma forma de reverter o destino da Terra.</p><div class="future-lock"><span>PRÓXIMO PORTAL</span><strong>O FUTURO INICIA AQUI</strong><small>ACESSO AINDA BLOQUEADO</small></div><div class="final-actions"><a href="galeria.html">Explorar registros do passado</a><a href="hellsing.html">Conhecer os Hellsings</a></div></div>
+      <div class="extinction-copy saga-reveal">
+        <p class="saga-kicker">Muitos anos depois do Dia D</p>
+        <h2>O mundo terminou.<br><em>A história dos Connor, não.</em></h2>
+        <p>Num planeta seco, radioativo e dominado pela escassez, os sobreviventes seguem pistas deixadas entre as
+          ruínas. Eles descobriram quem provocou a catástrofe. Agora querem respostas — e uma forma de reverter o
+          destino da Terra.</p>
+        <a class="future-lock temporal-portal future-era-portal"
+          href="era-extincao-presente/index.html"
+          aria-label="Entrar no presente devastado de A Era da Extinção">
+          <span>MUITOS ANOS DEPOIS</span><strong>O PRESENTE INICIA AQUI</strong>
+          <small><i></i> SINAL DO PRESENTE // DESTINO DESCONHECIDO</small>
+        </a>
+        <div class="final-actions"><a href="galeria.html">Explorar registros do passado</a><a
+            href="hellsing.html">Conhecer os Hellsings</a></div>
+      </div>
     </section>
   </main>
 
@@ -1740,7 +2487,9 @@ body.touch-device #cursor-ring{display:none !important;}
       </div>
       <span class="section-tag">Resumo da saga</span>
       <h2 class="section-title">Honra, sangue e legado</h2>
-      <p class="brief-lead">Antes da extinção, os Connor ergueram os Hellsings para enfrentar os crimes que o poder preferia ignorar. Anos depois do Dia D, em uma Terra consumida pela infecção, pelas bombas e pelo deserto, os sobreviventes seguem pistas até aqueles que condenaram o mundo.</p>
+      <p class="brief-lead">Antes da extinção, os Connor ergueram os Hellsings para enfrentar os crimes que o poder
+        preferia ignorar. Anos depois do Dia D, em uma Terra consumida pela infecção, pelas bombas e pelo deserto, os
+        sobreviventes seguem pistas até aqueles que condenaram o mundo.</p>
       <a class="brief-link" href="#familia">Abrir arquivos da família <span>→</span></a>
     </div>
     <div class="story-stats">
@@ -1775,7 +2524,8 @@ body.touch-device #cursor-ring{display:none !important;}
       <div class="lineage-copy">
         <span class="lineage-kicker">O núcleo da família</span>
         <h3>Jack <i>&amp;</i><br>Alice</h3>
-        <p>Ele transformou a perda em proteção. Ela transformou cuidado em força. Juntos, construíram o centro para onde todos os Connor retornam.</p>
+        <p>Ele transformou a perda em proteção. Ela transformou cuidado em força. Juntos, construíram o centro para onde
+          todos os Connor retornam.</p>
         <div class="lineage-links">
           <a href="jack.html">Dossiê de Jack <span>→</span></a>
           <a href="alice.html">Dossiê de Alice <span>→</span></a>
@@ -1803,7 +2553,8 @@ body.touch-device #cursor-ring{display:none !important;}
       <div class="lineage-copy">
         <span class="lineage-kicker">O passado que retornou</span>
         <h3>Mark <i>&amp;</i><br>Ariani</h3>
-        <p>Uma partida interrompeu a história. O reencontro trouxe de volta o amor, as consequências e verdades que esperaram anos para respirar.</p>
+        <p>Uma partida interrompeu a história. O reencontro trouxe de volta o amor, as consequências e verdades que
+          esperaram anos para respirar.</p>
         <div class="lineage-links">
           <a href="mark.html">Dossiê de Mark <span>→</span></a>
           <a href="ariani.html">Dossiê de Ariani <span>→</span></a>
@@ -1831,7 +2582,8 @@ body.touch-device #cursor-ring{display:none !important;}
       <div class="lineage-copy">
         <span class="lineage-kicker">A continuidade</span>
         <h3>Britney <i>&amp;</i><br>Jully</h3>
-        <p>Duas irmãs inseparáveis, duas formas de desafiar o peso do sobrenome e a promessa de que a família ainda possui um futuro.</p>
+        <p>Duas irmãs inseparáveis, duas formas de desafiar o peso do sobrenome e a promessa de que a família ainda
+          possui um futuro.</p>
         <div class="lineage-links">
           <a href="britney.html">Dossiê de Britney <span>→</span></a>
           <a href="jully.html">Dossiê de Jully <span>→</span></a>
@@ -1863,7 +2615,8 @@ body.touch-device #cursor-ring{display:none !important;}
       <h2>Antes<br><em>do fim</em></h2>
       <div class="before-intro">
         <span class="world-status"><i></i> Mundo ativo</span>
-        <p>Antes das estradas virarem silêncio e das cidades perderem seus nomes, os Connor viviam em um mundo que ainda acreditava possuir um amanhã.</p>
+        <p>Antes das estradas virarem silêncio e das cidades perderem seus nomes, os Connor viviam em um mundo que ainda
+          acreditava possuir um amanhã.</p>
       </div>
     </header>
 
@@ -1904,31 +2657,47 @@ body.touch-device #cursor-ring{display:none !important;}
         <img src="galeria-assets/img__family.webp" alt="Família Connor reunida" loading="lazy">
         <div class="memory-shade"></div>
         <span class="memory-number">Memória 001</span>
-        <div class="memory-caption"><small>Mansão Connor</small><h3>A família reunida</h3><p>Quando estar juntos ainda era apenas parte da rotina.</p></div>
+        <div class="memory-caption"><small>Mansão Connor</small>
+          <h3>A família reunida</h3>
+          <p>Quando estar juntos ainda era apenas parte da rotina.</p>
+        </div>
       </article>
       <article class="memory-card" data-memory>
         <img src="galeria-assets/img__licemedica.webp" alt="Alice durante sua trajetória na medicina" loading="lazy">
         <div class="memory-shade"></div>
         <span class="memory-number">Memória 002</span>
-        <div class="memory-caption"><small>Londres</small><h3>A vocação de Alice</h3><p>Conhecimento usado para preservar vidas.</p></div>
+        <div class="memory-caption"><small>Londres</small>
+          <h3>A vocação de Alice</h3>
+          <p>Conhecimento usado para preservar vidas.</p>
+        </div>
       </article>
       <article class="memory-card" data-memory>
         <img src="galeria-assets/img__markmarinha.webp" alt="Mark Connor durante o serviço naval" loading="lazy">
         <div class="memory-shade"></div>
         <span class="memory-number">Memória 003</span>
-        <div class="memory-caption"><small>Serviço naval</small><h3>Mark antes do retorno</h3><p>Disciplina, distância e escolhas.</p></div>
+        <div class="memory-caption"><small>Serviço naval</small>
+          <h3>Mark antes do retorno</h3>
+          <p>Disciplina, distância e escolhas.</p>
+        </div>
       </article>
       <article class="memory-card" data-memory>
         <img src="galeria-assets/img__aritribunal.webp" alt="Ariani em sua carreira jurídica" loading="lazy">
         <div class="memory-shade"></div>
         <span class="memory-number">Memória 004</span>
-        <div class="memory-caption"><small>Tribunal</small><h3>A voz de Ariani</h3><p>Uma carreira construída sem esperar pelo retorno de ninguém.</p></div>
+        <div class="memory-caption"><small>Tribunal</small>
+          <h3>A voz de Ariani</h3>
+          <p>Uma carreira construída sem esperar pelo retorno de ninguém.</p>
+        </div>
       </article>
       <article class="memory-card memory-card--wide" data-memory>
-        <img src="galeria-assets/img__universidade.webp" alt="Britney e Jully durante a vida universitária" loading="lazy">
+        <img src="galeria-assets/img__universidade.webp" alt="Britney e Jully durante a vida universitária"
+          loading="lazy">
         <div class="memory-shade"></div>
         <span class="memory-number">Memória 005</span>
-        <div class="memory-caption"><small>Universidade</small><h3>O futuro ainda aberto</h3><p>Quando os planos eram maiores que o medo.</p></div>
+        <div class="memory-caption"><small>Universidade</small>
+          <h3>O futuro ainda aberto</h3>
+          <p>Quando os planos eram maiores que o medo.</p>
+        </div>
       </article>
     </div>
 
@@ -2144,7 +2913,9 @@ body.touch-device #cursor-ring{display:none !important;}
   <div id="timeline">
     <div class="timeline-inner">
       <header class="timeline-head reveal">
-        <div><span class="section-tag">Cronologia preservada</span><h2>Linha<br><em>do tempo</em></h2></div>
+        <div><span class="section-tag">Cronologia preservada</span>
+          <h2>Linha<br><em>do tempo</em></h2>
+        </div>
         <p>Perdas, encontros e decisões que transformaram um sobrenome em legado.</p>
       </header>
       <div class="timeline-track">
@@ -2225,7 +2996,8 @@ body.touch-device #cursor-ring{display:none !important;}
         </div>
         <div class="tree-line" aria-hidden="true"></div>
         <div class="tree-children">
-          <div class="tree-child tree-child--first"><span>01</span><strong>Alucard</strong><small>O mais velho</small></div>
+          <div class="tree-child tree-child--first"><span>01</span><strong>Alucard</strong><small>O mais velho</small>
+          </div>
           <div class="tree-child"><span>02</span><strong>Nicolai</strong><small>Arquivo reservado</small></div>
           <div class="tree-child"><span>03</span><strong>Mary</strong><small>Arquivo reservado</small></div>
           <div class="tree-child"><span>04</span><strong>Diana</strong><small>Arquivo reservado</small></div>
@@ -2237,7 +3009,8 @@ body.touch-device #cursor-ring{display:none !important;}
         <article class="origin-file" data-world-reveal>
           <span class="heritage-file-code">Arquivo de origem // Inglaterra</span>
           <h3>Raízes<br>inglesas</h3>
-          <p>Disciplina e lealdade atravessam a história dos Connor. Datas, antepassados e os primeiros registros da linhagem permanecem reservados para a história oficial.</p>
+          <p>Disciplina e lealdade atravessam a história dos Connor. Datas, antepassados e os primeiros registros da
+            linhagem permanecem reservados para a história oficial.</p>
           <div class="origin-seal" aria-hidden="true"><b>C</b><span>Connor · England ·</span></div>
         </article>
         <article class="voices-file" data-world-reveal>
@@ -2320,182 +3093,183 @@ body.touch-device #cursor-ring{display:none !important;}
     }, { passive: true });
   </script>
 
-<script>
-(function(){
-  const nav = document.querySelector('nav');
-  if(!nav) return;
-  const links = nav.querySelector('.nav-links');
-  if (links && !nav.querySelector('.premium-mobile-toggle')) {
-    const btn = document.createElement('button');
-    btn.className = 'premium-mobile-toggle';
-    btn.setAttribute('aria-label','Abrir menu');
-    btn.setAttribute('aria-expanded','false');
-    btn.innerHTML = '<span></span><span></span><span></span>';
-    nav.appendChild(btn);
+  <script>
+    (function () {
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      const links = nav.querySelector('.nav-links');
+      if (links && !nav.querySelector('.premium-mobile-toggle')) {
+        const btn = document.createElement('button');
+        btn.className = 'premium-mobile-toggle';
+        btn.setAttribute('aria-label', 'Abrir menu');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<span></span><span></span><span></span>';
+        nav.appendChild(btn);
 
-    const panel = document.createElement('div');
-    panel.className = 'premium-mobile-panel';
-    panel.innerHTML = links.innerHTML;
-    document.body.appendChild(panel);
+        const panel = document.createElement('div');
+        panel.className = 'premium-mobile-panel';
+        panel.innerHTML = links.innerHTML;
+        document.body.appendChild(panel);
 
-    const closeMenu = () => {
-      nav.classList.remove('premium-open');
-      panel.classList.remove('show');
-      document.body.classList.remove('premium-menu-open');
-      btn.setAttribute('aria-expanded','false');
-    };
-    const openMenu = () => {
-      nav.classList.add('premium-open');
-      panel.classList.add('show');
-      document.body.classList.add('premium-menu-open');
-      btn.setAttribute('aria-expanded','true');
-    };
-    btn.addEventListener('click', () => panel.classList.contains('show') ? closeMenu() : openMenu());
-    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-    window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); }, {passive:true});
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-  }
-
-  const cards = document.querySelectorAll('.member-card,.profile-card,.manifesto-card,.photo-item,.gallery-loop img');
-  cards.forEach(el => {
-    el.style.transition = (el.style.transition ? el.style.transition + ',' : '') + 'transform .25s ease, box-shadow .25s ease';
-    el.addEventListener('mouseenter', () => { if (window.innerWidth > 768) el.style.transform = 'translateY(-3px)'; });
-    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
-  });
-})();
-</script>
-
-
-<script>
-(function(){
-  const fileName = (location.pathname.split('/').pop() || '').toLowerCase();
-  const defaultLinks = [
-    ['telainicial.html','Início'],
-    ['hellsing.html','Hellsings'],
-    ['galeria.html','Galeria'],
-    ['jack.html','Jack'],
-    ['alice.html','Alice'],
-    ['mark.html','Mark'],
-    ['ariani.html','Ariani'],
-    ['britney.html','Britney'],
-    ['jully.html','Jully']
-  ];
-
-  const nav = document.querySelector('nav');
-  if (nav) {
-    let links = nav.querySelector('.nav-links');
-
-    if (!links) {
-      links = document.createElement('ul');
-      links.className = 'nav-links nav-links--fallback';
-      links.innerHTML = defaultLinks.map(([href,label]) => `<li><a href="${href}">${label}</a></li>`).join('');
-      nav.appendChild(links);
-    }
-
-    if (!nav.querySelector('.premium-mobile-toggle')) {
-      const btn = document.createElement('button');
-      btn.className = 'premium-mobile-toggle';
-      btn.type = 'button';
-      btn.setAttribute('aria-label','Abrir menu');
-      btn.setAttribute('aria-expanded','false');
-      btn.innerHTML = '<span></span><span></span><span></span>';
-      nav.appendChild(btn);
-
-      const panel = document.createElement('div');
-      panel.className = 'premium-mobile-panel';
-      panel.innerHTML = Array.from(links.querySelectorAll('a')).map(a => a.outerHTML).join('');
-      document.body.appendChild(panel);
-
-      const closeMenu = () => {
-        nav.classList.remove('premium-open');
-        panel.classList.remove('show');
-        document.body.classList.remove('premium-menu-open');
-        btn.setAttribute('aria-expanded','false');
-      };
-      const openMenu = () => {
-        nav.classList.add('premium-open');
-        panel.classList.add('show');
-        document.body.classList.add('premium-menu-open');
-        btn.setAttribute('aria-expanded','true');
-      };
-
-      btn.addEventListener('click', () => panel.classList.contains('show') ? closeMenu() : openMenu());
-      panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-      window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); }, { passive:true });
-    }
-
-    if (!document.querySelector('.swipe-menu-shell')) {
-      const shell = document.createElement('div');
-      shell.className = 'swipe-menu-shell';
-      const scroller = document.createElement('div');
-      scroller.className = 'swipe-menu';
-      scroller.innerHTML = Array.from(links.querySelectorAll('a')).map(a => a.outerHTML).join('');
-      shell.appendChild(scroller);
-      document.body.appendChild(shell);
-
-      let isDown = false;
-      let startX = 0;
-      let scrollLeft = 0;
-
-      const startDrag = (x) => {
-        isDown = true;
-        startX = x;
-        scrollLeft = scroller.scrollLeft;
-      };
-      const moveDrag = (x) => {
-        if (!isDown) return;
-        const walk = x - startX;
-        scroller.scrollLeft = scrollLeft - walk;
-      };
-      const stopDrag = () => { isDown = false; };
-
-      scroller.addEventListener('mousedown', e => startDrag(e.pageX));
-      scroller.addEventListener('mousemove', e => moveDrag(e.pageX));
-      window.addEventListener('mouseup', stopDrag);
-      scroller.addEventListener('mouseleave', stopDrag);
-
-      let touchX = 0;
-      let touchScroll = 0;
-      scroller.addEventListener('touchstart', e => {
-        touchX = e.touches[0].pageX;
-        touchScroll = scroller.scrollLeft;
-      }, { passive:true });
-      scroller.addEventListener('touchmove', e => {
-        const walk = e.touches[0].pageX - touchX;
-        scroller.scrollLeft = touchScroll - walk;
-      }, { passive:true });
-
-      const currentAnchors = scroller.querySelectorAll('a');
-      currentAnchors.forEach(a => {
-        const href = (a.getAttribute('href') || '').toLowerCase();
-        if (href && (href === fileName || href.endsWith('/' + fileName))) {
-          a.classList.add('is-current');
-        }
-      });
-    }
-
-    nav.querySelectorAll('a').forEach(a => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
-      if (href && (href === fileName || href.endsWith('/' + fileName))) {
-        a.classList.add('active');
-        a.setAttribute('aria-current', 'page');
+        const closeMenu = () => {
+          nav.classList.remove('premium-open');
+          panel.classList.remove('show');
+          document.body.classList.remove('premium-menu-open');
+          btn.setAttribute('aria-expanded', 'false');
+        };
+        const openMenu = () => {
+          nav.classList.add('premium-open');
+          panel.classList.add('show');
+          document.body.classList.add('premium-menu-open');
+          btn.setAttribute('aria-expanded', 'true');
+        };
+        btn.addEventListener('click', () => panel.classList.contains('show') ? closeMenu() : openMenu());
+        panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+        window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); }, { passive: true });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
       }
-    });
-  }
 
-  if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
-    document.body.classList.add('touch-device');
-  }
-})();
-</script>
+      const cards = document.querySelectorAll('.member-card,.profile-card,.manifesto-card,.photo-item,.gallery-loop img');
+      cards.forEach(el => {
+        el.style.transition = (el.style.transition ? el.style.transition + ',' : '') + 'transform .25s ease, box-shadow .25s ease';
+        el.addEventListener('mouseenter', () => { if (window.innerWidth > 768) el.style.transform = 'translateY(-3px)'; });
+        el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+      });
+    })();
+  </script>
 
-<script src="home-effects.js" defer></script>
-<script src="home-cinematic.js" defer></script>
-<script src="home-apocalypse.js" defer></script>
-<script src="home-hellsings-portal.js" defer></script>
-<script src="site-cursor.js" defer></script>
-<script src="site-transmission.js" defer></script>
+
+  <script>
+    (function () {
+      const fileName = (location.pathname.split('/').pop() || '').toLowerCase();
+      const defaultLinks = [
+        ['telainicial.html', 'Início'],
+        ['hellsing.html', 'Hellsings'],
+        ['galeria.html', 'Galeria'],
+        ['jack.html', 'Jack'],
+        ['alice.html', 'Alice'],
+        ['mark.html', 'Mark'],
+        ['ariani.html', 'Ariani'],
+        ['britney.html', 'Britney'],
+        ['jully.html', 'Jully']
+      ];
+
+      const nav = document.querySelector('nav');
+      if (nav) {
+        let links = nav.querySelector('.nav-links');
+
+        if (!links) {
+          links = document.createElement('ul');
+          links.className = 'nav-links nav-links--fallback';
+          links.innerHTML = defaultLinks.map(([href, label]) => `<li><a href="${href}">${label}</a></li>`).join('');
+          nav.appendChild(links);
+        }
+
+        if (!nav.querySelector('.premium-mobile-toggle')) {
+          const btn = document.createElement('button');
+          btn.className = 'premium-mobile-toggle';
+          btn.type = 'button';
+          btn.setAttribute('aria-label', 'Abrir menu');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.innerHTML = '<span></span><span></span><span></span>';
+          nav.appendChild(btn);
+
+          const panel = document.createElement('div');
+          panel.className = 'premium-mobile-panel';
+          panel.innerHTML = Array.from(links.querySelectorAll('a')).map(a => a.outerHTML).join('');
+          document.body.appendChild(panel);
+
+          const closeMenu = () => {
+            nav.classList.remove('premium-open');
+            panel.classList.remove('show');
+            document.body.classList.remove('premium-menu-open');
+            btn.setAttribute('aria-expanded', 'false');
+          };
+          const openMenu = () => {
+            nav.classList.add('premium-open');
+            panel.classList.add('show');
+            document.body.classList.add('premium-menu-open');
+            btn.setAttribute('aria-expanded', 'true');
+          };
+
+          btn.addEventListener('click', () => panel.classList.contains('show') ? closeMenu() : openMenu());
+          panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+          document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+          window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); }, { passive: true });
+        }
+
+        if (!document.querySelector('.swipe-menu-shell')) {
+          const shell = document.createElement('div');
+          shell.className = 'swipe-menu-shell';
+          const scroller = document.createElement('div');
+          scroller.className = 'swipe-menu';
+          scroller.innerHTML = Array.from(links.querySelectorAll('a')).map(a => a.outerHTML).join('');
+          shell.appendChild(scroller);
+          document.body.appendChild(shell);
+
+          let isDown = false;
+          let startX = 0;
+          let scrollLeft = 0;
+
+          const startDrag = (x) => {
+            isDown = true;
+            startX = x;
+            scrollLeft = scroller.scrollLeft;
+          };
+          const moveDrag = (x) => {
+            if (!isDown) return;
+            const walk = x - startX;
+            scroller.scrollLeft = scrollLeft - walk;
+          };
+          const stopDrag = () => { isDown = false; };
+
+          scroller.addEventListener('mousedown', e => startDrag(e.pageX));
+          scroller.addEventListener('mousemove', e => moveDrag(e.pageX));
+          window.addEventListener('mouseup', stopDrag);
+          scroller.addEventListener('mouseleave', stopDrag);
+
+          let touchX = 0;
+          let touchScroll = 0;
+          scroller.addEventListener('touchstart', e => {
+            touchX = e.touches[0].pageX;
+            touchScroll = scroller.scrollLeft;
+          }, { passive: true });
+          scroller.addEventListener('touchmove', e => {
+            const walk = e.touches[0].pageX - touchX;
+            scroller.scrollLeft = touchScroll - walk;
+          }, { passive: true });
+
+          const currentAnchors = scroller.querySelectorAll('a');
+          currentAnchors.forEach(a => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            if (href && (href === fileName || href.endsWith('/' + fileName))) {
+              a.classList.add('is-current');
+            }
+          });
+        }
+
+        nav.querySelectorAll('a').forEach(a => {
+          const href = (a.getAttribute('href') || '').toLowerCase();
+          if (href && (href === fileName || href.endsWith('/' + fileName))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+      }
+
+      if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+        document.body.classList.add('touch-device');
+      }
+    })();
+  </script>
+
+  <script src="home-effects.js" defer></script>
+  <script src="home-cinematic.js" defer></script>
+  <script src="home-apocalypse.js" defer></script>
+  <script src="home-hellsings-portal.js" defer></script>
+  <script src="timeline-bridge.js" defer></script>
+  <script src="site-cursor.js" defer></script>
+  <script src="site-transmission.js" defer></script>
 </body>
 
 </html>
