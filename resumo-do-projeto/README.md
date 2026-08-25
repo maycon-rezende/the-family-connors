@@ -27,6 +27,8 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 
 - `hellsings-app/`: aplicativo mobile em Expo com abertura, comando, agentes, missões, bunker, arquivos secretos, diário e investigação interativa.
 - `img-hellsing/brand/hellsings-emblem.png`: emblema oficial compartilhado pelo site e pelo aplicativo.
+- O aplicativo recebeu cadastro local de agente, perfil persistente e estrutura de autenticação narrativa com codinome, divisão e matrícula.
+- `img-hellsing/scenes/`: coleção cinematográfica com comando, inteligência e retorno de missão, criada para uso compartilhado entre site e aplicativo.
 - Alice e Ariani agora possuem registros audiovisuais individuais em seus próprios perfis.
 - As galerias de Alice, Jack e da família foram ampliadas com os novos registros visuais.
 

@@ -33,7 +33,13 @@
 
 - Emblema oficial dos Hellsings criado e aplicado no site e no aplicativo.
 - Aplicativo mobile iniciado em Expo, com abertura, comando, agentes, missões, bunker, arquivos secretos, diário e investigação interativa.
+- Cadastro e perfil local de agente adicionados ao aplicativo com persistência por AsyncStorage.
+- Dependências do aplicativo reinstaladas e código validado pelo TypeScript sem erros.
+- Três cenas cinematográficas oficiais dos Hellsings criadas: comando de Jack, Mark e Alice; inteligência de Boby, Naomi e Clhoe; retorno de Luke, Dimitri, Brian e Hellen.
 - Novas fotografias de Alice e Jack catalogadas; registros familiares e do casal Jack/Alice incorporados à galeria central.
+- Arquivo pessoal de Alice reorganizado em capítulos, paginação, transições e visualizador protegido para registros classificados.
+- Galerias de Ariani, Jack e Mark ampliadas; novos registros familiares e dos irmãos catalogados.
+- Novo vídeo dos irmãos recebido e preservado para integração audiovisual.
 - Vídeos individuais de Alice e Ariani incorporados diretamente aos respectivos perfis.
 - Próximos vídeos individuais pendentes: Britney e Jully.
 - Cronologia corrigida: as páginas familiares representam o passado, Doomsday representa o Dia Zero e o mundo devastado representa o presente.

@@ -1,0 +1,4 @@
+.gallery-loop img.protected-image{filter:blur(18px) saturate(.35) brightness(.5)!important;transform:scale(1.08)!important;pointer-events:none;user-select:none}
+.gallery-loop img.protected-image.active{opacity:.7}
+.gallery-loop:has(img.protected-image.active)::after{content:'REGISTRO RESTRITO // IMAGEM PROTEGIDA';position:absolute;z-index:8;left:50%;top:50%;translate:-50% -50%;width:max-content;max-width:80%;padding:.75rem 1rem;border:1px solid rgba(183,54,48,.65);background:rgba(13,4,4,.82);color:#df5b52;font:600 .52rem/1.4 'Cinzel',serif;letter-spacing:.14em;text-align:center;pointer-events:none}
+@media(max-width:560px){.gallery-loop img.protected-image{filter:blur(14px) saturate(.3) brightness(.46)!important}.gallery-loop:has(img.protected-image.active)::after{font-size:.43rem}}
