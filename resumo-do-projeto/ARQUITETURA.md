@@ -4,12 +4,13 @@
 
 | Arquivo | Função |
 | --- | --- |
-| `index.html` | Prólogo e entrada da Mansão Connor |
-| `telainicial.html` | Página inicial narrativa |
+| `index.html` | Experiência principal no presente devastado |
+| `arquivo-passado.html` | Prólogo e entrada dos Arquivos do Passado |
+| `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Centro de comando dos Hellsings |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
-| `era-extincao-presente/index.html` | Novo site do presente devastado dos personagens |
+| `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
 
 ## Personagens
 
@@ -49,14 +50,16 @@ Os vídeos compartilhados são reproduzidos em `videos.html`. Os registros indiv
 - `img-hellsing/brand/hellsings-emblem.png`: emblema oficial usado pelo site e pelo aplicativo.
 - `hellsings-immersive.css` e `hellsings-immersive.js`: impacto visual, interferência, iluminação e tipografia do centro de comando.
 
-## Ponte temporal
+## Ponte temporal e hierarquia oficial
 
 - `timeline-bridge.css` e `timeline-bridge.js`: transição cinematográfica para o Dia Zero de Doomsday.
-- `era-extincao-presente/`: site independente do presente pós-colapso.
+- `index.html`: período principal e presente dos personagens, muitos anos depois do Dia D.
+- `arquivo-passado.html`: cofre narrativo que preserva a experiência jovem já construída.
+- `era-extincao-presente/`: estilos, comportamento e redirecionamento legado da experiência principal.
 - `era-extincao-presente/extinction-world.css`: atmosfera de deserto, ferrugem, radiação e escassez.
 - `era-extincao-presente/extinction-world.js`: controle da abertura e persistência por sessão.
 
-A navegação segue `passado dos Connor → Dia Zero/Doomsday → presente devastado`.
+A cronologia segue `passado dos Connor → Dia Zero/Doomsday → presente devastado`, mas a experiência agora começa no presente. O usuário abre o passado por meio da caixa-preta Connor.
 
 ## Componentes compartilhados
 

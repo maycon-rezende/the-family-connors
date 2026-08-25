@@ -1,5 +1,13 @@
 (function(){
   'use strict';
+  if(!location.pathname.endsWith('/index.html')&&!location.pathname.endsWith('/arquivo-passado.html')){
+    const presentLink=document.createElement('a');
+    presentLink.className='present-return-link';
+    presentLink.href='index.html';
+    presentLink.innerHTML='<span>AGORA</span><b>Retornar ao presente</b>';
+    presentLink.setAttribute('aria-label','Retornar ao presente devastado de A Era da Extinção');
+    document.body.appendChild(presentLink);
+  }
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const overlay=document.createElement('div');
   overlay.className='transmission-overlay';

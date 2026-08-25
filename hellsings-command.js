@@ -13,13 +13,18 @@
   ];
 
   const roster = document.querySelector('#roster');
-  roster.innerHTML = agents.map((agent,index) => `<button class="agent ${agent.admin?'admin':''} ${agent.image?'has-photo':''}" style="--agent:${agent.color};--skin:${agent.skin}" data-agent="${index}"><span class="agent-code">${agent.code} // ${agent.field?'FIELD':'ADMIN'}</span><i class="agent-state"></i>${agent.image?`<img class="agent-photo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.82) contrast(1.05)" src="${agent.image}" alt="${agent.name} com uniforme dos Hellsings">`:'<div class="agent-silhouette"></div>'}<div class="agent-info"><small>${agent.role}</small><h3>${agent.name}</h3><p>${agent.tags.slice(0,3).join(' · ')}</p></div></button>`).join('');
+  roster.innerHTML = agents.map((agent,index) => {
+    const portrait = agent.image?.startsWith('img-hellsing/');
+    return `<button class="agent ${agent.admin?'admin':''} ${agent.image?'has-photo':''} ${portrait?'portrait':''}" style="--agent:${agent.color};--skin:${agent.skin}" data-agent="${index}"><span class="agent-code">${agent.code} // ${agent.field?'FIELD':'ADMIN'}</span><i class="agent-state"></i>${agent.image?`<img class="agent-photo" src="${agent.image}" alt="${agent.name} com uniforme dos Hellsings">`:'<div class="agent-silhouette"></div>'}<div class="agent-info"><small>${agent.role}</small><h3>${agent.name}</h3><p>${agent.tags.slice(0,3).join(' · ')}</p></div></button>`;
+  }).join('');
 
   const dialog = document.querySelector('#dossier');
   const visual = dialog.querySelector('.dossier-visual');
   roster.querySelectorAll('.agent').forEach(button => button.addEventListener('click', () => {
     const agent = agents[Number(button.dataset.agent)];
-    visual.style.cssText = agent.image ? `--agent:${agent.color};background-image:linear-gradient(0deg,rgba(5,7,6,.3),transparent 50%),url('${agent.image}');background-size:cover;background-position:center` : `--agent:${agent.color};--skin:${agent.skin};background:radial-gradient(ellipse at 50% 31%,var(--skin) 0 11%,transparent 11.5%),radial-gradient(ellipse at 50% 67%,var(--agent) 0 30%,transparent 30.5%),linear-gradient(145deg,color-mix(in srgb,var(--agent) 18%,#070907),#070907 65%)`;
+    const portrait = agent.image?.startsWith('img-hellsing/');
+    dialog.classList.toggle('portrait-dossier',Boolean(portrait));
+    visual.style.cssText = agent.image ? `--agent:${agent.color};background-image:linear-gradient(0deg,rgba(5,7,6,.3),transparent 50%),url('${agent.image}');background-size:${portrait?'contain':'cover'};background-repeat:no-repeat;background-position:center top;background-color:#050706` : `--agent:${agent.color};--skin:${agent.skin};background:radial-gradient(ellipse at 50% 31%,var(--skin) 0 11%,transparent 11.5%),radial-gradient(ellipse at 50% 67%,var(--agent) 0 30%,transparent 30.5%),linear-gradient(145deg,color-mix(in srgb,var(--agent) 18%,#070907),#070907 65%)`;
     dialog.querySelector('.dossier-info>span').textContent = `${agent.code} // ${agent.field?'AUTORIZADO PARA CAMPO':'ADMINISTRAÇÃO'}`;
     dialog.querySelector('h2').textContent = agent.name;
     dialog.querySelector('h3').textContent = agent.role;

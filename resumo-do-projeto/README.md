@@ -8,14 +8,15 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 
 ## Experiência atual
 
-- `index.html`: prólogo cinematográfico e entrada da Mansão Connor.
-- `telainicial.html`: narrativa principal e apresentação da Era da Extinção.
+- `index.html`: experiência principal da Era da Extinção no presente devastado.
+- `arquivo-passado.html`: portal cinematográfico para a vida dos Connor antes do Dia D.
+- `telainicial.html`: narrativa do passado e apresentação da família jovem.
 - Páginas individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
 - Galerias fotográficas separadas para Jack, Alice, Mark, Britney e Jully.
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
 - `videos.html`: central audiovisual com registros compartilhados.
 - `hellsing.html`: experiência cinematográfica dos Hellsings, com abertura, bunker, radar, dossiês e formação oficial.
-- `era-extincao-presente/index.html`: entrada do presente devastado, depois do Dia Zero.
+- `era-extincao-presente/index.html`: endereço legado que redireciona para a nova entrada principal.
 
 ## Hellsings
 
@@ -34,9 +35,10 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 
 ## Ligação com Doomsday e o presente
 
+- O presente devastado é agora a experiência principal e a primeira página do projeto.
 - A narrativa familiar construída nas páginas principais representa o passado dos personagens.
 - O portal `ANT-DOOM-00` conduz ao site **Apocalipse/Doomsday**, que representa o Dia Zero.
-- O portal “O Presente Inicia Aqui” conduz ao novo site da Era da Extinção.
+- A caixa-preta Connor conduz aos Arquivos do Passado e altera cinematograficamente o período da experiência.
 - O presente possui identidade pós-colapso própria, com deserto, radiação, escassez e arquivos dos Connor envelhecidos.
 - Destinos, territórios e atividades atuais permanecerão classificados até a entrega da nova lore.
 

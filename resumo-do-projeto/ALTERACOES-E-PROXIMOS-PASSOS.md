@@ -46,6 +46,18 @@
 - Portal cinematográfico `ANT-DOOM-00` criado para conectar o site ao projeto Apocalipse/Doomsday.
 - Título da travessia ajustado para `DOOMS` em tonalidade fria e `DAY` em vermelho, na mesma linha.
 - Novo site `era-extincao-presente/` iniciado com abertura, estado do mundo, arquivos envelhecidos e caixa-preta.
+- Hierarquia do projeto invertida: o presente devastado tornou-se a entrada principal em `index.html`.
+- A abertura original da Mansão Connor foi preservada em `arquivo-passado.html` como portal para a juventude dos personagens.
+- Nova abertura do presente criada com despertar, telemetria, arquivos classificados, cursor de rastreamento e atmosfera de ferrugem, cinza e radiação.
+- Abertura do presente ampliada para uma sequência cinematográfica em cinco atos: transmissão encontrada, mundo anterior, Dia Zero, passagem dos anos e despertar na Era da Extinção.
+- Sequência recebeu barras de cinema, eclipse, impacto, ruínas, interferência, timecode, progresso, trilha opcional e controles para pular ou silenciar.
+- Letreiro principal do presente ganhou linguagem pós-apocalíptica de alto impacto: metal envelhecido, ferrugem, cortes internos, ecos tipográficos, linhas de velocidade e entrada por colisão.
+- Cenário `img-presente/destruicao.jpg` integrado ao menu principal com gradação, vinheta, fumaça, leitura protegida do letreiro e recorte responsivo; o arquivo atual possui indícios de marca d’água e deverá ser licenciado ou substituído antes do uso comercial.
+- Linha temporal interativa conecta Arquivos do Passado, Doomsday/Dia Zero e Era da Extinção/presente.
+- Seis arquivos envelhecidos dos Connor foram preparados sem inventar destinos antes da entrega da lore oficial.
+- O endereço anterior `era-extincao-presente/` agora redireciona para a raiz oficial.
+- Álbum “Operações Hellsings” adicionado à galeria com três cenas cinematográficas e dez retratos oficiais.
+- Retratos verticais de Boby, Naomi, Clhoe, Luke, Dimitri, Brian e Hellen corrigidos nos cards e dossiês mobile.
 
 ## Decisões visuais atuais
 
@@ -63,6 +75,6 @@
 4. Atualizar automaticamente as galerias quando novas imagens forem adicionadas.
 5. Revisar ortografia, nomes próprios e coerência geral após fechar o manuscrito.
 6. Receber a lore do presente: estado do mundo, destinos dos personagens, territórios, veículos e facções.
-7. Expandir o site `era-extincao-presente/` sem transformar possibilidades em fatos antes da definição do autor.
+7. Expandir a experiência principal do presente sem transformar possibilidades em fatos antes da definição do autor.
 
 Última atualização: 24 de agosto de 2026.
