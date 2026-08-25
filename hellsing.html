@@ -1,450 +1,614 @@
 <!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hellsings — Centro de Comando</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Cinzel:wght@400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="site-cursor.css" />
+    <link rel="stylesheet" href="site-transmission.css" />
+    <link rel="stylesheet" href="hellsings-command.css" />
+    <link rel="stylesheet" href="hellsings-cursor.css" />
+    <link rel="stylesheet" href="hellsings-opening.css" />
+    <link rel="stylesheet" href="hellsings-bunker.css" />
+    <link rel="stylesheet" href="hellsings-typography.css" />
+    <link rel="stylesheet" href="hellsings-system.css" />
+    <link rel="stylesheet" href="hellsings-immersive.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Hellsings — Centro de Comando</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Cinzel:wght@400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="site-cursor.css">
-  <link rel="stylesheet" href="site-transmission.css">
-  <link rel="stylesheet" href="hellsings-command.css">
-  <link rel="stylesheet" href="hellsings-cursor.css">
-  <link rel="stylesheet" href="hellsings-opening.css">
-  <link rel="stylesheet" href="hellsings-bunker.css">
-  <link rel="stylesheet" href="hellsings-typography.css">
-  <link rel="stylesheet" href="hellsings-system.css">
-  <link rel="stylesheet" href="hellsings-immersive.css">
-</head>
+  <body class="hls-opening-active">
+    <audio autoplay loop hidden>
+      <source src="audio/hellsing.mp3" type="audio/mpeg" />
+    </audio>
 
-<body class="hls-opening-active">
-
-  <audio autoplay loop hidden>
-    <source src="audio/hellsing.mp3" type="audio/mpeg" />
-  </audio>
-
-  <div class="hls-opening" id="hls-opening" role="dialog" aria-modal="true"
-    aria-label="Abertura cinematográfica dos Hellsings">
-    <div class="hls-opening-bunker" aria-hidden="true"></div>
-    <div class="hls-opening-grid"></div>
-    <div class="hls-opening-noise"></div>
-    <div class="hls-opening-scan"></div>
-    <div class="hls-opening-gates"><i></i><i></i></div>
-    <span class="hls-opening-corner hls-opening-corner--a">HLS // SECURE CHANNEL</span><span
-      class="hls-opening-corner hls-opening-corner--b">ACCESS LEVEL // OMEGA</span>
-    <div class="hls-opening-terminal" aria-live="polite"><span>INICIALIZANDO CANAL CRIPTOGRAFADO</span><strong
-        id="hls-opening-status">LOCALIZANDO ASSINATURAS...</strong></div>
-    <div class="hls-opening-signals" aria-hidden="true">
-      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="hls-opening-seal" aria-hidden="true">
-      <div class="hls-opening-orbit"></div><img class="hls-brand-emblem" src="img-hellsing/brand/hellsings-emblem.png"
-        alt=""><small>PRIVATE<br>OPERATIONS</small>
-    </div>
-    <div class="hls-opening-copy">
-      <p>UMA ORGANIZAÇÃO SEM BANDEIRA</p>
-      <h1 aria-label="HELLSINGS"><span style="--i:0">H</span><span style="--i:1">E</span><span
-          style="--i:2">L</span><span style="--i:3">L</span><span style="--i:4">S</span><span
-          style="--i:5">I</span><span style="--i:6">N</span><span style="--i:7">G</span><span style="--i:8">S</span>
-      </h1>
-      <div class="hls-opening-rule"></div><strong>Quando o sistema não pode agir,<br><em>nós entramos.</em></strong>
-    </div>
-    <button class="hls-opening-enter" type="button">ENTRAR NO CENTRO DE COMANDO <span>↗</span></button><button
-      class="hls-opening-skip" type="button">PULAR ABERTURA</button>
-    <div class="hls-opening-progress"><i></i></div>
-  </div>
-  <nav><a class="h-mark" href="#top"><i><img src="img-hellsing/brand/hellsings-emblem.png"
-          alt="Emblema dos Hellsings"></i><span>HELLSINGS<br><small>PRIVATE OPERATIONS</small></span></a>
-    <div><a href="#system">Sistema</a><a href="#mission-archive">Registros</a><a href="#secure-forum">Fórum</a><a
-        href="#hire-hellsings">Contrato</a><a href="#personnel">Equipe</a><a href="#bunker">Base</a></div><a
-      class="exit" href="telainicial.html">Sair do sistema ↗</a>
-  </nav>
-  <header class="command-hero" id="top"><canvas id="radar"></canvas>
-    <div class="hero-noise"></div>
-    <div class="classification">NÍVEL DE ACESSO <b>ÔMEGA</b></div>
-    <div class="hero-copy">
-      <p>ARQUIVO HLS / UNIDADE AUTÔNOMA</p>
-      <h1>NÃO SOMOS<br><span>HERÓIS.</span></h1>
-      <div class="hero-line"><i></i><b>Somos o que entra quando o sistema não pode.</b></div><a
-        href="#personnel">Acessar formação ↓</a>
-    </div>
-    <div class="hero-status"><span><i></i> SISTEMA ATIVO</span>
-      <dl>
-        <div>
-          <dt>COMANDO</dt>
-          <dd>J. CONNOR</dd>
-        </div>
-        <div>
-          <dt>AGENTES</dt>
-          <dd>10 ATIVOS</dd>
-        </div>
-        <div>
-          <dt>BASE</dt>
-          <dd>CLASSIFICADA</dd>
-        </div>
-        <div>
-          <dt>STATUS</dt>
-          <dd>OPERACIONAL</dd>
-        </div>
-      </dl>
-    </div>
-    <div class="scroll-code">HLS // 01 — 10</div>
-  </header>
-  <main>
-    <section class="manifesto" id="manifesto">
-      <div class="manifesto-index">01</div>
-      <div class="manifesto-title">
-        <p>IDENTIDADE DA ORGANIZAÇÃO</p>
-        <h2>Onde a lei termina,<br><em>o contrato começa.</em></h2>
+    <div
+      class="hls-opening"
+      id="hls-opening"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Abertura cinematográfica dos Hellsings"
+    >
+      <div class="hls-opening-bunker" aria-hidden="true"></div>
+      <div class="hls-opening-grid"></div>
+      <div class="hls-opening-noise"></div>
+      <div class="hls-opening-scan"></div>
+      <div class="hls-opening-gates"><i></i><i></i></div>
+      <span class="hls-opening-corner hls-opening-corner--a">HLS // SECURE CHANNEL</span
+      ><span class="hls-opening-corner hls-opening-corner--b">ACCESS LEVEL // OMEGA</span>
+      <div class="hls-opening-terminal" aria-live="polite">
+        <span>INICIALIZANDO CANAL CRIPTOGRAFADO</span
+        ><strong id="hls-opening-status">LOCALIZANDO ASSINATURAS...</strong>
       </div>
-      <div class="manifesto-copy">
-        <p>Fundados por <strong>Jack Connor</strong>, os Hellsings são uma unidade privada de operações especiais.
-          Trabalham onde governos, agências e estruturas convencionais não conseguem agir sem exposição.</p>
-        <p>Contrabando, armas, tráfico humano, tecnologia ilegal e redes clandestinas formam o território onde a equipe
-          opera. O pagamento abre a porta. O código decide se a missão será aceita.</p>
+      <div class="hls-opening-signals" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
       </div>
-    </section>
-    <section class="bunker" id="bunker">
-      <div class="bunker-entry bunker-reveal"><img src="img-bunker/entrada-secreta.png"
-          alt="Entrada secreta do bunker dos Hellsings">
-        <div class="bunker-entry-shade"></div><span class="bunker-coordinate">LOCALIZAÇÃO // CLASSIFICADA<br>ACESSO //
-          ÔMEGA</span>
-        <div class="bunker-entry-copy">
-          <p>01.5 / INSTALAÇÃO SUBTERRÂNEA</p>
-          <h2>Você não encontra<br><em>esta base.</em></h2><strong>Ela permite que você entre.</strong>
-        </div><i class="bunker-scanline"></i>
+      <div class="hls-opening-seal" aria-hidden="true">
+        <div class="hls-opening-orbit"></div>
+        <img class="hls-brand-emblem" src="img-hellsing/brand/hellsings-emblem.png" alt="" /><small
+          >PRIVATE<br />OPERATIONS</small
+        >
       </div>
-      <div class="bunker-intro bunker-reveal">
-        <div>
-          <p>ARQUIVO ESTRUTURAL // B-01</p>
-          <h3>O bunker<br>dos Hellsings.</h3>
-        </div>
-        <p>Oculto sob quilômetros de pedra e vegetação, o centro de operações concentra comando, inteligência, veículos,
-          armamentos e rotas de evacuação. Por fora, silêncio. Por dentro, uma organização inteira em movimento.</p>
+      <div class="hls-opening-copy">
+        <p>UMA ORGANIZAÇÃO SEM BANDEIRA</p>
+        <h1 aria-label="HELLSINGS">
+          <span style="--i: 0">H</span><span style="--i: 1">E</span><span style="--i: 2">L</span
+          ><span style="--i: 3">L</span><span style="--i: 4">S</span><span style="--i: 5">I</span
+          ><span style="--i: 6">N</span><span style="--i: 7">G</span><span style="--i: 8">S</span>
+        </h1>
+        <div class="hls-opening-rule"></div>
+        <strong>Quando o sistema não pode agir,<br /><em>nós entramos.</em></strong>
+      </div>
+      <button class="hls-opening-enter" type="button">
+        ENTRAR NO CENTRO DE COMANDO <span>↗</span></button
+      ><button class="hls-opening-skip" type="button">PULAR ABERTURA</button>
+      <div class="hls-opening-progress"><i></i></div>
+    </div>
+    <nav>
+      <a class="h-mark" href="#top"
+        ><i><img src="img-hellsing/brand/hellsings-emblem.png" alt="Emblema dos Hellsings" /></i
+        ><span>HELLSINGS<br /><small>PRIVATE OPERATIONS</small></span></a
+      >
+      <div>
+        <a href="#system">Sistema</a><a href="#mission-archive">Registros</a
+        ><a href="#secure-forum">Fórum</a><a href="#hire-hellsings">Contrato</a
+        ><a href="#personnel">Equipe</a><a href="#bunker">Base</a>
+      </div>
+      <a class="exit" href="telainicial.html">Sair do sistema ↗</a>
+    </nav>
+    <header class="command-hero" id="top">
+      <canvas id="radar"></canvas>
+      <div class="hero-noise"></div>
+      <div class="classification">NÍVEL DE ACESSO <b>ÔMEGA</b></div>
+      <div class="hero-copy">
+        <p>ARQUIVO HLS / UNIDADE AUTÔNOMA</p>
+        <h1>NÃO SOMOS<br /><span>HERÓIS.</span></h1>
+        <div class="hero-line"><i></i><b>Somos o que entra quando o sistema não pode.</b></div>
+        <a href="#personnel">Acessar formação ↓</a>
+      </div>
+      <div class="hero-status">
+        <span><i></i> SISTEMA ATIVO</span>
         <dl>
           <div>
-            <dt>NÍVEIS</dt>
-            <dd>CLASSIFICADO</dd>
+            <dt>COMANDO</dt>
+            <dd>J. CONNOR</dd>
           </div>
           <div>
-            <dt>ENERGIA</dt>
-            <dd>AUTÔNOMA</dd>
+            <dt>AGENTES</dt>
+            <dd>10 ATIVOS</dd>
           </div>
           <div>
-            <dt>ACESSOS</dt>
-            <dd>BIOMÉTRICOS</dd>
+            <dt>BASE</dt>
+            <dd>CLASSIFICADA</dd>
+          </div>
+          <div>
+            <dt>STATUS</dt>
+            <dd>OPERACIONAL</dd>
           </div>
         </dl>
       </div>
-      <div class="bunker-route">
-        <article class="bunker-frame bunker-frame--wide bunker-reveal"><img src="img-bunker/entrada-escritorio.png"
-            alt="Entrada do escritório no bunker"><span>SETOR 01</span>
-          <div><b>Comando e administração</b><small>Contratos · Inteligência · Coordenação</small></div>
-        </article>
-        <article class="bunker-frame bunker-reveal"><img src="img-bunker/corredor-para-outros-setores-subeterraneos.png"
-            alt="Corredor para setores subterrâneos"><span>SETOR 02</span>
-          <div><b>Corredor central</b><small>Distribuição subterrânea</small></div>
-        </article>
-        <article class="bunker-frame bunker-reveal"><img src="img-bunker/garagem-principal-subterranea.png"
-            alt="Garagem principal subterrânea"><span>SETOR 03</span>
-          <div><b>Garagem principal</b><small>Mobilização operacional</small></div>
-        </article>
-        <article class="bunker-frame bunker-frame--wide bunker-reveal"><img
-            src="img-bunker/corredor-secreto-garagem.png" alt="Corredor secreto para a garagem"><span>ROTA S-04</span>
-          <div><b>Passagem de emergência</b><small>Acesso restrito ao comando</small></div>
-        </article>
-        <article class="bunker-frame bunker-frame--wide bunker-reveal"><img src="img-bunker/garagem-secreta.png"
-            alt="Garagem secreta dos Hellsings"><span>SETOR 05</span>
-          <div><b>Garagem secreta</b><small>Extração · Contingência · Silêncio</small></div>
-        </article>
-      </div>
-      <div class="bunker-facilities bunker-reveal">
-        <header>
-          <div>
-            <p>MAPA INTERNO // SETORES 06—12</p>
-            <h3>Além das portas<br><em>de contenção.</em></h3>
-          </div><span>ARRASTE PARA EXPLORAR <i>→</i></span>
-        </header>
-        <div class="facility-track" aria-label="Ambientes internos do bunker">
-          <article><img src="img-bunker/salao-principal.png" alt="Salão principal do bunker"><span>06</span>
-            <div><b>Salão principal</b><small>Núcleo de circulação</small></div>
-          </article>
-          <article><img src="img-bunker/setor-de-operacoes.png" alt="Setor de operações dos Hellsings"><span>07</span>
-            <div><b>Setor de operações</b><small>Comando · Vigilância · Missões</small></div>
-          </article>
-          <article><img src="img-bunker/biblioteca-bunker.png" alt="Biblioteca do bunker"><span>08</span>
-            <div><b>Biblioteca</b><small>Arquivos · Pesquisa · Inteligência</small></div>
-          </article>
-          <article><img src="img-bunker/arsenal-bunker.png" alt="Arsenal do bunker"><span>09</span>
-            <div><b>Arsenal</b><small>Equipamento sob autorização</small></div>
-          </article>
-          <article><img src="img-bunker/enfermaria-bunker.png" alt="Enfermaria do bunker"><span>10</span>
-            <div><b>Enfermaria</b><small>Triagem · Cirurgia · Recuperação</small></div>
-          </article>
-          <article><img src="img-bunker/corredor-quartos-bunker.png" alt="Corredor dos alojamentos"><span>11</span>
-            <div><b>Alojamentos</b><small>Área privada dos agentes</small></div>
-          </article>
-          <article><img src="img-bunker/cozinha-dispensa-bunker.png" alt="Cozinha e despensa do bunker"><span>12</span>
-            <div><b>Cozinha e dispensa</b><small>Autonomia de longa permanência</small></div>
-          </article>
+      <div class="scroll-code">HLS // 01 — 10</div>
+    </header>
+    <main>
+      <section class="manifesto" id="manifesto">
+        <div class="manifesto-index">01</div>
+        <div class="manifesto-title">
+          <p>IDENTIDADE DA ORGANIZAÇÃO</p>
+          <h2>Onde a lei termina,<br /><em>o contrato começa.</em></h2>
         </div>
-      </div>
-    </section>
-    <section class="command-strip">
-      <span>INTELIGÊNCIA</span><i></i><span>INFILTRAÇÃO</span><i></i><span>CAMPO</span><i></i><span>TECNOLOGIA</span><i></i><span>MEDICINA</span><i></i><span>CONTRATOS</span>
-    </section>
-    <section class="hls-system" id="system">
-      <header class="system-heading system-reveal">
-        <div>
-          <p>REDE PRIVADA // VISÃO OPERACIONAL</p>
-          <h2>Sistema<br><em>Hellsings.</em></h2>
+        <div class="manifesto-copy">
+          <p>
+            Fundados por <strong>Jack Connor</strong>, os Hellsings são uma unidade privada de
+            operações especiais. Trabalham onde governos, agências e estruturas convencionais não
+            conseguem agir sem exposição.
+          </p>
+          <p>
+            Contrabando, armas, tráfico humano, tecnologia ilegal e redes clandestinas formam o
+            território onde a equipe opera. O pagamento abre a porta. O código decide se a missão
+            será aceita.
+          </p>
         </div>
-        <div class="system-clock"><span>HLS NETWORK TIME</span><strong id="hls-clock">00:00:00</strong><small>CANAL
-            CRIPTOGRAFADO · NÍVEL ÔMEGA</small></div>
-      </header>
-      <div class="command-dashboard system-reveal">
-        <article class="success-card"><span>TAXA DE SUCESSO</span><strong data-system-count="100">0</strong><i>%</i>
-          <div class="success-ring"></div>
-          <p>Nenhuma missão aceita permanece sem resolução.</p>
-        </article>
-        <article><span>OPERAÇÕES CONCLUÍDAS</span><strong class="classified-stat">████</strong><small>VOLUME
-            CLASSIFICADO</small></article>
-        <article><span>AGENTES DE CAMPO</span><strong data-system-count="9">0</strong><small>01 ADMINISTRAÇÃO</small>
-        </article>
-        <article><span>CONTRATOS RECUSADOS</span><strong class="classified-stat">████</strong><small>CÓDIGO INTERNO
-            VIOLADO</small></article>
-        <article class="system-map"><span>ATIVIDADE GLOBAL</span>
-          <div class="map-grid"><i style="--x:18%;--y:37%"></i><i style="--x:44%;--y:28%"></i><i
-              style="--x:63%;--y:55%"></i><i style="--x:78%;--y:31%"></i><i style="--x:51%;--y:72%"></i></div>
-          <small>CANAIS SOB MONITORAMENTO</small>
-        </article>
-      </div>
-      <section class="mission-archive system-reveal" id="mission-archive">
-        <header>
-          <div>
-            <p>ARQUIVO // OPERAÇÕES ENCERRADAS</p>
-            <h3>Registros de<br><em>missões.</em></h3>
+      </section>
+      <section class="bunker" id="bunker">
+        <div class="bunker-entry bunker-reveal">
+          <img src="img-bunker/entrada-secreta.png" alt="Entrada secreta do bunker dos Hellsings" />
+          <div class="bunker-entry-shade"></div>
+          <span class="bunker-coordinate">LOCALIZAÇÃO // CLASSIFICADA<br />ACESSO // ÔMEGA</span>
+          <div class="bunker-entry-copy">
+            <p>01.5 / INSTALAÇÃO SUBTERRÂNEA</p>
+            <h2>Você não encontra<br /><em>esta base.</em></h2>
+            <strong>Ela permite que você entre.</strong>
           </div>
-          <div class="mission-filters" role="group" aria-label="Filtrar registros"><button class="active"
-              data-mission-filter="all">Todos</button><button data-mission-filter="resgate">Resgate</button><button
-              data-mission-filter="infiltracao">Infiltração</button><button
-              data-mission-filter="intervencao">Intervenção</button></div>
-        </header>
-        <div class="mission-ledger"><button class="mission-record" data-type="resgate"
-            data-code="HLS-142"><span>HLS-142</span><b>Operação Farol</b><small>RESGATE · ATLÂNTICO
-              NORTE</small><i>CONCLUÍDA</i>
-            <p>Extração de civis mantidos em uma instalação marítima clandestina.</p>
-          </button><button class="mission-record" data-type="infiltracao"
-            data-code="HLS-139"><span>HLS-139</span><b>Arquivo Vesper</b><small>INFILTRAÇÃO ·
-              EUROPA</small><i>CONCLUÍDA</i>
-            <p>Recuperação silenciosa de registros ligados a uma rede internacional.</p>
-          </button><button class="mission-record" data-type="intervencao"
-            data-code="HLS-131"><span>HLS-131</span><b>Linha Vermelha</b><small>INTERVENÇÃO · LOCAL
-              CLASSIFICADO</small><i>CONCLUÍDA</i>
-            <p>Interrupção de uma transferência ilegal antes da dispersão da carga.</p>
-          </button><button class="mission-record" data-type="resgate" data-code="HLS-126"><span>HLS-126</span><b>Janela
-              de Cinzas</b><small>RESGATE · ÁSIA</small><i>CONCLUÍDA</i>
-            <p>Localização e retirada de testemunhas sob ameaça coordenada.</p>
-          </button><button class="mission-record" data-type="infiltracao"
-            data-code="HLS-118"><span>HLS-118</span><b>Silêncio de Vidro</b><small>INFILTRAÇÃO · AMÉRICA DO
-              SUL</small><i>CONCLUÍDA</i>
-            <p>Entrada sem exposição para copiar dados de uma célula clandestina.</p>
-          </button></div>
-        <div class="mission-detail" id="mission-detail" aria-live="polite"><span>SELECIONE UM
-            REGISTRO</span><strong>ARQUIVO PARCIALMENTE DESCLASSIFICADO</strong>
-          <p>Registros narrativos provisórios; poderão ser substituídos quando a história oficial for definida.</p>
+          <i class="bunker-scanline"></i>
         </div>
-      </section>
-      <section class="secure-forum system-reveal" id="secure-forum">
-        <header>
-          <p>HLS COMMS // CANAL INTERNO</p>
-          <h3>Fórum<br><em>seguro.</em></h3><span><i></i> 06 AGENTES CONECTADOS</span>
-        </header>
-        <div class="forum-shell">
-          <aside><button class="active" data-channel="command"># comando</button><button data-channel="operations">#
-              operações</button><button data-channel="intel"># inteligência</button><button data-channel="medical">#
-              enfermaria</button><small>COMUNICAÇÕES PROTEGIDAS<br>CHAVE ROTATIVA ATIVA</small></aside>
-          <div class="forum-feed" id="forum-feed" aria-live="polite"></div>
-        </div>
-      </section>
-      <section class="hire-hellsings system-reveal" id="hire-hellsings">
-        <div class="contract-intro">
-          <p>CANAL EXTERNO // NOVA SOLICITAÇÃO</p>
-          <h3>Acione os<br><em>Hellsings.</em></h3><span>Descreva o problema. Alice analisará se o contrato respeita o
-            código da organização.</span>
-          <ul>
-            <li>Nenhum inocente será usado como moeda.</li>
-            <li>Nenhum agente poderá ser comprado.</li>
-            <li>Solicitação não significa missão aceita.</li>
-          </ul>
-        </div>
-        <form class="contract-form" id="contract-form">
-          <div class="form-security"><i></i> FORMULÁRIO LOCAL · NENHUM DADO É ENVIADO</div><label>IDENTIFICAÇÃO OU
-            CODINOME<input name="alias" maxlength="40" required placeholder="Como devemos identificar você?"></label>
-          <div class="form-row"><label>TIPO DE OPERAÇÃO<select name="type" required>
-                <option value="">Selecione</option>
-                <option>Resgate</option>
-                <option>Rastreamento</option>
-                <option>Infiltração</option>
-                <option>Intervenção</option>
-                <option>Proteção</option>
-              </select></label><label>NÍVEL DE RISCO<select name="risk" required>
-                <option value="">Selecione</option>
-                <option>Moderado</option>
-                <option>Alto</option>
-                <option>Crítico</option>
-                <option>Ômega</option>
-              </select></label></div><label>REGIÃO DA OPERAÇÃO<input name="region" maxlength="60" required
-              placeholder="País, estado ou região geral"></label><label>RESUMO DO CASO<textarea name="brief"
-              maxlength="700" required
-              placeholder="Relate somente o necessário. Não inclua dados pessoais reais."></textarea><small><span
-                id="brief-count">0</span>/700</small></label><label class="contract-check"><input type="checkbox"
-              name="code" required><span>Confirmo que a solicitação não exige dano a inocentes e aceita o código
-              interno.</span></label><button type="submit">GERAR PRÉ-CONTRATO <i>↗</i></button>
-        </form>
-        <div class="contract-result" id="contract-result" aria-live="polite"><button type="button"
-            class="contract-result-close" aria-label="Fechar contrato">×</button><span>HELLSINGS // PRÉ-CONTRATO</span>
-          <h4 id="contract-protocol">HLS-000000</h4>
+        <div class="bunker-intro bunker-reveal">
+          <div>
+            <p>ARQUIVO ESTRUTURAL // B-01</p>
+            <h3>O bunker<br />dos Hellsings.</h3>
+          </div>
+          <p>
+            Oculto sob quilômetros de pedra e vegetação, o centro de operações concentra comando,
+            inteligência, veículos, armamentos e rotas de evacuação. Por fora, silêncio. Por dentro,
+            uma organização inteira em movimento.
+          </p>
           <dl>
             <div>
-              <dt>SOLICITANTE</dt>
-              <dd data-contract="alias"></dd>
+              <dt>NÍVEIS</dt>
+              <dd>CLASSIFICADO</dd>
             </div>
             <div>
-              <dt>OPERAÇÃO</dt>
-              <dd data-contract="type"></dd>
+              <dt>ENERGIA</dt>
+              <dd>AUTÔNOMA</dd>
             </div>
             <div>
-              <dt>RISCO</dt>
-              <dd data-contract="risk"></dd>
-            </div>
-            <div>
-              <dt>REGIÃO</dt>
-              <dd data-contract="region"></dd>
-            </div>
-            <div>
-              <dt>STATUS</dt>
-              <dd>AGUARDANDO ANÁLISE</dd>
+              <dt>ACESSOS</dt>
+              <dd>BIOMÉTRICOS</dd>
             </div>
           </dl>
-          <p data-contract="brief"></p><small>Este protocolo é uma experiência narrativa local. Nenhum pedido real foi
-            enviado.</small><button type="button" id="copy-contract">COPIAR PROTOCOLO</button>
+        </div>
+        <div class="bunker-route">
+          <article class="bunker-frame bunker-frame--wide bunker-reveal">
+            <img
+              src="img-bunker/entrada-escritorio.png"
+              alt="Entrada do escritório no bunker"
+            /><span>SETOR 01</span>
+            <div>
+              <b>Comando e administração</b><small>Contratos · Inteligência · Coordenação</small>
+            </div>
+          </article>
+          <article class="bunker-frame bunker-reveal">
+            <img
+              src="img-bunker/corredor-para-outros-setores-subeterraneos.png"
+              alt="Corredor para setores subterrâneos"
+            /><span>SETOR 02</span>
+            <div><b>Corredor central</b><small>Distribuição subterrânea</small></div>
+          </article>
+          <article class="bunker-frame bunker-reveal">
+            <img
+              src="img-bunker/garagem-principal-subterranea.png"
+              alt="Garagem principal subterrânea"
+            /><span>SETOR 03</span>
+            <div><b>Garagem principal</b><small>Mobilização operacional</small></div>
+          </article>
+          <article class="bunker-frame bunker-frame--wide bunker-reveal">
+            <img
+              src="img-bunker/corredor-secreto-garagem.png"
+              alt="Corredor secreto para a garagem"
+            /><span>ROTA S-04</span>
+            <div><b>Passagem de emergência</b><small>Acesso restrito ao comando</small></div>
+          </article>
+          <article class="bunker-frame bunker-frame--wide bunker-reveal">
+            <img src="img-bunker/garagem-secreta.png" alt="Garagem secreta dos Hellsings" /><span
+              >SETOR 05</span
+            >
+            <div><b>Garagem secreta</b><small>Extração · Contingência · Silêncio</small></div>
+          </article>
+        </div>
+        <div class="bunker-facilities bunker-reveal">
+          <header>
+            <div>
+              <p>MAPA INTERNO // SETORES 06—12</p>
+              <h3>Além das portas<br /><em>de contenção.</em></h3>
+            </div>
+            <span>ARRASTE PARA EXPLORAR <i>→</i></span>
+          </header>
+          <div class="facility-track" aria-label="Ambientes internos do bunker">
+            <article>
+              <img src="img-bunker/salao-principal.png" alt="Salão principal do bunker" /><span
+                >06</span
+              >
+              <div><b>Salão principal</b><small>Núcleo de circulação</small></div>
+            </article>
+            <article>
+              <img
+                src="img-bunker/setor-de-operacoes.png"
+                alt="Setor de operações dos Hellsings"
+              /><span>07</span>
+              <div><b>Setor de operações</b><small>Comando · Vigilância · Missões</small></div>
+            </article>
+            <article>
+              <img src="img-bunker/biblioteca-bunker.png" alt="Biblioteca do bunker" /><span
+                >08</span
+              >
+              <div><b>Biblioteca</b><small>Arquivos · Pesquisa · Inteligência</small></div>
+            </article>
+            <article>
+              <img src="img-bunker/arsenal-bunker.png" alt="Arsenal do bunker" /><span>09</span>
+              <div><b>Arsenal</b><small>Equipamento sob autorização</small></div>
+            </article>
+            <article>
+              <img src="img-bunker/enfermaria-bunker.png" alt="Enfermaria do bunker" /><span
+                >10</span
+              >
+              <div><b>Enfermaria</b><small>Triagem · Cirurgia · Recuperação</small></div>
+            </article>
+            <article>
+              <img
+                src="img-bunker/corredor-quartos-bunker.png"
+                alt="Corredor dos alojamentos"
+              /><span>11</span>
+              <div><b>Alojamentos</b><small>Área privada dos agentes</small></div>
+            </article>
+            <article>
+              <img
+                src="img-bunker/cozinha-dispensa-bunker.png"
+                alt="Cozinha e despensa do bunker"
+              /><span>12</span>
+              <div><b>Cozinha e dispensa</b><small>Autonomia de longa permanência</small></div>
+            </article>
+          </div>
         </div>
       </section>
-    </section>
-    <section class="personnel" id="personnel">
-      <div class="section-head">
+      <section class="command-strip">
+        <span>INTELIGÊNCIA</span><i></i><span>INFILTRAÇÃO</span><i></i><span>CAMPO</span><i></i
+        ><span>TECNOLOGIA</span><i></i><span>MEDICINA</span><i></i><span>CONTRATOS</span>
+      </section>
+      <section class="hls-system" id="system">
+        <header class="system-heading system-reveal">
+          <div>
+            <p>REDE PRIVADA // VISÃO OPERACIONAL</p>
+            <h2>Sistema<br /><em>Hellsings.</em></h2>
+          </div>
+          <div class="system-clock">
+            <span>HLS NETWORK TIME</span><strong id="hls-clock">00:00:00</strong
+            ><small>CANAL CRIPTOGRAFADO · NÍVEL ÔMEGA</small>
+          </div>
+        </header>
+        <div class="command-dashboard system-reveal">
+          <article class="success-card">
+            <span>TAXA DE SUCESSO</span><strong data-system-count="100">0</strong><i>%</i>
+            <div class="success-ring"></div>
+            <p>Nenhuma missão aceita permanece sem resolução.</p>
+          </article>
+          <article>
+            <span>OPERAÇÕES CONCLUÍDAS</span><strong class="classified-stat">████</strong
+            ><small>VOLUME CLASSIFICADO</small>
+          </article>
+          <article>
+            <span>AGENTES DE CAMPO</span><strong data-system-count="9">0</strong
+            ><small>01 ADMINISTRAÇÃO</small>
+          </article>
+          <article>
+            <span>CONTRATOS RECUSADOS</span><strong class="classified-stat">████</strong
+            ><small>CÓDIGO INTERNO VIOLADO</small>
+          </article>
+          <article class="system-map">
+            <span>ATIVIDADE GLOBAL</span>
+            <div class="map-grid">
+              <i style="--x: 18%; --y: 37%"></i><i style="--x: 44%; --y: 28%"></i
+              ><i style="--x: 63%; --y: 55%"></i><i style="--x: 78%; --y: 31%"></i
+              ><i style="--x: 51%; --y: 72%"></i>
+            </div>
+            <small>CANAIS SOB MONITORAMENTO</small>
+          </article>
+        </div>
+        <section class="mission-archive system-reveal" id="mission-archive">
+          <header>
+            <div>
+              <p>ARQUIVO // OPERAÇÕES ENCERRADAS</p>
+              <h3>Registros de<br /><em>missões.</em></h3>
+            </div>
+            <div class="mission-filters" role="group" aria-label="Filtrar registros">
+              <button class="active" data-mission-filter="all">Todos</button
+              ><button data-mission-filter="resgate">Resgate</button
+              ><button data-mission-filter="infiltracao">Infiltração</button
+              ><button data-mission-filter="intervencao">Intervenção</button>
+            </div>
+          </header>
+          <div class="mission-ledger">
+            <button class="mission-record" data-type="resgate" data-code="HLS-142">
+              <span>HLS-142</span><b>Operação Farol</b><small>RESGATE · ATLÂNTICO NORTE</small
+              ><i>CONCLUÍDA</i>
+              <p>Extração de civis mantidos em uma instalação marítima clandestina.</p></button
+            ><button class="mission-record" data-type="infiltracao" data-code="HLS-139">
+              <span>HLS-139</span><b>Arquivo Vesper</b><small>INFILTRAÇÃO · EUROPA</small
+              ><i>CONCLUÍDA</i>
+              <p>Recuperação silenciosa de registros ligados a uma rede internacional.</p></button
+            ><button class="mission-record" data-type="intervencao" data-code="HLS-131">
+              <span>HLS-131</span><b>Linha Vermelha</b
+              ><small>INTERVENÇÃO · LOCAL CLASSIFICADO</small><i>CONCLUÍDA</i>
+              <p>Interrupção de uma transferência ilegal antes da dispersão da carga.</p></button
+            ><button class="mission-record" data-type="resgate" data-code="HLS-126">
+              <span>HLS-126</span><b>Janela de Cinzas</b><small>RESGATE · ÁSIA</small
+              ><i>CONCLUÍDA</i>
+              <p>Localização e retirada de testemunhas sob ameaça coordenada.</p></button
+            ><button class="mission-record" data-type="infiltracao" data-code="HLS-118">
+              <span>HLS-118</span><b>Silêncio de Vidro</b><small>INFILTRAÇÃO · AMÉRICA DO SUL</small
+              ><i>CONCLUÍDA</i>
+              <p>Entrada sem exposição para copiar dados de uma célula clandestina.</p>
+            </button>
+          </div>
+          <div class="mission-detail" id="mission-detail" aria-live="polite">
+            <span>SELECIONE UM REGISTRO</span><strong>ARQUIVO PARCIALMENTE DESCLASSIFICADO</strong>
+            <p>
+              Registros narrativos provisórios; poderão ser substituídos quando a história oficial
+              for definida.
+            </p>
+          </div>
+        </section>
+        <section class="secure-forum system-reveal" id="secure-forum">
+          <header>
+            <p>HLS COMMS // CANAL INTERNO</p>
+            <h3>Fórum<br /><em>seguro.</em></h3>
+            <span><i></i> 06 AGENTES CONECTADOS</span>
+          </header>
+          <div class="forum-shell">
+            <aside>
+              <button class="active" data-channel="command"># comando</button
+              ><button data-channel="operations"># operações</button
+              ><button data-channel="intel"># inteligência</button
+              ><button data-channel="medical"># enfermaria</button
+              ><small>COMUNICAÇÕES PROTEGIDAS<br />CHAVE ROTATIVA ATIVA</small>
+            </aside>
+            <div class="forum-feed" id="forum-feed" aria-live="polite"></div>
+          </div>
+        </section>
+        <section class="hire-hellsings system-reveal" id="hire-hellsings">
+          <div class="contract-intro">
+            <p>CANAL EXTERNO // NOVA SOLICITAÇÃO</p>
+            <h3>Acione os<br /><em>Hellsings.</em></h3>
+            <span
+              >Descreva o problema. Alice analisará se o contrato respeita o código da
+              organização.</span
+            >
+            <ul>
+              <li>Nenhum inocente será usado como moeda.</li>
+              <li>Nenhum agente poderá ser comprado.</li>
+              <li>Solicitação não significa missão aceita.</li>
+            </ul>
+          </div>
+          <form class="contract-form" id="contract-form">
+            <div class="form-security"><i></i> FORMULÁRIO LOCAL · NENHUM DADO É ENVIADO</div>
+            <label
+              >IDENTIFICAÇÃO OU CODINOME<input
+                name="alias"
+                maxlength="40"
+                required
+                placeholder="Como devemos identificar você?"
+            /></label>
+            <div class="form-row">
+              <label
+                >TIPO DE OPERAÇÃO<select name="type" required>
+                  <option value="">Selecione</option>
+                  <option>Resgate</option>
+                  <option>Rastreamento</option>
+                  <option>Infiltração</option>
+                  <option>Intervenção</option>
+                  <option>Proteção</option>
+                </select></label
+              ><label
+                >NÍVEL DE RISCO<select name="risk" required>
+                  <option value="">Selecione</option>
+                  <option>Moderado</option>
+                  <option>Alto</option>
+                  <option>Crítico</option>
+                  <option>Ômega</option>
+                </select></label
+              >
+            </div>
+            <label
+              >REGIÃO DA OPERAÇÃO<input
+                name="region"
+                maxlength="60"
+                required
+                placeholder="País, estado ou região geral" /></label
+            ><label
+              >RESUMO DO CASO<textarea
+                name="brief"
+                maxlength="700"
+                required
+                placeholder="Relate somente o necessário. Não inclua dados pessoais reais."
+              ></textarea
+              ><small><span id="brief-count">0</span>/700</small></label
+            ><label class="contract-check"
+              ><input type="checkbox" name="code" required /><span
+                >Confirmo que a solicitação não exige dano a inocentes e aceita o código
+                interno.</span
+              ></label
+            ><button type="submit">GERAR PRÉ-CONTRATO <i>↗</i></button>
+          </form>
+          <div class="contract-result" id="contract-result" aria-live="polite">
+            <button type="button" class="contract-result-close" aria-label="Fechar contrato">
+              ×</button
+            ><span>HELLSINGS // PRÉ-CONTRATO</span>
+            <h4 id="contract-protocol">HLS-000000</h4>
+            <dl>
+              <div>
+                <dt>SOLICITANTE</dt>
+                <dd data-contract="alias"></dd>
+              </div>
+              <div>
+                <dt>OPERAÇÃO</dt>
+                <dd data-contract="type"></dd>
+              </div>
+              <div>
+                <dt>RISCO</dt>
+                <dd data-contract="risk"></dd>
+              </div>
+              <div>
+                <dt>REGIÃO</dt>
+                <dd data-contract="region"></dd>
+              </div>
+              <div>
+                <dt>STATUS</dt>
+                <dd>AGUARDANDO ANÁLISE</dd>
+              </div>
+            </dl>
+            <p data-contract="brief"></p>
+            <small
+              >Este protocolo é uma experiência narrativa local. Nenhum pedido real foi
+              enviado.</small
+            ><button type="button" id="copy-contract">COPIAR PROTOCOLO</button>
+          </div>
+        </section>
+      </section>
+      <section class="personnel" id="personnel">
+        <div class="section-head">
+          <div>
+            <p>02 / FORMAÇÃO OFICIAL</p>
+            <h2>Dez identidades.<br /><em>Uma unidade.</em></h2>
+          </div>
+          <div>
+            <span class="live-dot"></span><b>10 DOSSIÊS ATIVOS</b>
+            <p>
+              Os retratos permanecem classificados. Cada agente é representado por assinatura
+              cromática e leitura biométrica provisória.
+            </p>
+          </div>
+        </div>
+        <div class="roster" id="roster"></div>
+      </section>
+      <section class="alice-directive">
+        <div class="directive-code">ADM<br />00</div>
         <div>
-          <p>02 / FORMAÇÃO OFICIAL</p>
-          <h2>Dez identidades.<br><em>Uma unidade.</em></h2>
+          <p>DIRETRIZ ESPECIAL / ALICE MYERS</p>
+          <h2>A operação começa<br />antes do campo.</h2>
         </div>
-        <div><span class="live-dot"></span><b>10 DOSSIÊS ATIVOS</b>
-          <p>Os retratos permanecem classificados. Cada agente é representado por assinatura cromática e leitura
-            biométrica provisória.</p>
-        </div>
-      </div>
-      <div class="roster" id="roster"></div>
-    </section>
-    <section class="alice-directive">
-      <div class="directive-code">ADM<br>00</div>
-      <div>
-        <p>DIRETRIZ ESPECIAL / ALICE MYERS</p>
-        <h2>A operação começa<br>antes do campo.</h2>
-      </div>
-      <div><strong>STATUS: NÃO OPERACIONAL EM CAMPO</strong>
-        <p>Alice não acompanha mais as missões. Ela administra os Hellsings, analisa clientes, negocia contratos,
-          controla recursos e protege a organização antes que qualquer agente atravesse a porta.</p>
-        <ul>
-          <li>Contratos e clientes</li>
-          <li>Administração financeira</li>
-          <li>Coordenação médica</li>
-          <li>Autorização operacional</li>
-        </ul>
-      </div>
-    </section>
-    <section class="operations" id="operations">
-      <div class="section-head">
         <div>
-          <p>03 / ESCOPO DE ATUAÇÃO</p>
-          <h2>O território<br><em>sem bandeira.</em></h2>
+          <strong>STATUS: NÃO OPERACIONAL EM CAMPO</strong>
+          <p>
+            Alice não acompanha mais as missões. Ela administra os Hellsings, analisa clientes,
+            negocia contratos, controla recursos e protege a organização antes que qualquer agente
+            atravesse a porta.
+          </p>
+          <ul>
+            <li>Contratos e clientes</li>
+            <li>Administração financeira</li>
+            <li>Coordenação médica</li>
+            <li>Autorização operacional</li>
+          </ul>
         </div>
-        <div><b>MISSÕES SOB CONTRATO</b>
-          <p>Cada ação passa pelo comando, pela administração e pelo código interno.</p>
+      </section>
+      <section class="operations" id="operations">
+        <div class="section-head">
+          <div>
+            <p>03 / ESCOPO DE ATUAÇÃO</p>
+            <h2>O território<br /><em>sem bandeira.</em></h2>
+          </div>
+          <div>
+            <b>MISSÕES SOB CONTRATO</b>
+            <p>Cada ação passa pelo comando, pela administração e pelo código interno.</p>
+          </div>
         </div>
+        <div class="operation-grid">
+          <article>
+            <span>OP / 01</span><i>⌖</i>
+            <h3>Contrabando</h3>
+            <p>Interrupção de rotas de drogas, armas, pessoas e tecnologia ilegal.</p>
+          </article>
+          <article>
+            <span>OP / 02</span><i>◎</i>
+            <h3>Rastreamento</h3>
+            <p>Localização de alvos, cargas, redes e conexões desaparecidas.</p>
+          </article>
+          <article>
+            <span>OP / 03</span><i>◇</i>
+            <h3>Infiltração</h3>
+            <p>Entrada silenciosa, inteligência humana e extração sem exposição.</p>
+          </article>
+          <article>
+            <span>OP / 04</span><i>△</i>
+            <h3>Intervenção</h3>
+            <p>Resposta tática quando forças regulares não podem ser associadas à missão.</p>
+          </article>
+        </div>
+      </section>
+      <section class="protocol" id="protocol">
+        <div class="protocol-copy">
+          <p>04 / CÓDIGO INTERNO</p>
+          <h2>O contrato paga.<br /><em>O código governa.</em></h2>
+          <span>As regras abaixo sustentam a organização acima de qualquer cliente ou agente.</span>
+        </div>
+        <ol>
+          <li>
+            <b>01</b>
+            <div>
+              <strong>Nenhuma vida inocente é moeda.</strong>
+              <p>
+                Uma missão é recusada quando o objetivo exige vítimas que não escolheram o conflito.
+              </p>
+            </div>
+          </li>
+          <li>
+            <b>02</b>
+            <div>
+              <strong>Nenhum agente está à venda.</strong>
+              <p>
+                O cliente contrata a organização. Lealdades individuais não fazem parte do contrato.
+              </p>
+            </div>
+          </li>
+          <li>
+            <b>03</b>
+            <div>
+              <strong>Missão aceita é missão concluída.</strong>
+              <p>
+                O compromisso termina apenas quando o objetivo é cumprido ou o comando encerra a
+                operação.
+              </p>
+            </div>
+          </li>
+          <li>
+            <b>04</b>
+            <div>
+              <strong>A família permanece fora.</strong>
+              <p>
+                Os Hellsings nunca são usados como instrumento de disputas pessoais ou familiares.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <div class="h-mark">
+        <i><img src="img-hellsing/brand/hellsings-emblem.png" alt="Emblema dos Hellsings" /></i
+        ><span>HELLSINGS</span>
       </div>
-      <div class="operation-grid">
-        <article><span>OP / 01</span><i>⌖</i>
-          <h3>Contrabando</h3>
-          <p>Interrupção de rotas de drogas, armas, pessoas e tecnologia ilegal.</p>
-        </article>
-        <article><span>OP / 02</span><i>◎</i>
-          <h3>Rastreamento</h3>
-          <p>Localização de alvos, cargas, redes e conexões desaparecidas.</p>
-        </article>
-        <article><span>OP / 03</span><i>◇</i>
-          <h3>Infiltração</h3>
-          <p>Entrada silenciosa, inteligência humana e extração sem exposição.</p>
-        </article>
-        <article><span>OP / 04</span><i>△</i>
-          <h3>Intervenção</h3>
-          <p>Resposta tática quando forças regulares não podem ser associadas à missão.</p>
-        </article>
+      <p>Uma organização criada por Jack Connor.<br />Dez agentes. Um comando. Nenhuma bandeira.</p>
+      <a href="telainicial.html">Retornar à Era da Extinção ↑</a>
+    </footer>
+    <dialog id="dossier">
+      <button class="dossier-close">×</button>
+      <div class="dossier-visual"></div>
+      <div class="dossier-info">
+        <span></span>
+        <h2></h2>
+        <h3></h3>
+        <p></p>
+        <div class="dossier-tags"></div>
+        <small>INFORMAÇÕES PARCIAIS // ARQUIVO EM CONSTRUÇÃO</small>
       </div>
-    </section>
-    <section class="protocol" id="protocol">
-      <div class="protocol-copy">
-        <p>04 / CÓDIGO INTERNO</p>
-        <h2>O contrato paga.<br><em>O código governa.</em></h2><span>As regras abaixo sustentam a organização acima de
-          qualquer cliente ou agente.</span>
-      </div>
-      <ol>
-        <li><b>01</b>
-          <div><strong>Nenhuma vida inocente é moeda.</strong>
-            <p>Uma missão é recusada quando o objetivo exige vítimas que não escolheram o conflito.</p>
-          </div>
-        </li>
-        <li><b>02</b>
-          <div><strong>Nenhum agente está à venda.</strong>
-            <p>O cliente contrata a organização. Lealdades individuais não fazem parte do contrato.</p>
-          </div>
-        </li>
-        <li><b>03</b>
-          <div><strong>Missão aceita é missão concluída.</strong>
-            <p>O compromisso termina apenas quando o objetivo é cumprido ou o comando encerra a operação.</p>
-          </div>
-        </li>
-        <li><b>04</b>
-          <div><strong>A família permanece fora.</strong>
-            <p>Os Hellsings nunca são usados como instrumento de disputas pessoais ou familiares.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-  </main>
-  <footer>
-    <div class="h-mark"><i><img src="img-hellsing/brand/hellsings-emblem.png"
-          alt="Emblema dos Hellsings"></i><span>HELLSINGS</span></div>
-    <p>Uma organização criada por Jack Connor.<br>Dez agentes. Um comando. Nenhuma bandeira.</p><a
-      href="telainicial.html">Retornar à Era da Extinção ↑</a>
-  </footer>
-  <dialog id="dossier"><button class="dossier-close">×</button>
-    <div class="dossier-visual"></div>
-    <div class="dossier-info"><span></span>
-      <h2></h2>
-      <h3></h3>
-      <p></p>
-      <div class="dossier-tags"></div><small>INFORMAÇÕES PARCIAIS // ARQUIVO EM CONSTRUÇÃO</small>
-    </div>
-  </dialog>
-  <script src="site-cursor.js" defer></script>
-  <script src="site-transmission.js" defer></script>
-  <script src="hellsings-opening.js" defer></script>
-  <script src="hellsings-command.js" defer></script>
-  <script src="hellsings-bunker.js" defer></script>
-  <script src="hellsings-system.js" defer></script>
-  <script src="hellsings-typography.js" defer></script>
-  <script src="hellsings-immersive.js" defer></script>
-</body>
-
+    </dialog>
+    <script src="site-cursor.js" defer></script>
+    <script src="site-transmission.js" defer></script>
+    <script src="hellsings-opening.js" defer></script>
+    <script src="hellsings-command.js" defer></script>
+    <script src="hellsings-bunker.js" defer></script>
+    <script src="hellsings-system.js" defer></script>
+    <script src="hellsings-typography.js" defer></script>
+    <script src="hellsings-immersive.js" defer></script>
+  </body>
 </html>

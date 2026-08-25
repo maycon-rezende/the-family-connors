@@ -18,15 +18,22 @@
     if (!title || title.querySelector('.title-letter')) return;
     const lines = ['A ERA DA', 'EXTINÇÃO'];
     title.setAttribute('aria-label', lines.join(' '));
-    title.innerHTML = lines.map((line, lineIndex) => {
-      const letters = Array.from(line).map((letter, letterIndex) => {
-        const delay = lineIndex * 8 + letterIndex;
-        const content = letter === ' ' ? '&nbsp;' : letter;
-        const dust = letter === ' ' ? '' : '<span class="letter-dust"><i></i><i></i><i></i><i></i><i></i><i></i></span>';
-        return `<span class="title-letter" style="--letter:${delay}" aria-hidden="true">${content}${dust}</span>`;
-      }).join('');
-      return `<span class="title-line title-line--${lineIndex + 1}">${letters}</span>`;
-    }).join('');
+    title.innerHTML = lines
+      .map((line, lineIndex) => {
+        const letters = Array.from(line)
+          .map((letter, letterIndex) => {
+            const delay = lineIndex * 8 + letterIndex;
+            const content = letter === ' ' ? '&nbsp;' : letter;
+            const dust =
+              letter === ' '
+                ? ''
+                : '<span class="letter-dust"><i></i><i></i><i></i><i></i><i></i><i></i></span>';
+            return `<span class="title-letter" style="--letter:${delay}" aria-hidden="true">${content}${dust}</span>`;
+          })
+          .join('');
+        return `<span class="title-line title-line--${lineIndex + 1}">${letters}</span>`;
+      })
+      .join('');
   }
 
   function createAmbientDust() {
@@ -45,7 +52,7 @@
       mote.style.setProperty('--dust-delay', `${-Math.random() * 18}s`);
       mote.style.setProperty('--dust-duration', `${12 + depth * 5 + Math.random() * 9}s`);
       mote.style.setProperty('--dust-drift', `${-45 + Math.random() * 90}px`);
-      mote.style.setProperty('--dust-opacity', `${.12 + depth * .09 + Math.random() * .2}`);
+      mote.style.setProperty('--dust-opacity', `${0.12 + depth * 0.09 + Math.random() * 0.2}`);
       layer.appendChild(mote);
     }
 
@@ -73,7 +80,10 @@
     beats.forEach((beat, beatIndex) => beat.classList.toggle('is-active', beatIndex === index));
     current = index;
     window.clearTimeout(timer);
-    timer = window.setTimeout(index < beats.length - 1 ? () => showBeat(index + 1) : finish, beatDuration);
+    timer = window.setTimeout(
+      index < beats.length - 1 ? () => showBeat(index + 1) : finish,
+      beatDuration
+    );
   }
 
   function finish() {
@@ -82,7 +92,7 @@
     window.clearTimeout(timer);
     intro.classList.add('is-leaving');
     document.body.classList.add('intro-complete');
-    fadeVolume(.58, reducedMotion ? 300 : 3600);
+    fadeVolume(0.58, reducedMotion ? 300 : 3600);
     window.setTimeout(() => intro.remove(), 1200);
     document.getElementById('enter-btn')?.focus({ preventScroll: true });
   }
@@ -94,7 +104,7 @@
         audio.volume = 0;
         await audio.play();
       }
-      fadeVolume(finished ? .58 : .16, finished ? 1800 : 2400);
+      fadeVolume(finished ? 0.58 : 0.16, finished ? 1800 : 2400);
     } catch (_) {
       // Autoplay pode ser bloqueado; a primeira interação destrava a trilha.
     }
@@ -104,7 +114,7 @@
   const unlockSound = () => startSound();
   document.addEventListener('pointerdown', unlockSound, { once: true });
   document.addEventListener('keydown', unlockSound, { once: true });
-  document.addEventListener('keydown', event => {
+  document.addEventListener('keydown', (event) => {
     if (finished || !introStarted) return;
     if (event.key === 'Escape') finish();
     if (event.key === 'ArrowRight') showBeat(Math.min(current + 1, beats.length - 1));

@@ -28,24 +28,30 @@
   const travel = () => {
     crossing.classList.add('is-departing');
     sessionStorage.setItem('connor_doomsday_crossing', 'ANT-DOOM-00');
-    timers.push(setTimeout(() => location.href = destination, reduced ? 120 : 720));
+    timers.push(setTimeout(() => (location.href = destination), reduced ? 120 : 720));
   };
 
-  portal.addEventListener('click', event => {
+  portal.addEventListener('click', (event) => {
     event.preventDefault();
     destination = portal.href;
     document.body.style.overflow = 'hidden';
     crossing.classList.add('is-active');
     crossing.setAttribute('aria-hidden', 'false');
     skip.focus();
-    if (reduced) { status.textContent = 'Arquivo autenticado. Abrindo o Dia Zero...'; timers.push(setTimeout(travel, 500)); return; }
+    if (reduced) {
+      status.textContent = 'Arquivo autenticado. Abrindo o Dia Zero...';
+      timers.push(setTimeout(travel, 500));
+      return;
+    }
     const messages = [
       [850, 'Assinatura biológica localizada sob o gelo...'],
       [1650, 'Linha Connor sincronizada com o Dia Zero...'],
       [2450, 'Civilização restante: 02%...'],
-      [3200, 'Arquivo autenticado. Abrindo a última manhã...']
+      [3200, 'Arquivo autenticado. Abrindo a última manhã...'],
     ];
-    messages.forEach(([delay, text]) => timers.push(setTimeout(() => status.textContent = text, delay)));
+    messages.forEach(([delay, text]) =>
+      timers.push(setTimeout(() => (status.textContent = text), delay))
+    );
     timers.push(setTimeout(travel, 3900));
   });
   skip.addEventListener('click', travel);

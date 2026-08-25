@@ -10,6 +10,10 @@
     });
   });
   dialog.querySelector('.close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-  addEventListener('keydown', event => { if (event.key === 'Escape' && dialog.open) dialog.close(); });
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && dialog.open) dialog.close();
+  });
 })();

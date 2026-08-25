@@ -1,15 +1,153 @@
 /* Cursor Hellsings — sistema de mira e aquisição de alvo */
-.connor-cursor-core{width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:0;background:#d9ed69;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);box-shadow:0 0 7px #bbd64a,0 0 18px rgba(187,214,74,.65);transition:width .18s,height .18s,margin .18s,background .18s,filter .18s}
-.connor-cursor-ring{width:46px;height:46px;margin:-23px 0 0 -23px;border:0;border-radius:50%;background:conic-gradient(from 0deg,#bbd64a 0 22deg,transparent 22deg 82deg,#bbd64a 82deg 98deg,transparent 98deg 172deg,#bbd64a 172deg 202deg,transparent 202deg 266deg,#bbd64a 266deg 282deg,transparent 282deg 350deg,#bbd64a 350deg);box-shadow:none;animation:hlsTargetRotate 7s linear infinite;transition:width .25s,height .25s,margin .25s,filter .2s}
-.connor-cursor-ring::before{width:28px;height:28px;left:8px;top:8px;border:1px solid rgba(187,214,74,.52);border-radius:50%;background:linear-gradient(90deg,transparent 48%,rgba(187,214,74,.24) 49% 51%,transparent 52%),linear-gradient(transparent 48%,rgba(187,214,74,.24) 49% 51%,transparent 52%);box-shadow:0 0 13px rgba(187,214,74,.12)}
-.connor-cursor-ring::after{width:3px;height:3px;left:21px;top:-6px;border-radius:0;background:#bbd64a;box-shadow:0 55px #bbd64a,-27px 27px #bbd64a,27px 27px #bbd64a}
-.connor-cursor-ring.is-interactive{width:62px;height:62px;margin:-31px 0 0 -31px;border:0;background:conic-gradient(#b83b32 0 34deg,transparent 34deg 90deg,#b83b32 90deg 124deg,transparent 124deg 180deg,#b83b32 180deg 214deg,transparent 214deg 270deg,#b83b32 270deg 304deg,transparent 304deg);filter:drop-shadow(0 0 6px rgba(184,59,50,.6));animation-duration:2.2s}
-.connor-cursor-ring.is-interactive::before{left:16px;top:16px;border-color:rgba(184,59,50,.85);background:linear-gradient(90deg,transparent 48%,rgba(184,59,50,.35) 49% 51%,transparent 52%),linear-gradient(transparent 48%,rgba(184,59,50,.35) 49% 51%,transparent 52%)}
-.connor-cursor-ring.is-interactive::after{left:29px;top:-5px;background:#b83b32;box-shadow:0 67px #b83b32,-34px 34px #b83b32,34px 34px #b83b32}
-.connor-cursor-core.is-interactive{width:8px;height:8px;margin:-4px 0 0 -4px;background:#ff6658;box-shadow:0 0 8px #b83b32,0 0 20px rgba(184,59,50,.8)}
-.connor-cursor-ring.is-view{width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;border:0}.connor-cursor-ring.is-view::before{left:22px;top:22px}
-.connor-cursor-ring.is-down{width:30px;height:30px;margin:-15px 0 0 -15px;filter:brightness(1.7) drop-shadow(0 0 7px #b83b32)}
-.connor-cursor-dust{width:var(--size);height:2px;border-radius:0;background:#bbd64a;box-shadow:0 0 6px rgba(187,214,74,.7);clip-path:polygon(0 0,100% 50%,0 100%)}
-.connor-cursor-impact{border:1px solid #b83b32;border-radius:0;transform:rotate(45deg);box-shadow:0 0 12px rgba(184,59,50,.65)}
-@keyframes hlsTargetRotate{to{rotate:360deg}}
-@media(prefers-reduced-motion:reduce){.connor-cursor-ring{animation:none}}
+.connor-cursor-core {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 0;
+  background: #d9ed69;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  box-shadow:
+    0 0 7px #bbd64a,
+    0 0 18px rgba(187, 214, 74, 0.65);
+  transition:
+    width 0.18s,
+    height 0.18s,
+    margin 0.18s,
+    background 0.18s,
+    filter 0.18s;
+}
+.connor-cursor-ring {
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #bbd64a 0 22deg,
+    transparent 22deg 82deg,
+    #bbd64a 82deg 98deg,
+    transparent 98deg 172deg,
+    #bbd64a 172deg 202deg,
+    transparent 202deg 266deg,
+    #bbd64a 266deg 282deg,
+    transparent 282deg 350deg,
+    #bbd64a 350deg
+  );
+  box-shadow: none;
+  animation: hlsTargetRotate 7s linear infinite;
+  transition:
+    width 0.25s,
+    height 0.25s,
+    margin 0.25s,
+    filter 0.2s;
+}
+.connor-cursor-ring::before {
+  width: 28px;
+  height: 28px;
+  left: 8px;
+  top: 8px;
+  border: 1px solid rgba(187, 214, 74, 0.52);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(187, 214, 74, 0.24) 49% 51%, transparent 52%),
+    linear-gradient(transparent 48%, rgba(187, 214, 74, 0.24) 49% 51%, transparent 52%);
+  box-shadow: 0 0 13px rgba(187, 214, 74, 0.12);
+}
+.connor-cursor-ring::after {
+  width: 3px;
+  height: 3px;
+  left: 21px;
+  top: -6px;
+  border-radius: 0;
+  background: #bbd64a;
+  box-shadow:
+    0 55px #bbd64a,
+    -27px 27px #bbd64a,
+    27px 27px #bbd64a;
+}
+.connor-cursor-ring.is-interactive {
+  width: 62px;
+  height: 62px;
+  margin: -31px 0 0 -31px;
+  border: 0;
+  background: conic-gradient(
+    #b83b32 0 34deg,
+    transparent 34deg 90deg,
+    #b83b32 90deg 124deg,
+    transparent 124deg 180deg,
+    #b83b32 180deg 214deg,
+    transparent 214deg 270deg,
+    #b83b32 270deg 304deg,
+    transparent 304deg
+  );
+  filter: drop-shadow(0 0 6px rgba(184, 59, 50, 0.6));
+  animation-duration: 2.2s;
+}
+.connor-cursor-ring.is-interactive::before {
+  left: 16px;
+  top: 16px;
+  border-color: rgba(184, 59, 50, 0.85);
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(184, 59, 50, 0.35) 49% 51%, transparent 52%),
+    linear-gradient(transparent 48%, rgba(184, 59, 50, 0.35) 49% 51%, transparent 52%);
+}
+.connor-cursor-ring.is-interactive::after {
+  left: 29px;
+  top: -5px;
+  background: #b83b32;
+  box-shadow:
+    0 67px #b83b32,
+    -34px 34px #b83b32,
+    34px 34px #b83b32;
+}
+.connor-cursor-core.is-interactive {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #ff6658;
+  box-shadow:
+    0 0 8px #b83b32,
+    0 0 20px rgba(184, 59, 50, 0.8);
+}
+.connor-cursor-ring.is-view {
+  width: 74px;
+  height: 74px;
+  margin: -37px 0 0 -37px;
+  border-radius: 50%;
+  border: 0;
+}
+.connor-cursor-ring.is-view::before {
+  left: 22px;
+  top: 22px;
+}
+.connor-cursor-ring.is-down {
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  filter: brightness(1.7) drop-shadow(0 0 7px #b83b32);
+}
+.connor-cursor-dust {
+  width: var(--size);
+  height: 2px;
+  border-radius: 0;
+  background: #bbd64a;
+  box-shadow: 0 0 6px rgba(187, 214, 74, 0.7);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.connor-cursor-impact {
+  border: 1px solid #b83b32;
+  border-radius: 0;
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px rgba(184, 59, 50, 0.65);
+}
+@keyframes hlsTargetRotate {
+  to {
+    rotate: 360deg;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .connor-cursor-ring {
+    animation: none;
+  }
+}

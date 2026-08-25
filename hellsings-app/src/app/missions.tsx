@@ -5,36 +5,434 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { BottomNav } from '@/components/bottom-nav';
 import { BrandMark } from '@/components/brand-mark';
 
-type Mission={code:string;name:string;type:string;region:string;risk:string;duration:string;team:string[];objective:string;result:string;color:string};
-const missions:Mission[]=[
- {code:'HLS-142',name:'OPERAÇÃO FAROL',type:'RESGATE',region:'ATLÂNTICO NORTE',risk:'ÔMEGA',duration:'07H 42M',team:['JACK','MARK','LUKE','HELLEN'],objective:'Extrair civis mantidos em uma instalação marítima clandestina sem provocar exposição internacional.',result:'Todos os civis recuperados. Nenhuma baixa na equipe.',color:'#bbd64a'},
- {code:'HLS-139',name:'ARQUIVO VESPER',type:'INFILTRAÇÃO',region:'EUROPA',risk:'ALTO',duration:'18H 16M',team:['HELLEN','NAOMI','BRIAN'],objective:'Recuperar registros ligados a uma rede internacional sem revelar a presença dos Hellsings.',result:'Arquivos recuperados e identidades de cobertura preservadas.',color:'#4e9cc7'},
- {code:'HLS-131',name:'LINHA VERMELHA',type:'INTERVENÇÃO',region:'CLASSIFICADO',risk:'CRÍTICO',duration:'03H 09M',team:['JACK','DIMITRI','CLHOE','BOBY'],objective:'Interromper a transferência de tecnologia ilegal antes da dispersão da carga.',result:'Carga interceptada e objetivo concluído.',color:'#d84940'},
- {code:'HLS-126',name:'JANELA DE CINZAS',type:'RESGATE',region:'ÁSIA',risk:'ALTO',duration:'11H 33M',team:['MARK','LUKE','ALICE'],objective:'Localizar e retirar testemunhas sob ameaça coordenada.',result:'Extração concluída com coordenação médica de Alice.',color:'#e3a63c'},
- {code:'HLS-118',name:'SILÊNCIO DE VIDRO',type:'INFILTRAÇÃO',region:'AMÉRICA DO SUL',risk:'MODERADO',duration:'05H 51M',team:['HELLEN','NAOMI','CLHOE'],objective:'Copiar dados de uma célula clandestina sem alterar seu comportamento.',result:'Dados recuperados sem detecção.',color:'#53b68a'}
- ,{code:'HLS-109',name:'CASA SEM JANELAS',type:'RESGATE',region:'LESTE EUROPEU',risk:'ÔMEGA',duration:'14H 27M',team:['JACK','MARK','HELLEN','ALICE'],objective:'Localizar vítimas de sequestro mantidas por uma rede privada e realizar a extração antes da transferência para outro país.',result:'Vítimas resgatadas e encaminhadas para proteção e atendimento médico. Estrutura criminosa desativada.',color:'#d95d6f'}
- ,{code:'HLS-097',name:'ROTA DE MARFIM',type:'INTERVENÇÃO',region:'MEDITERRÂNEO',risk:'CRÍTICO',duration:'21H 04M',team:['JACK','MARK','NAOMI','LUKE','BOBY'],objective:'Interromper uma rota internacional de tráfico de mulheres e crianças, identificar seus financiadores e localizar os pontos de transferência.',result:'Rota desmantelada, vítimas libertadas e registros financeiros preservados como prova.',color:'#d84940'}
- ,{code:'HLS-083',name:'CÍRCULO DE ÉBANO',type:'INFILTRAÇÃO',region:'LOCAL CLASSIFICADO',risk:'ÔMEGA',duration:'32H 18M',team:['HELLEN','BRIAN','CLHOE','DIMITRI'],objective:'Infiltrar uma organização que sequestrava pessoas e comercializava violência para clientes ricos em ambientes clandestinos.',result:'Instalação evacuada, vítimas recuperadas e identidades dos responsáveis enviadas ao comando.',color:'#9d6bd1'}
- ,{code:'HLS-071',name:'ÚLTIMO LEILÃO',type:'INTERVENÇÃO',region:'EUROPA CENTRAL',risk:'ÔMEGA',duration:'09H 46M',team:['JACK','DIMITRI','MARK','NAOMI','ALICE'],objective:'Impedir uma negociação clandestina de pessoas desaparecidas e preservar informações capazes de revelar compradores e intermediários.',result:'Negociação interrompida, sobreviventes protegidos e rede internacional exposta. Alice coordenou acolhimento e contratos de proteção.',color:'#e3a63c'}
+type Mission = {
+  code: string;
+  name: string;
+  type: string;
+  region: string;
+  risk: string;
+  duration: string;
+  team: string[];
+  objective: string;
+  result: string;
+  color: string;
+};
+const missions: Mission[] = [
+  {
+    code: 'HLS-142',
+    name: 'OPERAÇÃO FAROL',
+    type: 'RESGATE',
+    region: 'ATLÂNTICO NORTE',
+    risk: 'ÔMEGA',
+    duration: '07H 42M',
+    team: ['JACK', 'MARK', 'LUKE', 'HELLEN'],
+    objective:
+      'Extrair civis mantidos em uma instalação marítima clandestina sem provocar exposição internacional.',
+    result: 'Todos os civis recuperados. Nenhuma baixa na equipe.',
+    color: '#bbd64a',
+  },
+  {
+    code: 'HLS-139',
+    name: 'ARQUIVO VESPER',
+    type: 'INFILTRAÇÃO',
+    region: 'EUROPA',
+    risk: 'ALTO',
+    duration: '18H 16M',
+    team: ['HELLEN', 'NAOMI', 'BRIAN'],
+    objective:
+      'Recuperar registros ligados a uma rede internacional sem revelar a presença dos Hellsings.',
+    result: 'Arquivos recuperados e identidades de cobertura preservadas.',
+    color: '#4e9cc7',
+  },
+  {
+    code: 'HLS-131',
+    name: 'LINHA VERMELHA',
+    type: 'INTERVENÇÃO',
+    region: 'CLASSIFICADO',
+    risk: 'CRÍTICO',
+    duration: '03H 09M',
+    team: ['JACK', 'DIMITRI', 'CLHOE', 'BOBY'],
+    objective: 'Interromper a transferência de tecnologia ilegal antes da dispersão da carga.',
+    result: 'Carga interceptada e objetivo concluído.',
+    color: '#d84940',
+  },
+  {
+    code: 'HLS-126',
+    name: 'JANELA DE CINZAS',
+    type: 'RESGATE',
+    region: 'ÁSIA',
+    risk: 'ALTO',
+    duration: '11H 33M',
+    team: ['MARK', 'LUKE', 'ALICE'],
+    objective: 'Localizar e retirar testemunhas sob ameaça coordenada.',
+    result: 'Extração concluída com coordenação médica de Alice.',
+    color: '#e3a63c',
+  },
+  {
+    code: 'HLS-118',
+    name: 'SILÊNCIO DE VIDRO',
+    type: 'INFILTRAÇÃO',
+    region: 'AMÉRICA DO SUL',
+    risk: 'MODERADO',
+    duration: '05H 51M',
+    team: ['HELLEN', 'NAOMI', 'CLHOE'],
+    objective: 'Copiar dados de uma célula clandestina sem alterar seu comportamento.',
+    result: 'Dados recuperados sem detecção.',
+    color: '#53b68a',
+  },
+  {
+    code: 'HLS-109',
+    name: 'CASA SEM JANELAS',
+    type: 'RESGATE',
+    region: 'LESTE EUROPEU',
+    risk: 'ÔMEGA',
+    duration: '14H 27M',
+    team: ['JACK', 'MARK', 'HELLEN', 'ALICE'],
+    objective:
+      'Localizar vítimas de sequestro mantidas por uma rede privada e realizar a extração antes da transferência para outro país.',
+    result:
+      'Vítimas resgatadas e encaminhadas para proteção e atendimento médico. Estrutura criminosa desativada.',
+    color: '#d95d6f',
+  },
+  {
+    code: 'HLS-097',
+    name: 'ROTA DE MARFIM',
+    type: 'INTERVENÇÃO',
+    region: 'MEDITERRÂNEO',
+    risk: 'CRÍTICO',
+    duration: '21H 04M',
+    team: ['JACK', 'MARK', 'NAOMI', 'LUKE', 'BOBY'],
+    objective:
+      'Interromper uma rota internacional de tráfico de mulheres e crianças, identificar seus financiadores e localizar os pontos de transferência.',
+    result: 'Rota desmantelada, vítimas libertadas e registros financeiros preservados como prova.',
+    color: '#d84940',
+  },
+  {
+    code: 'HLS-083',
+    name: 'CÍRCULO DE ÉBANO',
+    type: 'INFILTRAÇÃO',
+    region: 'LOCAL CLASSIFICADO',
+    risk: 'ÔMEGA',
+    duration: '32H 18M',
+    team: ['HELLEN', 'BRIAN', 'CLHOE', 'DIMITRI'],
+    objective:
+      'Infiltrar uma organização que sequestrava pessoas e comercializava violência para clientes ricos em ambientes clandestinos.',
+    result:
+      'Instalação evacuada, vítimas recuperadas e identidades dos responsáveis enviadas ao comando.',
+    color: '#9d6bd1',
+  },
+  {
+    code: 'HLS-071',
+    name: 'ÚLTIMO LEILÃO',
+    type: 'INTERVENÇÃO',
+    region: 'EUROPA CENTRAL',
+    risk: 'ÔMEGA',
+    duration: '09H 46M',
+    team: ['JACK', 'DIMITRI', 'MARK', 'NAOMI', 'ALICE'],
+    objective:
+      'Impedir uma negociação clandestina de pessoas desaparecidas e preservar informações capazes de revelar compradores e intermediários.',
+    result:
+      'Negociação interrompida, sobreviventes protegidos e rede internacional exposta. Alice coordenou acolhimento e contratos de proteção.',
+    color: '#e3a63c',
+  },
 ];
-const filters=['TODAS','RESGATE','INFILTRAÇÃO','INTERVENÇÃO'];
+const filters = ['TODAS', 'RESGATE', 'INFILTRAÇÃO', 'INTERVENÇÃO'];
 
-export default function MissionsScreen(){
- const[filter,setFilter]=useState('TODAS');const[selected,setSelected]=useState<Mission|null>(null);const visible=filter==='TODAS'?missions:missions.filter(m=>m.type===filter);
- return <View style={s.screen}><SafeAreaView style={s.safe} edges={['top']}>
-  <View style={s.header}><View style={s.brand}><BrandMark size={35}/><View><Text style={s.brandName}>HELLSINGS</Text><Text style={s.micro}>MISSION ARCHIVE</Text></View></View><Pressable onPress={()=>router.replace('/')}><Text style={s.exit}>ENCERRAR SESSÃO ↗</Text></Pressable></View>
-  <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
-   <Text style={s.eyebrow}>ARQUIVO OPERACIONAL // ACESSO ÔMEGA</Text><Text style={s.heading}>REGISTROS{`\n`}DE MISSÕES.</Text><Pressable onPress={()=>router.push('/archives')} style={{minHeight:72,borderWidth:1,borderColor:'#7d3030',backgroundColor:'#100707',padding:14,marginBottom:20,flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}><View><Text style={{color:'#d84b43',fontFamily:'monospace',fontSize:8,letterSpacing:1.1,marginBottom:7}}>COFRE DE ARQUIVOS SECRETOS</Text><Text style={s.micro}>RELATÓRIOS · DIÁRIO · PISTAS CLASSIFICADAS</Text></View><Text style={{color:'#d84b43',fontSize:22}}>↗</Text></Pressable>
-   <View style={s.success}><View><Text style={s.label}>ÍNDICE DE RESOLUÇÃO</Text><Text style={s.metric}>100<Text style={s.percent}>%</Text></Text></View><View style={s.successCopy}><Text style={s.green}>● SISTEMA ATIVO</Text><Text style={s.muted}>Nenhuma missão aceita permanece sem resolução.</Text></View></View>
-   <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.filters}>{filters.map(item=><Pressable key={item} onPress={()=>setFilter(item)} style={[s.filter,filter===item&&s.filterActive]}><Text style={[s.filterText,filter===item&&s.green]}>{item}</Text></Pressable>)}</ScrollView>
-   <Text style={s.count}>{String(visible.length).padStart(2,'0')} ARQUIVOS LOCALIZADOS</Text>
-   {visible.map(m=><Pressable key={m.code} onPress={()=>setSelected(m)} style={[s.card,{borderLeftColor:m.color}]}><View style={s.row}><Text style={[s.code,{color:m.color}]}>{m.code}</Text><Text style={s.done}>CONCLUÍDA</Text></View><Text style={s.name}>{m.name}</Text><Text style={s.meta}>{m.type} · {m.region}</Text><View style={[s.row,s.cardFoot]}><Text style={s.label}>RISCO // <Text style={{color:m.color}}>{m.risk}</Text></Text><Text style={[s.open,{color:m.color}]}>DESCLASSIFICAR ↗</Text></View></Pressable>)}
-  </ScrollView><BottomNav active="MISSÕES"/>
- </SafeAreaView>
- <Modal visible={!!selected} animationType="slide" onRequestClose={()=>setSelected(null)}>{selected&&<View style={s.modal}><SafeAreaView style={s.safe}><View style={s.modalHead}><View><Text style={[s.modalCode,{color:selected.color}]}>{selected.code}</Text><Text style={s.micro}>ARQUIVO PARCIALMENTE DESCLASSIFICADO</Text></View><Pressable onPress={()=>setSelected(null)} style={s.close}><Text style={s.closeText}>×</Text></Pressable></View><ScrollView contentContainerStyle={s.dossier}><Text style={s.meta}>{selected.type} // {selected.region}</Text><Text style={s.dossierName}>{selected.name}</Text><View style={[s.rule,{backgroundColor:selected.color}]}/><View style={s.data}><View><Text style={s.label}>RISCO</Text><Text style={[s.value,{color:selected.color}]}>{selected.risk}</Text></View><View><Text style={s.label}>DURAÇÃO</Text><Text style={s.value}>{selected.duration}</Text></View><View><Text style={s.label}>STATUS</Text><Text style={[s.value,s.green]}>CONCLUÍDA</Text></View></View><Text style={s.blockLabel}>OBJETIVO OPERACIONAL</Text><Text style={s.block}>{selected.objective}</Text><Text style={s.blockLabel}>RELATÓRIO DE RESULTADO</Text><Text style={s.block}>{selected.result}</Text><Text style={s.blockLabel}>EQUIPE DESIGNADA</Text>{selected.team.map((agent,i)=><View key={agent} style={[s.agent,{borderColor:`${selected.color}66`}]}><Text style={{color:selected.color}}>HLS-{String(i+1).padStart(2,'0')}</Text><Text style={s.agentName}>{agent}</Text></View>)}<View style={s.redacted}><Text style={s.redText}>██████████████</Text><Text style={s.micro}>DADOS DO CLIENTE // ACESSO NEGADO</Text></View></ScrollView></SafeAreaView></View>}</Modal>
- </View>;
+export default function MissionsScreen() {
+  const [filter, setFilter] = useState('TODAS');
+  const [selected, setSelected] = useState<Mission | null>(null);
+  const visible = filter === 'TODAS' ? missions : missions.filter((m) => m.type === filter);
+  return (
+    <View style={s.screen}>
+      <SafeAreaView style={s.safe} edges={['top']}>
+        <View style={s.header}>
+          <View style={s.brand}>
+            <BrandMark size={35} />
+            <View>
+              <Text style={s.brandName}>HELLSINGS</Text>
+              <Text style={s.micro}>MISSION ARCHIVE</Text>
+            </View>
+          </View>
+          <Pressable onPress={() => router.replace('/')}>
+            <Text style={s.exit}>ENCERRAR SESSÃO ↗</Text>
+          </Pressable>
+        </View>
+        <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
+          <Text style={s.eyebrow}>ARQUIVO OPERACIONAL // ACESSO ÔMEGA</Text>
+          <Text style={s.heading}>REGISTROS{`\n`}DE MISSÕES.</Text>
+          <Pressable
+            onPress={() => router.push('/archives')}
+            style={{
+              minHeight: 72,
+              borderWidth: 1,
+              borderColor: '#7d3030',
+              backgroundColor: '#100707',
+              padding: 14,
+              marginBottom: 20,
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
+            <View>
+              <Text
+                style={{
+                  color: '#d84b43',
+                  fontFamily: 'monospace',
+                  fontSize: 8,
+                  letterSpacing: 1.1,
+                  marginBottom: 7,
+                }}
+              >
+                COFRE DE ARQUIVOS SECRETOS
+              </Text>
+              <Text style={s.micro}>RELATÓRIOS · DIÁRIO · PISTAS CLASSIFICADAS</Text>
+            </View>
+            <Text style={{ color: '#d84b43', fontSize: 22 }}>↗</Text>
+          </Pressable>
+          <View style={s.success}>
+            <View>
+              <Text style={s.label}>ÍNDICE DE RESOLUÇÃO</Text>
+              <Text style={s.metric}>
+                100<Text style={s.percent}>%</Text>
+              </Text>
+            </View>
+            <View style={s.successCopy}>
+              <Text style={s.green}>● SISTEMA ATIVO</Text>
+              <Text style={s.muted}>Nenhuma missão aceita permanece sem resolução.</Text>
+            </View>
+          </View>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={s.filters}
+          >
+            {filters.map((item) => (
+              <Pressable
+                key={item}
+                onPress={() => setFilter(item)}
+                style={[s.filter, filter === item && s.filterActive]}
+              >
+                <Text style={[s.filterText, filter === item && s.green]}>{item}</Text>
+              </Pressable>
+            ))}
+          </ScrollView>
+          <Text style={s.count}>
+            {String(visible.length).padStart(2, '0')} ARQUIVOS LOCALIZADOS
+          </Text>
+          {visible.map((m) => (
+            <Pressable
+              key={m.code}
+              onPress={() => setSelected(m)}
+              style={[s.card, { borderLeftColor: m.color }]}
+            >
+              <View style={s.row}>
+                <Text style={[s.code, { color: m.color }]}>{m.code}</Text>
+                <Text style={s.done}>CONCLUÍDA</Text>
+              </View>
+              <Text style={s.name}>{m.name}</Text>
+              <Text style={s.meta}>
+                {m.type} · {m.region}
+              </Text>
+              <View style={[s.row, s.cardFoot]}>
+                <Text style={s.label}>
+                  RISCO // <Text style={{ color: m.color }}>{m.risk}</Text>
+                </Text>
+                <Text style={[s.open, { color: m.color }]}>DESCLASSIFICAR ↗</Text>
+              </View>
+            </Pressable>
+          ))}
+        </ScrollView>
+        <BottomNav active="MISSÕES" />
+      </SafeAreaView>
+      <Modal visible={!!selected} animationType="slide" onRequestClose={() => setSelected(null)}>
+        {selected && (
+          <View style={s.modal}>
+            <SafeAreaView style={s.safe}>
+              <View style={s.modalHead}>
+                <View>
+                  <Text style={[s.modalCode, { color: selected.color }]}>{selected.code}</Text>
+                  <Text style={s.micro}>ARQUIVO PARCIALMENTE DESCLASSIFICADO</Text>
+                </View>
+                <Pressable onPress={() => setSelected(null)} style={s.close}>
+                  <Text style={s.closeText}>×</Text>
+                </Pressable>
+              </View>
+              <ScrollView contentContainerStyle={s.dossier}>
+                <Text style={s.meta}>
+                  {selected.type} // {selected.region}
+                </Text>
+                <Text style={s.dossierName}>{selected.name}</Text>
+                <View style={[s.rule, { backgroundColor: selected.color }]} />
+                <View style={s.data}>
+                  <View>
+                    <Text style={s.label}>RISCO</Text>
+                    <Text style={[s.value, { color: selected.color }]}>{selected.risk}</Text>
+                  </View>
+                  <View>
+                    <Text style={s.label}>DURAÇÃO</Text>
+                    <Text style={s.value}>{selected.duration}</Text>
+                  </View>
+                  <View>
+                    <Text style={s.label}>STATUS</Text>
+                    <Text style={[s.value, s.green]}>CONCLUÍDA</Text>
+                  </View>
+                </View>
+                <Text style={s.blockLabel}>OBJETIVO OPERACIONAL</Text>
+                <Text style={s.block}>{selected.objective}</Text>
+                <Text style={s.blockLabel}>RELATÓRIO DE RESULTADO</Text>
+                <Text style={s.block}>{selected.result}</Text>
+                <Text style={s.blockLabel}>EQUIPE DESIGNADA</Text>
+                {selected.team.map((agent, i) => (
+                  <View key={agent} style={[s.agent, { borderColor: `${selected.color}66` }]}>
+                    <Text style={{ color: selected.color }}>
+                      HLS-{String(i + 1).padStart(2, '0')}
+                    </Text>
+                    <Text style={s.agentName}>{agent}</Text>
+                  </View>
+                ))}
+                <View style={s.redacted}>
+                  <Text style={s.redText}>██████████████</Text>
+                  <Text style={s.micro}>DADOS DO CLIENTE // ACESSO NEGADO</Text>
+                </View>
+              </ScrollView>
+            </SafeAreaView>
+          </View>
+        )}
+      </Modal>
+    </View>
+  );
 }
 
-const s=StyleSheet.create({
- screen:{flex:1,backgroundColor:'#030504'},safe:{flex:1},header:{height:76,paddingHorizontal:20,borderBottomWidth:1,borderBottomColor:'#1d241c',flexDirection:'row',alignItems:'center',justifyContent:'space-between'},brand:{flexDirection:'row',alignItems:'center',gap:6},brandName:{color:'#e5e6de',fontSize:11,fontWeight:'700',letterSpacing:2.4},micro:{color:'#596159',fontFamily:'monospace',fontSize:6,letterSpacing:.8},exit:{color:'#777f74',fontSize:7,fontFamily:'monospace'},content:{padding:20,paddingTop:42,paddingBottom:115},eyebrow:{color:'#bbd64a',fontFamily:'monospace',fontSize:8,letterSpacing:1.5},heading:{color:'#ecece4',fontSize:43,lineHeight:44,fontWeight:'300',marginTop:12,marginBottom:24},success:{minHeight:150,borderWidth:1,borderColor:'#20291f',backgroundColor:'#080c09',padding:18,flexDirection:'row',justifyContent:'space-between',alignItems:'flex-end'},label:{color:'#737d72',fontFamily:'monospace',fontSize:7,letterSpacing:1},metric:{color:'#eeede5',fontSize:58,fontWeight:'200'},percent:{color:'#bbd64a',fontSize:20},successCopy:{width:'42%'},green:{color:'#bbd64a'},muted:{color:'#727b72',fontSize:10,lineHeight:16,marginTop:8},filters:{gap:7,paddingVertical:24},filter:{paddingHorizontal:14,paddingVertical:10,borderWidth:1,borderColor:'#242c24',backgroundColor:'#080b09'},filterActive:{borderColor:'#bbd64a'},filterText:{color:'#646d64',fontFamily:'monospace',fontSize:7},count:{color:'#505850',fontFamily:'monospace',fontSize:7,marginBottom:10},card:{minHeight:190,borderWidth:1,borderColor:'#1d251e',borderLeftWidth:3,backgroundColor:'#080b09',padding:17,marginBottom:9},row:{flexDirection:'row',justifyContent:'space-between'},code:{fontFamily:'monospace',fontSize:9},done:{color:'#829d43',fontFamily:'monospace',fontSize:7,borderWidth:1,borderColor:'#455526',padding:4},name:{color:'#ecebe4',fontSize:25,fontWeight:'500',marginTop:28},meta:{color:'#697269',fontFamily:'monospace',fontSize:7,letterSpacing:.8,marginTop:7},cardFoot:{marginTop:'auto'},open:{fontFamily:'monospace',fontSize:7},modal:{flex:1,backgroundColor:'#030504'},modalHead:{height:90,paddingHorizontal:20,borderBottomWidth:1,borderBottomColor:'#283027',flexDirection:'row',alignItems:'center',justifyContent:'space-between'},modalCode:{fontFamily:'monospace',fontSize:12,fontWeight:'700'},close:{width:42,height:42,borderWidth:1,borderColor:'#4f584f',alignItems:'center',justifyContent:'center'},closeText:{color:'#fff',fontSize:25},dossier:{padding:22,paddingBottom:60},dossierName:{color:'#efeee7',fontSize:40,lineHeight:43,fontWeight:'300',marginTop:9},rule:{width:95,height:2,marginVertical:22},data:{gap:1,backgroundColor:'#222a22',marginBottom:20},value:{color:'#dadbd4',fontFamily:'monospace',fontSize:11,marginTop:6},blockLabel:{color:'#bbd64a',fontFamily:'monospace',fontSize:8,letterSpacing:1,marginTop:25},block:{color:'#a0a79e',fontSize:13,lineHeight:21,marginTop:9},agent:{borderWidth:1,padding:12,flexDirection:'row',justifyContent:'space-between',marginTop:7},agentName:{color:'#d7d9d1',fontFamily:'monospace',fontSize:8},redacted:{marginTop:35,padding:16,borderWidth:1,borderColor:'#4e1d1b',backgroundColor:'#110706'},redText:{color:'#8f2722',marginBottom:8}
+const s = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: '#030504' },
+  safe: { flex: 1 },
+  header: {
+    height: 76,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#1d241c',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  brand: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  brandName: { color: '#e5e6de', fontSize: 11, fontWeight: '700', letterSpacing: 2.4 },
+  micro: { color: '#596159', fontFamily: 'monospace', fontSize: 6, letterSpacing: 0.8 },
+  exit: { color: '#777f74', fontSize: 7, fontFamily: 'monospace' },
+  content: { padding: 20, paddingTop: 42, paddingBottom: 115 },
+  eyebrow: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 8, letterSpacing: 1.5 },
+  heading: {
+    color: '#ecece4',
+    fontSize: 43,
+    lineHeight: 44,
+    fontWeight: '300',
+    marginTop: 12,
+    marginBottom: 24,
+  },
+  success: {
+    minHeight: 150,
+    borderWidth: 1,
+    borderColor: '#20291f',
+    backgroundColor: '#080c09',
+    padding: 18,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  label: { color: '#737d72', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
+  metric: { color: '#eeede5', fontSize: 58, fontWeight: '200' },
+  percent: { color: '#bbd64a', fontSize: 20 },
+  successCopy: { width: '42%' },
+  green: { color: '#bbd64a' },
+  muted: { color: '#727b72', fontSize: 10, lineHeight: 16, marginTop: 8 },
+  filters: { gap: 7, paddingVertical: 24 },
+  filter: {
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderWidth: 1,
+    borderColor: '#242c24',
+    backgroundColor: '#080b09',
+  },
+  filterActive: { borderColor: '#bbd64a' },
+  filterText: { color: '#646d64', fontFamily: 'monospace', fontSize: 7 },
+  count: { color: '#505850', fontFamily: 'monospace', fontSize: 7, marginBottom: 10 },
+  card: {
+    minHeight: 190,
+    borderWidth: 1,
+    borderColor: '#1d251e',
+    borderLeftWidth: 3,
+    backgroundColor: '#080b09',
+    padding: 17,
+    marginBottom: 9,
+  },
+  row: { flexDirection: 'row', justifyContent: 'space-between' },
+  code: { fontFamily: 'monospace', fontSize: 9 },
+  done: {
+    color: '#829d43',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    borderWidth: 1,
+    borderColor: '#455526',
+    padding: 4,
+  },
+  name: { color: '#ecebe4', fontSize: 25, fontWeight: '500', marginTop: 28 },
+  meta: {
+    color: '#697269',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    letterSpacing: 0.8,
+    marginTop: 7,
+  },
+  cardFoot: { marginTop: 'auto' },
+  open: { fontFamily: 'monospace', fontSize: 7 },
+  modal: { flex: 1, backgroundColor: '#030504' },
+  modalHead: {
+    height: 90,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#283027',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  modalCode: { fontFamily: 'monospace', fontSize: 12, fontWeight: '700' },
+  close: {
+    width: 42,
+    height: 42,
+    borderWidth: 1,
+    borderColor: '#4f584f',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  closeText: { color: '#fff', fontSize: 25 },
+  dossier: { padding: 22, paddingBottom: 60 },
+  dossierName: { color: '#efeee7', fontSize: 40, lineHeight: 43, fontWeight: '300', marginTop: 9 },
+  rule: { width: 95, height: 2, marginVertical: 22 },
+  data: { gap: 1, backgroundColor: '#222a22', marginBottom: 20 },
+  value: { color: '#dadbd4', fontFamily: 'monospace', fontSize: 11, marginTop: 6 },
+  blockLabel: {
+    color: '#bbd64a',
+    fontFamily: 'monospace',
+    fontSize: 8,
+    letterSpacing: 1,
+    marginTop: 25,
+  },
+  block: { color: '#a0a79e', fontSize: 13, lineHeight: 21, marginTop: 9 },
+  agent: {
+    borderWidth: 1,
+    padding: 12,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 7,
+  },
+  agentName: { color: '#d7d9d1', fontFamily: 'monospace', fontSize: 8 },
+  redacted: {
+    marginTop: 35,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#4e1d1b',
+    backgroundColor: '#110706',
+  },
+  redText: { color: '#8f2722', marginBottom: 8 },
 });

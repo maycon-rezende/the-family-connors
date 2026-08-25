@@ -1,188 +1,319 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0b0805">
-  <meta name="description" content="A Era da Extinção — o presente dos Connor depois do Dia D.">
-  <title>A Era da Extinção — O Presente</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="era-extincao-presente/extinction-world.css">
-  <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css">
-  <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css">
-  <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css">
-  <style>@keyframes scenarioAwaken{from{filter:brightness(.18) saturate(.25) contrast(1.35)}to{filter:brightness(1) saturate(1) contrast(1)}}</style>
-</head>
-<body class="world-locked">
-  <div class="world-noise" aria-hidden="true"></div>
-  <div class="world-dust" aria-hidden="true"></div>
-  <div class="world-cursor" aria-hidden="true"><i></i><b></b><span>RASTREAR</span></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0805" />
+    <meta name="description" content="A Era da Extinção — o presente dos Connor depois do Dia D." />
+    <title>A Era da Extinção — O Presente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-world.css" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css" />
+    <style>
+      @keyframes scenarioAwaken {
+        from {
+          filter: brightness(0.18) saturate(0.25) contrast(1.35);
+        }
+        to {
+          filter: brightness(1) saturate(1) contrast(1);
+        }
+      }
+    </style>
+  </head>
+  <body class="world-locked">
+    <div class="world-noise" aria-hidden="true"></div>
+    <div class="world-dust" aria-hidden="true"></div>
+    <div class="world-cursor" aria-hidden="true"><i></i><b></b><span>RASTREAR</span></div>
 
-  <section class="awakening" role="dialog" aria-modal="true" aria-labelledby="awakening-title">
-    <div class="awakening-grid" aria-hidden="true"></div>
-    <div class="cinema-bars" aria-hidden="true"><i></i><i></i></div>
-    <div class="intro-ruins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-    <div class="intro-eclipse" aria-hidden="true"></div>
-    <div class="intro-impact" aria-hidden="true"></div>
-    <div class="awakening-code"><span>TRANSMISSÃO EDE-01</span><b id="introStatus">AGUARDANDO CONEXÃO</b></div>
+    <section class="awakening" role="dialog" aria-modal="true" aria-labelledby="awakening-title">
+      <div class="awakening-grid" aria-hidden="true"></div>
+      <div class="cinema-bars" aria-hidden="true"><i></i><i></i></div>
+      <div class="intro-ruins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="intro-eclipse" aria-hidden="true"></div>
+      <div class="intro-impact" aria-hidden="true"></div>
+      <div class="awakening-code">
+        <span>TRANSMISSÃO EDE-01</span><b id="introStatus">AGUARDANDO CONEXÃO</b>
+      </div>
 
-    <div class="cinematic-beats" aria-live="polite">
-      <section class="cinematic-beat is-active" data-cinema-beat="0">
-        <p>SINAL ENCONTRADO // ORIGEM DESCONHECIDA</p>
-        <h2 id="awakening-title">Existe alguém<br><em>ouvindo?</em></h2>
-        <span>Uma transmissão permaneceu ativa depois que todas as outras morreram.</span>
-        <button class="transmission-start" type="button" data-start-cinema><b>RECUPERAR TRANSMISSÃO</b><i>→</i></button>
-      </section>
-      <section class="cinematic-beat" data-cinema-beat="1">
-        <p>ARQUIVO ANTERIOR AO DIA D</p>
-        <h2>Antes,<br><em>havia uma vida.</em></h2>
-        <span>Uma família. Uma mansão. Uma organização lutando nas sombras.</span>
-      </section>
-      <section class="cinematic-beat cinema-zero" data-cinema-beat="2">
-        <p>REGISTRO CORROMPIDO // DIA ZERO</p>
-        <h2>Então o céu<br><em>começou a queimar.</em></h2>
-        <span>O fim não chegou de uma vez. Chegou em ondas.</span>
-      </section>
-      <section class="cinematic-beat cinema-years" data-cinema-beat="3">
-        <p>TEMPO DECORRIDO // IMPOSSÍVEL CALCULAR</p>
-        <h2>Anos viraram<br><em>cicatrizes.</em></h2>
-        <span>Os jovens envelheceram. As cidades desapareceram. Os nomes permaneceram.</span>
-      </section>
-      <section class="cinematic-beat cinema-final" data-cinema-beat="4">
-        <div class="awakening-date"><span>AGORA</span><b>DATA CORROMPIDA</b></div>
-        <h1><span>O MUNDO</span><em>NÃO ACABOU.</em></h1>
-        <p>Ele sobreviveu tempo suficiente para se tornar outra coisa.</p>
-        <button type="button" data-awaken><span>ACORDAR NO PRESENTE</span><i>→</i></button>
-      </section>
-    </div>
+      <div class="cinematic-beats" aria-live="polite">
+        <section class="cinematic-beat is-active" data-cinema-beat="0">
+          <p>SINAL ENCONTRADO // ORIGEM DESCONHECIDA</p>
+          <h2 id="awakening-title">Existe alguém<br /><em>ouvindo?</em></h2>
+          <span>Uma transmissão permaneceu ativa depois que todas as outras morreram.</span>
+          <button class="transmission-start" type="button" data-start-cinema>
+            <b>RECUPERAR TRANSMISSÃO</b><i>→</i>
+          </button>
+        </section>
+        <section class="cinematic-beat" data-cinema-beat="1">
+          <p>ARQUIVO ANTERIOR AO DIA D</p>
+          <h2>Antes,<br /><em>havia uma vida.</em></h2>
+          <span>Uma família. Uma mansão. Uma organização lutando nas sombras.</span>
+        </section>
+        <section class="cinematic-beat cinema-zero" data-cinema-beat="2">
+          <p>REGISTRO CORROMPIDO // DIA ZERO</p>
+          <h2>Então o céu<br /><em>começou a queimar.</em></h2>
+          <span>O fim não chegou de uma vez. Chegou em ondas.</span>
+        </section>
+        <section class="cinematic-beat cinema-years" data-cinema-beat="3">
+          <p>TEMPO DECORRIDO // IMPOSSÍVEL CALCULAR</p>
+          <h2>Anos viraram<br /><em>cicatrizes.</em></h2>
+          <span>Os jovens envelheceram. As cidades desapareceram. Os nomes permaneceram.</span>
+        </section>
+        <section class="cinematic-beat cinema-final" data-cinema-beat="4">
+          <div class="awakening-date"><span>AGORA</span><b>DATA CORROMPIDA</b></div>
+          <h1><span>O MUNDO</span><em>NÃO ACABOU.</em></h1>
+          <p>Ele sobreviveu tempo suficiente para se tornar outra coisa.</p>
+          <button type="button" data-awaken><span>ACORDAR NO PRESENTE</span><i>→</i></button>
+        </section>
+      </div>
 
-    <div class="cinema-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div>
-    <div class="cinema-timecode"><span id="cinemaTimecode">00:00:00</span><b>REC // EDE</b></div>
-    <button class="cinema-skip" type="button" data-skip-cinema>PULAR ABERTURA</button>
-    <button class="cinema-sound" type="button" data-toggle-sound aria-pressed="false">SOM // OFF</button>
-    <small>AVISO // ESTE NÃO É O MUNDO QUE ELES CONHECIAM</small>
-  </section>
-  <audio id="worldIntroAudio" preload="metadata" loop src="audio/epic.mp3"></audio>
+      <div class="cinema-progress" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><span></span>
+      </div>
+      <div class="cinema-timecode"><span id="cinemaTimecode">00:00:00</span><b>REC // EDE</b></div>
+      <button class="cinema-skip" type="button" data-skip-cinema>PULAR ABERTURA</button>
+      <button class="cinema-sound" type="button" data-toggle-sound aria-pressed="false">
+        SOM // OFF
+      </button>
+      <small>AVISO // ESTE NÃO É O MUNDO QUE ELES CONHECIAM</small>
+    </section>
+    <audio id="worldIntroAudio" preload="metadata" loop src="audio/epic.mp3"></audio>
 
-  <header class="world-nav">
-    <a class="world-brand" href="#top" aria-label="A Era da Extinção"><span>Æ</span><b>ERA DA EXTINÇÃO</b><small>ARQUIVO DO PRESENTE</small></a>
-    <nav aria-label="Navegação principal">
-      <a href="#mundo">O mundo</a>
-      <a href="#sobreviventes">Sobreviventes</a>
-      <a href="#cronologia">Cronologia</a>
-      <a href="#passado">O passado</a>
-    </nav>
-    <div class="world-condition"><i></i><span>ATMOSFERA</span><b>INSTÁVEL</b></div>
-  </header>
+    <header class="world-nav">
+      <a class="world-brand" href="#top" aria-label="A Era da Extinção"
+        ><span>Æ</span><b>ERA DA EXTINÇÃO</b><small>ARQUIVO DO PRESENTE</small></a
+      >
+      <nav aria-label="Navegação principal">
+        <a href="#mundo">O mundo</a>
+        <a href="#sobreviventes">Sobreviventes</a>
+        <a href="#cronologia">Cronologia</a>
+        <a href="#passado">O passado</a>
+      </nav>
+      <div class="world-condition"><i></i><span>ATMOSFERA</span><b>INSTÁVEL</b></div>
+    </header>
 
-  <main id="top">
-    <section class="wasteland-hero" aria-labelledby="hero-title">
-      <div class="ruined-sun" aria-hidden="true"></div>
-      <div class="ash-horizon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="hero-scan" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <p class="sector-label">PRESENTE // MUITOS ANOS DEPOIS DO DIA D</p>
-        <div class="title-impact">
-          <div class="title-speedlines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <div class="title-echoes" aria-hidden="true">
-            <b>A ERA DA</b><strong>EXTINÇÃO</strong>
-            <b>A ERA DA</b><strong>EXTINÇÃO</strong>
+    <main id="top">
+      <section class="wasteland-hero" aria-labelledby="hero-title">
+        <div class="ruined-sun" aria-hidden="true"></div>
+        <div class="ash-horizon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="hero-scan" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="sector-label">PRESENTE // MUITOS ANOS DEPOIS DO DIA D</p>
+          <div class="title-impact">
+            <div class="title-speedlines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="title-echoes" aria-hidden="true">
+              <b>A ERA DA</b><strong>EXTINÇÃO</strong> <b>A ERA DA</b><strong>EXTINÇÃO</strong>
+            </div>
+            <h1 id="hero-title">
+              <span data-text="A ERA DA">A ERA DA</span>
+              <em data-text="EXTINÇÃO">EXTINÇÃO</em>
+            </h1>
+            <div class="title-classification" aria-hidden="true">
+              <i>EDE</i><span>FERRUGEM // SANGUE // SOBREVIVÊNCIA</span><b>25.08</b>
+            </div>
           </div>
-          <h1 id="hero-title">
-            <span data-text="A ERA DA">A ERA DA</span>
-            <em data-text="EXTINÇÃO">EXTINÇÃO</em>
-          </h1>
-          <div class="title-classification" aria-hidden="true"><i>EDE</i><span>FERRUGEM // SANGUE // SOBREVIVÊNCIA</span><b>25.08</b></div>
+          <p class="hero-lead">
+            Antes, eles eram uma família cercada por escolhas, missões e promessas. Agora, são nomes
+            envelhecidos em um planeta de ferrugem, areia e frequências quase mortas.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#mundo">ATRAVESSAR A ZONA MORTA <i>↓</i></a>
+            <a class="signal-action" href="#passado">OUVIR O PASSADO <i>◌</i></a>
+          </div>
         </div>
-        <p class="hero-lead">Antes, eles eram uma família cercada por escolhas, missões e promessas. Agora, são nomes envelhecidos em um planeta de ferrugem, areia e frequências quase mortas.</p>
-        <div class="hero-actions">
-          <a class="primary-action" href="#mundo">ATRAVESSAR A ZONA MORTA <i>↓</i></a>
-          <a class="signal-action" href="#passado">OUVIR O PASSADO <i>◌</i></a>
+        <aside class="hero-telemetry" aria-label="Telemetria do mundo">
+          <span><small>SETOR</small><b>DESCONHECIDO</b></span>
+          <span><small>SINAL</small><b>02.7%</b></span>
+          <span><small>RADIAÇÃO</small><b>CRÍTICA</b></span>
+          <span><small>POPULAÇÃO</small><b>SEM DADOS</b></span>
+        </aside>
+        <div class="hero-warning">NÃO PROCURE O MUNDO QUE EXISTIA AQUI</div>
+      </section>
+
+      <section class="world-report" id="mundo">
+        <div class="section-index">01</div>
+        <header class="world-heading reveal">
+          <p>RELATÓRIO DO PRESENTE // FRAGMENTO 001</p>
+          <h2>O planeta que<br /><em>continuou morrendo.</em></h2>
+          <span
+            >Os fatos definitivos deste período permanecerão classificados até a abertura dos
+            arquivos do autor.</span
+          >
+        </header>
+        <div class="world-facts">
+          <article class="reveal">
+            <b>01</b><i>ATM</i>
+            <h3>Horizonte queimado</h3>
+            <p>
+              Calor, poeira e estruturas consumidas pelo tempo ocupam o lugar das antigas cidades.
+            </p>
+            <span>DADOS PARCIAIS</span>
+          </article>
+          <article class="reveal">
+            <b>02</b><i>H₂O</i>
+            <h3>Sobrevivência</h3>
+            <p>Água, abrigo e deslocamento definem as novas fronteiras entre aquilo que resta.</p>
+            <span>DADOS PARCIAIS</span>
+          </article>
+          <article class="reveal">
+            <b>03</b><i>RF</i>
+            <h3>Frequências mortas</h3>
+            <p>
+              Vozes atravessam o ruído carregando nomes, alertas e coordenadas impossíveis de
+              confirmar.
+            </p>
+            <span>SINAL INTERMITENTE</span>
+          </article>
         </div>
-      </div>
-      <aside class="hero-telemetry" aria-label="Telemetria do mundo">
-        <span><small>SETOR</small><b>DESCONHECIDO</b></span>
-        <span><small>SINAL</small><b>02.7%</b></span>
-        <span><small>RADIAÇÃO</small><b>CRÍTICA</b></span>
-        <span><small>POPULAÇÃO</small><b>SEM DADOS</b></span>
-      </aside>
-      <div class="hero-warning">NÃO PROCURE O MUNDO QUE EXISTIA AQUI</div>
-    </section>
+      </section>
 
-    <section class="world-report" id="mundo">
-      <div class="section-index">01</div>
-      <header class="world-heading reveal">
-        <p>RELATÓRIO DO PRESENTE // FRAGMENTO 001</p>
-        <h2>O planeta que<br><em>continuou morrendo.</em></h2>
-        <span>Os fatos definitivos deste período permanecerão classificados até a abertura dos arquivos do autor.</span>
-      </header>
-      <div class="world-facts">
-        <article class="reveal"><b>01</b><i>ATM</i><h3>Horizonte queimado</h3><p>Calor, poeira e estruturas consumidas pelo tempo ocupam o lugar das antigas cidades.</p><span>DADOS PARCIAIS</span></article>
-        <article class="reveal"><b>02</b><i>H₂O</i><h3>Sobrevivência</h3><p>Água, abrigo e deslocamento definem as novas fronteiras entre aquilo que resta.</p><span>DADOS PARCIAIS</span></article>
-        <article class="reveal"><b>03</b><i>RF</i><h3>Frequências mortas</h3><p>Vozes atravessam o ruído carregando nomes, alertas e coordenadas impossíveis de confirmar.</p><span>SINAL INTERMITENTE</span></article>
-      </div>
-    </section>
+      <section class="survivor-files" id="sobreviventes">
+        <div class="survivor-static" aria-hidden="true"></div>
+        <header class="world-heading reveal">
+          <p>LINHAGEM CONNOR // ARQUIVOS ENVELHECIDOS</p>
+          <h2>Eles sobreviveram<br /><em>ao próprio passado.</em></h2>
+          <span>O mundo avançou. Os rostos mudaram. Os destinos ainda não foram liberados.</span>
+        </header>
+        <div class="survivor-grid">
+          <button class="survivor reveal" data-file="JC-01" type="button">
+            <img
+              src="img-presente/personagens/jack-presente.png"
+              alt="Jack Connor no presente, após a devastação"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>JC-01</span><b>Jack Connor</b><small>REGISTRO PRESENTE</small><i>CLASSIFICADO</i>
+          </button>
+          <button class="survivor reveal" data-file="AC-02" type="button">
+            <img
+              src="img-presente/personagens/alice-presente.png"
+              alt="Alice Connor no presente, após a devastação"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>AC-02</span><b>Alice Connor</b><small>REGISTRO PRESENTE</small
+            ><i>SINAL PROTEGIDO</i>
+          </button>
+          <button class="survivor reveal" data-file="MC-03" type="button">
+            <img
+              src="img-presente/personagens/mark-presente.png"
+              alt="Mark Connor no presente, após a devastação"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>MC-03</span><b>Mark Connor</b><small>REGISTRO PRESENTE</small><i>INCOMPLETO</i>
+          </button>
+          <button class="survivor reveal" data-file="AS-04" type="button">
+            <img
+              src="img-presente/personagens/ariani-presente.png"
+              alt="Ariani no presente, após a devastação"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>AS-04</span><b>Ariani</b><small>REGISTRO PRESENTE</small><i>DESTINO PROTEGIDO</i>
+          </button>
+          <button class="survivor reveal" data-file="BC-05" type="button">
+            <img
+              src="img-presente/personagens/britney-presente.png"
+              alt="Britney Connor no presente, após a devastação"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>BC-05</span><b>Britney Connor</b><small>REGISTRO PRESENTE</small
+            ><i>SEM RESPOSTA</i>
+          </button>
+          <button class="survivor reveal" data-file="JC-06" type="button">
+            <img
+              src="img-presente/personagens/jully-presente.png"
+              alt="Jully Connor no presente, após a devastação"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>JC-06</span><b>Jully Connor</b><small>REGISTRO PRESENTE</small
+            ><i>CRIPTOGRAFADO</i>
+          </button>
+        </div>
+        <p class="lore-lock">
+          Os arquivos serão abertos quando a história do presente for registrada.
+        </p>
+      </section>
 
-    <section class="survivor-files" id="sobreviventes">
-      <div class="survivor-static" aria-hidden="true"></div>
-      <header class="world-heading reveal">
-        <p>LINHAGEM CONNOR // ARQUIVOS ENVELHECIDOS</p>
-        <h2>Eles sobreviveram<br><em>ao próprio passado.</em></h2>
-        <span>O mundo avançou. Os rostos mudaram. Os destinos ainda não foram liberados.</span>
-      </header>
-      <div class="survivor-grid">
-        <button class="survivor reveal" data-file="JC-01"><span>JC-01</span><b>Jack Connor</b><small>REGISTRO PRESENTE</small><i>CLASSIFICADO</i></button>
-        <button class="survivor reveal" data-file="AC-02"><span>AC-02</span><b>Alice Connor</b><small>REGISTRO PRESENTE</small><i>SINAL PROTEGIDO</i></button>
-        <button class="survivor reveal" data-file="MC-03"><span>MC-03</span><b>Mark Connor</b><small>REGISTRO PRESENTE</small><i>INCOMPLETO</i></button>
-        <button class="survivor reveal" data-file="AS-04"><span>AS-04</span><b>Ariani</b><small>REGISTRO PRESENTE</small><i>DESTINO PROTEGIDO</i></button>
-        <button class="survivor reveal" data-file="BC-05"><span>BC-05</span><b>Britney Connor</b><small>REGISTRO PRESENTE</small><i>SEM RESPOSTA</i></button>
-        <button class="survivor reveal" data-file="JC-06"><span>JC-06</span><b>Jully Connor</b><small>REGISTRO PRESENTE</small><i>CRIPTOGRAFADO</i></button>
-      </div>
-      <p class="lore-lock">Os arquivos serão abertos quando a história do presente for registrada.</p>
-    </section>
+      <section class="timeline-rift" id="cronologia">
+        <header class="world-heading reveal">
+          <p>TRÊS PERÍODOS // UMA ÚNICA HISTÓRIA</p>
+          <h2>O tempo também<br /><em>deixou cicatrizes.</em></h2>
+        </header>
+        <div class="timeline-track">
+          <a class="time-node past reveal" href="arquivo-passado.html"
+            ><span>ANTES</span><b>O PASSADO</b>
+            <p>A família jovem, a mansão e os Hellsings antes da queda.</p>
+            <i>ABRIR MEMÓRIA →</i></a
+          >
+          <a class="time-node zero reveal" href="https://maycon-rezende.github.io/apocalipse/"
+            ><span>RUPTURA</span><b>DOOMSDAY</b>
+            <p>O Dia D. O instante em que todas as linhas se partiram.</p>
+            <i>ACESSAR O DIA ZERO →</i></a
+          >
+          <a class="time-node now reveal" href="#top"
+            ><span>AGORA</span><b>A EXTINÇÃO</b>
+            <p>O presente devastado e as consequências de tudo que aconteceu.</p>
+            <i>VOCÊ ESTÁ AQUI</i></a
+          >
+        </div>
+      </section>
 
-    <section class="timeline-rift" id="cronologia">
-      <header class="world-heading reveal">
-        <p>TRÊS PERÍODOS // UMA ÚNICA HISTÓRIA</p>
-        <h2>O tempo também<br><em>deixou cicatrizes.</em></h2>
-      </header>
-      <div class="timeline-track">
-        <a class="time-node past reveal" href="arquivo-passado.html"><span>ANTES</span><b>O PASSADO</b><p>A família jovem, a mansão e os Hellsings antes da queda.</p><i>ABRIR MEMÓRIA →</i></a>
-        <a class="time-node zero reveal" href="https://maycon-rezende.github.io/apocalipse/"><span>RUPTURA</span><b>DOOMSDAY</b><p>O Dia D. O instante em que todas as linhas se partiram.</p><i>ACESSAR O DIA ZERO →</i></a>
-        <a class="time-node now reveal" href="#top"><span>AGORA</span><b>A EXTINÇÃO</b><p>O presente devastado e as consequências de tudo que aconteceu.</p><i>VOCÊ ESTÁ AQUI</i></a>
-      </div>
-    </section>
+      <section class="past-vault" id="passado">
+        <div class="vault-door" aria-hidden="true"><span>Æ</span><i></i><i></i><i></i></div>
+        <div class="vault-copy reveal">
+          <p>CAIXA-PRETA CONNOR // MEMÓRIA ANTERIOR AO DIA D</p>
+          <h2>Antes do mundo acabar,<br /><em>eles tinham uma vida.</em></h2>
+          <span
+            >Conheça os Connor quando ainda eram jovens. Entre na mansão, abra seus arquivos
+            pessoais, veja as fotografias e descubra como os Hellsings existiam antes da
+            extinção.</span
+          >
+          <a href="arquivo-passado.html" data-open-past
+            ><b>DESBLOQUEAR ARQUIVOS DO PASSADO</b><i>→</i></a
+          >
+          <small>O acesso altera o período da experiência.</small>
+        </div>
+      </section>
 
-    <section class="past-vault" id="passado">
-      <div class="vault-door" aria-hidden="true"><span>Æ</span><i></i><i></i><i></i></div>
-      <div class="vault-copy reveal">
-        <p>CAIXA-PRETA CONNOR // MEMÓRIA ANTERIOR AO DIA D</p>
-        <h2>Antes do mundo acabar,<br><em>eles tinham uma vida.</em></h2>
-        <span>Conheça os Connor quando ainda eram jovens. Entre na mansão, abra seus arquivos pessoais, veja as fotografias e descubra como os Hellsings existiam antes da extinção.</span>
-        <a href="arquivo-passado.html" data-open-past><b>DESBLOQUEAR ARQUIVOS DO PASSADO</b><i>→</i></a>
-        <small>O acesso altera o período da experiência.</small>
-      </div>
-    </section>
+      <section class="final-signal">
+        <p>TRANSMISSÃO FINAL // IDENTIDADE NÃO CONFIRMADA</p>
+        <blockquote>
+          “Se alguém encontrar este sinal, não procure o mundo que perdemos. Procure aquilo que
+          ainda pode ser salvo.”
+        </blockquote>
+        <div><i></i><span>FIM DO FRAGMENTO</span><i></i></div>
+      </section>
+    </main>
 
-    <section class="final-signal">
-      <p>TRANSMISSÃO FINAL // IDENTIDADE NÃO CONFIRMADA</p>
-      <blockquote>“Se alguém encontrar este sinal, não procure o mundo que perdemos. Procure aquilo que ainda pode ser salvo.”</blockquote>
-      <div><i></i><span>FIM DO FRAGMENTO</span><i></i></div>
-    </section>
-  </main>
+    <dialog class="classified-dialog" id="classifiedDialog">
+      <button type="button" data-close-file aria-label="Fechar">×</button>
+      <span id="fileCode">ARQUIVO</span>
+      <h2>ACESSO NEGADO</h2>
+      <p>
+        Este destino pertence à história do presente e permanece protegido até a liberação da lore
+        oficial.
+      </p>
+      <i>AGUARDANDO AUTORIZAÇÃO DO AUTOR</i>
+    </dialog>
 
-  <dialog class="classified-dialog" id="classifiedDialog">
-    <button type="button" data-close-file aria-label="Fechar">×</button>
-    <span id="fileCode">ARQUIVO</span>
-    <h2>ACESSO NEGADO</h2>
-    <p>Este destino pertence à história do presente e permanece protegido até a liberação da lore oficial.</p>
-    <i>AGUARDANDO AUTORIZAÇÃO DO AUTOR</i>
-  </dialog>
-
-  <div class="period-transition" aria-hidden="true"><span>RECUPERANDO MEMÓRIAS ANTERIORES AO DIA D...</span><i></i></div>
-  <footer><strong>A ERA DA EXTINÇÃO</strong><span>O presente começa depois do fim.</span><a href="arquivo-passado.html">ARQUIVOS DO PASSADO</a></footer>
-  <script src="era-extincao-presente/extinction-world.js"></script>
-</body>
+    <div class="period-transition" aria-hidden="true">
+      <span>RECUPERANDO MEMÓRIAS ANTERIORES AO DIA D...</span><i></i>
+    </div>
+    <footer>
+      <strong>A ERA DA EXTINÇÃO</strong><span>O presente começa depois do fim.</span
+      ><a href="arquivo-passado.html">ARQUIVOS DO PASSADO</a>
+    </footer>
+    <script src="era-extincao-presente/extinction-world.js"></script>
+  </body>
 </html>

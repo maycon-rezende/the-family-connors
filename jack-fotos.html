@@ -1,61 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Arquivo Fotográfico — Jack Connor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="jack-fotos.css">
-</head>
-<body>
-  <nav>
-    <a href="jack.html">← Voltar ao dossiê</a>
-    <span>JC // VISUAL ARCHIVE</span>
-    <a href="telainicial.html">Família Connor</a>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Arquivo Fotográfico — Jack Connor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="jack-fotos.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="jack.html">← Voltar ao dossiê</a>
+      <span>JC // VISUAL ARCHIVE</span>
+      <a href="telainicial.html">Família Connor</a>
+    </nav>
 
-  <header class="archive-hero">
-    <div class="archive-grid" aria-hidden="true"></div>
-    <span class="archive-kicker">Arquivo exclusivo // Identidade 01</span>
-    <h1>JACK CONNOR<br><em>ARQUIVO FOTOGRÁFICO</em></h1>
-    <p>Registros individuais catalogados por período profissional. Novas imagens do Jack poderão ser incorporadas a este arquivo.</p>
-    <div class="archive-count"><strong id="visible-count">16</strong><span>registros visíveis</span></div>
-  </header>
+    <header class="archive-hero">
+      <div class="archive-grid" aria-hidden="true"></div>
+      <span class="archive-kicker">Arquivo exclusivo // Identidade 01</span>
+      <h1>JACK CONNOR<br /><em>ARQUIVO FOTOGRÁFICO</em></h1>
+      <p>
+        Registros individuais catalogados por período profissional. Novas imagens do Jack poderão
+        ser incorporadas a este arquivo.
+      </p>
+      <div class="archive-count">
+        <strong id="visible-count">16</strong><span>registros visíveis</span>
+      </div>
+    </header>
 
-  <main>
-    <div class="archive-toolbar" role="group" aria-label="Filtrar fotografias">
-      <span>Selecionar arquivo:</span>
-      <button class="archive-filter is-active" type="button" data-filter="all">Todos</button>
-      <button class="archive-filter" type="button" data-filter="fbi">FBI</button>
-      <button class="archive-filter" type="button" data-filter="interpol">Interpol</button>
-      <button class="archive-filter" type="button" data-filter="hellsings">Hellsings</button>
+    <main>
+      <div class="archive-toolbar" role="group" aria-label="Filtrar fotografias">
+        <span>Selecionar arquivo:</span>
+        <button class="archive-filter is-active" type="button" data-filter="all">Todos</button>
+        <button class="archive-filter" type="button" data-filter="fbi">FBI</button>
+        <button class="archive-filter" type="button" data-filter="interpol">Interpol</button>
+        <button class="archive-filter" type="button" data-filter="hellsings">Hellsings</button>
+      </div>
+
+      <section class="photo-wall" aria-label="Fotografias individuais de Jack Connor">
+        <button
+          class="photo-card photo-card--feature"
+          type="button"
+          data-group="fbi"
+          data-title="Identidade federal"
+          data-file="img-jack/jack2.png"
+        >
+          <img
+            src="img-jack/jack2.png"
+            alt="Retrato individual de Jack Connor"
+            loading="lazy"
+          /><span>JC-FBI-01</span><i>FBI</i><strong>Identidade federal</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="fbi"
+          data-title="Agente especial"
+          data-file="img-jack/jack1.png"
+        >
+          <img
+            src="img-jack/jack1.png"
+            alt="Jack Connor como agente especial"
+            loading="lazy"
+          /><span>JC-FBI-02</span><i>FBI</i><strong>Agente especial</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="interpol"
+          data-title="Registro internacional"
+          data-file="img-jack/connorjack.png"
+        >
+          <img
+            src="img-jack/connorjack.png"
+            alt="Registro internacional de Jack Connor"
+            loading="lazy"
+          /><span>JC-INT-01</span><i>Interpol</i><strong>Registro internacional</strong>
+        </button>
+        <button
+          class="photo-card photo-card--tall"
+          type="button"
+          data-group="interpol"
+          data-title="Operação exterior"
+          data-file="img-jack/jack-alternative-2.png"
+        >
+          <img
+            src="img-jack/jack-alternative-2.png"
+            alt="Jack Connor em operação exterior"
+            loading="lazy"
+          /><span>JC-INT-02</span><i>Interpol</i><strong>Operação exterior</strong>
+        </button>
+        <button
+          class="photo-card photo-card--wide"
+          type="button"
+          data-group="hellsings"
+          data-title="Fundador dos Hellsings"
+          data-file="img-jack/jackconner.png"
+        >
+          <img
+            src="img-jack/jackconner.png"
+            alt="Jack Connor, fundador dos Hellsings"
+            loading="lazy"
+          /><span>JC-HLS-01</span><i>Hellsings</i><strong>O fundador</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="hellsings"
+          data-title="Comandante Connor"
+          data-file="img-jack/jack.png"
+        >
+          <img src="img-jack/jack.png" alt="Comandante Jack Connor" loading="lazy" /><span
+            >JC-HLS-02</span
+          ><i>Hellsings</i><strong>Comandante Connor</strong>
+        </button>
+        <button
+          class="photo-card photo-card--wide"
+          type="button"
+          data-group="fbi"
+          data-title="Reunião estratégica"
+          data-file="img-jack/reuniao.png"
+        >
+          <img
+            src="img-jack/reuniao.png"
+            alt="Jack Connor em reunião estratégica"
+            loading="lazy"
+          /><span>JC-FBI-03</span><i>FBI</i><strong>Reunião estratégica</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="interpol"
+          data-title="Agente da Interpol"
+          data-file="img-jack/interpol.png"
+        >
+          <img src="img-jack/interpol.png" alt="Jack Connor na Interpol" loading="lazy" /><span
+            >JC-INT-03</span
+          ><i>Interpol</i><strong>Agente internacional</strong>
+        </button>
+        <button
+          class="photo-card photo-card--tall"
+          type="button"
+          data-group="interpol"
+          data-title="Operação Interpol"
+          data-file="img-jack/interpol1.png"
+        >
+          <img
+            src="img-jack/interpol1.png"
+            alt="Jack em operação da Interpol"
+            loading="lazy"
+          /><span>JC-INT-04</span><i>Interpol</i><strong>Operação internacional</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="interpol"
+          data-title="Dossiê Interpol"
+          data-file="img-jack/interpol2.png"
+        >
+          <img src="img-jack/interpol2.png" alt="Dossiê Interpol de Jack" loading="lazy" /><span
+            >JC-INT-05</span
+          ><i>Interpol</i><strong>Dossiê internacional</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="hellsings"
+          data-title="Estilo Connor"
+          data-file="img-jack/estilo.png"
+        >
+          <img src="img-jack/estilo.png" alt="Estilo pessoal de Jack Connor" loading="lazy" /><span
+            >JC-HLS-03</span
+          ><i>Pessoal</i><strong>Estilo Connor</strong>
+        </button>
+        <button
+          class="photo-card photo-card--feature"
+          type="button"
+          data-group="fbi"
+          data-title="Registro vintage"
+          data-file="img-jack/vintege.png"
+        >
+          <img
+            src="img-jack/vintege.png"
+            alt="Registro vintage de Jack Connor"
+            loading="lazy"
+          /><span>JC-FBI-04</span><i>Arquivo</i><strong>Registro vintage</strong>
+        </button>
+        <button
+          class="photo-card photo-card--wide"
+          type="button"
+          data-group="hellsings"
+          data-title="Comandante no inverno"
+          data-file="img-jack/jackfrio.png"
+        >
+          <img
+            src="img-jack/jackfrio.png"
+            alt="Jack Connor em ambiente de inverno"
+            loading="lazy"
+          /><span>JC-HLS-04</span><i>Pessoal</i><strong>Comandante no inverno</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="hellsings"
+          data-title="Lutador clássico"
+          data-file="img-jack/cosplay.png"
+        >
+          <img
+            src="img-jack/cosplay.png"
+            alt="Jack Connor em caracterização de lutador"
+            loading="lazy"
+          /><span>JC-TEM-01</span><i>Temático</i><strong>Lutador clássico</strong>
+        </button>
+        <button
+          class="photo-card photo-card--tall"
+          type="button"
+          data-group="hellsings"
+          data-title="Guerreiro das sombras"
+          data-file="img-jack/cosplay1.png"
+        >
+          <img
+            src="img-jack/cosplay1.png"
+            alt="Jack Connor em caracterização sombria"
+            loading="lazy"
+          /><span>JC-TEM-02</span><i>Temático</i><strong>Guerreiro das sombras</strong>
+        </button>
+        <button
+          class="photo-card"
+          type="button"
+          data-group="hellsings"
+          data-title="Punhos de combate"
+          data-file="img-jack/cosplay3.png"
+        >
+          <img
+            src="img-jack/cosplay3.png"
+            alt="Jack Connor em traje temático de combate"
+            loading="lazy"
+          /><span>JC-TEM-03</span><i>Temático</i><strong>Punhos de combate</strong>
+        </button>
+      </section>
+    </main>
+
+    <div
+      class="photo-viewer"
+      id="photo-viewer"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-label="Fotografia ampliada"
+    >
+      <button class="viewer-close" type="button" aria-label="Fechar">×</button>
+      <img src="" alt="" />
+      <div>
+        <span>JACK CONNOR // CLASSIFICADO</span><strong></strong><small>Arquivo visual JC-01</small>
+      </div>
     </div>
-
-    <section class="photo-wall" aria-label="Fotografias individuais de Jack Connor">
-      <button class="photo-card photo-card--feature" type="button" data-group="fbi" data-title="Identidade federal" data-file="img-jack/jack2.png"><img src="img-jack/jack2.png" alt="Retrato individual de Jack Connor" loading="lazy"><span>JC-FBI-01</span><i>FBI</i><strong>Identidade federal</strong></button>
-      <button class="photo-card" type="button" data-group="fbi" data-title="Agente especial" data-file="img-jack/jack1.png"><img src="img-jack/jack1.png" alt="Jack Connor como agente especial" loading="lazy"><span>JC-FBI-02</span><i>FBI</i><strong>Agente especial</strong></button>
-      <button class="photo-card" type="button" data-group="interpol" data-title="Registro internacional" data-file="img-jack/connorjack.png"><img src="img-jack/connorjack.png" alt="Registro internacional de Jack Connor" loading="lazy"><span>JC-INT-01</span><i>Interpol</i><strong>Registro internacional</strong></button>
-      <button class="photo-card photo-card--tall" type="button" data-group="interpol" data-title="Operação exterior" data-file="img-jack/jack-alternative-2.png"><img src="img-jack/jack-alternative-2.png" alt="Jack Connor em operação exterior" loading="lazy"><span>JC-INT-02</span><i>Interpol</i><strong>Operação exterior</strong></button>
-      <button class="photo-card photo-card--wide" type="button" data-group="hellsings" data-title="Fundador dos Hellsings" data-file="img-jack/jackconner.png"><img src="img-jack/jackconner.png" alt="Jack Connor, fundador dos Hellsings" loading="lazy"><span>JC-HLS-01</span><i>Hellsings</i><strong>O fundador</strong></button>
-      <button class="photo-card" type="button" data-group="hellsings" data-title="Comandante Connor" data-file="img-jack/jack.png"><img src="img-jack/jack.png" alt="Comandante Jack Connor" loading="lazy"><span>JC-HLS-02</span><i>Hellsings</i><strong>Comandante Connor</strong></button>
-      <button class="photo-card photo-card--wide" type="button" data-group="fbi" data-title="Reunião estratégica" data-file="img-jack/reuniao.png"><img src="img-jack/reuniao.png" alt="Jack Connor em reunião estratégica" loading="lazy"><span>JC-FBI-03</span><i>FBI</i><strong>Reunião estratégica</strong></button>
-      <button class="photo-card" type="button" data-group="interpol" data-title="Agente da Interpol" data-file="img-jack/interpol.png"><img src="img-jack/interpol.png" alt="Jack Connor na Interpol" loading="lazy"><span>JC-INT-03</span><i>Interpol</i><strong>Agente internacional</strong></button>
-      <button class="photo-card photo-card--tall" type="button" data-group="interpol" data-title="Operação Interpol" data-file="img-jack/interpol1.png"><img src="img-jack/interpol1.png" alt="Jack em operação da Interpol" loading="lazy"><span>JC-INT-04</span><i>Interpol</i><strong>Operação internacional</strong></button>
-      <button class="photo-card" type="button" data-group="interpol" data-title="Dossiê Interpol" data-file="img-jack/interpol2.png"><img src="img-jack/interpol2.png" alt="Dossiê Interpol de Jack" loading="lazy"><span>JC-INT-05</span><i>Interpol</i><strong>Dossiê internacional</strong></button>
-      <button class="photo-card" type="button" data-group="hellsings" data-title="Estilo Connor" data-file="img-jack/estilo.png"><img src="img-jack/estilo.png" alt="Estilo pessoal de Jack Connor" loading="lazy"><span>JC-HLS-03</span><i>Pessoal</i><strong>Estilo Connor</strong></button>
-      <button class="photo-card photo-card--feature" type="button" data-group="fbi" data-title="Registro vintage" data-file="img-jack/vintege.png"><img src="img-jack/vintege.png" alt="Registro vintage de Jack Connor" loading="lazy"><span>JC-FBI-04</span><i>Arquivo</i><strong>Registro vintage</strong></button>
-      <button class="photo-card photo-card--wide" type="button" data-group="hellsings" data-title="Comandante no inverno" data-file="img-jack/jackfrio.png"><img src="img-jack/jackfrio.png" alt="Jack Connor em ambiente de inverno" loading="lazy"><span>JC-HLS-04</span><i>Pessoal</i><strong>Comandante no inverno</strong></button>
-      <button class="photo-card" type="button" data-group="hellsings" data-title="Lutador clássico" data-file="img-jack/cosplay.png"><img src="img-jack/cosplay.png" alt="Jack Connor em caracterização de lutador" loading="lazy"><span>JC-TEM-01</span><i>Temático</i><strong>Lutador clássico</strong></button>
-      <button class="photo-card photo-card--tall" type="button" data-group="hellsings" data-title="Guerreiro das sombras" data-file="img-jack/cosplay1.png"><img src="img-jack/cosplay1.png" alt="Jack Connor em caracterização sombria" loading="lazy"><span>JC-TEM-02</span><i>Temático</i><strong>Guerreiro das sombras</strong></button>
-      <button class="photo-card" type="button" data-group="hellsings" data-title="Punhos de combate" data-file="img-jack/cosplay3.png"><img src="img-jack/cosplay3.png" alt="Jack Connor em traje temático de combate" loading="lazy"><span>JC-TEM-03</span><i>Temático</i><strong>Punhos de combate</strong></button>
-    </section>
-  </main>
-
-  <div class="photo-viewer" id="photo-viewer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Fotografia ampliada">
-    <button class="viewer-close" type="button" aria-label="Fechar">×</button>
-    <img src="" alt="">
-    <div><span>JACK CONNOR // CLASSIFICADO</span><strong></strong><small>Arquivo visual JC-01</small></div>
-  </div>
-  <script src="jack-fotos.js"></script>
-</body>
+    <script src="jack-fotos.js"></script>
+  </body>
 </html>

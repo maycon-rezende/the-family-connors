@@ -1,14 +1,341 @@
 /* Camada imersiva do centro de comando */
-:root{--hls-alert:#d9473f;--hls-gold:#d59b3a;--hls-acid:#bbd64a}
-.hls-access-meter{position:fixed;z-index:90;right:18px;top:50%;translate:0 -50%;display:grid;justify-items:center;gap:8px;color:#82943a;font:500 8px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;pointer-events:none}.hls-access-meter:before{content:'';width:1px;height:90px;background:linear-gradient(to top,var(--hls-acid) var(--access),#2a301d var(--access))}.hls-access-meter b{writing-mode:vertical-rl;color:var(--hls-acid);font-weight:400}.hls-access-meter small{color:#6d735d}
-.hls-cursor-label{position:fixed;z-index:2147483647;left:0;top:0;opacity:0;translate:30px 22px;padding:5px 8px;border-left:1px solid var(--hls-acid);background:#050706db;color:var(--hls-acid);font:500 8px/1 'IBM Plex Mono',monospace;letter-spacing:.17em;white-space:nowrap;pointer-events:none;transition:opacity .15s,color .15s,border-color .15s}.hls-cursor-label.show{opacity:1}.hls-cursor-label.denied{color:#ff5c51;border-color:#ff5c51}
-.hls-cursor-ping{position:fixed;z-index:2147483646;width:12px;height:12px;margin:-6px;border:1px solid var(--hls-alert);border-radius:50%;pointer-events:none;animation:hlsPing .65s ease-out forwards}
-.bunker-frame,.facility-track article{isolation:isolate}.hls-camera-ui{position:absolute;z-index:4;inset:0;pointer-events:none;border:1px solid transparent;transition:border-color .25s}.hls-camera-ui:before{content:'● REC  CAM-' attr(data-camera);position:absolute;top:12px;left:13px;color:#ef5a50;font:500 8px/1 'IBM Plex Mono',monospace;letter-spacing:.15em;text-shadow:0 0 9px #e33}.hls-camera-ui:after{content:attr(data-time);position:absolute;right:12px;bottom:11px;color:#d8dfc4;font:400 8px/1 'IBM Plex Mono',monospace;letter-spacing:.1em}.bunker-frame:hover .hls-camera-ui,.facility-track article:hover .hls-camera-ui{border-color:#bbd64a66;box-shadow:inset 0 0 45px #bbd64a10}.bunker-frame:hover img,.facility-track article:hover img{filter:contrast(1.14) saturate(.65) brightness(.83)}
-.mission-record{position:relative;overflow:hidden}.mission-record:after{content:'CLIQUE PARA DESCLASSIFICAR';position:absolute;inset:auto 0 0;padding:7px 12px;background:#090b09ed;color:var(--hls-acid);font:500 8px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;translate:0 100%;transition:translate .25s}.mission-record:hover:after{translate:0}.mission-record.decrypting{animation:hlsDecrypt .5s steps(2)}.mission-detail{position:relative}.mission-detail.is-decoding>*{opacity:.2;filter:blur(3px)}.mission-detail.is-decoding:after{content:'DECODIFICANDO ARQUIVO // ████████';position:absolute;left:24px;top:50%;color:var(--hls-acid);font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;animation:hlsCodeBlink .18s steps(2) infinite}
-.hls-kinetic.is-type-visible:hover .hls-char:nth-child(3n+1){color:var(--hls-alert);translate:1px -1px;text-shadow:-2px 0 #65a8a1,2px 0 #9c211d}.hls-kinetic.is-type-visible:hover .hls-char:nth-child(4n){color:var(--hls-acid);translate:-1px 1px}.hls-kinetic .hls-char{transition:color .14s,translate .14s,text-shadow .14s}
-.red-protocol-trigger{position:fixed;z-index:92;right:20px;bottom:22px;width:48px;height:48px;border:1px solid #8b2e29;background:#100707;color:#ef554c;border-radius:50%;font:700 17px/1 'Barlow Condensed',sans-serif;box-shadow:0 0 0 5px #120a09,0 0 22px #c22b2438;cursor:pointer}.red-protocol-trigger:after{content:'PROTOCOLO VERMELHO';position:absolute;right:58px;top:50%;translate:0 -50%;width:max-content;color:#a84b45;font:500 8px/1 'IBM Plex Mono',monospace;letter-spacing:.16em}
-.red-protocol-banner{position:fixed;z-index:89;left:0;right:0;top:0;display:flex;justify-content:center;gap:2rem;padding:8px;background:#8e1513e8;color:#fff;font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.28em;translate:0 -110%;transition:translate .3s}.protocol-red .red-protocol-banner{translate:0}.protocol-red{--acid:#e24b43}.protocol-red:before{content:'';position:fixed;z-index:88;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#d2222208 0 1px,transparent 1px 5px);box-shadow:inset 0 0 130px #c514142c;animation:hlsAlarm 1.2s ease-in-out infinite}.protocol-red .connor-cursor-ring{filter:drop-shadow(0 0 8px #f33);background:conic-gradient(#ed4238 0 35deg,transparent 35deg 90deg,#ed4238 90deg 125deg,transparent 125deg 180deg,#ed4238 180deg 215deg,transparent 215deg 270deg,#ed4238 270deg 305deg,transparent 305deg)}.protocol-red .hls-access-meter b{color:#ff554b}.protocol-red .red-protocol-trigger{background:#d3342a;color:#fff;animation:hlsButtonPulse .8s infinite}
-@keyframes hlsPing{to{scale:7;opacity:0}}@keyframes hlsDecrypt{0%,40%,80%{translate:-2px 0}20%,60%{translate:2px 0}100%{translate:0}}@keyframes hlsCodeBlink{50%{opacity:.3}}@keyframes hlsAlarm{50%{box-shadow:inset 0 0 170px #d0181847}}@keyframes hlsButtonPulse{50%{box-shadow:0 0 0 9px #d3342a25,0 0 35px #e43a35}}
-@media(max-width:760px){.hls-access-meter{display:none}.red-protocol-trigger{right:13px;bottom:13px;width:42px;height:42px}.red-protocol-trigger:after{display:none}.hls-camera-ui:before,.hls-camera-ui:after{font-size:7px}.mission-record:after{display:none}}
-@media(hover:none),(pointer:coarse){.hls-cursor-label{display:none}}
-@media(prefers-reduced-motion:reduce){.protocol-red:before,.red-protocol-trigger,.mission-record.decrypting{animation:none}.hls-kinetic.is-type-visible:hover .hls-char{translate:0}}
+:root {
+  --hls-alert: #d9473f;
+  --hls-gold: #d59b3a;
+  --hls-acid: #bbd64a;
+}
+.hls-access-meter {
+  position: fixed;
+  z-index: 90;
+  right: 18px;
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: #82943a;
+  font:
+    500 8px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.18em;
+  pointer-events: none;
+}
+.hls-access-meter:before {
+  content: '';
+  width: 1px;
+  height: 90px;
+  background: linear-gradient(to top, var(--hls-acid) var(--access), #2a301d var(--access));
+}
+.hls-access-meter b {
+  writing-mode: vertical-rl;
+  color: var(--hls-acid);
+  font-weight: 400;
+}
+.hls-access-meter small {
+  color: #6d735d;
+}
+.hls-cursor-label {
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  translate: 30px 22px;
+  padding: 5px 8px;
+  border-left: 1px solid var(--hls-acid);
+  background: #050706db;
+  color: var(--hls-acid);
+  font:
+    500 8px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.17em;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    opacity 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+.hls-cursor-label.show {
+  opacity: 1;
+}
+.hls-cursor-label.denied {
+  color: #ff5c51;
+  border-color: #ff5c51;
+}
+.hls-cursor-ping {
+  position: fixed;
+  z-index: 2147483646;
+  width: 12px;
+  height: 12px;
+  margin: -6px;
+  border: 1px solid var(--hls-alert);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: hlsPing 0.65s ease-out forwards;
+}
+.bunker-frame,
+.facility-track article {
+  isolation: isolate;
+}
+.hls-camera-ui {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transition: border-color 0.25s;
+}
+.hls-camera-ui:before {
+  content: '● REC  CAM-' attr(data-camera);
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  color: #ef5a50;
+  font:
+    500 8px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 9px #e33;
+}
+.hls-camera-ui:after {
+  content: attr(data-time);
+  position: absolute;
+  right: 12px;
+  bottom: 11px;
+  color: #d8dfc4;
+  font:
+    400 8px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.1em;
+}
+.bunker-frame:hover .hls-camera-ui,
+.facility-track article:hover .hls-camera-ui {
+  border-color: #bbd64a66;
+  box-shadow: inset 0 0 45px #bbd64a10;
+}
+.bunker-frame:hover img,
+.facility-track article:hover img {
+  filter: contrast(1.14) saturate(0.65) brightness(0.83);
+}
+.mission-record {
+  position: relative;
+  overflow: hidden;
+}
+.mission-record:after {
+  content: 'CLIQUE PARA DESCLASSIFICAR';
+  position: absolute;
+  inset: auto 0 0;
+  padding: 7px 12px;
+  background: #090b09ed;
+  color: var(--hls-acid);
+  font:
+    500 8px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.14em;
+  translate: 0 100%;
+  transition: translate 0.25s;
+}
+.mission-record:hover:after {
+  translate: 0;
+}
+.mission-record.decrypting {
+  animation: hlsDecrypt 0.5s steps(2);
+}
+.mission-detail {
+  position: relative;
+}
+.mission-detail.is-decoding > * {
+  opacity: 0.2;
+  filter: blur(3px);
+}
+.mission-detail.is-decoding:after {
+  content: 'DECODIFICANDO ARQUIVO // ████████';
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  color: var(--hls-acid);
+  font:
+    500 10px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.12em;
+  animation: hlsCodeBlink 0.18s steps(2) infinite;
+}
+.hls-kinetic.is-type-visible:hover .hls-char:nth-child(3n + 1) {
+  color: var(--hls-alert);
+  translate: 1px -1px;
+  text-shadow:
+    -2px 0 #65a8a1,
+    2px 0 #9c211d;
+}
+.hls-kinetic.is-type-visible:hover .hls-char:nth-child(4n) {
+  color: var(--hls-acid);
+  translate: -1px 1px;
+}
+.hls-kinetic .hls-char {
+  transition:
+    color 0.14s,
+    translate 0.14s,
+    text-shadow 0.14s;
+}
+.red-protocol-trigger {
+  position: fixed;
+  z-index: 92;
+  right: 20px;
+  bottom: 22px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #8b2e29;
+  background: #100707;
+  color: #ef554c;
+  border-radius: 50%;
+  font:
+    700 17px/1 'Barlow Condensed',
+    sans-serif;
+  box-shadow:
+    0 0 0 5px #120a09,
+    0 0 22px #c22b2438;
+  cursor: pointer;
+}
+.red-protocol-trigger:after {
+  content: 'PROTOCOLO VERMELHO';
+  position: absolute;
+  right: 58px;
+  top: 50%;
+  translate: 0 -50%;
+  width: max-content;
+  color: #a84b45;
+  font:
+    500 8px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.16em;
+}
+.red-protocol-banner {
+  position: fixed;
+  z-index: 89;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 8px;
+  background: #8e1513e8;
+  color: #fff;
+  font:
+    600 9px/1 'IBM Plex Mono',
+    monospace;
+  letter-spacing: 0.28em;
+  translate: 0 -110%;
+  transition: translate 0.3s;
+}
+.protocol-red .red-protocol-banner {
+  translate: 0;
+}
+.protocol-red {
+  --acid: #e24b43;
+}
+.protocol-red:before {
+  content: '';
+  position: fixed;
+  z-index: 88;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, #d2222208 0 1px, transparent 1px 5px);
+  box-shadow: inset 0 0 130px #c514142c;
+  animation: hlsAlarm 1.2s ease-in-out infinite;
+}
+.protocol-red .connor-cursor-ring {
+  filter: drop-shadow(0 0 8px #f33);
+  background: conic-gradient(
+    #ed4238 0 35deg,
+    transparent 35deg 90deg,
+    #ed4238 90deg 125deg,
+    transparent 125deg 180deg,
+    #ed4238 180deg 215deg,
+    transparent 215deg 270deg,
+    #ed4238 270deg 305deg,
+    transparent 305deg
+  );
+}
+.protocol-red .hls-access-meter b {
+  color: #ff554b;
+}
+.protocol-red .red-protocol-trigger {
+  background: #d3342a;
+  color: #fff;
+  animation: hlsButtonPulse 0.8s infinite;
+}
+@keyframes hlsPing {
+  to {
+    scale: 7;
+    opacity: 0;
+  }
+}
+@keyframes hlsDecrypt {
+  0%,
+  40%,
+  80% {
+    translate: -2px 0;
+  }
+  20%,
+  60% {
+    translate: 2px 0;
+  }
+  100% {
+    translate: 0;
+  }
+}
+@keyframes hlsCodeBlink {
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes hlsAlarm {
+  50% {
+    box-shadow: inset 0 0 170px #d0181847;
+  }
+}
+@keyframes hlsButtonPulse {
+  50% {
+    box-shadow:
+      0 0 0 9px #d3342a25,
+      0 0 35px #e43a35;
+  }
+}
+@media (max-width: 760px) {
+  .hls-access-meter {
+    display: none;
+  }
+  .red-protocol-trigger {
+    right: 13px;
+    bottom: 13px;
+    width: 42px;
+    height: 42px;
+  }
+  .red-protocol-trigger:after {
+    display: none;
+  }
+  .hls-camera-ui:before,
+  .hls-camera-ui:after {
+    font-size: 7px;
+  }
+  .mission-record:after {
+    display: none;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .hls-cursor-label {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .protocol-red:before,
+  .red-protocol-trigger,
+  .mission-record.decrypting {
+    animation: none;
+  }
+  .hls-kinetic.is-type-visible:hover .hls-char {
+    translate: 0;
+  }
+}

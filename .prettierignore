@@ -1,0 +1,14 @@
+.git/
+.agents/
+.codex/
+hellsings-app/node_modules/
+hellsings-app/.expo/
+hellsings-app/dist/
+galeria-assets/
+audio/
+video/
+img-*/
+img-presente/
+img-bunker/
+casa/
+tmp/

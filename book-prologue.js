@@ -17,5 +17,11 @@
     setTimeout(finish, 2450);
   });
   prologue.querySelector('.book-skip').addEventListener('click', finish);
-  addEventListener('keydown', (event) => { if (event.key === 'Escape') finish(); }, { once: true });
+  addEventListener(
+    'keydown',
+    (event) => {
+      if (event.key === 'Escape') finish();
+    },
+    { once: true }
+  );
 })();

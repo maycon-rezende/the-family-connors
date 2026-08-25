@@ -1,30 +1,402 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { Image, ImageBackground, ImageSourcePropType, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  ImageBackground,
+  ImageSourcePropType,
+  Modal,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BottomNav } from '@/components/bottom-nav';
 import { BrandMark } from '@/components/brand-mark';
 
-type Sector={id:string;name:string;purpose:string;access:string;camera:string;status:string;description:string;image:ImageSourcePropType;color:string};
-const sectors:Sector[]=[
- {id:'01',name:'COMANDO',purpose:'ADMINISTRAÇÃO · CONTRATOS',access:'ÔMEGA',camera:'CAM-01',status:'OPERACIONAL',description:'Centro administrativo da organização. Alice controla contratos, recursos, clientes e autorizações antes de cada operação.',image:require('../../assets/hellsings/bunker-command.png'),color:'#d49a39'},
- {id:'07',name:'OPERAÇÕES',purpose:'INTELIGÊNCIA · VIGILÂNCIA',access:'SIGMA',camera:'CAM-07',status:'ATIVO',description:'Núcleo de planejamento tático, rastreamento global e comunicação com as equipes em campo.',image:require('../../assets/hellsings/bunker-operations.png'),color:'#bbd64a'},
- {id:'09',name:'ARSENAL',purpose:'EQUIPAMENTO · CONTENÇÃO',access:'ÔMEGA',camera:'CAM-09',status:'BLOQUEADO',description:'Equipamentos operacionais mantidos sob inventário biométrico e autorização dupla do comando.',image:require('../../assets/hellsings/bunker-arsenal.png'),color:'#d84940'},
- {id:'10',name:'ENFERMARIA',purpose:'TRIAGEM · RECUPERAÇÃO',access:'DELTA',camera:'CAM-10',status:'DISPONÍVEL',description:'Unidade médica autônoma preparada para triagem, cirurgia emergencial e recuperação pós-operação.',image:require('../../assets/hellsings/bunker-medical.png'),color:'#5eb7ad'},
- {id:'05',name:'GARAGEM SECRETA',purpose:'EXTRAÇÃO · CONTINGÊNCIA',access:'SIGMA',camera:'CAM-05',status:'PRONTA',description:'Frota de contingência, rotas de evacuação e acesso silencioso para mobilização operacional.',image:require('../../assets/hellsings/bunker-garage.png'),color:'#4e9cc7'}
+type Sector = {
+  id: string;
+  name: string;
+  purpose: string;
+  access: string;
+  camera: string;
+  status: string;
+  description: string;
+  image: ImageSourcePropType;
+  color: string;
+};
+const sectors: Sector[] = [
+  {
+    id: '01',
+    name: 'COMANDO',
+    purpose: 'ADMINISTRAÇÃO · CONTRATOS',
+    access: 'ÔMEGA',
+    camera: 'CAM-01',
+    status: 'OPERACIONAL',
+    description:
+      'Centro administrativo da organização. Alice controla contratos, recursos, clientes e autorizações antes de cada operação.',
+    image: require('../../assets/hellsings/bunker-command.png'),
+    color: '#d49a39',
+  },
+  {
+    id: '07',
+    name: 'OPERAÇÕES',
+    purpose: 'INTELIGÊNCIA · VIGILÂNCIA',
+    access: 'SIGMA',
+    camera: 'CAM-07',
+    status: 'ATIVO',
+    description:
+      'Núcleo de planejamento tático, rastreamento global e comunicação com as equipes em campo.',
+    image: require('../../assets/hellsings/bunker-operations.png'),
+    color: '#bbd64a',
+  },
+  {
+    id: '09',
+    name: 'ARSENAL',
+    purpose: 'EQUIPAMENTO · CONTENÇÃO',
+    access: 'ÔMEGA',
+    camera: 'CAM-09',
+    status: 'BLOQUEADO',
+    description:
+      'Equipamentos operacionais mantidos sob inventário biométrico e autorização dupla do comando.',
+    image: require('../../assets/hellsings/bunker-arsenal.png'),
+    color: '#d84940',
+  },
+  {
+    id: '10',
+    name: 'ENFERMARIA',
+    purpose: 'TRIAGEM · RECUPERAÇÃO',
+    access: 'DELTA',
+    camera: 'CAM-10',
+    status: 'DISPONÍVEL',
+    description:
+      'Unidade médica autônoma preparada para triagem, cirurgia emergencial e recuperação pós-operação.',
+    image: require('../../assets/hellsings/bunker-medical.png'),
+    color: '#5eb7ad',
+  },
+  {
+    id: '05',
+    name: 'GARAGEM SECRETA',
+    purpose: 'EXTRAÇÃO · CONTINGÊNCIA',
+    access: 'SIGMA',
+    camera: 'CAM-05',
+    status: 'PRONTA',
+    description:
+      'Frota de contingência, rotas de evacuação e acesso silencioso para mobilização operacional.',
+    image: require('../../assets/hellsings/bunker-garage.png'),
+    color: '#4e9cc7',
+  },
 ];
 
-export default function BunkerScreen(){const[selected,setSelected]=useState<Sector|null>(null);return <View style={s.screen}><SafeAreaView style={s.safe} edges={['top']}>
- <View style={s.header}><View style={s.brand}><BrandMark size={35}/><View><Text style={s.brandName}>HELLSINGS</Text><Text style={s.micro}>BUNKER NETWORK</Text></View></View><Pressable onPress={()=>router.replace('/')}><Text style={s.exit}>ENCERRAR SESSÃO ↗</Text></Pressable></View>
- <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
-  <ImageBackground source={require('../../assets/hellsings/bunker-entry.png')} style={s.hero} imageStyle={s.heroImage}><View style={s.heroShade}/><View style={s.live}><Text style={s.liveText}>● CAM-00 // AO VIVO</Text></View><View style={s.heroCopy}><Text style={s.eyebrow}>INSTALAÇÃO SUBTERRÂNEA</Text><Text style={s.heading}>BUNKER{`\n`}HELLSINGS.</Text><Text style={s.heroText}>Você não encontra esta base.{`\n`}Ela permite que você entre.</Text></View></ImageBackground>
-  <View style={s.system}><View><Text style={s.label}>ESTADO DA INSTALAÇÃO</Text><Text style={s.systemValue}>SEGURA</Text></View><View><Text style={s.label}>ENERGIA</Text><Text style={s.green}>AUTÔNOMA</Text></View><View><Text style={s.label}>SETORES</Text><Text style={s.systemValue}>12</Text></View></View>
-  <View style={s.mapHead}><View><Text style={s.eyebrow}>MAPA INTERNO // ACESSO ÔMEGA</Text><Text style={s.sectionTitle}>SETORES MONITORADOS</Text></View><Text style={s.mapStatus}>05 ONLINE</Text></View>
-  <View style={s.map}>{sectors.map((sector,index)=><Pressable key={sector.id} onPress={()=>setSelected(sector)} style={[s.node,{borderColor:`${sector.color}66`}]}><View style={[s.nodePoint,{backgroundColor:sector.color}]}/><Text style={[s.nodeId,{color:sector.color}]}>S-{sector.id}</Text><Text style={s.nodeName}>{sector.name}</Text><Text style={s.nodeAccess}>ACESSO {sector.access}</Text>{index<sectors.length-1&&<View style={s.connector}/>}</Pressable>)}</View>
-  <Text style={s.sectionEyebrow}>CIRCUITO FECHADO // TOQUE PARA INSPECIONAR</Text>
-  <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.track}>{sectors.map(sector=><Pressable key={sector.camera} onPress={()=>setSelected(sector)} style={s.camera}><Image source={sector.image} style={s.cameraImage}/><View style={s.cameraShade}/><View style={s.rec}><Text style={s.recText}>● REC</Text><Text style={s.cameraCode}>{sector.camera}</Text></View><View style={s.cameraCopy}><Text style={s.cameraName}>{sector.name}</Text><Text style={[s.cameraStatus,{color:sector.color}]}>{sector.status}</Text></View></Pressable>)}</ScrollView>
- </ScrollView><BottomNav active="BUNKER"/></SafeAreaView>
- <Modal visible={!!selected} animationType="fade" transparent statusBarTranslucent onRequestClose={()=>setSelected(null)}>{selected&&<View style={s.modal}><Image source={selected.image} style={s.modalImage}/><View style={s.modalShade}/><SafeAreaView style={s.modalSafe}><View style={s.modalTop}><Text style={s.recText}>● TRANSMISSÃO SEGURA // {selected.camera}</Text><Pressable onPress={()=>setSelected(null)} style={s.close}><Text style={s.closeText}>×</Text></Pressable></View><View style={s.dossier}><Text style={[s.sectorCode,{color:selected.color}]}>SETOR {selected.id} // {selected.access}</Text><Text style={s.dossierName}>{selected.name}</Text><Text style={s.purpose}>{selected.purpose}</Text><Text style={s.description}>{selected.description}</Text><View style={s.dossierRow}><View><Text style={s.label}>CÂMERA</Text><Text style={s.value}>{selected.camera}</Text></View><View><Text style={s.label}>STATUS</Text><Text style={[s.value,{color:selected.color}]}>{selected.status}</Text></View><View><Text style={s.label}>ACESSO</Text><Text style={s.value}>{selected.access}</Text></View></View><View style={[s.accessBar,{borderColor:`${selected.color}66`}]}><View style={[s.accessLight,{backgroundColor:selected.color}]}/><Text style={s.accessText}>LEITURA BIOMÉTRICA CONFIRMADA</Text></View></View></SafeAreaView></View>}</Modal>
- </View>}
+export default function BunkerScreen() {
+  const [selected, setSelected] = useState<Sector | null>(null);
+  return (
+    <View style={s.screen}>
+      <SafeAreaView style={s.safe} edges={['top']}>
+        <View style={s.header}>
+          <View style={s.brand}>
+            <BrandMark size={35} />
+            <View>
+              <Text style={s.brandName}>HELLSINGS</Text>
+              <Text style={s.micro}>BUNKER NETWORK</Text>
+            </View>
+          </View>
+          <Pressable onPress={() => router.replace('/')}>
+            <Text style={s.exit}>ENCERRAR SESSÃO ↗</Text>
+          </Pressable>
+        </View>
+        <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
+          <ImageBackground
+            source={require('../../assets/hellsings/bunker-entry.png')}
+            style={s.hero}
+            imageStyle={s.heroImage}
+          >
+            <View style={s.heroShade} />
+            <View style={s.live}>
+              <Text style={s.liveText}>● CAM-00 // AO VIVO</Text>
+            </View>
+            <View style={s.heroCopy}>
+              <Text style={s.eyebrow}>INSTALAÇÃO SUBTERRÂNEA</Text>
+              <Text style={s.heading}>BUNKER{`\n`}HELLSINGS.</Text>
+              <Text style={s.heroText}>
+                Você não encontra esta base.{`\n`}Ela permite que você entre.
+              </Text>
+            </View>
+          </ImageBackground>
+          <View style={s.system}>
+            <View>
+              <Text style={s.label}>ESTADO DA INSTALAÇÃO</Text>
+              <Text style={s.systemValue}>SEGURA</Text>
+            </View>
+            <View>
+              <Text style={s.label}>ENERGIA</Text>
+              <Text style={s.green}>AUTÔNOMA</Text>
+            </View>
+            <View>
+              <Text style={s.label}>SETORES</Text>
+              <Text style={s.systemValue}>12</Text>
+            </View>
+          </View>
+          <View style={s.mapHead}>
+            <View>
+              <Text style={s.eyebrow}>MAPA INTERNO // ACESSO ÔMEGA</Text>
+              <Text style={s.sectionTitle}>SETORES MONITORADOS</Text>
+            </View>
+            <Text style={s.mapStatus}>05 ONLINE</Text>
+          </View>
+          <View style={s.map}>
+            {sectors.map((sector, index) => (
+              <Pressable
+                key={sector.id}
+                onPress={() => setSelected(sector)}
+                style={[s.node, { borderColor: `${sector.color}66` }]}
+              >
+                <View style={[s.nodePoint, { backgroundColor: sector.color }]} />
+                <Text style={[s.nodeId, { color: sector.color }]}>S-{sector.id}</Text>
+                <Text style={s.nodeName}>{sector.name}</Text>
+                <Text style={s.nodeAccess}>ACESSO {sector.access}</Text>
+                {index < sectors.length - 1 && <View style={s.connector} />}
+              </Pressable>
+            ))}
+          </View>
+          <Text style={s.sectionEyebrow}>CIRCUITO FECHADO // TOQUE PARA INSPECIONAR</Text>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={s.track}
+          >
+            {sectors.map((sector) => (
+              <Pressable key={sector.camera} onPress={() => setSelected(sector)} style={s.camera}>
+                <Image source={sector.image} style={s.cameraImage} />
+                <View style={s.cameraShade} />
+                <View style={s.rec}>
+                  <Text style={s.recText}>● REC</Text>
+                  <Text style={s.cameraCode}>{sector.camera}</Text>
+                </View>
+                <View style={s.cameraCopy}>
+                  <Text style={s.cameraName}>{sector.name}</Text>
+                  <Text style={[s.cameraStatus, { color: sector.color }]}>{sector.status}</Text>
+                </View>
+              </Pressable>
+            ))}
+          </ScrollView>
+        </ScrollView>
+        <BottomNav active="BUNKER" />
+      </SafeAreaView>
+      <Modal
+        visible={!!selected}
+        animationType="fade"
+        transparent
+        statusBarTranslucent
+        onRequestClose={() => setSelected(null)}
+      >
+        {selected && (
+          <View style={s.modal}>
+            <Image source={selected.image} style={s.modalImage} />
+            <View style={s.modalShade} />
+            <SafeAreaView style={s.modalSafe}>
+              <View style={s.modalTop}>
+                <Text style={s.recText}>● TRANSMISSÃO SEGURA // {selected.camera}</Text>
+                <Pressable onPress={() => setSelected(null)} style={s.close}>
+                  <Text style={s.closeText}>×</Text>
+                </Pressable>
+              </View>
+              <View style={s.dossier}>
+                <Text style={[s.sectorCode, { color: selected.color }]}>
+                  SETOR {selected.id} // {selected.access}
+                </Text>
+                <Text style={s.dossierName}>{selected.name}</Text>
+                <Text style={s.purpose}>{selected.purpose}</Text>
+                <Text style={s.description}>{selected.description}</Text>
+                <View style={s.dossierRow}>
+                  <View>
+                    <Text style={s.label}>CÂMERA</Text>
+                    <Text style={s.value}>{selected.camera}</Text>
+                  </View>
+                  <View>
+                    <Text style={s.label}>STATUS</Text>
+                    <Text style={[s.value, { color: selected.color }]}>{selected.status}</Text>
+                  </View>
+                  <View>
+                    <Text style={s.label}>ACESSO</Text>
+                    <Text style={s.value}>{selected.access}</Text>
+                  </View>
+                </View>
+                <View style={[s.accessBar, { borderColor: `${selected.color}66` }]}>
+                  <View style={[s.accessLight, { backgroundColor: selected.color }]} />
+                  <Text style={s.accessText}>LEITURA BIOMÉTRICA CONFIRMADA</Text>
+                </View>
+              </View>
+            </SafeAreaView>
+          </View>
+        )}
+      </Modal>
+    </View>
+  );
+}
 
-const s=StyleSheet.create({screen:{flex:1,backgroundColor:'#030504'},safe:{flex:1},header:{height:76,paddingHorizontal:20,borderBottomWidth:1,borderBottomColor:'#1d241c',flexDirection:'row',alignItems:'center',justifyContent:'space-between'},brand:{flexDirection:'row',alignItems:'center',gap:6},brandName:{color:'#e5e6de',fontSize:11,fontWeight:'700',letterSpacing:2.4},micro:{color:'#596159',fontFamily:'monospace',fontSize:6,letterSpacing:.8},exit:{color:'#777f74',fontSize:7,fontFamily:'monospace'},content:{paddingBottom:115},hero:{height:500,justifyContent:'flex-end'},heroImage:{resizeMode:'cover'},heroShade:{...StyleSheet.absoluteFillObject,backgroundColor:'rgba(2,5,4,.42)'},live:{position:'absolute',top:17,left:18,borderWidth:1,borderColor:'#87302b',backgroundColor:'rgba(8,4,3,.75)',padding:7},liveText:{color:'#e04b43',fontFamily:'monospace',fontSize:7,letterSpacing:1},heroCopy:{padding:20,paddingBottom:32},eyebrow:{color:'#bbd64a',fontFamily:'monospace',fontSize:8,letterSpacing:1.4},heading:{color:'#f0efe8',fontSize:46,lineHeight:47,fontWeight:'300',marginTop:10},heroText:{color:'#c1c4ba',fontSize:12,lineHeight:19,marginTop:15},system:{margin:20,marginTop:-1,backgroundColor:'#080c09',borderWidth:1,borderColor:'#20291f',padding:17,flexDirection:'row',justifyContent:'space-between'},label:{color:'#646d64',fontFamily:'monospace',fontSize:6,letterSpacing:.8},systemValue:{color:'#e2e3dc',fontFamily:'monospace',fontSize:10,marginTop:8},green:{color:'#bbd64a',fontFamily:'monospace',fontSize:9,marginTop:8},mapHead:{paddingHorizontal:20,paddingTop:28,flexDirection:'row',justifyContent:'space-between',alignItems:'flex-end'},sectionTitle:{color:'#e9e9e2',fontSize:25,fontWeight:'300',marginTop:8},mapStatus:{color:'#bbd64a',fontFamily:'monospace',fontSize:7},map:{margin:20,borderWidth:1,borderColor:'#202820',backgroundColor:'#070a08',padding:17,gap:12},node:{minHeight:72,borderWidth:1,borderLeftWidth:3,backgroundColor:'#0a0e0b',padding:12,justifyContent:'center'},nodePoint:{position:'absolute',right:12,top:12,width:5,height:5},nodeId:{fontFamily:'monospace',fontSize:7},nodeName:{color:'#e4e5dd',fontSize:16,fontWeight:'600',marginTop:4},nodeAccess:{color:'#5b645c',fontFamily:'monospace',fontSize:6,marginTop:5},connector:{position:'absolute',left:'50%',bottom:-13,width:1,height:13,backgroundColor:'#394138'},sectionEyebrow:{color:'#697269',fontFamily:'monospace',fontSize:7,letterSpacing:1,paddingHorizontal:20,marginTop:20},track:{padding:20,gap:10},camera:{width:285,height:360,backgroundColor:'#080b09',overflow:'hidden'},cameraImage:{width:'100%',height:'100%',resizeMode:'cover'},cameraShade:{...StyleSheet.absoluteFillObject,backgroundColor:'rgba(2,4,3,.2)'},rec:{position:'absolute',left:11,right:11,top:11,flexDirection:'row',justifyContent:'space-between'},recText:{color:'#e04b43',fontFamily:'monospace',fontSize:7,letterSpacing:1},cameraCode:{color:'#d8ddd2',fontFamily:'monospace',fontSize:7},cameraCopy:{position:'absolute',left:14,right:14,bottom:15},cameraName:{color:'#f0efe8',fontSize:24,fontWeight:'500'},cameraStatus:{fontFamily:'monospace',fontSize:7,letterSpacing:1,marginTop:6},modal:{flex:1,backgroundColor:'#020302'},modalImage:{...StyleSheet.absoluteFillObject,width:'100%',height:'70%',resizeMode:'cover'},modalShade:{...StyleSheet.absoluteFillObject,backgroundColor:'rgba(1,3,2,.18)'},modalSafe:{flex:1,justifyContent:'space-between'},modalTop:{padding:18,flexDirection:'row',justifyContent:'space-between',alignItems:'center'},close:{width:42,height:42,borderWidth:1,borderColor:'#78816f',backgroundColor:'rgba(3,5,4,.8)',alignItems:'center',justifyContent:'center'},closeText:{color:'#fff',fontSize:26},dossier:{backgroundColor:'rgba(4,7,5,.97)',borderTopWidth:1,borderTopColor:'#bbd64a',padding:22,paddingBottom:35},sectorCode:{fontFamily:'monospace',fontSize:8,letterSpacing:1},dossierName:{color:'#f0efe7',fontSize:36,fontWeight:'300',marginTop:8},purpose:{color:'#888f86',fontFamily:'monospace',fontSize:7,letterSpacing:.8,marginTop:5},description:{color:'#a0a79d',fontSize:12,lineHeight:19,marginTop:16},dossierRow:{flexDirection:'row',justifyContent:'space-between',marginTop:20},value:{color:'#d9dad3',fontFamily:'monospace',fontSize:9,marginTop:6},accessBar:{borderWidth:1,padding:12,marginTop:20,flexDirection:'row',alignItems:'center',gap:10},accessLight:{width:6,height:6},accessText:{color:'#b9beb5',fontFamily:'monospace',fontSize:7,letterSpacing:.7}});
+const s = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: '#030504' },
+  safe: { flex: 1 },
+  header: {
+    height: 76,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#1d241c',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  brand: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  brandName: { color: '#e5e6de', fontSize: 11, fontWeight: '700', letterSpacing: 2.4 },
+  micro: { color: '#596159', fontFamily: 'monospace', fontSize: 6, letterSpacing: 0.8 },
+  exit: { color: '#777f74', fontSize: 7, fontFamily: 'monospace' },
+  content: { paddingBottom: 115 },
+  hero: { height: 500, justifyContent: 'flex-end' },
+  heroImage: { resizeMode: 'cover' },
+  heroShade: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(2,5,4,.42)' },
+  live: {
+    position: 'absolute',
+    top: 17,
+    left: 18,
+    borderWidth: 1,
+    borderColor: '#87302b',
+    backgroundColor: 'rgba(8,4,3,.75)',
+    padding: 7,
+  },
+  liveText: { color: '#e04b43', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
+  heroCopy: { padding: 20, paddingBottom: 32 },
+  eyebrow: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 8, letterSpacing: 1.4 },
+  heading: { color: '#f0efe8', fontSize: 46, lineHeight: 47, fontWeight: '300', marginTop: 10 },
+  heroText: { color: '#c1c4ba', fontSize: 12, lineHeight: 19, marginTop: 15 },
+  system: {
+    margin: 20,
+    marginTop: -1,
+    backgroundColor: '#080c09',
+    borderWidth: 1,
+    borderColor: '#20291f',
+    padding: 17,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  label: { color: '#646d64', fontFamily: 'monospace', fontSize: 6, letterSpacing: 0.8 },
+  systemValue: { color: '#e2e3dc', fontFamily: 'monospace', fontSize: 10, marginTop: 8 },
+  green: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 9, marginTop: 8 },
+  mapHead: {
+    paddingHorizontal: 20,
+    paddingTop: 28,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  sectionTitle: { color: '#e9e9e2', fontSize: 25, fontWeight: '300', marginTop: 8 },
+  mapStatus: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 7 },
+  map: {
+    margin: 20,
+    borderWidth: 1,
+    borderColor: '#202820',
+    backgroundColor: '#070a08',
+    padding: 17,
+    gap: 12,
+  },
+  node: {
+    minHeight: 72,
+    borderWidth: 1,
+    borderLeftWidth: 3,
+    backgroundColor: '#0a0e0b',
+    padding: 12,
+    justifyContent: 'center',
+  },
+  nodePoint: { position: 'absolute', right: 12, top: 12, width: 5, height: 5 },
+  nodeId: { fontFamily: 'monospace', fontSize: 7 },
+  nodeName: { color: '#e4e5dd', fontSize: 16, fontWeight: '600', marginTop: 4 },
+  nodeAccess: { color: '#5b645c', fontFamily: 'monospace', fontSize: 6, marginTop: 5 },
+  connector: {
+    position: 'absolute',
+    left: '50%',
+    bottom: -13,
+    width: 1,
+    height: 13,
+    backgroundColor: '#394138',
+  },
+  sectionEyebrow: {
+    color: '#697269',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    letterSpacing: 1,
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+  track: { padding: 20, gap: 10 },
+  camera: { width: 285, height: 360, backgroundColor: '#080b09', overflow: 'hidden' },
+  cameraImage: { width: '100%', height: '100%', resizeMode: 'cover' },
+  cameraShade: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(2,4,3,.2)' },
+  rec: {
+    position: 'absolute',
+    left: 11,
+    right: 11,
+    top: 11,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  recText: { color: '#e04b43', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
+  cameraCode: { color: '#d8ddd2', fontFamily: 'monospace', fontSize: 7 },
+  cameraCopy: { position: 'absolute', left: 14, right: 14, bottom: 15 },
+  cameraName: { color: '#f0efe8', fontSize: 24, fontWeight: '500' },
+  cameraStatus: { fontFamily: 'monospace', fontSize: 7, letterSpacing: 1, marginTop: 6 },
+  modal: { flex: 1, backgroundColor: '#020302' },
+  modalImage: {
+    ...StyleSheet.absoluteFillObject,
+    width: '100%',
+    height: '70%',
+    resizeMode: 'cover',
+  },
+  modalShade: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(1,3,2,.18)' },
+  modalSafe: { flex: 1, justifyContent: 'space-between' },
+  modalTop: {
+    padding: 18,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  close: {
+    width: 42,
+    height: 42,
+    borderWidth: 1,
+    borderColor: '#78816f',
+    backgroundColor: 'rgba(3,5,4,.8)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  closeText: { color: '#fff', fontSize: 26 },
+  dossier: {
+    backgroundColor: 'rgba(4,7,5,.97)',
+    borderTopWidth: 1,
+    borderTopColor: '#bbd64a',
+    padding: 22,
+    paddingBottom: 35,
+  },
+  sectorCode: { fontFamily: 'monospace', fontSize: 8, letterSpacing: 1 },
+  dossierName: { color: '#f0efe7', fontSize: 36, fontWeight: '300', marginTop: 8 },
+  purpose: {
+    color: '#888f86',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    letterSpacing: 0.8,
+    marginTop: 5,
+  },
+  description: { color: '#a0a79d', fontSize: 12, lineHeight: 19, marginTop: 16 },
+  dossierRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 20 },
+  value: { color: '#d9dad3', fontFamily: 'monospace', fontSize: 9, marginTop: 6 },
+  accessBar: {
+    borderWidth: 1,
+    padding: 12,
+    marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  accessLight: { width: 6, height: 6 },
+  accessText: { color: '#b9beb5', fontFamily: 'monospace', fontSize: 7, letterSpacing: 0.7 },
+});

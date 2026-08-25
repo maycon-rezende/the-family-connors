@@ -10,9 +10,15 @@
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const heroObserver = new IntersectionObserver(([entry]) => {
-    document.body.classList.toggle('hero-in-view', entry.isIntersecting && entry.intersectionRatio > .25);
-  }, { threshold: [0, .25, .6] });
+  const heroObserver = new IntersectionObserver(
+    ([entry]) => {
+      document.body.classList.toggle(
+        'hero-in-view',
+        entry.isIntersecting && entry.intersectionRatio > 0.25
+      );
+    },
+    { threshold: [0, 0.25, 0.6] }
+  );
   heroObserver.observe(hero);
 
   const echo = document.createElement('span');
@@ -44,7 +50,7 @@
     mote.style.setProperty('--speed', `${9 + Math.random() * 12}s`);
     mote.style.setProperty('--delay', `${-Math.random() * 18}s`);
     mote.style.setProperty('--drift', `${-45 + Math.random() * 90}px`);
-    mote.style.setProperty('--opacity', `${.12 + Math.random() * .34}`);
+    mote.style.setProperty('--opacity', `${0.12 + Math.random() * 0.34}`);
     mote.style.setProperty('--tone', isRuin ? '#c64a27' : '#9ddcdf');
     embers.appendChild(mote);
   }
@@ -54,7 +60,7 @@
       ['TRANSMISSÃO CONNOR', 'SINAL LOCALIZADO', 'ORIGEM // DESCONHECIDA'],
       ['PROTOCOLO DOOMSDAY', 'CONTENÇÃO INSTÁVEL', 'STATUS // OBSERVANDO'],
       ['ARQUIVO RECUPERADO', 'LINHAGEM ATIVA', 'QUATRO ASSINATURAS'],
-      ['REDE HELLSINGS', 'CANAL PROTEGIDO', 'ACESSO // AUTORIZADO']
+      ['REDE HELLSINGS', 'CANAL PROTEGIDO', 'ACESSO // AUTORIZADO'],
     ];
     let messageIndex = 0;
     const showTransmission = () => {
@@ -78,15 +84,19 @@
     window.setTimeout(distantFlash, 6200);
     window.setInterval(distantFlash, 17000);
 
-    hero.addEventListener('pointermove', event => {
-      const x = event.clientX / window.innerWidth - .5;
-      const y = event.clientY / window.innerHeight - .5;
-      hero.style.setProperty('--look-x', `${x * 22}px`);
-      hero.style.setProperty('--look-y', `${y * 15}px`);
-      title.style.setProperty('--title-x', `${x * 8}px`);
-      title.style.setProperty('--title-y', `${y * 5}px`);
-      hero.style.setProperty('--world-balance', `${event.clientX / window.innerWidth}`);
-    }, { passive: true });
+    hero.addEventListener(
+      'pointermove',
+      (event) => {
+        const x = event.clientX / window.innerWidth - 0.5;
+        const y = event.clientY / window.innerHeight - 0.5;
+        hero.style.setProperty('--look-x', `${x * 22}px`);
+        hero.style.setProperty('--look-y', `${y * 15}px`);
+        title.style.setProperty('--title-x', `${x * 8}px`);
+        title.style.setProperty('--title-y', `${y * 5}px`);
+        hero.style.setProperty('--world-balance', `${event.clientX / window.innerWidth}`);
+      },
+      { passive: true }
+    );
 
     hero.addEventListener('pointerleave', () => {
       hero.style.setProperty('--look-x', '0px');
@@ -100,7 +110,7 @@
   const startButton = hero.querySelector('.hero-btn-primary');
   startButton?.addEventListener('pointerenter', () => actions?.classList.add('is-charged'));
   startButton?.addEventListener('pointerleave', () => actions?.classList.remove('is-charged'));
-  startButton?.addEventListener('click', event => {
+  startButton?.addEventListener('click', (event) => {
     if (reducedMotion) return;
     event.preventDefault();
     if (hero.classList.contains('is-entering-story')) return;
@@ -111,11 +121,15 @@
     }, 760);
   });
 
-  document.querySelectorAll('.saga-chapter').forEach(chapter => {
-    chapter.addEventListener('pointermove', event => {
-      const rect = chapter.getBoundingClientRect();
-      chapter.style.setProperty('--chapter-x', `${event.clientX - rect.left}px`);
-      chapter.style.setProperty('--chapter-y', `${event.clientY - rect.top}px`);
-    }, { passive: true });
+  document.querySelectorAll('.saga-chapter').forEach((chapter) => {
+    chapter.addEventListener(
+      'pointermove',
+      (event) => {
+        const rect = chapter.getBoundingClientRect();
+        chapter.style.setProperty('--chapter-x', `${event.clientX - rect.left}px`);
+        chapter.style.setProperty('--chapter-y', `${event.clientY - rect.top}px`);
+      },
+      { passive: true }
+    );
   });
 })();

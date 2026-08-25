@@ -5,19 +5,276 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { BottomNav } from '@/components/bottom-nav';
 import { BrandMark } from '@/components/brand-mark';
 
-const missions=[{code:'HLS-142',name:'OPERAÇÃO FAROL',type:'RESGATE',place:'ATLÂNTICO NORTE'},{code:'HLS-139',name:'ARQUIVO VESPER',type:'INFILTRAÇÃO',place:'EUROPA'},{code:'HLS-131',name:'LINHA VERMELHA',type:'INTERVENÇÃO',place:'CLASSIFICADO'}];
-export default function CommandScreen(){
- const[red,setRed]=useState(false);const[selected,setSelected]=useState<string|null>(null);
- return <View style={[s.screen,red&&s.screenRed]}>{red&&<View style={s.alert}><Text style={s.alertText}>⚠ PROTOCOLO VERMELHO ATIVO · CONTENÇÃO</Text></View>}<SafeAreaView style={s.safe} edges={['top']}>
-  <View style={s.header}><View style={{flexDirection:'row',alignItems:'center',gap:5}}><BrandMark size={35}/><Text style={[s.brandName,{marginLeft:0}]}>HELLSINGS</Text></View><View style={s.headerRight}><Text style={s.online}>● SISTEMA ATIVO</Text><Pressable onPress={()=>router.replace('/')}><Text style={s.exit}>SAIR ↗</Text></Pressable></View></View>
-  <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
-   <View style={s.welcome}><Text style={s.eyebrow}>CENTRO DE COMANDO // ACESSO ÔMEGA</Text><Text style={s.heading}>Boa noite,{`\n`}AGENTE.</Text><Text style={s.intro}>A rede Hellsings está operacional. Três arquivos aguardam sua autorização.</Text></View>
-   <View style={s.stats}><View style={s.statPrimary}><Text style={s.label}>TAXA DE SUCESSO</Text><Text style={s.hundred}>100<Text style={s.percent}>%</Text></Text><Text style={s.good}>● TODAS AS OPERAÇÕES CONCLUÍDAS</Text></View><View style={s.stat}><Text style={s.label}>AGENTES</Text><Text style={s.number}>10</Text><Text style={s.muted}>09 EM CAMPO</Text></View><View style={s.stat}><Text style={s.label}>BASE</Text><Text style={s.numberSmall}>SEGURA</Text><Text style={s.muted}>ACESSO BIOMÉTRICO</Text></View></View>
-   <View style={s.sectionHead}><View><Text style={s.eyebrow}>ARQUIVOS RECENTES</Text><Text style={s.sectionTitle}>MISSÕES</Text></View><Text style={s.classified}>NÍVEL ÔMEGA</Text></View>
-   {missions.map(m=>{const open=selected===m.code;return <Pressable key={m.code} onPress={()=>setSelected(open?null:m.code)} style={[s.mission,open&&s.missionOpen]}><View style={s.missionTop}><Text style={s.code}>{m.code}</Text><Text style={s.complete}>CONCLUÍDA</Text></View><Text style={s.missionName}>{m.name}</Text><Text style={s.missionMeta}>{m.type} · {m.place}</Text>{open&&<View style={s.declassified}><Text style={s.decrypt}>ARQUIVO PARCIALMENTE DESCLASSIFICADO</Text><Text style={s.description}>Operação encerrada com sucesso. Identidades, datas e coordenadas permanecem protegidas pelo comando.</Text></View>}</Pressable>})}
-   <Pressable onPress={()=>setRed(current=>!current)} style={[s.redButton,red&&s.redButtonActive]}><Text style={s.redIcon}>HLS</Text><View><Text style={s.redTitle}>{red?'DESATIVAR PROTOCOLO':'PROTOCOLO VERMELHO'}</Text><Text style={s.redCaption}>USO EXCLUSIVO EM AMEAÇA MÁXIMA</Text></View><Text style={s.redArrow}>›</Text></Pressable>
-   <Text style={s.footer}>HLS MOBILE TERMINAL · VERSÃO 0.1.0{`\n`}EXPERIÊNCIA NARRATIVA LOCAL</Text>
-  </ScrollView><BottomNav active="COMANDO"/>
- </SafeAreaView></View>;
+const missions = [
+  { code: 'HLS-142', name: 'OPERAÇÃO FAROL', type: 'RESGATE', place: 'ATLÂNTICO NORTE' },
+  { code: 'HLS-139', name: 'ARQUIVO VESPER', type: 'INFILTRAÇÃO', place: 'EUROPA' },
+  { code: 'HLS-131', name: 'LINHA VERMELHA', type: 'INTERVENÇÃO', place: 'CLASSIFICADO' },
+];
+export default function CommandScreen() {
+  const [red, setRed] = useState(false);
+  const [selected, setSelected] = useState<string | null>(null);
+  return (
+    <View style={[s.screen, red && s.screenRed]}>
+      {red && (
+        <View style={s.alert}>
+          <Text style={s.alertText}>⚠ PROTOCOLO VERMELHO ATIVO · CONTENÇÃO</Text>
+        </View>
+      )}
+      <SafeAreaView style={s.safe} edges={['top']}>
+        <View style={s.header}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
+            <BrandMark size={35} />
+            <Text style={[s.brandName, { marginLeft: 0 }]}>HELLSINGS</Text>
+          </View>
+          <View style={s.headerRight}>
+            <Text style={s.online}>● SISTEMA ATIVO</Text>
+            <Pressable onPress={() => router.replace('/')}>
+              <Text style={s.exit}>SAIR ↗</Text>
+            </Pressable>
+          </View>
+        </View>
+        <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
+          <View style={s.welcome}>
+            <Text style={s.eyebrow}>CENTRO DE COMANDO // ACESSO ÔMEGA</Text>
+            <Text style={s.heading}>Boa noite,{`\n`}AGENTE.</Text>
+            <Text style={s.intro}>
+              A rede Hellsings está operacional. Três arquivos aguardam sua autorização.
+            </Text>
+          </View>
+          <View style={s.stats}>
+            <View style={s.statPrimary}>
+              <Text style={s.label}>TAXA DE SUCESSO</Text>
+              <Text style={s.hundred}>
+                100<Text style={s.percent}>%</Text>
+              </Text>
+              <Text style={s.good}>● TODAS AS OPERAÇÕES CONCLUÍDAS</Text>
+            </View>
+            <View style={s.stat}>
+              <Text style={s.label}>AGENTES</Text>
+              <Text style={s.number}>10</Text>
+              <Text style={s.muted}>09 EM CAMPO</Text>
+            </View>
+            <View style={s.stat}>
+              <Text style={s.label}>BASE</Text>
+              <Text style={s.numberSmall}>SEGURA</Text>
+              <Text style={s.muted}>ACESSO BIOMÉTRICO</Text>
+            </View>
+          </View>
+          <View style={s.sectionHead}>
+            <View>
+              <Text style={s.eyebrow}>ARQUIVOS RECENTES</Text>
+              <Text style={s.sectionTitle}>MISSÕES</Text>
+            </View>
+            <Text style={s.classified}>NÍVEL ÔMEGA</Text>
+          </View>
+          {missions.map((m) => {
+            const open = selected === m.code;
+            return (
+              <Pressable
+                key={m.code}
+                onPress={() => setSelected(open ? null : m.code)}
+                style={[s.mission, open && s.missionOpen]}
+              >
+                <View style={s.missionTop}>
+                  <Text style={s.code}>{m.code}</Text>
+                  <Text style={s.complete}>CONCLUÍDA</Text>
+                </View>
+                <Text style={s.missionName}>{m.name}</Text>
+                <Text style={s.missionMeta}>
+                  {m.type} · {m.place}
+                </Text>
+                {open && (
+                  <View style={s.declassified}>
+                    <Text style={s.decrypt}>ARQUIVO PARCIALMENTE DESCLASSIFICADO</Text>
+                    <Text style={s.description}>
+                      Operação encerrada com sucesso. Identidades, datas e coordenadas permanecem
+                      protegidas pelo comando.
+                    </Text>
+                  </View>
+                )}
+              </Pressable>
+            );
+          })}
+          <Pressable
+            onPress={() => setRed((current) => !current)}
+            style={[s.redButton, red && s.redButtonActive]}
+          >
+            <Text style={s.redIcon}>HLS</Text>
+            <View>
+              <Text style={s.redTitle}>{red ? 'DESATIVAR PROTOCOLO' : 'PROTOCOLO VERMELHO'}</Text>
+              <Text style={s.redCaption}>USO EXCLUSIVO EM AMEAÇA MÁXIMA</Text>
+            </View>
+            <Text style={s.redArrow}>›</Text>
+          </Pressable>
+          <Text style={s.footer}>
+            HLS MOBILE TERMINAL · VERSÃO 0.1.0{`\n`}EXPERIÊNCIA NARRATIVA LOCAL
+          </Text>
+        </ScrollView>
+        <BottomNav active="COMANDO" />
+      </SafeAreaView>
+    </View>
+  );
 }
-const s=StyleSheet.create({screen:{flex:1,backgroundColor:'#030504'},screenRed:{backgroundColor:'#100403'},safe:{flex:1},alert:{height:30,backgroundColor:'#a41f1b',alignItems:'center',justifyContent:'center'},alertText:{color:'#fff',fontFamily:'monospace',fontSize:8,fontWeight:'700',letterSpacing:1.4},header:{height:76,paddingHorizontal:20,borderBottomWidth:1,borderBottomColor:'#1d241c',flexDirection:'row',alignItems:'center',justifyContent:'space-between'},brand:{position:'absolute',color:'#d49a39',fontSize:39,fontWeight:'900',top:-20},brandName:{color:'#e5e6de',fontSize:12,fontWeight:'700',letterSpacing:3,marginLeft:34},headerRight:{alignItems:'flex-end',gap:7},online:{color:'#bbd64a',fontSize:8,fontFamily:'monospace',letterSpacing:1},exit:{color:'#777f74',fontSize:8,fontFamily:'monospace',letterSpacing:1.5},content:{paddingHorizontal:20,paddingTop:42,paddingBottom:125},welcome:{marginBottom:28},eyebrow:{color:'#bbd64a',fontFamily:'monospace',fontSize:8,letterSpacing:1.8,marginBottom:10},heading:{color:'#ecece4',fontSize:48,lineHeight:48,fontWeight:'300',letterSpacing:1},intro:{color:'#7c857b',fontSize:12,lineHeight:19,maxWidth:310,marginTop:15},stats:{flexDirection:'row',flexWrap:'wrap',gap:1,backgroundColor:'#20261f',marginBottom:50},statPrimary:{width:'100%',backgroundColor:'#080c09',padding:20},stat:{width:'49.8%',minHeight:125,backgroundColor:'#080c09',padding:16,justifyContent:'space-between'},label:{color:'#788176',fontFamily:'monospace',fontSize:8,letterSpacing:1.3},hundred:{color:'#edece4',fontSize:66,fontWeight:'200'},percent:{color:'#bbd64a',fontSize:24},good:{color:'#bbd64a',fontFamily:'monospace',fontSize:7,letterSpacing:1},number:{color:'#edece4',fontSize:44,fontWeight:'300'},numberSmall:{color:'#edece4',fontSize:24,fontWeight:'400'},muted:{color:'#60685f',fontFamily:'monospace',fontSize:7,letterSpacing:.8},sectionHead:{flexDirection:'row',alignItems:'flex-end',justifyContent:'space-between',marginBottom:16},sectionTitle:{color:'#e8e8e1',fontSize:34,fontWeight:'300',letterSpacing:2},classified:{color:'#6d756a',fontFamily:'monospace',fontSize:7,letterSpacing:1},mission:{backgroundColor:'#080c09',borderWidth:1,borderColor:'#1c241d',padding:17,marginBottom:8},missionOpen:{borderColor:'#bbd64a'},missionTop:{flexDirection:'row',justifyContent:'space-between',marginBottom:27},code:{color:'#bbd64a',fontFamily:'monospace',fontSize:9,letterSpacing:1.2},complete:{color:'#84a139',fontFamily:'monospace',fontSize:7,letterSpacing:1,borderWidth:1,borderColor:'#4d5e29',padding:4},missionName:{color:'#e6e7df',fontSize:21,fontWeight:'500',letterSpacing:.6},missionMeta:{color:'#6c756b',fontFamily:'monospace',fontSize:7,letterSpacing:1,marginTop:7},declassified:{borderTopWidth:1,borderTopColor:'#263025',marginTop:16,paddingTop:14},decrypt:{color:'#bbd64a',fontFamily:'monospace',fontSize:7,letterSpacing:1},description:{color:'#92998f',fontSize:11,lineHeight:18,marginTop:8},redButton:{marginTop:34,borderWidth:1,borderColor:'#70211e',backgroundColor:'#120706',minHeight:76,padding:13,flexDirection:'row',alignItems:'center',gap:14},redButtonActive:{backgroundColor:'#6f1512',borderColor:'#e14940'},redIcon:{width:46,height:46,borderRadius:23,borderWidth:1,borderColor:'#ba3932',color:'#dc4b43',fontWeight:'900',fontSize:11,textAlign:'center',textAlignVertical:'center'},redTitle:{color:'#e65750',fontSize:11,fontWeight:'700',letterSpacing:1},redCaption:{color:'#774642',fontFamily:'monospace',fontSize:6,letterSpacing:.7,marginTop:5},redArrow:{marginLeft:'auto',color:'#d84940',fontSize:29},footer:{color:'#444b44',fontFamily:'monospace',fontSize:7,lineHeight:14,letterSpacing:1,textAlign:'center',marginTop:45},tabs:{position:'absolute',bottom:0,left:0,right:0,height:78,backgroundColor:'rgba(5,8,6,.98)',borderTopWidth:1,borderTopColor:'#20271f',flexDirection:'row',paddingBottom:10},tab:{flex:1,alignItems:'center',justifyContent:'center',gap:8},tabDot:{width:4,height:4,backgroundColor:'#424942',transform:[{rotate:'45deg'}]},tabDotActive:{backgroundColor:'#bbd64a'},tabText:{color:'#555d55',fontFamily:'monospace',fontSize:6,letterSpacing:.5},tabTextActive:{color:'#bbd64a'}});
+const s = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: '#030504' },
+  screenRed: { backgroundColor: '#100403' },
+  safe: { flex: 1 },
+  alert: { height: 30, backgroundColor: '#a41f1b', alignItems: 'center', justifyContent: 'center' },
+  alertText: {
+    color: '#fff',
+    fontFamily: 'monospace',
+    fontSize: 8,
+    fontWeight: '700',
+    letterSpacing: 1.4,
+  },
+  header: {
+    height: 76,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#1d241c',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  brand: { position: 'absolute', color: '#d49a39', fontSize: 39, fontWeight: '900', top: -20 },
+  brandName: {
+    color: '#e5e6de',
+    fontSize: 12,
+    fontWeight: '700',
+    letterSpacing: 3,
+    marginLeft: 34,
+  },
+  headerRight: { alignItems: 'flex-end', gap: 7 },
+  online: { color: '#bbd64a', fontSize: 8, fontFamily: 'monospace', letterSpacing: 1 },
+  exit: { color: '#777f74', fontSize: 8, fontFamily: 'monospace', letterSpacing: 1.5 },
+  content: { paddingHorizontal: 20, paddingTop: 42, paddingBottom: 125 },
+  welcome: { marginBottom: 28 },
+  eyebrow: {
+    color: '#bbd64a',
+    fontFamily: 'monospace',
+    fontSize: 8,
+    letterSpacing: 1.8,
+    marginBottom: 10,
+  },
+  heading: { color: '#ecece4', fontSize: 48, lineHeight: 48, fontWeight: '300', letterSpacing: 1 },
+  intro: { color: '#7c857b', fontSize: 12, lineHeight: 19, maxWidth: 310, marginTop: 15 },
+  stats: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 1,
+    backgroundColor: '#20261f',
+    marginBottom: 50,
+  },
+  statPrimary: { width: '100%', backgroundColor: '#080c09', padding: 20 },
+  stat: {
+    width: '49.8%',
+    minHeight: 125,
+    backgroundColor: '#080c09',
+    padding: 16,
+    justifyContent: 'space-between',
+  },
+  label: { color: '#788176', fontFamily: 'monospace', fontSize: 8, letterSpacing: 1.3 },
+  hundred: { color: '#edece4', fontSize: 66, fontWeight: '200' },
+  percent: { color: '#bbd64a', fontSize: 24 },
+  good: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
+  number: { color: '#edece4', fontSize: 44, fontWeight: '300' },
+  numberSmall: { color: '#edece4', fontSize: 24, fontWeight: '400' },
+  muted: { color: '#60685f', fontFamily: 'monospace', fontSize: 7, letterSpacing: 0.8 },
+  sectionHead: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    marginBottom: 16,
+  },
+  sectionTitle: { color: '#e8e8e1', fontSize: 34, fontWeight: '300', letterSpacing: 2 },
+  classified: { color: '#6d756a', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
+  mission: {
+    backgroundColor: '#080c09',
+    borderWidth: 1,
+    borderColor: '#1c241d',
+    padding: 17,
+    marginBottom: 8,
+  },
+  missionOpen: { borderColor: '#bbd64a' },
+  missionTop: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 27 },
+  code: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 9, letterSpacing: 1.2 },
+  complete: {
+    color: '#84a139',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    letterSpacing: 1,
+    borderWidth: 1,
+    borderColor: '#4d5e29',
+    padding: 4,
+  },
+  missionName: { color: '#e6e7df', fontSize: 21, fontWeight: '500', letterSpacing: 0.6 },
+  missionMeta: {
+    color: '#6c756b',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    letterSpacing: 1,
+    marginTop: 7,
+  },
+  declassified: { borderTopWidth: 1, borderTopColor: '#263025', marginTop: 16, paddingTop: 14 },
+  decrypt: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
+  description: { color: '#92998f', fontSize: 11, lineHeight: 18, marginTop: 8 },
+  redButton: {
+    marginTop: 34,
+    borderWidth: 1,
+    borderColor: '#70211e',
+    backgroundColor: '#120706',
+    minHeight: 76,
+    padding: 13,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+  },
+  redButtonActive: { backgroundColor: '#6f1512', borderColor: '#e14940' },
+  redIcon: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    borderWidth: 1,
+    borderColor: '#ba3932',
+    color: '#dc4b43',
+    fontWeight: '900',
+    fontSize: 11,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  },
+  redTitle: { color: '#e65750', fontSize: 11, fontWeight: '700', letterSpacing: 1 },
+  redCaption: {
+    color: '#774642',
+    fontFamily: 'monospace',
+    fontSize: 6,
+    letterSpacing: 0.7,
+    marginTop: 5,
+  },
+  redArrow: { marginLeft: 'auto', color: '#d84940', fontSize: 29 },
+  footer: {
+    color: '#444b44',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    lineHeight: 14,
+    letterSpacing: 1,
+    textAlign: 'center',
+    marginTop: 45,
+  },
+  tabs: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 78,
+    backgroundColor: 'rgba(5,8,6,.98)',
+    borderTopWidth: 1,
+    borderTopColor: '#20271f',
+    flexDirection: 'row',
+    paddingBottom: 10,
+  },
+  tab: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 8 },
+  tabDot: { width: 4, height: 4, backgroundColor: '#424942', transform: [{ rotate: '45deg' }] },
+  tabDotActive: { backgroundColor: '#bbd64a' },
+  tabText: { color: '#555d55', fontFamily: 'monospace', fontSize: 6, letterSpacing: 0.5 },
+  tabTextActive: { color: '#bbd64a' },
+});

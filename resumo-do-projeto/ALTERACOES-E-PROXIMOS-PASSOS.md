@@ -53,11 +53,18 @@
 - Sequência recebeu barras de cinema, eclipse, impacto, ruínas, interferência, timecode, progresso, trilha opcional e controles para pular ou silenciar.
 - Letreiro principal do presente ganhou linguagem pós-apocalíptica de alto impacto: metal envelhecido, ferrugem, cortes internos, ecos tipográficos, linhas de velocidade e entrada por colisão.
 - Cenário `img-presente/destruicao.jpg` integrado ao menu principal com gradação, vinheta, fumaça, leitura protegida do letreiro e recorte responsivo; o arquivo atual possui indícios de marca d’água e deverá ser licenciado ou substituído antes do uso comercial.
+- Todo o código do site e do aplicativo foi desminificado e padronizado com Prettier: HTML, CSS, JavaScript, JSON, TypeScript e TSX agora possuem indentação e quebras de linha legíveis.
+- Configuração `.prettierrc.json` e lista `.prettierignore` adicionadas para manter o padrão nas próximas alterações.
+- Marcação HTML incompleta no final da biografia de Ariani corrigida durante a auditoria de formatação.
 - Linha temporal interativa conecta Arquivos do Passado, Doomsday/Dia Zero e Era da Extinção/presente.
 - Seis arquivos envelhecidos dos Connor foram preparados sem inventar destinos antes da entrega da lore oficial.
 - O endereço anterior `era-extincao-presente/` agora redireciona para a raiz oficial.
 - Álbum “Operações Hellsings” adicionado à galeria com três cenas cinematográficas e dez retratos oficiais.
 - Retratos verticais de Boby, Naomi, Clhoe, Luke, Dimitri, Brian e Hellen corrigidos nos cards e dossiês mobile.
+- Seis retratos cinematográficos dos Connor no presente devastado foram criados para Jack, Alice, Mark, Ariani, Britney e Jully.
+- Os retratos do presente foram integrados aos arquivos de sobreviventes da página principal com enquadramento responsivo e efeitos de dossiê.
+- Nova imagem conjunta de Jack e Mark recebida em `img-presente/personagens/mark$jack.png` e preservada para a narrativa do presente.
+- Aparência oficial de Ariani redefinida pelo autor; o retrato definitivo do presente ainda deverá ser regenerado usando a nova referência.
 
 ## Decisões visuais atuais
 
@@ -77,4 +84,4 @@
 6. Receber a lore do presente: estado do mundo, destinos dos personagens, territórios, veículos e facções.
 7. Expandir a experiência principal do presente sem transformar possibilidades em fatos antes da definição do autor.
 
-Última atualização: 24 de agosto de 2026.
+Última atualização: 25 de agosto de 2026.
