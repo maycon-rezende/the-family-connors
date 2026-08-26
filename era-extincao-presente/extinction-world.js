@@ -16,6 +16,37 @@
   let cinemaTimers = [];
   let timecodeTimer = 0;
   let cinemaStartedAt = 0;
+  let isEnteringWorld = false;
+
+  const buildWastelandTitle = () => {
+    let letterOrder = 0;
+    document.querySelectorAll('[data-title-line]').forEach((line) => {
+      const text = line.dataset.titleLine || '';
+      line.replaceChildren();
+      [...text].forEach((character) => {
+        const letter = document.createElement('i');
+        const isSpace = character === ' ';
+        letter.className = isSpace ? 'title-letter title-space' : 'title-letter';
+        letter.style.setProperty('--letter', letterOrder);
+        letter.textContent = isSpace ? '\u00a0' : character;
+        letter.setAttribute('aria-hidden', 'true');
+        line.appendChild(letter);
+        if (!isSpace) letterOrder += 1;
+      });
+    });
+  };
+
+  document.querySelectorAll('.cinema-final h1 > span, .cinema-final h1 > em').forEach((line) => {
+    const letters = [...line.textContent];
+    line.textContent = '';
+    letters.forEach((character, index) => {
+      const letter = document.createElement('i');
+      letter.className = character === ' ' ? 'intro-dust-letter intro-dust-space' : 'intro-dust-letter';
+      letter.style.setProperty('--dust-index', index);
+      letter.textContent = character === ' ' ? '\u00a0' : character;
+      line.append(letter);
+    });
+  });
 
   const clearCinemaTimers = () => {
     cinemaTimers.forEach(clearTimeout);
@@ -93,12 +124,19 @@
     setCinemaBeat(4);
   };
 
-  const enterWorld = () => {
+  const revealWorld = (immediate = false) => {
     clearCinemaTimers();
     awakening.setAttribute('aria-hidden', 'true');
     awakening.classList.add('is-gone');
+    body.classList.remove('world-transitioning');
     body.classList.remove('world-locked');
     body.classList.add('world-entered');
+    if (immediate || reduced) {
+      awakening.style.display = 'none';
+      requestAnimationFrame(() => body.classList.add('title-reveal-active'));
+    } else {
+      setTimeout(() => body.classList.add('title-reveal-active'), 900);
+    }
     try {
       sessionStorage.setItem('extinction-cinema-v3', '1');
     } catch (error) {}
@@ -111,24 +149,52 @@
         }
       }, 70);
     }
-    setTimeout(() => {
-      awakening.style.display = 'none';
-    }, 1050);
+    if (!immediate) {
+      setTimeout(() => {
+        awakening.style.display = 'none';
+      }, 1050);
+    }
+  };
+
+  const enterWorld = (immediate = false) => {
+    if (isEnteringWorld) return;
+    isEnteringWorld = true;
+    clearCinemaTimers();
+
+    if (immediate || reduced) {
+      revealWorld(true);
+      return;
+    }
+
+    awakening.classList.add('is-disintegrating');
+    body.classList.add('world-transitioning');
+    if (introStatus) introStatus.textContent = 'MATÉRIA EM DISPERSÃO';
+    setTimeout(revealWorld, 2850);
   };
 
   document.querySelector('[data-start-cinema]')?.addEventListener('click', startCinema);
   document.querySelector('[data-skip-cinema]')?.addEventListener('click', finishCinema);
-  document.querySelector('[data-awaken]')?.addEventListener('click', enterWorld);
+  document.querySelector('[data-awaken]')?.addEventListener('click', () => enterWorld());
   soundButton?.addEventListener('click', () => setSound(introAudio?.paused ?? true));
-
-  requestAnimationFrame(() => awakening.classList.add('is-storming'));
 
   let alreadyAwake = false;
   try {
     alreadyAwake = sessionStorage.getItem('extinction-cinema-v3') === '1';
   } catch (error) {}
-  if (alreadyAwake) enterWorld();
-  else if (reduced) finishCinema();
+  if (awakening) {
+    if (alreadyAwake) enterWorld(true);
+    else if (reduced) finishCinema();
+  } else {
+    body.classList.remove('world-locked');
+    body.classList.add('world-entered');
+    setTimeout(() => {
+      buildWastelandTitle();
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => body.classList.add('title-reveal-active'));
+      });
+    }, 1200);
+    setTimeout(() => body.classList.add('world-content-visible'), 5700);
+  }
 
   if (cursor && matchMedia('(pointer:fine)').matches) {
     addEventListener(

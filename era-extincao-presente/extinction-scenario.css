@@ -58,7 +58,7 @@
   z-index: 3;
 }
 .world-entered .wasteland-hero {
-  animation: scenarioAwaken 2.8s cubic-bezier(0.12, 0.72, 0.2, 1) both;
+  animation: none;
 }
 @keyframes scenarioAwaken {
   from {

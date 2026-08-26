@@ -26,7 +26,6 @@
 .awakening-code,
 .cinema-progress,
 .cinema-timecode,
-.opening-sandstorm,
 .awakening > small {
   pointer-events: none;
 }
@@ -141,110 +140,6 @@
 }
 .awakening.is-exploding .intro-ruins {
   filter: drop-shadow(0 -18px 30px #a7331e99);
-}
-.opening-sandstorm {
-  position: absolute;
-  z-index: 12;
-  inset: -16%;
-  overflow: hidden;
-  opacity: 0;
-  transform: translate3d(-12%, 0, 0) scale(1.08);
-  filter: contrast(1.08) saturate(0.72);
-}
-.opening-sandstorm i,
-.opening-sandstorm b,
-.opening-sandstorm span {
-  position: absolute;
-  display: block;
-  inset: 0;
-}
-.opening-sandstorm i {
-  background-repeat: no-repeat;
-  mix-blend-mode: screen;
-}
-.opening-sandstorm i:nth-child(1) {
-  background:
-    radial-gradient(ellipse at 14% 58%, #f1c17d99 0 6%, #9b5b3277 18%, transparent 43%),
-    radial-gradient(ellipse at 48% 42%, #ca864f75 0 10%, transparent 38%);
-  filter: blur(18px);
-}
-.opening-sandstorm i:nth-child(2) {
-  background:
-    radial-gradient(ellipse at 68% 64%, #dca36688 0 8%, #6f3b2570 24%, transparent 48%),
-    linear-gradient(102deg, transparent 10%, #b66f4070 42%, #e0aa6966 55%, transparent 84%);
-  filter: blur(28px);
-  transform: translateX(-18%);
-}
-.opening-sandstorm i:nth-child(3) {
-  opacity: 0.75;
-  background-image: repeating-radial-gradient(circle at 30% 50%, #f4d49c 0 1px, transparent 2px 11px);
-  background-size: 210px 160px;
-  filter: blur(0.35px);
-}
-.opening-sandstorm b {
-  background: linear-gradient(100deg, transparent 5%, #4d271ed9 38%, #ba774ab8 51%, #3a1d18d9 72%, transparent 96%);
-  filter: blur(32px);
-  transform: skewX(-9deg) scaleX(1.25);
-}
-.opening-sandstorm span {
-  background:
-    repeating-linear-gradient(168deg, transparent 0 18px, #efc98b24 20px 22px),
-    radial-gradient(ellipse at center, transparent 18%, #1d0e0ac4 76%);
-}
-.awakening.is-storming .opening-sandstorm {
-  animation: openingSandstorm 5.4s cubic-bezier(0.14, 0.68, 0.22, 1) both;
-}
-.awakening.is-storming .opening-sandstorm i:nth-child(1) {
-  animation: stormCloudNear 4.6s ease-out both;
-}
-.awakening.is-storming .opening-sandstorm i:nth-child(2) {
-  animation: stormCloudFar 5.2s ease-out both;
-}
-.awakening.is-storming .opening-sandstorm i:nth-child(3) {
-  animation: stormSandGrains 3.4s linear 2 both;
-}
-.awakening.is-running .opening-sandstorm {
-  animation: none;
-  opacity: 0.1;
-  transform: translate3d(18%, 0, 0) scale(1.08);
-  transition:
-    opacity 1.2s ease,
-    transform 1.8s ease;
-}
-.storm-reveal-title {
-  opacity: 0;
-  clip-path: inset(46% 0 46% 0);
-  filter: blur(22px);
-  transform: translateX(-2.5rem) scaleX(1.08);
-}
-.storm-reveal-title span {
-  display: inline-block;
-  color: #e7d5b5;
-  text-shadow:
-    0 2px 0 #49301f,
-    0 0 45px #d68b4770;
-}
-.storm-reveal-title em {
-  color: #c65328;
-  -webkit-text-stroke: 1px #f0a05a;
-  text-shadow:
-    0 3px 0 #4b160f,
-    0 0 55px #c347267a;
-}
-.cinematic-beat[data-cinema-beat='0'] > p,
-.cinematic-beat[data-cinema-beat='0'] > span,
-.cinematic-beat[data-cinema-beat='0'] > button {
-  opacity: 0;
-}
-.awakening.is-storming .storm-reveal-title {
-  animation: titleThroughSand 2.6s cubic-bezier(0.12, 0.76, 0.2, 1) 1.45s both;
-}
-.awakening.is-storming .cinematic-beat[data-cinema-beat='0'] > p,
-.awakening.is-storming .cinematic-beat[data-cinema-beat='0'] > span {
-  animation: stormCopyReveal 1.3s ease 2.45s both;
-}
-.awakening.is-storming .cinematic-beat[data-cinema-beat='0'] > button {
-  animation: stormCopyReveal 1.3s ease 3.05s both;
 }
 .intro-ruins {
   position: absolute;
@@ -433,6 +328,77 @@
 .cinema-final h1 em {
   display: block;
 }
+.intro-dust-letter {
+  position: relative;
+  display: inline-block;
+  font-style: inherit;
+  will-change: transform, opacity, filter, clip-path;
+}
+.intro-dust-space {
+  width: 0.2em;
+}
+.exit-dust-wave {
+  position: absolute;
+  z-index: 42;
+  inset: -20%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.exit-dust-wave i,
+.exit-dust-wave b {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.exit-dust-wave i:nth-child(1) {
+  background: radial-gradient(ellipse at 38% 52%, #f1c181cc 0 5%, #a15130aa 22%, transparent 52%);
+  filter: blur(20px);
+}
+.exit-dust-wave i:nth-child(2) {
+  background: linear-gradient(105deg, transparent 5%, #3a1712ee 31%, #d4824dce 50%, #4a1d16e8 68%, transparent 91%);
+  filter: blur(34px);
+}
+.exit-dust-wave i:nth-child(3) {
+  background: repeating-radial-gradient(circle at 44% 49%, #ffe0aa 0 1px, transparent 2px 9px);
+  background-size: 155px 121px;
+  opacity: 0.76;
+}
+.exit-dust-wave b {
+  background: repeating-linear-gradient(169deg, transparent 0 16px, #efb86a33 18px 20px);
+  filter: blur(5px);
+}
+.awakening.is-disintegrating .cinema-final .intro-dust-letter {
+  animation: introLetterToDust 1.35s calc(var(--dust-index) * 0.075s) cubic-bezier(0.5, 0, 0.9, 0.45) both;
+}
+.awakening.is-disintegrating .cinema-final h1 em .intro-dust-letter {
+  animation-delay: calc(0.38s + var(--dust-index) * 0.075s);
+}
+.awakening.is-disintegrating .cinema-final > p,
+.awakening.is-disintegrating .cinema-final > button,
+.awakening.is-disintegrating .awakening-date {
+  animation: introDetailsToDust 0.8s 0.25s both;
+}
+.awakening.is-dust-exiting .intro-impact {
+  animation: exitExplosion 0.72s both;
+}
+.awakening.is-dust-exiting .exit-dust-wave {
+  visibility: visible;
+  animation: exitDustCross 0.95s cubic-bezier(0.12, 0.72, 0.16, 1) both;
+}
+.awakening.is-dust-exiting .exit-dust-wave i:nth-child(1) {
+  animation: exitDustLayer 0.9s ease-out both;
+}
+.awakening.is-dust-exiting .exit-dust-wave i:nth-child(3) {
+  animation: exitDustGrains 0.3s linear 3 both;
+}
+.awakening.is-disintegrating .cinema-skip,
+.awakening.is-disintegrating .cinema-sound,
+.awakening.is-disintegrating .cinema-progress {
+  pointer-events: none;
+  animation: introDetailsToDust 0.35s both;
+}
 .cinema-final h1 em {
   color: transparent;
   font-style: normal;
@@ -545,6 +511,57 @@
     filter: blur(0);
   }
 }
+@keyframes introLetterToDust {
+  0% {
+    opacity: 1;
+    clip-path: inset(0);
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+    text-shadow: 0 0 0 transparent;
+  }
+  28% {
+    opacity: 0.96;
+    clip-path: polygon(0 0, 100% 0, 91% 18%, 100% 31%, 82% 48%, 97% 64%, 71% 78%, 82% 100%, 0 100%);
+    text-shadow: 7px -3px 2px #d78b58, 14px -7px 5px #8c432d;
+  }
+  64% {
+    opacity: 0.48;
+    clip-path: polygon(0 0, 52% 4%, 39% 20%, 58% 37%, 28% 48%, 47% 63%, 19% 77%, 31% 100%, 0 100%);
+    transform: translate3d(0.24em, -0.08em, 0) rotate(3deg) scale(1.03);
+    filter: blur(2px);
+    text-shadow: 18px -7px 3px #e8a66e, 35px -13px 8px #7c3928, 52px -20px 14px #d0814f;
+  }
+  100% {
+    opacity: 0;
+    clip-path: polygon(0 4%, 8% 12%, 0 20%, 11% 31%, 0 43%, 7% 52%, 0 64%, 10% 75%, 0 86%, 5% 100%);
+    transform: translate3d(1.15em, -0.25em, 0) rotate(9deg) scale(0.9);
+    filter: blur(11px);
+    text-shadow: 32px -11px 3px #efb57d, 70px -25px 12px #8c432d, 115px -38px 24px #d0814f;
+  }
+}
+@keyframes introDetailsToDust {
+  to { opacity: 0; transform: translate3d(2rem, -0.4rem, 0); filter: blur(8px); }
+}
+@keyframes exitExplosion {
+  0%, 100% { opacity: 0; }
+  22% { opacity: 1; filter: brightness(4) saturate(1.5); }
+  52% { opacity: 0.75; filter: brightness(2); }
+}
+@keyframes exitDustCross {
+  0% { opacity: 0; transform: translate3d(-28%, 3%, 0) scale(1.12); }
+  18% { opacity: 0.35; }
+  48% { opacity: 1; }
+  78% { opacity: 0.95; }
+  100% { opacity: 0; transform: translate3d(27%, -4%, 0) scale(1.04); }
+}
+@keyframes exitDustLayer {
+  from { transform: translate3d(-22%, 7%, 0) scale(1.18); }
+  to { transform: translate3d(24%, -7%, 0) scale(1.03); }
+}
+@keyframes exitDustGrains {
+  from { transform: translate3d(-5%, 2%, 0); }
+  to { transform: translate3d(9%, -4%, 0); }
+}
 @keyframes introFlash {
   0%,
   100% {
@@ -579,83 +596,6 @@
   }
   80% {
     transform: translate(-2px, -1px);
-  }
-}
-@keyframes openingSandstorm {
-  0% {
-    opacity: 0;
-    transform: translate3d(-18%, 0, 0) scale(1.12);
-  }
-  12% {
-    opacity: 0.96;
-  }
-  48% {
-    opacity: 1;
-    transform: translate3d(-1%, -2%, 0) scale(1.08);
-  }
-  72% {
-    opacity: 0.72;
-  }
-  100% {
-    opacity: 0.18;
-    transform: translate3d(15%, -4%, 0) scale(1.06);
-  }
-}
-@keyframes stormCloudNear {
-  from {
-    transform: translate3d(-26%, 8%, 0) scale(1.18);
-  }
-  to {
-    transform: translate3d(20%, -5%, 0) scale(1.04);
-  }
-}
-@keyframes stormCloudFar {
-  from {
-    transform: translate3d(-18%, -4%, 0) scale(1.25);
-  }
-  to {
-    transform: translate3d(16%, 3%, 0) scale(1.08);
-  }
-}
-@keyframes stormSandGrains {
-  from {
-    background-position: 0 0;
-    transform: translate3d(-8%, 2%, 0) rotate(-1deg);
-  }
-  to {
-    background-position: 420px -160px;
-    transform: translate3d(12%, -5%, 0) rotate(1deg);
-  }
-}
-@keyframes titleThroughSand {
-  0% {
-    opacity: 0;
-    clip-path: inset(46% 0 46% 0);
-    filter: blur(22px);
-    transform: translateX(-2.5rem) scaleX(1.08);
-  }
-  45% {
-    opacity: 0.62;
-    clip-path: inset(17% 0 20% 0);
-    filter: blur(8px);
-  }
-  100% {
-    opacity: 1;
-    clip-path: inset(0);
-    filter: blur(0);
-    transform: none;
-  }
-}
-@keyframes stormCopyReveal {
-  from {
-    opacity: 0;
-    transform: translateY(1.2rem);
-    filter: blur(8px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-    filter: blur(0);
   }
 }
 @keyframes cinematicFireball {

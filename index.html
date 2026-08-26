@@ -12,10 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-world.css" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-world.css?v=6" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css?v=16" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css?v=6" />
     <style>
       @keyframes scenarioAwaken {
         from {
@@ -32,65 +31,6 @@
     <div class="world-dust" aria-hidden="true"></div>
     <div class="world-cursor" aria-hidden="true"><i></i><b></b><span>RASTREAR</span></div>
 
-    <section class="awakening" role="dialog" aria-modal="true" aria-labelledby="awakening-title">
-      <div class="awakening-grid" aria-hidden="true"></div>
-      <div class="cinema-bars" aria-hidden="true"><i></i><i></i></div>
-      <div class="intro-ruins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <div class="intro-eclipse" aria-hidden="true"></div>
-      <div class="intro-impact" aria-hidden="true"></div>
-      <div class="opening-sandstorm" aria-hidden="true">
-        <i></i><i></i><i></i><b></b><span></span>
-      </div>
-      <div class="awakening-code">
-        <span>TRANSMISSÃO EDE-01</span><b id="introStatus">AGUARDANDO CONEXÃO</b>
-      </div>
-
-      <div class="cinematic-beats" aria-live="polite">
-        <section class="cinematic-beat is-active" data-cinema-beat="0">
-          <p>TEMPESTADE DETECTADA // VISIBILIDADE ZERO</p>
-          <h2 class="storm-reveal-title" id="awakening-title">
-            <span>A ERA DA</span><br /><em>EXTINÇÃO</em>
-          </h2>
-          <span>O presente começa depois do fim.</span>
-          <button class="transmission-start" type="button" data-start-cinema>
-            <b>ATRAVESSAR A TEMPESTADE</b><i>→</i>
-          </button>
-        </section>
-        <section class="cinematic-beat" data-cinema-beat="1">
-          <p>ARQUIVO ANTERIOR AO DIA D</p>
-          <h2>Antes,<br /><em>havia uma vida.</em></h2>
-          <span>Uma família. Uma mansão. Uma organização lutando nas sombras.</span>
-        </section>
-        <section class="cinematic-beat cinema-zero" data-cinema-beat="2">
-          <p>REGISTRO CORROMPIDO // DIA ZERO</p>
-          <h2>Então o céu<br /><em>começou a queimar.</em></h2>
-          <span>O fim não chegou de uma vez. Chegou em ondas.</span>
-        </section>
-        <section class="cinematic-beat cinema-years" data-cinema-beat="3">
-          <p>TEMPO DECORRIDO // IMPOSSÍVEL CALCULAR</p>
-          <h2>Anos viraram<br /><em>cicatrizes.</em></h2>
-          <span>Os jovens envelheceram. As cidades desapareceram. Os nomes permaneceram.</span>
-        </section>
-        <section class="cinematic-beat cinema-final" data-cinema-beat="4">
-          <div class="awakening-date"><span>AGORA</span><b>DATA CORROMPIDA</b></div>
-          <h1><span>O MUNDO</span><em>NÃO ACABOU.</em></h1>
-          <p>Ele sobreviveu tempo suficiente para se tornar outra coisa.</p>
-          <button type="button" data-awaken><span>ACORDAR NO PRESENTE</span><i>→</i></button>
-        </section>
-      </div>
-
-      <div class="cinema-progress" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><span></span>
-      </div>
-      <div class="cinema-timecode"><span id="cinemaTimecode">00:00:00</span><b>REC // EDE</b></div>
-      <button class="cinema-skip" type="button" data-skip-cinema>PULAR ABERTURA</button>
-      <button class="cinema-sound" type="button" data-toggle-sound aria-pressed="false">
-        SOM // OFF
-      </button>
-      <small>AVISO // ESTE NÃO É O MUNDO QUE ELES CONHECIAM</small>
-    </section>
-    <audio id="worldIntroAudio" preload="metadata" loop src="audio/epic.mp3"></audio>
-
     <header class="world-nav">
       <a class="world-brand" href="#top" aria-label="A Era da Extinção"
         ><span>Æ</span><b>ERA DA EXTINÇÃO</b><small>ARQUIVO DO PRESENTE</small></a
@@ -106,19 +46,21 @@
 
     <main id="top">
       <section class="wasteland-hero" aria-labelledby="hero-title">
+        <div class="hero-blackout" aria-hidden="true"></div>
         <div class="ruined-sun" aria-hidden="true"></div>
         <div class="ash-horizon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <div class="hero-scan" aria-hidden="true"></div>
+        <div class="hero-sandstorm" aria-hidden="true">
+          <i></i><i></i><i></i><b></b>
+        </div>
         <div class="hero-copy">
           <p class="sector-label">PRESENTE // MUITOS ANOS DEPOIS DO DIA D</p>
           <div class="title-impact">
             <div class="title-speedlines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <div class="title-echoes" aria-hidden="true">
-              <b>A ERA DA</b><strong>EXTINÇÃO</strong> <b>A ERA DA</b><strong>EXTINÇÃO</strong>
-            </div>
+            <canvas class="title-particle-canvas" aria-hidden="true"></canvas>
             <h1 id="hero-title">
-              <span data-text="A ERA DA">A ERA DA</span>
-              <em data-text="EXTINÇÃO">EXTINÇÃO</em>
+              <span data-title-line="A ERA DA" aria-label="A Era da"></span>
+              <em data-title-line="EXTINÇÃO" aria-label="Extinção"></em>
             </h1>
             <div class="title-classification" aria-hidden="true">
               <i>EDE</i><span>FERRUGEM // SANGUE // SOBREVIVÊNCIA</span><b>25.08</b>
@@ -319,6 +261,6 @@
       <strong>A ERA DA EXTINÇÃO</strong><span>O presente começa depois do fim.</span
       ><a href="arquivo-passado.html">ARQUIVOS DO PASSADO</a>
     </footer>
-    <script src="era-extincao-presente/extinction-world.js"></script>
+    <script src="era-extincao-presente/extinction-index.js?v=16"></script>
   </body>
 </html>
