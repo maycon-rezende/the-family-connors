@@ -734,7 +734,7 @@ button {
   text-align: left;
   overflow: hidden;
   isolation: isolate;
-  cursor: pointer;
+  cursor: none;
 }
 .survivor > img {
   position: absolute;
@@ -1068,10 +1068,17 @@ footer a {
   background: #080d0c;
   color: var(--bone);
   box-shadow: 0 30px 100px #000;
+  overflow: visible;
+  cursor: none;
 }
 .classified-dialog::backdrop {
   background: #020303e8;
   backdrop-filter: blur(9px);
+  cursor: none;
+}
+.classified-dialog,
+.classified-dialog * {
+  cursor: none !important;
 }
 .classified-dialog > button {
   position: absolute;

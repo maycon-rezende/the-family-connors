@@ -169,11 +169,15 @@
     button.addEventListener('click', () => {
       fileCode.textContent = `${button.dataset.file} // PRESENTE`;
       dialog.showModal();
+      if (cursor) dialog.append(cursor);
     })
   );
   document.querySelector('[data-close-file]')?.addEventListener('click', () => dialog.close());
   dialog?.addEventListener('click', (event) => {
     if (event.target === dialog) dialog.close();
+  });
+  dialog?.addEventListener('close', () => {
+    if (cursor) body.append(cursor);
   });
 
   document.querySelectorAll('[data-open-past],a[href="arquivo-passado.html"]').forEach((link) =>
