@@ -183,6 +183,14 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
+.awakening.is-gone,
+.awakening.is-gone * {
+  pointer-events: none !important;
+}
+.awakening.is-gone .cinematic-beat,
+.awakening.is-gone .cinematic-beat.is-active {
+  visibility: hidden;
+}
 .awakening-grid {
   position: absolute;
   inset: 0;

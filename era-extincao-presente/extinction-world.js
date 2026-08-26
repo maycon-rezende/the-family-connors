@@ -111,6 +111,9 @@
         }
       }, 70);
     }
+    setTimeout(() => {
+      awakening.style.display = 'none';
+    }, 1050);
   };
 
   document.querySelector('[data-start-cinema]')?.addEventListener('click', startCinema);
