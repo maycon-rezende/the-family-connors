@@ -66,6 +66,38 @@ button {
   opacity: 0.18;
   animation: dustDrift 25s linear infinite;
 }
+.world-dust:before,
+.world-dust:after {
+  content: '';
+  position: absolute;
+  inset: -18%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 2.4s ease;
+}
+.world-dust:before {
+  background:
+    radial-gradient(ellipse at 18% 75%, #a8673440 0 8%, transparent 28%),
+    radial-gradient(ellipse at 72% 28%, #c28b4e32 0 7%, transparent 25%),
+    radial-gradient(ellipse at 48% 88%, #7d4b2938 0 9%, transparent 32%);
+  filter: blur(22px);
+  animation: wastelandDustCloud 18s ease-in-out infinite alternate;
+}
+.world-dust:after {
+  background: repeating-radial-gradient(circle at 50% 100%, #d5a76530 0 1px, transparent 2px 9px);
+  mix-blend-mode: screen;
+  filter: blur(0.5px);
+  animation: wastelandGrit 14s linear infinite;
+}
+.world-entered .world-dust {
+  opacity: 0.34;
+}
+.world-entered .world-dust:before {
+  opacity: 0.72;
+}
+.world-entered .world-dust:after {
+  opacity: 0.28;
+}
 .world-cursor {
   position: fixed;
   z-index: 10000;
@@ -149,6 +181,7 @@ button {
 .awakening.is-gone {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 .awakening-grid {
   position: absolute;
@@ -662,7 +695,9 @@ button {
 }
 .survivor-files {
   overflow: hidden;
-  background: #0e0d0b;
+  background:
+    linear-gradient(180deg, #0e0d0be8 0%, #0e0d0b 38%),
+    url('../img-presente/personagens/all-presente.png') center 10% / cover no-repeat;
 }
 .survivor-static {
   position: absolute;
@@ -1068,11 +1103,13 @@ footer a {
   background: #050403;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: 0.35s;
 }
 .period-transition.is-active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 .period-transition span {
   color: var(--sand);

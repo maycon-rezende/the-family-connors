@@ -32,10 +32,11 @@
     awakening.classList.toggle('is-zero', index === 2);
     awakening.classList.toggle('is-years', index >= 3);
     if (index === 2) {
-      awakening.classList.add('is-flashing', 'is-shaking');
+      awakening.classList.add('is-flashing', 'is-shaking', 'is-exploding');
       cinemaTimers.push(
         setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 900)
       );
+      cinemaTimers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 3400));
     }
     const status = [
       'AGUARDANDO CONEXÃO',
@@ -94,6 +95,7 @@
 
   const enterWorld = () => {
     clearCinemaTimers();
+    awakening.setAttribute('aria-hidden', 'true');
     awakening.classList.add('is-gone');
     body.classList.remove('world-locked');
     body.classList.add('world-entered');

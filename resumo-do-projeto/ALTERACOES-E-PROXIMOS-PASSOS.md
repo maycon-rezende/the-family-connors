@@ -65,6 +65,9 @@
 - Os retratos do presente foram integrados aos arquivos de sobreviventes da página principal com enquadramento responsivo e efeitos de dossiê.
 - Nova imagem conjunta de Jack e Mark recebida em `img-presente/personagens/mark$jack.png` e preservada para a narrativa do presente.
 - Aparência oficial de Ariani redefinida pelo autor; o retrato definitivo do presente ainda deverá ser regenerado usando a nova referência.
+- Cards dos seis Connor no presente atualizados com as novas capas pós-apocalípticas adicionadas pelo autor.
+- Abertura do presente recebeu explosão cinematográfica no Dia Zero, clarão, bola de fogo, onda de choque, tremor de câmera e poeira persistente sobre a página.
+- Estrutura de interação da abertura corrigida para impedir que camadas invisíveis bloqueiem links e botões.
 
 ## Decisões visuais atuais
 
