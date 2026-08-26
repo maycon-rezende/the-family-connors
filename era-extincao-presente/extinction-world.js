@@ -100,7 +100,7 @@
     body.classList.remove('world-locked');
     body.classList.add('world-entered');
     try {
-      sessionStorage.setItem('extinction-cinema-v2', '1');
+      sessionStorage.setItem('extinction-cinema-v3', '1');
     } catch (error) {}
     if (introAudio) {
       const fade = setInterval(() => {
@@ -121,9 +121,11 @@
   document.querySelector('[data-awaken]')?.addEventListener('click', enterWorld);
   soundButton?.addEventListener('click', () => setSound(introAudio?.paused ?? true));
 
+  requestAnimationFrame(() => awakening.classList.add('is-storming'));
+
   let alreadyAwake = false;
   try {
-    alreadyAwake = sessionStorage.getItem('extinction-cinema-v2') === '1';
+    alreadyAwake = sessionStorage.getItem('extinction-cinema-v3') === '1';
   } catch (error) {}
   if (alreadyAwake) enterWorld();
   else if (reduced) finishCinema();

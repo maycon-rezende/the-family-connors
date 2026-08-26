@@ -26,6 +26,7 @@
 .awakening-code,
 .cinema-progress,
 .cinema-timecode,
+.opening-sandstorm,
 .awakening > small {
   pointer-events: none;
 }
@@ -140,6 +141,110 @@
 }
 .awakening.is-exploding .intro-ruins {
   filter: drop-shadow(0 -18px 30px #a7331e99);
+}
+.opening-sandstorm {
+  position: absolute;
+  z-index: 12;
+  inset: -16%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate3d(-12%, 0, 0) scale(1.08);
+  filter: contrast(1.08) saturate(0.72);
+}
+.opening-sandstorm i,
+.opening-sandstorm b,
+.opening-sandstorm span {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+.opening-sandstorm i {
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+}
+.opening-sandstorm i:nth-child(1) {
+  background:
+    radial-gradient(ellipse at 14% 58%, #f1c17d99 0 6%, #9b5b3277 18%, transparent 43%),
+    radial-gradient(ellipse at 48% 42%, #ca864f75 0 10%, transparent 38%);
+  filter: blur(18px);
+}
+.opening-sandstorm i:nth-child(2) {
+  background:
+    radial-gradient(ellipse at 68% 64%, #dca36688 0 8%, #6f3b2570 24%, transparent 48%),
+    linear-gradient(102deg, transparent 10%, #b66f4070 42%, #e0aa6966 55%, transparent 84%);
+  filter: blur(28px);
+  transform: translateX(-18%);
+}
+.opening-sandstorm i:nth-child(3) {
+  opacity: 0.75;
+  background-image: repeating-radial-gradient(circle at 30% 50%, #f4d49c 0 1px, transparent 2px 11px);
+  background-size: 210px 160px;
+  filter: blur(0.35px);
+}
+.opening-sandstorm b {
+  background: linear-gradient(100deg, transparent 5%, #4d271ed9 38%, #ba774ab8 51%, #3a1d18d9 72%, transparent 96%);
+  filter: blur(32px);
+  transform: skewX(-9deg) scaleX(1.25);
+}
+.opening-sandstorm span {
+  background:
+    repeating-linear-gradient(168deg, transparent 0 18px, #efc98b24 20px 22px),
+    radial-gradient(ellipse at center, transparent 18%, #1d0e0ac4 76%);
+}
+.awakening.is-storming .opening-sandstorm {
+  animation: openingSandstorm 5.4s cubic-bezier(0.14, 0.68, 0.22, 1) both;
+}
+.awakening.is-storming .opening-sandstorm i:nth-child(1) {
+  animation: stormCloudNear 4.6s ease-out both;
+}
+.awakening.is-storming .opening-sandstorm i:nth-child(2) {
+  animation: stormCloudFar 5.2s ease-out both;
+}
+.awakening.is-storming .opening-sandstorm i:nth-child(3) {
+  animation: stormSandGrains 3.4s linear 2 both;
+}
+.awakening.is-running .opening-sandstorm {
+  animation: none;
+  opacity: 0.1;
+  transform: translate3d(18%, 0, 0) scale(1.08);
+  transition:
+    opacity 1.2s ease,
+    transform 1.8s ease;
+}
+.storm-reveal-title {
+  opacity: 0;
+  clip-path: inset(46% 0 46% 0);
+  filter: blur(22px);
+  transform: translateX(-2.5rem) scaleX(1.08);
+}
+.storm-reveal-title span {
+  display: inline-block;
+  color: #e7d5b5;
+  text-shadow:
+    0 2px 0 #49301f,
+    0 0 45px #d68b4770;
+}
+.storm-reveal-title em {
+  color: #c65328;
+  -webkit-text-stroke: 1px #f0a05a;
+  text-shadow:
+    0 3px 0 #4b160f,
+    0 0 55px #c347267a;
+}
+.cinematic-beat[data-cinema-beat='0'] > p,
+.cinematic-beat[data-cinema-beat='0'] > span,
+.cinematic-beat[data-cinema-beat='0'] > button {
+  opacity: 0;
+}
+.awakening.is-storming .storm-reveal-title {
+  animation: titleThroughSand 2.6s cubic-bezier(0.12, 0.76, 0.2, 1) 1.45s both;
+}
+.awakening.is-storming .cinematic-beat[data-cinema-beat='0'] > p,
+.awakening.is-storming .cinematic-beat[data-cinema-beat='0'] > span {
+  animation: stormCopyReveal 1.3s ease 2.45s both;
+}
+.awakening.is-storming .cinematic-beat[data-cinema-beat='0'] > button {
+  animation: stormCopyReveal 1.3s ease 3.05s both;
 }
 .intro-ruins {
   position: absolute;
@@ -474,6 +579,83 @@
   }
   80% {
     transform: translate(-2px, -1px);
+  }
+}
+@keyframes openingSandstorm {
+  0% {
+    opacity: 0;
+    transform: translate3d(-18%, 0, 0) scale(1.12);
+  }
+  12% {
+    opacity: 0.96;
+  }
+  48% {
+    opacity: 1;
+    transform: translate3d(-1%, -2%, 0) scale(1.08);
+  }
+  72% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0.18;
+    transform: translate3d(15%, -4%, 0) scale(1.06);
+  }
+}
+@keyframes stormCloudNear {
+  from {
+    transform: translate3d(-26%, 8%, 0) scale(1.18);
+  }
+  to {
+    transform: translate3d(20%, -5%, 0) scale(1.04);
+  }
+}
+@keyframes stormCloudFar {
+  from {
+    transform: translate3d(-18%, -4%, 0) scale(1.25);
+  }
+  to {
+    transform: translate3d(16%, 3%, 0) scale(1.08);
+  }
+}
+@keyframes stormSandGrains {
+  from {
+    background-position: 0 0;
+    transform: translate3d(-8%, 2%, 0) rotate(-1deg);
+  }
+  to {
+    background-position: 420px -160px;
+    transform: translate3d(12%, -5%, 0) rotate(1deg);
+  }
+}
+@keyframes titleThroughSand {
+  0% {
+    opacity: 0;
+    clip-path: inset(46% 0 46% 0);
+    filter: blur(22px);
+    transform: translateX(-2.5rem) scaleX(1.08);
+  }
+  45% {
+    opacity: 0.62;
+    clip-path: inset(17% 0 20% 0);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0);
+    filter: blur(0);
+    transform: none;
+  }
+}
+@keyframes stormCopyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
   }
 }
 @keyframes cinematicFireball {
