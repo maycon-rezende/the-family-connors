@@ -911,6 +911,10 @@ button {
 .time-node.past {
   --node: var(--sand);
 }
+.time-node.past,
+.time-node.past * {
+  cursor: none !important;
+}
 .time-node.zero {
   --node: #d12e2e;
 }
