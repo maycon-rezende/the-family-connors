@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="era-extincao-presente/extinction-world.css" />
     <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=9" />
+    <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
   </head>
   <body class="intro-page world-locked">
     <div class="world-noise" aria-hidden="true"></div>
@@ -59,12 +60,25 @@
           <button type="button" data-awaken><span>ACORDAR NO PRESENTE</span><i>→</i></button>
         </section>
       </div>
-      <div class="cinema-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div>
+      <div class="cinema-progress" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><span></span>
+      </div>
       <div class="cinema-timecode"><span id="cinemaTimecode">00:00:00</span><b>REC // EDE</b></div>
       <button class="cinema-skip" type="button" data-skip-cinema>PULAR ABERTURA</button>
-      <button class="cinema-sound" type="button" data-toggle-sound aria-pressed="false">SOM // OFF</button>
+      <button class="cinema-sound" type="button" data-toggle-sound aria-pressed="false">
+        SOM // OFF
+      </button>
       <small>AVISO // ESTE NÃO É O MUNDO QUE ELES CONHECIAM</small>
     </section>
+    <details class="temporary-soundtrack">
+      <summary>TRILHA TEMPORÁRIA // SOUNDCLOUD</summary>
+      <iframe
+        title="Trilha temporária da abertura"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trailer-music-movie/avengers4-endgame-official-trailer-music-audiomachine-so-say-we-all&color=%23d8552d&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"
+      ></iframe>
+      <small>Referência temporária — reprodução pelo player oficial.</small>
+    </details>
     <audio id="worldIntroAudio" preload="metadata" loop src="audio/epic.mp3"></audio>
     <script src="era-extincao-presente/extinction-intro.js?v=9"></script>
   </body>

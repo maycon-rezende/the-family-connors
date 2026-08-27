@@ -1,0 +1,68 @@
+.temporary-soundtrack {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 90;
+  width: min(360px, calc(100vw - 28px));
+  background: #080706e8;
+  border: 1px solid #b96b3b66;
+  color: #ddd0bc;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 44px #000b;
+}
+.temporary-soundtrack summary {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  list-style: none;
+  font:
+    600 0.55rem/1.3 Cinzel,
+    serif;
+  letter-spacing: 0.15em;
+}
+.temporary-soundtrack summary::-webkit-details-marker {
+  display: none;
+}
+.temporary-soundtrack summary:before {
+  content: '◈';
+  color: #d8552d;
+  margin-right: 0.7rem;
+}
+.temporary-soundtrack iframe {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 0;
+}
+.temporary-soundtrack small {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  color: #8e8578;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+}
+.soundtrack-hidden {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  right: auto;
+  bottom: auto;
+  left: -9999px;
+  overflow: hidden;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.soundtrack-hidden iframe {
+  width: 1px;
+  height: 1px;
+}
+@media (max-width: 600px) {
+  .temporary-soundtrack {
+    right: 8px;
+    bottom: 8px;
+    width: calc(100vw - 16px);
+  }
+  .temporary-soundtrack:not([open]) {
+    width: auto;
+  }
+}

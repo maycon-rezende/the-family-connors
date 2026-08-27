@@ -1,0 +1,466 @@
+.world-nav nav {
+  gap: clamp(0.65rem, 1.15vw, 1.45rem);
+}
+
+.world-nav nav a,
+.world-nav nav a:visited {
+  font-size: clamp(0.38rem, 0.48vw, 0.47rem);
+}
+
+.faction-network,
+.survivor-network,
+.missing-frequency {
+  position: relative;
+  padding: clamp(6rem, 10vw, 10rem) 6vw;
+  border-top: 1px solid #a662342c;
+  overflow: hidden;
+}
+.faction-network {
+  background: radial-gradient(circle at 50% 20%, #772b171f, transparent 36%), #090806;
+}
+.faction-grid {
+  max-width: 1320px;
+  margin: 5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: #7f65422d;
+  border: 1px solid #7f65422d;
+}
+.faction-card {
+  position: relative;
+  min-height: 330px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: linear-gradient(145deg, #14110d, #080706);
+  isolation: isolate;
+  transition: 0.45s;
+  cursor: none;
+}
+.faction-card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 25%, var(--faction, #b26635) 0 2px, transparent 3px),
+    linear-gradient(
+      135deg,
+      transparent 52%,
+      color-mix(in srgb, var(--faction, #b26635) 22%, transparent)
+    );
+  opacity: 0.75;
+}
+.faction-card:hover,
+.faction-card:focus-visible {
+  transform: translateY(-7px);
+  box-shadow:
+    inset 0 -3px var(--faction, #b26635),
+    0 20px 50px #0009;
+}
+.faction-card span,
+.missing-card span {
+  font:
+    600 0.5rem/1.4 Cinzel,
+    serif;
+  letter-spacing: 0.18em;
+  color: #bcb09c;
+}
+.faction-card b {
+  margin: 0.8rem 0;
+  font: 800 clamp(2.2rem, 4vw, 4rem) / 0.85 'Barlow Condensed';
+  color: var(--faction, #d1a06d);
+}
+.faction-card p,
+.missing-card p {
+  line-height: 1.65;
+  color: #a9a094;
+}
+.faction-card i {
+  font:
+    normal 600 0.48rem/1 Cinzel,
+    serif;
+  letter-spacing: 0.15em;
+  color: var(--faction, #d1a06d);
+}
+.faction-hellsings {
+  --faction: #c63832;
+}
+.faction-cobras {
+  --faction: #5e9a5c;
+}
+.faction-dominus {
+  --faction: #8173a5;
+}
+.faction-fire {
+  --faction: #e75020;
+}
+.faction-iron {
+  --faction: #a3a19a;
+}
+.faction-salt {
+  --faction: #76afba;
+}
+.survivor-network {
+  background: linear-gradient(120deg, #08100f, #0c0b08 55%, #171006);
+}
+.network-console {
+  max-width: 1200px;
+  margin: 5rem auto 0;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  border: 1px solid #6eb2b43d;
+  background: #050807c7;
+}
+.forum-feed {
+  padding: 2rem;
+  display: grid;
+  gap: 1px;
+  background: #52727625;
+}
+.forum-feed article {
+  padding: 1.5rem;
+  background: #080c0b;
+}
+.forum-feed span {
+  color: #79bdc5;
+  font:
+    600 0.48rem/1 Cinzel,
+    serif;
+  letter-spacing: 0.16em;
+}
+.forum-feed p {
+  color: #beb9ac;
+  line-height: 1.7;
+}
+.forum-transmitter {
+  padding: 2rem;
+  border-left: 1px solid #6eb2b43d;
+  display: grid;
+  gap: 0.8rem;
+}
+.forum-transmitter label {
+  font:
+    600 0.48rem/1 Cinzel,
+    serif;
+  letter-spacing: 0.17em;
+  color: #79bdc5;
+}
+.forum-transmitter input,
+.forum-transmitter textarea {
+  width: 100%;
+  border: 1px solid #6eb2b43d;
+  background: #050706;
+  color: #ddd4c4;
+  padding: 1rem;
+  font: 1rem/1.5 'Special Elite';
+  outline: none;
+}
+.forum-transmitter textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+.forum-transmitter input:focus,
+.forum-transmitter textarea:focus {
+  border-color: #79bdc5;
+  box-shadow: 0 0 24px #57989d22;
+}
+.forum-transmitter button {
+  border: 1px solid #a65b35;
+  background: #9f3f24;
+  color: #fff;
+  padding: 1rem;
+  font: 700 0.55rem/1 Cinzel;
+  letter-spacing: 0.14em;
+}
+.forum-transmitter small {
+  color: #777269;
+  font-size: 0.65rem;
+}
+.missing-frequency {
+  background: radial-gradient(circle at 50% 80%, #b9381725, transparent 32%), #080706;
+}
+.missing-grid {
+  max-width: 1200px;
+  margin: 5rem auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.missing-card {
+  min-height: 290px;
+  padding: 2rem;
+  border: 1px solid #a44b2f4d;
+  background: repeating-linear-gradient(0deg, transparent 0 4px, #d5683510 5px 6px), #0d0a08;
+  box-shadow: inset 0 0 45px #000;
+  position: relative;
+}
+.missing-card:after {
+  content: '?';
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font: 800 7rem/1 'Barlow Condensed';
+  color: #ad4e2520;
+}
+.missing-card b {
+  display: block;
+  margin: 2.4rem 0 1rem;
+  font: 800 clamp(2.1rem, 4vw, 4rem) / 0.85 'Barlow Condensed';
+  color: #dc693c;
+}
+.missing-card i {
+  position: absolute;
+  bottom: 1.5rem;
+  color: #e24c2d;
+  font: normal 600 0.5rem/1 Cinzel;
+  letter-spacing: 0.18em;
+  animation: searchBlink 1.2s steps(2) infinite;
+}
+.search-pulse {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #a86440;
+  font: 600 0.5rem/1 Cinzel;
+  letter-spacing: 0.16em;
+}
+.search-pulse i {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e0542c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 #e0542c66;
+  animation: signalPulse 1.7s infinite;
+}
+.hellsings-climax {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #020303;
+  isolation: isolate;
+}
+.hellsings-climax:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(circle, #801d1d28, transparent 48%),
+    repeating-linear-gradient(0deg, transparent 0 3px, #b5e4dc08 4px 5px);
+}
+.hellsings-climax:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 8% 5%;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 38% 42%, #df6a3d 0 1px, transparent 2px),
+    radial-gradient(circle at 61% 48%, #873225 0 1px, transparent 2px),
+    radial-gradient(circle at 52% 56%, #d7a16d 0 1px, transparent 2px);
+  background-size: 17px 19px, 23px 29px, 31px 37px;
+  filter: blur(0.8px);
+  transform: translateX(-16%);
+}
+.hellsings-climax img {
+  width: clamp(120px, 17vw, 230px);
+  margin: 0 auto 2rem;
+  opacity: 0;
+  filter: drop-shadow(0 0 28px #cf342f55);
+  transform: scale(0.4) rotate(-12deg);
+}
+.hellsings-climax p,
+.hellsings-climax span {
+  opacity: 0;
+  font: 600 0.58rem/1.5 Cinzel;
+  letter-spacing: 0.3em;
+  color: #b6aaa0;
+}
+.hellsings-climax h2 {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  font: 800 clamp(4rem, 14vw, 12rem) / 0.72 'Barlow Condensed';
+  letter-spacing: 0.02em;
+  color: #c93431;
+  text-shadow: 0 0 25px #b5282048;
+}
+.hellsings-climax h2 i {
+  font-style: normal;
+  opacity: 0;
+  filter: blur(16px);
+  transform: translateY(35px) scale(1.3);
+}
+.hellsings-climax.is-awake img,
+.soundtrack-climax .hellsings-climax img {
+  animation: emblemWake 3.6s steps(24, end) forwards;
+}
+.hellsings-climax.is-awake:after,
+.soundtrack-climax .hellsings-climax:after {
+  animation: particleAssembly 8.5s steps(42, end) forwards;
+}
+.hellsings-climax.is-awake p,
+.soundtrack-climax .hellsings-climax p {
+  animation: textWake 1.2s 3.4s steps(10, end) forwards;
+}
+.hellsings-climax.is-awake h2 i,
+.soundtrack-climax .hellsings-climax h2 i {
+  animation: letterFromDust 1.7s var(--delay) steps(15, end) forwards;
+}
+.hellsings-climax.is-awake span,
+.soundtrack-climax .hellsings-climax span {
+  animation: textWake 1.4s 9.2s steps(12, end) forwards;
+}
+.climax-dust {
+  position: absolute;
+  inset: 25% -30%;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(ellipse, #b34a2a55, transparent 60%);
+  filter: blur(20px);
+  transform: translateX(-40%);
+}
+.hellsings-climax.is-awake .climax-dust,
+.soundtrack-climax .climax-dust {
+  animation: climaxDust 10.5s steps(52, end) forwards;
+}
+@keyframes emblemWake {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
+    filter: blur(18px) contrast(2) drop-shadow(0 0 0 transparent);
+    transform: scale(1.28) rotate(-5deg);
+  }
+  18% {
+    opacity: 0.15;
+    clip-path: polygon(0 78%, 18% 61%, 29% 100%, 0 100%);
+  }
+  36% {
+    opacity: 0.32;
+    clip-path: polygon(0 42%, 43% 24%, 52% 100%, 0 100%);
+    filter: blur(11px) contrast(1.8) drop-shadow(0 0 12px #cf342f22);
+  }
+  54% {
+    opacity: 0.55;
+    clip-path: polygon(0 12%, 68% 0, 75% 100%, 0 100%);
+  }
+  72% {
+    opacity: 0.76;
+    clip-path: polygon(0 0, 88% 0, 94% 100%, 0 100%);
+    filter: blur(5px) contrast(1.45) drop-shadow(0 0 20px #cf342f44);
+  }
+  88% {
+    opacity: 0.92;
+    clip-path: inset(0 2% 0 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0);
+    filter: blur(0) contrast(1) drop-shadow(0 0 28px #cf342f66);
+    transform: scale(1);
+  }
+}
+@keyframes letterFromDust {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    filter: blur(18px) contrast(2.3);
+    transform: translate3d(-24px, 14px, 0) scale(1.18);
+    text-shadow: -35px 0 28px #a84b35;
+  }
+  24% {
+    opacity: 0.18;
+    clip-path: inset(0 76% 0 0);
+  }
+  48% {
+    opacity: 0.42;
+    clip-path: inset(0 48% 0 0);
+    filter: blur(9px) contrast(1.8);
+  }
+  72% {
+    opacity: 0.7;
+    clip-path: inset(0 19% 0 0);
+    filter: blur(4px) contrast(1.35);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0);
+    filter: blur(0);
+    transform: none;
+    text-shadow: 0 0 25px #b5282048;
+  }
+}
+@keyframes particleAssembly {
+  0% {
+    opacity: 0;
+    transform: translateX(-18%) scale(1.2);
+  }
+  18% {
+    opacity: 0.8;
+  }
+  58% {
+    opacity: 0.55;
+    transform: translateX(4%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(22%) scale(0.86);
+  }
+}
+@keyframes textWake {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes climaxDust {
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(45%);
+  }
+}
+@keyframes searchBlink {
+  50% {
+    opacity: 0.25;
+  }
+}
+@keyframes signalPulse {
+  to {
+    box-shadow: 0 0 0 18px transparent;
+  }
+}
+@media (max-width: 850px) {
+  .faction-grid,
+  .missing-grid {
+    grid-template-columns: 1fr;
+  }
+  .network-console {
+    grid-template-columns: 1fr;
+  }
+  .forum-transmitter {
+    border-left: 0;
+    border-top: 1px solid #6eb2b43d;
+  }
+  .faction-network,
+  .survivor-network,
+  .missing-frequency {
+    padding: 6rem 1.2rem;
+  }
+  .faction-card {
+    min-height: 280px;
+  }
+  .hellsings-climax {
+    padding: 5rem 1rem;
+  }
+}

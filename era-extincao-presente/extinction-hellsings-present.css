@@ -1,0 +1,138 @@
+.hellsings-present {
+  position: relative;
+  isolation: isolate;
+  min-height: 92svh;
+  display: grid;
+  grid-template-columns: minmax(190px, 0.55fr) minmax(320px, 1.45fr) minmax(230px, 0.7fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 6rem);
+  padding: clamp(6rem, 12vw, 11rem) max(1.2rem, 7vw);
+  overflow: hidden;
+  border-block: 1px solid #81302744;
+  background:
+    linear-gradient(90deg, #030707f2 0 23%, #07100fe3 53%, #080504ec 100%),
+    linear-gradient(180deg, #03040455, #020303e8),
+    url('../img-bunker/setor-de-operacoes.png') center / cover no-repeat;
+}
+.hellsings-present:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 5px, #9bd9d50b 6px),
+    radial-gradient(circle at 20% 50%, #7ed3cc1a, transparent 24%),
+    radial-gradient(circle at 72% 48%, #a9282422, transparent 30%);
+  box-shadow: inset 0 0 190px #000;
+}
+.hls-present-scan {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 0 46%, #b8f7eb14 50%, transparent 54%);
+  transform: translateX(-110%);
+  animation: hlsPresentScan 8s linear infinite;
+}
+.hls-present-signal {
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.hls-present-signal img {
+  width: clamp(90px, 12vw, 165px);
+  filter: drop-shadow(0 0 22px #82d8cb55) grayscale(0.2);
+  animation: hlsEmblemPulse 3.2s ease-in-out infinite;
+}
+.hls-present-signal span,
+.hls-present-signal b,
+.hls-present-copy > p {
+  font: 600 0.44rem/1.5 'Cinzel', serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.hls-present-signal span { color: #79bcb5; }
+.hls-present-signal b { color: #c44135; }
+.hls-present-copy { max-width: 720px; }
+.hls-present-copy > p { color: #79bcb5; }
+.hls-present-copy h2 {
+  margin: 1.4rem 0 1.8rem;
+  color: #d8d1c3;
+  font: 700 clamp(3.8rem, 7.3vw, 8rem) / 0.78 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+.hls-present-copy h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #b5322b;
+  text-shadow: 0 0 35px #ad2d2544;
+}
+.hls-present-copy blockquote {
+  max-width: 650px;
+  margin: 0 0 2.2rem;
+  color: #aaa59a;
+  font: 400 clamp(1rem, 1.6vw, 1.25rem) / 1.7 'Special Elite', serif;
+}
+.hls-present-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #a9373055;
+  color: #d7d0c3;
+  background: #080a09bb;
+  text-decoration: none;
+  font: 600 0.48rem/1 'Cinzel', serif;
+  letter-spacing: 0.15em;
+}
+.hls-present-copy a:hover {
+  border-color: #c54136;
+  color: #fff;
+  box-shadow: 0 0 30px #a52f2933;
+}
+.hls-present-copy a i { color: #c54136; font-style: normal; }
+.hls-present-status {
+  border: 1px solid #79bcb526;
+  background: #020606cc;
+}
+.hls-present-status span {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-bottom: 1px solid #79bcb51c;
+}
+.hls-present-status span:last-child { border: 0; }
+.hls-present-status small,
+.hls-present-status b {
+  font: 600 0.4rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.15em;
+}
+.hls-present-status small { color: #5d746f; }
+.hls-present-status b { color: #bfb8aa; }
+@keyframes hlsPresentScan {
+  0%, 18% { transform: translateX(-110%); opacity: 0; }
+  25% { opacity: 1; }
+  58% { transform: translateX(110%); opacity: 0.65; }
+  100% { transform: translateX(110%); opacity: 0; }
+}
+@keyframes hlsEmblemPulse {
+  0%, 100% { opacity: 0.72; filter: drop-shadow(0 0 12px #82d8cb33) grayscale(0.25); }
+  50% { opacity: 1; filter: drop-shadow(0 0 30px #82d8cb77) grayscale(0); }
+}
+@media (max-width: 900px) {
+  .hellsings-present {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hls-present-copy { margin-inline: auto; }
+  .hls-present-copy blockquote { margin-inline: auto; }
+  .hls-present-status { width: min(520px, 100%); margin-inline: auto; text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hls-present-scan,
+  .hls-present-signal img { animation: none; }
+}

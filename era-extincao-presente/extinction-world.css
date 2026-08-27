@@ -1070,6 +1070,21 @@ footer a {
   box-shadow: 0 30px 100px #000;
   overflow: visible;
   cursor: none;
+  text-decoration: none;
+}
+.survivor.reveal {
+  opacity: 0;
+  filter: blur(13px) saturate(0.2);
+  transform: translate3d(0, 70px, 0) scale(0.94);
+  transition:
+    opacity 1.25s ease var(--survivor-delay, 0s),
+    filter 1.5s ease var(--survivor-delay, 0s),
+    transform 1.5s cubic-bezier(0.16, 0.72, 0.2, 1) var(--survivor-delay, 0s);
+}
+.survivor.reveal.is-visible {
+  opacity: 1;
+  filter: none;
+  transform: none;
 }
 .classified-dialog::backdrop {
   background: #020303e8;
