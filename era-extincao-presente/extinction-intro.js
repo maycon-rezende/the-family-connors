@@ -96,8 +96,13 @@
     if (leaving) return;
     leaving = true;
     clearTimers();
+    try {
+      sessionStorage.setItem('ede-intro-liberada', 'sim');
+    } catch {
+      // O parâmetro da URL também libera a entrada quando o armazenamento está bloqueado.
+    }
     if (reduced) {
-      location.href = 'index.html';
+      location.href = 'index.html?intro=concluida';
       return;
     }
     awakening.classList.add('is-disintegrating');
@@ -108,7 +113,7 @@
       if (introStatus) introStatus.textContent = 'ATRAVESSANDO A TEMPESTADE';
     }, 2300);
     setTimeout(() => {
-      location.href = 'index.html';
+      location.href = 'index.html?intro=concluida';
     }, 3250);
   };
 

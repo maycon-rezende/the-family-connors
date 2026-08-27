@@ -6,6 +6,22 @@
     <meta name="theme-color" content="#0b0805" />
     <meta name="description" content="A Era da Extinção — o presente dos Connor depois do Dia D." />
     <title>A Era da Extinção — O Presente</title>
+    <script>
+      (() => {
+        try {
+          const introConcluida = new URLSearchParams(location.search).get('intro') === 'concluida';
+          if (!introConcluida && sessionStorage.getItem('ede-intro-liberada') !== 'sim') {
+            location.replace('intro.html');
+          }
+          if (introConcluida) {
+            sessionStorage.setItem('ede-intro-liberada', 'sim');
+            history.replaceState(null, '', 'index.html');
+          }
+        } catch {
+          location.replace('intro.html');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
