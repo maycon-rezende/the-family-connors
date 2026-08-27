@@ -1174,9 +1174,11 @@ footer a {
   opacity: 0;
   filter: blur(13px);
   transform: translateX(28px) skewX(-12deg);
+  color: #70401f;
+  text-shadow: -18px 0 24px #a6522d66;
 }
 .period-transition.is-active > b i {
-  animation: pastLetterArrive 0.62s var(--past-letter-delay) steps(9, end) forwards;
+  animation: pastLetterArrive 0.95s var(--past-letter-delay) steps(14, end) forwards;
 }
 .period-transition span {
   position: relative;
@@ -1191,7 +1193,7 @@ footer a {
   opacity: 0;
 }
 .period-transition.is-active span {
-  animation: pastSignal 0.55s 1.72s steps(7, end) forwards;
+  animation: pastSignal 0.65s 3.45s steps(9, end) forwards;
 }
 .period-transition .past-transition-line {
   position: relative;
@@ -1206,7 +1208,7 @@ footer a {
   transform: scaleX(0);
 }
 .period-transition.is-active .past-transition-line {
-  animation: loadMemory 0.8s 1.8s ease forwards;
+  animation: loadMemory 0.75s 3.52s ease forwards;
 }
 .past-rewind {
   position: absolute;
@@ -1237,7 +1239,7 @@ footer a {
   --rewind-scale: 3.4;
 }
 .period-transition.is-active .past-rewind {
-  animation: rewindGrid 2.7s cubic-bezier(0.2, 0.75, 0.2, 1) forwards;
+  animation: rewindGrid 4.4s cubic-bezier(0.2, 0.75, 0.2, 1) forwards;
 }
 .time-node-locked {
   cursor: none;
@@ -1254,15 +1256,24 @@ footer a {
     opacity: 0;
     filter: blur(13px);
     transform: translateX(28px) skewX(-12deg);
+    color: #70401f;
   }
-  48% {
-    opacity: 0.55;
-    filter: blur(5px);
+  28% {
+    opacity: 0.25;
+    filter: blur(10px);
+    color: #8c4b25;
+  }
+  58% {
+    opacity: 0.65;
+    filter: blur(4px);
+    color: #bd7438;
   }
   100% {
     opacity: 1;
     filter: blur(0);
     transform: none;
+    color: var(--past-letter-color, #d7b06b);
+    text-shadow: 0 0 22px color-mix(in srgb, var(--past-letter-color, #d7b06b) 46%, transparent);
   }
 }
 @keyframes pastSignal {

@@ -45,11 +45,20 @@
   const pastTransitionTitle = document.querySelector('[data-past-transition]');
   if (pastTransitionTitle) {
     const titleLetters = [...pastTransitionTitle.textContent];
+    const desertPalette = ['#ead9b8', '#d7b06b', '#c98b3d', '#b95f2f', '#e5c98e'];
     pastTransitionTitle.textContent = '';
+    let visibleLetterIndex = 0;
     titleLetters.forEach((character, index) => {
       const letter = document.createElement('i');
       letter.textContent = character === ' ' ? '\u00a0' : character;
-      letter.style.setProperty('--past-letter-delay', `${0.42 + index * 0.055}s`);
+      letter.style.setProperty('--past-letter-delay', `${0.48 + index * 0.12}s`);
+      if (character !== ' ') {
+        letter.style.setProperty(
+          '--past-letter-color',
+          desertPalette[visibleLetterIndex % desertPalette.length]
+        );
+        visibleLetterIndex += 1;
+      }
       pastTransitionTitle.append(letter);
     });
   }
@@ -335,7 +344,7 @@
       transition.classList.add('is-active');
       setTimeout(() => {
         location.href = link.href;
-      }, 2850);
+      }, 4550);
     });
   });
 
