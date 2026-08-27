@@ -42,6 +42,18 @@
   const transition = document.querySelector('.period-transition');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const pastTransitionTitle = document.querySelector('[data-past-transition]');
+  if (pastTransitionTitle) {
+    const titleLetters = [...pastTransitionTitle.textContent];
+    pastTransitionTitle.textContent = '';
+    titleLetters.forEach((character, index) => {
+      const letter = document.createElement('i');
+      letter.textContent = character === ' ' ? '\u00a0' : character;
+      letter.style.setProperty('--past-letter-delay', `${0.42 + index * 0.055}s`);
+      pastTransitionTitle.append(letter);
+    });
+  }
+
   const dustSentence = document.querySelector('[data-prologue-dust]');
   if (dustSentence) {
     const sentence = [...dustSentence.textContent];
@@ -323,7 +335,7 @@
       transition.classList.add('is-active');
       setTimeout(() => {
         location.href = link.href;
-      }, 1050);
+      }, 2850);
     });
   });
 
