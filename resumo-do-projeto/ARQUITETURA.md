@@ -26,6 +26,8 @@
 ## Pastas de mídia
 
 - `img-jack/`, `img-alice/`, `img-mark/`, `img-ariani/`, `img-britney/` e `img-jully/`: imagens individuais.
+- `jack-presente.html`: perfil narrativo de Jack no presente, com fundo contínuo e acesso ao dossiê visual.
+- `registros-jack.html`: arquivo fotográfico independente de Jack Connor.
 - `img-brothers/`: irmãos, casais e núcleos familiares.
 - `casa/`: 24 ambientes da Mansão Connor.
 - `audio/`: trilhas das páginas.
@@ -80,7 +82,7 @@ A cronologia segue `passado dos Connor → Dia Zero/Doomsday → presente devast
 - `img-mark/markhellsing.png`: uniforme tático de Mark.
 - `img-jack/jack-hellsings-commander.png`: uniforme de comandante de Jack.
 - `img-alice/alice-hellsings-admin.png`: uniforme administrativo-médico de Alice.
-- `img-hellsing/`: retratos oficiais de Boby Johhn, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen.
+- `img-hellsing/`: retratos oficiais de John, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen. O retrato próprio de Bobby ainda será adicionado.
 - `img-bunker/`: entrada, áreas operacionais, garagens, enfermaria, arsenal, biblioteca, alojamentos e setores de suporte.
 
 Todos os dez integrantes possuem imagens oficiais nos cartões e dossiês da organização.

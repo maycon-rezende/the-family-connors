@@ -22,7 +22,11 @@ const profiles = {
       'Alice é sua âncora e também a única pessoa capaz de fazê-lo lembrar que sobreviver não basta. É preciso continuar humano.',
     gallery: [
       ['img-presente/personagens/jack-presente.png', 'REGISTRO DE CAMPO'],
+      ['img-hellsing/jack-presente.png', 'COMANDO HELLSINGS'],
       ['img-presente/personagens/jack-mark-presente.png', 'IRMÃOS EM MOVIMENTO'],
+      ['img-hellsing/jack-mark.png', 'IRMÃOS EM ARMAS'],
+      ['img-hellsing/dimitri-jack.png', 'COMANDO DE CAMPO'],
+      ['img-presente/personagens/alice-jack1.png', 'JACK & ALICE'],
       ['img-presente/personagens/all-presente.png', 'O COMBOIO'],
     ],
   },
@@ -51,6 +55,9 @@ const profiles = {
       ['img-presente/personagens/alice-presente.png', 'ARQUIVO MÉDICO'],
       ['img-presente/personagens/alice-presente2.png', 'REGISTRO PRESERVADO'],
       ['img-presente/personagens/alice-jack-presente.png', 'JACK & ALICE'],
+      ['img-hellsing/alice-clhoe.png', 'ALICE & CLHOE'],
+      ['img-hellsing/alice-clhoe1.png', 'REGISTRO HELLSINGS'],
+      ['img-hellsing/alice-clhoe2.png', 'VÍNCULO PRESERVADO'],
     ],
   },
   mark: {
@@ -135,6 +142,10 @@ const profiles = {
       ['img-presente/personagens/britney-presente.png', 'REGISTRO PESSOAL'],
       ['img-presente/personagens/mark-brit-presente.png', 'FAMÍLIA'],
       ['img-presente/personagens/all-presente.png', 'SOBREVIVENTES'],
+      ['img-hellsing/britney.png', 'ANTES DA ESTRADA'],
+      ['img-hellsing/britney-marido.png', 'BRITNEY & BOBBY'],
+      ['img-hellsing/britney-bobby.png', 'ARQUIVO FAMILIAR'],
+      ['img-hellsing/britney-boby-presente.png', 'REGISTRO DO PRESENTE'],
     ],
   },
   jully: {
@@ -184,10 +195,49 @@ if (p) {
   document.querySelector('[data-memory]').src = p.memory;
   document.querySelector('[data-memory-title]').textContent = p.memoryTitle;
   document.querySelector('[data-memory-text]').textContent = p.memoryText;
-  document.querySelector('[data-gallery]').innerHTML = p.gallery
-    .map(
-      ([src, label]) =>
-        `<figure><img src="${src}" alt="${label} — ${p.name}" loading="lazy"><figcaption>${label}</figcaption></figure>`
-    )
-    .join('');
+  const gallery = document.querySelector('[data-gallery]');
+  if (gallery) {
+    gallery.innerHTML = p.gallery
+      .map(
+        ([src, label]) =>
+          `<figure><img src="${src}" alt="${label} — ${p.name}" loading="lazy"><figcaption>${label}</figcaption></figure>`
+      )
+      .join('');
+  }
+}
+
+if (key === 'jack') {
+  const cursor = document.querySelector('.jack-cursor');
+  if (cursor && matchMedia('(pointer: fine)').matches) {
+    addEventListener('pointermove', ({ clientX, clientY }) => {
+      cursor.style.left = `${clientX}px`;
+      cursor.style.top = `${clientY}px`;
+    });
+    document.querySelectorAll('a, .gallery figure, .command-console article').forEach((target) => {
+      target.addEventListener('pointerenter', () => cursor.classList.add('active'));
+      target.addEventListener('pointerleave', () => cursor.classList.remove('active'));
+    });
+  }
+
+  const reveals = document.querySelectorAll(
+    '.profile-reveal, .chapter-grid, .memory-copy, .gallery figure'
+  );
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12 }
+    );
+    reveals.forEach((item, index) => {
+      item.style.transitionDelay = `${(index % 4) * 80}ms`;
+      observer.observe(item);
+    });
+  } else {
+    reveals.forEach((item) => item.classList.add('is-visible'));
+  }
 }

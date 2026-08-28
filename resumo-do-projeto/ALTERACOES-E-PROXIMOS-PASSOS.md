@@ -19,7 +19,7 @@
 - Cursor exclusivo dos Hellsings criado como mira tática.
 - Imagem de Mark com uniforme Hellsings integrada.
 - Novos uniformes gerados para Jack e Alice e integrados aos dossiês.
-- Retratos oficiais criados para Boby Johhn, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen.
+- Retratos oficiais criados para John, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen. Bobby permanece como outro integrante e aguarda retrato próprio.
 - Abertura cinematográfica dos Hellsings criada com autenticação Ômega e entrada pelo bunker.
 - Portal visual dos Hellsings adicionado à tela principal.
 - Bunker estruturado em doze setores visuais, incluindo comando, operações, arsenal, enfermaria, biblioteca, alojamentos, cozinhas e garagens.
@@ -35,7 +35,7 @@
 - Aplicativo mobile iniciado em Expo, com abertura, comando, agentes, missões, bunker, arquivos secretos, diário e investigação interativa.
 - Cadastro e perfil local de agente adicionados ao aplicativo com persistência por AsyncStorage.
 - Dependências do aplicativo reinstaladas e código validado pelo TypeScript sem erros.
-- Três cenas cinematográficas oficiais dos Hellsings criadas: comando de Jack, Mark e Alice; inteligência de Boby, Naomi e Clhoe; retorno de Luke, Dimitri, Brian e Hellen.
+- Três cenas cinematográficas oficiais dos Hellsings criadas: comando de Jack, Mark e Alice; inteligência de John, Naomi e Clhoe; retorno de Luke, Dimitri, Brian e Hellen.
 - Novas fotografias de Alice e Jack catalogadas; registros familiares e do casal Jack/Alice incorporados à galeria central.
 - Arquivo pessoal de Alice reorganizado em capítulos, paginação, transições e visualizador protegido para registros classificados.
 - Galerias de Ariani, Jack e Mark ampliadas; novos registros familiares e dos irmãos catalogados.
@@ -60,7 +60,7 @@
 - Seis arquivos envelhecidos dos Connor foram preparados sem inventar destinos antes da entrega da lore oficial.
 - O endereço anterior `era-extincao-presente/` agora redireciona para a raiz oficial.
 - Álbum “Operações Hellsings” adicionado à galeria com três cenas cinematográficas e dez retratos oficiais.
-- Retratos verticais de Boby, Naomi, Clhoe, Luke, Dimitri, Brian e Hellen corrigidos nos cards e dossiês mobile.
+- Retratos verticais de John, Naomi, Clhoe, Luke, Dimitri, Brian e Hellen corrigidos nos cards e dossiês mobile.
 - Seis retratos cinematográficos dos Connor no presente devastado foram criados para Jack, Alice, Mark, Ariani, Britney e Jully.
 - Os retratos do presente foram integrados aos arquivos de sobreviventes da página principal com enquadramento responsivo e efeitos de dossiê.
 - Nova imagem conjunta de Jack e Mark recebida em `img-presente/personagens/mark$jack.png` e preservada para a narrativa do presente.
@@ -87,4 +87,14 @@
 6. Receber a lore do presente: estado do mundo, destinos dos personagens, territórios, veículos e facções.
 7. Expandir a experiência principal do presente sem transformar possibilidades em fatos antes da definição do autor.
 
-Última atualização: 25 de agosto de 2026.
+## Atualização de 28 de agosto de 2026
+
+- Perfil de Jack no presente reconstruído com fotografia de fundo contínua, atmosfera de areia e linguagem visual de comandante.
+- Galeria removida do perfil principal de Jack para preservar a leitura narrativa.
+- Novo arquivo independente `registros-jack.html` criado para os registros fotográficos de Jack, acessado por um dossiê confidencial clicável.
+- Seção `Ainda juntos` reenquadrada para preservar os rostos de Jack e Alice, com composição cinematográfica e leitura responsiva.
+- Novas imagens de Alice e Clhoe incorporadas ao arquivo visual de Alice.
+- Novas imagens de Britney, Bobby e da família incorporadas ao arquivo visual de Britney.
+- Registro familiar mais recente de Clhoe aplicado à sua página individual.
+
+Última atualização: 28 de agosto de 2026.

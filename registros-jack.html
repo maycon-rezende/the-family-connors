@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080604" />
+    <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
+    <title>Registros Fotográficos de Jack Connor</title>
+  </head>
+  <body class="jack-records-page" data-character="jack">
+    <div class="profile-backdrop" aria-hidden="true"></div>
+    <div class="jack-sand" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="jack-cursor" aria-hidden="true"><i></i><span>JC-01</span></div>
+    <nav class="profile-nav">
+      <a href="jack-presente.html"><b>JC</b> VOLTAR AO PERFIL</a>
+      <span>ARQUIVO FOTOGRÁFICO // ACESSO RESTRITO</span>
+      <a href="index.html#sobreviventes">SOBREVIVENTES</a>
+    </nav>
+    <main class="records-main">
+      <header class="records-hero">
+        <span class="eyebrow">HELLSINGS // DOSSIÊ JC-01</span>
+        <h1>Registros<br /><em>fotográficos.</em></h1>
+        <p>Fragmentos preservados de Jack Connor: comandante, irmão, marido e o homem que continua conduzindo todos pela tempestade.</p>
+        <div class="records-status"><span>07 ARQUIVOS</span><span>INTEGRIDADE // PARCIAL</span><span>ACESSO // AUTORIZADO</span></div>
+      </header>
+      <section class="jack-record-grid" aria-label="Fotografias de Jack Connor">
+        <figure><img src="img-presente/personagens/jack-presente.png" alt="Jack Connor em registro de campo" /><figcaption><b>01</b> REGISTRO DE CAMPO</figcaption></figure>
+        <figure><img src="img-hellsing/jack-presente.png" alt="Jack Connor no comando dos Hellsings" /><figcaption><b>02</b> COMANDO HELLSINGS</figcaption></figure>
+        <figure><img src="img-presente/personagens/jack-mark-presente.png" alt="Jack e Mark Connor" /><figcaption><b>03</b> IRMÃOS EM MOVIMENTO</figcaption></figure>
+        <figure><img src="img-hellsing/jack-mark.png" alt="Jack e Mark em uniforme" /><figcaption><b>04</b> IRMÃOS EM ARMAS</figcaption></figure>
+        <figure><img src="img-hellsing/dimitri-jack.png" alt="Dimitri e Jack em missão" /><figcaption><b>05</b> COMANDO DE CAMPO</figcaption></figure>
+        <figure><img src="img-presente/personagens/alice-jack1.png" alt="Jack e Alice Connor" /><figcaption><b>06</b> JACK &amp; ALICE</figcaption></figure>
+        <figure><img src="img-presente/personagens/all-presente.png" alt="Jack e o comboio" /><figcaption><b>07</b> O COMBOIO</figcaption></figure>
+      </section>
+    </main>
+    <footer class="profile-footer"><a href="jack-presente.html">← RETORNAR AO ARQUIVO DE JACK</a></footer>
+    <script>
+      const cursor = document.querySelector('.jack-cursor');
+      if (cursor && matchMedia('(pointer: fine)').matches) {
+        addEventListener('pointermove', ({ clientX, clientY }) => {
+          cursor.style.left = `${clientX}px`;
+          cursor.style.top = `${clientY}px`;
+        });
+        document.querySelectorAll('a, figure').forEach((target) => {
+          target.addEventListener('pointerenter', () => cursor.classList.add('active'));
+          target.addEventListener('pointerleave', () => cursor.classList.remove('active'));
+        });
+      }
+    </script>
+  </body>
+</html>
