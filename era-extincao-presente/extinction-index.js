@@ -50,11 +50,13 @@
     const open = menuToggle.getAttribute('aria-expanded') !== 'true';
     menuToggle.setAttribute('aria-expanded', String(open));
     worldMenu?.classList.toggle('is-open', open);
+    body.classList.toggle('world-menu-open', open);
   });
   worldMenu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       menuToggle?.setAttribute('aria-expanded', 'false');
       worldMenu.classList.remove('is-open');
+      body.classList.remove('world-menu-open');
     });
   });
 

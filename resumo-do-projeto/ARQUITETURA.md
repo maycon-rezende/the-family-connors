@@ -29,6 +29,9 @@
 - `jack-presente.html`: perfil narrativo de Jack no presente, com fundo contínuo e acesso ao dossiê visual.
 - `registros-jack.html`: arquivo fotográfico independente de Jack Connor.
 - `filhos-connor.html`: central da segunda geração de Jack e Alice.
+- `herdeiros-extincao.html`: portal da nova geração, separando as linhagens de Jack/Alice e Mark/Ariani.
+- `filhos-mark-ariani.html`: central dos arquivos de Pollyana e Nathan, filhos de Mark e Ariani.
+- `pollyana-presente.html` e `nathan-presente.html`: arquivos individuais da segunda linhagem.
 - `alucard-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `diana-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos.
 - `img-brothers/`: irmãos, casais e núcleos familiares.
 - `casa/`: 24 ambientes da Mansão Connor.

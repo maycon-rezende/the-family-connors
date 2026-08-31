@@ -669,6 +669,81 @@ button {
 }
 .world-report,
 .survivor-files,
+.next-generation {
+  position: relative;
+  min-height: 92svh;
+  display: grid;
+  align-items: end;
+  padding: clamp(6rem, 10vw, 10rem) 6vw;
+  overflow: hidden;
+  border-block: 1px solid #b66a343d;
+  background: #070604;
+}
+.next-generation-image,
+.next-generation-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.next-generation-image {
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(.58) brightness(.46) contrast(1.08);
+  transform: scale(1.02);
+}
+.next-generation-shade {
+  background: linear-gradient(90deg, #050403f2 0 34%, #0806048f 65%, #050403c9), linear-gradient(0deg, #050403e8, transparent 65%);
+}
+.next-generation-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+.next-generation-copy > span,
+.next-generation > small {
+  color: #d28a4a;
+  font: 700 .54rem/1.4 'Cinzel', serif;
+  letter-spacing: .22em;
+}
+.next-generation-copy h2 {
+  margin: 1rem 0 1.5rem;
+  font: 800 clamp(4.8rem, 11vw, 11rem)/.72 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+}
+.next-generation-copy h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #dd6735;
+  filter: drop-shadow(0 0 28px #c84d273f);
+}
+.next-generation-copy p {
+  max-width: 650px;
+  color: #d2c5b3;
+  font: 1.05rem/1.8 'Special Elite', serif;
+}
+.next-generation-copy a {
+  width: fit-content;
+  min-height: 58px;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #d768365f;
+  color: #eadcc8;
+  background: #120b07c7;
+  text-decoration: none;
+  font: 700 .57rem/1 'Cinzel', serif;
+  letter-spacing: .16em;
+}
+.next-generation > small {
+  position: absolute;
+  z-index: 2;
+  right: 3vw;
+  bottom: 3rem;
+  writing-mode: vertical-rl;
+}
 .timeline-rift {
   position: relative;
   padding: clamp(7rem, 12vw, 12rem) max(1rem, calc((100vw - 1320px) / 2));
@@ -948,6 +1023,17 @@ button {
     normal 600 0.4rem/1 'Cinzel',
     serif;
   letter-spacing: 0.16em;
+}
+.survivor-heirs-grid {
+  margin-top: 2px;
+}
+.survivor-heir {
+  border-color: #d99b4d55;
+  background: #120c07;
+}
+.survivor-heir > span,
+.survivor-heir > i {
+  color: #e2ae63;
 }
 .survivor-hellsing {
   border-color: rgba(160, 43, 39, 0.34);
@@ -1468,13 +1554,14 @@ footer a {
 }
 @media (max-width: 950px) {
   .world-nav {
+    z-index: 10010;
     grid-template-columns: 1fr auto auto;
     min-height: 84px;
     gap: 0.8rem;
   }
   .world-nav nav {
     position: fixed;
-    z-index: 85;
+    z-index: 10020;
     left: 0.8rem;
     right: 0.8rem;
     top: 92px;
@@ -1498,6 +1585,13 @@ footer a {
     transform: none;
     pointer-events: auto;
   }
+  body.world-menu-open .world-nav nav {
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
   .world-nav nav a,
   .world-nav nav a:visited {
     min-height: 64px;
@@ -1514,6 +1608,9 @@ footer a {
   }
   .world-menu-toggle {
     display: block;
+    position: relative;
+    z-index: 10030;
+    touch-action: manipulation;
   }
   .world-condition {
     grid-column: 3;
@@ -1682,6 +1779,26 @@ footer a {
   .survivor > small {
     left: 1.35rem;
     bottom: 2.35rem;
+  }
+  .next-generation {
+    min-height: 82svh;
+    padding: 6rem 1.2rem 4rem;
+  }
+  .next-generation-image {
+    object-position: 48% center;
+  }
+  .next-generation-copy h2 {
+    font-size: 20vw;
+  }
+  .next-generation-copy p {
+    font-size: .92rem;
+  }
+  .next-generation-copy a {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .next-generation > small {
+    display: none;
   }
   .timeline-track .time-node,
   .timeline-track .time-node:last-child {

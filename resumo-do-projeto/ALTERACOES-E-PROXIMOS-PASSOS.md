@@ -106,6 +106,9 @@
 - Registros visuais de John, Brian e Bobby incorporados à experiência do presente.
 - Peter removido da árvore familiar de Jack e Alice; Isolde Connor oficializada como quinta filha.
 - Central `filhos-connor.html` e páginas de Alucard, Nicolai, Mary, Diana e Isolde criadas.
+- A tela inicial passou a apresentar a nova geração em uma chamada cinematográfica única; `herdeiros-extincao.html` organiza as duas linhagens Connor e reserva o futuro núcleo dos filhos de Mark e Ariani.
+- Pollyana e Nathan foram adicionados como os primeiros arquivos da linhagem de Mark e Ariani; novos registros de Mary foram incorporados à galeria individual.
+- Nathan recebeu retrato individual próprio; a imagem ao lado de Pollyana permanece como registro conjunto. A galeria de Mary passou a reunir todos os novos registros recuperados.
 - Novas imagens conjuntas de Alucard/Nicolai e Mary/Diana, além dos registros de Isolde, integradas.
 
 Última atualização: 31 de agosto de 2026.

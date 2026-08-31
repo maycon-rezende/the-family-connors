@@ -28,6 +28,7 @@ body {
 body[data-character='jack'] {
   --rust: #d94b28;
   --sand: #bd8b4e;
+  position: relative;
   cursor: none;
   background: #050504;
 }
@@ -861,6 +862,219 @@ body[data-character='jack'] .jack-sand {
     padding: 2rem 1.2rem;
   }
 }
+/* Jack Connor: composição exclusiva em tela cheia */
+body[data-character='jack'] .profile-backdrop {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  height: 100svh;
+  background-color: #120a06;
+  background-image:
+    linear-gradient(90deg, #050403e8 0%, #070503bd 36%, #05040324 68%, #05040350 100%),
+    linear-gradient(0deg, #050403b8 0%, transparent 28%, #05040376 100%),
+    url('../img-hellsing/jack-presente.png');
+  background-position: 0 0, 0 0, right top;
+  background-size: 100% 100%, 100% 100%, auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  filter: saturate(.66) contrast(1.04) brightness(.9);
+}
+body[data-character='jack']:before {
+  opacity: .07;
+}
+body[data-character='jack'] .profile-backdrop:after {
+  opacity: .08;
+}
+body[data-character='jack'] .jack-sand:before,
+body[data-character='jack'] .jack-sand:after,
+body[data-character='jack'] .jack-sand i {
+  opacity: .08;
+}
+body[data-character='jack'] .profile-nav,
+body[data-character='jack'] .profile-footer {
+  background: #070503d9;
+  backdrop-filter: blur(16px);
+}
+body[data-character='jack'] .profile-hero {
+  min-height: 100svh;
+  align-items: end;
+  padding-bottom: clamp(4rem, 9vh, 8rem);
+}
+body[data-character='jack'] .hero-copy {
+  max-width: 900px;
+  padding: clamp(1.2rem, 3vw, 2.2rem);
+  border-left: 1px solid #d36132a8;
+  background: linear-gradient(90deg, #070503db, #07050335 78%, transparent);
+  backdrop-filter: blur(3px);
+}
+body[data-character='jack'] .profile-main {
+  background: transparent;
+}
+body[data-character='jack'] .chapter,
+body[data-character='jack'] .jack-command,
+body[data-character='jack'] .jack-records-access {
+  position: relative;
+  border-block: 1px solid #c26d3535;
+  background:
+    linear-gradient(110deg, #080503a8 0 42%, #130b066e 72%, #08050392),
+    radial-gradient(circle at 78% 35%, #bc5c2522, transparent 35%);
+  backdrop-filter: blur(1.5px);
+}
+body[data-character='jack'] .profile-main > .chapter:first-child {
+  background:
+    linear-gradient(90deg, #070503e8 0 32%, #0705039c 60%, #070503bd),
+    linear-gradient(0deg, #070503b5, transparent 35% 68%, #070503d1),
+    radial-gradient(circle at 72% 38%, #c1662f35, transparent 34%),
+    url('../img-bunker/setor-de-operacoes.png') center / cover no-repeat scroll;
+}
+body[data-character='jack'] .profile-main > .chapter:first-child:after {
+  content: 'H';
+  position: absolute;
+  z-index: 1;
+  right: 7vw;
+  top: 50%;
+  color: transparent;
+  font: 800 clamp(15rem, 30vw, 30rem)/1 'Barlow Condensed';
+  -webkit-text-stroke: 1px #d1773830;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+body[data-character='jack'] .jack-command {
+  background:
+    linear-gradient(105deg, #070503d9 0 38%, #07050375 66%, #070503b5),
+    linear-gradient(0deg, #070503bd, transparent 42% 68%, #070503c9),
+    url('../img-presente/personagens/jack-presente1.png') center 22% / cover no-repeat scroll;
+}
+body[data-character='jack'] .jack-records-access {
+  background:
+    repeating-linear-gradient(112deg, transparent 0 48px, #e2853b0b 49px 50px),
+    radial-gradient(circle at 72% 35%, #c2622d66, transparent 38%),
+    linear-gradient(110deg, #251006e8, #7c3817bb 56%, #150a05e6);
+}
+body[data-character='jack'] .chapter-grid,
+body[data-character='jack'] .jack-command > header,
+body[data-character='jack'] .command-console,
+body[data-character='jack'] .jack-dossier {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 760px) {
+  body[data-character='jack'] .profile-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    height: 100svh;
+    background-color: #120a06;
+    background-image:
+      linear-gradient(90deg, #050403a8 0%, #05040342 58%, #05040382 100%),
+      linear-gradient(0deg, #050403b8 0%, transparent 32%, #0504039c 100%),
+      url('../img-presente/personagens/jack-presente1.png');
+    background-position: 0 0, 0 0, 61% top;
+    background-size: 100% 100%, 100% 100%, cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    filter: saturate(.68) contrast(1.08) brightness(.82);
+  }
+  body[data-character='jack'] .profile-nav {
+    min-height: 64px;
+    padding-inline: .8rem;
+  }
+  body[data-character='jack'] .profile-nav a {
+    font-size: .52rem;
+    letter-spacing: .1em;
+  }
+  body[data-character='jack'] .profile-hero {
+    min-height: 100svh;
+    padding: 6.5rem 1rem 2.5rem;
+  }
+  body[data-character='jack'] .hero-copy {
+    width: 100%;
+    padding: 1.15rem;
+    border-left-color: #d361326e;
+    background: linear-gradient(90deg, #070503e8, #070503a6);
+  }
+  body[data-character='jack'] .hero-copy h1 {
+    font-size: clamp(4.3rem, 22vw, 6.5rem);
+  }
+  body[data-character='jack'] .hero-copy > p {
+    max-width: 34rem;
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+  body[data-character='jack'] .data-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  body[data-character='jack'] .chapter,
+  body[data-character='jack'] .jack-command,
+  body[data-character='jack'] .jack-records-access {
+    padding-inline: 1rem;
+    background: linear-gradient(110deg, #070503b8, #120b0785);
+    backdrop-filter: blur(1px);
+  }
+  body[data-character='jack'] .profile-main > .chapter:first-child {
+    background:
+      linear-gradient(0deg, #070503e8 0 24%, #07050382 70%, #070503c7),
+      radial-gradient(circle at 65% 26%, #bd612e38, transparent 36%),
+      url('../img-bunker/setor-de-operacoes.png') center / cover no-repeat scroll;
+  }
+  body[data-character='jack'] .profile-main > .chapter:first-child:after {
+    right: -7vw;
+    top: 26%;
+    font-size: 65vw;
+    opacity: .65;
+  }
+  body[data-character='jack'] .jack-command {
+    background:
+      linear-gradient(0deg, #070503e3 0 24%, #07050375 70%, #070503c2),
+      url('../img-presente/personagens/jack-presente1.png') 62% top / cover no-repeat scroll;
+  }
+  body[data-character='jack'] .jack-records-access {
+    background:
+      repeating-linear-gradient(112deg, transparent 0 34px, #e2853b0c 35px 36px),
+      radial-gradient(circle at 50% 30%, #b9532861, transparent 42%),
+      linear-gradient(0deg, #160904ed, #693016c7 52%, #160904e8);
+  }
+  body[data-character='jack'] .chapter-grid h2 {
+    font-size: clamp(3.8rem, 19vw, 6rem);
+  }
+  body[data-character='jack'] .jack-command {
+    min-height: auto;
+    padding-block: 5rem;
+  }
+  body[data-character='jack'] .route-map {
+    right: -65%;
+    opacity: .14;
+  }
+  body[data-character='jack'] .jack-records-access {
+    min-height: 78svh;
+    padding-block: 4rem;
+  }
+  body[data-character='jack'] .jack-dossier {
+    min-height: 68svh;
+    background:
+      linear-gradient(0deg, #070604f5 0 22%, #1610088c),
+      url('../img-hellsing/jack-presente.png') 58% 20% / cover;
+  }
+  body[data-character='jack'] .dossier-stamp {
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: .48rem;
+  }
+  body[data-character='jack'] .dossier-copy strong {
+    font-size: clamp(2.9rem, 14vw, 4.8rem);
+  }
+  body[data-character='jack'] .profile-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

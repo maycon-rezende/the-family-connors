@@ -192,9 +192,12 @@ if (p) {
   document.querySelector('[data-chapter-title]').innerHTML = `${p.title}<em>${p.accent}</em>`;
   document.querySelector('[data-story]').innerHTML =
     p.paragraphs.map((x) => `<p>${x}</p>`).join('') + `<p class="quote">${p.quote}</p>`;
-  document.querySelector('[data-memory]').src = p.memory;
-  document.querySelector('[data-memory-title]').textContent = p.memoryTitle;
-  document.querySelector('[data-memory-text]').textContent = p.memoryText;
+  const memoryImage = document.querySelector('[data-memory]');
+  const memoryTitle = document.querySelector('[data-memory-title]');
+  const memoryText = document.querySelector('[data-memory-text]');
+  if (memoryImage) memoryImage.src = p.memory;
+  if (memoryTitle) memoryTitle.textContent = p.memoryTitle;
+  if (memoryText) memoryText.textContent = p.memoryText;
   const gallery = document.querySelector('[data-gallery]');
   if (gallery) {
     gallery.innerHTML = p.gallery
