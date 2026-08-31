@@ -40,7 +40,23 @@
   const dialog = document.querySelector('#classifiedDialog');
   const fileCode = document.querySelector('#fileCode');
   const transition = document.querySelector('.period-transition');
+  const menuToggle = document.querySelector('.world-menu-toggle');
+  const worldMenu = document.querySelector('.world-nav nav');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  menuToggle?.setAttribute('aria-controls', 'worldMenu');
+  if (worldMenu) worldMenu.id = 'worldMenu';
+  menuToggle?.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+    menuToggle.setAttribute('aria-expanded', String(open));
+    worldMenu?.classList.toggle('is-open', open);
+  });
+  worldMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menuToggle?.setAttribute('aria-expanded', 'false');
+      worldMenu.classList.remove('is-open');
+    });
+  });
 
   const pastTransitionTitle = document.querySelector('[data-past-transition]');
   if (pastTransitionTitle) {

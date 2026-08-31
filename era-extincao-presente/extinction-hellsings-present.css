@@ -77,7 +77,8 @@
   color: #aaa59a;
   font: 400 clamp(1rem, 1.6vw, 1.25rem) / 1.7 'Special Elite', serif;
 }
-.hls-present-copy a {
+.hls-present-copy a,
+.hls-channel-locked {
   display: inline-flex;
   align-items: center;
   gap: 2rem;
@@ -94,7 +95,18 @@
   color: #fff;
   box-shadow: 0 0 30px #a52f2933;
 }
-.hls-present-copy a i { color: #c54136; font-style: normal; }
+.hls-present-copy a i,
+.hls-channel-locked i { color: #c54136; font-style: normal; }
+.hls-channel-locked {
+  cursor: none;
+  user-select: none;
+  opacity: 0.72;
+  border-style: dashed;
+}
+.hls-channel-locked i {
+  font-size: 0.42rem;
+  white-space: nowrap;
+}
 .hls-present-status {
   border: 1px solid #79bcb526;
   background: #020606cc;
@@ -131,6 +143,11 @@
   .hls-present-copy { margin-inline: auto; }
   .hls-present-copy blockquote { margin-inline: auto; }
   .hls-present-status { width: min(520px, 100%); margin-inline: auto; text-align: left; }
+  .hls-channel-locked {
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 1.5;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .hls-present-scan,

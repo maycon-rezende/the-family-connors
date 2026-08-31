@@ -1,10 +1,10 @@
 .world-nav nav {
-  gap: clamp(0.65rem, 1.15vw, 1.45rem);
+  gap: clamp(0.75rem, 1.35vw, 1.65rem);
 }
 
 .world-nav nav a,
 .world-nav nav a:visited {
-  font-size: clamp(0.38rem, 0.48vw, 0.47rem);
+  font-size: clamp(0.56rem, 0.62vw, 0.68rem);
 }
 
 .faction-network,
@@ -16,9 +16,12 @@
   overflow: hidden;
 }
 .faction-network {
+  z-index: 1;
   background: radial-gradient(circle at 50% 20%, #772b171f, transparent 36%), #090806;
 }
 .faction-grid {
+  position: relative;
+  z-index: 2;
   max-width: 1320px;
   margin: 5rem auto 0;
   display: grid;
@@ -39,6 +42,11 @@
   isolation: isolate;
   transition: 0.45s;
   cursor: none;
+  color: inherit;
+  text-decoration: none;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(224, 107, 49, 0.18);
 }
 .faction-card:before {
   content: '';
@@ -53,6 +61,26 @@
       color-mix(in srgb, var(--faction, #b26635) 22%, transparent)
     );
   opacity: 0.75;
+  pointer-events: none;
+}
+.faction-card:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 5%;
+  right: -5%;
+  width: 58%;
+  height: 86%;
+  pointer-events: none;
+  background: var(--faction-emblem) center / contain no-repeat;
+  opacity: 0.13;
+  filter: grayscale(0.15) drop-shadow(0 0 24px color-mix(in srgb, var(--faction) 36%, transparent));
+  transform: rotate(-5deg) scale(0.92);
+  transition: opacity 0.55s ease, transform 0.75s ease, filter 0.55s ease;
+}
+.faction-card > * {
+  position: relative;
+  z-index: 1;
 }
 .faction-card:hover,
 .faction-card:focus-visible {
@@ -60,6 +88,12 @@
   box-shadow:
     inset 0 -3px var(--faction, #b26635),
     0 20px 50px #0009;
+}
+.faction-card:hover:after,
+.faction-card:focus-visible:after {
+  opacity: 0.27;
+  filter: grayscale(0) drop-shadow(0 0 34px color-mix(in srgb, var(--faction) 55%, transparent));
+  transform: rotate(0) scale(1.03);
 }
 .faction-card span,
 .missing-card span {
@@ -88,21 +122,27 @@
 }
 .faction-hellsings {
   --faction: #c63832;
+  --faction-emblem: url('../img-hellsing/brand/hellsings-emblem.png');
 }
 .faction-cobras {
   --faction: #5e9a5c;
+  --faction-emblem: url('../img-faccoes/simbolos/cobras.svg');
 }
 .faction-dominus {
   --faction: #8173a5;
+  --faction-emblem: url('../img-faccoes/simbolos/dominus.svg');
 }
 .faction-fire {
   --faction: #e75020;
+  --faction-emblem: url('../img-faccoes/simbolos/fogo.svg');
 }
 .faction-iron {
   --faction: #a3a19a;
+  --faction-emblem: url('../img-faccoes/simbolos/nomades-ferro.svg');
 }
 .faction-salt {
   --faction: #76afba;
+  --faction-emblem: url('../img-faccoes/simbolos/ordem-sal.svg');
 }
 .survivor-network {
   background: linear-gradient(120deg, #08100f, #0c0b08 55%, #171006);
@@ -267,7 +307,10 @@
     radial-gradient(circle at 38% 42%, #df6a3d 0 1px, transparent 2px),
     radial-gradient(circle at 61% 48%, #873225 0 1px, transparent 2px),
     radial-gradient(circle at 52% 56%, #d7a16d 0 1px, transparent 2px);
-  background-size: 17px 19px, 23px 29px, 31px 37px;
+  background-size:
+    17px 19px,
+    23px 29px,
+    31px 37px;
   filter: blur(0.8px);
   transform: translateX(-16%);
 }
@@ -459,6 +502,15 @@
   }
   .faction-card {
     min-height: 280px;
+    z-index: 1;
+    transform: translateZ(0);
+  }
+  .faction-card:after {
+    top: 4%;
+    right: -7%;
+    width: 68%;
+    height: 88%;
+    opacity: 0.18;
   }
   .hellsings-climax {
     padding: 5rem 1rem;

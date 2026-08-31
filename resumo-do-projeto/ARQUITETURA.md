@@ -28,6 +28,8 @@
 - `img-jack/`, `img-alice/`, `img-mark/`, `img-ariani/`, `img-britney/` e `img-jully/`: imagens individuais.
 - `jack-presente.html`: perfil narrativo de Jack no presente, com fundo contínuo e acesso ao dossiê visual.
 - `registros-jack.html`: arquivo fotográfico independente de Jack Connor.
+- `filhos-connor.html`: central da segunda geração de Jack e Alice.
+- `alucard-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `diana-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos.
 - `img-brothers/`: irmãos, casais e núcleos familiares.
 - `casa/`: 24 ambientes da Mansão Connor.
 - `audio/`: trilhas das páginas.

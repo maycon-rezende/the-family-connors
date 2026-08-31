@@ -5,7 +5,7 @@
 - Jack Connor é o primogênito, trabalhou no FBI e na Interpol e criou os Hellsings.
 - Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
-- Jack e Alice têm cinco filhos: Alucard, Nicolai, Mary, Diana e Elisabeth. Alucard é o mais velho.
+- Jack e Alice têm cinco filhos: Alucard, Nicolai, Mary, Diana e Isolde. Alucard é o mais velho.
 - Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.
@@ -17,7 +17,8 @@
 1. **Jack Connor** — criador e comandante.
 2. **Mark Connor** — comando tático e agente de campo.
 3. **Alice Myers** — administração e contratos; não atua mais em campo.
-4. **Boby Johhn** — tecnologia e armamentos.
+4. **John** — tecnologia e armamentos.
+5. **Bobby** — integrante distinto de John; função e aparência aguardam aprofundamento da lore.
 5. **Naomi** — agente japonesa; inteligência e análise como função provisória.
 6. **Clhoe** — reconhecimento e vigilância como função provisória; pele em tom marrom.
 7. **Luke** — mapas, rotas e estratégia; pele em tom marrom.
@@ -25,7 +26,7 @@
 9. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
 10. **Hellen** — infiltração e disfarce.
 
-Boby Johhn também é representado atualmente com pele em tom marrom, conforme a orientação visual anterior. As funções marcadas como provisórias podem ser alteradas quando as biografias forem aprofundadas.
+John também é representado atualmente com pele em tom marrom, conforme a orientação visual anterior. Bobby é outra pessoa e receberá retrato próprio. As funções marcadas como provisórias podem ser alteradas quando as biografias forem aprofundadas.
 
 ## Atuação dos Hellsings
 

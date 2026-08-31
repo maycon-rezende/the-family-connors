@@ -60,7 +60,7 @@ Os Hellsings ainda vivem.
 
 ## Alice Myers Connor
 
-Alice tem hoje 54 anos. Médica antes do Dia D, tornou-se responsável pela saúde do grupo e pela formação de novos socorristas. Ao longo dos anos, transmitiu seus conhecimentos aos cinco filhos — Alucard, Diana, Nicolai, Mary e Peter —, que agora já são adultos.
+Alice tem hoje 54 anos. Médica antes do Dia D, tornou-se responsável pela saúde do grupo e pela formação de novos socorristas. Ao longo dos anos, transmitiu seus conhecimentos aos cinco filhos — Alucard, Diana, Nicolai, Mary e Isolde —, que agora já são adultos.
 
 Se Jack mantém o comboio em movimento, Alice mantém suas pessoas vivas.
 
@@ -119,4 +119,4 @@ Mas o código dos Hellsings ainda vive.
 - A verdade é que **Dominium** é uma organização muito antiga, responsável pelos acontecimentos que conduziram ao Dia D e à Era da Extinção.
 - O nome, a antiguidade, os objetivos e a responsabilidade da organização devem permanecer ocultos neste site.
 - O site Doomsday poderá apresentar pistas e arquivos fragmentados sobre a Dominium, sem revelar imediatamente que ela causou tudo.
-- A grafia definitiva é Bobby.
+- John e Bobby são personagens diferentes. O registro visual anteriormente atribuído a Bobby pertence somente a John; Bobby receberá imagem própria.

@@ -98,3 +98,14 @@
 - Registro familiar mais recente de Clhoe aplicado à sua página individual.
 
 Última atualização: 28 de agosto de 2026.
+
+## Atualização de 31 de agosto de 2026
+
+- Menu principal ampliado e reconstruído para mobile.
+- Símbolos próprios criados para Cobras, Dominus, Facção do Fogo, Nômades de Ferro e Ordem do Sal.
+- Registros visuais de John, Brian e Bobby incorporados à experiência do presente.
+- Peter removido da árvore familiar de Jack e Alice; Isolde Connor oficializada como quinta filha.
+- Central `filhos-connor.html` e páginas de Alucard, Nicolai, Mary, Diana e Isolde criadas.
+- Novas imagens conjuntas de Alucard/Nicolai e Mary/Diana, além dos registros de Isolde, integradas.
+
+Última atualização: 31 de agosto de 2026.

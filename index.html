@@ -1,458 +1,464 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta name="theme-color" content="#0b0805" />
-    <meta name="description" content="A Era da Extinção — o presente dos Connor depois do Dia D." />
-    <title>A Era da Extinção — O Presente</title>
-    <script>
-      (() => {
-        try {
-          const introConcluida = new URLSearchParams(location.search).get('intro') === 'concluida';
-          if (!introConcluida && sessionStorage.getItem('ede-intro-liberada') !== 'sim') {
-            location.replace('intro.html');
-          }
-          if (introConcluida) {
-            sessionStorage.setItem('ede-intro-liberada', 'sim');
-            history.replaceState(null, '', 'index.html');
-          }
-        } catch {
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0805" />
+  <meta name="description" content="A Era da Extinção — o presente dos Connor depois do Dia D." />
+  <title>A Era da Extinção — O Presente</title>
+  <script>
+    (() => {
+      const entradaPelaRaiz = !/\/index\.html$/i.test(location.pathname);
+      try {
+        const introConcluida = new URLSearchParams(location.search).get('intro') === 'concluida';
+        if (
+          entradaPelaRaiz &&
+          !introConcluida &&
+          sessionStorage.getItem('ede-intro-liberada') !== 'sim'
+        ) {
           location.replace('intro.html');
         }
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-world.css?v=6" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css?v=18" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css?v=6" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-hellsings-present.css?v=1" />
-    <link rel="stylesheet" href="era-extincao-presente/world-archive.css?v=1" />
-    <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
-    <style>
-      @keyframes scenarioAwaken {
-        from {
-          filter: brightness(0.18) saturate(0.25) contrast(1.35);
+        if (introConcluida) {
+          sessionStorage.setItem('ede-intro-liberada', 'sim');
+          history.replaceState(null, '', 'index.html');
         }
-
-        to {
-          filter: brightness(1) saturate(1) contrast(1);
-        }
+      } catch {
+        if (entradaPelaRaiz) location.replace('intro.html');
       }
-    </style>
-  </head>
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="era-extincao-presente/extinction-world.css?v=9" />
+  <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css?v=18" />
+  <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css?v=6" />
+  <link rel="stylesheet" href="era-extincao-presente/extinction-hellsings-present.css?v=2" />
+  <link rel="stylesheet" href="era-extincao-presente/world-archive.css?v=4" />
+  <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
+  <style>
+    @keyframes scenarioAwaken {
+      from {
+        filter: brightness(0.18) saturate(0.25) contrast(1.35);
+      }
 
-  <body class="world-locked">
-    <div class="world-noise" aria-hidden="true"></div>
-    <div class="world-dust" aria-hidden="true"></div>
-    <div class="world-cursor" aria-hidden="true"><i></i><b></b><span>RASTREAR</span></div>
+      to {
+        filter: brightness(1) saturate(1) contrast(1);
+      }
+    }
+  </style>
+</head>
 
-    <header class="world-nav">
-      <a class="world-brand" href="#top" aria-label="A Era da Extinção"
-        ><span>Æ</span><b>ERA DA EXTINÇÃO</b><small>ARQUIVO DO PRESENTE</small></a
-      >
-      <nav aria-label="Navegação principal">
-        <a href="#mundo">O mundo</a>
-        <a href="#hellsings">Hellsings</a>
-        <a href="#sobreviventes">Sobreviventes</a>
-        <a href="#faccoes">Facções</a>
-        <a href="#forum">Fórum</a>
-        <a href="#desaparecidos">Desaparecidos</a>
-        <a href="#cronologia">Cronologia</a>
-        <a href="#passado">O passado</a>
-      </nav>
-      <div class="world-condition"><i></i><span>ATMOSFERA</span><b>INSTÁVEL</b></div>
-    </header>
+<body class="world-locked">
+  <div class="world-noise" aria-hidden="true"></div>
+  <div class="world-dust" aria-hidden="true"></div>
+  <div class="world-cursor" aria-hidden="true"><i></i><b></b><span>RASTREAR</span></div>
 
-    <main id="top">
-      <section class="wasteland-hero" aria-labelledby="hero-title">
-        <div class="hero-blackout" aria-hidden="true"></div>
-        <div class="ruined-sun" aria-hidden="true"></div>
-        <div class="ash-horizon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="hero-scan" aria-hidden="true"></div>
-        <div class="hero-sandstorm" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-        <div class="world-prologue" aria-live="polite">
-          <p>
-            Anos depois do Dia D, os homens tentaram salvar o mundo destruindo o que ainda restava.
-          </p>
-          <p>O céu queimou. As cidades silenciaram. A areia herdou as fronteiras.</p>
-          <p>
-            Os governos desapareceram. Os mortos permaneceram. Sob a terra, os Hellsings ainda
-            transmitiam.
-          </p>
-          <strong data-prologue-dust>E hoje a humanidade conhece tudo o que restou como...</strong>
-        </div>
-        <div class="hero-copy">
-          <p class="sector-label">PRESENTE // MUITOS ANOS DEPOIS DO DIA D</p>
-          <div class="title-impact">
-            <div class="title-speedlines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <canvas class="title-particle-canvas" aria-hidden="true"></canvas>
-            <h1 id="hero-title">
-              <span data-title-line="A ERA DA" aria-label="A Era da"></span>
-              <em data-title-line="EXTINÇÃO" aria-label="Extinção"></em>
-            </h1>
-            <div class="title-classification" aria-hidden="true">
-              <i>EDE</i><span>FERRUGEM // SANGUE // SOBREVIVÊNCIA</span><b>25.08</b>
-            </div>
-          </div>
-          <p class="hero-lead">
-            Antes, eles eram uma família cercada por escolhas, missões e promessas. Agora, são nomes
-            envelhecidos em um planeta de ferrugem, areia e frequências quase mortas. Mas uma delas
-            ainda responde: Hellsings.
-          </p>
-          <div class="hero-actions">
-            <a class="primary-action" href="#mundo">ATRAVESSAR A ZONA MORTA <i>↓</i></a>
-            <a class="signal-action" href="#passado">OUVIR O PASSADO <i>◌</i></a>
-          </div>
-        </div>
-        <aside class="hero-telemetry" aria-label="Telemetria do mundo">
-          <span><small>SETOR</small><b>DESCONHECIDO</b></span>
-          <span><small>SINAL</small><b>02.7%</b></span>
-          <span><small>RADIAÇÃO</small><b>CRÍTICA</b></span>
-          <span><small>POPULAÇÃO</small><b>SEM DADOS</b></span>
-        </aside>
-        <div class="hero-warning">NÃO PROCURE O MUNDO QUE EXISTIA AQUI</div>
-      </section>
+  <header class="world-nav">
+    <a class="world-brand" href="#top" aria-label="A Era da Extinção"><span>Æ</span><b>ERA DA EXTINÇÃO</b><small>ARQUIVO
+        DO PRESENTE</small></a>
+    <nav aria-label="Navegação principal">
+      <a href="#mundo">O mundo</a>
+      <a href="#hellsings">Hellsings</a>
+      <a href="#sobreviventes">Sobreviventes</a>
+      <a href="#faccoes">Facções</a>
+      <a href="#forum">Fórum</a>
+      <a href="#desaparecidos">Desaparecidos</a>
+      <a href="#cronologia">Cronologia</a>
+      <a href="#passado">O passado</a>
+    </nav>
+    <button class="world-menu-toggle" type="button" aria-expanded="false" aria-controls="worldMenu">
+      <i></i><i></i><span>MENU</span>
+    </button>
+    <div class="world-condition"><i></i><span>ATMOSFERA</span><b>INSTÁVEL</b></div>
+  </header>
 
-      <section class="world-report" id="mundo">
-        <div class="section-index">01</div>
-        <header class="world-heading reveal">
-          <p>RELATÓRIO DO PRESENTE // FRAGMENTO 001</p>
-          <h2>O planeta que<br /><em>continuou morrendo.</em></h2>
-          <span
-            >Os fatos definitivos deste período permanecerão classificados até a abertura dos
-            arquivos do autor.</span
-          >
-        </header>
-        <div class="world-facts">
-          <article class="reveal">
-            <b>01</b><i>ATM</i>
-            <h3>Horizonte queimado</h3>
-            <p>
-              Calor, poeira e estruturas consumidas pelo tempo ocupam o lugar das antigas cidades.
-            </p>
-            <span>DADOS PARCIAIS</span>
-          </article>
-          <article class="reveal">
-            <b>02</b><i>H₂O</i>
-            <h3>Sobrevivência</h3>
-            <p>Água, abrigo e deslocamento definem as novas fronteiras entre aquilo que resta.</p>
-            <span>DADOS PARCIAIS</span>
-          </article>
-          <article class="reveal">
-            <b>03</b><i>RF</i>
-            <h3>Frequências mortas</h3>
-            <p>
-              Vozes atravessam o ruído carregando nomes, alertas e coordenadas impossíveis de
-              confirmar.
-            </p>
-            <span>SINAL INTERMITENTE</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="hellsings-present" id="hellsings" aria-labelledby="hellsings-present-title">
-        <div class="hls-present-scan" aria-hidden="true"></div>
-        <div class="hls-present-signal reveal">
-          <img src="img-hellsing/brand/hellsings-emblem.png" alt="" />
-          <span>FREQUÊNCIA HLS // SINAL AUTENTICADO</span>
-          <b>PROTOCOLO AINDA ATIVO</b>
-        </div>
-        <div class="hls-present-copy reveal">
-          <p>INTERCEPTAÇÃO 07 // ORIGEM SUBTERRÂNEA</p>
-          <h2 id="hellsings-present-title">O mundo caiu.<br /><em>Eles permaneceram.</em></h2>
-          <blockquote>
-            “Quando governos viraram ruínas e fronteiras desapareceram, uma organização continuou
-            ouvindo os pedidos que ninguém mais podia atender.”
-          </blockquote>
-          <a href="hellsing.html"><span>INTERCEPTAR CANAL HELLSINGS</span><i>→</i></a>
-        </div>
-        <div class="hls-present-status reveal" aria-label="Estado atual dos Hellsings">
-          <span><small>ORGANIZAÇÃO</small><b>OPERACIONAL</b></span>
-          <span><small>BASE</small><b>CLASSIFICADA</b></span>
-          <span><small>COMANDO</small><b>SINAL PROTEGIDO</b></span>
-          <span><small>ÚLTIMA MISSÃO</small><b>DADOS CORROMPIDOS</b></span>
-          <span><small>INTERFERÊNCIA</small><b>DOMINUS // NÃO CONFIRMADO</b></span>
-        </div>
-      </section>
-
-      <section class="survivor-files" id="sobreviventes">
-        <div class="survivor-static" aria-hidden="true"></div>
-        <header class="world-heading reveal">
-          <p>LINHAGEM CONNOR // ARQUIVOS ENVELHECIDOS</p>
-          <h2>Eles sobreviveram<br /><em>ao próprio passado.</em></h2>
-          <span>O mundo avançou. Os rostos mudaram. Os destinos ainda não foram liberados.</span>
-        </header>
-        <div class="survivor-grid">
-          <a class="survivor reveal" data-file="JC-01" href="jack-presente.html">
-            <img
-              src="img-presente/personagens/jack-presente1.png"
-              alt="Jack Connor no presente, após a devastação"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>JC-01</span><b>Jack Connor</b><small>LÍDER DO COMBOIO</small><i>ABRIR DOSSIÊ</i>
-          </a>
-          <a class="survivor reveal" data-file="AC-02" href="alice-presente.html">
-            <img
-              src="img-presente/personagens/alice-presente1.png"
-              alt="Alice Connor no presente, após a devastação"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>AC-02</span><b>Alice Connor</b><small>MÉDICA DO GRUPO</small><i>ABRIR DOSSIÊ</i>
-          </a>
-          <a class="survivor reveal" data-file="MC-03" href="mark-presente.html">
-            <img
-              src="img-presente/personagens/mark-presente2.png"
-              alt="Mark Connor no presente, após a devastação"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>MC-03</span><b>Mark Connor</b><small>VETERANO // DEFESA</small><i>ABRIR DOSSIÊ</i>
-          </a>
-          <a class="survivor reveal" data-file="AS-04" href="ariani-presente.html">
-            <img
-              src="img-presente/personagens/arianipresente1.png"
-              alt="Ariani no presente, após a devastação"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>AS-04</span><b>Ariani</b><small>NEGOCIAÇÃO // INTELIGÊNCIA</small
-            ><i>ABRIR DOSSIÊ</i>
-          </a>
-          <a class="survivor reveal" data-file="BC-05" href="britney-presente.html">
-            <img
-              src="img-presente/personagens/britney-presente1.png"
-              alt="Britney Connor no presente, após a devastação"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>BC-05</span><b>Britney Connor</b><small>MEMÓRIA // MATERNIDADE</small
-            ><i>ABRIR DOSSIÊ</i>
-          </a>
-          <a class="survivor reveal" data-file="JC-06" href="jully-presente.html">
-            <img
-              src="img-presente/personagens/jully-presente2.png"
-              alt="Jully Connor no presente, após a devastação"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>JC-06</span><b>Jully Connor</b><small>SOBREVIVENTE // LUTO</small
-            ><i>ABRIR DOSSIÊ</i>
-          </a>
-        </div>
-        <p class="lore-lock">
-          Seis sobreviventes. Seis maneiras diferentes de carregar o fim do mundo.
+  <main id="top">
+    <section class="wasteland-hero" aria-labelledby="hero-title">
+      <div class="hero-blackout" aria-hidden="true"></div>
+      <div class="ruined-sun" aria-hidden="true"></div>
+      <div class="ash-horizon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-scan" aria-hidden="true"></div>
+      <div class="hero-sandstorm" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+      <div class="world-prologue" aria-live="polite">
+        <p>
+          Anos depois do Dia D, os homens tentaram salvar o mundo destruindo o que ainda restava.
         </p>
-      </section>
-
-      <section class="timeline-rift" id="cronologia">
-        <header class="world-heading reveal">
-          <p>TRÊS PERÍODOS // UMA ÚNICA HISTÓRIA</p>
-          <h2>O tempo também<br /><em>deixou cicatrizes.</em></h2>
-        </header>
-        <div class="timeline-track">
-          <a class="time-node past reveal" href="arquivo-passado.html"
-            ><span>ANTES</span><b>O PASSADO</b>
-            <p>A família jovem, a mansão e os Hellsings antes da queda.</p>
-            <i>ABRIR MEMÓRIA →</i>
-          </a>
-          <div class="time-node zero reveal time-node-locked" aria-disabled="true">
-            <span>RUPTURA // ARQUIVO SELADO</span><b>DOOMSDAY</b>
-            <p>O Dia D. O instante em que todas as linhas se partiram.</p>
-            <i>ACESSO INDISPONÍVEL</i>
+        <p>O céu queimou. As cidades silenciaram. A areia herdou as fronteiras.</p>
+        <p>
+          Os governos desapareceram. Os mortos permaneceram. Sob a terra, os Hellsings ainda
+          transmitiam.
+        </p>
+        <strong data-prologue-dust>E hoje a humanidade conhece tudo o que restou como...</strong>
+      </div>
+      <div class="hero-copy">
+        <p class="sector-label">PRESENTE // MUITOS ANOS DEPOIS DO DIA D</p>
+        <div class="title-impact">
+          <div class="title-speedlines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <canvas class="title-particle-canvas" aria-hidden="true"></canvas>
+          <h1 id="hero-title">
+            <span data-title-line="A ERA DA" aria-label="A Era da"></span>
+            <em data-title-line="EXTINÇÃO" aria-label="Extinção"></em>
+          </h1>
+          <div class="title-classification" aria-hidden="true">
+            <i>EDE</i><span>FERRUGEM // SANGUE // SOBREVIVÊNCIA</span><b>25.08</b>
           </div>
-          <a class="time-node now reveal" href="#top"
-            ><span>AGORA</span><b>A EXTINÇÃO</b>
-            <p>O presente devastado e as consequências de tudo que aconteceu.</p>
-            <i>VOCÊ ESTÁ AQUI</i>
-          </a>
         </div>
-      </section>
+        <p class="hero-lead">
+          Antes, eles eram uma família cercada por escolhas, missões e promessas. Agora, são nomes
+          envelhecidos em um planeta de ferrugem, areia e frequências quase mortas. Mas uma delas
+          ainda responde: Hellsings.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#mundo">ATRAVESSAR A ZONA MORTA <i>↓</i></a>
+          <a class="signal-action" href="#passado">OUVIR O PASSADO <i>◌</i></a>
+        </div>
+      </div>
+      <aside class="hero-telemetry" aria-label="Telemetria do mundo">
+        <span><small>SETOR</small><b>DESCONHECIDO</b></span>
+        <span><small>SINAL</small><b>02.7%</b></span>
+        <span><small>RADIAÇÃO</small><b>CRÍTICA</b></span>
+        <span><small>POPULAÇÃO</small><b>SEM DADOS</b></span>
+      </aside>
+      <div class="hero-warning">NÃO PROCURE O MUNDO QUE EXISTIA AQUI</div>
+    </section>
 
-      <section class="past-vault" id="passado">
-        <div class="vault-door" aria-hidden="true"><span>Æ</span><i></i><i></i><i></i></div>
-        <div class="vault-copy reveal">
-          <p>CAIXA-PRETA CONNOR // MEMÓRIA ANTERIOR AO DIA D</p>
-          <h2>Antes do mundo acabar,<br /><em>eles tinham uma vida.</em></h2>
-          <span
-            >Conheça os Connor quando ainda eram jovens. Entre na mansão, abra seus arquivos
-            pessoais, veja as fotografias e descubra como os Hellsings existiam antes da
-            extinção.</span
-          >
-          <a href="arquivo-passado.html" data-open-past
-            ><b>DESBLOQUEAR ARQUIVOS DO PASSADO</b><i>→</i></a
-          >
-          <small>O acesso altera o período da experiência.</small>
-        </div>
-      </section>
+    <section class="world-report" id="mundo">
+      <div class="section-index">01</div>
+      <header class="world-heading reveal">
+        <p>RELATÓRIO DO PRESENTE // FRAGMENTO 001</p>
+        <h2>O planeta que<br /><em>continuou morrendo.</em></h2>
+        <span>Os fatos definitivos deste período permanecerão classificados até a abertura dos
+          arquivos do autor.</span>
+      </header>
+      <div class="world-facts">
+        <article class="reveal">
+          <img src="img-presente/personagens/deserto.jpg" alt="Deserto sob um horizonte queimado" loading="lazy"
+            decoding="async" />
+          <b>01</b><i>ATM</i>
+          <h3>Horizonte queimado</h3>
+          <p>
+            Calor, poeira e estruturas consumidas pelo tempo ocupam o lugar das antigas cidades.
+          </p>
+          <span>DADOS PARCIAIS</span>
+        </article>
+        <article class="reveal">
+          <img src="img-presente/personagens/destruicao.jpg" alt="Cidade destruída depois do Dia D" loading="lazy"
+            decoding="async" />
+          <b>02</b><i>H₂O</i>
+          <h3>Sobrevivência</h3>
+          <p>Água, abrigo e deslocamento definem as novas fronteiras entre aquilo que resta.</p>
+          <span>DADOS PARCIAIS</span>
+        </article>
+        <article class="reveal">
+          <img src="img-presente/personagens/extincao.jpg" alt="Ruínas do mundo durante a Era da Extinção"
+            loading="lazy" decoding="async" />
+          <b>03</b><i>RF</i>
+          <h3>Frequências mortas</h3>
+          <p>
+            Vozes atravessam o ruído carregando nomes, alertas e coordenadas impossíveis de
+            confirmar.
+          </p>
+          <span>SINAL INTERMITENTE</span>
+        </article>
+      </div>
+    </section>
 
-      <section class="faction-network" id="faccoes">
-        <header class="world-heading reveal">
-          <p>MAPA DE PODER // SEIS SINAIS DOMINANTES</p>
-          <h2>As fronteiras morreram.<br /><em>As facções tomaram seu lugar.</em></h2>
-          <span
-            >Nenhum território está vazio. Alguns apenas ainda não escolheram uma bandeira.</span
-          >
-        </header>
-        <div class="faction-grid">
-          <article class="faction-card faction-hellsings reveal" tabindex="0">
-            <span>F-01 // ATIVA</span><b>HELLSINGS</b>
-            <p>Resgate, inteligência e proteção. Um código antigo atravessando um mundo novo.</p>
-            <i>DOSSIÊ EM CONSTRUÇÃO</i>
-          </article>
-          <article class="faction-card faction-cobras reveal" tabindex="0">
-            <span>F-02 // HOSTILIDADE VARIÁVEL</span><b>COBRAS</b>
-            <p>Informação, veneno e rotas clandestinas. Nunca atacam sem conhecer a saída.</p>
-            <i>ARQUIVO BLOQUEADO</i>
-          </article>
-          <article class="faction-card faction-dominus reveal" tabindex="0">
-            <span>F-03 // ORIGEM DESCONHECIDA</span><b>DOMINUS</b>
-            <p>
-              Uma facção cercada por rumores. Seus símbolos surgem onde ninguém deveria sobreviver.
-            </p>
-            <i>SINAL NÃO CONFIRMADO</i>
-          </article>
-          <article class="faction-card faction-fire reveal" tabindex="0">
-            <span>F-04 // TERRITÓRIO VERMELHO</span><b>FACÇÃO DO FOGO</b>
-            <p>
-              Controlam refinarias, fornalhas e cidades queimadas. Para eles, cinzas são fronteiras.
-            </p>
-            <i>RISCO EXTREMO</i>
-          </article>
-          <article class="faction-card faction-iron reveal" tabindex="0">
-            <span>F-05 // REGISTRO PROVISÓRIO</span><b>NÔMADES DE FERRO</b>
-            <p>Comboios blindados negociam combustível, peças e passagem pelas estradas mortas.</p>
-            <i>NOME SUJEITO À LORE</i>
-          </article>
-          <article class="faction-card faction-salt reveal" tabindex="0">
-            <span>F-06 // REGISTRO PROVISÓRIO</span><b>ORDEM DO SAL</b>
-            <p>Guardam poços, dessalinizadores e os últimos mapas de água do continente.</p>
-            <i>NOME SUJEITO À LORE</i>
-          </article>
-        </div>
-      </section>
-
-      <section class="survivor-network" id="forum">
-        <header class="world-heading reveal">
-          <p>FREQUÊNCIA CIVIL // CANAL ABERTO</p>
-          <h2>O mundo ainda fala.<br /><em>Quase sempre em sussurros.</em></h2>
-        </header>
-        <div class="network-console reveal">
-          <div class="forum-feed" id="forumFeed" aria-live="polite">
-            <article>
-              <span>TORRE-19 // 02:14</span>
-              <p>Há luzes se movendo na antiga rodovia. Três veículos. Nenhuma bandeira.</p>
-            </article>
-            <article>
-              <span>ANÔNIMO // SINAL FRACO</span>
-              <p>
-                Ouvi dizer que existe terra limpa ao norte. Não sei se é esperança ou armadilha.
-              </p>
-            </article>
-            <article>
-              <span>MÉDICA-07 // ONTEM</span>
-              <p>Precisamos de antibióticos. Temos água e duas baterias para troca.</p>
-            </article>
-          </div>
-          <form class="forum-transmitter" id="forumTransmitter">
-            <label for="survivorAlias">IDENTIFICAÇÃO</label>
-            <input id="survivorAlias" maxlength="24" placeholder="ANÔNIMO" autocomplete="off" />
-            <label for="survivorMessage">TRANSMISSÃO</label>
-            <textarea
-              id="survivorMessage"
-              maxlength="220"
-              required
-              placeholder="Digite uma mensagem para quem ainda estiver ouvindo..."
-            ></textarea>
-            <button type="submit">TRANSMITIR NO CANAL <i>→</i></button>
-            <small>As mensagens ficam salvas somente neste dispositivo.</small>
-          </form>
-        </div>
-      </section>
-
-      <section class="missing-frequency" id="desaparecidos">
-        <header class="world-heading reveal">
-          <p>BUSCA ATIVA // TRANSMISSÕES INCOMPLETAS</p>
-          <h2>Se estiverem vivos,<br /><em>que respondam ao sinal.</em></h2>
-        </header>
-        <div class="missing-grid">
-          <article class="missing-card reveal">
-            <span>ALVO // B-01</span><b>BRADDOCK...</b>
-            <p>Antigo contato do FBI. Última frequência fragmentada além da zona norte.</p>
-            <i>PROCURANDO...</i>
-          </article>
-          <article class="missing-card reveal">
-            <span>ALVO // M-??</span><b>MAJOR HAN...</b>
-            <p>Identidade incompleta. Menções recuperadas em canais militares desativados.</p>
-            <i>PROCURANDO...</i>
-          </article>
-          <article class="missing-card reveal">
-            <span>ALVO // C-??</span><b>CORONEL SA...</b>
-            <p>Patente confirmada. Nome e localização corrompidos durante a transmissão.</p>
-            <i>PROCURANDO...</i>
-          </article>
-        </div>
-        <div class="search-pulse" aria-hidden="true">
-          <i></i><span>VARRENDO FREQUÊNCIAS MORTAS</span>
-        </div>
-      </section>
-
-      <section class="final-signal">
-        <p>TRANSMISSÃO FINAL // IDENTIDADE NÃO CONFIRMADA</p>
+    <section class="hellsings-present" id="hellsings" aria-labelledby="hellsings-present-title">
+      <div class="hls-present-scan" aria-hidden="true"></div>
+      <div class="hls-present-signal reveal">
+        <img src="img-hellsing/brand/hellsings-emblem.png" alt="" />
+        <span>FREQUÊNCIA HLS // SINAL AUTENTICADO</span>
+        <b>PROTOCOLO AINDA ATIVO</b>
+      </div>
+      <div class="hls-present-copy reveal">
+        <p>INTERCEPTAÇÃO 07 // ORIGEM SUBTERRÂNEA</p>
+        <h2 id="hellsings-present-title">O mundo caiu.<br /><em>Eles permaneceram.</em></h2>
         <blockquote>
-          “Se alguém encontrar este sinal, não procure o mundo que perdemos. Procure aquilo que
-          ainda pode ser salvo.”
+          “Quando governos viraram ruínas e fronteiras desapareceram, uma organização continuou
+          ouvindo os pedidos que ninguém mais podia atender.”
         </blockquote>
-        <div><i></i><span>FIM DO FRAGMENTO</span><i></i></div>
-      </section>
+        <div class="hls-channel-locked" aria-disabled="true">
+          <span>CANAL HELLSINGS // ACESSO PELO DOSSIÊ DA FACÇÃO</span><i>SINAL PROTEGIDO</i>
+        </div>
+      </div>
+      <div class="hls-present-status reveal" aria-label="Estado atual dos Hellsings">
+        <span><small>ORGANIZAÇÃO</small><b>OPERACIONAL</b></span>
+        <span><small>BASE</small><b>CLASSIFICADA</b></span>
+        <span><small>COMANDO</small><b>SINAL PROTEGIDO</b></span>
+        <span><small>ÚLTIMA MISSÃO</small><b>DADOS CORROMPIDOS</b></span>
+        <span><small>INTERFERÊNCIA</small><b>DOMINUS // NÃO CONFIRMADO</b></span>
+      </div>
+    </section>
 
-      <section class="hellsings-climax" id="hellsings-final" aria-label="Sinal final dos Hellsings">
-        <div class="climax-dust" aria-hidden="true"></div>
-        <img src="img-hellsing/brand/hellsings-emblem.png" alt="Símbolo dos Hellsings" />
-        <p>QUANDO O SISTEMA NÃO PODE AGIR</p>
-        <h2 data-hellsings-climax>HELLSINGS</h2>
-        <span>NÓS ENTRAMOS.</span>
-      </section>
-    </main>
-
-    <dialog class="classified-dialog" id="classifiedDialog">
-      <button type="button" data-close-file aria-label="Fechar">×</button>
-      <span id="fileCode">ARQUIVO</span>
-      <h2>ACESSO NEGADO</h2>
-      <p>
-        Este destino pertence à história do presente e permanece protegido até a liberação da lore
-        oficial.
+    <section class="survivor-files" id="sobreviventes">
+      <div class="survivor-static" aria-hidden="true"></div>
+      <header class="world-heading reveal">
+        <p>SOBREVIVENTES // CONNORS + HELLSINGS</p>
+        <h2>Eles sobreviveram<br /><em>ao próprio passado.</em></h2>
+        <span>A família permaneceu. A organização também. Cada sobrevivente pagou um preço diferente.</span>
+      </header>
+      <div class="survivor-grid">
+        <a class="survivor reveal" data-file="JC-01" href="jack-presente.html">
+          <img src="img-presente/personagens/jack-presente1.png" alt="Jack Connor no presente, após a devastação"
+            loading="lazy" decoding="async" />
+          <span>JC-01</span><b>Jack Connor</b><small>LÍDER DO COMBOIO</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal" data-file="AC-02" href="alice-presente.html">
+          <img src="img-presente/personagens/alice-presente1.png" alt="Alice Connor no presente, após a devastação"
+            loading="lazy" decoding="async" />
+          <span>AC-02</span><b>Alice M Connor</b><small>MÉDICA DO GRUPO</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal" data-file="MC-03" href="mark-presente.html">
+          <img src="img-presente/personagens/mark-presente2.png" alt="Mark Connor no presente, após a devastação"
+            loading="lazy" decoding="async" />
+          <span>MC-03</span><b>Mark Connor</b><small>VETERANO // DEFESA</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal" data-file="AS-04" href="ariani-presente.html">
+          <img src="img-presente/personagens/arianipresente1.png" alt="Ariani no presente, após a devastação"
+            loading="lazy" decoding="async" />
+          <span>AS-04</span><b>Ariani S Connor</b><small>NEGOCIAÇÃO // INTELIGÊNCIA</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal" data-file="BC-05" href="britney-presente.html">
+          <img src="img-presente/personagens/britney-presente1.png" alt="Britney Connor no presente, após a devastação"
+            loading="lazy" decoding="async" />
+          <span>BC-05</span><b>Britney Connor</b><small>MEMÓRIA // MATERNIDADE</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal" data-file="JC-06" href="jully-presente.html">
+          <img src="img-presente/personagens/jully-presente2.png" alt="Jully Connor no presente, após a devastação"
+            loading="lazy" decoding="async" />
+          <span>JC-06</span><b>Jully Connor</b><small>SOBREVIVENTE // LUTO</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal survivor-hellsing" data-file="H-10" href="hellen-presente.html">
+          <img src="img-hellsing/hellen-presente.png" alt="Hellen no presente, após o Dia D" loading="lazy"
+            decoding="async" />
+          <span>H-10</span><b>Hellen</b><small>INFILTRAÇÃO // IDENTIDADES PERDIDAS</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal survivor-hellsing" data-file="N-05" href="naomi-presente.html">
+          <img src="img-hellsing/naomi-presente.png" alt="Naomi no presente, após o Dia D" loading="lazy"
+            decoding="async" />
+          <span>N-05</span><b>Naomi</b><small>INTELIGÊNCIA // SINAIS PERDIDOS</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal survivor-hellsing" data-file="L-06" href="luke-presente.html">
+          <img src="img-hellsing/luke-presente.png" alt="Luke no presente, após o Dia D" loading="lazy"
+            decoding="async" />
+          <span>L-06</span><b>Luke</b><small>CAMPO // ROTAS MORTAS</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal survivor-hellsing" data-file="C-07" href="clhoe-presente.html">
+          <img src="img-hellsing/clhoe-presente.png" alt="Clhoe no presente, após o Dia D" loading="lazy"
+            decoding="async" />
+          <span>C-07</span><b>Clhoe</b><small>CAMPO // ÚLTIMO LAR</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <a class="survivor reveal survivor-hellsing" data-file="D-08" href="dimitri-presente.html">
+          <img src="img-hellsing/dimitri-presente.png" alt="Dimitri no presente, após o Dia D" loading="lazy"
+            decoding="async" />
+          <span>D-08</span><b>Dimitri</b><small>ASSALTO // DÍVIDA DE GUERRA</small><i>ABRIR DOSSIÊ</i>
+        </a>
+        <button class="survivor reveal survivor-hellsing survivor-brian" data-file="BT-09" type="button">
+          <img src="img-hellsing/brian-presente.png" alt="Último registro de Brian Taylor na enfermaria do bunker"
+            loading="lazy" decoding="async" />
+          <span>BT-09</span><b>Brian Taylor</b><small>MEMORIAL // ÚLTIMO REGISTRO</small><i>ABRIR ARQUIVO</i>
+        </button>
+        <button class="survivor reveal survivor-hellsing survivor-bobby" data-file="B-11" type="button">
+          <img src="img-hellsing/britney-bobby.png" alt="Bobby no presente ao lado de Britney"
+            loading="lazy" decoding="async" />
+          <span>B-11</span><b>Bobby</b><small>HELLSINGS // ARQUIVO EM CONSTRUÇÃO</small><i>ABRIR ARQUIVO</i>
+        </button>
+      </div>
+      <p class="lore-lock">
+        Treze registros recuperados. Sobreviventes e memórias diferentes carregando o fim do mundo.
       </p>
-      <i>AGUARDANDO AUTORIZAÇÃO DO AUTOR</i>
-    </dialog>
+    </section>
 
-    <div class="period-transition" aria-hidden="true">
-      <div class="past-rewind" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <small>CRONOLOGIA EM REVERSÃO // ANTES DO DIA D</small>
-      <b data-past-transition>BEM-VINDO AO PASSADO</b>
-      <span>RECUPERANDO A VIDA ANTES DA EXTINÇÃO...</span>
-      <i class="past-transition-line"></i>
-    </div>
-    <footer>
-      <strong>A ERA DA EXTINÇÃO</strong><span>O presente começa depois do fim.</span
-      ><a href="arquivo-passado.html">ARQUIVOS DO PASSADO</a>
-    </footer>
-    <div class="temporary-soundtrack soundtrack-hidden" aria-hidden="true">
-      <iframe
-        id="indexSoundcloudPlayer"
-        title="Trilha temporária do presente"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trailer-music-movie/avengers4-endgame-official-trailer-music-audiomachine-so-say-we-all&color=%23d8552d&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"
-      ></iframe>
-    </div>
-    <script src="https://w.soundcloud.com/player/api.js"></script>
-    <script src="era-extincao-presente/extinction-index.js?v=18"></script>
-  </body>
+    <section class="timeline-rift" id="cronologia">
+      <header class="world-heading reveal">
+        <p>TRÊS PERÍODOS // UMA ÚNICA HISTÓRIA</p>
+        <h2>O tempo também<br /><em>deixou cicatrizes.</em></h2>
+      </header>
+      <div class="timeline-track">
+        <a class="time-node past reveal" href="arquivo-passado.html"><span>ANTES</span><b>O PASSADO</b>
+          <p>A família jovem, a mansão e os Hellsings antes da queda.</p>
+          <i>ABRIR MEMÓRIA →</i>
+        </a>
+        <div class="time-node zero reveal time-node-locked" aria-disabled="true">
+          <span>RUPTURA // ARQUIVO SELADO</span><b>DOOMSDAY</b>
+          <p>O Dia D. O instante em que todas as linhas se partiram.</p>
+          <i>ACESSO INDISPONÍVEL</i>
+        </div>
+        <a class="time-node now reveal" href="#top"><span>AGORA</span><b>A EXTINÇÃO</b>
+          <p>O presente devastado e as consequências de tudo que aconteceu.</p>
+          <i>VOCÊ ESTÁ AQUI</i>
+        </a>
+      </div>
+    </section>
+
+    <section class="past-vault" id="passado">
+      <div class="vault-door" aria-hidden="true"><span>Æ</span><i></i><i></i><i></i></div>
+      <div class="vault-copy reveal">
+        <p>CAIXA-PRETA CONNOR // MEMÓRIA ANTERIOR AO DIA D</p>
+        <h2>Antes do mundo acabar,<br /><em>eles tinham uma vida.</em></h2>
+        <span>Conheça os Connor quando ainda eram jovens. Entre na mansão, abra seus arquivos
+          pessoais, veja as fotografias e descubra como os Hellsings existiam antes da
+          extinção.</span>
+        <a href="arquivo-passado.html" data-open-past><b>DESBLOQUEAR ARQUIVOS DO PASSADO</b><i>→</i></a>
+        <small>O acesso altera o período da experiência.</small>
+      </div>
+    </section>
+
+    <section class="faction-network" id="faccoes">
+      <header class="world-heading reveal">
+        <p>MAPA DE PODER // SEIS SINAIS DOMINANTES</p>
+        <h2>As fronteiras morreram.<br /><em>As facções tomaram seu lugar.</em></h2>
+        <span>Nenhum território está vazio. Alguns apenas ainda não escolheram uma bandeira.</span>
+      </header>
+      <div class="faction-grid">
+        <a class="faction-card faction-hellsings reveal" href="faccao-hellsings-presente.html">
+          <span>F-01 // ATIVA</span><b>HELLSINGS</b>
+          <p>Resgate, inteligência e proteção. Um código antigo atravessando um mundo novo.</p>
+          <i>ABRIR DOSSIÊ DA FACÇÃO →</i>
+        </a>
+        <a class="faction-card faction-cobras reveal" href="faccao-cobras.html">
+          <span>F-02 // HOSTILIDADE VARIÁVEL</span><b>COBRAS</b>
+          <p>Informação, veneno e rotas clandestinas. Nunca atacam sem conhecer a saída.</p>
+          <i>ABRIR TERRITÓRIO →</i>
+        </a>
+        <a class="faction-card faction-dominus reveal" href="faccao-dominus.html">
+          <span>F-03 // ORIGEM DESCONHECIDA</span><b>DOMINUS</b>
+          <p>
+            Uma facção cercada por rumores. Seus símbolos surgem onde ninguém deveria sobreviver.
+          </p>
+          <i>INTERCEPTAR SINAL →</i>
+        </a>
+        <a class="faction-card faction-fire reveal" href="faccao-fogo.html">
+          <span>F-04 // TERRITÓRIO VERMELHO</span><b>FACÇÃO DO FOGO</b>
+          <p>
+            Controlam refinarias, fornalhas e cidades queimadas. Para eles, cinzas são fronteiras.
+          </p>
+          <i>ENTRAR NO CINTURÃO →</i>
+        </a>
+        <a class="faction-card faction-iron reveal" href="faccao-nomades-ferro.html">
+          <span>F-05 // COMBOIO EM MOVIMENTO</span><b>NÔMADES DE FERRO</b>
+          <p>Comboios blindados negociam combustível, peças e passagem pelas estradas mortas.</p>
+          <i>ACOMPANHAR COMBOIO →</i>
+        </a>
+        <a class="faction-card faction-salt reveal" href="faccao-ordem-sal.html">
+          <span>F-06 // RESERVA HÍDRICA</span><b>ORDEM DO SAL</b>
+          <p>Guardam poços, dessalinizadores e os últimos mapas de água do continente.</p>
+          <i>SOLICITAR ACESSO →</i>
+        </a>
+      </div>
+    </section>
+
+    <section class="survivor-network" id="forum">
+      <header class="world-heading reveal">
+        <p>FREQUÊNCIA CIVIL // CANAL ABERTO</p>
+        <h2>O mundo ainda fala.<br /><em>Quase sempre em sussurros.</em></h2>
+      </header>
+      <div class="network-console reveal">
+        <div class="forum-feed" id="forumFeed" aria-live="polite">
+          <article>
+            <span>TORRE-19 // 02:14</span>
+            <p>Há luzes se movendo na antiga rodovia. Três veículos. Nenhuma bandeira.</p>
+          </article>
+          <article>
+            <span>ANÔNIMO // SINAL FRACO</span>
+            <p>
+              Ouvi dizer que existe terra limpa ao norte. Não sei se é esperança ou armadilha.
+            </p>
+          </article>
+          <article>
+            <span>MÉDICA-07 // ONTEM</span>
+            <p>Precisamos de antibióticos. Temos água e duas baterias para troca.</p>
+          </article>
+        </div>
+        <form class="forum-transmitter" id="forumTransmitter">
+          <label for="survivorAlias">IDENTIFICAÇÃO</label>
+          <input id="survivorAlias" maxlength="24" placeholder="ANÔNIMO" autocomplete="off" />
+          <label for="survivorMessage">TRANSMISSÃO</label>
+          <textarea id="survivorMessage" maxlength="220" required
+            placeholder="Digite uma mensagem para quem ainda estiver ouvindo..."></textarea>
+          <button type="submit">TRANSMITIR NO CANAL <i>→</i></button>
+          <small>As mensagens ficam salvas somente neste dispositivo.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="missing-frequency" id="desaparecidos">
+      <header class="world-heading reveal">
+        <p>BUSCA ATIVA // TRANSMISSÕES INCOMPLETAS</p>
+        <h2>Se estiverem vivos,<br /><em>que respondam ao sinal.</em></h2>
+      </header>
+      <div class="missing-grid">
+        <article class="missing-card reveal">
+          <span>ALVO // B-01</span><b>BRADDOCK...</b>
+          <p>Antigo contato do FBI. Última frequência fragmentada além da zona norte.</p>
+          <i>PROCURANDO...</i>
+        </article>
+        <article class="missing-card reveal">
+          <span>ALVO // M-??</span><b>MAJOR HAN...</b>
+          <p>Identidade incompleta. Menções recuperadas em canais militares desativados.</p>
+          <i>PROCURANDO...</i>
+        </article>
+        <article class="missing-card reveal">
+          <span>ALVO // C-??</span><b>CORONEL SA...</b>
+          <p>Patente confirmada. Nome e localização corrompidos durante a transmissão.</p>
+          <i>PROCURANDO...</i>
+        </article>
+      </div>
+      <div class="search-pulse" aria-hidden="true">
+        <i></i><span>VARRENDO FREQUÊNCIAS MORTAS</span>
+      </div>
+    </section>
+
+    <section class="final-signal">
+      <p>TRANSMISSÃO FINAL // IDENTIDADE NÃO CONFIRMADA</p>
+      <blockquote>
+        “Se alguém encontrar este sinal, não procure o mundo que perdemos. Procure aquilo que
+        ainda pode ser salvo.”
+      </blockquote>
+      <div><i></i><span>FIM DO FRAGMENTO</span><i></i></div>
+    </section>
+
+    <section class="hellsings-climax" id="hellsings-final" aria-label="Sinal final dos Hellsings">
+      <div class="climax-dust" aria-hidden="true"></div>
+      <img src="img-hellsing/brand/hellsings-emblem.png" alt="Símbolo dos Hellsings" />
+      <p>QUANDO O SISTEMA NÃO PODE AGIR</p>
+      <h2 data-hellsings-climax>HELLSINGS</h2>
+      <span>NÓS ENTRAMOS.</span>
+    </section>
+  </main>
+
+  <dialog class="classified-dialog" id="classifiedDialog">
+    <button type="button" data-close-file aria-label="Fechar">×</button>
+    <span id="fileCode">ARQUIVO</span>
+    <h2>ACESSO NEGADO</h2>
+    <p>
+      Este destino pertence à história do presente e permanece protegido até a liberação da lore
+      oficial.
+    </p>
+    <i>AGUARDANDO AUTORIZAÇÃO DO AUTOR</i>
+  </dialog>
+
+  <div class="period-transition" aria-hidden="true">
+    <div class="past-rewind" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <small>CRONOLOGIA EM REVERSÃO // ANTES DO DIA D</small>
+    <b data-past-transition>BEM-VINDO AO PASSADO</b>
+    <span>RECUPERANDO A VIDA ANTES DA EXTINÇÃO...</span>
+    <i class="past-transition-line"></i>
+  </div>
+  <footer>
+    <strong>A ERA DA EXTINÇÃO</strong><span>O presente começa depois do fim.</span><a
+      href="arquivo-passado.html">ARQUIVOS DO PASSADO</a>
+  </footer>
+  <div class="temporary-soundtrack soundtrack-hidden" aria-hidden="true">
+    <iframe id="indexSoundcloudPlayer" title="Trilha temporária do presente" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trailer-music-movie/avengers4-endgame-official-trailer-music-audiomachine-so-say-we-all&color=%23d8552d&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"></iframe>
+  </div>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script src="era-extincao-presente/extinction-index.js?v=19"></script>
+</body>
+
 </html>

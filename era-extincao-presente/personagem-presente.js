@@ -44,7 +44,7 @@ const profiles = {
     accent: 'contra o fim',
     paragraphs: [
       'Alice não vai mais a campo como antes. No comboio, coordena cuidados médicos, triagem, recursos e decisões que nenhum mapa consegue resolver. Se Jack mantém todos em movimento, Alice mantém todos vivos.',
-      'Mãe de Alucard, Diana, Nicolai, Mary e Peter, ela ensinou aos filhos adultos que esperança sem preparo é apenas outra forma de perigo.',
+      'Mãe de Alucard, Diana, Nicolai, Mary e Isolde, ela ensinou aos filhos adultos que esperança sem preparo é apenas outra forma de perigo.',
     ],
     quote: 'Em um mundo que normalizou a morte, cuidar de alguém se tornou um ato de rebelião.',
     memory: 'img-presente/personagens/alice-jack1.png',
