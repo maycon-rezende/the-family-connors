@@ -15,6 +15,10 @@
   const showSlide = (nextIndex) => {
     currentIndex = (nextIndex + slides.length) % slides.length;
 
+    carousel.classList.remove('is-switching');
+    void carousel.offsetWidth;
+    carousel.classList.add('is-switching');
+
     slides.forEach((slide, index) => {
       const isActive = index === currentIndex;
       slide.classList.toggle('is-active', isActive);
@@ -22,6 +26,9 @@
     });
 
     currentLabel.textContent = String(currentIndex + 1).padStart(2, '0');
+    carousel.dispatchEvent(new CustomEvent('isolde:slidechange', {
+      detail: { index: currentIndex }
+    }));
   };
 
   const stopAutoplay = () => window.clearInterval(autoplayId);

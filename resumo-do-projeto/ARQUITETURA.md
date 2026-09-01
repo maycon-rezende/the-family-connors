@@ -74,17 +74,19 @@ A cronologia segue `passado dos Connor → Dia Zero/Doomsday → presente devast
 
 ## Componentes compartilhados
 
-- `site-cursor.*`: cursor global compatível com diálogos em camada superior.
-- `site-transmission.*`: interferência visual global.
-- `video-record-link.css`: cartões de registros audiovisuais.
-- `hellsings-command.*`: formação, radar, dossiês e interações dos Hellsings.
-- `hellsings-cursor.css`: mira tática exclusiva dos Hellsings.
-- `hellsings-opening.*`: abertura cinematográfica e autenticação Ômega.
-- `hellsings-bunker.*`: apresentação dos ambientes e setores subterrâneos.
-- `hellsings-typography.*`: efeitos individuais nas letras dos títulos.
-- `hellsings-system.*`: painel operacional, registros, fórum narrativo e pré-contrato local.
-- `home-hellsings-portal.*`: portal visual entre a tela principal e a base.
-- `galeria-rebuild.*` e `galeria-polish.css`: álbuns familiares e mansão.
+Os estilos compartilhados que antes ficavam soltos na raiz agora estão em `css/`. Os controladores JavaScript correspondentes estão em `js/`. As páginas HTML permanecem reunidas na raiz para preservar seus endereços públicos e facilitar a navegação pelo Explorer.
+
+- `css/site-cursor.css` + `js/site-cursor.js`: cursor global compatível com diálogos em camada superior.
+- `css/site-transmission.css` + `js/site-transmission.js`: interferência visual global.
+- `css/video-record-link.css`: cartões de registros audiovisuais.
+- `css/hellsings-command.css` + `js/hellsings-command.js`: formação, radar, dossiês e interações dos Hellsings.
+- `css/hellsings-cursor.css`: mira tática exclusiva dos Hellsings.
+- `css/hellsings-opening.css` + `js/hellsings-opening.js`: abertura cinematográfica e autenticação Ômega.
+- `css/hellsings-bunker.css` + `js/hellsings-bunker.js`: apresentação dos ambientes e setores subterrâneos.
+- `css/hellsings-typography.css` + `js/hellsings-typography.js`: efeitos individuais nas letras dos títulos.
+- `css/hellsings-system.css` + `js/hellsings-system.js`: painel operacional, registros, fórum narrativo e pré-contrato local.
+- `css/home-hellsings-portal.css` + `js/home-hellsings-portal.js`: portal visual entre a tela principal e a base.
+- `css/galeria-rebuild.css`, `js/galeria-rebuild.js` e `css/galeria-polish.css`: álbuns familiares e mansão.
 
 ## Uniformes Hellsings
 

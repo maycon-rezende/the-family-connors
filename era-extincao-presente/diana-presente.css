@@ -1,0 +1,494 @@
+/* Diana recebe uma composição própria; este arquivo sempre carrega após herdeiros.css. */
+.diana-page {
+  --diana-red: #d83b2e;
+  --diana-rust: #d45c31;
+  --diana-panel: #100705;
+  background: #080403;
+}
+
+.diana-page nav {
+  border-color: #c33f2c42;
+  background: #090403f2;
+}
+
+.diana-hero {
+  min-height: 100svh;
+  padding: 72px 0 0;
+  display: grid;
+  grid-template-columns: minmax(430px, 0.88fr) minmax(0, 1.12fr);
+  align-items: stretch;
+  overflow: hidden;
+  background: #090403;
+}
+
+.diana-hero::after {
+  display: none;
+}
+
+.diana-hero > img {
+  position: relative;
+  inset: auto;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: calc(100svh - 72px);
+  object-fit: cover;
+  object-position: center 12%;
+  filter: saturate(.58) contrast(1.08) brightness(.7);
+}
+
+.diana-hero > img::selection {
+  background: transparent;
+}
+
+.diana-hero .child-copy {
+  position: relative;
+  z-index: 4;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: stretch;
+  max-width: none;
+  padding: clamp(5rem, 9vw, 9rem) clamp(2rem, 5vw, 6rem) 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 92% 42%, #a72d1d22, transparent 34%),
+    linear-gradient(115deg, #090403 0 72%, #090403e8 88%, transparent 100%);
+}
+
+.diana-hero .child-copy::after {
+  content: 'WEAPONS // CLOSE QUARTERS // PRECISION';
+  margin-top: 2rem;
+  color: #8f6659;
+  font: 700 .48rem/1.5 Cinzel, serif;
+  letter-spacing: .19em;
+}
+
+.diana-hero .child-copy h1 {
+  margin: .9rem 0 1.35rem;
+  font-size: clamp(5.5rem, 10vw, 10.5rem);
+  line-height: .72;
+}
+
+.diana-hero .child-copy h1 em {
+  font-size: .42em;
+}
+
+.diana-hero .child-copy > p {
+  max-width: 620px;
+  margin: 0;
+  color: #c7b8a5;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.diana-target {
+  z-index: 3;
+  right: 7vw;
+  top: 22%;
+  width: min(22vw, 310px);
+}
+
+.diana-vitals {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.diana-vitals span {
+  min-width: 0;
+}
+
+.diana-doctrine {
+  max-width: 1500px;
+  margin: auto;
+  padding: clamp(5rem, 9vw, 9rem) 5vw;
+  grid-template-columns: minmax(300px, .75fr) 1.25fr;
+}
+
+.diana-doctrine-copy {
+  padding: clamp(1.5rem, 4vw, 4rem);
+  border: 1px solid #a5372938;
+  background: linear-gradient(145deg, #180907, #0b0504);
+}
+
+.diana-arsenal {
+  padding: clamp(5rem, 8vw, 8rem) 5vw;
+}
+
+.diana-skills {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: #9e3d2b38;
+}
+
+.diana-skills article {
+  min-height: 280px;
+  border: 0;
+}
+
+.diana-records {
+  padding-inline: max(5vw, calc((100vw - 1450px) / 2));
+}
+
+.diana-records > p {
+  max-width: 760px;
+}
+
+.diana-combat-carousel {
+  max-width: 1050px;
+  margin-inline: 0;
+}
+
+.diana-combat-viewport {
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.diana-combat-slide figcaption b {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+@media (max-width: 900px) {
+  .diana-hero {
+    grid-template-columns: minmax(330px, .9fr) 1.1fr;
+  }
+
+  .diana-hero .child-copy {
+    padding-inline: 2rem;
+  }
+
+  .diana-hero .child-copy h1 {
+    font-size: clamp(5rem, 11vw, 8rem);
+  }
+}
+
+@media (max-width: 700px) {
+  .diana-page nav {
+    min-height: 62px !important;
+    padding-inline: .85rem !important;
+  }
+
+  .diana-page nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    font-size: .52rem !important;
+  }
+
+  .diana-hero {
+    min-height: auto !important;
+    padding: 62px 0 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diana-hero > img {
+    order: 0;
+    width: 100%;
+    height: 72svh;
+    object-position: center top;
+  }
+
+  .diana-hero .child-copy {
+    order: 1;
+    width: 100%;
+    margin-top: -24svh;
+    padding: 15svh 1.2rem 3.5rem;
+    background: linear-gradient(0deg, #090403 0 76%, transparent 100%);
+  }
+
+  .diana-hero .child-copy h1 {
+    font-size: 23vw;
+  }
+
+  .diana-hero .child-copy h1 em {
+    font-size: .38em;
+  }
+
+  .diana-hero .child-copy > p {
+    font-size: .95rem;
+  }
+
+  .diana-target {
+    top: 17%;
+    right: -10vw;
+    width: 58vw;
+  }
+
+  .diana-vitals {
+    grid-template-columns: 1fr;
+  }
+
+  .diana-vitals span {
+    border-right: 0;
+    border-bottom: 1px solid #c64b3030;
+  }
+
+  .diana-doctrine,
+  .diana-arsenal,
+  .diana-records {
+    padding: 4.5rem 1.2rem !important;
+  }
+
+  .diana-section-title h2,
+  .diana-arsenal h2,
+  .diana-records h2 {
+    font-size: 16vw;
+  }
+
+  .diana-doctrine-copy {
+    padding: 1.3rem;
+  }
+
+  .diana-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .diana-skills article {
+    min-height: 250px;
+  }
+
+  .diana-combat-carousel {
+    margin-top: 2.5rem;
+  }
+
+  .diana-combat-viewport {
+    aspect-ratio: 4 / 5;
+    min-height: 0;
+  }
+
+  .diana-combat-slide img {
+    object-position: center top;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diana-target,
+  .diana-skills i::after {
+    animation: none;
+  }
+}
+
+/* Interface balística e efeitos globais */
+.diana-interface-noise,
+.diana-scanline {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+}
+
+.diana-interface-noise {
+  opacity: .12;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 3px, #fff 4px),
+    radial-gradient(circle at 70% 18%, #da3e2625, transparent 32%);
+  mix-blend-mode: screen;
+}
+
+.diana-scanline {
+  inset: -35% 0 auto;
+  height: 35%;
+  opacity: .18;
+  background: linear-gradient(transparent, #dd462e35 48%, #efb0851f 52%, transparent);
+  filter: blur(8px);
+  animation: diana-page-scan 8s linear infinite;
+}
+
+@keyframes diana-page-scan {
+  to { transform: translateY(480%); }
+}
+
+@media (pointer: fine) {
+  .diana-page,
+  .diana-page a,
+  .diana-page button {
+    cursor: none !important;
+  }
+}
+
+.diana-cursor {
+  --cursor-x: -100px;
+  --cursor-y: -100px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(var(--cursor-x), var(--cursor-y)) translate(-50%, -50%);
+  transition: opacity .2s, width .2s, height .2s;
+}
+
+.diana-cursor.is-visible { opacity: 1; }
+
+.diana-cursor > i {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #df4938b5;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 38% 0, 38% 4%, 4% 4%, 4% 38%, 0 38%, 0 0, 100% 0, 100% 38%, 96% 38%, 96% 4%, 62% 4%, 62% 0, 100% 0, 100% 100%, 62% 100%, 62% 96%, 96% 96%, 96% 62%, 100% 62%, 100% 100%, 0 100%, 0 62%, 4% 62%, 4% 96%, 38% 96%, 38% 100%, 0 100%);
+  animation: diana-cursor-rotate 7s linear infinite;
+}
+
+.diana-cursor > b {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #ef4c35;
+  box-shadow: 0 0 14px #ef4c35;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.diana-cursor > span {
+  position: absolute;
+  left: 56px;
+  top: 18px;
+  color: #e78f72;
+  font: 700 .42rem/1 Cinzel, serif;
+  letter-spacing: .16em;
+  white-space: nowrap;
+  transition: color .2s;
+}
+
+.diana-cursor.is-locked {
+  width: 62px;
+  height: 62px;
+}
+
+.diana-cursor.is-locked > i {
+  border-color: #ffb08f;
+  animation-duration: 1.2s;
+}
+
+.diana-cursor.is-locked > span {
+  color: #fff0df;
+}
+
+@keyframes diana-cursor-rotate {
+  to { transform: rotate(360deg); }
+}
+
+.diana-target {
+  translate: var(--target-x, 0) var(--target-y, 0);
+  transition: translate .25s ease-out;
+}
+
+.diana-hero > img {
+  translate: var(--image-shift-x, 0) var(--image-shift-y, 0);
+  scale: 1.015;
+  transition: translate .3s ease-out, filter .8s ease;
+}
+
+[data-diana-letters] .diana-letter {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(.35em) skewX(-10deg);
+}
+
+[data-diana-letters].diana-visible .diana-letter {
+  animation: diana-letter-lock .7s cubic-bezier(.2, .78, .2, 1) forwards;
+  animation-delay: calc(var(--diana-letter) * 45ms);
+}
+
+[data-diana-letters].diana-visible .diana-letter:nth-child(3n) {
+  animation-name: diana-letter-lock-alt;
+}
+
+@keyframes diana-letter-lock {
+  0% { opacity: 0; filter: blur(9px); transform: translateY(.35em) skewX(-12deg); }
+  55% { opacity: 1; filter: blur(0); transform: translateY(-.04em) skewX(3deg); color: #f06b4f; }
+  100% { opacity: 1; filter: blur(0); transform: none; }
+}
+
+@keyframes diana-letter-lock-alt {
+  0% { opacity: 0; filter: blur(9px); transform: translateX(.3em) skewX(14deg); }
+  50% { opacity: 1; filter: blur(0); transform: translateX(-.03em) skewX(-3deg); }
+  100% { opacity: 1; filter: blur(0); transform: none; }
+}
+
+.diana-doctrine-copy,
+.diana-skills article,
+.diana-combat-carousel {
+  opacity: 0;
+  transform: translateY(38px);
+  filter: blur(5px);
+  transition: opacity .9s ease, transform .9s ease, filter .9s ease;
+}
+
+.diana-doctrine-copy.diana-visible,
+.diana-skills article.diana-visible,
+.diana-combat-carousel.diana-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.diana-skills article:nth-child(2) { transition-delay: .1s; }
+.diana-skills article:nth-child(3) { transition-delay: .2s; }
+.diana-skills article:nth-child(4) { transition-delay: .3s; }
+
+.diana-skills article::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(115deg, transparent 25%, #e0442e17 50%, transparent 72%);
+  transform: translateX(-70%);
+  transition: opacity .35s, transform .7s;
+}
+
+.diana-skills article:hover::after {
+  opacity: 1;
+  transform: translateX(70%);
+}
+
+.diana-combat-viewport {
+  box-shadow: 0 28px 80px #0009, 0 0 0 1px #e0483020;
+}
+
+.diana-combat-slide.is-active img {
+  animation: diana-photo-breathe 6s ease-out both;
+}
+
+@keyframes diana-photo-breathe {
+  from { transform: scale(1.045); filter: saturate(.35) contrast(1.15) brightness(.58); }
+  to { transform: scale(1); filter: saturate(.68) contrast(1.08) brightness(.82); }
+}
+
+@media (max-width: 700px), (pointer: coarse) {
+  .diana-cursor { display: none; }
+  .diana-interface-noise { opacity: .07; }
+  .diana-scanline { opacity: .1; animation-duration: 12s; }
+  .diana-target { translate: none; }
+  .diana-hero > img { translate: none; scale: 1; }
+  [data-diana-letters].diana-visible .diana-letter { animation-delay: calc(var(--diana-letter) * 28ms); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diana-scanline,
+  .diana-cursor > i,
+  .diana-combat-slide.is-active img {
+    animation: none;
+  }
+
+  [data-diana-letters] .diana-letter,
+  .diana-doctrine-copy,
+  .diana-skills article,
+  .diana-combat-carousel {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}

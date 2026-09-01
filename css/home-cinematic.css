@@ -149,7 +149,7 @@ body.saga-redesign > footer {
   inset: 0;
 }
 .saga-image--mansion {
-  background: url('img/mansao.png') center/cover no-repeat;
+  background: url('../casa/mansao.png') center/cover no-repeat;
   filter: saturate(0.7) contrast(1.05);
   transform: scale(1.03);
 }

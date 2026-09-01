@@ -1555,6 +1555,10 @@ footer a {
 @media (max-width: 950px) {
   .world-nav {
     z-index: 10010;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    animation: none !important;
     grid-template-columns: 1fr auto auto;
     min-height: 84px;
     gap: 0.8rem;
@@ -1578,6 +1582,7 @@ footer a {
     transform: translateY(-16px);
     pointer-events: none;
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    touch-action: pan-y;
   }
   .world-nav nav.is-open {
     opacity: 1;
@@ -1611,6 +1616,8 @@ footer a {
     position: relative;
     z-index: 10030;
     touch-action: manipulation;
+    pointer-events: auto !important;
+    -webkit-tap-highlight-color: transparent;
   }
   .world-condition {
     grid-column: 3;

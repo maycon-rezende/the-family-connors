@@ -114,6 +114,18 @@
 
 Última atualização: 31 de agosto de 2026.
 
+## Atualização de 1º de setembro de 2026 — organização técnica
+
+- Os 39 arquivos CSS soltos na raiz foram reunidos em `css/`.
+- Os 32 arquivos JavaScript soltos na raiz foram reunidos em `js/`.
+- As 46 páginas HTML permaneceram juntas na raiz, preservando todas as URLs públicas existentes.
+- Todas as referências de estilos e scripts nas páginas foram atualizadas para a nova estrutura.
+- Caminhos internos de imagens usados pelos estilos foram recalculados após a mudança de diretório.
+- O menu mobile da página principal foi isolado em `era-extincao-presente/world-menu.js` para não depender da abertura cinematográfica.
+- A página de Diana recebeu o estilo exclusivo `era-extincao-presente/diana-presente.css`.
+
+Última atualização: 1º de setembro de 2026.
+
 ## Atualização de 31 de agosto de 2026 — arquivos dos herdeiros
 
 - As páginas individuais de Alucard, Nicolai, Mary, Diana, Isolde, Pollyana e Nathan passaram a exibir `Connor` em vermelho, com revelação e distorção independentes em cada letra.
