@@ -113,3 +113,26 @@
 - Novas imagens conjuntas de Alucard/Nicolai e Mary/Diana, além dos registros de Isolde, integradas.
 
 Última atualização: 31 de agosto de 2026.
+
+## Atualização de 31 de agosto de 2026 — arquivos dos herdeiros
+
+- As páginas individuais de Alucard, Nicolai, Mary, Diana, Isolde, Pollyana e Nathan passaram a exibir `Connor` em vermelho, com revelação e distorção independentes em cada letra.
+- O sobrenome `Myers` recebeu a cor ferrugem/deserto nos arquivos dos cinco filhos de Jack e Alice, preservando a distinção visual entre a linhagem materna e Connor.
+- Duas artes cinematográficas inéditas de Isolde foram produzidas com traje tático vermelho e incorporadas ao projeto.
+- `isolde-presente.html` foi reorganizada com capa exclusiva, textos corrigidos e arquivo fotográfico em carrossel automático, sem registros duplicados.
+- `era-extincao-presente/isolde-carousel.js` controla looping, navegação manual, pausa por interação, acessibilidade e gesto lateral no mobile.
+- Diana foi definida pelo autor como especialista em combate e em todos os tipos de armas.
+- `diana-presente.html` foi reconstruída como dossiê de prontidão: mira animada, dados operacionais, doutrina de campo, matriz de proficiência e registros de combate.
+- A galeria de Diana foi convertida em transmissão operacional de uma imagem por vez; uma fotografia duplicada, detectada por hash, deixou de ser repetida na página.
+- `era-extincao-presente/diana-carousel.js` controla o carrossel cinematográfico da personagem no desktop e no mobile.
+- O aplicativo recebeu as novas áreas de facções e sinais, além de recursos visuais do mundo devastado.
+- O pacote completo foi publicado na branch `main` pelo commit `0bf1c1c` (`feat: expande herdeiros e arquivos de combate`).
+
+### Próximos passos imediatos
+
+1. Aplicar identidades exclusivas aos arquivos de Alucard, Nicolai, Mary, Isolde, Pollyana e Nathan conforme suas especialidades forem definidas.
+2. Definir a lore individual dos cinco filhos de Jack e Alice e dos três filhos de Mark e Ariani.
+3. Criar o arquivo visual de James Salvatore Connor quando sua aparência for definida.
+4. Revisar as páginas dos herdeiros no mobile depois de cada nova identidade visual.
+
+Última atualização: 31 de agosto de 2026.

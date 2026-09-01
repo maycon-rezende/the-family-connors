@@ -6,6 +6,7 @@
 - Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
 - Jack e Alice têm cinco filhos: Alucard Myers Connor, Nicolai Myers Connor, Mary Myers Connor, Diana Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
+- Diana Myers Connor tornou-se especialista em combate e no uso de diferentes tipos de armas no presente devastado.
 - Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.
@@ -42,6 +43,7 @@ John também é representado atualmente com pele em tom marrom, conforme a orien
 - Detalhes completos da causa e da cronologia da extinção além da ligação com o Dia Zero de Doomsday.
 - Existência definitiva, origem e regras de infectados.
 - História completa dos descendentes.
+- Especialidades individuais dos descendentes, exceto a competência de combate já confirmada para Diana.
 - Missões históricas específicas dos Hellsings.
 - Biografias completas de Naomi, Clhoe e Dimitri.
 - Funções definitivas dos agentes ainda marcados como provisórios.

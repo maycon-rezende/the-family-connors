@@ -120,3 +120,12 @@ Mas o código dos Hellsings ainda vive.
 - O nome, a antiguidade, os objetivos e a responsabilidade da organização devem permanecer ocultos neste site.
 - O site Doomsday poderá apresentar pistas e arquivos fragmentados sobre a Dominium, sem revelar imediatamente que ela causou tudo.
 - John e Bobby são personagens diferentes. O registro visual anteriormente atribuído a Bobby pertence somente a John; Bobby receberá imagem própria.
+
+## Segunda geração — informação confirmada
+
+- Diana Myers Connor tornou-se especialista em combate e domina diferentes categorias de armas.
+- Sua identidade no presente é baseada em adaptação: armas curtas, armas longas, precisão, combate próximo, lâminas e recursos improvisados.
+- A página pode apresentar essas competências como dados operacionais, mas missões, perdas e acontecimentos específicos continuam dependentes da lore oficial do autor.
+- Isolde Myers Connor possui novos registros visuais no presente, porém sua função definitiva ainda não foi estabelecida.
+
+Última atualização: 31 de agosto de 2026.

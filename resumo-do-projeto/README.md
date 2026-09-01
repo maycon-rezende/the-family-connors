@@ -12,6 +12,8 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 - `arquivo-passado.html`: portal cinematográfico para a vida dos Connor antes do Dia D.
 - `telainicial.html`: narrativa do passado e apresentação da família jovem.
 - Páginas individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
+- Portal dos herdeiros e arquivos individuais da segunda geração: Alucard, Nicolai, Mary, Diana, Isolde, Pollyana e Nathan.
+- Diana possui um dossiê exclusivo de combate; Isolde possui arquivo fotográfico cinematográfico em looping.
 - Galerias fotográficas separadas para Jack, Alice, Mark, Britney e Jully; os registros de Jack ficam no dossiê independente `registros-jack.html`.
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
 - `videos.html`: central audiovisual com registros compartilhados.
@@ -48,4 +50,4 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 
-Última atualização: 28 de agosto de 2026.
+Última atualização: 31 de agosto de 2026.

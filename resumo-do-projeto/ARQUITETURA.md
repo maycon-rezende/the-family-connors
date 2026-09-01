@@ -33,6 +33,10 @@
 - `filhos-mark-ariani.html`: central dos arquivos de Pollyana e Nathan, filhos de Mark e Ariani.
 - `pollyana-presente.html` e `nathan-presente.html`: arquivos individuais da segunda linhagem.
 - `alucard-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `diana-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos.
+- `diana-presente.html`: dossiê de combate com doutrina, matriz de proficiência e transmissão visual organizada.
+- `isolde-presente.html`: arquivo individual com capa exclusiva e registros fotográficos em looping.
+- `era-extincao-presente/diana-carousel.js`: looping, controles, acessibilidade e gesto mobile dos registros de Diana.
+- `era-extincao-presente/isolde-carousel.js`: looping, controles, acessibilidade e gesto mobile dos registros de Isolde.
 - `img-brothers/`: irmãos, casais e núcleos familiares.
 - `casa/`: 24 ambientes da Mansão Connor.
 - `audio/`: trilhas das páginas.
