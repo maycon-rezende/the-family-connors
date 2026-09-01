@@ -36,11 +36,11 @@
     },
     {
       code: 'HLS-04',
-      name: 'Boby Johhn',
+      name: 'John',
       role: 'Tecnologia · Armamentos',
       color: '#5c82d8',
       skin: '#704733',
-      image: 'img-hellsing/boby-johhn.png',
+      image: 'img-hellsing/john.png',
       bio: 'Especialista responsável pela infraestrutura tecnológica, comunicações protegidas e preparação de equipamentos operacionais.',
       tags: ['Tecnologia', 'Comunicações', 'Armamentos', 'Suporte'],
       field: true,

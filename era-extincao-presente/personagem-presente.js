@@ -44,7 +44,7 @@ const profiles = {
     accent: 'contra o fim',
     paragraphs: [
       'Alice não vai mais a campo como antes. No comboio, coordena cuidados médicos, triagem, recursos e decisões que nenhum mapa consegue resolver. Se Jack mantém todos em movimento, Alice mantém todos vivos.',
-      'Mãe de Alucard, Diana, Nicolai, Mary e Isolde, ela ensinou aos filhos adultos que esperança sem preparo é apenas outra forma de perigo.',
+      'Mãe de Alucard, Diana, Nicolai, Mary e Isolde — todos Myers Connor —, ela ensinou aos filhos adultos que esperança sem preparo é apenas outra forma de perigo.',
     ],
     quote: 'Em um mundo que normalizou a morte, cuidar de alguém se tornou um ato de rebelião.',
     memory: 'img-presente/personagens/alice-jack1.png',
@@ -74,7 +74,7 @@ const profiles = {
     accent: 'que caminha',
     paragraphs: [
       'Veterano de guerra e integrante dos Hellsings, Mark é a linha de defesa quando o comboio não pode recuar. A experiência militar lhe ensinou a ler terreno, silêncio e medo antes que se transformem em emboscada.',
-      'Com Ariani, criou Pollyana e Nathan antes da queda. James nasceu depois do Dia D e recebeu o nome do homem que salvou Mark — uma lembrança de que algumas dívidas atravessam o fim do mundo.',
+      'Com Ariani, criou Pollyana e Nathan — ambos Salvatore Connor — antes da queda. James Salvatore Connor nasceu depois do Dia D e recebeu o nome do homem que salvou Mark — uma lembrança de que algumas dívidas atravessam o fim do mundo.',
     ],
     quote:
       'Ele não luta porque acredita que vencerá. Luta para que sua família tenha a chance de tentar.',
@@ -102,7 +102,7 @@ const profiles = {
     accent: 'entre facções',
     paragraphs: [
       'Advogada antes do Dia D, Ariani levou para o novo mundo sua leitura de pessoas, conflitos e acordos. Ela negocia passagem, recursos e alianças sem esquecer que toda promessa agora pode esconder uma armadilha.',
-      'Sua liderança natural mantém o grupo unido quando o medo ameaça dividi-lo. Ao lado de Mark, protege Pollyana, Nathan e James — três filhos marcados por lados diferentes da história.',
+      'Sua liderança natural mantém o grupo unido quando o medo ameaça dividi-lo. Ao lado de Mark, protege Pollyana, Nathan e James Salvatore Connor — três filhos marcados por lados diferentes da história.',
     ],
     quote:
       'No fim do mundo, a verdade vale menos que água. Por isso ela aprende quem está mentindo antes de negociar.',

@@ -5,7 +5,7 @@
 - Jack Connor é o primogênito, trabalhou no FBI e na Interpol e criou os Hellsings.
 - Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
-- Jack e Alice têm cinco filhos: Alucard, Nicolai, Mary, Diana e Isolde. Alucard é o mais velho.
+- Jack e Alice têm cinco filhos: Alucard Myers Connor, Nicolai Myers Connor, Mary Myers Connor, Diana Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
 - Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.

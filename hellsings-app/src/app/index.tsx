@@ -15,7 +15,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AgentDivision, useAgentProfile } from '@/context/agent-profile';
 
-const MESSAGES = ['CANAL CRIPTOGRAFADO', 'IDENTIDADE VERIFICADA', 'TERMINAL HLS DISPONÍVEL'];
+const MESSAGES = ['FREQUÊNCIA LOCAL RECUPERADA', 'IDENTIDADE VERIFICADA', 'REDE EDE DISPONÍVEL'];
 const DIVISIONS: AgentDivision[] = ['CAMPO', 'INTELIGÊNCIA', 'SUPORTE'];
 
 export default function AccessScreen() {
@@ -53,7 +53,7 @@ export default function AccessScreen() {
   };
   return (
     <ImageBackground
-      source={require('../../assets/hellsings/bunker-entry.png')}
+      source={require('../../assets/world/destruicao.jpg')}
       style={s.background}
       imageStyle={s.image}
     >
@@ -61,7 +61,7 @@ export default function AccessScreen() {
       <View style={s.grid} pointerEvents="none" />
       <SafeAreaView style={s.safe}>
         <View style={s.topline}>
-          <Text style={s.micro}>HLS // MOBILE TERMINAL</Text>
+          <Text style={s.micro}>EDE // TERMINAL DE SOBREVIVÊNCIA</Text>
           <Text style={s.live}>● ONLINE</Text>
         </View>
         <KeyboardAvoidingView
@@ -87,8 +87,8 @@ export default function AccessScreen() {
                 />
               </View>
             </Animated.View>
-            <Text style={s.overline}>UMA ORGANIZAÇÃO SEM BANDEIRA</Text>
-            <Text style={s.title}>HELLSINGS</Text>
+            <Text style={s.overline}>ARQUIVO DO PRESENTE // DEPOIS DO DIA D</Text>
+            <Text style={s.title}>ERA DA EXTINÇÃO</Text>
             <View style={s.rule} />
             {loading ? (
               <Text style={s.tagline}>RECUPERANDO IDENTIDADE...</Text>
@@ -194,7 +194,7 @@ const s = StyleSheet.create({
   },
   logo: { width: 62, height: 62, resizeMode: 'contain' },
   overline: { color: '#a9af9f', fontSize: 8, letterSpacing: 2.6, textAlign: 'center' },
-  title: { color: '#d84940', fontSize: 44, lineHeight: 54, fontWeight: '800', letterSpacing: 4 },
+  title: { color: '#d96736', fontSize: 32, lineHeight: 40, fontWeight: '800', letterSpacing: 2 },
   rule: { width: 90, height: 1, backgroundColor: '#bbd64a', marginVertical: 10 },
   tagline: { color: '#aab0a5', fontSize: 11, letterSpacing: 1.2 },
   identity: { alignItems: 'center', minHeight: 120, justifyContent: 'center' },

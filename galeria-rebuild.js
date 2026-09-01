@@ -8,8 +8,8 @@
       files: [
         ['img-hellsing/scenes/comando-jack-mark-alice.png', 'Comando — Jack, Mark & Alice'],
         [
-          'img-hellsing/scenes/inteligencia-boby-naomi-clhoe.png',
-          'Inteligência — Boby, Naomi & Clhoe',
+          'img-hellsing/scenes/inteligencia-john-naomi-clhoe.png',
+          'Inteligência — John, Naomi & Clhoe',
         ],
         [
           'img-hellsing/scenes/retorno-luke-dimitri-brian-hellen.png',
@@ -18,7 +18,7 @@
         ['img-jack/jack-hellsings-commander.png', 'Jack Connor — Comandante'],
         ['img-mark/markhellsing.png', 'Mark Connor — Comando tático'],
         ['img-alice/alice-hellsings-admin.png', 'Alice Myers — Administração'],
-        ['img-hellsing/boby-johhn.png', 'Boby Johhn — Tecnologia'],
+        ['img-hellsing/john.png', 'John — Tecnologia'],
         ['img-hellsing/naomi.png', 'Naomi — Inteligência'],
         ['img-hellsing/clhoe.png', 'Clhoe — Reconhecimento'],
         ['img-hellsing/luke.png', 'Luke — Estratégia'],

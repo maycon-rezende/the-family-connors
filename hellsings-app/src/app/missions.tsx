@@ -51,7 +51,7 @@ const missions: Mission[] = [
     region: 'CLASSIFICADO',
     risk: 'CRÍTICO',
     duration: '03H 09M',
-    team: ['JACK', 'DIMITRI', 'CLHOE', 'BOBY'],
+    team: ['JACK', 'DIMITRI', 'CLHOE', 'BOBBY'],
     objective: 'Interromper a transferência de tecnologia ilegal antes da dispersão da carga.',
     result: 'Carga interceptada e objetivo concluído.',
     color: '#d84940',
@@ -101,7 +101,7 @@ const missions: Mission[] = [
     region: 'MEDITERRÂNEO',
     risk: 'CRÍTICO',
     duration: '21H 04M',
-    team: ['JACK', 'MARK', 'NAOMI', 'LUKE', 'BOBY'],
+    team: ['JACK', 'MARK', 'NAOMI', 'LUKE', 'BOBBY'],
     objective:
       'Interromper uma rota internacional de tráfico de mulheres e crianças, identificar seus financiadores e localizar os pontos de transferência.',
     result: 'Rota desmantelada, vítimas libertadas e registros financeiros preservados como prova.',

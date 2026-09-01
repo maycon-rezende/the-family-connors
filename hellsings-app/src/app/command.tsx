@@ -1,280 +1,307 @@
 import { router } from 'expo-router';
-import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BottomNav } from '@/components/bottom-nav';
 import { BrandMark } from '@/components/brand-mark';
 
-const missions = [
-  { code: 'HLS-142', name: 'OPERAÇÃO FAROL', type: 'RESGATE', place: 'ATLÂNTICO NORTE' },
-  { code: 'HLS-139', name: 'ARQUIVO VESPER', type: 'INFILTRAÇÃO', place: 'EUROPA' },
-  { code: 'HLS-131', name: 'LINHA VERMELHA', type: 'INTERVENÇÃO', place: 'CLASSIFICADO' },
+const conditions = [
+  ['TEMPERATURA', '46°'],
+  ['VENTO', '73 KM/H'],
+  ['VISIBILIDADE', '1,8 KM'],
+  ['RADIAÇÃO', 'CRÍTICA'],
 ];
-export default function CommandScreen() {
-  const [red, setRed] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
+const frequencies = [
+  { code: 'SINAL 09', title: 'BRADDOCK...', text: 'Transmissão fragmentada além da zona norte.' },
+  {
+    code: 'SINAL 14',
+    title: 'MAJOR HAN...',
+    text: 'Canal militar reativado durante onze segundos.',
+  },
+  {
+    code: 'SINAL 21',
+    title: 'CORONEL SA...',
+    text: 'Identidade corrompida. Posição desconhecida.',
+  },
+];
+
+export default function WorldScreen() {
   return (
-    <View style={[s.screen, red && s.screenRed]}>
-      {red && (
-        <View style={s.alert}>
-          <Text style={s.alertText}>⚠ PROTOCOLO VERMELHO ATIVO · CONTENÇÃO</Text>
-        </View>
-      )}
+    <View style={s.screen}>
       <SafeAreaView style={s.safe} edges={['top']}>
         <View style={s.header}>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
+          <View style={s.brand}>
             <BrandMark size={35} />
-            <Text style={[s.brandName, { marginLeft: 0 }]}>HELLSINGS</Text>
+            <View>
+              <Text style={s.brandName}>ERA DA EXTINÇÃO</Text>
+              <Text style={s.micro}>ARQUIVO DO PRESENTE</Text>
+            </View>
           </View>
           <View style={s.headerRight}>
-            <Text style={s.online}>● SISTEMA ATIVO</Text>
+            <Text style={s.unstable}>● ATMOSFERA INSTÁVEL</Text>
             <Pressable onPress={() => router.replace('/')}>
-              <Text style={s.exit}>SAIR ↗</Text>
+              <Text style={s.exit}>TROCAR IDENTIDADE ↗</Text>
             </Pressable>
           </View>
         </View>
         <ScrollView contentContainerStyle={s.content} showsVerticalScrollIndicator={false}>
-          <View style={s.welcome}>
-            <Text style={s.eyebrow}>CENTRO DE COMANDO // ACESSO ÔMEGA</Text>
-            <Text style={s.heading}>Boa noite,{`\n`}AGENTE.</Text>
-            <Text style={s.intro}>
-              A rede Hellsings está operacional. Três arquivos aguardam sua autorização.
-            </Text>
-          </View>
-          <View style={s.stats}>
-            <View style={s.statPrimary}>
-              <Text style={s.label}>TAXA DE SUCESSO</Text>
-              <Text style={s.hundred}>
-                100<Text style={s.percent}>%</Text>
-              </Text>
-              <Text style={s.good}>● TODAS AS OPERAÇÕES CONCLUÍDAS</Text>
-            </View>
-            <View style={s.stat}>
-              <Text style={s.label}>AGENTES</Text>
-              <Text style={s.number}>10</Text>
-              <Text style={s.muted}>09 EM CAMPO</Text>
-            </View>
-            <View style={s.stat}>
-              <Text style={s.label}>BASE</Text>
-              <Text style={s.numberSmall}>SEGURA</Text>
-              <Text style={s.muted}>ACESSO BIOMÉTRICO</Text>
-            </View>
-          </View>
-          <View style={s.sectionHead}>
-            <View>
-              <Text style={s.eyebrow}>ARQUIVOS RECENTES</Text>
-              <Text style={s.sectionTitle}>MISSÕES</Text>
-            </View>
-            <Text style={s.classified}>NÍVEL ÔMEGA</Text>
-          </View>
-          {missions.map((m) => {
-            const open = selected === m.code;
-            return (
-              <Pressable
-                key={m.code}
-                onPress={() => setSelected(open ? null : m.code)}
-                style={[s.mission, open && s.missionOpen]}
-              >
-                <View style={s.missionTop}>
-                  <Text style={s.code}>{m.code}</Text>
-                  <Text style={s.complete}>CONCLUÍDA</Text>
-                </View>
-                <Text style={s.missionName}>{m.name}</Text>
-                <Text style={s.missionMeta}>
-                  {m.type} · {m.place}
-                </Text>
-                {open && (
-                  <View style={s.declassified}>
-                    <Text style={s.decrypt}>ARQUIVO PARCIALMENTE DESCLASSIFICADO</Text>
-                    <Text style={s.description}>
-                      Operação encerrada com sucesso. Identidades, datas e coordenadas permanecem
-                      protegidas pelo comando.
-                    </Text>
-                  </View>
-                )}
-              </Pressable>
-            );
-          })}
-          <Pressable
-            onPress={() => setRed((current) => !current)}
-            style={[s.redButton, red && s.redButtonActive]}
+          <ImageBackground
+            source={require('../../assets/world/extincao.jpg')}
+            style={s.hero}
+            imageStyle={s.heroImage}
           >
-            <Text style={s.redIcon}>HLS</Text>
-            <View>
-              <Text style={s.redTitle}>{red ? 'DESATIVAR PROTOCOLO' : 'PROTOCOLO VERMELHO'}</Text>
-              <Text style={s.redCaption}>USO EXCLUSIVO EM AMEAÇA MÁXIMA</Text>
+            <View style={s.heroShade} />
+            <View style={s.heroCopy}>
+              <Text style={s.eyebrow}>SETOR DESCONHECIDO // 06:42</Text>
+              <Text style={s.heading}>O MUNDO{`\n`}AINDA RESPIRA.</Text>
+              <Text style={s.intro}>
+                Mas cada respiração carrega areia, ferrugem e sinais de pessoas que talvez já não
+                estejam vivas.
+              </Text>
             </View>
-            <Text style={s.redArrow}>›</Text>
+          </ImageBackground>
+          <View style={s.weatherHeader}>
+            <View>
+              <Text style={s.eyebrow}>MONITOR ATMOSFÉRICO</Text>
+              <Text style={s.sectionTitle}>CLIMA DA ZONA</Text>
+            </View>
+            <Text style={s.storm}>TEMPESTADE DE AREIA</Text>
+          </View>
+          <View style={s.weatherGrid}>
+            {conditions.map(([label, value]) => (
+              <View key={label} style={s.weatherCell}>
+                <Text style={s.label}>{label}</Text>
+                <Text style={[s.value, value === 'CRÍTICA' && s.danger]}>{value}</Text>
+              </View>
+            ))}
+          </View>
+          <Text style={s.weatherNote}>
+            PREVISÃO: a frente de poeira alcançará a rota do comboio em aproximadamente 01:37.
+          </Text>
+          <SectionHead
+            eyebrow="MAPA DE PODER // 06 REGISTROS"
+            title="FACÇÕES"
+            action="ABRIR MAPA ↗"
+            onPress={() => router.push('/factions')}
+          />
+          <Pressable onPress={() => router.push('/factions')} style={s.factionPreview}>
+            <View style={s.factionBars}>
+              {['#bd3731', '#678c58', '#79669d', '#e45a25', '#a7a39a', '#75aeb6'].map((color) => (
+                <View key={color} style={[s.factionBar, { backgroundColor: color }]} />
+              ))}
+            </View>
+            <Text style={s.factionTitle}>SEIS BANDEIRAS. NENHUMA FRONTEIRA SEGURA.</Text>
+            <Text style={s.factionText}>
+              Hellsings · Cobras · Dominus · Fogo · dois sinais sem confirmação.
+            </Text>
+          </Pressable>
+          <SectionHead
+            eyebrow="BUSCA ATIVA"
+            title="SINAIS PERDIDOS"
+            action="RASTREAR ↗"
+            onPress={() => router.push('/signals')}
+          />
+          {frequencies.map((signal) => (
+            <Pressable key={signal.code} onPress={() => router.push('/signals')} style={s.signal}>
+              <View>
+                <Text style={s.signalCode}>{signal.code}</Text>
+                <Text style={s.signalTitle}>{signal.title}</Text>
+                <Text style={s.signalText}>{signal.text}</Text>
+              </View>
+              <Text style={s.pulse}>◉</Text>
+            </Pressable>
+          ))}
+          <Pressable onPress={() => router.push('/agents')} style={s.hellsingsPortal}>
+            <BrandMark size={58} />
+            <View style={s.portalCopy}>
+              <Text style={s.portalCode}>FACÇÃO F-01 // ATIVA</Text>
+              <Text style={s.portalTitle}>HELLSINGS</Text>
+              <Text style={s.portalText}>A organização permaneceu. A missão mudou.</Text>
+            </View>
+            <Text style={s.portalArrow}>›</Text>
           </Pressable>
           <Text style={s.footer}>
-            HLS MOBILE TERMINAL · VERSÃO 0.1.0{`\n`}EXPERIÊNCIA NARRATIVA LOCAL
+            EDE MOBILE // DADOS NARRATIVOS LOCAIS{`\n`}O PRESENTE COMEÇA DEPOIS DO FIM.
           </Text>
         </ScrollView>
-        <BottomNav active="COMANDO" />
+        <BottomNav active="MUNDO" />
       </SafeAreaView>
     </View>
   );
 }
+
+function SectionHead({
+  eyebrow,
+  title,
+  action,
+  onPress,
+}: {
+  eyebrow: string;
+  title: string;
+  action: string;
+  onPress: () => void;
+}) {
+  return (
+    <View style={s.sectionHead}>
+      <View>
+        <Text style={s.eyebrow}>{eyebrow}</Text>
+        <Text style={s.sectionTitle}>{title}</Text>
+      </View>
+      <Pressable onPress={onPress}>
+        <Text style={s.open}>{action}</Text>
+      </Pressable>
+    </View>
+  );
+}
+
 const s = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#030504' },
-  screenRed: { backgroundColor: '#100403' },
+  screen: { flex: 1, backgroundColor: '#080604' },
   safe: { flex: 1 },
-  alert: { height: 30, backgroundColor: '#a41f1b', alignItems: 'center', justifyContent: 'center' },
-  alertText: {
-    color: '#fff',
-    fontFamily: 'monospace',
-    fontSize: 8,
-    fontWeight: '700',
-    letterSpacing: 1.4,
-  },
   header: {
     height: 76,
-    paddingHorizontal: 20,
+    paddingHorizontal: 18,
     borderBottomWidth: 1,
-    borderBottomColor: '#1d241c',
+    borderBottomColor: '#382218',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  brand: { position: 'absolute', color: '#d49a39', fontSize: 39, fontWeight: '900', top: -20 },
-  brandName: {
-    color: '#e5e6de',
-    fontSize: 12,
-    fontWeight: '700',
-    letterSpacing: 3,
-    marginLeft: 34,
+  brand: { flexDirection: 'row', alignItems: 'center', gap: 7 },
+  brandName: { color: '#e8ded0', fontSize: 10, fontWeight: '800', letterSpacing: 1.6 },
+  micro: { color: '#77695c', fontFamily: 'monospace', fontSize: 6, letterSpacing: 1, marginTop: 3 },
+  headerRight: { alignItems: 'flex-end', gap: 6 },
+  unstable: { color: '#dc6335', fontFamily: 'monospace', fontSize: 6, letterSpacing: 0.7 },
+  exit: { color: '#776d63', fontFamily: 'monospace', fontSize: 6 },
+  content: { paddingBottom: 120 },
+  hero: { minHeight: 490, justifyContent: 'flex-end' },
+  heroImage: { opacity: 0.72 },
+  heroShade: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(8,5,3,.38)' },
+  heroCopy: { padding: 22, paddingBottom: 38 },
+  eyebrow: { color: '#d16936', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1.4 },
+  heading: {
+    color: '#eadfce',
+    fontSize: 49,
+    lineHeight: 45,
+    fontWeight: '800',
+    letterSpacing: -0.5,
+    marginTop: 12,
   },
-  headerRight: { alignItems: 'flex-end', gap: 7 },
-  online: { color: '#bbd64a', fontSize: 8, fontFamily: 'monospace', letterSpacing: 1 },
-  exit: { color: '#777f74', fontSize: 8, fontFamily: 'monospace', letterSpacing: 1.5 },
-  content: { paddingHorizontal: 20, paddingTop: 42, paddingBottom: 125 },
-  welcome: { marginBottom: 28 },
-  eyebrow: {
-    color: '#bbd64a',
-    fontFamily: 'monospace',
-    fontSize: 8,
-    letterSpacing: 1.8,
-    marginBottom: 10,
-  },
-  heading: { color: '#ecece4', fontSize: 48, lineHeight: 48, fontWeight: '300', letterSpacing: 1 },
-  intro: { color: '#7c857b', fontSize: 12, lineHeight: 19, maxWidth: 310, marginTop: 15 },
-  stats: {
+  intro: { color: '#c1b3a2', fontSize: 13, lineHeight: 20, maxWidth: 330, marginTop: 16 },
+  weatherHeader: {
+    paddingHorizontal: 20,
+    paddingTop: 38,
+    paddingBottom: 15,
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 1,
-    backgroundColor: '#20261f',
-    marginBottom: 50,
-  },
-  statPrimary: { width: '100%', backgroundColor: '#080c09', padding: 20 },
-  stat: {
-    width: '49.8%',
-    minHeight: 125,
-    backgroundColor: '#080c09',
-    padding: 16,
     justifyContent: 'space-between',
-  },
-  label: { color: '#788176', fontFamily: 'monospace', fontSize: 8, letterSpacing: 1.3 },
-  hundred: { color: '#edece4', fontSize: 66, fontWeight: '200' },
-  percent: { color: '#bbd64a', fontSize: 24 },
-  good: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
-  number: { color: '#edece4', fontSize: 44, fontWeight: '300' },
-  numberSmall: { color: '#edece4', fontSize: 24, fontWeight: '400' },
-  muted: { color: '#60685f', fontFamily: 'monospace', fontSize: 7, letterSpacing: 0.8 },
-  sectionHead: {
-    flexDirection: 'row',
     alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    marginBottom: 16,
   },
-  sectionTitle: { color: '#e8e8e1', fontSize: 34, fontWeight: '300', letterSpacing: 2 },
-  classified: { color: '#6d756a', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
-  mission: {
-    backgroundColor: '#080c09',
-    borderWidth: 1,
-    borderColor: '#1c241d',
-    padding: 17,
-    marginBottom: 8,
-  },
-  missionOpen: { borderColor: '#bbd64a' },
-  missionTop: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 27 },
-  code: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 9, letterSpacing: 1.2 },
-  complete: {
-    color: '#84a139',
-    fontFamily: 'monospace',
-    fontSize: 7,
-    letterSpacing: 1,
-    borderWidth: 1,
-    borderColor: '#4d5e29',
-    padding: 4,
-  },
-  missionName: { color: '#e6e7df', fontSize: 21, fontWeight: '500', letterSpacing: 0.6 },
-  missionMeta: {
-    color: '#6c756b',
-    fontFamily: 'monospace',
-    fontSize: 7,
+  sectionTitle: {
+    color: '#e4d9c9',
+    fontSize: 30,
+    fontWeight: '300',
     letterSpacing: 1,
     marginTop: 7,
   },
-  declassified: { borderTopWidth: 1, borderTopColor: '#263025', marginTop: 16, paddingTop: 14 },
-  decrypt: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 7, letterSpacing: 1 },
-  description: { color: '#92998f', fontSize: 11, lineHeight: 18, marginTop: 8 },
-  redButton: {
-    marginTop: 34,
-    borderWidth: 1,
-    borderColor: '#70211e',
-    backgroundColor: '#120706',
-    minHeight: 76,
-    padding: 13,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 14,
-  },
-  redButtonActive: { backgroundColor: '#6f1512', borderColor: '#e14940' },
-  redIcon: {
-    width: 46,
-    height: 46,
-    borderRadius: 23,
-    borderWidth: 1,
-    borderColor: '#ba3932',
-    color: '#dc4b43',
-    fontWeight: '900',
-    fontSize: 11,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-  },
-  redTitle: { color: '#e65750', fontSize: 11, fontWeight: '700', letterSpacing: 1 },
-  redCaption: {
-    color: '#774642',
+  storm: {
+    color: '#dd6030',
     fontFamily: 'monospace',
     fontSize: 6,
-    letterSpacing: 0.7,
+    maxWidth: 86,
+    textAlign: 'right',
+  },
+  weatherGrid: {
+    marginHorizontal: 20,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 1,
+    backgroundColor: '#3b281c',
+  },
+  weatherCell: {
+    width: '49.8%',
+    minHeight: 96,
+    padding: 14,
+    justifyContent: 'space-between',
+    backgroundColor: '#110d09',
+  },
+  label: { color: '#786e63', fontFamily: 'monospace', fontSize: 6, letterSpacing: 1 },
+  value: { color: '#dfd5c6', fontSize: 25, fontWeight: '300' },
+  danger: { color: '#e34f31' },
+  weatherNote: {
+    marginHorizontal: 20,
+    padding: 12,
+    borderWidth: 1,
+    borderColor: '#4c2c1d',
+    color: '#a76b48',
+    fontFamily: 'monospace',
+    fontSize: 7,
+    lineHeight: 13,
+  },
+  sectionHead: {
+    marginHorizontal: 20,
+    marginTop: 48,
+    marginBottom: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  open: { color: '#d68a4b', fontFamily: 'monospace', fontSize: 7 },
+  factionPreview: {
+    marginHorizontal: 20,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: '#403026',
+    backgroundColor: '#0e0a07',
+  },
+  factionBars: { height: 5, flexDirection: 'row', gap: 2, marginBottom: 25 },
+  factionBar: { flex: 1 },
+  factionTitle: { color: '#e5d9c8', fontSize: 20, fontWeight: '700', lineHeight: 25 },
+  factionText: { color: '#81766c', fontSize: 10, lineHeight: 16, marginTop: 9 },
+  signal: {
+    marginHorizontal: 20,
+    marginBottom: 7,
+    minHeight: 112,
+    padding: 15,
+    borderWidth: 1,
+    borderColor: '#34261d',
+    borderLeftWidth: 3,
+    borderLeftColor: '#c85b31',
+    backgroundColor: '#0d0a08',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  signalCode: { color: '#bf633b', fontFamily: 'monospace', fontSize: 6 },
+  signalTitle: { color: '#e6dac9', fontSize: 20, fontWeight: '600', marginTop: 9 },
+  signalText: { color: '#786f66', fontSize: 9, marginTop: 6 },
+  pulse: { color: '#d74d2e', fontSize: 18 },
+  hellsingsPortal: {
+    margin: 20,
+    marginTop: 50,
+    minHeight: 116,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#702c29',
+    backgroundColor: '#110706',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 13,
+  },
+  portalCopy: { flex: 1 },
+  portalCode: { color: '#c3483f', fontFamily: 'monospace', fontSize: 6 },
+  portalTitle: {
+    color: '#d23f38',
+    fontSize: 27,
+    fontWeight: '800',
+    letterSpacing: 2,
     marginTop: 5,
   },
-  redArrow: { marginLeft: 'auto', color: '#d84940', fontSize: 29 },
+  portalText: { color: '#8d7770', fontSize: 9, marginTop: 4 },
+  portalArrow: { color: '#c94038', fontSize: 30 },
   footer: {
-    color: '#444b44',
+    color: '#4f4841',
     fontFamily: 'monospace',
     fontSize: 7,
     lineHeight: 14,
-    letterSpacing: 1,
     textAlign: 'center',
-    marginTop: 45,
+    marginTop: 30,
   },
-  tabs: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 78,
-    backgroundColor: 'rgba(5,8,6,.98)',
-    borderTopWidth: 1,
-    borderTopColor: '#20271f',
-    flexDirection: 'row',
-    paddingBottom: 10,
-  },
-  tab: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 8 },
-  tabDot: { width: 4, height: 4, backgroundColor: '#424942', transform: [{ rotate: '45deg' }] },
-  tabDotActive: { backgroundColor: '#bbd64a' },
-  tabText: { color: '#555d55', fontFamily: 'monospace', fontSize: 6, letterSpacing: 0.5 },
-  tabTextActive: { color: '#bbd64a' },
 });

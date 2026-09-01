@@ -60,7 +60,7 @@ Os Hellsings ainda vivem.
 
 ## Alice Myers Connor
 
-Alice tem hoje 54 anos. Médica antes do Dia D, tornou-se responsável pela saúde do grupo e pela formação de novos socorristas. Ao longo dos anos, transmitiu seus conhecimentos aos cinco filhos — Alucard, Diana, Nicolai, Mary e Isolde —, que agora já são adultos.
+Alice tem hoje 54 anos. Médica antes do Dia D, tornou-se responsável pela saúde do grupo e pela formação de novos socorristas. Ao longo dos anos, transmitiu seus conhecimentos aos cinco filhos — Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor —, que agora já são adultos e preservam seu sobrenome materno.
 
 Se Jack mantém o comboio em movimento, Alice mantém suas pessoas vivas.
 
@@ -68,7 +68,7 @@ Se Jack mantém o comboio em movimento, Alice mantém suas pessoas vivas.
 
 Mark tem 50 anos. Ele conheceu os horrores da guerra antes do colapso e acreditava que já havia visto o pior que a humanidade era capaz de fazer. O Dia D provou que estava enganado.
 
-Mark e Ariani tiveram os gêmeos Pollyana e Nathan antes da queda. Depois do Dia D, nasceu mais um filho. Mark o chamou de James, em homenagem ao homem que havia salvado sua vida.
+Mark e Ariani tiveram os gêmeos Pollyana Salvatore Connor e Nathan Salvatore Connor antes da queda. Depois do Dia D, nasceu James Salvatore Connor, batizado por Mark em homenagem ao homem que havia salvado sua vida. Os três preservam Salvatore, o sobrenome materno de Ariani.
 
 Ariani se tornou uma líder nata. Sua inteligência, capacidade de negociação e firmeza ajudaram a manter o grupo unido quando força e armas já não eram suficientes.
 

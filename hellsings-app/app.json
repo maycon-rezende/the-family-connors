@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Hellsings",
-    "slug": "hellsings-app",
+    "name": "A Era da Extinção",
+    "slug": "era-da-extincao",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/hellsings/hellsings-emblem.png",
-    "scheme": "hellsingsapp",
+    "scheme": "eradaextincao",
     "userInterfaceStyle": "dark",
     "ios": {
       "icon": "./assets/expo.icon"

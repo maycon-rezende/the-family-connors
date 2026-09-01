@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BrandMark } from '@/components/brand-mark';
+import { BottomNav } from '@/components/bottom-nav';
 
 type FileEntry = {
   id: string;
@@ -225,6 +226,7 @@ export default function ArchivesScreen() {
             </Text>
           </View>
         </ScrollView>
+        <BottomNav active="ARQUIVOS" />
       </SafeAreaView>
     </View>
   );
@@ -263,7 +265,7 @@ const s = StyleSheet.create({
   tabActive: { borderBottomColor: '#bbd64a', backgroundColor: '#080c09' },
   tabText: { color: '#596159', fontFamily: 'monospace', fontSize: 7, letterSpacing: 0.7 },
   activeText: { color: '#bbd64a' },
-  content: { padding: 20, paddingTop: 38, paddingBottom: 60 },
+  content: { padding: 20, paddingTop: 38, paddingBottom: 120 },
   eyebrow: { color: '#bbd64a', fontFamily: 'monospace', fontSize: 8, letterSpacing: 1.4 },
   heading: { color: '#ecece4', fontSize: 42, lineHeight: 43, fontWeight: '300', marginTop: 12 },
   intro: {

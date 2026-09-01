@@ -1,15 +1,16 @@
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-type Tab = 'COMANDO' | 'MISSÕES' | 'AGENTES' | 'BUNKER';
+type Tab = 'MUNDO' | 'FACÇÕES' | 'SINAIS' | 'ARQUIVOS';
+type LegacyTab = 'COMANDO' | 'MISSÕES' | 'AGENTES' | 'BUNKER';
 const routes: Record<Tab, string> = {
-  COMANDO: '/command',
-  MISSÕES: '/missions',
-  AGENTES: '/agents',
-  BUNKER: '/bunker',
+  MUNDO: '/command',
+  FACÇÕES: '/factions',
+  SINAIS: '/signals',
+  ARQUIVOS: '/archives',
 };
 
-export function BottomNav({ active }: { active: Tab }) {
+export function BottomNav({ active }: { active: Tab | LegacyTab }) {
   return (
     <View style={styles.tabs}>
       {(Object.keys(routes) as Tab[]).map((item) => (

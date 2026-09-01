@@ -56,11 +56,11 @@ const agents: Agent[] = [
   },
   {
     code: 'HLS-04',
-    name: 'Boby Johhn',
+    name: 'John',
     role: 'TECNOLOGIA · ARMAMENTOS',
     status: 'CAMPO',
     color: '#5c82d8',
-    image: require('../../assets/hellsings/boby.png'),
+    image: require('../../assets/hellsings/john.png'),
     skills: ['TECNOLOGIA', 'COMUNICAÇÕES', 'SUPORTE'],
     bio: 'Protege a infraestrutura tecnológica, as comunicações e os equipamentos operacionais da unidade.',
   },
