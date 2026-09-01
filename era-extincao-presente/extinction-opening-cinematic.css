@@ -133,10 +133,10 @@
   background: transparent;
 }
 .awakening.is-exploding .intro-impact:before {
-  animation: cinematicFireball 2.8s cubic-bezier(0.12, 0.72, 0.18, 1) both;
+  animation: cinematicFireball 5.8s cubic-bezier(0.12, 0.72, 0.18, 1) both;
 }
 .awakening.is-exploding .intro-impact:after {
-  animation: cinematicShockwave 3.2s cubic-bezier(0.1, 0.7, 0.2, 1) both;
+  animation: cinematicShockwave 6.4s cubic-bezier(0.1, 0.7, 0.2, 1) both;
 }
 .awakening.is-exploding .intro-ruins {
   filter: drop-shadow(0 -18px 30px #a7331e99);
@@ -247,10 +247,10 @@
   filter: blur(8px);
   pointer-events: none;
   transition:
-    opacity 0.9s,
-    transform 1.6s cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 0.9s,
-    visibility 0.9s;
+    opacity 1.4s,
+    transform 2.1s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 1.4s,
+    visibility 1.4s;
 }
 .cinematic-beat.is-active {
   opacity: 1;
@@ -496,7 +496,7 @@
   animation: titleFromShadow 1.5s cubic-bezier(0.15, 0.8, 0.2, 1) both;
 }
 .awakening.is-shaking {
-  animation: introShake 0.55s steps(2, end);
+  animation: introShake 1.15s steps(3, end);
 }
 @keyframes titleFromShadow {
   from {

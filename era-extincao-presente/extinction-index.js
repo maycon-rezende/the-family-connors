@@ -255,10 +255,17 @@
     else observer.observe(element);
   });
 
+  const survivorColumns = matchMedia('(max-width: 700px)').matches ? 1 :
+    matchMedia('(max-width: 1100px)').matches ? 2 : 3;
   document.querySelectorAll('.survivor-grid .survivor').forEach((card, index) => {
-    card.style.setProperty('--survivor-delay', `${index * 0.72}s`);
+    card.style.setProperty('--survivor-delay', `${(index % survivorColumns) * 0.14}s`);
     card.style.setProperty('--survivor-order', index + 1);
   });
+
+  // Impede que uma rede lenta ou WebView móvel mantenha fichas invisíveis.
+  setTimeout(() => {
+    document.querySelectorAll('.survivor-grid .survivor').forEach((card) => card.classList.add('is-visible'));
+  }, 1800);
 
   const hellsingsClimax = document.querySelector('.hellsings-climax');
   const hellsingsTitle = document.querySelector('[data-hellsings-climax]');

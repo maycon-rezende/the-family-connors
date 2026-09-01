@@ -11,7 +11,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"rel="stylesheet" />
     <link rel="stylesheet" href="era-extincao-presente/extinction-world.css" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=9" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=10" />
     <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
   </head>
   <body class="intro-page world-locked">
@@ -37,24 +37,24 @@
           </button>
         </section>
         <section class="cinematic-beat" data-cinema-beat="1">
-          <p>ARQUIVO ANTERIOR AO DIA D</p>
-          <h2>Antes,<br /><em>havia uma vida.</em></h2>
-          <span>Uma família. Uma mansão. Uma organização lutando nas sombras.</span>
+          <p>PROTOCOLO DE CONTENÇÃO // ARQUIVO CORROMPIDO</p>
+          <h2>Criado para<br /><em>obedecer.</em></h2>
+          <span>Chamaram de patógeno. Deram-lhe limites, hospedeiros e uma única ordem: permanecer sob controle.</span>
         </section>
         <section class="cinematic-beat cinema-zero" data-cinema-beat="2">
           <p>REGISTRO CORROMPIDO // DIA ZERO</p>
           <h2>Então o céu<br /><em>começou a queimar.</em></h2>
-          <span>O fim não chegou de uma vez. Chegou em ondas.</span>
+          <span>O fim não chegou de uma vez. Chegou em ondas. E alguma coisa atravessou as chamas.</span>
         </section>
         <section class="cinematic-beat cinema-years" data-cinema-beat="3">
-          <p>TEMPO DECORRIDO // IMPOSSÍVEL CALCULAR</p>
-          <h2>Anos viraram<br /><em>cicatrizes.</em></h2>
-          <span>Os jovens envelheceram. As cidades desapareceram. Os nomes permaneceram.</span>
+          <p>ORIGEM DA TRANSMISSÃO // NÃO HUMANA</p>
+          <h2>As ordens<br /><em>morreram primeiro.</em></h2>
+          <span>Os governos desapareceram. Os laboratórios silenciaram. Mesmo assim, o sinal continuou aprendendo a falar.</span>
         </section>
         <section class="cinematic-beat cinema-final" data-cinema-beat="4">
-          <div class="awakening-date"><span>AGORA</span><b>DATA CORROMPIDA</b></div>
+          <div class="awakening-date"><span>AGORA</span><b>CONSCIÊNCIA // INCONCLUSIVA</b></div>
           <h1><span>A ERA DA</span><em>EXTINÇÃO</em></h1>
-          <p>O mundo não acabou. Mas a humanidade foi transformada em... uma...</p>
+          <p>Nenhum vínculo detectado. Nenhum controle ativo. O mundo conheceu aquilo que restou como...</p>
           <button type="button" data-awaken><span>ACORDAR NO PRESENTE</span><i>→</i></button>
         </section>
       </div>
@@ -68,16 +68,17 @@
       </button>
       <small>AVISO // ESTE NÃO É O MUNDO QUE ELES CONHECIAM</small>
     </section>
-    <details class="temporary-soundtrack">
+    <details class="temporary-soundtrack soundtrack-hidden">
       <summary>TRILHA TEMPORÁRIA // SOUNDCLOUD</summary>
       <iframe
+        id="introSoundcloudPlayer"
         title="Trilha temporária da abertura"
         allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trailer-music-movie/avengers4-endgame-official-trailer-music-audiomachine-so-say-we-all&color=%23d8552d&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-lazcano-1/avengers-age-of-ultron-no-strings-on-me-ultrons-theme&color=%23d8552d&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"
       ></iframe>
-      <small>Referência temporária — reprodução pelo player oficial.</small>
+      <small>No Strings on Me — trilha temporária pelo player oficial.</small>
     </details>
-    <audio id="worldIntroAudio" preload="metadata" loop src="audio/intro.mp3"></audio>
-    <script src="era-extincao-presente/extinction-intro.js?v=9"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="era-extincao-presente/extinction-intro.js?v=11"></script>
   </body>
 </html>

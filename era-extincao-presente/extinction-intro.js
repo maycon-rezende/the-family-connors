@@ -7,13 +7,62 @@
   const progressLine = document.querySelector('.cinema-progress > span');
   const introStatus = document.querySelector('#introStatus');
   const timecode = document.querySelector('#cinemaTimecode');
-  const introAudio = document.querySelector('#worldIntroAudio');
+  const soundtrackFrame = document.querySelector('#introSoundcloudPlayer');
   const soundButton = document.querySelector('[data-toggle-sound]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let timers = [];
-  let timecodeTimer = 0;
+  let cinemaFrame = 0;
   let startedAt = 0;
+  let activeBeat = 0;
   let leaving = false;
+  let soundtrackReady = false;
+  let soundtrackPlaying = false;
+  let soundtrackPosition = 0;
+  let soundEnabled = false;
+  let pendingStart = false;
+  let lastElapsed = 0;
+
+  // Tempos de segurança. Quando o SoundCloud informa a duração, estes pontos
+  // são recalculados para acompanhar a construção musical da faixa inteira.
+  let beatTimes = [0, 12000, 28000, 47000, 65000];
+  const soundtrack = window.SC && soundtrackFrame ? window.SC.Widget(soundtrackFrame) : null;
+
+  if (soundtrack) {
+    soundtrack.bind(window.SC.Widget.Events.READY, () => {
+      soundtrackReady = true;
+      soundtrack.setVolume(soundEnabled ? 38 : 0);
+      soundtrack.getDuration((duration) => {
+        if (!Number.isFinite(duration) || duration < 30000) return;
+        // A música define o ritmo, mas nenhuma tela pode permanecer parada por
+        // dezenas de segundos caso a versão do SoundCloud seja muito longa.
+        beatTimes = [
+          0,
+          Math.min(duration * 0.14, 9000),
+          Math.min(duration * 0.32, 21000),
+          Math.min(duration * 0.55, 34000),
+          Math.min(duration * 0.82, 48000),
+        ];
+      });
+      if (pendingStart) {
+        soundtrack.seekTo(0);
+        soundtrack.play();
+      }
+    });
+    soundtrack.bind(window.SC.Widget.Events.PLAY, () => {
+      soundtrackPlaying = true;
+      if (introStatus && activeBeat === 0) introStatus.textContent = 'TRANSMISSÃO SINCRONIZADA';
+    });
+    soundtrack.bind(window.SC.Widget.Events.PAUSE, () => {
+      soundtrackPlaying = false;
+    });
+    soundtrack.bind(window.SC.Widget.Events.PLAY_PROGRESS, (event) => {
+      soundtrackPosition = event.currentPosition || 0;
+    });
+    soundtrack.bind(window.SC.Widget.Events.FINISH, () => {
+      soundtrackPlaying = false;
+      finishCinema();
+    });
+  }
 
   document.querySelectorAll('.cinema-final h1 > span, .cinema-final h1 > em').forEach((line) => {
     const letters = [...line.textContent];
@@ -30,25 +79,20 @@
   const clearTimers = () => {
     timers.forEach(clearTimeout);
     timers = [];
-    clearInterval(timecodeTimer);
+    cancelAnimationFrame(cinemaFrame);
+    cinemaFrame = 0;
   };
 
   const setSound = (enabled) => {
-    if (!introAudio || !soundButton) return;
-    if (enabled) {
-      introAudio.volume = 0.28;
-      introAudio.play().then(() => {
-        soundButton.textContent = 'SOM // ON';
-        soundButton.setAttribute('aria-pressed', 'true');
-      }).catch(() => setSound(false));
-    } else {
-      introAudio.pause();
-      soundButton.textContent = 'SOM // OFF';
-      soundButton.setAttribute('aria-pressed', 'false');
-    }
+    soundEnabled = enabled;
+    if (soundtrackReady) soundtrack.setVolume(enabled ? 38 : 0);
+    if (!soundButton) return;
+    soundButton.textContent = enabled ? 'SOM // ON' : 'SOM // OFF';
+    soundButton.setAttribute('aria-pressed', String(enabled));
   };
 
   const setBeat = (index) => {
+    activeBeat = index;
     beats.forEach((beat, beatIndex) => beat.classList.toggle('is-active', beatIndex === index));
     progressParts.forEach((part, partIndex) => part.classList.toggle('is-passed', partIndex < index));
     if (progressLine) progressLine.style.width = `${Math.min((index / 4) * 100, 100)}%`;
@@ -56,15 +100,17 @@
     awakening.classList.toggle('is-years', index >= 3);
     if (index === 2) {
       awakening.classList.add('is-flashing', 'is-shaking', 'is-exploding');
-      timers.push(setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 900));
-      timers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 3400));
+      timers.push(setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 1600));
+      timers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 6800));
+    } else {
+      awakening.classList.remove('is-flashing', 'is-shaking', 'is-exploding');
     }
     const status = [
       'AGUARDANDO CONEXÃO',
-      'ARQUIVO RECUPERADO',
+      'CONTENÇÃO COMPROMETIDA',
       'IMPACTO DETECTADO',
-      'TEMPO CORROMPIDO',
-      'SINAL ESTABILIZADO',
+      'ORIGEM NÃO HUMANA',
+      'CONSCIÊNCIA INCONCLUSIVA',
     ];
     if (introStatus) introStatus.textContent = status[index];
   };
@@ -72,18 +118,36 @@
   const startCinema = () => {
     clearTimers();
     awakening.classList.add('is-running');
+    awakening.classList.remove('is-zero', 'is-years', 'is-flashing', 'is-shaking', 'is-exploding');
+    setBeat(0);
     startedAt = performance.now();
+    lastElapsed = 0;
+    soundtrackPosition = 0;
+    pendingStart = true;
     setSound(true);
-    timecodeTimer = setInterval(() => {
-      const elapsed = Math.max(0, performance.now() - startedAt);
+    if (soundtrackReady) {
+      soundtrack.seekTo(0);
+      soundtrack.play();
+    } else if (introStatus) {
+      introStatus.textContent = 'CONECTANDO AO SINAL';
+    }
+
+    const followSoundtrack = () => {
+      const fallback = Math.max(0, performance.now() - startedAt - 4000);
+      const soundtrackElapsed = soundtrackPlaying ? soundtrackPosition : 0;
+      const elapsed = Math.max(lastElapsed, soundtrackElapsed || fallback);
+      lastElapsed = elapsed;
       const seconds = Math.floor(elapsed / 1000);
       const frames = Math.floor((elapsed % 1000) / 40);
       if (timecode) timecode.textContent = `00:${String(seconds).padStart(2, '0')}:${String(frames).padStart(2, '0')}`;
-    }, 40);
-    [[1, 250], [2, 3550], [3, 6850], [4, 10150]].forEach(([beat, delay]) => {
-      timers.push(setTimeout(() => setBeat(beat), delay));
-    });
-    timers.push(setTimeout(clearTimers, 11500));
+      let nextBeat = 0;
+      beatTimes.forEach((moment, index) => {
+        if (elapsed >= moment) nextBeat = index;
+      });
+      if (nextBeat !== activeBeat) setBeat(nextBeat);
+      if (elapsed < beatTimes.at(-1)) cinemaFrame = requestAnimationFrame(followSoundtrack);
+    };
+    cinemaFrame = requestAnimationFrame(followSoundtrack);
   };
 
   const finishCinema = () => {
@@ -96,6 +160,7 @@
     if (leaving) return;
     leaving = true;
     clearTimers();
+    if (soundtrackReady) soundtrack.pause();
     try {
       sessionStorage.setItem('ede-intro-liberada', 'sim');
     } catch {
@@ -120,7 +185,7 @@
   document.querySelector('[data-start-cinema]')?.addEventListener('click', startCinema);
   document.querySelector('[data-skip-cinema]')?.addEventListener('click', finishCinema);
   document.querySelector('[data-awaken]')?.addEventListener('click', enterWorld);
-  soundButton?.addEventListener('click', () => setSound(introAudio?.paused ?? true));
+  soundButton?.addEventListener('click', () => setSound(!soundEnabled));
 
   if (reduced) finishCinema();
 
