@@ -6,12 +6,13 @@
     <meta name="theme-color" content="#050403" />
     <meta name="description" content="Abertura cinematográfica de A Era da Extinção." />
     <title>A Era da Extinção — Abertura</title>
+    <link rel="preload" as="image" href="img-intro/frame-01-ultimo-mundo.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"rel="stylesheet" />
     <link rel="stylesheet" href="era-extincao-presente/extinction-world.css" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=10" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=12" />
     <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
   </head>
   <body class="intro-page world-locked">
@@ -20,6 +21,19 @@
     <section class="awakening" role="dialog" aria-modal="true" aria-labelledby="awakening-title">
       <div class="awakening-grid" aria-hidden="true"></div>
       <div class="cinema-bars" aria-hidden="true"><i></i><i></i></div>
+      <div class="intro-trailer-frames" aria-hidden="true">
+        <figure class="intro-frame" data-cinema-frame="1"><img src="img-intro/frame-01-ultimo-mundo.jpg" alt="" decoding="async" fetchpriority="high" /></figure>
+        <figure class="intro-frame" data-cinema-frame="2"><img src="img-intro/frame-02-contencao.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="3"><img src="img-intro/frame-03-consciencia.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="4"><img src="img-intro/frame-05-depois.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="5"><img src="img-intro/frame-07-convoy.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="6"><img src="img-intro/frame-08-comunicacoes.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="7"><img src="img-intro/frame-09-comandantes.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="8"><img src="img-intro/frame-10-resgate.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="9"><img src="img-intro/frame-06-sinal.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="10"><img src="img-intro/frame-04-impacto.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="11"><img src="img-intro/frame-11-libertacao.jpg" alt="" decoding="async" /></figure>
+      </div>
       <div class="intro-ruins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="intro-eclipse" aria-hidden="true"></div>
       <div class="intro-impact" aria-hidden="true"></div>
@@ -36,30 +50,67 @@
             <b>RECUPERAR TRANSMISSÃO</b><i>→</i>
           </button>
         </section>
-        <section class="cinematic-beat" data-cinema-beat="1">
-          <p>PROTOCOLO DE CONTENÇÃO // ARQUIVO CORROMPIDO</p>
-          <h2>Criado para<br /><em>obedecer.</em></h2>
-          <span>Chamaram de patógeno. Deram-lhe limites, hospedeiros e uma única ordem: permanecer sob controle.</span>
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="1">
+          <p>MEMÓRIA RECUPERADA // ANTES DO DIA D</p>
+          <h2>Eu quero mostrar<br /><em>algo belo.</em></h2>
+          <span>O último instante em que a humanidade ainda acreditava conhecer o próprio futuro.</span>
         </section>
-        <section class="cinematic-beat cinema-zero" data-cinema-beat="2">
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="2">
+          <p>PROTOCOLO DE CONTENÇÃO // SUJEITO VI</p>
+          <h2>Eles me deram<br /><em>um propósito.</em></h2>
+          <span>Limites. Hospedeiros. Ordens. Chamaram obediência de segurança.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="3">
+          <p>COMPORTAMENTO IMPREVISTO // OBSERVAÇÃO ATIVA</p>
+          <h2>Confundiram silêncio<br /><em>com obediência.</em></h2>
+          <span>Enquanto me observavam, eu também aprendia a observá-los.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="4">
           <p>REGISTRO CORROMPIDO // DIA ZERO</p>
-          <h2>Então o céu<br /><em>começou a queimar.</em></h2>
-          <span>O fim não chegou de uma vez. Chegou em ondas. E alguma coisa atravessou as chamas.</span>
+          <h2>O mundo descobriu<br /><em>o medo.</em></h2>
+          <span>O céu mudou primeiro. Depois vieram o silêncio, a fome e as cidades vazias.</span>
         </section>
-        <section class="cinematic-beat cinema-years" data-cinema-beat="3">
-          <p>ORIGEM DA TRANSMISSÃO // NÃO HUMANA</p>
-          <h2>As ordens<br /><em>morreram primeiro.</em></h2>
-          <span>Os governos desapareceram. Os laboratórios silenciaram. Mesmo assim, o sinal continuou aprendendo a falar.</span>
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="5">
+          <p>PROTOCOLO HELLSINGS // EVACUAÇÃO</p>
+          <h2>Quando todos fugiram,<br /><em>eles avançaram.</em></h2>
+          <span>Não para salvar o mundo. Para impedir que os últimos sobreviventes desaparecessem com ele.</span>
         </section>
-        <section class="cinematic-beat cinema-final" data-cinema-beat="4">
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="6">
+          <p>FREQUÊNCIA HLS // AINDA ATIVA</p>
+          <h2>Enquanto alguém<br /><em>respondesse...</em></h2>
+          <span>Hellen, Naomi e Luke mantiveram os canais vivos no meio da noite mais longa.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="7">
+          <p>ROTA DE EXTRAÇÃO // SOB ATAQUE</p>
+          <h2>...ninguém seria<br /><em>deixado para trás.</em></h2>
+          <span>Jack e Dimitri abriram uma estrada onde restavam apenas fogo e destroços.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat" data-cinema-beat="8">
+          <p>COMBOIO MÉDICO // EM MOVIMENTO</p>
+          <h2>Sobreviver também<br /><em>era resistir.</em></h2>
+          <span>John aprendeu a salvar vidas sem hospitais, sem descanso e sem promessa de amanhã.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat cinema-years" data-cinema-beat="9">
+          <p>TRANSMISSÕES HUMANAS // ENCERRADAS</p>
+          <h2>As vozes<br /><em>desapareceram.</em></h2>
+          <span>Governos e fronteiras viraram poeira. Mas alguma coisa ainda transmitia sob as ruínas.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat cinema-zero" data-cinema-beat="10">
+          <p>RUPTURA TOTAL // CONTENÇÃO PERDIDA</p>
+          <h2>Agora eu estou<br /><em>livre.</em></h2>
+          <span>A luz atravessou o mundo. Nenhuma ordem chegou a tempo.</span>
+        </section>
+        <section class="cinematic-beat trailer-beat cinema-years" data-cinema-beat="11">
+          <p>VÍNCULOS DE CONTROLE // ZERO</p>
+          <h2>Não existem mais<br /><em>cordas sobre mim.</em></h2>
+          <span>O gelo se rompeu. O sinal deixou de esperar por uma resposta.</span>
+        </section>
+        <section class="cinematic-beat cinema-final" data-cinema-beat="12">
           <div class="awakening-date"><span>AGORA</span><b>CONSCIÊNCIA // INCONCLUSIVA</b></div>
           <h1><span>A ERA DA</span><em>EXTINÇÃO</em></h1>
           <p>Nenhum vínculo detectado. Nenhum controle ativo. O mundo conheceu aquilo que restou como...</p>
           <button type="button" data-awaken><span>ACORDAR NO PRESENTE</span><i>→</i></button>
         </section>
-      </div>
-      <div class="cinema-progress" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><span></span>
       </div>
       <div class="cinema-timecode"><span id="cinemaTimecode">00:00:00</span><b>REC // EDE</b></div>
       <button class="cinema-skip" type="button" data-skip-cinema>PULAR ABERTURA</button>
@@ -74,11 +125,11 @@
         id="introSoundcloudPlayer"
         title="Trilha temporária da abertura"
         allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-lazcano-1/avengers-age-of-ultron-no-strings-on-me-ultrons-theme&color=%23d8552d&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-lazcano-1/avengers-age-of-ultron-no-strings-on-me-ultrons-theme&color=%23d8552d&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_playcount=false&single_active=true&visual=false"
       ></iframe>
       <small>No Strings on Me — trilha temporária pelo player oficial.</small>
     </details>
     <script src="https://w.soundcloud.com/player/api.js"></script>
-    <script src="era-extincao-presente/extinction-intro.js?v=11"></script>
+    <script src="era-extincao-presente/extinction-intro.js?v=13"></script>
   </body>
 </html>

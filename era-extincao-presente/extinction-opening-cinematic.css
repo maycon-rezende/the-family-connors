@@ -8,12 +8,55 @@
 .awakening:after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 55%, transparent 0 20%, #020201 78%),
-    linear-gradient(90deg, #020201dd, transparent 35% 65%, #020201dd);
+    radial-gradient(circle at 50% 55%, transparent 0 20%, #020201b8 82%),
+    linear-gradient(90deg, #020201e8, transparent 42% 68%, #020201c7);
   pointer-events: none;
+}
+.intro-trailer-frames {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  background: #020201;
+  pointer-events: none;
+}
+.intro-frame {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  filter: brightness(0.5) saturate(0.68) blur(3px);
+  transform: scale(1.045);
+  transition:
+    opacity 1.65s ease,
+    visibility 1.65s ease,
+    filter 2.2s ease;
+}
+.intro-frame:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #02020155, transparent 34%, #020201d9 100%),
+    repeating-linear-gradient(0deg, transparent 0 4px, #d7a16b08 5px 6px);
+}
+.intro-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+}
+.intro-frame.is-active {
+  opacity: 1;
+  visibility: visible;
+  filter: brightness(0.72) saturate(0.82) blur(0);
+}
+.intro-frame.is-active img {
+  animation: trailerCamera 12s cubic-bezier(0.16, 0.7, 0.2, 1) both;
 }
 .awakening-grid {
   opacity: 0.16;
@@ -315,8 +358,35 @@
   justify-items: center;
   text-align: center;
 }
+.cinema-final:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -20%;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 35% 52%, #d78b5866 0 3%, transparent 36%),
+    linear-gradient(105deg, transparent 8%, #7b392966 40%, #d8965a55 52%, transparent 84%),
+    repeating-radial-gradient(circle at 50% 50%, #f3bf7a77 0 1px, transparent 2px 12px);
+  background-size: auto, auto, 170px 130px;
+  filter: blur(8px);
+  pointer-events: none;
+}
+.cinema-final.is-active:before {
+  animation: titleDustArrival 5.5s cubic-bezier(0.16, 0.72, 0.18, 1) both;
+}
 .cinema-final .awakening-date {
   margin-bottom: 2rem;
+}
+.cinema-final .awakening-date,
+.cinema-final > p,
+.cinema-final > [data-awaken] {
+  opacity: 0;
+}
+.cinema-final.is-active .awakening-date,
+.cinema-final.is-active > p,
+.cinema-final.is-active > [data-awaken] {
+  animation: finalDetailsIn 0.9s 3.5s ease both;
 }
 .cinema-final h1 {
   margin: 0;
@@ -328,14 +398,40 @@
 .cinema-final h1 em {
   display: block;
 }
+.trailer-beat {
+  align-content: end;
+  justify-items: start;
+  padding: 14vh max(1.2rem, 8vw) 14vh;
+  text-align: left;
+}
+.trailer-beat h2,
+.cinema-zero.trailer-beat h2,
+.cinema-years.trailer-beat h2 {
+  max-width: min(900px, 78vw);
+  font-size: clamp(3.2rem, 8vw, 7.8rem);
+  line-height: 0.78;
+  text-shadow: 0 5px 45px #000, 0 2px 9px #000;
+}
+.trailer-beat > p,
+.trailer-beat > span {
+  text-shadow: 0 2px 12px #000, 0 0 26px #000;
+}
+.trailer-beat > span {
+  max-width: 720px;
+  color: #d1c5b4;
+}
 .intro-dust-letter {
   position: relative;
   display: inline-block;
   font-style: inherit;
   will-change: transform, opacity, filter, clip-path;
+  opacity: 0;
 }
 .intro-dust-space {
   width: 0.2em;
+}
+.cinema-final.is-active .intro-dust-letter {
+  animation: introTitleFromDust 1.35s calc(var(--dust-index) * 0.11s) cubic-bezier(0.16, 0.76, 0.2, 1) both;
 }
 .exit-dust-wave {
   position: absolute;
@@ -539,6 +635,38 @@
     text-shadow: 32px -11px 3px #efb57d, 70px -25px 12px #8c432d, 115px -38px 24px #d0814f;
   }
 }
+@keyframes introTitleFromDust {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transform: translate3d(-0.28em, 0.12em, 0) scale(0.94);
+    filter: blur(14px);
+    text-shadow: -55px 8px 20px #d68b55, -100px 18px 35px #6d3024;
+  }
+  45% {
+    opacity: 0.68;
+    clip-path: inset(0 24% 0 0);
+    filter: blur(4px);
+    text-shadow: -22px 3px 8px #e8af71, -48px 10px 20px #7d3927;
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0);
+    transform: none;
+    filter: none;
+    text-shadow: inherit;
+  }
+}
+@keyframes titleDustArrival {
+  0% { opacity: 0; transform: translate3d(-18%, 3%, 0) scale(1.08); }
+  24% { opacity: 0.34; }
+  58% { opacity: 0.88; }
+  100% { opacity: 0.26; transform: translate3d(17%, -3%, 0) scale(1.02); }
+}
+@keyframes finalDetailsIn {
+  from { opacity: 0; transform: translateY(14px); filter: blur(7px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
 @keyframes introDetailsToDust {
   to { opacity: 0; transform: translate3d(2rem, -0.4rem, 0); filter: blur(8px); }
 }
@@ -651,6 +779,10 @@
     background-position: 62px 62px;
   }
 }
+@keyframes trailerCamera {
+  0% { transform: scale(1.055) translate3d(-0.6%, 0.5%, 0); }
+  100% { transform: scale(1.13) translate3d(0.7%, -0.7%, 0); }
+}
 @media (max-width: 600px) {
   .awakening-code {
     top: 2.4rem;
@@ -694,6 +826,23 @@
   .intro-ruins {
     width: 135%;
     height: 31%;
+  }
+  .trailer-beat {
+    padding: 8rem 1.35rem 8.5rem;
+  }
+  .trailer-beat h2,
+  .cinema-zero.trailer-beat h2,
+  .cinema-years.trailer-beat h2 {
+    max-width: 100%;
+    font-size: clamp(3rem, 15vw, 5.2rem);
+  }
+  .trailer-beat > span {
+    max-width: 94%;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+  .intro-frame img {
+    object-position: center;
   }
   .cinema-sound {
     right: auto;

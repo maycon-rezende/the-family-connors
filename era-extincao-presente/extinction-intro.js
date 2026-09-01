@@ -3,8 +3,7 @@
   const awakening = document.querySelector('.awakening');
   const cursor = document.querySelector('.world-cursor');
   const beats = [...document.querySelectorAll('[data-cinema-beat]')];
-  const progressParts = [...document.querySelectorAll('.cinema-progress > i')];
-  const progressLine = document.querySelector('.cinema-progress > span');
+  const trailerFrames = [...document.querySelectorAll('[data-cinema-frame]')];
   const introStatus = document.querySelector('#introStatus');
   const timecode = document.querySelector('#cinemaTimecode');
   const soundtrackFrame = document.querySelector('#introSoundcloudPlayer');
@@ -17,15 +16,28 @@
   let leaving = false;
   let soundtrackReady = false;
   let soundtrackPlaying = false;
+  let soundtrackHasPlayed = false;
   let soundtrackPosition = 0;
   let soundEnabled = false;
   let pendingStart = false;
   let lastElapsed = 0;
+  let cinemaStarted = false;
+  let soundtrackEnded = false;
+  let soundtrackStartIssued = false;
 
   // Tempos de segurança. Quando o SoundCloud informa a duração, estes pontos
   // são recalculados para acompanhar a construção musical da faixa inteira.
-  let beatTimes = [0, 12000, 28000, 47000, 65000];
+  let beatTimes = [0, 0, 9000, 18000, 28000, 38000, 48000, 58000, 68000, 78000, 88000, 98000, 106000];
   const soundtrack = window.SC && soundtrackFrame ? window.SC.Widget(soundtrackFrame) : null;
+
+  const requestSoundtrackStart = () => {
+    if (!soundtrack || !soundtrackReady || soundtrackStartIssued || soundtrackEnded) return;
+    soundtrackStartIssued = true;
+    pendingStart = false;
+    soundtrack.seekTo(0);
+    soundtrack.setVolume(soundEnabled ? 38 : 0);
+    soundtrack.play();
+  };
 
   if (soundtrack) {
     soundtrack.bind(window.SC.Widget.Events.READY, () => {
@@ -33,23 +45,34 @@
       soundtrack.setVolume(soundEnabled ? 38 : 0);
       soundtrack.getDuration((duration) => {
         if (!Number.isFinite(duration) || duration < 30000) return;
-        // A música define o ritmo, mas nenhuma tela pode permanecer parada por
-        // dezenas de segundos caso a versão do SoundCloud seja muito longa.
+        // Doze atos distribuídos pela faixa inteira. O título só começa nos
+        // segundos finais, depois da explosão e da ruptura da contenção.
         beatTimes = [
           0,
-          Math.min(duration * 0.14, 9000),
-          Math.min(duration * 0.32, 21000),
-          Math.min(duration * 0.55, 34000),
-          Math.min(duration * 0.82, 48000),
+          0,
+          duration * 0.08,
+          duration * 0.17,
+          duration * 0.26,
+          duration * 0.35,
+          duration * 0.44,
+          duration * 0.53,
+          duration * 0.62,
+          duration * 0.71,
+          duration * 0.8,
+          duration * 0.89,
+          duration * 0.96,
         ];
       });
-      if (pendingStart) {
-        soundtrack.seekTo(0);
-        soundtrack.play();
-      }
+      if (pendingStart) requestSoundtrackStart();
     });
     soundtrack.bind(window.SC.Widget.Events.PLAY, () => {
+      if (soundtrackEnded) {
+        soundtrack.pause();
+        return;
+      }
       soundtrackPlaying = true;
+      soundtrackHasPlayed = true;
+      pendingStart = false;
       if (introStatus && activeBeat === 0) introStatus.textContent = 'TRANSMISSÃO SINCRONIZADA';
     });
     soundtrack.bind(window.SC.Widget.Events.PAUSE, () => {
@@ -60,19 +83,24 @@
     });
     soundtrack.bind(window.SC.Widget.Events.FINISH, () => {
       soundtrackPlaying = false;
+      soundtrackEnded = true;
+      pendingStart = false;
+      soundtrack.pause();
       finishCinema();
     });
   }
 
+  let titleLetterIndex = 0;
   document.querySelectorAll('.cinema-final h1 > span, .cinema-final h1 > em').forEach((line) => {
     const letters = [...line.textContent];
     line.textContent = '';
-    letters.forEach((character, index) => {
+    letters.forEach((character) => {
       const letter = document.createElement('i');
       letter.className = character === ' ' ? 'intro-dust-letter intro-dust-space' : 'intro-dust-letter';
-      letter.style.setProperty('--dust-index', index);
+      letter.style.setProperty('--dust-index', titleLetterIndex);
       letter.textContent = character === ' ' ? '\u00a0' : character;
       line.append(letter);
+      if (character !== ' ') titleLetterIndex += 1;
     });
   });
 
@@ -94,11 +122,10 @@
   const setBeat = (index) => {
     activeBeat = index;
     beats.forEach((beat, beatIndex) => beat.classList.toggle('is-active', beatIndex === index));
-    progressParts.forEach((part, partIndex) => part.classList.toggle('is-passed', partIndex < index));
-    if (progressLine) progressLine.style.width = `${Math.min((index / 4) * 100, 100)}%`;
-    awakening.classList.toggle('is-zero', index === 2);
-    awakening.classList.toggle('is-years', index >= 3);
-    if (index === 2) {
+    trailerFrames.forEach((frame) => frame.classList.toggle('is-active', Number(frame.dataset.cinemaFrame) === index));
+    awakening.classList.toggle('is-zero', index === 10);
+    awakening.classList.toggle('is-years', index >= 9);
+    if (index === 10) {
       awakening.classList.add('is-flashing', 'is-shaking', 'is-exploding');
       timers.push(setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 1600));
       timers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 6800));
@@ -107,35 +134,49 @@
     }
     const status = [
       'AGUARDANDO CONEXÃO',
-      'CONTENÇÃO COMPROMETIDA',
+      'MEMÓRIA RECUPERADA',
+      'CONTENÇÃO ATIVA',
+      'OBSERVAÇÃO RECÍPROCA',
+      'DIA ZERO RECUPERADO',
+      'COMBOIO EM MOVIMENTO',
+      'FREQUÊNCIA HLS ATIVA',
+      'ROTA SOB ATAQUE',
+      'PROTOCOLO MÉDICO ATIVO',
+      'SINAIS HUMANOS ENCERRADOS',
       'IMPACTO DETECTADO',
-      'ORIGEM NÃO HUMANA',
+      'CONTENÇÃO ROMPIDA',
       'CONSCIÊNCIA INCONCLUSIVA',
     ];
     if (introStatus) introStatus.textContent = status[index];
   };
 
   const startCinema = () => {
+    if (cinemaStarted) return;
+    cinemaStarted = true;
     clearTimers();
     awakening.classList.add('is-running');
     awakening.classList.remove('is-zero', 'is-years', 'is-flashing', 'is-shaking', 'is-exploding');
-    setBeat(0);
+    setBeat(1);
     startedAt = performance.now();
     lastElapsed = 0;
     soundtrackPosition = 0;
+    soundtrackHasPlayed = false;
     pendingStart = true;
+    soundtrackEnded = false;
+    soundtrackStartIssued = false;
     setSound(true);
     if (soundtrackReady) {
-      soundtrack.seekTo(0);
-      soundtrack.play();
+      requestSoundtrackStart();
     } else if (introStatus) {
       introStatus.textContent = 'CONECTANDO AO SINAL';
     }
 
     const followSoundtrack = () => {
-      const fallback = Math.max(0, performance.now() - startedAt - 4000);
-      const soundtrackElapsed = soundtrackPlaying ? soundtrackPosition : 0;
-      const elapsed = Math.max(lastElapsed, soundtrackElapsed || fallback);
+      const fallback = Math.max(0, performance.now() - startedAt - 5000);
+      const soundtrackElapsed = soundtrackHasPlayed ? soundtrackPosition : fallback;
+      // Se o SoundCloud estiver armazenando dados, a imagem pausa junto com a
+      // música em vez de continuar e perder o sincronismo.
+      const elapsed = Math.max(lastElapsed, soundtrackElapsed);
       lastElapsed = elapsed;
       const seconds = Math.floor(elapsed / 1000);
       const frames = Math.floor((elapsed % 1000) / 40);
@@ -152,8 +193,9 @@
 
   const finishCinema = () => {
     clearTimers();
+    pendingStart = false;
     awakening.classList.add('is-running', 'is-years');
-    setBeat(4);
+    setBeat(beats.length - 1);
   };
 
   const enterWorld = () => {
