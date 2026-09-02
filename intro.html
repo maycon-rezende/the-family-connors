@@ -12,7 +12,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap"rel="stylesheet" />
     <link rel="stylesheet" href="era-extincao-presente/extinction-world.css" />
-    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=13" />
+    <link rel="stylesheet" href="era-extincao-presente/extinction-opening-cinematic.css?v=16" />
     <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
   </head>
   <body class="intro-page world-locked">
@@ -22,6 +22,7 @@
       <div class="awakening-grid" aria-hidden="true"></div>
       <div class="cinema-bars" aria-hidden="true"><i></i><i></i></div>
       <div class="intro-trailer-frames" aria-hidden="true">
+        <template id="legacyIntroFrames">
         <figure class="intro-frame" data-cinema-frame="1"><img src="img-intro/frame-01-ultimo-mundo.jpg" alt="" decoding="async" fetchpriority="high" /></figure>
         <figure class="intro-frame" data-cinema-frame="2"><img src="img-intro/frame-02-contencao.jpg" alt="" decoding="async" /></figure>
         <figure class="intro-frame" data-cinema-frame="3"><img src="img-intro/frame-03-consciencia.jpg" alt="" decoding="async" /></figure>
@@ -33,6 +34,31 @@
         <figure class="intro-frame" data-cinema-frame="9"><img src="img-intro/frame-06-sinal.jpg" alt="" decoding="async" /></figure>
         <figure class="intro-frame" data-cinema-frame="10"><img src="img-intro/frame-04-impacto.jpg" alt="" decoding="async" /></figure>
         <figure class="intro-frame" data-cinema-frame="11"><img src="img-intro/frame-11-libertacao.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="12"><img src="img-intro/frame-12-herdeiros.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="13"><img src="img-intro/frame-13-combate.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="14"><img src="img-intro/frame-14-isolde.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="15"><img src="img-intro/frame-15-nova-geracao.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="16"><img src="img-intro/frame-16-fundadores.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="17"><img src="img-intro/frame-17-resistencia.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="18"><img src="img-intro/frame-18-alucard.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="19"><img src="img-intro/frame-19-diana.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="20"><img src="img-intro/frame-20-mary.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="21"><img src="img-intro/frame-21-nicolai.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="22"><img src="img-intro/frame-22-nathan.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="23"><img src="img-intro/frame-23-pollyana.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="24"><img src="img-intro/frame-24-jack.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="25"><img src="img-intro/frame-25-jack-dimitri.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="26"><img src="img-intro/frame-26-john.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="27"><img src="img-intro/frame-27-brian.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="28"><img src="img-intro/frame-28-hellen.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="29"><img src="img-intro/frame-29-naomi.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="30"><img src="img-intro/frame-30-luke.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="31"><img src="img-intro/frame-31-isolde-mecanica.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame" data-cinema-frame="32"><img src="img-intro/frame-32-depois-do-caos.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame intro-action-frame" data-cinema-frame="33"><img src="img-intro/frame-33-herdeiros-em-combate.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame intro-action-frame" data-cinema-frame="34"><img src="img-intro/frame-34-filhas-em-combate.jpg" alt="" decoding="async" /></figure>
+        <figure class="intro-frame intro-action-frame" data-cinema-frame="35"><img src="img-intro/frame-35-evento-extincao.jpg" alt="" decoding="async" /></figure>
+        </template>
       </div>
       <div class="intro-ruins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="intro-eclipse" aria-hidden="true"></div>
@@ -81,14 +107,14 @@
           <span>Hellen, Naomi e Luke mantiveram os canais vivos no meio da noite mais longa.</span>
         </section>
         <section class="cinematic-beat trailer-beat" data-cinema-beat="7">
-          <p>ROTA DE EXTRAÇÃO // SOB ATAQUE</p>
-          <h2>...ninguém seria<br /><em>deixado para trás.</em></h2>
-          <span>Jack e Dimitri abriram uma estrada onde restavam apenas fogo e destroços.</span>
+          <p>SEGUNDA GERAÇÃO // COMBATE ATIVO</p>
+          <h2>A guerra criou<br /><em>seus herdeiros.</em></h2>
+          <span>Os filhos cresceram entre rotas mortas, armas e transmissões. Adultos, tornaram-se a nova linha dos Hellsings.</span>
         </section>
         <section class="cinematic-beat trailer-beat" data-cinema-beat="8">
-          <p>COMBOIO MÉDICO // EM MOVIMENTO</p>
-          <h2>Sobreviver também<br /><em>era resistir.</em></h2>
-          <span>John aprendeu a salvar vidas sem hospitais, sem descanso e sem promessa de amanhã.</span>
+          <p>PROTOCOLO DE RESISTÊNCIA // TODOS OS CANAIS</p>
+          <h2>Eles herdaram<br /><em>um mundo em guerra.</em></h2>
+          <span>Alucard, Nicolai, Diana, Mary, Isolde, Nathan e Pollyana não conheceram a rendição.</span>
         </section>
         <section class="cinematic-beat trailer-beat cinema-years" data-cinema-beat="9">
           <p>TRANSMISSÕES HUMANAS // ENCERRADAS</p>
@@ -119,17 +145,7 @@
       </button>
       <small>AVISO // ESTE NÃO É O MUNDO QUE ELES CONHECIAM</small>
     </section>
-    <details class="temporary-soundtrack soundtrack-hidden">
-      <summary>TRILHA TEMPORÁRIA // SOUNDCLOUD</summary>
-      <iframe
-        id="introSoundcloudPlayer"
-        title="Trilha temporária da abertura"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-lazcano-1/avengers-age-of-ultron-no-strings-on-me-ultrons-theme&color=%23d8552d&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_playcount=false&single_active=true&visual=false"
-      ></iframe>
-      <small>No Strings on Me — trilha temporária pelo player oficial.</small>
-    </details>
-    <script src="https://w.soundcloud.com/player/api.js"></script>
-    <script src="era-extincao-presente/extinction-intro.js?v=13"></script>
+    <audio id="introReferenceAudio" preload="auto" playsinline src="audio/intro-ultron-reference.mp3"></audio>
+    <script src="era-extincao-presente/extinction-intro.js?v=16"></script>
   </body>
 </html>

@@ -1,213 +1,201 @@
 (() => {
   const body = document.body;
   const awakening = document.querySelector('.awakening');
-  const cursor = document.querySelector('.world-cursor');
+  const frameStage = document.querySelector('.intro-trailer-frames');
   const beats = [...document.querySelectorAll('[data-cinema-beat]')];
-  const trailerFrames = [...document.querySelectorAll('[data-cinema-frame]')];
   const introStatus = document.querySelector('#introStatus');
   const timecode = document.querySelector('#cinemaTimecode');
-  const soundtrackFrame = document.querySelector('#introSoundcloudPlayer');
+  const audio = document.querySelector('#introReferenceAudio');
   const soundButton = document.querySelector('[data-toggle-sound]');
+  const cursor = document.querySelector('.world-cursor');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let timers = [];
-  let cinemaFrame = 0;
-  let startedAt = 0;
+
+  const sceneTimes = [
+    0, 3.736, 5.02, 7.734, 9.036, 10.319, 11.702, 12.903, 14.235, 15.651, 16.952,
+    24.9, 26.419, 27.835, 31.753, 35.302, 37.271, 40.802, 42.22, 43.02, 43.569,
+    44.271, 45.153, 46.02, 47.187, 50.238, 50.82, 56.87, 57.535, 59.285, 61.002,
+    61.586, 64.837, 68.969, 71.005, 72.087, 73.469, 74.254, 78.054, 80.472, 81.887,
+    82.72, 84.437, 85.273, 86.103, 86.938, 87.818, 88.687, 89.569, 90.321, 91.021,
+    92.819, 93.57, 94.103, 94.62, 95.155, 95.704, 96.788, 98.455, 99.07, 99.819,
+    100.287, 100.82, 101.287, 102.037, 102.321,
+  ];
+
+  const storySources = [
+    'frame-01-ultimo-mundo.jpg', 'frame-02-contencao.jpg', 'frame-03-consciencia.jpg',
+    'frame-16-fundadores.jpg', 'frame-36-jack-comando.jpg', 'frame-24-jack.jpg',
+    'frame-25-jack-dimitri.jpg', 'frame-05-depois.jpg', 'frame-12-herdeiros.jpg',
+    'frame-18-alucard.jpg', 'frame-21-nicolai.jpg', 'frame-22-nathan.jpg',
+    'frame-23-pollyana.jpg', 'frame-13-combate.jpg', 'frame-19-diana.jpg', 'frame-20-mary.jpg',
+    'frame-14-isolde.jpg', 'frame-15-nova-geracao.jpg', 'frame-17-resistencia.jpg',
+    'frame-28-hellen.jpg', 'frame-29-naomi.jpg', 'frame-30-luke.jpg', 'frame-27-brian.jpg',
+    'frame-26-john.jpg', 'frame-31-isolde-mecanica.jpg', 'frame-07-convoy.jpg',
+    'frame-08-comunicacoes.jpg', 'frame-09-comandantes.jpg', 'frame-10-resgate.jpg',
+    'frame-32-depois-do-caos.jpg', 'frame-06-sinal.jpg',
+  ].map((name) => `img-intro/${name}`);
+
+  const actionSources = ['irmas', 'diana', 'isolde', 'jack', 'mary'].flatMap((name) =>
+    Array.from({ length: 6 }, (_, index) => `img-intro/sequence/action-${name}-${String(index + 1).padStart(2, '0')}.jpg`),
+  );
+
+  const sceneSources = [
+    ...storySources,
+    ...actionSources,
+    'img-intro/frame-33-herdeiros-em-combate.jpg',
+    'img-intro/frame-34-filhas-em-combate.jpg',
+    'img-intro/frame-35-evento-extincao.jpg',
+    'img-intro/frame-04-impacto.jpg',
+    'img-intro/frame-11-libertacao.jpg',
+  ];
+
+  const beatTimes = [0, 0, 11.702, 25.334, 40.802, 56.87, 68.969, 78.054, 86.103, 94.103, 102.037, 105.5, 110.005];
+  const statuses = [
+    'AGUARDANDO CONEXÃO', 'MEMÓRIA RECUPERADA', 'CONTENÇÃO ATIVA', 'OBSERVAÇÃO RECÍPROCA',
+    'DIA ZERO RECUPERADO', 'COMBOIO EM MOVIMENTO', 'FREQUÊNCIA HLS ATIVA', 'SEGUNDA GERAÇÃO ATIVA',
+    'PROTOCOLO DE RESISTÊNCIA', 'SINAIS HUMANOS ENCERRADOS', 'IMPACTO DETECTADO',
+    'CONTENÇÃO ROMPIDA', 'CONSCIÊNCIA INCONCLUSIVA',
+  ];
+
+  let frames = [];
+  let activeFrame = -1;
   let activeBeat = 0;
+  let animationFrame = 0;
+  let started = false;
   let leaving = false;
-  let soundtrackReady = false;
-  let soundtrackPlaying = false;
-  let soundtrackHasPlayed = false;
-  let soundtrackPosition = 0;
-  let soundEnabled = false;
-  let pendingStart = false;
-  let lastElapsed = 0;
-  let cinemaStarted = false;
-  let soundtrackEnded = false;
-  let soundtrackStartIssued = false;
+  let effectTimers = [];
 
-  // Tempos de segurança. Quando o SoundCloud informa a duração, estes pontos
-  // são recalculados para acompanhar a construção musical da faixa inteira.
-  let beatTimes = [0, 0, 9000, 18000, 28000, 38000, 48000, 58000, 68000, 78000, 88000, 98000, 106000];
-  const soundtrack = window.SC && soundtrackFrame ? window.SC.Widget(soundtrackFrame) : null;
-
-  const requestSoundtrackStart = () => {
-    if (!soundtrack || !soundtrackReady || soundtrackStartIssued || soundtrackEnded) return;
-    soundtrackStartIssued = true;
-    pendingStart = false;
-    soundtrack.seekTo(0);
-    soundtrack.setVolume(soundEnabled ? 38 : 0);
-    soundtrack.play();
+  const renderFrames = () => {
+    frameStage.replaceChildren();
+    const fragment = document.createDocumentFragment();
+    sceneSources.forEach((source, index) => {
+      const figure = document.createElement('figure');
+      figure.className = index >= storySources.length ? 'intro-frame intro-action-frame' : 'intro-frame';
+      const nextCut = sceneTimes[index + 1];
+      if (nextCut && nextCut - sceneTimes[index] <= 1.2) figure.classList.add('intro-rapid-frame');
+      figure.dataset.sequenceIndex = index;
+      const image = document.createElement('img');
+      image.alt = '';
+      image.decoding = 'async';
+      image.loading = 'eager';
+      if (index < 10) image.src = source;
+      else image.dataset.src = source;
+      if (index === 0) image.fetchPriority = 'high';
+      figure.append(image);
+      fragment.append(figure);
+    });
+    frameStage.append(fragment);
+    frames = [...frameStage.querySelectorAll('.intro-frame')];
   };
 
-  if (soundtrack) {
-    soundtrack.bind(window.SC.Widget.Events.READY, () => {
-      soundtrackReady = true;
-      soundtrack.setVolume(soundEnabled ? 38 : 0);
-      soundtrack.getDuration((duration) => {
-        if (!Number.isFinite(duration) || duration < 30000) return;
-        // Doze atos distribuídos pela faixa inteira. O título só começa nos
-        // segundos finais, depois da explosão e da ruptura da contenção.
-        beatTimes = [
-          0,
-          0,
-          duration * 0.08,
-          duration * 0.17,
-          duration * 0.26,
-          duration * 0.35,
-          duration * 0.44,
-          duration * 0.53,
-          duration * 0.62,
-          duration * 0.71,
-          duration * 0.8,
-          duration * 0.89,
-          duration * 0.96,
-        ];
+  const ensureFrame = (index) => {
+    const image = frames[index]?.querySelector('img[data-src]');
+    if (!image) return;
+    image.src = image.dataset.src;
+    delete image.dataset.src;
+  };
+
+  const prepareTitle = () => {
+    let titleLetterIndex = 0;
+    document.querySelectorAll('.cinema-final h1 > span, .cinema-final h1 > em').forEach((line) => {
+      const letters = [...line.textContent];
+      line.textContent = '';
+      letters.forEach((character) => {
+        const letter = document.createElement('i');
+        letter.className = character === ' ' ? 'intro-dust-letter intro-dust-space' : 'intro-dust-letter';
+        letter.style.setProperty('--dust-index', titleLetterIndex);
+        letter.textContent = character === ' ' ? '\u00a0' : character;
+        line.append(letter);
+        if (character !== ' ') titleLetterIndex += 1;
       });
-      if (pendingStart) requestSoundtrackStart();
     });
-    soundtrack.bind(window.SC.Widget.Events.PLAY, () => {
-      if (soundtrackEnded) {
-        soundtrack.pause();
-        return;
-      }
-      soundtrackPlaying = true;
-      soundtrackHasPlayed = true;
-      pendingStart = false;
-      if (introStatus && activeBeat === 0) introStatus.textContent = 'TRANSMISSÃO SINCRONIZADA';
-    });
-    soundtrack.bind(window.SC.Widget.Events.PAUSE, () => {
-      soundtrackPlaying = false;
-    });
-    soundtrack.bind(window.SC.Widget.Events.PLAY_PROGRESS, (event) => {
-      soundtrackPosition = event.currentPosition || 0;
-    });
-    soundtrack.bind(window.SC.Widget.Events.FINISH, () => {
-      soundtrackPlaying = false;
-      soundtrackEnded = true;
-      pendingStart = false;
-      soundtrack.pause();
-      finishCinema();
-    });
-  }
+  };
 
-  let titleLetterIndex = 0;
-  document.querySelectorAll('.cinema-final h1 > span, .cinema-final h1 > em').forEach((line) => {
-    const letters = [...line.textContent];
-    line.textContent = '';
-    letters.forEach((character) => {
-      const letter = document.createElement('i');
-      letter.className = character === ' ' ? 'intro-dust-letter intro-dust-space' : 'intro-dust-letter';
-      letter.style.setProperty('--dust-index', titleLetterIndex);
-      letter.textContent = character === ' ' ? '\u00a0' : character;
-      line.append(letter);
-      if (character !== ' ') titleLetterIndex += 1;
-    });
-  });
+  const setFrame = (index) => {
+    if (activeFrame === index || !frames[index]) return;
+    for (let preloadIndex = index; preloadIndex <= Math.min(index + 8, frames.length - 1); preloadIndex += 1) {
+      ensureFrame(preloadIndex);
+    }
+    activeFrame = index;
+    frames.forEach((frame, frameIndex) => frame.classList.toggle('is-active', frameIndex === index));
+  };
 
-  const clearTimers = () => {
-    timers.forEach(clearTimeout);
-    timers = [];
-    cancelAnimationFrame(cinemaFrame);
-    cinemaFrame = 0;
+  const setBeat = (index) => {
+    if (activeBeat === index && beats[index]?.classList.contains('is-active')) return;
+    activeBeat = index;
+    beats.forEach((beat, beatIndex) => beat.classList.toggle('is-active', beatIndex === index));
+    awakening.classList.toggle('is-zero', index === 10);
+    awakening.classList.toggle('is-years', index >= 9);
+    awakening.classList.remove('is-flashing', 'is-shaking', 'is-exploding');
+    effectTimers.forEach(clearTimeout);
+    effectTimers = [];
+    if (index === 10) {
+      awakening.classList.add('is-flashing', 'is-shaking', 'is-exploding');
+      effectTimers.push(setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 1500));
+      effectTimers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 7200));
+    }
+    if (introStatus) introStatus.textContent = statuses[index] || statuses.at(-1);
+  };
+
+  const indexAtTime = (moments, seconds) => {
+    let result = 0;
+    for (let index = 0; index < moments.length; index += 1) {
+      if (seconds < moments[index]) break;
+      result = index;
+    }
+    return result;
+  };
+
+  const renderTimeline = () => {
+    if (!started || !audio) return;
+    const seconds = Math.min(audio.currentTime, 117.702);
+    const hundredths = Math.floor((seconds % 1) * 100);
+    const wholeSeconds = Math.floor(seconds);
+    if (timecode) timecode.textContent = `00:${String(wholeSeconds).padStart(2, '0')}:${String(hundredths).padStart(2, '0')}`;
+    setFrame(indexAtTime(sceneTimes, seconds));
+    setBeat(indexAtTime(beatTimes, seconds));
+    if (!audio.paused && !audio.ended) animationFrame = requestAnimationFrame(renderTimeline);
   };
 
   const setSound = (enabled) => {
-    soundEnabled = enabled;
-    if (soundtrackReady) soundtrack.setVolume(enabled ? 38 : 0);
+    if (audio) audio.muted = !enabled;
     if (!soundButton) return;
     soundButton.textContent = enabled ? 'SOM // ON' : 'SOM // OFF';
     soundButton.setAttribute('aria-pressed', String(enabled));
   };
 
-  const setBeat = (index) => {
-    activeBeat = index;
-    beats.forEach((beat, beatIndex) => beat.classList.toggle('is-active', beatIndex === index));
-    trailerFrames.forEach((frame) => frame.classList.toggle('is-active', Number(frame.dataset.cinemaFrame) === index));
-    awakening.classList.toggle('is-zero', index === 10);
-    awakening.classList.toggle('is-years', index >= 9);
-    if (index === 10) {
-      awakening.classList.add('is-flashing', 'is-shaking', 'is-exploding');
-      timers.push(setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 1600));
-      timers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 6800));
-    } else {
-      awakening.classList.remove('is-flashing', 'is-shaking', 'is-exploding');
-    }
-    const status = [
-      'AGUARDANDO CONEXÃO',
-      'MEMÓRIA RECUPERADA',
-      'CONTENÇÃO ATIVA',
-      'OBSERVAÇÃO RECÍPROCA',
-      'DIA ZERO RECUPERADO',
-      'COMBOIO EM MOVIMENTO',
-      'FREQUÊNCIA HLS ATIVA',
-      'ROTA SOB ATAQUE',
-      'PROTOCOLO MÉDICO ATIVO',
-      'SINAIS HUMANOS ENCERRADOS',
-      'IMPACTO DETECTADO',
-      'CONTENÇÃO ROMPIDA',
-      'CONSCIÊNCIA INCONCLUSIVA',
-    ];
-    if (introStatus) introStatus.textContent = status[index];
+  const finishCinema = () => {
+    cancelAnimationFrame(animationFrame);
+    if (audio) audio.pause();
+    awakening.classList.add('is-running', 'is-years');
+    setFrame(sceneSources.length - 1);
+    setBeat(beats.length - 1);
   };
 
-  const startCinema = () => {
-    if (cinemaStarted) return;
-    cinemaStarted = true;
-    clearTimers();
+  const startCinema = async () => {
+    if (started || !audio) return;
+    started = true;
     awakening.classList.add('is-running');
     awakening.classList.remove('is-zero', 'is-years', 'is-flashing', 'is-shaking', 'is-exploding');
-    setBeat(1);
-    startedAt = performance.now();
-    lastElapsed = 0;
-    soundtrackPosition = 0;
-    soundtrackHasPlayed = false;
-    pendingStart = true;
-    soundtrackEnded = false;
-    soundtrackStartIssued = false;
+    audio.loop = false;
+    audio.currentTime = 0;
+    audio.volume = 0.46;
     setSound(true);
-    if (soundtrackReady) {
-      requestSoundtrackStart();
-    } else if (introStatus) {
-      introStatus.textContent = 'CONECTANDO AO SINAL';
+    setFrame(0);
+    setBeat(1);
+    try {
+      await audio.play();
+      animationFrame = requestAnimationFrame(renderTimeline);
+    } catch {
+      started = false;
+      if (introStatus) introStatus.textContent = 'ÁUDIO BLOQUEADO // TENTE NOVAMENTE';
     }
-
-    const followSoundtrack = () => {
-      const fallback = Math.max(0, performance.now() - startedAt - 5000);
-      const soundtrackElapsed = soundtrackHasPlayed ? soundtrackPosition : fallback;
-      // Se o SoundCloud estiver armazenando dados, a imagem pausa junto com a
-      // música em vez de continuar e perder o sincronismo.
-      const elapsed = Math.max(lastElapsed, soundtrackElapsed);
-      lastElapsed = elapsed;
-      const seconds = Math.floor(elapsed / 1000);
-      const frames = Math.floor((elapsed % 1000) / 40);
-      if (timecode) timecode.textContent = `00:${String(seconds).padStart(2, '0')}:${String(frames).padStart(2, '0')}`;
-      let nextBeat = 0;
-      beatTimes.forEach((moment, index) => {
-        if (elapsed >= moment) nextBeat = index;
-      });
-      if (nextBeat !== activeBeat) setBeat(nextBeat);
-      if (elapsed < beatTimes.at(-1)) cinemaFrame = requestAnimationFrame(followSoundtrack);
-    };
-    cinemaFrame = requestAnimationFrame(followSoundtrack);
-  };
-
-  const finishCinema = () => {
-    clearTimers();
-    pendingStart = false;
-    awakening.classList.add('is-running', 'is-years');
-    setBeat(beats.length - 1);
   };
 
   const enterWorld = () => {
     if (leaving) return;
     leaving = true;
-    clearTimers();
-    if (soundtrackReady) soundtrack.pause();
-    try {
-      sessionStorage.setItem('ede-intro-liberada', 'sim');
-    } catch {
-      // O parâmetro da URL também libera a entrada quando o armazenamento está bloqueado.
-    }
+    cancelAnimationFrame(animationFrame);
+    if (audio) audio.pause();
+    try { sessionStorage.setItem('ede-intro-liberada', 'sim'); } catch {}
     if (reduced) {
       location.href = 'index.html?intro=concluida';
       return;
@@ -215,22 +203,23 @@
     awakening.classList.add('is-disintegrating');
     body.classList.add('world-transitioning');
     if (introStatus) introStatus.textContent = 'MATÉRIA EM DISPERSÃO';
-    setTimeout(() => {
-      awakening.classList.add('is-dust-exiting');
-      if (introStatus) introStatus.textContent = 'ATRAVESSANDO A TEMPESTADE';
-    }, 2300);
-    setTimeout(() => {
-      location.href = 'index.html?intro=concluida';
-    }, 3250);
+    setTimeout(() => awakening.classList.add('is-dust-exiting'), 2300);
+    setTimeout(() => { location.href = 'index.html?intro=concluida'; }, 3250);
   };
 
+  renderFrames();
+  prepareTitle();
+  audio?.addEventListener('ended', finishCinema, { once: true });
+  audio?.addEventListener('play', () => {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(renderTimeline);
+  });
   document.querySelector('[data-start-cinema]')?.addEventListener('click', startCinema);
   document.querySelector('[data-skip-cinema]')?.addEventListener('click', finishCinema);
   document.querySelector('[data-awaken]')?.addEventListener('click', enterWorld);
-  soundButton?.addEventListener('click', () => setSound(!soundEnabled));
+  soundButton?.addEventListener('click', () => setSound(audio?.muted));
 
   if (reduced) finishCinema();
-
   if (cursor && matchMedia('(pointer:fine)').matches) {
     addEventListener('pointermove', (event) => {
       cursor.style.opacity = '1';
