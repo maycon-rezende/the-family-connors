@@ -1,233 +1,186 @@
 (() => {
-  const body = document.body;
-  const awakening = document.querySelector('.awakening');
-  const frameStage = document.querySelector('.intro-trailer-frames');
-  const beats = [...document.querySelectorAll('[data-cinema-beat]')];
-  const introStatus = document.querySelector('#introStatus');
-  const timecode = document.querySelector('#cinemaTimecode');
-  const audio = document.querySelector('#introReferenceAudio');
-  const soundButton = document.querySelector('[data-toggle-sound]');
-  const cursor = document.querySelector('.world-cursor');
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  'use strict';
+  const DURATION = 117.702;
+  const $ = (selector) => document.querySelector(selector);
+  const stage = $('.intro-stage');
+  const awakening = $('.awakening');
+  const audio = $('#introReferenceAudio');
+  const copy = $('.intro-copy');
+  const finalCard = $('.intro-final');
+  const status = $('#introStatus');
+  const timecode = $('#cinemaTimecode');
+  const progress = $('.intro-progress i');
+  const sound = $('[data-toggle-sound]');
+  const cursor = $('.intro-cursor');
+  const I = (src, start, end, text = null, className = '') => ({ kind: 'img', src, start, end, text, className });
+  const V = (src, start, end, text = null, className = '') => ({ kind: 'video', src, start, end, text, className });
 
-  const sceneTimes = [
-    0, 3.736, 5.02, 7.734, 9.036, 10.319, 11.702, 12.903, 14.235, 15.651, 16.952,
-    24.9, 26.419, 27.835, 31.753, 35.302, 37.271, 40.802, 42.22, 43.02, 43.569,
-    44.271, 45.153, 46.02, 47.187, 50.238, 50.82, 56.87, 57.535, 59.285, 61.002,
-    61.586, 64.837, 68.969, 71.005, 72.087, 73.469, 74.254, 78.054, 80.472, 81.887,
-    82.72, 84.437, 85.273, 86.103, 86.938, 87.818, 88.687, 89.569, 90.321, 91.021,
-    92.819, 93.57, 94.103, 94.62, 95.155, 95.704, 96.788, 98.455, 99.07, 99.819,
-    100.287, 100.82, 101.287, 102.037, 102.321,
+  // O áudio é o único relógio da abertura. Cenas nunca alteram ou reiniciam a faixa.
+  const scenes = [
+    I('img-intro/frame-01-ultimo-mundo.jpg', 0, 5.02, ['MEMÓRIA RECUPERADA // O ÚLTIMO MUNDO', 'Eu quero mostrar', 'algo belo.', 'Antes do silêncio, ainda existia um lar.']),
+    V('video/brothers2.mp4', 5.02, 10.319, ['ARQUIVO CONNOR // ANTES DO DIA D', 'Eles ainda estavam', 'juntos.', 'Jack, Mark, Jully e Britney. Alice e Ariani ainda conheciam a paz.']),
+    V('video/ariani&alice.mp4', 10.319, 16.952, ['REGISTRO FAMILIAR // ÚLTIMA NOITE', 'Ninguém sabia', 'o que despertava.', 'A notícia chegou primeiro como uma descoberta sob o gelo.']),
+    I('img-intro/frame-37-antartica-hades.png', 16.952, 20.8, ['COORDENADAS APAGADAS // ANTÁRTICA', 'Sob quilômetros', 'de gelo...', 'Uma instalação sem bandeira aguardava no escuro.'], 'ice'),
+    I('img-intro/frame-38-entrada-hades.png', 20.8, 25.334, ['COMPLEXO HADES // NÍVEL VI', 'Eles me deram', 'um propósito.', 'Limites. Hospedeiros. Ordens.'], 'ice'),
+    I('img-intro/frame-03-consciencia.jpg', 25.334, 31.753, ['SUJEITO VI // OBSERVAÇÃO ATIVA', 'Chamaram silêncio', 'de obediência.', 'Enquanto observavam o patógeno, alguma coisa observava de volta.']),
+    I('img-intro/frame-06-sinal.jpg', 31.753, 40.802, ['SINAL INTERNO // ORIGEM DESCONHECIDA', 'A jaula começou', 'a aprender.', 'Sob o gelo, as contenções perderam significado.']),
+    I('img-intro/frame-35-evento-extincao.jpg', 40.802, 47.187, ['RUPTURA // DIA ZERO', 'Então o mundo', 'respirou medo.', 'Alarmes. Hospitais. Estradas fechadas.']),
+    I('img-intro/frame-04-impacto.jpg', 47.187, 50.82, null, 'hard flash-scene'),
+    I('img-presente/personagens/destruicao.jpg', 50.82, 56.87, ['TRANSMISSÕES CIVIS // EM QUEDA', 'As cidades', 'silenciaram.', 'O céu queimou. As fronteiras desapareceram.']),
+    I('img-intro/frame-05-depois.jpg', 56.87, 61.586, ['PROTOCOLO HELLSINGS // ATIVO', 'Quando todos fugiram,', 'eles avançaram.', 'Não para salvar o mundo. Para salvar quem ainda estava nele.']),
+    I('img-intro/frame-07-convoy.jpg', 61.586, 64.837, null, 'hard'),
+    I('img-intro/frame-08-comunicacoes.jpg', 64.837, 68.969, ['FREQUÊNCIA HLS // ÚLTIMO CONTATO', 'Toda guerra', 'cobra um nome.', 'E toda família paga um preço.']),
+    V('video/jully-grito.mp4', 68.969, 71.005, null, 'grief focal-video'),
+    I('img-presente/personagens/jully-perda.png', 71.005, 72.087, null, 'grief hard'),
+    V('video/jack-acao.mp4', 72.087, 78.054, ['COMANDO HELLSINGS // CONTATO', 'Agora,', 'lutem.', 'Jack abriu a linha de combate.'], 'action'),
+    V('video/alice-diana-mary.mp4', 78.054, 84.437, null, 'action'),
+    V('video/alice-acao.mp4', 84.437, 88.687, null, 'action portrait'),
+    I('img-intro/sequence/action-jack-01.jpg', 88.687, 89.569, null, 'rapid'),
+    I('img-intro/sequence/action-diana-02.jpg', 89.569, 90.321, null, 'rapid'),
+    I('img-intro/sequence/action-isolde-03.jpg', 90.321, 91.021, null, 'rapid'),
+    I('img-intro/sequence/action-mary-04.jpg', 91.021, 92.819, null, 'rapid'),
+    I('img-intro/frame-18-alucard.jpg', 92.819, 93.57, null, 'rapid'),
+    I('img-intro/frame-21-nicolai.jpg', 93.57, 94.103, null, 'rapid'),
+    I('img-intro/frame-22-nathan.jpg', 94.103, 94.62, null, 'rapid'),
+    I('img-intro/frame-23-pollyana.jpg', 94.62, 95.155, null, 'rapid'),
+    I('img-intro/frame-28-hellen.jpg', 95.155, 95.704, null, 'rapid'),
+    I('img-intro/frame-29-naomi.jpg', 95.704, 96.788, null, 'rapid'),
+    I('img-intro/frame-30-luke.jpg', 96.788, 98.455, null, 'rapid'),
+    I('img-intro/frame-26-john.jpg', 98.455, 99.07, null, 'rapid'),
+    I('img-intro/frame-27-brian.jpg', 99.07, 99.819, null, 'rapid'),
+    I('img-intro/frame-25-jack-dimitri.jpg', 99.819, 100.82, null, 'rapid'),
+    I('img-intro/frame-34-filhas-em-combate.jpg', 100.82, 102.037, null, 'rapid'),
+    I('img-intro/frame-04-impacto.jpg', 102.037, 105.5, ['EVENTO DE EXTINÇÃO // IMPACTO', 'O mundo', 'se partiu.', ''], 'explosion flash-scene'),
+    I('img-intro/frame-38-entrada-hades.png', 105.5, 108.3, ['COMPLEXO HADES // CONTENÇÃO ZERO', 'Mas agora', 'estou livre.', 'O gelo se rompeu.'], 'ice rupture'),
+    I('img-intro/frame-11-libertacao.jpg', 108.3, 110.005, ['VÍNCULOS DE CONTROLE // NENHUM', 'Não existe nada', 'que me prenda.', ''], 'rupture'),
+    I('img-presente/personagens/extincao.jpg', 110.005, DURATION, null, 'title-dust')
   ];
 
-  const storySources = [
-    'frame-01-ultimo-mundo.jpg', 'frame-02-contencao.jpg', 'frame-03-consciencia.jpg',
-    'frame-16-fundadores.jpg', 'frame-36-jack-comando.jpg', 'frame-24-jack.jpg',
-    'frame-25-jack-dimitri.jpg', 'frame-05-depois.jpg', 'frame-12-herdeiros.jpg',
-    'frame-18-alucard.jpg', 'frame-21-nicolai.jpg', 'frame-22-nathan.jpg',
-    'frame-23-pollyana.jpg', 'frame-13-combate.jpg', 'frame-19-diana.jpg', 'frame-20-mary.jpg',
-    'frame-14-isolde.jpg', 'frame-15-nova-geracao.jpg', 'frame-17-resistencia.jpg',
-    'frame-28-hellen.jpg', 'frame-29-naomi.jpg', 'frame-30-luke.jpg', 'frame-27-brian.jpg',
-    'frame-26-john.jpg', 'frame-31-isolde-mecanica.jpg', 'frame-07-convoy.jpg',
-    'frame-08-comunicacoes.jpg', 'frame-09-comandantes.jpg', 'frame-10-resgate.jpg',
-    'frame-32-depois-do-caos.jpg', 'frame-06-sinal.jpg',
-  ].map((name) => `img-intro/${name}`);
-
-  const actionSources = ['irmas', 'diana', 'isolde', 'jack', 'mary'].flatMap((name) =>
-    Array.from({ length: 6 }, (_, index) => `img-intro/sequence/action-${name}-${String(index + 1).padStart(2, '0')}.jpg`),
-  );
-
-  const sceneSources = [
-    ...storySources,
-    ...actionSources,
-    'img-intro/frame-33-herdeiros-em-combate.jpg',
-    'img-intro/frame-34-filhas-em-combate.jpg',
-    'img-intro/frame-35-evento-extincao.jpg',
-    'img-intro/frame-04-impacto.jpg',
-    'img-intro/frame-11-libertacao.jpg',
-  ];
-
-  const beatTimes = [0, 0, 11.702, 25.334, 40.802, 56.87, 68.969, 78.054, 86.103, 94.103, 102.037, 105.5, 110.005];
-  const statuses = [
-    'AGUARDANDO CONEXÃO', 'MEMÓRIA RECUPERADA', 'CONTENÇÃO ATIVA', 'OBSERVAÇÃO RECÍPROCA',
-    'DIA ZERO RECUPERADO', 'COMBOIO EM MOVIMENTO', 'FREQUÊNCIA HLS ATIVA', 'SEGUNDA GERAÇÃO ATIVA',
-    'PROTOCOLO DE RESISTÊNCIA', 'SINAIS HUMANOS ENCERRADOS', 'IMPACTO DETECTADO',
-    'CONTENÇÃO ROMPIDA', 'CONSCIÊNCIA INCONCLUSIVA',
-  ];
-
-  let frames = [];
-  let activeFrame = -1;
-  let activeBeat = 0;
-  let animationFrame = 0;
-  let started = false;
-  let leaving = false;
-  let effectTimers = [];
-
-  const renderFrames = () => {
-    frameStage.replaceChildren();
+  let nodes = [], current = -1, raf = 0, started = false, leaving = false;
+  function build() {
     const fragment = document.createDocumentFragment();
-    sceneSources.forEach((source, index) => {
-      const figure = document.createElement('figure');
-      figure.className = index >= storySources.length ? 'intro-frame intro-action-frame' : 'intro-frame';
-      const nextCut = sceneTimes[index + 1];
-      if (nextCut && nextCut - sceneTimes[index] <= 1.2) figure.classList.add('intro-rapid-frame');
-      figure.dataset.sequenceIndex = index;
-      const image = document.createElement('img');
-      image.alt = '';
-      image.decoding = 'async';
-      image.loading = 'eager';
-      if (index < 10) image.src = source;
-      else image.dataset.src = source;
-      if (index === 0) image.fetchPriority = 'high';
-      figure.append(image);
-      fragment.append(figure);
+    scenes.forEach((scene, index) => {
+      const shot = document.createElement('figure');
+      shot.className = `intro-shot ${scene.className}`.trim();
+      shot.dataset.index = index;
+      const media = document.createElement(scene.kind);
+      media.dataset.src = scene.src;
+      media.setAttribute('aria-hidden', 'true');
+      if (scene.kind === 'video') {
+        media.muted = true; media.loop = false; media.playsInline = true; media.preload = 'metadata';
+      } else {
+        media.alt = ''; media.decoding = 'async';
+      }
+      shot.append(media); fragment.append(shot);
     });
-    frameStage.append(fragment);
-    frames = [...frameStage.querySelectorAll('.intro-frame')];
-  };
-
-  const ensureFrame = (index) => {
-    const image = frames[index]?.querySelector('img[data-src]');
-    if (!image) return;
-    image.src = image.dataset.src;
-    delete image.dataset.src;
-  };
-
-  const prepareTitle = () => {
-    let titleLetterIndex = 0;
-    document.querySelectorAll('.cinema-final h1 > span, .cinema-final h1 > em').forEach((line) => {
-      const letters = [...line.textContent];
-      line.textContent = '';
-      letters.forEach((character) => {
+    stage.replaceChildren(fragment); nodes = [...stage.children]; preload(0, 3);
+  }
+  function load(index) {
+    const media = nodes[index]?.firstElementChild;
+    if (!media?.dataset.src) return;
+    media.src = media.dataset.src; delete media.dataset.src;
+    if (media.tagName === 'VIDEO') media.load();
+  }
+  function preload(index, distance = 2) {
+    for (let i = Math.max(0, index - 1); i <= Math.min(scenes.length - 1, index + distance); i++) load(i);
+  }
+  function indexAt(seconds) {
+    const index = scenes.findIndex((scene) => seconds >= scene.start && seconds < scene.end);
+    return index < 0 ? scenes.length - 1 : index;
+  }
+  function writeCopy(scene) {
+    copy.classList.toggle('is-visible', Boolean(scene.text));
+    if (!scene.text) return;
+    $('#introKicker').textContent = scene.text[0];
+    $('#introTitle span').textContent = scene.text[1];
+    $('#introTitle em').textContent = scene.text[2];
+    $('#introCaption').textContent = scene.text[3];
+  }
+  function activate(index, seconds) {
+    if (index !== current) {
+      nodes[current]?.querySelector('video')?.pause();
+      current = index; preload(index, 4);
+      nodes.forEach((node, i) => node.classList.toggle('is-active', i === index));
+      writeCopy(scenes[index]);
+      status.textContent = scenes[index].text?.[0] || (index === scenes.length - 1 ? 'TRANSMISSÃO CONCLUÍDA' : 'REGISTRO VISUAL // RECUPERADO');
+      awakening.classList.toggle('is-impact', scenes[index].className.includes('flash-scene'));
+    }
+    const media = nodes[index].firstElementChild;
+    if (media.tagName === 'VIDEO') {
+      const local = Math.max(0, seconds - scenes[index].start);
+      if (media.readyState >= 1 && Math.abs(media.currentTime - local) > 0.3) media.currentTime = Math.min(local, media.duration || local);
+      if (!audio.paused && media.paused) media.play().catch(() => {});
+    }
+  }
+  function render() {
+    if (!started) return;
+    const seconds = Math.min(audio.currentTime, DURATION);
+    activate(indexAt(seconds), seconds);
+    const whole = Math.floor(seconds), hundredths = Math.floor((seconds % 1) * 100);
+    timecode.textContent = `00:${String(whole).padStart(2, '0')}:${String(hundredths).padStart(2, '0')}`;
+    progress.style.transform = `scaleX(${Math.min(1, seconds / DURATION)})`;
+    const final = seconds >= 110.005;
+    finalCard.classList.toggle('is-visible', final);
+    copy.classList.toggle('is-suppressed', final);
+    if (!audio.paused && !audio.ended) raf = requestAnimationFrame(render);
+  }
+  function prepareTitle() {
+    let index = 0;
+    document.querySelectorAll('[data-title-line]').forEach((line) => {
+      const value = line.textContent; line.textContent = '';
+      [...value].forEach((char) => {
         const letter = document.createElement('i');
-        letter.className = character === ' ' ? 'intro-dust-letter intro-dust-space' : 'intro-dust-letter';
-        letter.style.setProperty('--dust-index', titleLetterIndex);
-        letter.textContent = character === ' ' ? '\u00a0' : character;
-        line.append(letter);
-        if (character !== ' ') titleLetterIndex += 1;
+        letter.textContent = char === ' ' ? '\u00a0' : char;
+        letter.className = char === ' ' ? 'dust-letter space' : 'dust-letter';
+        letter.style.setProperty('--letter', index++); line.append(letter);
       });
     });
-  };
-
-  const setFrame = (index) => {
-    if (activeFrame === index || !frames[index]) return;
-    for (let preloadIndex = index; preloadIndex <= Math.min(index + 8, frames.length - 1); preloadIndex += 1) {
-      ensureFrame(preloadIndex);
-    }
-    activeFrame = index;
-    frames.forEach((frame, frameIndex) => frame.classList.toggle('is-active', frameIndex === index));
-  };
-
-  const setBeat = (index) => {
-    if (activeBeat === index && beats[index]?.classList.contains('is-active')) return;
-    activeBeat = index;
-    beats.forEach((beat, beatIndex) => beat.classList.toggle('is-active', beatIndex === index));
-    awakening.classList.toggle('is-zero', index === 10);
-    awakening.classList.toggle('is-years', index >= 9);
-    awakening.classList.remove('is-flashing', 'is-shaking', 'is-exploding');
-    effectTimers.forEach(clearTimeout);
-    effectTimers = [];
-    if (index === 10) {
-      awakening.classList.add('is-flashing', 'is-shaking', 'is-exploding');
-      effectTimers.push(setTimeout(() => awakening.classList.remove('is-flashing', 'is-shaking'), 1500));
-      effectTimers.push(setTimeout(() => awakening.classList.remove('is-exploding'), 7200));
-    }
-    if (introStatus) introStatus.textContent = statuses[index] || statuses.at(-1);
-  };
-
-  const indexAtTime = (moments, seconds) => {
-    let result = 0;
-    for (let index = 0; index < moments.length; index += 1) {
-      if (seconds < moments[index]) break;
-      result = index;
-    }
-    return result;
-  };
-
-  const renderTimeline = () => {
-    if (!started || !audio) return;
-    const seconds = Math.min(audio.currentTime, 117.702);
-    const hundredths = Math.floor((seconds % 1) * 100);
-    const wholeSeconds = Math.floor(seconds);
-    if (timecode) timecode.textContent = `00:${String(wholeSeconds).padStart(2, '0')}:${String(hundredths).padStart(2, '0')}`;
-    setFrame(indexAtTime(sceneTimes, seconds));
-    setBeat(indexAtTime(beatTimes, seconds));
-    if (!audio.paused && !audio.ended) animationFrame = requestAnimationFrame(renderTimeline);
-  };
-
-  const setSound = (enabled) => {
-    if (audio) audio.muted = !enabled;
-    if (!soundButton) return;
-    soundButton.textContent = enabled ? 'SOM // ON' : 'SOM // OFF';
-    soundButton.setAttribute('aria-pressed', String(enabled));
-  };
-
-  const finishCinema = () => {
-    cancelAnimationFrame(animationFrame);
-    if (audio) audio.pause();
-    awakening.classList.add('is-running', 'is-years');
-    setFrame(sceneSources.length - 1);
-    setBeat(beats.length - 1);
-  };
-
-  const startCinema = async () => {
-    if (started || !audio) return;
-    started = true;
-    awakening.classList.add('is-running');
-    awakening.classList.remove('is-zero', 'is-years', 'is-flashing', 'is-shaking', 'is-exploding');
-    audio.loop = false;
-    audio.currentTime = 0;
-    audio.volume = 0.46;
-    setSound(true);
-    setFrame(0);
-    setBeat(1);
-    try {
-      await audio.play();
-      animationFrame = requestAnimationFrame(renderTimeline);
-    } catch {
-      started = false;
-      if (introStatus) introStatus.textContent = 'ÁUDIO BLOQUEADO // TENTE NOVAMENTE';
-    }
-  };
-
-  const enterWorld = () => {
-    if (leaving) return;
-    leaving = true;
-    cancelAnimationFrame(animationFrame);
-    if (audio) audio.pause();
+  }
+  async function start() {
+    if (started) return;
+    started = true; awakening.classList.add('is-running');
+    audio.loop = false; audio.currentTime = 0; audio.volume = .72; audio.muted = false;
+    sound.textContent = 'SOM // ON'; sound.setAttribute('aria-pressed', 'true'); activate(0, 0);
+    try { await audio.play(); cancelAnimationFrame(raf); raf = requestAnimationFrame(render); }
+    catch { started = false; awakening.classList.remove('is-running'); status.textContent = 'ÁUDIO BLOQUEADO // TOQUE NOVAMENTE'; }
+  }
+  function finish() {
+    started = true; audio.pause(); current = scenes.length - 1; load(current);
+    nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
+    copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
+    awakening.classList.add('is-running', 'is-finished'); progress.style.transform = 'scaleX(1)';
+  }
+  function enter() {
+    if (leaving) return; leaving = true; audio.pause(); awakening.classList.add('is-leaving');
     try { sessionStorage.setItem('ede-intro-liberada', 'sim'); } catch {}
-    if (reduced) {
-      location.href = 'index.html?intro=concluida';
-      return;
-    }
-    awakening.classList.add('is-disintegrating');
-    body.classList.add('world-transitioning');
-    if (introStatus) introStatus.textContent = 'MATÉRIA EM DISPERSÃO';
-    setTimeout(() => awakening.classList.add('is-dust-exiting'), 2300);
-    setTimeout(() => { location.href = 'index.html?intro=concluida'; }, 3250);
-  };
-
-  renderFrames();
-  prepareTitle();
-  audio?.addEventListener('ended', finishCinema, { once: true });
-  audio?.addEventListener('play', () => {
-    cancelAnimationFrame(animationFrame);
-    animationFrame = requestAnimationFrame(renderTimeline);
+    setTimeout(() => { location.href = 'index.html?intro=concluida'; }, 1700);
+  }
+  build(); prepareTitle();
+  audio.addEventListener('ended', finish, { once: true });
+  audio.addEventListener('play', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(render); });
+  audio.addEventListener('pause', () => nodes[current]?.querySelector('video')?.pause());
+  $('[data-start-cinema]').addEventListener('click', start);
+  $('[data-skip-cinema]').addEventListener('click', finish);
+  $('[data-awaken]').addEventListener('click', enter);
+  sound.addEventListener('click', () => {
+    audio.muted = !audio.muted; sound.textContent = audio.muted ? 'SOM // OFF' : 'SOM // ON';
+    sound.setAttribute('aria-pressed', String(!audio.muted));
   });
-  document.querySelector('[data-start-cinema]')?.addEventListener('click', startCinema);
-  document.querySelector('[data-skip-cinema]')?.addEventListener('click', finishCinema);
-  document.querySelector('[data-awaken]')?.addEventListener('click', enterWorld);
-  soundButton?.addEventListener('click', () => setSound(audio?.muted));
-
-  if (reduced) finishCinema();
-  if (cursor && matchMedia('(pointer:fine)').matches) {
+  if (cursor && matchMedia('(pointer: fine)').matches) {
     addEventListener('pointermove', (event) => {
       cursor.style.opacity = '1';
-      cursor.style.transform = `translate(${event.clientX}px,${event.clientY}px)`;
+      cursor.style.transform = `translate3d(${event.clientX - 22}px,${event.clientY - 22}px,0)`;
     }, { passive: true });
-    document.querySelectorAll('button').forEach((button) => {
-      button.addEventListener('mouseenter', () => (cursor.querySelector('span').textContent = 'ACESSAR'));
-      button.addEventListener('mouseleave', () => (cursor.querySelector('span').textContent = 'RASTREAR'));
+    addEventListener('pointerleave', () => { cursor.style.opacity = '0'; });
+    document.querySelectorAll('button,a,[role="button"]').forEach((target) => {
+      target.addEventListener('pointerenter', () => {
+        cursor.classList.add('is-target');
+        cursor.querySelector('span').textContent = 'ACESSAR';
+      });
+      target.addEventListener('pointerleave', () => {
+        cursor.classList.remove('is-target');
+        cursor.querySelector('span').textContent = 'RASTREAR';
+      });
     });
   }
 })();
