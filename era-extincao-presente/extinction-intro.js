@@ -8,9 +8,6 @@
   const copy = $('.intro-copy');
   const finalCard = $('.intro-final');
   const status = $('#introStatus');
-  const timecode = $('#cinemaTimecode');
-  const progress = $('.intro-progress i');
-  const sound = $('[data-toggle-sound]');
   const cursor = $('.intro-cursor');
   const I = (src, start, end, text = null, className = '') => ({ kind: 'img', src, start, end, text, className });
   const V = (src, start, end, text = null, className = '', offset = 0) => ({ kind: 'video', src, start, end, text, className, offset });
@@ -134,14 +131,11 @@
         writeCopy(monsterCopy[phase]);
       }
       awakening.classList.toggle('is-impact', seconds >= 102.037 && seconds < 102.75);
-      awakening.classList.toggle('doom-veiled', seconds < 104);
+      awakening.classList.toggle('doom-veiled', seconds < 105);
     } else {
       monsterPhase = 0;
       awakening.classList.remove('doom-veiled');
     }
-    const whole = Math.floor(seconds), hundredths = Math.floor((seconds % 1) * 100);
-    timecode.textContent = `00:${String(whole).padStart(2, '0')}:${String(hundredths).padStart(2, '0')}`;
-    progress.style.transform = `scaleX(${Math.min(1, seconds / DURATION)})`;
     const final = seconds >= 110.005;
     finalCard.classList.toggle('is-visible', final);
     copy.classList.toggle('is-suppressed', final);
@@ -163,7 +157,7 @@
     if (started) return;
     started = true; awakening.classList.add('is-running');
     audio.loop = false; audio.currentTime = 0; audio.volume = .72; audio.muted = false;
-    sound.textContent = 'SOM // ON'; sound.setAttribute('aria-pressed', 'true'); activate(0, 0);
+    activate(0, 0);
     try { await audio.play(); cancelAnimationFrame(raf); raf = requestAnimationFrame(render); }
     catch { started = false; awakening.classList.remove('is-running'); status.textContent = 'ÁUDIO BLOQUEADO // TOQUE NOVAMENTE'; }
   }
@@ -171,7 +165,7 @@
     started = true; audio.pause(); current = scenes.length - 1; load(current);
     nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
     copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
-    awakening.classList.add('is-running', 'is-finished'); progress.style.transform = 'scaleX(1)';
+    awakening.classList.add('is-running', 'is-finished');
   }
   function enter() {
     if (leaving) return; leaving = true; audio.pause(); awakening.classList.add('is-leaving');
@@ -185,10 +179,6 @@
   $('[data-start-cinema]').addEventListener('click', start);
   $('[data-skip-cinema]').addEventListener('click', finish);
   $('[data-awaken]').addEventListener('click', enter);
-  sound.addEventListener('click', () => {
-    audio.muted = !audio.muted; sound.textContent = audio.muted ? 'SOM // OFF' : 'SOM // ON';
-    sound.setAttribute('aria-pressed', String(!audio.muted));
-  });
   if (cursor && matchMedia('(pointer: fine)').matches) {
     addEventListener('pointermove', (event) => {
       cursor.style.opacity = '1';
