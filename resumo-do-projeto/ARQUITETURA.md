@@ -12,6 +12,18 @@
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
 
+## Abertura cinematográfica do presente
+
+- `intro.html`: porta de entrada cinematográfica independente da página principal.
+- `era-extincao-presente/extinction-intro.js`: linha do tempo dirigida exclusivamente pelo `currentTime` da trilha, evitando atrasos e repetições causados por temporizadores paralelos.
+- `era-extincao-presente/extinction-opening-cinematic.css`: enquadramentos responsivos, letterbox, poeira, clarões, cursor personalizado e formação do título.
+- `audio/intro-ultron-reference.mp3`: trilha temporária usada como relógio da montagem; deverá ser substituída por uma faixa licenciada ou original.
+- A montagem atual possui 38 cenas entre `0:00` e `1:57.702`, misturando fotografias e vídeos curtos.
+- Vídeos narrativos e de ação utilizados: `ariani&alice.mp4`, `brothers2.mp4`, `jully-grito.mp4`, `jack-acao.mp4`, `alice-diana-mary.mp4`, `alice-acao.mp4`, `mark-acao.mp4` e `versao1.mp4`.
+- `versao1.mp4` apresenta Doom no encerramento: o vídeo começa oculto em `1:40`, a queda permanece coberta e Doom é revelado caminhando em `1:45`, aproximando-se do rosto durante a frase final.
+- O rodapé da abertura mantém somente o comando `PULAR`; contador, progresso e controle de som foram removidos.
+- Imagens e vídeos usam enquadramento integral no mobile, com preenchimento atmosférico para evitar cortes importantes.
+
 ## Personagens
 
 | Perfil | Galeria separada |
@@ -32,7 +44,7 @@
 - `herdeiros-extincao.html`: portal da nova geração, separando as linhagens de Jack/Alice e Mark/Ariani.
 - `filhos-mark-ariani.html`: central dos arquivos de Pollyana e Nathan, filhos de Mark e Ariani.
 - `pollyana-presente.html` e `nathan-presente.html`: arquivos individuais da segunda linhagem.
-- `alucard-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `diana-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos.
+- `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos, na ordem oficial da linhagem.
 - `diana-presente.html`: dossiê de combate com doutrina, matriz de proficiência e transmissão visual organizada.
 - `isolde-presente.html`: arquivo individual com capa exclusiva e registros fotográficos em looping.
 - `era-extincao-presente/diana-carousel.js`: looping, controles, acessibilidade e gesto mobile dos registros de Diana.

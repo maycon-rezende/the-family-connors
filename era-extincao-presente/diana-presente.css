@@ -260,10 +260,30 @@
     min-height: 0;
   }
 
-  .diana-combat-slide img {
+.diana-combat-slide img {
     object-position: center top;
   }
 }
+
+.diana-combat-slide.diana-action-slide::before {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  background: linear-gradient(#0703028c, #070302c7), var(--action-bg) center / cover no-repeat;
+  filter: blur(20px) saturate(.65);
+  transform: scale(1.08);
+}
+
+.diana-combat-slide.diana-action-slide img {
+  position: relative;
+  z-index: 1;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.78) contrast(1.06);
+}
+
+.diana-combat-slide.diana-action-slide figcaption { z-index: 3; }
+.diana-combat-viewport::before { content: "VISUAL FEED // DC-02"; }
 
 @media (prefers-reduced-motion: reduce) {
   .diana-target,

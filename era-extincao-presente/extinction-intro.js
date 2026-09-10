@@ -30,11 +30,13 @@
     V('video/jully-grito.mp4', 68.969, 72.087, null, 'grief focal-video fit-video'),
     I('img-presente/personagens/jack-acao.png', 72.087, 73.469, ['COMANDO HELLSINGS // CONTATO', 'Agora,', 'lutem.', 'Jack abriu a linha de combate.'], 'action hard fit-contain focus-jack'),
     V('video/jack-acao.mp4', 73.469, 78.054, null, 'action'),
-    I('img-presente/personagens/mae&filhas.png', 78.054, 80.472, null, 'action fit-contain'),
-    V('video/alice-diana-mary.mp4', 80.472, 84.437, null, 'action'),
-    I('img-presente/personagens/mary1.png', 84.437, 85.273, null, 'rapid focus-mary fit-contain'),
-    I('img-presente/personagens/diana1.png', 85.273, 86.103, null, 'rapid fit-contain'),
-    I('img-presente/personagens/isolde.png', 86.103, 86.938, null, 'rapid fit-contain'),
+    I('img-hellsing/alucard-connor1.png', 78.054, 79.7, null, 'action fit-contain focus-alucard'),
+    V('video/alice-diana-mary.mp4', 79.7, 82.9, null, 'action'),
+    I('img-hellsing/alucad-presente.png', 82.9, 83.7, null, 'rapid fit-contain focus-alucard'),
+    I('img-presente/personagens/mary1.png', 83.7, 84.5, null, 'rapid focus-mary fit-contain'),
+    I('img-presente/personagens/nicolai.png', 84.5, 85.3, null, 'rapid fit-contain focus-nicolai'),
+    I('img-presente/personagens/diana1.png', 85.3, 86.1, null, 'rapid fit-contain'),
+    I('img-presente/personagens/isolde.png', 86.1, 86.938, null, 'rapid fit-contain'),
     V('video/alice-acao.mp4', 86.938, 88.687, null, 'action portrait'),
     V('video/mark-acao.mp4', 88.687, 90.321, null, 'action fit-video'),
     I('img-presente/personagens/ariani-presente3.png', 90.321, 91.021, null, 'rapid fit-contain focus-ariani'),
@@ -119,7 +121,7 @@
     const seconds = Math.min(audio.currentTime, DURATION);
     activate(indexAt(seconds), seconds);
     if (scenes[current].className.includes('monster-reveal')) {
-      const phase = seconds >= 108.3 ? 3 : seconds >= 104 ? 2 : seconds >= 102.037 ? 1 : 0;
+      const phase = seconds >= 108.3 ? 3 : seconds >= 103.2 ? 2 : seconds >= 102.037 ? 1 : 0;
       if (phase !== monsterPhase) {
         monsterPhase = phase;
         const monsterCopy = [
@@ -130,8 +132,8 @@
         ];
         writeCopy(monsterCopy[phase]);
       }
-      awakening.classList.toggle('is-impact', seconds >= 102.037 && seconds < 102.75);
-      awakening.classList.toggle('doom-veiled', seconds < 105);
+      awakening.classList.toggle('is-impact', seconds >= 102.037 && seconds < 102.48);
+      awakening.classList.toggle('doom-veiled', seconds < 103.65);
     } else {
       monsterPhase = 0;
       awakening.classList.remove('doom-veiled');

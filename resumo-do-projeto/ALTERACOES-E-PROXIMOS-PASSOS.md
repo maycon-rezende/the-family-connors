@@ -105,7 +105,7 @@
 - Símbolos próprios criados para Cobras, Dominus, Facção do Fogo, Nômades de Ferro e Ordem do Sal.
 - Registros visuais de John, Brian e Bobby incorporados à experiência do presente.
 - Peter removido da árvore familiar de Jack e Alice; Isolde Myers Connor oficializada como quinta filha.
-- Central `filhos-connor.html` e páginas de Alucard, Nicolai, Mary, Diana e Isolde criadas.
+- Central `filhos-connor.html` e páginas de Alucard, Diana, Nicolai, Mary e Isolde criadas na ordem oficial da linhagem.
 - A tela inicial passou a apresentar a nova geração em uma chamada cinematográfica única; `herdeiros-extincao.html` organiza as duas linhagens Connor e reserva o futuro núcleo dos filhos de Mark e Ariani.
 - Pollyana e Nathan foram adicionados como os primeiros arquivos da linhagem de Mark e Ariani; novos registros de Mary foram incorporados à galeria individual.
 - Nathan recebeu retrato individual próprio; a imagem ao lado de Pollyana permanece como registro conjunto. A galeria de Mary passou a reunir todos os novos registros recuperados.
@@ -113,6 +113,44 @@
 - Novas imagens conjuntas de Alucard/Nicolai e Mary/Diana, além dos registros de Isolde, integradas.
 
 Última atualização: 31 de agosto de 2026.
+
+## Atualização de 10 de setembro de 2026 — páginas dos herdeiros
+
+- As páginas centrais dos Herdeiros receberam partículas, varredura genealógica, entrada progressiva dos cards e cursor personalizado por `lineage-effects.css/js`.
+- Em dispositivos de toque, o cursor visual é desativado e os cards permanecem clicáveis; `prefers-reduced-motion` também é respeitado.
+- A ordem oficial foi definida como Alucard, Diana, Nicolai, Mary e Isolde e aplicada aos cards, códigos e links anterior/próximo.
+- Diana passou de `DC-04` para `DC-02`; Nicolai tornou-se o arquivo `03`, Mary o `04` e Isolde permaneceu no `05`.
+- A página de Alucard recebeu capa, bússola, dados de linhagem, seções narrativas e uma ampulheta que revela seus registros com passagem de areia.
+- Nathália recebeu um arquivo individual com capa, identidade térmica, cursor próprio e galeria interativa organizada.
+- Os seis quadros da montagem `diana-acao.png`, já recortados para a intro, foram incorporados à galeria da Diana sem duplicar os arquivos.
+- A galeria da Diana agora contém 11 cenas, numeradas de `DC-02.2` a `DC-02.12`, com enquadramento integral para as imagens horizontais.
+- O novo documento `GUIA-TECNICO-HERDEIROS.md` registra os arquivos, trechos de código, funcionamento dos scripts e checklist para futuras alterações.
+
+Última atualização: 10 de setembro de 2026.
+
+## Atualização de 8 de setembro de 2026 — nova intro cinematográfica
+
+- `intro.html` foi reconstruído como uma experiência separada da página principal.
+- A trilha passou a ser o único relógio da apresentação; as cenas consultam diretamente o tempo do áudio e não podem reiniciar a música.
+- A linha do tempo atual reúne 38 cenas contínuas até `1:57.702`, sem lacunas.
+- Antártida e Complexo Hades foram incorporados ao primeiro ato sem revelar abertamente a atuação da Dominus.
+- A perda de Jully marca a mudança de tom em `1:08`; somente `jully-grito.mp4` permanece nesse momento.
+- A sequência posterior alterna vídeos e imagens de ação de Jack, Mark, Alice, Ariani, Britney, Clhoe, Diana, Mary, Isolde e demais integrantes dos Hellsings.
+- Luke, Mary, John, Brian e Dimitri receberam enquadramentos responsivos próprios para preservar rostos e corpos em telas estreitas.
+- Doom foi oficializado como a presença consciente associada à fala final. A abertura utiliza `versao1.mp4`, ocultando sua queda e revelando sua caminhada em `1:45` antes do close em `1:47`.
+- O título `A Era da Extinção` surge letra por letra após a revelação de Doom.
+- Cursor cinematográfico restaurado com estados `RASTREAR` e `ACESSAR`; em dispositivos de toque ele não interfere na navegação.
+- Contador, barra de progresso e botão de som foram removidos, restando apenas `PULAR`.
+- A versão publicada no GitHub Pages usa cache `v=25` e corresponde ao commit `14e7acc`.
+
+### Próximos passos imediatos da intro
+
+1. Assistir à montagem completa em aparelhos reais e ajustar os pontos de corte finos pela gravação de tela.
+2. Substituir gradualmente fotografias de ação por vídeos animados, preservando a linha do tempo atual.
+3. Confirmar o sincronismo definitivo da caminhada e do close de Doom com a faixa escolhida.
+4. Substituir a música temporária por versão autorizada, remix licenciado ou composição original antes de uso comercial.
+
+Última atualização: 8 de setembro de 2026.
 
 ## Atualização de 1º de setembro de 2026 — organização técnica
 

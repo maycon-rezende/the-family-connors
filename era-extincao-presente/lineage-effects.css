@@ -1,0 +1,20 @@
+.lineage-effects-page{--lineage-sand:#d9ad69;--lineage-red:#d84829;overflow-x:hidden}
+.lineage-web,.lineage-web i{position:fixed;inset:0;pointer-events:none}.lineage-web{z-index:12;overflow:hidden;opacity:.34;mix-blend-mode:screen}
+.lineage-web i:first-child{background-image:radial-gradient(circle,rgba(224,174,101,.72) 0 1px,transparent 1.8px);background-size:83px 83px;animation:lineageDust 24s linear infinite}
+.lineage-web i:nth-child(2){inset:-15%;background:repeating-radial-gradient(ellipse at 50% 48%,transparent 0 42px,rgba(216,72,41,.08) 43px,transparent 44px 82px);animation:lineagePulse 8s ease-in-out infinite}
+.lineage-web i:last-child{background:linear-gradient(115deg,transparent 0 46%,rgba(217,173,105,.11) 49.8%,transparent 53%);transform:translateX(-80%);animation:lineageScan 9s ease-in-out infinite}
+.lineage-effects-page :is(.generation-title h1,.lineage-hero-copy h1){animation:lineageTitleIn 1.35s cubic-bezier(.16,.8,.2,1) both;text-shadow:0 0 28px rgba(216,72,41,.12)}
+.lineage-effects-page :is(.generation-title h1 em,.lineage-hero-copy h1 em){animation:lineageEmber 3.8s ease-in-out infinite alternate}
+.lineage-effects-page :is(.bloodline,.heir-card){position:relative;opacity:0;transform:translateY(34px);transition:opacity .8s ease calc(var(--reveal-index,0)*110ms),transform .8s cubic-bezier(.18,.76,.22,1) calc(var(--reveal-index,0)*110ms),border-color .3s ease,filter .3s ease;isolation:isolate}
+.lineage-effects-page :is(.bloodline,.heir-card).is-lineage-visible{opacity:1;transform:translateY(0)}
+.lineage-effects-page :is(.bloodline,.heir-card)::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;opacity:0;background:linear-gradient(105deg,transparent 22%,rgba(229,184,113,.18) 48%,transparent 67%);transform:translateX(-110%)}
+.lineage-effects-page :is(.bloodline,.heir-card):is(:hover,:focus-visible,.is-tracked){border-color:rgba(216,72,41,.72);filter:saturate(1.13) contrast(1.04)}
+.lineage-effects-page :is(.bloodline,.heir-card):is(:hover,:focus-visible,.is-tracked)::after{opacity:1;animation:lineageCardScan .72s ease-out both}
+.lineage-cursor{position:fixed;left:0;top:0;width:42px;height:42px;z-index:9999;opacity:0;pointer-events:none;color:var(--lineage-sand);transform:translate3d(-100px,-100px,0);transition:opacity .18s ease}
+html.has-lineage-cursor .lineage-cursor{opacity:1}html.has-lineage-cursor .lineage-effects-page,html.has-lineage-cursor .lineage-effects-page *{cursor:none!important}
+.lineage-cursor i,.lineage-cursor b{position:absolute;inset:7px;border:1px solid currentColor;transform:rotate(45deg);transition:transform .2s ease,inset .2s ease,color .2s ease}.lineage-cursor b{inset:18px;background:var(--lineage-red);border:0}
+.lineage-cursor span{position:absolute;left:46px;top:16px;width:max-content;font:600 7px/1 monospace;letter-spacing:.18em}.lineage-cursor.is-target{color:var(--lineage-red)}.lineage-cursor.is-target i{inset:2px;transform:rotate(135deg)}.lineage-cursor.is-target b{inset:16px}
+@keyframes lineageDust{to{transform:translate3d(42px,83px,0)}}@keyframes lineagePulse{50%{opacity:.3;transform:scale(1.035)}}@keyframes lineageScan{55%,100%{transform:translateX(90%)}}@keyframes lineageCardScan{to{transform:translateX(110%)}}@keyframes lineageTitleIn{from{opacity:0;transform:translateY(24px);filter:blur(8px)}}@keyframes lineageEmber{to{text-shadow:0 0 18px rgba(216,72,41,.55),2px 0 rgba(217,173,105,.28)}}
+@media(max-width:760px){.lineage-web{opacity:.2}.lineage-effects-page :is(.bloodline,.heir-card){transition-delay:calc(var(--reveal-index,0)*55ms)}}
+@media(any-pointer:coarse){.lineage-cursor{display:none}}
+@media(prefers-reduced-motion:reduce){.lineage-web i,.lineage-effects-page :is(.generation-title h1,.lineage-hero-copy h1,.generation-title h1 em,.lineage-hero-copy h1 em){animation:none!important}.lineage-effects-page :is(.bloodline,.heir-card){opacity:1;transform:none;transition:border-color .2s ease}}
