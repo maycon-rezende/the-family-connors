@@ -128,6 +128,14 @@
 
 Última atualização: 10 de setembro de 2026.
 
+### Expansão dos arquivos individuais — 10 de setembro de 2026
+
+- Nicolai recebeu identidade visual própria, lore sobre Alucard e o nascimento de sua coragem, galeria de nove imagens e vídeo com Sally.
+- Sally passou a se chamar Sally Ward e ganhou uma página baseada em um dossiê policial interrompido, com histórico de adoção, sonho de ser policial, Ocorrência Zero, galeria e bodycam.
+- Mary foi definida como socorrista tática e rastreadora de campo, reunindo medicina, combate, armas, mapas, rastreamento e estratégia.
+- A página de Mary recebeu bússola, pulso vital, três legados, protocolo de campo, galeria com 12 registros e vídeo com Alice e Diana.
+- Os cursores das três páginas possuem estados contextuais e são desativados em telas de toque.
+
 ## Atualização de 8 de setembro de 2026 — nova intro cinematográfica
 
 - `intro.html` foi reconstruído como uma experiência separada da página principal.

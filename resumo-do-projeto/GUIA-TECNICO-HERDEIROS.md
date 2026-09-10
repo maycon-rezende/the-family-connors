@@ -109,3 +109,27 @@ git diff --check
 ```
 
 Antes de publicar, conferir também todas as referências `src`/`href` e testar uma tela larga e uma tela de celular.
+
+## 8. Arquivos de Nicolai, Sally Ward e Mary
+
+### Nicolai Myers Connor
+
+- `nicolai-presente.html` é o dossiê correto do terceiro filho.
+- `era-extincao-presente/nicolai-presente.css/js` controlam radar, rota da coragem, cursor, textos animados, galeria de nove registros e terminal audiovisual.
+- A narrativa acompanha a passagem da admiração por Alucard para a descoberta da própria identidade ao salvar Sally.
+- O cursor só aparece após o primeiro movimento real do mouse ou da caneta, evitando o rótulo preso no canto da tela.
+
+### Sally Ward
+
+- `sally-presente.html` apresenta um dossiê policial interrompido.
+- `era-extincao-presente/sally-presente.css/js` controlam luzes de emergência, scanner de identidade, cursor contextual, três ocorrências biográficas, galeria e vídeo.
+- O sobrenome oficial escolhido foi `Ward`, associado à ideia de tutela e proteção.
+- O vídeo fica em `video/sally&nicolai.mp4` e usa `preload="metadata"` para reduzir o carregamento inicial.
+
+### Mary Myers Connor
+
+- `mary-presente.html` apresenta Mary como socorrista tática e rastreadora de campo.
+- `era-extincao-presente/mary-presente.css/js` controlam pulso vital, bússola, cursor contextual, legados, protocolo, galeria e vídeo.
+- Sua formação combina medicina de Alice, combate e armas de Jack, além de rastreamento, mapas e estratégia ensinados por Jack e Mark.
+- O carrossel contém 12 registros. As seis cenas horizontais reutilizam `img-intro/sequence/action-mary-01.jpg` até `action-mary-06.jpg` com enquadramento integral e fundo desfocado.
+- O vídeo `video/alice-diana-mary.mp4` representa a continuidade do conhecimento entre as mulheres Myers Connor.

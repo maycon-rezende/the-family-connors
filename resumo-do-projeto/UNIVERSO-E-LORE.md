@@ -7,6 +7,8 @@
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
 - Jack e Alice têm cinco filhos, nesta ordem: Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
 - Diana Myers Connor tornou-se especialista em combate e no uso de diferentes tipos de armas no presente devastado.
+- Mary Myers Connor aprendeu medicina com Alice; combate, armas de fogo e disciplina com Jack; rastreamento, leitura de mapas e estratégia com Jack e Mark. Atua como socorrista tática e rastreadora de campo.
+- Sally Ward nunca conheceu os pais biológicos e foi criada por uma família adotiva problemática, pela qual ainda assim preservou gratidão. Sonhava em ser policial. Nicolai encontrou sua própria coragem quando a salvou de uma horda.
 - Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.
