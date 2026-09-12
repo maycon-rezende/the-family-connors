@@ -13,6 +13,8 @@
   const slides = [...document.querySelectorAll('[data-mary-slide]')];
   const carousel = document.querySelector('[data-mary-carousel]');
   const current = document.querySelector('[data-mary-current]');
+  const total = document.querySelector('[data-mary-total]');
+  const frameIndex = document.querySelector('[data-mary-index]');
   let index = 0;
   let timer;
   let touchX = 0;
@@ -24,6 +26,11 @@
       slide.setAttribute('aria-hidden', String(!active));
     });
     if (current) current.textContent = String(index + 1).padStart(2, '0');
+    frameIndex?.querySelectorAll('button').forEach((button, buttonIndex) => {
+      const active = buttonIndex === index;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-current', active ? 'true' : 'false');
+    });
   };
   const stop = () => clearInterval(timer);
   const play = () => {
@@ -42,6 +49,16 @@
     const distance = event.changedTouches[0].clientX - touchX;
     if (Math.abs(distance) > 45) move(distance > 0 ? -1 : 1);
   }, { passive: true });
+  if (total) total.textContent = String(slides.length).padStart(2, '0');
+  slides.forEach((slide, slideIndex) => {
+    if (!frameIndex) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('aria-label', `Abrir registro ${String(slideIndex + 1).padStart(2, '0')}`);
+    button.innerHTML = `<span>${String(slideIndex + 1).padStart(2, '0')}</span>`;
+    button.addEventListener('click', () => { show(slideIndex); play(); });
+    frameIndex.append(button);
+  });
   show(0);
   play();
 

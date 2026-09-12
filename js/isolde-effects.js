@@ -37,7 +37,7 @@
   });
 
   const reveals = document.querySelectorAll(
-    '[data-isolde-letters], .isolde-signal-card, .isolde-records > p, .isolde-carousel'
+    '[data-isolde-letters], [data-isolde-section], .isolde-signal-card, .isolde-records > p, .isolde-carousel'
   );
 
   if (reducedMotion || !('IntersectionObserver' in window)) {

@@ -152,6 +152,18 @@
     repeating-linear-gradient(90deg, transparent 0 90px, #bd34300b 91px 92px);
 }
 
+.isolde-profile{padding:8rem max(6vw,calc((100vw - 1450px)/2));background:radial-gradient(circle at 82% 24%,#9e20262a,transparent 30%),linear-gradient(135deg,#090403,#100706 55%,#070403);opacity:0;transform:translateY(32px);transition:opacity .9s,transform 1s}
+.isolde-profile.isolde-visible{opacity:1;transform:none}
+.isolde-profile>header{max-width:1050px}
+.isolde-profile h2{margin:1rem 0;text-transform:uppercase;font:900 clamp(4rem,8vw,8rem)/.76 'Barlow Condensed'}
+.isolde-profile h2 em{color:transparent;font-style:normal;-webkit-text-stroke:1px var(--isolde-crimson);text-shadow:0 0 24px #b51e2e35}
+.isolde-profile>header>p{max-width:760px;color:#b9a99b;font:400 clamp(1.08rem,1.5vw,1.3rem)/1.7 'Barlow Condensed';letter-spacing:.035em}
+.isolde-systems{display:grid;grid-template-columns:repeat(3,1fr);margin-top:4rem;border:1px solid #a92d3545}
+.isolde-systems article{position:relative;min-height:340px;padding:2rem 1.6rem 4rem;border-right:1px solid #a92d3545;background:linear-gradient(145deg,#140706,#080403);overflow:hidden;transition:transform .35s,background .35s}
+.isolde-systems article:last-child{border-right:0}.isolde-systems article:hover{z-index:2;transform:translateY(-7px);background:linear-gradient(145deg,#210a0b,#090403)}
+.isolde-systems article>span{color:#d45259;font:700 .48rem Cinzel;letter-spacing:.17em}.isolde-systems h3{margin:4.3rem 0 1rem;color:#eee0d0;text-transform:uppercase;font:900 2.4rem/.9 'Barlow Condensed'}.isolde-systems p{color:#a99b90;font:400 1.08rem/1.6 'Barlow Condensed'}
+.isolde-systems i{position:absolute;left:1.6rem;right:1.6rem;bottom:1.8rem;height:2px;background:#30201d}.isolde-systems i:after{content:'';display:block;width:var(--system-level);height:100%;background:linear-gradient(90deg,var(--isolde-red),var(--isolde-crimson),var(--isolde-gold));box-shadow:0 0 13px #d63b3e66}
+
 .isolde-records h2 {
   max-width: 950px;
 }
@@ -277,6 +289,14 @@
   .isolde-cursor { display: none; }
 }
 
+@media (max-width: 760px) {
+  .isolde-profile{padding:5rem 1.2rem}
+  .isolde-profile h2{font-size:17vw}
+  .isolde-systems{grid-template-columns:1fr}
+  .isolde-systems article{min-height:280px;border-right:0;border-bottom:1px solid #a92d3545}
+  .isolde-systems article:last-child{border-bottom:0}
+}
+
 @media (prefers-reduced-motion: reduce) {
   .isolde-haze,
   .isolde-route-map i,
@@ -288,5 +308,6 @@
   [data-isolde-letters] .isolde-letter,
   .isolde-signal-card,
   .isolde-records > p,
+  .isolde-profile,
   .isolde-carousel { opacity: 1; filter: none; transform: none; transition: none; }
 }
