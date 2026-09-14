@@ -179,6 +179,19 @@ const profiles = {
 
 const key = document.body.dataset.character;
 const p = profiles[key];
+if (key === 'britney' && p) {
+  p.role = 'RASTREADORA // MEDICINA DE CAMPO';
+  p.intro = 'A irmã do meio dos Connors transformou memória, instinto e precisão em ferramentas para manter os seus vivos.';
+  p.title = 'Entre duas eras';
+  p.accent = 'ela encontra o caminho';
+  p.paragraphs = [
+    'Britney conheceu Bobby nas festas da mansão dos Connors, quando ele ainda integrava a organização Hellsing. O casamento veio antes do Dia D — e a gravidez abriu uma ferida entre ela e Mark, que não aceitava vê-la construir uma vida fora do controle dele.',
+    'Depois de sair da casa de Mark, Britney encontrou abrigo com Jack e, mais tarde, dividiu a própria casa com Jully. O sequestro que colocou os Hellsings em ação devolveu Britney e Mark um ao outro. No presente, ela rastreia pessoas, domina armas de fogo e lâminas, luta, lê sinais e aplica os conhecimentos médicos que aprendeu com Alice.',
+    'Antes da queda, Britney já vivia diante de uma câmera. Tinha seguidores, registrava a rotina e transformava pequenos momentos em histórias. Agora, cada imagem é menos uma postagem e mais uma prova de que aquela vida existiu.'
+  ];
+  p.memoryTitle = 'A câmera virou bússola';
+  p.memoryText = 'Britney ainda observa tudo — só que agora procura pegadas, padrões e rotas de fuga. O olhar da antiga influenciadora se tornou a ferramenta de uma rastreadora.';
+}
 if (p) {
   document.title = `${p.name} ${p.surname} | Era da Extinção`;
   document.documentElement.style.setProperty('--focus', p.focus);
