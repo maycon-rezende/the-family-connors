@@ -181,6 +181,22 @@ const key = document.body.dataset.character;
 const p = profiles[key];
 if (key === 'britney' && p) {
   p.role = 'RASTREADORA // MEDICINA DE CAMPO';
+  p.gallery = [
+    ['img-presente/personagens/britney-presente.png', 'REGISTRO PESSOAL'],
+    ['img-presente/personagens/britney-presente1.png', 'RETRATO DO PRESENTE'],
+    ['img-presente/personagens/britney-presente2.png', 'MEMÓRIA PRESERVADA'],
+    ['img-presente/personagens/britney-presente3.png', 'RASTRO RECUPERADO'],
+    ['img-hellsing/britney.png', 'ANTES DA ESTRADA'],
+    ['img-hellsing/britney-´presente.png', 'ARQUIVO HELLSING'],
+    ['img-britney/britney.png', 'A INFLUENCIADORA'],
+    ['img-britney/britney0.png', 'PRIMEIRO REGISTRO'],
+    ['img-britney/britney1.png', 'VIDA TRANSMITIDA'],
+    ['img-britney/britney2.png', 'FORA DO SINAL'],
+    ['img-britney/brit.png', 'MEMÓRIA DE ROTA'],
+    ['img-britney/brit2.png', 'OLHAR DE BUSCA'],
+    ['img-britney/brit4.png', 'DEPOIS DA QUEDA'],
+    ['img-britney/britconnor.png', 'CONNOR // ARQUIVO ATIVO'],
+  ];
   p.intro = 'A irmã do meio dos Connors transformou memória, instinto e precisão em ferramentas para manter os seus vivos.';
   p.title = 'Entre duas eras';
   p.accent = 'ela encontra o caminho';
