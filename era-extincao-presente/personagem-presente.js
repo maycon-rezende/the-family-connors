@@ -198,6 +198,12 @@ if (key === 'britney' && p) {
     ['img-britney/britconnor.png', 'CONNOR // ARQUIVO ATIVO'],
   ];
   p.intro = 'A irmã do meio dos Connors transformou memória, instinto e precisão em ferramentas para manter os seus vivos.';
+  p.gallery = [
+    ['img-presente/personagens/britney-presente.png', 'REGISTRO PESSOAL'],
+    ['img-presente/personagens/britney-presente1.png', 'RETRATO DO PRESENTE'],
+    ['img-presente/personagens/britney-presente2.png', 'MEMÓRIA PRESERVADA'],
+    ['img-presente/personagens/britney-presente3.png', 'RASTRO RECUPERADO'],
+  ];
   p.title = 'Entre duas eras';
   p.accent = 'ela encontra o caminho';
   p.paragraphs = [
