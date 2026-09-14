@@ -134,7 +134,7 @@ const profiles = {
     ],
     quote:
       'Seu filho não nasceu no fim do mundo. Nasceu no começo de alguma coisa que ninguém ainda sabe nomear.',
-    memory: 'img-presente/personagens/brit-mark-presente.png',
+    memory: 'img-presente/personagens/britney-presente2.png',
     memoryTitle: 'Laços que resistem',
     memoryText:
       'Britney carrega a família nos registros e Jully no coração. Quando uma delas cai, a outra lembra por que ainda vale levantar.',
@@ -200,7 +200,10 @@ if (p) {
   if (memoryText) memoryText.textContent = p.memoryText;
   const gallery = document.querySelector('[data-gallery]');
   if (gallery) {
-    gallery.innerHTML = p.gallery
+    const visibleGallery = key === 'britney'
+      ? p.gallery.filter(([src]) => !/(marido|bobby|boby|mark-brit|all-presente)/i.test(src))
+      : p.gallery;
+    gallery.innerHTML = visibleGallery
       .map(
         ([src, label]) =>
           `<figure><img src="${src}" alt="${label} — ${p.name}" loading="lazy"><figcaption>${label}</figcaption></figure>`
