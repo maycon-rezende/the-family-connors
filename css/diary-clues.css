@@ -1,0 +1,1 @@
+.diary-clue{position:fixed;z-index:25;right:1rem;bottom:1rem;padding:.65rem .8rem;border:1px solid #c66a3e88;background:#100806ee;color:#d99a75;font:700 .45rem Cinzel;letter-spacing:.1em;cursor:pointer;opacity:.7;transition:.3s}.diary-clue:hover,.diary-clue.is-found{opacity:1;transform:translateY(-3px);border-color:#e19a68}
