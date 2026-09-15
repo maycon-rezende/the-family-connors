@@ -1868,3 +1868,4 @@ footer a {
     transform: none;
   }
 }
+.legal-links{display:inline-flex;gap:1rem;margin-left:auto}.legal-links a{font-size:.5rem}@media(max-width:600px){.legal-links{margin-left:0;flex-wrap:wrap}}
