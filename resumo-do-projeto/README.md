@@ -56,6 +56,10 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [GUIA-PUBLICACAO-ADSENSE.md](GUIA-PUBLICACAO-ADSENSE.md): sequência técnica para domínio, indexação, consentimento e AdSense.
 - [MIDIAS-PENDENTES.md](MIDIAS-PENDENTES.md): inventário dos arquivos recebidos que aguardam autorização e associação às páginas.
 
+## Auditoria rápida
+
+Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto. O relatório verifica idioma, viewport, descrição SEO, `alt` das imagens, links vazios e referências internas quebradas.
+
 ## Preparação para publicação
 
 - As 55 páginas HTML possuem descrição SEO, idioma declarado e referências internas verificadas.
