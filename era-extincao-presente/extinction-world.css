@@ -1595,6 +1595,9 @@ footer a {
     transform: none;
     pointer-events: auto;
   }
+  body.world-menu-open {
+    overflow: hidden;
+  }
   .world-nav nav a,
   .world-nav nav a:visited {
     min-height: 64px;
