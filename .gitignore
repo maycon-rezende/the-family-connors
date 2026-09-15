@@ -1,0 +1,6 @@
+# Downloads incompletos nunca devem entrar no site publicado.
+*.crdownload
+
+# Arquivos temporários locais de ferramentas e editores.
+.DS_Store
+Thumbs.db
