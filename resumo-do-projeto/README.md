@@ -52,5 +52,6 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
+- [DIREITOS-AUTORais.md](DIREITOS-AUTORais.md): inventário de mídias temporárias e checklist para publicação/AdSense.
 
 Última atualização: 31 de agosto de 2026.
