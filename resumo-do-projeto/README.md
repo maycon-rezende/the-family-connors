@@ -54,6 +54,7 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 - [DIREITOS-AUTORais.md](DIREITOS-AUTORais.md): inventário de mídias temporárias e checklist para publicação/AdSense.
 - [GUIA-PUBLICACAO-ADSENSE.md](GUIA-PUBLICACAO-ADSENSE.md): sequência técnica para domínio, indexação, consentimento e AdSense.
+- [MIDIAS-PENDENTES.md](MIDIAS-PENDENTES.md): inventário dos arquivos recebidos que aguardam autorização e associação às páginas.
 
 ## Preparação para publicação
 
