@@ -1,4 +1,18 @@
 (() => {
+  const photoSection = document.querySelector('[data-gallery]')?.closest('.chapter');
+  if (photoSection) {
+    photoSection.classList.add('britney-photo-memories');
+    const title = photoSection.querySelector('.gallery-heading h2');
+    const eyebrow = photoSection.querySelector('.gallery-heading .eyebrow');
+    const intro = photoSection.querySelector('.gallery-heading p');
+    if (eyebrow) eyebrow.textContent = 'ÁLBUM PESSOAL // BC-05 // REGISTROS PRESERVADOS';
+    if (title) title.innerHTML = 'Lembranças<br><em>fotográficas.</em>';
+    if (intro) intro.textContent = 'Antes de rastrear sinais, Britney colecionava instantes. Estas imagens são o álbum de uma mulher que aprendeu a guardar o que o mundo tenta apagar.';
+    const label = document.createElement('div');
+    label.className = 'photo-album-label';
+    label.innerHTML = '<span>MEMÓRIAS DO TEMPO</span><i>04 REGISTROS // PRESENTE</i>';
+    photoSection.querySelector('[data-gallery]')?.before(label);
+  }
   const buttons = document.querySelectorAll('[data-open-record]');
   const fragmentsKey = 'bc05-diary-fragments';
   const chapters = [
