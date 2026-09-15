@@ -54,4 +54,11 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 - [DIREITOS-AUTORais.md](DIREITOS-AUTORais.md): inventário de mídias temporárias e checklist para publicação/AdSense.
 
-Última atualização: 31 de agosto de 2026.
+## Preparação para publicação
+
+- As 55 páginas HTML possuem descrição SEO, idioma declarado e referências internas verificadas.
+- A auditoria estática confirmou `alt` em todas as imagens e nenhum link vazio.
+- Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
+- Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
+
+Última atualização: 15 de setembro de 2026.
