@@ -2,6 +2,10 @@
 #cursor-ring {
   display: none !important;
 }
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid #e1b461;
+  outline-offset: 4px;
+}
 .connor-cursor-core,
 .connor-cursor-ring {
   position: fixed;
