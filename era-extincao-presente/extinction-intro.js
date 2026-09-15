@@ -52,7 +52,9 @@
     I('img-intro/frame-26-john.jpg', 98.455, 99.07, null, 'rapid fit-contain focus-john'),
     I('img-intro/frame-27-brian.jpg', 99.07, 99.819, null, 'rapid fit-contain focus-brian'),
     I('img-intro/frame-25-jack-dimitri.jpg', 99.819, 100, null, 'rapid fit-contain focus-dimitri'),
-    V('video/versao1.mp4', 100, 110.005, null, 'rupture fit-video monster-reveal'),
+    // O trecho "No strings on me" do Doom começa em 08s do vídeo.
+    // O trailer marca 01:41; soltamos o Doom um segundo antes, em 01:40 (100s).
+    V('video/versao-3.mp4', 100, 110.005, null, 'rupture fit-video monster-reveal'),
     I('img-presente/personagens/extincao.jpg', 110.005, DURATION, null, 'title-dust')
   ];
 
