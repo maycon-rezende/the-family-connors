@@ -24,6 +24,7 @@ const report = {
   missingViewport: [],
   missingDescription: [],
   imagesWithoutAlt: [],
+  emptyAltWarnings: [],
   emptyHrefs: [],
   missingReferences: []
 };
@@ -40,6 +41,7 @@ for (const file of pages) {
 
   for (const match of html.matchAll(/<img\b[^>]*>/gi)) {
     if (!/\balt=["']/i.test(match[0])) report.imagesWithoutAlt.push(relative);
+    else if (/\balt=["']\s*["']/i.test(match[0])) report.emptyAltWarnings.push(`${relative}: ${match[0]}`);
   }
   for (const match of html.matchAll(/<a\b[^>]*\bhref=["']\s*["']/gi)) {
     report.emptyHrefs.push(relative);
@@ -54,6 +56,6 @@ for (const file of pages) {
   }
 }
 
-const failures = Object.entries(report).filter(([key, value]) => key !== 'pages' && value.length);
+const failures = Object.entries(report).filter(([key, value]) => !['pages', 'emptyAltWarnings'].includes(key) && value.length);
 console.log(JSON.stringify(report, null, 2));
 if (failures.length) process.exitCode = 1;
