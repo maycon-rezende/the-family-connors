@@ -37,7 +37,7 @@ const profiles = {
     age: '54 ANOS',
     role: 'MÉDICA // COMANDO CIVIL',
     hero: 'img-presente/personagens/alice-presente1.png',
-    focus: '50% 20%',
+    focus: '52% 5%',
     intro:
       'Quando medicamentos viraram relíquias, Alice fez do conhecimento a última linha entre a vida e a morte.',
     title: 'A ciência',
@@ -67,7 +67,7 @@ const profiles = {
     age: '50 ANOS',
     role: 'VETERANO // DEFESA HELLSINGS',
     hero: 'img-presente/personagens/mark-presente2.png',
-    focus: '50% 19%',
+    focus: '51% 14%',
     intro:
       'A guerra acabou muitas vezes para Mark Connor. O problema é que sempre começou outra no dia seguinte.',
     title: 'A muralha',
@@ -94,8 +94,8 @@ const profiles = {
     surname: '',
     age: '49 ANOS',
     role: 'NEGOCIAÇÃO // INTELIGÊNCIA',
-    hero: 'img-presente/personagens/arianipresente1.png',
-    focus: '50% 18%',
+    hero: 'img-hellsing/ariani-presente.png',
+    focus: '52% 14%',
     intro:
       'Quando armas não bastam, Ariani encontra a palavra, a informação ou a fraqueza capaz de abrir o caminho.',
     title: 'A voz',
@@ -106,14 +106,14 @@ const profiles = {
     ],
     quote:
       'No fim do mundo, a verdade vale menos que água. Por isso ela aprende quem está mentindo antes de negociar.',
-    memory: 'img-presente/personagens/mark-ariani.png',
+    memory: 'img-hellsing/ariani-mark.png',
     memoryTitle: 'Força e razão',
     memoryText:
       'Ariani e Mark sobreviveram porque nunca precisaram ser iguais. Cada um enxerga perigos que o outro não vê.',
     gallery: [
-      ['img-presente/personagens/ariani-presente.png', 'ARQUIVO DE INTELIGÊNCIA'],
-      ['img-presente/personagens/ariani-presente2.png', 'CONTATO EXTERNO'],
-      ['img-presente/personagens/ariani-presente3.png', 'REGISTRO DE ROTA'],
+      ['img-hellsing/ariani-salvatore.png', 'ARQUIVO DE INTELIGÊNCIA'],
+      ['img-hellsing/salvatore-ariani.png', 'CONTATO EXTERNO'],
+      ['img-hellsing/ariani-mark-acao.png', 'REGISTRO DE ROTA'],
     ],
   },
   britney: {

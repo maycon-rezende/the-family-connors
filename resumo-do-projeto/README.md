@@ -14,7 +14,8 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 - Páginas individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
 - Portal dos herdeiros e arquivos individuais da segunda geração: Alucard, Diana, Nicolai, Mary, Isolde, Pollyana e Nathan.
 - Diana possui um dossiê exclusivo de combate; Isolde possui arquivo fotográfico cinematográfico em looping.
-- Galerias fotográficas separadas para Jack, Alice, Mark, Britney e Jully; os registros de Jack ficam no dossiê independente `registros-jack.html`.
+- Galerias fotográficas separadas para Jack, Alice, Mark, Ariani, Britney e Jully; os registros de Jack ficam no dossiê independente `registros-jack.html`.
+- Alice, Mark, Ariani e Britney possuem dossiês do presente com ficha técnica, habilidades, cursor temático e arquivos fotográficos independentes sem recorte de imagens.
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
 - `videos.html`: central audiovisual com registros compartilhados.
 - `hellsing.html`: experiência cinematográfica dos Hellsings, com abertura, bunker, radar, dossiês e formação oficial.
@@ -48,6 +49,7 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 
 - [GUIA-TECNICO-INTRO.md](GUIA-TECNICO-INTRO.md): passo a passo da intro, código, sincronização, efeitos, mídias e pontos de manutenção.
 - [GUIA-TECNICO-HERDEIROS.md](GUIA-TECNICO-HERDEIROS.md): ordem oficial, páginas, cursores, efeitos e galerias dos descendentes.
+- [REGISTRO-TECNICO-ATUAL.md](REGISTRO-TECNICO-ATUAL.md): mapa detalhado das páginas, código, comandos, validação, galerias e manutenção atual.
 
 - [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
@@ -62,9 +64,9 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 
 ## Preparação para publicação
 
-- As 55 páginas HTML possuem descrição SEO, idioma declarado e referências internas verificadas.
+- As 56 páginas HTML possuem descrição SEO, idioma declarado e referências internas verificadas.
 - A auditoria estática confirmou `alt` em todas as imagens e nenhum link vazio.
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 15 de setembro de 2026.
+Última atualização: 20 de outubro de 2026.

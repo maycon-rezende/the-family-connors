@@ -3,50 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Arquivo Clínico — Alice Connor</title>
-    <meta name="description" content="Registros fotográficos e clínicos de Alice Connor." />
+    <title>Memórias da Extinção — Alice Connor</title>
+    <meta name="description" content="Memórias fotográficas de Alice Myers Connor antes e depois da extinção." />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/alice-fotos.css" />
     <link rel="stylesheet" href="css/alice-fotos-polish.css" />
+    <link rel="stylesheet" href="css/site-cursor.css" />
   </head>
 
-  <body>
+  <body class="alice-photo-archive">
     <nav>
-      <a href="alice.html">← Voltar ao prontuário</a><span>AMC // CLINICAL ARCHIVE</span>
+      <a href="alice-presente.html">← Voltar ao presente</a><span>AMC // MEMÓRIAS DA EXTINÇÃO</span>
       <a href="telainicial.html">Família Connor</a>
     </nav>
     <header class="archive-hero">
       <div class="clinical-grid" aria-hidden="true"></div>
       <div class="pulse-line" aria-hidden="true"></div>
-      <span class="archive-kicker">Prontuário visual // Alice Myers Connor</span>
-      <h1>ALICE CONNOR<br /><em>ARQUIVO PESSOAL</em></h1>
+      <span class="archive-kicker">Arquivo visual // Alice Myers Connor</span>
+      <h1>MEMÓRIAS DA<br /><em>EXTINÇÃO</em></h1>
       <p>
-        Fotografias individuais de Alice em sua vida médica e em registros pessoais. Imagens
-        familiares permanecem fora deste arquivo.
+        Fotografias individuais de Alice em sua vida médica, pessoal e no presente. Cada registro preserva uma parte da mulher que continuou cuidando dos seus quando o mundo acabou.
       </p>
       <div class="archive-count">
-        <strong id="visible-count">35</strong><span>registros catalogados</span>
+        <strong id="visible-count">05</strong><span>registros atuais catalogados</span>
       </div>
     </header>
     <main>
       <section class="archive-index" aria-label="Capítulos do prontuário">
         <div>
-          <span>01</span><strong>Medicina</strong><small>Vocação, plantões e cuidado</small>
+          <span>01</span><strong>Triagem</strong><small>Medicina de campo no presente</small>
         </div>
         <div>
-          <span>02</span><strong>Vida pessoal</strong><small>Identidade, estilo e memória</small>
+          <span>02</span><strong>Comboio</strong><small>Rotas, cuidado e sobrevivência</small>
         </div>
-        <div><span>03</span><strong>Presente</strong><small>O tempo e o legado Connor</small></div>
+        <div><span>03</span><strong>Família</strong><small>O legado Connor continua vivo</small></div>
+      </section>
+      <section class="alice-present-carousel" aria-labelledby="alice-carousel-title">
+        <div class="alice-present-carousel__head">
+          <div>
+            <span class="archive-kicker">TRANSMISSÃO AMC // REGISTRO CONTÍNUO</span>
+            <h2 id="alice-carousel-title">Memórias em <em>movimento</em></h2>
+          </div>
+          <span class="alice-present-carousel__status" data-carousel-status aria-live="polite">REGISTRO 01 // ATIVO</span>
+        </div>
+        <div class="alice-present-carousel__stage" data-carousel>
+          <img data-carousel-image src="" alt="Memória de Alice Myers Connor" />
+          <div class="alice-present-carousel__caption">
+            <span data-carousel-code>AMC-PRE-01</span>
+            <strong data-carousel-title></strong>
+            <p>Arquivo do presente de Alice Myers Connor.</p>
+          </div>
+          <button type="button" data-carousel-prev aria-label="Memória anterior">←</button>
+          <button type="button" data-carousel-next aria-label="Próxima memória">→</button>
+          <div class="alice-present-carousel__progress" data-carousel-progress></div>
+        </div>
       </section>
       <div class="archive-toolbar">
-        <span>Selecionar capítulo:</span>
-        <button class="archive-filter is-active" data-filter="all">Todas</button
-        ><button class="archive-filter" data-filter="medica">Médica</button
-        ><button class="archive-filter" data-filter="pessoal">Pessoal</button
-        ><button class="archive-filter" data-filter="presente">Presente</button>
+        <span>Arquivo atual:</span>
+        <button class="archive-filter is-active" data-filter="presente">Presente</button>
       </div>
       <section class="photo-wall" aria-label="Fotografias individuais de Alice Connor">
         <button
@@ -431,6 +448,58 @@
             loading="lazy"
           /><span>AMC-RES-02</span><i>Restrito</i><strong>Registro protegido</strong>
         </button>
+        <button class="photo-card" data-group="presente" data-title="Registro do presente" data-file="img-presente/personagens/alice-presente.png">
+          <img src="img-presente/personagens/alice-presente.png" alt="Alice Connor no presente" loading="lazy" />
+          <span>AMC-PRE-01</span><i>Presente</i><strong>Registro do presente</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Médica do comboio" data-file="img-presente/personagens/alice-presente1.png">
+          <img src="img-presente/personagens/alice-presente1.png" alt="Alice Connor, médica do comboio" loading="lazy" />
+          <span>AMC-PRE-02</span><i>Presente</i><strong>Médica do comboio</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Alice em vigília" data-file="img-presente/personagens/alice-presente2.png">
+          <img src="img-presente/personagens/alice-presente2.png" alt="Alice Connor em vigília" loading="lazy" />
+          <span>AMC-PRE-03</span><i>Presente</i><strong>Alice em vigília</strong>
+        </button>
+        <button class="photo-card photo-card--wide" data-group="presente" data-title="Triagem em movimento" data-file="img-presente/personagens/alice-presente3.png">
+          <img src="img-presente/personagens/alice-presente3.png" alt="Alice Connor em registro médico no presente" loading="lazy" />
+          <span>AMC-PRE-04</span><i>Presente</i><strong>Triagem em movimento</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="A médica do comboio" data-file="img-presente/personagens/lice.png">
+          <img src="img-presente/personagens/lice.png" alt="Alice Connor, médica do comboio" loading="lazy" />
+          <span>AMC-PRE-05</span><i>Presente</i><strong>A médica do comboio</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Alice em campo" data-file="img-hellsing/alice-presente.png">
+          <img src="img-hellsing/alice-presente.png" alt="Alice Connor em campo" loading="lazy" />
+          <span>AMC-PRE-06</span><i>Presente</i><strong>Alice em campo</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Registro de rota" data-file="img-hellsing/alice-presente1.png">
+          <img src="img-hellsing/alice-presente1.png" alt="Alice Connor em registro de rota" loading="lazy" />
+          <span>AMC-PRE-07</span><i>Presente</i><strong>Registro de rota</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Prontidão" data-file="img-hellsing/alice-presente2.png">
+          <img src="img-hellsing/alice-presente2.png" alt="Alice Connor em prontidão" loading="lazy" />
+          <span>AMC-PRE-08</span><i>Presente</i><strong>Prontidão</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Comando médico" data-file="img-hellsing/alice-presente3.png">
+          <img src="img-hellsing/alice-presente3.png" alt="Alice Connor no comando médico" loading="lazy" />
+          <span>AMC-PRE-09</span><i>Presente</i><strong>Comando médico</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Linha de frente" data-file="img-hellsing/alice-presente4.png">
+          <img src="img-hellsing/alice-presente4.png" alt="Alice Connor na linha de frente" loading="lazy" />
+          <span>AMC-PRE-10</span><i>Presente</i><strong>Linha de frente</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Último registro" data-file="img-hellsing/alice-presente5.png">
+          <img src="img-hellsing/alice-presente5.png" alt="Alice Connor em seu último registro" loading="lazy" />
+          <span>AMC-PRE-11</span><i>Presente</i><strong>Último registro</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Ação Hellsings" data-file="img-hellsing/alice-acao.png">
+          <img src="img-hellsing/alice-acao.png" alt="Alice Connor em ação com os Hellsings" loading="lazy" />
+          <span>AMC-PRE-12</span><i>Presente</i><strong>Ação Hellsings</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Ação de campo" data-file="img-hellsing/alice-acao1.png">
+          <img src="img-hellsing/alice-acao1.png" alt="Alice Connor em ação de campo" loading="lazy" />
+          <span>AMC-PRE-13</span><i>Presente</i><strong>Ação de campo</strong>
+        </button>
       </section>
       <div class="archive-pagination" aria-label="Paginação dos registros">
         <button id="page-prev" type="button">← Anteriores</button
@@ -445,5 +514,6 @@
       </div>
     </div>
     <script src="js/alice-fotos.js"></script>
+    <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

@@ -35,6 +35,17 @@
 | `britney.html` | `britney-fotos.html` |
 | `jully.html` | `jully-fotos.html` |
 
+## Arquivos do presente e galerias atuais
+
+| Dossiê do presente | Arquivo de registros | Estilos e comportamento |
+| --- | --- | --- |
+| `alice-presente.html` | `alice-fotos.html` | `era-extincao-presente/alice-presente.css`, `css/alice-fotos-polish.css`, `era-extincao-presente/alice-presente-gallery.js`, `js/alice-fotos.js` |
+| `mark-presente.html` | `mark-fotos.html` | `era-extincao-presente/mark-presente.css`, `css/mark-fotos-polish.css`, `js/mark-fotos.js` |
+| `ariani-presente.html` | `ariani-fotos.html` | `era-extincao-presente/ariani-presente.css`, `css/ariani-fotos.css`, `js/ariani-fotos.js` |
+| `britney-presente.html` | `britney-fotos.html` | `era-extincao-presente/britney-presente.css`, `css/britney-registros.css`, `js/britney-registros.js` |
+
+Os quatro arquivos fotográficos usam carrosséis independentes, controles de teclado/mouse, pausa por foco, diálogo de ampliação e `object-fit: contain` nos registros em que o enquadramento completo é obrigatório. A estrutura detalhada está em `REGISTRO-TECNICO-ATUAL.md`.
+
 ## Pastas de mídia
 
 - `img-jack/`, `img-alice/`, `img-mark/`, `img-ariani/`, `img-britney/` e `img-jully/`: imagens individuais.

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#090806" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/alice-presente.css" />
+    <link rel="stylesheet" href="css/site-cursor.css" />
     <title>Alice M Connor | Era da Extinção</title>
     <meta name="description" content="Alice Myers Connor no presente: medicina, família e sobrevivência." />
   </head>
@@ -31,6 +33,45 @@
           <article data-story></article>
         </div>
       </section>
+      <section class="alice-technical" aria-labelledby="alice-technical-title">
+        <header class="alice-technical__head">
+          <div>
+            <span class="eyebrow">AC-02 // FICHA TÉCNICA OPERACIONAL</span>
+            <h2 id="alice-technical-title">Perfil de <em>sobrevivência</em></h2>
+          </div>
+          <span class="alice-technical__seal" aria-label="Status: ativa">ATIVA<i></i></span>
+        </header>
+        <div class="alice-technical__grid">
+          <article class="alice-id-card">
+            <span class="alice-id-card__code">REGISTRO // AC-02</span>
+            <strong>Alice Myers Connor</strong>
+            <dl>
+              <div><dt>Idade</dt><dd>54 anos</dd></div>
+              <div><dt>Função</dt><dd>Médica / Comando civil</dd></div>
+              <div><dt>Base</dt><dd>Comboio Hellsings</dd></div>
+              <div><dt>Estado</dt><dd>Em movimento</dd></div>
+            </dl>
+            <p>Quando o estoque termina e a rota falha, Alice transforma conhecimento em tempo — e tempo em vida.</p>
+          </article>
+          <article class="alice-skills" aria-label="Habilidades de Alice">
+            <span class="alice-skills__label">CAPACIDADES CONFIRMADAS</span>
+            <div class="alice-skill"><span>Triagem e medicina de campo</span><b style="--level: 98%">98%</b></div>
+            <div class="alice-skill"><span>Diagnóstico e estabilização</span><b style="--level: 95%">95%</b></div>
+            <div class="alice-skill"><span>Gestão de medicamentos e recursos</span><b style="--level: 92%">92%</b></div>
+            <div class="alice-skill"><span>Coordenação de sobreviventes</span><b style="--level: 89%">89%</b></div>
+            <div class="alice-skill"><span>Resistência emocional</span><b style="--level: 94%">94%</b></div>
+          </article>
+          <article class="alice-protocols">
+            <span>PROTOCOLOS PESSOAIS</span>
+            <ul>
+              <li>Preservar vidas antes de preservar recursos.</li>
+              <li>Nenhuma criança fica fora da triagem.</li>
+              <li>Conhecimento médico deve ser compartilhado.</li>
+              <li>O comboio só avança quando todos podem seguir.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
       <section class="memory">
         <img data-memory src="" alt="Memória preservada" />
         <div class="memory-copy">
@@ -39,7 +80,16 @@
           <p data-memory-text></p>
         </div>
       </section>
-      <section class="chapter"><div class="gallery" data-gallery></div></section>
+      <section class="alice-memories-entry" aria-labelledby="alice-memories-entry-title">
+        <div class="alice-memories__heading">
+          <div>
+            <span class="eyebrow">ARQUIVO AMC // MEMÓRIA PRESERVADA</span>
+            <h2 id="alice-memories-entry-title">Memórias <em>da extinção</em></h2>
+            <p>O arquivo fotográfico de Alice foi separado do prontuário principal. Entre no registro para consultar cada imagem individual.</p>
+          </div>
+        </div>
+          <a class="alice-memories-entry__link" href="alice-fotos.html">Abrir arquivo fotográfico <span>→</span></a>
+      </section>
     </main>
     <footer class="profile-footer">
       <a href="jack-presente.html">← JACK CONNOR</a
@@ -47,5 +97,6 @@
       ><a href="mark-presente.html">MARK CONNOR →</a>
     </footer>
     <script src="era-extincao-presente/personagem-presente.js"></script>
+    <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

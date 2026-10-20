@@ -1,0 +1,1021 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* Mark — defesa, rota e a oficina que mantém o comboio vivo. */
+body[data-character='mark'] {
+  --rust: #d98035;
+  --sand: #d7a35f;
+  --cyan: #9bbfba;
+  color: #eee2ce;
+  background: #0c0a07;
+}
+
+body[data-character='mark']::before {
+  opacity: 0.18;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(226, 142, 54, 0.16), transparent 28%),
+    linear-gradient(118deg, transparent 0 48%, rgba(163, 197, 189, 0.055) 48.1% 48.25%, transparent 48.35%),
+    linear-gradient(62deg, transparent 0 73%, rgba(226, 142, 54, 0.045) 73.1% 73.25%, transparent 73.35%);
+  mix-blend-mode: screen;
+}
+
+/* Cursor de mira e faísca — somente para mouse, preservando toque no celular. */
+body[data-character='mark'] .connor-cursor-core {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: #f0a34d;
+  box-shadow: 0 0 10px 2px rgba(240, 163, 77, 0.72), 0 0 25px rgba(197, 87, 31, 0.35);
+}
+
+body[data-character='mark'] .connor-cursor-ring {
+  width: 42px;
+  height: 42px;
+  margin: -21px 0 0 -21px;
+  border-color: rgba(240, 163, 77, 0.72);
+  border-radius: 3px;
+  background: linear-gradient(135deg, rgba(240, 163, 77, 0.09), transparent 52%);
+  transform: rotate(45deg);
+}
+
+body[data-character='mark'] .connor-cursor-ring::before,
+body[data-character='mark'] .connor-cursor-ring::after {
+  background: rgba(240, 163, 77, 0.62);
+}
+
+body[data-character='mark'] .connor-cursor-ring.is-interactive {
+  border-color: #f6c77f;
+  background: linear-gradient(135deg, rgba(240, 163, 77, 0.2), transparent 62%);
+  box-shadow: 0 0 24px rgba(240, 163, 77, 0.22);
+}
+
+body[data-character='mark'] .connor-cursor-ring.is-view {
+  border-radius: 0;
+  border-color: rgba(163, 197, 189, 0.86);
+}
+
+body[data-character='mark'] .connor-cursor-dust {
+  background: rgba(240, 163, 77, var(--alpha));
+  box-shadow: 0 0 9px rgba(240, 163, 77, 0.72);
+}
+
+body[data-character='mark'] .connor-cursor-impact {
+  border-color: rgba(240, 163, 77, 0.88);
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(240, 163, 77, 0.52);
+}
+
+body[data-character='mark'] .profile-nav {
+  background: rgba(12, 10, 7, 0.92);
+  border-bottom-color: rgba(224, 142, 58, 0.28);
+}
+
+body[data-character='mark'] .profile-nav b,
+body[data-character='mark'] .eyebrow {
+  color: #efa34f;
+}
+
+body[data-character='mark'] .profile-hero {
+  min-height: max(700px, 100svh);
+  padding-bottom: clamp(3.5rem, 8vh, 6.5rem);
+  background: #0c0a07;
+}
+
+body[data-character='mark'] .profile-hero > img {
+  object-position: var(--focus, 51% 14%);
+  filter: saturate(0.8) contrast(1.08) brightness(0.74);
+}
+
+body[data-character='mark'] .profile-hero::before {
+  background:
+    linear-gradient(90deg, rgba(9, 8, 6, 0.98) 0%, rgba(9, 8, 6, 0.83) 31%, rgba(9, 8, 6, 0.28) 61%, transparent 86%),
+    linear-gradient(0deg, #0c0a07 1%, rgba(12, 10, 7, 0.48) 33%, transparent 67%),
+    radial-gradient(circle at 76% 22%, rgba(231, 142, 54, 0.2), transparent 25%);
+}
+
+body[data-character='mark'] .profile-hero::after {
+  inset: 0;
+  opacity: 0.66;
+  background:
+    linear-gradient(90deg, transparent 0 48%, rgba(234, 157, 78, 0.12) 48.1% 48.22%, transparent 48.32%),
+    linear-gradient(0deg, transparent 0 64%, rgba(163, 197, 189, 0.1) 64.1% 64.22%, transparent 64.32%),
+    radial-gradient(circle at 71% 34%, transparent 0 12%, rgba(234, 157, 78, 0.24) 12.1% 12.25%, transparent 12.35% 20%, rgba(163, 197, 189, 0.16) 20.1% 20.2%, transparent 20.3%);
+  animation: mark-range-sweep 10s linear infinite;
+}
+
+body[data-character='mark'] .hero-copy {
+  position: relative;
+  width: min(720px, 92vw);
+  padding-left: clamp(1rem, 2.8vw, 2.5rem);
+  border-left: 2px solid rgba(239, 163, 79, 0.86);
+}
+
+body[data-character='mark'] .hero-copy::before {
+  content: 'MC-03 // PERÍMETRO DE DEFESA';
+  position: absolute;
+  top: -2.2rem;
+  left: clamp(1rem, 2.8vw, 2.5rem);
+  color: rgba(163, 197, 189, 0.86);
+  font: 500 0.5rem/1 'DM Mono', monospace;
+  letter-spacing: 0.18em;
+}
+
+body[data-character='mark'] h1 {
+  text-shadow: 0 0 30px rgba(222, 128, 41, 0.16), 0 12px 30px #000;
+}
+
+body[data-character='mark'] h1 em,
+body[data-character='mark'] .chapter h2 em {
+  color: #e99543;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 20px rgba(233, 149, 67, 0.2);
+}
+
+body[data-character='mark'] .hero-copy > p,
+body[data-character='mark'] .chapter article p,
+body[data-character='mark'] .memory p {
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.012em;
+}
+
+body[data-character='mark'] .hero-copy > p {
+  max-width: 600px;
+  color: #e5d5bd;
+  font-size: clamp(1.08rem, 1.6vw, 1.32rem);
+  line-height: 1.55;
+}
+
+body[data-character='mark'] .data-strip {
+  gap: 0.5rem;
+}
+
+body[data-character='mark'] .data-strip span {
+  position: relative;
+  overflow: hidden;
+  padding: 0.82rem 1rem 0.82rem 1.35rem;
+  border-color: rgba(239, 163, 79, 0.28);
+  background: rgba(14, 13, 10, 0.8);
+  color: #ddd0bb;
+  font-family: 'DM Mono', monospace;
+}
+
+body[data-character='mark'] .data-strip span::before {
+  content: '';
+  position: absolute;
+  left: 0.48rem;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #efa34f;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+body[data-character='mark'] .profile-main {
+  background:
+    linear-gradient(90deg, transparent 0 7vw, rgba(239, 163, 79, 0.1) 7vw 7.08vw, transparent 7.16vw),
+    linear-gradient(120deg, #0d0b08, #17120c 48%, #0b0a08);
+}
+
+body[data-character='mark'] .chapter {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgba(239, 163, 79, 0.18);
+  background:
+    radial-gradient(circle at 84% 26%, rgba(233, 149, 67, 0.12), transparent 21%),
+    linear-gradient(135deg, rgba(15, 13, 9, 0.99), rgba(28, 22, 14, 0.94));
+}
+
+body[data-character='mark'] .chapter::before {
+  content: 'MAPA TÁTICO // SETOR M-03';
+  position: absolute;
+  top: 2.4rem;
+  right: 7vw;
+  color: rgba(163, 197, 189, 0.58);
+  font: 500 0.48rem/1 'DM Mono', monospace;
+  letter-spacing: 0.18em;
+}
+
+body[data-character='mark'] .chapter::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.35;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(239, 163, 79, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 197, 189, 0.055) 1px, transparent 1px),
+    radial-gradient(ellipse at 82% 56%, transparent 0 20%, rgba(239, 163, 79, 0.13) 20.15% 20.35%, transparent 20.5% 31%, rgba(163, 197, 189, 0.09) 31.15% 31.28%, transparent 31.45%);
+  background-size: 52px 52px, 52px 52px, 100% 100%;
+  mask-image: linear-gradient(90deg, #000, transparent 94%);
+}
+
+body[data-character='mark'] .chapter-grid {
+  position: relative;
+  grid-template-columns: minmax(240px, 0.76fr) minmax(0, 1.24fr);
+  align-items: start;
+}
+
+body[data-character='mark'] .chapter-grid::before {
+  content: '01';
+  position: absolute;
+  left: -1.2rem;
+  top: -1.6rem;
+  color: rgba(239, 163, 79, 0.16);
+  font: 700 clamp(6rem, 15vw, 13rem) / 1 'Barlow Condensed', sans-serif;
+  pointer-events: none;
+}
+
+body[data-character='mark'] .chapter h2 {
+  position: relative;
+  z-index: 1;
+  max-width: 390px;
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.54);
+}
+
+body[data-character='mark'] .chapter article {
+  position: relative;
+  z-index: 1;
+  padding: 0.4rem 0 0.4rem clamp(1.4rem, 4vw, 4rem);
+  border-left: 1px solid rgba(239, 163, 79, 0.38);
+}
+
+body[data-character='mark'] .chapter article::before {
+  content: 'RELATO // LEITURA DE CAMPO';
+  display: block;
+  margin-bottom: 1.45rem;
+  color: rgba(163, 197, 189, 0.7);
+  font: 500 0.48rem/1 'DM Mono', monospace;
+  letter-spacing: 0.18em;
+}
+
+body[data-character='mark'] .chapter article p {
+  margin: 0;
+  padding: 0.1rem 0 1.35rem;
+  color: #d7cab6;
+  font-size: clamp(1.03rem, 1.42vw, 1.2rem);
+  line-height: 1.78;
+}
+
+body[data-character='mark'] .chapter article p + p:not(.quote) {
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(239, 163, 79, 0.14);
+}
+
+body[data-character='mark'] .quote {
+  margin-top: 0.8rem !important;
+  padding: 1.25rem 1.35rem !important;
+  border: 1px solid rgba(163, 197, 189, 0.24) !important;
+  border-left: 3px solid #efa34f !important;
+  color: #f0ddc4 !important;
+  background: linear-gradient(90deg, rgba(233, 149, 67, 0.11), rgba(15, 13, 9, 0.25));
+  box-shadow: inset 18px 0 26px rgba(233, 149, 67, 0.025);
+  text-shadow: 0 0 16px rgba(233, 149, 67, 0.1);
+}
+
+/* Ficha técnica — um dossiê operacional, não apenas uma lista de atributos. */
+body[data-character='mark'] .mark-technical {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) 7vw;
+  border-top: 1px solid rgba(239, 163, 79, 0.22);
+  border-bottom: 1px solid rgba(239, 163, 79, 0.17);
+  background:
+    radial-gradient(circle at 86% 22%, rgba(233, 149, 67, 0.14), transparent 24%),
+    linear-gradient(135deg, #0c0b08, #1d150d 52%, #0d0b08);
+}
+
+body[data-character='mark'] .mark-technical::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.29;
+  background-image:
+    linear-gradient(rgba(239, 163, 79, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 197, 189, 0.065) 1px, transparent 1px),
+    radial-gradient(circle at 82% 30%, transparent 0 10%, rgba(239, 163, 79, 0.17) 10.15% 10.3%, transparent 10.45% 17%, rgba(163, 197, 189, 0.1) 17.15% 17.28%, transparent 17.45%);
+  background-size: 48px 48px, 48px 48px, 100% 100%;
+  mask-image: linear-gradient(90deg, #000, transparent 95%);
+}
+
+body[data-character='mark'] .mark-technical__head,
+body[data-character='mark'] .mark-technical__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+body[data-character='mark'] .mark-technical__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(2.4rem, 5vw, 4rem);
+}
+
+body[data-character='mark'] .mark-technical__head h2 {
+  margin: 0.75rem 0 0;
+  font: 800 clamp(3rem, 7vw, 7rem) / 0.82 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+body[data-character='mark'] .mark-technical__head h2 em {
+  color: #e99543;
+  font-style: normal;
+  text-shadow: 0 0 22px rgba(233, 149, 67, 0.2);
+}
+
+body[data-character='mark'] .mark-technical__seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 0 0 auto;
+  padding: 0.84rem 1rem;
+  border: 1px solid rgba(239, 163, 79, 0.38);
+  background: rgba(12, 10, 7, 0.56);
+  color: #e9a154;
+  font: 500 0.5rem/1 'DM Mono', monospace;
+  letter-spacing: 0.16em;
+}
+
+body[data-character='mark'] .mark-technical__seal i {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #f0bf79;
+  transform: rotate(45deg);
+  background: #e99543;
+  box-shadow: 0 0 12px rgba(233, 149, 67, 0.82);
+  animation: mark-tech-pulse 1.8s ease-in-out infinite;
+}
+
+body[data-character='mark'] .mark-technical__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.28fr 0.82fr;
+  gap: 10px;
+}
+
+body[data-character='mark'] .mark-id-card,
+body[data-character='mark'] .mark-skills,
+body[data-character='mark'] .mark-protocols {
+  min-height: 395px;
+  padding: clamp(1.3rem, 2.5vw, 2.2rem);
+  border: 1px solid rgba(239, 163, 79, 0.19);
+  background: linear-gradient(145deg, rgba(31, 22, 12, 0.84), rgba(9, 8, 6, 0.92));
+}
+
+body[data-character='mark'] .mark-id-card {
+  display: flex;
+  flex-direction: column;
+}
+
+body[data-character='mark'] .mark-id-card__code,
+body[data-character='mark'] .mark-skills__label,
+body[data-character='mark'] .mark-protocols > span {
+  color: rgba(163, 197, 189, 0.78);
+  font: 500 0.46rem/1 'DM Mono', monospace;
+  letter-spacing: 0.18em;
+}
+
+body[data-character='mark'] .mark-id-card > strong {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  color: #f2e0c8;
+  font: 700 clamp(2rem, 3.5vw, 3.25rem) / 0.92 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+body[data-character='mark'] .mark-id-card dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+}
+
+body[data-character='mark'] .mark-id-card dl div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.68rem 0;
+  border-top: 1px solid rgba(239, 163, 79, 0.13);
+}
+
+body[data-character='mark'] .mark-id-card dt,
+body[data-character='mark'] .mark-id-card dd {
+  margin: 0;
+  font: 500 0.47rem/1.35 'DM Mono', monospace;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+body[data-character='mark'] .mark-id-card dt { color: #958574; }
+body[data-character='mark'] .mark-id-card dd { color: #e2cba9; text-align: right; }
+
+body[data-character='mark'] .mark-id-card p {
+  margin: auto 0 0;
+  color: #bba98f;
+  font: 500 0.94rem/1.52 'Space Grotesk', Arial, sans-serif;
+}
+
+body[data-character='mark'] .mark-skills {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+body[data-character='mark'] .mark-skill {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.7rem;
+  padding: 0.1rem 0 0.82rem;
+  border-bottom: 1px solid rgba(239, 163, 79, 0.13);
+}
+
+body[data-character='mark'] .mark-skill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e99543 var(--mark-level), rgba(239, 163, 79, 0.13) var(--mark-level));
+  box-shadow: 0 0 10px rgba(233, 149, 67, 0.17);
+}
+
+body[data-character='mark'] .mark-skill--veteran { --mark-level: 100%; }
+body[data-character='mark'] .mark-skill--high { --mark-level: 82%; }
+body[data-character='mark'] .mark-skill--field { --mark-level: 68%; }
+
+body[data-character='mark'] .mark-skill span {
+  color: #d9c9b2;
+  font: 500 0.95rem/1.32 'Space Grotesk', Arial, sans-serif;
+}
+
+body[data-character='mark'] .mark-skill b {
+  align-self: center;
+  color: #a9d0c7;
+  font: 500 0.45rem/1 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+body[data-character='mark'] .mark-protocols ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-character='mark'] .mark-protocols li {
+  position: relative;
+  padding: 0.72rem 0 0.72rem 1.05rem;
+  border-left: 1px solid rgba(239, 163, 79, 0.34);
+  color: #c8b79e;
+  font: 500 0.93rem/1.42 'Space Grotesk', Arial, sans-serif;
+}
+
+body[data-character='mark'] .mark-protocols li::before {
+  content: '+';
+  position: absolute;
+  top: 0.6rem;
+  left: -0.23rem;
+  color: #efa34f;
+  background: #17110b;
+}
+
+@keyframes mark-tech-pulse {
+  50% { opacity: 0.34; transform: rotate(45deg) scale(0.7); }
+}
+
+/* Painel de campo: a defesa de Mark vista como uma rota a ser mantida. */
+body[data-character='mark'] .mark-field-board {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) 7vw;
+  border-top: 1px solid rgba(239, 163, 79, 0.22);
+  border-bottom: 1px solid rgba(239, 163, 79, 0.18);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(233, 149, 67, 0.17), transparent 24%),
+    linear-gradient(135deg, #100d09, #21170d 52%, #0d0b08);
+}
+
+body[data-character='mark'] .mark-field-board::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.32;
+  background:
+    linear-gradient(90deg, transparent 0 14%, rgba(239, 163, 79, 0.2) 14.1% 14.18%, transparent 14.28%),
+    linear-gradient(0deg, transparent 0 72%, rgba(163, 197, 189, 0.11) 72.1% 72.18%, transparent 72.28%),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(239, 163, 79, 0.05) 43px 44px);
+}
+
+body[data-character='mark'] .mark-field-board__head,
+body[data-character='mark'] .mark-field-board__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+body[data-character='mark'] .mark-field-board__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(2.2rem, 5vw, 4rem);
+}
+
+body[data-character='mark'] .mark-field-board__head h2 {
+  max-width: 680px;
+  margin: 0.8rem 0 0;
+  font: 800 clamp(3rem, 7.6vw, 7rem) / 0.82 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+body[data-character='mark'] .mark-field-board__head h2 em {
+  display: block;
+  color: #e99543;
+  font-style: normal;
+  text-shadow: 0 0 22px rgba(233, 149, 67, 0.2);
+}
+
+body[data-character='mark'] .mark-field-board__state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 0 0 auto;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(163, 197, 189, 0.35);
+  background: rgba(12, 11, 8, 0.58);
+  color: #a9d0c7;
+  font: 500 0.5rem/1 'DM Mono', monospace;
+  letter-spacing: 0.16em;
+}
+
+body[data-character='mark'] .mark-field-board__state i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a9d0c7;
+  box-shadow: 0 0 12px #a9d0c7;
+  animation: mark-perimeter-pulse 1.8s ease-in-out infinite;
+}
+
+body[data-character='mark'] .mark-field-board__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+body[data-character='mark'] .mark-field-card {
+  position: relative;
+  min-height: 300px;
+  padding: clamp(1.35rem, 2.5vw, 2.2rem);
+  overflow: hidden;
+  border: 1px solid rgba(239, 163, 79, 0.2);
+  background: linear-gradient(145deg, rgba(27, 20, 12, 0.9), rgba(10, 9, 7, 0.94));
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+body[data-character='mark'] .mark-field-card::before {
+  content: '';
+  position: absolute;
+  inset: auto -20% -53% auto;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(239, 163, 79, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(239, 163, 79, 0.035), 0 0 0 68px rgba(163, 197, 189, 0.025);
+  transition: transform 0.5s ease;
+}
+
+body[data-character='mark'] .mark-field-card:hover {
+  border-color: rgba(239, 163, 79, 0.62);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.24), 0 0 22px rgba(233, 149, 67, 0.08);
+}
+
+body[data-character='mark'] .mark-field-card:hover::before {
+  transform: scale(1.16);
+}
+
+body[data-character='mark'] .mark-field-card > span {
+  position: relative;
+  z-index: 1;
+  color: #a9d0c7;
+  font: 500 0.48rem/1 'DM Mono', monospace;
+  letter-spacing: 0.18em;
+}
+
+body[data-character='mark'] .mark-field-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 250px;
+  margin: 1.4rem 0 0.9rem;
+  color: #f0dec6;
+  font: 700 clamp(1.7rem, 2.6vw, 2.6rem) / 0.95 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+body[data-character='mark'] .mark-field-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 320px;
+  margin: 0;
+  color: #cdbfa9;
+  font: 500 0.98rem/1.62 'Space Grotesk', Arial, sans-serif;
+}
+
+@keyframes mark-perimeter-pulse {
+  50% { opacity: 0.32; transform: scale(0.68); }
+}
+
+/* A galeria do presente vive em um arquivo próprio, fora da página de perfil. */
+body[data-character='mark'] .mark-memories-entry {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) 7vw;
+  border-top: 1px solid rgba(239, 163, 79, 0.2);
+  border-bottom: 1px solid rgba(239, 163, 79, 0.17);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(233, 149, 67, 0.14), transparent 24%),
+    linear-gradient(135deg, #0e0c09, #21170f 50%, #0c0b08);
+}
+
+body[data-character='mark'] .mark-memories-entry::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(239, 163, 79, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 197, 189, 0.055) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(90deg, #000, transparent 92%);
+}
+
+body[data-character='mark'] .mark-memories-entry > * {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-character='mark'] .mark-memories-entry h2 {
+  margin: 0.75rem 0 1rem;
+  color: #f2dfc7;
+  font: 800 clamp(3.2rem, 7vw, 7.2rem) / 0.82 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+body[data-character='mark'] .mark-memories-entry h2 em {
+  color: #e99543;
+  font-style: normal;
+  text-shadow: 0 0 22px rgba(233, 149, 67, 0.22);
+}
+
+body[data-character='mark'] .mark-memories-entry p {
+  max-width: 640px;
+  margin: 0;
+  color: #cdbba2;
+  font: 500 clamp(1rem, 1.45vw, 1.18rem) / 1.65 'Space Grotesk', Arial, sans-serif;
+}
+
+body[data-character='mark'] .mark-memories-entry__link {
+  flex: 0 0 auto;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid rgba(239, 163, 79, 0.45);
+  background: rgba(12, 10, 7, 0.46);
+  color: #efa34f;
+  text-decoration: none;
+  font: 500 0.56rem/1.3 'DM Mono', monospace;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s, color 0.25s;
+}
+
+body[data-character='mark'] .mark-memories-entry__link span {
+  margin-left: 1rem;
+  font-size: 1.05rem;
+}
+
+body[data-character='mark'] .mark-memories-entry__link:hover,
+body[data-character='mark'] .mark-memories-entry__link:focus-visible {
+  border-color: #f3bb74;
+  background: rgba(233, 149, 67, 0.14);
+  color: #f5c981;
+  transform: translateY(-3px);
+}
+
+body[data-character='mark'] .memory {
+  min-height: clamp(620px, 78svh, 900px);
+  isolation: isolate;
+  padding: clamp(2.2rem, 7vw, 7rem);
+  border-top: 1px solid rgba(239, 163, 79, 0.22);
+  border-bottom: 1px solid rgba(239, 163, 79, 0.2);
+  background: #0a0907;
+}
+
+body[data-character='mark'] .memory img {
+  object-position: center 18%;
+  filter: saturate(0.74) contrast(1.08) brightness(0.68);
+}
+
+body[data-character='mark'] .memory::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.48;
+  background:
+    linear-gradient(90deg, transparent 0 19%, rgba(239, 163, 79, 0.2) 19.1% 19.23%, transparent 19.35%),
+    radial-gradient(circle at 81% 27%, transparent 0 8%, rgba(163, 197, 189, 0.28) 8.1% 8.2%, transparent 8.3% 13%, rgba(239, 163, 79, 0.18) 13.1% 13.2%, transparent 13.3%);
+  animation: mark-memory-sweep 11s ease-in-out infinite alternate;
+}
+
+body[data-character='mark'] .memory::after {
+  background:
+    linear-gradient(0deg, rgba(9, 8, 6, 0.97) 0%, rgba(9, 8, 6, 0.38) 42%, transparent 73%),
+    linear-gradient(90deg, rgba(9, 8, 6, 0.94), rgba(9, 8, 6, 0.42) 53%, transparent 85%);
+}
+
+body[data-character='mark'] .memory-copy {
+  width: min(690px, 100%);
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  border-left: 2px solid #efa34f;
+  background: linear-gradient(90deg, rgba(12, 10, 7, 0.9), rgba(12, 10, 7, 0.42) 78%, transparent);
+  box-shadow: -24px 0 58px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+body[data-character='mark'] .memory-copy .eyebrow {
+  color: #9fc8c0;
+}
+
+body[data-character='mark'] .memory h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(3.5rem, 7vw, 7.4rem);
+  letter-spacing: -0.025em;
+  text-shadow: 0 8px 28px #000;
+}
+
+body[data-character='mark'] .memory p {
+  max-width: 570px;
+  margin: 0;
+  color: #e6d6bf;
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  line-height: 1.7;
+}
+
+body[data-character='mark'] .gallery {
+  counter-reset: mark-record;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  max-width: 1220px;
+}
+
+body[data-character='mark'] .gallery figure {
+  height: min(62vw, 650px);
+  border: 1px solid rgba(239, 163, 79, 0.22);
+  background: #0a0907;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.2);
+  counter-increment: mark-record;
+}
+
+body[data-character='mark'] .gallery figure:nth-child(3) {
+  grid-column: 1 / -1;
+  height: min(46vw, 560px);
+}
+
+body[data-character='mark'] .gallery figure::before {
+  content: 'REGISTRO // 0' counter(mark-record);
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.52rem 0.66rem;
+  border: 1px solid rgba(239, 163, 79, 0.36);
+  background: rgba(11, 10, 8, 0.72);
+  color: #e9a154;
+  font: 500 0.45rem/1 'DM Mono', monospace;
+  letter-spacing: 0.14em;
+}
+
+body[data-character='mark'] .gallery img {
+  filter: saturate(0.7) contrast(1.08) brightness(0.78);
+  object-position: center 14%;
+}
+
+body[data-character='mark'] .gallery figure:nth-child(3) img {
+  object-fit: contain;
+  object-position: center;
+  background: #0a0907;
+}
+
+body[data-character='mark'] .gallery figure:hover {
+  border-color: rgba(239, 163, 79, 0.72);
+  box-shadow: 0 0 34px rgba(233, 149, 67, 0.15), 0 22px 45px rgba(0, 0, 0, 0.25);
+}
+
+body[data-character='mark'] .gallery figure:hover img {
+  filter: saturate(0.95) contrast(1.05) brightness(0.94);
+}
+
+body[data-character='mark'] .gallery figcaption {
+  color: #f0ddc4;
+  background: linear-gradient(transparent, rgba(10, 9, 7, 0.94));
+  font-family: 'DM Mono', monospace;
+}
+
+body[data-character='mark'] .profile-footer {
+  border-top-color: rgba(239, 163, 79, 0.2);
+  background: #0a0907;
+}
+
+body[data-character='mark'] .profile-footer a:hover,
+body[data-character='mark'] .profile-footer a:focus-visible {
+  color: #efa34f;
+}
+
+@keyframes mark-range-sweep {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 8% 0, 0 9%, 4% -3%; }
+}
+
+@keyframes mark-memory-sweep {
+  from { background-position: 0 0, 0 0; opacity: 0.26; }
+  to { background-position: 10% 0, 4% 5%; opacity: 0.58; }
+}
+
+@media (max-width: 980px) {
+  body[data-character='mark'] .mark-technical__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body[data-character='mark'] .mark-protocols {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+
+  body[data-character='mark'] .mark-protocols ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-character='mark'] .profile-hero {
+    min-height: 780px;
+    padding: 7rem 1.2rem 3.5rem;
+  }
+
+  body[data-character='mark'] .profile-hero > img {
+    object-position: 59% 12%;
+  }
+
+  body[data-character='mark'] .profile-hero::before {
+    background:
+      linear-gradient(0deg, #0c0a07 0%, rgba(12, 10, 7, 0.84) 44%, rgba(12, 10, 7, 0.2) 76%, transparent),
+      linear-gradient(90deg, rgba(12, 10, 7, 0.52), transparent 73%);
+  }
+
+  body[data-character='mark'] .hero-copy::before {
+    left: 0.9rem;
+    font-size: 0.42rem;
+  }
+
+  body[data-character='mark'] .chapter {
+    padding: 5rem 1.2rem;
+  }
+
+  body[data-character='mark'] .chapter::before {
+    top: 1.55rem;
+    right: 1.2rem;
+    font-size: 0.4rem;
+  }
+
+  body[data-character='mark'] .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  body[data-character='mark'] .chapter-grid::before {
+    left: -0.25rem;
+    top: -2.8rem;
+    font-size: 8rem;
+  }
+
+  body[data-character='mark'] .chapter article {
+    padding: 1.8rem 0 0 1.1rem;
+  }
+
+  body[data-character='mark'] .memory {
+    min-height: 720px;
+    padding: 1.2rem;
+  }
+
+  body[data-character='mark'] .mark-field-board {
+    padding: 5rem 1.2rem;
+  }
+
+  body[data-character='mark'] .mark-technical {
+    padding: 5rem 1.2rem;
+  }
+
+  body[data-character='mark'] .mark-memories-entry {
+    display: block;
+    padding: 5rem 1.2rem;
+  }
+
+  body[data-character='mark'] .mark-memories-entry__link {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+
+  body[data-character='mark'] .mark-technical__head {
+    display: block;
+  }
+
+  body[data-character='mark'] .mark-technical__seal {
+    margin-top: 1.35rem;
+  }
+
+  body[data-character='mark'] .mark-technical__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-character='mark'] .mark-id-card,
+  body[data-character='mark'] .mark-skills,
+  body[data-character='mark'] .mark-protocols {
+    grid-column: auto;
+    min-height: auto;
+  }
+
+  body[data-character='mark'] .mark-protocols ul {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-character='mark'] .mark-field-board__head {
+    display: block;
+  }
+
+  body[data-character='mark'] .mark-field-board__state {
+    margin-top: 1.35rem;
+  }
+
+  body[data-character='mark'] .mark-field-board__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-character='mark'] .mark-field-card {
+    min-height: 250px;
+  }
+
+  body[data-character='mark'] .memory img {
+    object-position: 52% 15%;
+  }
+
+  body[data-character='mark'] .memory-copy {
+    padding: 1.2rem;
+  }
+
+  body[data-character='mark'] .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-character='mark'] .gallery figure,
+  body[data-character='mark'] .gallery figure:nth-child(3) {
+    grid-column: auto;
+    height: min(132vw, 660px);
+  }
+
+  body[data-character='mark'] .gallery figure:nth-child(3) img {
+    object-fit: contain;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-character='mark'] .profile-hero::after,
+  body[data-character='mark'] .memory::before,
+  body[data-character='mark'] .mark-field-board__state i,
+  body[data-character='mark'] .mark-technical__seal i {
+    animation: none;
+  }
+
+  body[data-character='mark'] .mark-field-card {
+    transition: none;
+  }
+}

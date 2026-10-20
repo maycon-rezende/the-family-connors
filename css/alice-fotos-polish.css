@@ -1,3 +1,32 @@
+body.alice-photo-archive .connor-cursor-core {
+  background: #8fd6cf;
+  box-shadow: 0 0 9px 2px rgba(143, 214, 207, 0.75), 0 0 24px rgba(83, 174, 173, 0.4);
+}
+body.alice-photo-archive .connor-cursor-ring {
+  border-color: rgba(143, 214, 207, 0.7);
+  background: radial-gradient(circle, rgba(143, 214, 207, 0.08), transparent 62%);
+}
+body.alice-photo-archive .connor-cursor-ring::before,
+body.alice-photo-archive .connor-cursor-ring::after {
+  background: rgba(143, 214, 207, 0.55);
+}
+body.alice-photo-archive .connor-cursor-ring.is-interactive {
+  border-color: #bdf7df;
+  background: radial-gradient(circle, rgba(143, 214, 207, 0.2), transparent 66%);
+  box-shadow: 0 0 24px rgba(143, 214, 207, 0.2);
+}
+body.alice-photo-archive .connor-cursor-dust {
+  background: rgba(143, 214, 207, var(--alpha));
+  box-shadow: 0 0 8px rgba(143, 214, 207, 0.7);
+}
+
+/* A apresentação principal é o carrossel; a grade antiga fica fora da interface. */
+body.alice-photo-archive .archive-toolbar,
+body.alice-photo-archive .photo-wall,
+body.alice-photo-archive .archive-pagination {
+  display: none !important;
+}
+
 .archive-index {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -57,6 +86,127 @@
   margin-bottom: 1.25rem;
   background: rgba(8, 7, 11, 0.88);
   backdrop-filter: blur(15px);
+}
+
+.alice-present-carousel {
+  margin: 0 0 3rem;
+  padding: 2rem 0 0;
+}
+.alice-present-carousel__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+}
+.alice-present-carousel__head h2 {
+  margin: 0.8rem 0 0;
+  color: var(--bone);
+  font: 400 clamp(2.6rem, 6vw, 5.6rem) / 0.8 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+.alice-present-carousel__head h2 em {
+  color: var(--cyan);
+  font-style: normal;
+}
+.alice-present-carousel__status {
+  color: var(--cyan);
+  font: 600 0.48rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+.alice-present-carousel__stage {
+  position: relative;
+  min-height: min(68vh, 700px);
+  overflow: hidden;
+  border: 1px solid rgba(142, 232, 223, 0.24);
+  background: #050b0d;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+}
+.alice-present-carousel__stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(5, 11, 13, 0.7), transparent 58%), linear-gradient(0deg, rgba(5, 11, 13, 0.92), transparent 52%);
+}
+.alice-present-carousel__stage > img {
+  display: block;
+  width: 100%;
+  height: min(68vh, 700px);
+  object-fit: contain;
+  object-position: center;
+  background: #080f11;
+  filter: saturate(0.72) contrast(1.06) brightness(0.76);
+  animation: alice-carousel-in 0.75s ease both;
+}
+.alice-present-carousel__caption {
+  position: absolute;
+  z-index: 2;
+  left: clamp(1rem, 4vw, 3rem);
+  bottom: 2.5rem;
+  max-width: 560px;
+}
+.alice-present-carousel__caption span {
+  color: var(--cyan);
+  font: 600 0.5rem/1 'Cinzel', serif;
+  letter-spacing: 0.2em;
+}
+.alice-present-carousel__caption strong {
+  display: block;
+  margin: 0.65rem 0 0.35rem;
+  color: var(--bone);
+  font: 400 clamp(2rem, 4vw, 4rem) / 0.9 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+.alice-present-carousel__caption p {
+  margin: 0;
+  color: #c2d1cf;
+  line-height: 1.5;
+}
+.alice-present-carousel__stage > button {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(142, 232, 223, 0.45);
+  background: rgba(5, 13, 15, 0.66);
+  color: var(--cyan);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.alice-present-carousel__stage > button:hover,
+.alice-present-carousel__stage > button:focus-visible {
+  background: rgba(142, 232, 223, 0.15);
+  border-color: var(--cyan);
+}
+[data-carousel-prev] { left: 1rem; }
+[data-carousel-next] { right: 1rem; }
+.alice-present-carousel__progress {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan) var(--progress, 0%), rgba(142, 232, 223, 0.16) var(--progress, 0%));
+}
+@keyframes alice-carousel-in {
+  from { opacity: 0.25; transform: scale(1.025); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (max-width: 560px) {
+  .alice-present-carousel__head { display: block; }
+  .alice-present-carousel__status { display: block; margin-top: 1rem; }
+  .alice-present-carousel__stage,
+  .alice-present-carousel__stage > img { min-height: 540px; height: 540px; object-fit: contain; }
+  .alice-present-carousel__caption { right: 1rem; bottom: 1.7rem; }
+  .alice-present-carousel__stage > button { width: 40px; height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .alice-present-carousel__stage > img { animation: none; }
 }
 .photo-wall {
   display: grid;

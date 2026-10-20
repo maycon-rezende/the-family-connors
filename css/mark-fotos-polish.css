@@ -1,0 +1,367 @@
+/* Arquivo fotográfico do presente de Mark — aço, cobre e estrada. */
+body.mark-photo-archive {
+  --mark-amber: #efa34f;
+  --mark-copper: #d77f35;
+  --mark-steel: #a9d0c7;
+  --mark-bone: #f0dfc8;
+  margin: 0;
+  color: var(--mark-bone);
+  background: #0c0a07;
+  font-family: 'Crimson Pro', Georgia, serif;
+}
+
+body.mark-photo-archive::before {
+  content: '';
+  position: fixed;
+  z-index: 4;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background:
+    radial-gradient(circle at 80% 16%, rgba(239, 163, 79, 0.16), transparent 25%),
+    linear-gradient(118deg, transparent 0 48%, rgba(169, 208, 199, 0.055) 48.1% 48.22%, transparent 48.32%);
+}
+
+/* Cursor com mira de campo. */
+body.mark-photo-archive .connor-cursor-core {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--mark-amber);
+  box-shadow: 0 0 10px 2px rgba(239, 163, 79, 0.72), 0 0 25px rgba(198, 87, 30, 0.34);
+}
+body.mark-photo-archive .connor-cursor-ring {
+  border-color: rgba(239, 163, 79, 0.72);
+  border-radius: 3px;
+  background: linear-gradient(135deg, rgba(239, 163, 79, 0.09), transparent 52%);
+}
+body.mark-photo-archive .connor-cursor-ring::before,
+body.mark-photo-archive .connor-cursor-ring::after { background: rgba(239, 163, 79, 0.62); }
+body.mark-photo-archive .connor-cursor-ring.is-interactive {
+  border-color: #f5c981;
+  background: linear-gradient(135deg, rgba(239, 163, 79, 0.2), transparent 62%);
+}
+body.mark-photo-archive .connor-cursor-dust {
+  background: rgba(239, 163, 79, var(--alpha));
+  box-shadow: 0 0 8px rgba(239, 163, 79, 0.7);
+}
+body.mark-photo-archive .connor-cursor-impact {
+  border-color: rgba(239, 163, 79, 0.86);
+  border-radius: 2px;
+}
+
+body.mark-photo-archive nav {
+  z-index: 100;
+  border-bottom-color: rgba(239, 163, 79, 0.25);
+  background: rgba(11, 9, 7, 0.92);
+}
+body.mark-photo-archive nav a,
+body.mark-photo-archive nav span { color: #c6b59d; }
+body.mark-photo-archive nav a:hover { color: var(--mark-amber); }
+
+body.mark-photo-archive .archive-hero {
+  min-height: clamp(620px, 78svh, 860px);
+  padding: 0;
+  background:
+    linear-gradient(90deg, rgba(10, 9, 7, 0.96) 0%, rgba(10, 9, 7, 0.63) 39%, rgba(10, 9, 7, 0.13) 76%),
+    linear-gradient(0deg, #0c0a07 0%, rgba(12, 10, 7, 0.08) 57%, transparent 100%),
+    url('../img-presente/personagens/mark-presente2.png') center 18% / cover no-repeat;
+}
+
+body.mark-photo-archive .ocean-grid {
+  z-index: -1;
+  opacity: 0.46;
+  background-image:
+    linear-gradient(rgba(239, 163, 79, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(169, 208, 199, 0.06) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(90deg, #000, transparent 88%);
+}
+
+body.mark-photo-archive .radar {
+  right: 8%;
+  top: 17%;
+  width: min(38vw, 470px);
+  border-color: rgba(239, 163, 79, 0.22);
+  background: conic-gradient(transparent 0 81%, rgba(239, 163, 79, 0.3));
+  box-shadow: 0 0 0 72px rgba(239, 163, 79, 0.03), 0 0 0 144px rgba(169, 208, 199, 0.02);
+}
+
+body.mark-photo-archive .archive-hero > .archive-kicker,
+body.mark-photo-archive .archive-hero > h1,
+body.mark-photo-archive .archive-hero > p { display: none; }
+
+body.mark-photo-archive .mark-archive-copy {
+  position: absolute;
+  z-index: 2;
+  left: max(1.2rem, calc((100vw - 1300px) / 2));
+  bottom: clamp(4.2rem, 12vh, 9rem);
+  width: min(700px, 70vw);
+  padding-left: clamp(1rem, 2.8vw, 2.5rem);
+  border-left: 2px solid var(--mark-amber);
+}
+
+body.mark-photo-archive .archive-kicker {
+  color: var(--mark-steel);
+  font-family: 'Cinzel', serif;
+}
+
+body.mark-photo-archive .mark-archive-copy h1 {
+  display: block;
+  margin: 0.75rem 0 1rem;
+  color: var(--mark-bone);
+  font: 400 clamp(4rem, 10vw, 9rem) / 0.74 'Bebas Neue', sans-serif;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  text-shadow: 0 10px 28px #000;
+}
+body.mark-photo-archive .mark-archive-copy h1 em {
+  color: var(--mark-amber);
+  font-style: normal;
+  text-shadow: 0 0 24px rgba(239, 163, 79, 0.22);
+}
+body.mark-photo-archive .mark-archive-copy p {
+  display: block;
+  max-width: 570px;
+  margin: 0;
+  color: #dccbb4;
+  font-size: clamp(1rem, 1.5vw, 1.28rem);
+  line-height: 1.55;
+}
+
+body.mark-photo-archive .archive-count {
+  right: max(1.2rem, calc((100vw - 1300px) / 2));
+  bottom: clamp(4rem, 12vh, 8rem);
+  border-color: rgba(239, 163, 79, 0.29);
+  background: rgba(12, 10, 7, 0.72);
+}
+body.mark-photo-archive .archive-count strong { color: var(--mark-amber); }
+body.mark-photo-archive .archive-count span { color: #9fbdb7; }
+
+body.mark-photo-archive main {
+  max-width: 1320px;
+  padding: clamp(3.5rem, 8vw, 7rem) max(1.2rem, calc((100vw - 1300px) / 2)) clamp(5rem, 11vw, 9rem);
+}
+
+/* A apresentação é o carrossel; a grade legada fica apenas como fonte dos registros. */
+body.mark-photo-archive .archive-toolbar,
+body.mark-photo-archive .photo-wall { display: none !important; }
+
+body.mark-photo-archive .archive-index {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: clamp(2.6rem, 5vw, 4.5rem);
+  border: 1px solid rgba(239, 163, 79, 0.15);
+  background: rgba(239, 163, 79, 0.12);
+}
+body.mark-photo-archive .archive-index div {
+  position: relative;
+  min-height: 138px;
+  overflow: hidden;
+  padding: 1.35rem;
+  background: linear-gradient(145deg, #16100a, #0d0b08);
+}
+body.mark-photo-archive .archive-index div::after {
+  content: '';
+  position: absolute;
+  right: -20%;
+  bottom: 0;
+  left: -20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--mark-amber), transparent);
+  transform: translateX(-60%);
+  transition: transform 0.7s ease;
+}
+body.mark-photo-archive .archive-index div:hover::after { transform: translateX(60%); }
+body.mark-photo-archive .archive-index span {
+  color: rgba(239, 163, 79, 0.36);
+  font: 400 2.7rem/1 'Bebas Neue', sans-serif;
+}
+body.mark-photo-archive .archive-index strong,
+body.mark-photo-archive .archive-index small { display: block; }
+body.mark-photo-archive .archive-index strong {
+  margin-top: 0.5rem;
+  color: #ead6bd;
+  font: 600 0.67rem/1 'Cinzel', serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+body.mark-photo-archive .archive-index small {
+  margin-top: 0.65rem;
+  color: #9d907d;
+  font-size: 0.95rem;
+}
+
+body.mark-photo-archive .mark-present-carousel { margin: 0; }
+body.mark-photo-archive .mark-present-carousel__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+body.mark-photo-archive .mark-present-carousel__head h2 {
+  margin: 0.8rem 0 0;
+  color: var(--mark-bone);
+  font: 400 clamp(2.8rem, 6vw, 5.8rem) / 0.8 'Bebas Neue', sans-serif;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+body.mark-photo-archive .mark-present-carousel__head h2 em {
+  color: var(--mark-amber);
+  font-style: normal;
+}
+body.mark-photo-archive .mark-present-carousel__status {
+  color: var(--mark-steel);
+  font: 600 0.48rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+body.mark-photo-archive .mark-present-carousel__stage {
+  position: relative;
+  min-height: min(68vh, 720px);
+  overflow: hidden;
+  border: 1px solid rgba(239, 163, 79, 0.28);
+  background: #090805;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.42);
+}
+body.mark-photo-archive .mark-present-carousel__stage::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(9, 8, 5, 0.74), transparent 59%),
+    linear-gradient(0deg, rgba(9, 8, 5, 0.94), transparent 54%);
+}
+body.mark-photo-archive .mark-present-carousel__stage > img {
+  display: block;
+  width: 100%;
+  height: min(68vh, 720px);
+  object-fit: contain;
+  object-position: center;
+  background: #090805;
+  filter: saturate(0.74) contrast(1.07) brightness(0.79);
+}
+body.mark-photo-archive .mark-present-carousel__stage > img.is-swapping { animation: mark-carousel-in 0.68s ease both; }
+body.mark-photo-archive .mark-present-carousel__caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 2.55rem;
+  left: clamp(1rem, 4vw, 3rem);
+  max-width: 570px;
+}
+body.mark-photo-archive .mark-present-carousel__caption span {
+  color: var(--mark-steel);
+  font: 600 0.5rem/1 'Cinzel', serif;
+  letter-spacing: 0.2em;
+}
+body.mark-photo-archive .mark-present-carousel__caption strong {
+  display: block;
+  margin: 0.65rem 0 0.35rem;
+  color: var(--mark-bone);
+  font: 400 clamp(2rem, 4vw, 4rem) / 0.9 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+body.mark-photo-archive .mark-present-carousel__caption p {
+  margin: 0;
+  color: #d8c7af;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+body.mark-photo-archive .mark-present-carousel__stage > button {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(239, 163, 79, 0.54);
+  background: rgba(12, 10, 7, 0.66);
+  color: var(--mark-amber);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.24s, border-color 0.24s, transform 0.24s;
+}
+body.mark-photo-archive .mark-present-carousel__stage > button:hover,
+body.mark-photo-archive .mark-present-carousel__stage > button:focus-visible {
+  border-color: #f5c981;
+  background: rgba(239, 163, 79, 0.17);
+  transform: translateY(-50%) scale(1.07);
+}
+body.mark-photo-archive [data-carousel-prev] { left: 1rem; }
+body.mark-photo-archive [data-carousel-next] { right: 1rem; }
+body.mark-photo-archive .mark-present-carousel__open {
+  top: auto !important;
+  right: 1rem;
+  bottom: 1rem;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.72rem 0.85rem;
+  font: 600 0.45rem/1 'Cinzel', serif !important;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transform: none !important;
+}
+body.mark-photo-archive .mark-present-carousel__progress {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--mark-amber) var(--progress, 0%), rgba(239, 163, 79, 0.16) var(--progress, 0%));
+}
+
+body.mark-photo-archive .viewer {
+  z-index: 50000;
+  background: rgba(7, 6, 4, 0.96);
+}
+body.mark-photo-archive .viewer > div { border-left-color: rgba(239, 163, 79, 0.2); }
+body.mark-photo-archive .viewer span,
+body.mark-photo-archive .viewer small { color: var(--mark-steel); }
+body.mark-photo-archive .viewer-close {
+  border-color: rgba(239, 163, 79, 0.4);
+  background: #0c0a07;
+  color: var(--mark-bone);
+}
+
+@keyframes mark-carousel-in {
+  from { opacity: 0.22; transform: scale(1.025); filter: saturate(0.45) brightness(0.58); }
+  to { opacity: 1; transform: scale(1); filter: saturate(0.74) contrast(1.07) brightness(0.79); }
+}
+
+@media (max-width: 760px) {
+  body.mark-photo-archive .archive-hero {
+    min-height: 740px;
+    background:
+      linear-gradient(0deg, #0c0a07 0%, rgba(12, 10, 7, 0.83) 48%, rgba(12, 10, 7, 0.15) 83%, transparent),
+      url('../img-presente/personagens/mark-presente2.png') 57% 12% / cover no-repeat;
+  }
+  body.mark-photo-archive .radar { width: 300px; right: -27%; top: 15%; }
+  body.mark-photo-archive .mark-archive-copy {
+    right: 1.2rem;
+    bottom: 3.5rem;
+    left: 1.2rem;
+    width: auto;
+    padding-left: 0.9rem;
+  }
+  body.mark-photo-archive .archive-count { display: none; }
+  body.mark-photo-archive main { padding: 4rem 1rem 6rem; }
+  body.mark-photo-archive .archive-index { grid-template-columns: 1fr; }
+  body.mark-photo-archive .archive-index div { min-height: 98px; }
+  body.mark-photo-archive .mark-present-carousel__head { display: block; }
+  body.mark-photo-archive .mark-present-carousel__status { display: block; margin-top: 1rem; }
+  body.mark-photo-archive .mark-present-carousel__stage,
+  body.mark-photo-archive .mark-present-carousel__stage > img { min-height: 540px; height: 540px; }
+  body.mark-photo-archive .mark-present-carousel__caption { right: 1rem; bottom: 1.8rem; }
+  body.mark-photo-archive .mark-present-carousel__stage > button { width: 40px; height: 40px; }
+  body.mark-photo-archive .mark-present-carousel__open { right: 0.75rem; bottom: 0.7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.mark-photo-archive .radar,
+  body.mark-photo-archive .mark-present-carousel__stage > img { animation: none !important; }
+}

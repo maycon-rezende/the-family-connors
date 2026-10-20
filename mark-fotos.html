@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Arquivo Naval — Mark Connor</title>
-    <meta name="description" content="Arquivo naval e galeria de registros de Mark Connor." />
+    <title>Memórias de Rota — Mark Connor</title>
+    <meta name="description" content="Arquivo visual do presente de Mark Connor, defensor e veterano dos Hellsings." />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/mark-fotos.css" />
+    <link rel="stylesheet" href="css/mark-fotos-polish.css" />
+    <link rel="stylesheet" href="css/site-cursor.css" />
   </head>
 
-  <body>
+  <body class="mark-photo-archive">
     <nav>
-      <a href="mark.html">← Voltar ao registro</a><span>MC // NAVAL ARCHIVE</span
+      <a href="mark-presente.html">← Voltar ao presente</a><span>MC-03 // MEMÓRIAS DE ROTA</span
       ><a href="telainicial.html">Família Connor</a>
     </nav>
     <header class="archive-hero">
@@ -26,11 +28,50 @@
         Fotografias individuais catalogadas entre serviço militar, retorno pessoal e operações nos
         Hellsings.
       </p>
+      <div class="mark-archive-copy">
+        <span class="archive-kicker">MC-03 // REGISTRO CONTÍNUO</span>
+        <h1>MEMÓRIAS DE<br /><em>ROTA</em></h1>
+        <p>
+          Registros do presente de Mark Connor: oficina, estrada, defesa e os vínculos que ainda dão direção ao comboio.
+        </p>
+      </div>
       <div class="archive-count">
         <strong id="visible-count">08</strong><span>registros visíveis</span>
       </div>
     </header>
     <main>
+      <section class="archive-index" aria-label="Capítulos do arquivo de Mark">
+        <div>
+          <span>01</span><strong>Oficina</strong><small>Ferramentas, motores e permanência</small>
+        </div>
+        <div>
+          <span>02</span><strong>Estrada</strong><small>Defesa em movimento</small>
+        </div>
+        <div>
+          <span>03</span><strong>Vínculos</strong><small>Ariani, família e Hellsings</small>
+        </div>
+      </section>
+      <section class="mark-present-carousel" aria-labelledby="mark-carousel-title">
+        <div class="mark-present-carousel__head">
+          <div>
+            <span class="archive-kicker">TRANSMISSÃO MC // REGISTRO CONTÍNUO</span>
+            <h2 id="mark-carousel-title">Memórias em <em>movimento</em></h2>
+          </div>
+          <span class="mark-present-carousel__status" data-carousel-status aria-live="polite">REGISTRO 01 // ATIVO</span>
+        </div>
+        <div class="mark-present-carousel__stage" data-carousel>
+          <img data-carousel-image src="" alt="Memória de Mark Connor" />
+          <div class="mark-present-carousel__caption">
+            <span data-carousel-code>MC-PRE-01</span>
+            <strong data-carousel-title></strong>
+            <p>Arquivo do presente de Mark Connor.</p>
+          </div>
+          <button type="button" data-carousel-prev aria-label="Memória anterior">←</button>
+          <button type="button" data-carousel-next aria-label="Próxima memória">→</button>
+          <button class="mark-present-carousel__open" type="button" data-carousel-open>Ampliar</button>
+          <div class="mark-present-carousel__progress" data-carousel-progress></div>
+        </div>
+      </section>
       <div class="archive-toolbar">
         <span>Selecionar arquivo:</span
         ><button class="archive-filter is-active" data-filter="all">Todos</button
@@ -117,6 +158,54 @@
             >MC-TEM-01</span
           ><i>Temático</i><strong>Lutador clássico</strong>
         </button>
+        <button class="photo-card photo-card--feature" data-group="presente" data-title="Oficina de campanha" data-file="img-presente/personagens/mark-presente2.png">
+          <img src="img-presente/personagens/mark-presente2.png" alt="Mark Connor trabalhando em uma motocicleta no acampamento" loading="lazy" />
+          <span>MC-PRE-01</span><i>Presente</i><strong>Oficina de campanha</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Vigília Hellsing" data-file="img-presente/personagens/mark-presente1.png">
+          <img src="img-presente/personagens/mark-presente1.png" alt="Mark Connor em vigília no acampamento Hellsing" loading="lazy" />
+          <span>MC-PRE-02</span><i>Presente</i><strong>Vigília Hellsing</strong>
+        </button>
+        <button class="photo-card photo-card--tall" data-group="presente" data-title="O veterano" data-file="img-presente/personagens/mark-presente.png">
+          <img src="img-presente/personagens/mark-presente.png" alt="Retrato de Mark Connor no presente" loading="lazy" />
+          <span>MC-PRE-03</span><i>Presente</i><strong>O veterano</strong>
+        </button>
+        <button class="photo-card photo-card--wide" data-group="presente" data-title="Frente em ruínas" data-file="img-presente/personagens/mark.png">
+          <img src="img-presente/personagens/mark.png" alt="Mark Connor diante de uma cidade em ruínas" loading="lazy" />
+          <span>MC-PRE-04</span><i>Presente</i><strong>Frente em ruínas</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Força e razão" data-file="img-presente/personagens/mark-ariani.png">
+          <img src="img-presente/personagens/mark-ariani.png" alt="Mark Connor e Ariani em momento preservado" loading="lazy" />
+          <span>MC-PRE-05</span><i>Vínculo</i><strong>Força e razão</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="O ponto de retorno" data-file="img-presente/personagens/mark-ariani1.png">
+          <img src="img-presente/personagens/mark-ariani1.png" alt="Mark Connor e Ariani no acampamento" loading="lazy" />
+          <span>MC-PRE-06</span><i>Vínculo</i><strong>O ponto de retorno</strong>
+        </button>
+        <button class="photo-card photo-card--tall" data-group="presente" data-title="Fuga em dupla" data-file="img-presente/personagens/jack-mark1-presente.png">
+          <img src="img-presente/personagens/jack-mark1-presente.png" alt="Mark e Jack Connor em motocicletas durante uma fuga" loading="lazy" />
+          <span>MC-PRE-07</span><i>Hellsings</i><strong>Fuga em dupla</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Irmãos em vigília" data-file="img-presente/personagens/jack-mark-presente.png">
+          <img src="img-presente/personagens/jack-mark-presente.png" alt="Jack e Mark Connor em posição de vigilância" loading="lazy" />
+          <span>MC-PRE-08</span><i>Hellsings</i><strong>Irmãos em vigília</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Linha de defesa" data-file="img-presente/personagens/mark-jack-presente.png">
+          <img src="img-presente/personagens/mark-jack-presente.png" alt="Mark e Jack Connor defendendo uma rota" loading="lazy" />
+          <span>MC-PRE-09</span><i>Hellsings</i><strong>Linha de defesa</strong>
+        </button>
+        <button class="photo-card photo-card--wide" data-group="presente" data-title="Rota de guerra" data-file="img-presente/personagens/mark$jack.png">
+          <img src="img-presente/personagens/mark$jack.png" alt="Mark e Jack Connor junto a um veículo de campanha" loading="lazy" />
+          <span>MC-PRE-10</span><i>Rota</i><strong>Rota de guerra</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Laços de sangue" data-file="img-presente/personagens/mark-brit-presente.png">
+          <img src="img-presente/personagens/mark-brit-presente.png" alt="Mark Connor e Britney Connor em momento de família" loading="lazy" />
+          <span>MC-PRE-11</span><i>Família</i><strong>Laços de sangue</strong>
+        </button>
+        <button class="photo-card" data-group="presente" data-title="Fogo de família" data-file="img-presente/personagens/brit-mark-presente.png">
+          <img src="img-presente/personagens/brit-mark-presente.png" alt="Britney e Mark Connor em registro do presente" loading="lazy" />
+          <span>MC-PRE-12</span><i>Família</i><strong>Fogo de família</strong>
+        </button>
       </section>
     </main>
     <div class="viewer" id="viewer" aria-hidden="true">
@@ -126,5 +215,6 @@
       </div>
     </div>
     <script src="js/mark-fotos.js"></script>
+    <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

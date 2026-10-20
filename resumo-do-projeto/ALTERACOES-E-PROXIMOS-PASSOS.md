@@ -114,6 +114,19 @@
 
 Última atualização: 31 de agosto de 2026.
 
+## Atualização de 20 de outubro de 2026 — arquivos do presente e galerias
+
+- Alice, Mark, Ariani e Britney receberam dossiês do presente mais completos, com ficha técnica, habilidades, blocos narrativos e identidade visual própria.
+- As imagens deixaram de ficar espalhadas nos perfis: Alice, Mark, Ariani e Britney agora possuem arquivos fotográficos independentes, ligados por entradas narrativas nas páginas principais.
+- As galerias priorizam `object-fit: contain`, evitando que rostos e personagens sejam cortados em desktop ou celular.
+- A galeria de Ariani foi compactada e recebeu layout horizontal no desktop, com controles, loop, lightbox e pausa por interação.
+- A galeria de Britney foi reconstruída como `Memórias do Tempo`, com quatro registros solo do presente, cursor temático, diálogo acessível e sem fotos antigas ou registros com Bobby/Joey.
+- As páginas e álbuns respeitam `prefers-reduced-motion`, foco de teclado, cursor não bloqueante e navegação por botões.
+- Novos registros de Alice, Ariani, Mark, Britney, Sally, Nathan, Pollyana, Iris e núcleos familiares foram preservados no repositório para associação posterior, sem transformar mídia não confirmada em lore.
+- Criado `REGISTRO-TECNICO-ATUAL.md`, com mapa de arquivos, padrões de código, comandos de validação, procedimento de publicação e regras de manutenção.
+
+Última atualização: 20 de outubro de 2026.
+
 ## Atualização de 10 de setembro de 2026 — páginas dos herdeiros
 
 - As páginas centrais dos Herdeiros receberam partículas, varredura genealógica, entrada progressiva dos cards e cursor personalizado por `lineage-effects.css/js`.

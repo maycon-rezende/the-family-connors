@@ -9,10 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/britney-fotos.css" />
+    <link rel="stylesheet" href="css/britney-registros.css" />
+    <link rel="stylesheet" href="css/site-cursor.css" />
   </head>
 
-  <body>
+  <body class="britney-photo-archive">
+    <template class="britney-legacy-archive">
     <header class="archive-nav">
       <a href="britney.html">← Voltar para Britney</a>
       <span>Arquivo pessoal · BC-03</span>
@@ -82,6 +84,66 @@
       <button class="close" aria-label="Fechar">×</button
       ><img alt="Fotografia ampliada de Britney" /><span></span>
     </dialog>
-    <script src="js/britney-fotos.js"></script>
+    </template>
+
+    <nav class="britney-present-nav" aria-label="Navegação do arquivo de Britney">
+      <a href="britney-presente.html">← Voltar ao dossiê</a>
+      <span>BC-05 // MEMÓRIAS DO TEMPO</span>
+      <a href="index.html#sobreviventes">Sobreviventes →</a>
+    </nav>
+
+    <main class="britney-present-main">
+      <header class="britney-present-hero">
+        <span class="britney-present-kicker">ARQUIVO BC-05 // PRESENTE</span>
+        <h1>MEMÓRIAS DO <em>TEMPO</em></h1>
+        <p>Britney não registra mais uma rotina: ela arquiva rostos, sinais e caminhos. Cada fotografia é uma prova de que alguém chegou até aqui.</p>
+        <span class="britney-present-status"><i></i> RASTRO PRESERVADO</span>
+      </header>
+
+      <section class="britney-present-carousel" aria-labelledby="britney-present-carousel-title">
+        <header class="britney-present-carousel__heading">
+          <div>
+            <span class="britney-present-kicker">SEQUÊNCIA RECUPERADA</span>
+            <h2 id="britney-present-carousel-title">Registros em <em>foco</em></h2>
+          </div>
+          <p>Use as setas ou deixe o álbum seguir sozinho. As imagens aparecem inteiras, sem recorte.</p>
+        </header>
+        <div class="britney-present-carousel__stage" data-present-carousel aria-roledescription="carrossel">
+          <img data-present-carousel-image src="img-presente/personagens/britney-presente.png" alt="Britney Connor com uma câmera em uma cidade devastada" />
+          <div class="britney-present-carousel__shade" aria-hidden="true"></div>
+          <div class="britney-present-carousel__copy" aria-live="off">
+            <span data-present-carousel-code>BC-PRE-01</span>
+            <strong data-present-carousel-title>O olhar que ficou</strong>
+            <p data-present-carousel-caption>Arquivo do presente de Britney Connor.</p>
+          </div>
+          <button class="britney-present-carousel__button britney-present-carousel__button--prev" type="button" data-present-carousel-prev aria-label="Imagem anterior">←</button>
+          <button class="britney-present-carousel__button britney-present-carousel__button--next" type="button" data-present-carousel-next aria-label="Próxima imagem">→</button>
+          <button class="britney-present-carousel__open" type="button" data-present-carousel-open>Ampliar registro</button>
+          <div class="britney-present-carousel__progress" aria-hidden="true"><i data-present-carousel-progress></i></div>
+        </div>
+        <footer class="britney-present-carousel__footer">
+          <span data-present-carousel-count>01 / 04</span>
+          <span>BC-05 // ACESSO PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="britney-present-lightbox" data-present-lightbox aria-labelledby="britney-present-lightbox-title">
+      <button class="britney-present-lightbox__close" type="button" data-present-lightbox-close aria-label="Fechar imagem ampliada">×</button>
+      <img data-present-lightbox-image src="" alt="Registro ampliado de Britney Connor" />
+      <div class="britney-present-lightbox__copy">
+        <span data-present-lightbox-code></span>
+        <strong id="britney-present-lightbox-title" data-present-lightbox-title></strong>
+      </div>
+    </dialog>
+
+    <footer class="britney-present-footer">
+      <a href="ariani-presente.html">← Ariani</a>
+      <a href="britney-presente.html">Voltar ao dossiê</a>
+      <a href="jully-presente.html">Jully →</a>
+    </footer>
+
+    <script src="js/britney-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
   </body>
 </html>
