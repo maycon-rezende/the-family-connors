@@ -2,50 +2,171 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#090806" />
-    <meta name="description" content="Dossiê presente de Jully Connor, sobrevivente de tecnologia e memória marcada pela perda." />
-    <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
-    <title>Jully Connor | Era da Extinção</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07101b" />
+    <meta
+      name="description"
+      content="Arquivo de Jully Connor: tecnologia, sinais recuperados e a força de continuar depois da perda."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="era-extincao-presente/jully-presente.css" />
+    <title>Jully Connor | Frequência Recuperada</title>
   </head>
-  <body data-character="jully">
-    <nav class="profile-nav">
-      <a href="index.html#sobreviventes"><b>Æ</b> ERA DA EXTINÇÃO</a
-      ><span>ARQUIVO HELLSINGS // PRESENTE</span><a href="jack-presente.html">FECHAR CICLO →</a>
+  <body class="jully-present">
+    <div class="jully-grid" aria-hidden="true"></div>
+
+    <nav class="jully-nav" aria-label="Navegação do arquivo de Jully">
+      <a href="britney-presente.html">← Britney</a>
+      <span>ARQUIVO JC-06 // SINAL ATIVO</span>
+      <a href="jack-presente.html">Jack →</a>
     </nav>
-    <header class="profile-hero">
-    <img data-hero src="" alt="Retrato de Jully Connor" />
-      <div class="hero-copy">
-        <span class="eyebrow" data-code></span>
-        <h1 data-name></h1>
-        <p data-intro></p>
-        <div class="data-strip">
-          <span data-age></span><span data-role></span><span>STATUS // EM MOVIMENTO</span>
+
+    <main>
+      <header class="jully-hero">
+        <div class="jully-hero__copy" data-reveal>
+          <span class="jully-kicker"><i></i> FREQUÊNCIA RECUPERADA // JC-06</span>
+          <h1>JULLY <em>CONNOR</em></h1>
+          <p>
+            Quando o mundo perdeu a voz, Jully aprendeu a procurar o que ainda estava tentando
+            transmitir.
+          </p>
+          <div class="jully-hero__metrics" aria-label="Resumo do arquivo">
+            <span>40 ANOS</span>
+            <span>TECNOLOGIA // SINAIS</span>
+            <span>STATUS // EM MOVIMENTO</span>
+          </div>
         </div>
-      </div>
-    </header>
-    <main class="profile-main">
-      <section class="chapter">
-        <div class="chapter-grid">
-          <h2 data-chapter-title></h2>
-          <article data-story></article>
+
+        <div class="jully-hero__media" data-reveal>
+          <img
+            src="img-presente/personagens/jully-presente.png"
+            alt="Jully Connor em uma estação improvisada de transmissão no presente"
+          />
+          <span class="jully-hero__signal" aria-hidden="true">JC-06</span>
+        </div>
+      </header>
+
+      <section class="jully-intel" aria-labelledby="jully-intel-title">
+        <div class="jully-section-heading" data-reveal>
+          <span class="jully-kicker">DADOS DE CAMPO // LEITURA PARCIAL</span>
+          <h2 id="jully-intel-title">A FREQUÊNCIA<br /><em>DEPOIS DO SILÊNCIO</em></h2>
+        </div>
+
+        <article class="jully-intel__story" data-reveal>
+          <p>
+            Jully sobreviveu ao ataque de uma horda, mas uma parte dela ficou naquele dia. O noivo
+            se sacrificou para abrir uma rota de fuga; pouco depois, ela perdeu o bebê que esperava.
+          </p>
+          <p>
+            Britney se recusou a deixá-la atravessar aquilo sozinha. Aos poucos, Jully voltou a usar
+            o que sabia para recuperar sinais, equipamentos e fragmentos de comunicação de um mundo
+            que ainda não desistiu de existir.
+          </p>
+          <blockquote>
+            Algumas pessoas sobrevivem porque são fortes. Outras se tornam fortes porque alguém se
+            recusou a deixá-las partir.
+          </blockquote>
+        </article>
+
+        <aside class="jully-intel__card" data-reveal aria-label="Ficha técnica de Jully Connor">
+          <span>FICHA TÉCNICA // JC-06</span>
+          <dl>
+            <div><dt>FUNÇÃO</dt><dd>TECNOLOGIA DE CAMPO</dd></div>
+            <div><dt>ESPECIALIDADE</dt><dd>RECUPERAÇÃO DE SINAIS</dd></div>
+            <div><dt>VÍNCULO</dt><dd>FAMÍLIA CONNOR</dd></div>
+            <div><dt>PROTOCOLO</dt><dd>COMUNICAÇÃO / SUPORTE</dd></div>
+          </dl>
+          <small>LEITURA CONFIRMADA // PRESENTE</small>
+        </aside>
+      </section>
+
+      <section class="jully-skills" aria-labelledby="jully-skills-title">
+        <header class="jully-skills__head" data-reveal>
+          <div>
+            <span class="jully-kicker">MÓDULOS EM OPERAÇÃO</span>
+            <h2 id="jully-skills-title">O QUE AINDA <em>RESPONDE</em></h2>
+          </div>
+          <p>
+            As habilidades de Jully não existem para apagar o que ela perdeu. Elas existem para que
+            ninguém fique completamente sem resposta quando a distância cresce.
+          </p>
+        </header>
+
+        <div class="jully-skills__grid">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Rastreamento de sinal</h3>
+            <p>Localiza transmissões, frequências quebradas e qualquer vestígio de comunicação útil.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Recuperação técnica</h3>
+            <p>Reaproveita equipamentos e transforma peças esquecidas em contato possível.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Leitura de ruído</h3>
+            <p>Separa interferência, falha e informação para que o comboio não siga sinais vazios.</p>
+          </article>
+          <article data-reveal>
+            <span>04</span>
+            <h3>Memória preservada</h3>
+            <p>Guarda vozes, registros e coordenadas para que o que foi vivido não desapareça de vez.</p>
+          </article>
         </div>
       </section>
-      <section class="memory">
-        <img data-memory src="" alt="Memória preservada" />
-        <div class="memory-copy">
-          <span class="eyebrow">VÍNCULO PRESERVADO</span>
-          <h2 data-memory-title></h2>
-          <p data-memory-text></p>
+
+      <section class="jully-console" aria-labelledby="jully-console-title">
+        <div class="jully-console__image" data-reveal>
+          <img
+            src="img-presente/personagens/jully-perda.png"
+            alt="Jully Connor gritando em meio às ruínas após uma perda"
+          />
+        </div>
+        <div class="jully-console__copy" data-reveal>
+          <span class="jully-kicker">ARQUIVO SENSÍVEL // TRANSMISSÃO INTERROMPIDA</span>
+          <h2 id="jully-console-title">NÃO É SORTE.<br /><em>É ESCOLHA.</em></h2>
+          <p>
+            Há frequências que ela não tenta consertar. Elas existem para lembrar que continuar
+            também é uma decisão tomada todos os dias.
+          </p>
+          <div class="jully-console__readout" aria-live="polite">
+            <span data-jully-channel-label>FREQ. 01 // REDE DE EMERGÊNCIA</span>
+            <strong data-jully-channel-copy>
+              Um sinal encontrado pode significar abrigo, rota, perigo — ou alguém esperando para ser
+              ouvido.
+            </strong>
+          </div>
+          <div class="jully-console__controls" aria-label="Selecionar leitura de frequência">
+            <button class="is-active" type="button" data-jully-channel="0">01</button>
+            <button type="button" data-jully-channel="1">02</button>
+            <button type="button" data-jully-channel="2">03</button>
+          </div>
         </div>
       </section>
-      <section class="chapter"><div class="gallery" data-gallery></div></section>
+
+      <section class="jully-records" aria-labelledby="jully-records-title">
+        <div data-reveal>
+          <span class="jully-kicker">ARQUIVO PESSOAL // MEMÓRIAS PRESERVADAS</span>
+          <h2 id="jully-records-title">NADA SE PERDE<br /><em>DE UMA VEZ.</em></h2>
+          <p>
+            Antes e depois da queda, cada imagem guarda uma versão de Jully que ajudou a formar quem
+            ela é agora.
+          </p>
+        </div>
+        <a class="jully-records__link" href="jully-fotos.html" data-reveal>
+          <span>ABRIR ARQUIVO PESSOAL</span><b>→</b><small>REGISTROS PRESERVADOS</small>
+        </a>
+      </section>
     </main>
-    <footer class="profile-footer">
-      <a href="britney-presente.html">← BRITNEY</a
-      ><a href="index.html#sobreviventes">TODOS OS SOBREVIVENTES</a
-      ><a href="jack-presente.html">JACK CONNOR →</a>
+
+    <footer class="jully-footer">
+      <a href="britney-presente.html">← Britney</a>
+      <a href="index.html#sobreviventes">Todos os sobreviventes</a>
+      <a href="jack-presente.html">Jack →</a>
     </footer>
-    <script src="era-extincao-presente/personagem-presente.js"></script>
+
+    <script src="era-extincao-presente/jully-presente.js"></script>
+    <script src="js/site-cursor.js" defer></script>
   </body>
 </html>
