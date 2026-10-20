@@ -257,6 +257,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 ## 9. Estado de publicação e próximos cuidados
 
 - O ramo de trabalho é `main`; antes deste conjunto de alterações, o remoto estava sincronizado com o commit `a89ca88`.
+- O conjunto documentado aqui foi publicado no commit `33fcc48` (`feat: atualiza dossiês e galerias do presente`) em `origin/main`.
 - A abertura usa música e referências temporárias. Não monetizar nem solicitar AdSense antes de regularizar licenças.
 - Arquivos de mídia novos podem estar guardados no repositório antes de serem ligados a uma página; isso não significa que a lore foi confirmada.
 - Priorizar revisão visual em telas pequenas sempre que uma galeria receber nova imagem, principalmente para confirmar que retratos verticais não foram cortados.
