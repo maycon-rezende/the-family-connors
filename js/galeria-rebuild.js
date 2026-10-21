@@ -13,7 +13,7 @@
         ],
         [
           'img-hellsing/scenes/retorno-luke-dimitri-brian-hellen.png',
-          'Retorno — Luke, Dimitri, Brian & Hellen',
+          'Retorno — Luke, Dimitri, Brian & Hellen Wren',
         ],
         ['img-jack/jack-hellsings-commander.png', 'Jack Connor — Comandante'],
         ['img-mark/markhellsing.png', 'Mark Connor — Comando tático'],
@@ -24,7 +24,7 @@
         ['img-hellsing/luke.png', 'Luke — Estratégia'],
         ['img-hellsing/dimitri.png', 'Dimitri — Extração'],
         ['img-hellsing/brian-taylor.png', 'Brian Taylor — Rastreamento'],
-        ['img-hellsing/hellen.png', 'Hellen — Infiltração'],
+        ['img-hellsing/hellen.png', 'Hellen Wren — Infiltração'],
       ],
     },
     {

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101912" />
+    <meta
+      name="description"
+      content="Registros visuais do presente de Luke: rotas, equipe e retornos preservados pelos Hellsings."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/luke-registros.css" />
+    <title>Luke | Registros do Presente</title>
+  </head>
+  <body class="luke-record-archive">
+    <nav class="archive-nav" aria-label="Navegação dos registros de Luke">
+      <a href="luke-presente.html">← Voltar ao dossiê</a>
+      <span>L-06 // REGISTROS DO PRESENTE</span>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+    </nav>
+
+    <main>
+      <header class="archive-hero">
+        <span class="archive-kicker">CARTOGRAFIA DE CAMPO // ARQUIVO PRESERVADO</span>
+        <h1>CAMINHOS QUE <em>VOLTAM.</em></h1>
+        <p>
+          Seis registros do presente de Luke. Cada um guarda uma rota, uma equipe ou o motivo para
+          continuar procurando um caminho de volta.
+        </p>
+        <span class="archive-status"><i></i> LOOP DE REGISTROS ATIVO</span>
+      </header>
+
+      <section class="route-carousel" aria-labelledby="route-carousel-title">
+        <div class="route-carousel__head">
+          <div>
+            <span class="archive-kicker">ARQUIVO L-06 // LEITURA VISUAL</span>
+            <h2 id="route-carousel-title">TODA ROTA<br /><em>DEIXA MARCAS.</em></h2>
+          </div>
+          <p>
+            Use as setas, os registros abaixo ou deixe o arquivo seguir sozinho. As imagens são
+            preservadas sem recortes.
+          </p>
+        </div>
+
+        <div class="route-stage" data-route-stage>
+          <img
+            data-route-image
+            src="img-hellsing/luke-presente.png"
+            alt="Luke reparando equipamento de campo entre ruínas"
+          />
+          <div class="route-stage__shade" aria-hidden="true"></div>
+          <div class="route-stage__copy">
+            <span data-route-code>L-06.1</span>
+            <strong data-route-title>Oficina de rota</strong>
+            <p data-route-caption>Antes de seguir, Luke devolve função ao que ainda pode manter a equipe em movimento.</p>
+          </div>
+          <button
+            class="route-stage__button route-stage__button--previous"
+            type="button"
+            aria-label="Registro anterior"
+            data-route-previous
+          >
+            ←
+          </button>
+          <button
+            class="route-stage__button route-stage__button--next"
+            type="button"
+            aria-label="Próximo registro"
+            data-route-next
+          >
+            →
+          </button>
+          <button class="route-stage__open" type="button" data-route-open>Ampliar registro</button>
+          <div class="route-stage__progress" aria-hidden="true"><i data-route-progress></i></div>
+        </div>
+
+        <div class="route-selector" aria-label="Selecionar registro de Luke">
+          <button class="is-active" type="button" data-route-select aria-pressed="true">
+            <img src="img-hellsing/luke-presente.png" alt="Prévia de Luke reparando equipamento" />
+            <span>OFICINA</span>
+          </button>
+          <button type="button" data-route-select aria-pressed="false">
+            <img src="img-hellsing/luke-presente-familia.png" alt="Prévia de Luke junto de sua família" />
+            <span>RETORNO</span>
+          </button>
+          <button type="button" data-route-select aria-pressed="false">
+            <img src="img-hellsing/hellen-naomi-luke-presente.png" alt="Prévia da formação de campo" />
+            <span>FORMAÇÃO</span>
+          </button>
+          <button type="button" data-route-select aria-pressed="false">
+            <img src="img-hellsing/hellen-naomi-luke.png" alt="Prévia de Hellen, Naomi e Luke estudando uma rota" />
+            <span>MAPA</span>
+          </button>
+          <button type="button" data-route-select aria-pressed="false">
+            <img src="img-hellsing/luke-naomi-helen.png" alt="Prévia de Luke com Hellen e Naomi no acampamento" />
+            <span>CAMPO</span>
+          </button>
+          <button type="button" data-route-select aria-pressed="false">
+            <img
+              src="img-hellsing/scenes/retorno-luke-dimitri-brian-hellen.png"
+              alt="Prévia do retorno de uma equipe Hellsings"
+            />
+            <span>RETORNO II</span>
+          </button>
+        </div>
+
+        <footer class="route-carousel__footer">
+          <span data-route-count>01 / 06</span>
+          <span>L-06 // MAPA PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="route-lightbox" data-route-lightbox aria-label="Imagem ampliada do registro de Luke">
+      <button class="route-lightbox__close" type="button" aria-label="Fechar imagem ampliada" data-route-close>
+        ×
+      </button>
+      <img data-route-lightbox-image src="" alt="Registro visual ampliado de Luke" />
+      <div class="route-lightbox__copy">
+        <span data-route-lightbox-code></span>
+        <strong data-route-lightbox-title></strong>
+      </div>
+    </dialog>
+
+    <footer class="archive-footer">
+      <a href="naomi-presente.html">← Naomi</a>
+      <a href="luke-presente.html">Dossiê de Luke</a>
+      <a href="index.html#sobreviventes">Sobreviventes →</a>
+    </footer>
+
+    <script src="js/luke-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

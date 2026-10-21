@@ -1,11 +1,203 @@
 <!doctype html>
-<html lang="pt-BR" data-operative="clhoe">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Clhoe // Depois do Dia D</title><meta name="description" content="Arquivo de Clhoe, sobrevivente e integrante dos Hellsings." /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700;900&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap" rel="stylesheet" /><link rel="stylesheet" href="era-extincao-presente/hellsings-survivor.css" /></head>
-  <body><div class="signal-noise" aria-hidden="true"></div><div class="dossier-cursor" aria-hidden="true"><i></i><span>C-07</span></div><nav><a href="index.html#sobreviventes">Æ <span>ARQUIVO DO PRESENTE</span></a><i>HELLSINGS // DOSSIÊ C-07</i><a href="faccao-hellsings-presente.html">BASE HELLSINGS</a></nav>
-    <main><header class="profile-hero"><img src="img-hellsing/clhoe-presente.png" alt="Clhoe no presente" /><div class="hero-data"><p>C-07 // CAMPO // ATIVA</p><h1>CLHOE</h1><span>O mundo levou quase tudo. Ela transformou o que restou em motivo para continuar.</span></div><aside><b>STATUS</b><span>OPERACIONAL</span><b>PRIORIDADE</b><span>PROTEÇÃO</span></aside></header>
-      <section class="aftermath reveal"><div><p>DEPOIS DO DIA D</p><h2>Aprendeu a lutar<br /><em>sem esquecer por quem.</em></h2></div><article><p>Clhoe atravessou os primeiros anos protegendo pessoas que não sabiam usar uma arma, encontrar água ou reconhecer uma emboscada. Enquanto outras facções mediam força por território, ela media cada vitória pelo número de pessoas que voltavam vivas.</p><p>Os Hellsings conhecem sua disciplina em campo. Poucos conhecem o medo que ela carrega: sobreviver a mais uma missão e descobrir que, durante sua ausência, perdeu o último lugar que ainda chamava de família.</p><blockquote>“Não luto pelo mundo que acabou. Luto por quem ainda está aqui.”</blockquote></article></section>
-      <section class="loss reveal"><span>O QUE ELA PERDEU</span><h2>A crença de que um lar permanece seguro.</h2><p>Clhoe já reconstruiu a própria vida mais de uma vez. Por isso não promete que nada será eterno — apenas que ninguém tocará sua família sem passar por ela.</p><b>PROTOCOLO FAMILIAR // PRIORIDADE ABSOLUTA</b></section>
-      <section class="family-record reveal"><img src="img-hellsing/clhoe-presente-familia.png" alt="Clhoe com sua família no presente" /><div><p>O QUE PERMANECEU</p><h2>Seu último território<br /><em>não aparece no mapa.</em></h2><span>Não é uma cidade nem uma bandeira. São as pessoas diante das quais Clhoe ainda consegue abaixar a guarda.</span></div></section>
-      <section class="hook reveal"><p>ARQUIVO NÃO RESOLVIDO</p><h2>Alguém conhece<br /><em>os nomes de sua família.</em></h2><span>A mensagem não trouxe ameaça nem exigência. Apenas uma lista correta demais para ter sido escrita por um desconhecido.</span></section>
-    </main><footer><a href="luke-presente.html">← LUKE</a><strong>CLHOE // C-07</strong><a href="dimitri-presente.html">DIMITRI →</a></footer><script src="era-extincao-presente/hellsings-survivor.js"></script></body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#160b19" />
+    <meta
+      name="description"
+      content="Dossiê de Clhoe: reconhecimento, cuidado de campo e a família que ela protege no presente."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="era-extincao-presente/clhoe-presente.css" />
+    <title>Clhoe | Perímetro Vivo</title>
+  </head>
+  <body class="clhoe-watch">
+    <div class="clhoe-skyline" aria-hidden="true"></div>
+
+    <nav class="clhoe-nav" aria-label="Navegação do dossiê de Clhoe">
+      <a href="luke-presente.html">← Luke</a>
+      <span>ARQUIVO HELLSINGS // C-07</span>
+      <a href="dimitri-presente.html">Dimitri →</a>
+    </nav>
+
+    <main>
+      <header class="clhoe-hero">
+        <div class="clhoe-hero__copy" data-reveal>
+          <span class="clhoe-kicker"><i></i> C-07 // RECONHECIMENTO // CAMPO</span>
+          <h1>CLHOE <em>VIGIA.</em></h1>
+          <p>
+            O mundo levou quase tudo. Ela transformou o que restou em um perímetro onde alguém
+            ainda pode voltar para casa.
+          </p>
+          <div class="clhoe-hero__metrics" aria-label="Resumo do arquivo">
+            <span>STATUS // OPERACIONAL</span>
+            <span>LEITURA // CAMPO</span>
+            <span>PRIORIDADE // PESSOAS</span>
+          </div>
+        </div>
+
+        <figure class="clhoe-hero__media" data-reveal>
+          <img
+            src="img-hellsing/clhoe-presente.png"
+            alt="Clhoe preparando recursos de cuidado no acampamento dos Hellsings"
+          />
+          <figcaption>C-07 <b>PERÍMETRO VIVO</b></figcaption>
+        </figure>
+      </header>
+
+      <section class="clhoe-origin" aria-labelledby="clhoe-origin-title">
+        <div class="clhoe-section-heading" data-reveal>
+          <span class="clhoe-kicker">DEPOIS DO DIA D // VIGILÂNCIA CONTÍNUA</span>
+          <h2 id="clhoe-origin-title">ELA APRENDEU<br /><em>POR QUEM LUTAR.</em></h2>
+        </div>
+
+        <article class="clhoe-origin__story" data-reveal>
+          <p>
+            Clhoe atravessou os primeiros anos protegendo pessoas que não sabiam usar uma arma,
+            encontrar água ou reconhecer uma emboscada. Enquanto outras facções mediam força por
+            território, ela media cada vitória pelo número de pessoas que voltavam vivas.
+          </p>
+          <p>
+            Os Hellsings conhecem sua disciplina em campo. Poucos conhecem o medo que ela carrega:
+            voltar de mais uma missão e descobrir que, durante sua ausência, perdeu o último lugar
+            que ainda chamava de família.
+          </p>
+          <blockquote>“Não luto pelo mundo que acabou. Luto por quem ainda está aqui.”</blockquote>
+        </article>
+
+        <aside class="clhoe-origin__file" data-reveal aria-label="Ficha técnica de Clhoe">
+          <span>FICHA DE CAMPO // C-07</span>
+          <dl>
+            <div><dt>NOME REGISTRADO</dt><dd>CLHOE</dd></div>
+            <div><dt>LEITURA ATUAL</dt><dd>RECONHECIMENTO / CAMPO</dd></div>
+            <div><dt>PROTOCOLO</dt><dd>PROTEÇÃO DE CIVIS</dd></div>
+            <div><dt>STATUS</dt><dd>ATIVA</dd></div>
+          </dl>
+          <small>REGISTRO EM EVOLUÇÃO // A FUNÇÃO MUDA, A PRIORIDADE NÃO.</small>
+        </aside>
+      </section>
+
+      <section class="clhoe-skills" aria-labelledby="clhoe-skills-title">
+        <header class="clhoe-skills__head" data-reveal>
+          <div>
+            <span class="clhoe-kicker">PROTOCOLOS QUE PERMANECEM</span>
+            <h2 id="clhoe-skills-title">ANTES DA ROTA,<br /><em>O OLHAR.</em></h2>
+          </div>
+          <p>
+            Cada habilidade começa do mesmo jeito: observar, decidir e deixar mais alguém voltar
+            inteiro para o abrigo.
+          </p>
+        </header>
+
+        <div class="clhoe-skills__grid">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Reconhecimento</h3>
+            <p>Lê o terreno, os acessos e aquilo que não deveria estar se movendo no horizonte.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Disciplina de campo</h3>
+            <p>Transforma cautela em rotina para que uma patrulha não vire uma última viagem.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Proteção de civis</h3>
+            <p>Coloca quem não pode lutar atrás de uma rota, de uma porta e de uma chance real.</p>
+          </article>
+          <article data-reveal>
+            <span>04</span>
+            <h3>Cuidado em campo</h3>
+            <p>Entre recursos e ferimentos, ajuda a manter o grupo de pé quando a missão termina.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="clhoe-care" aria-labelledby="clhoe-care-title">
+        <figure class="clhoe-care__media" data-reveal>
+          <img
+            src="img-hellsing/alice-clhoe.png"
+            alt="Clhoe e Alice cuidando de um sobrevivente no presente"
+            loading="lazy"
+          />
+          <figcaption>REGISTRO CRUZADO // CUIDADO DE CAMPO</figcaption>
+        </figure>
+        <div class="clhoe-care__copy" data-reveal>
+          <span class="clhoe-kicker">NÃO É SÓ VIGIAR</span>
+          <h2 id="clhoe-care-title">O ABRIGO TAMBÉM<br /><em>PRECISA RESPIRAR.</em></h2>
+          <p>
+            A proteção não termina quando a ameaça sai da rota. Ela continua na água separada, no
+            recurso preparado e no cuidado de quem foi trazido de volta.
+          </p>
+          <a href="clhoe-registros.html">VER REGISTROS DO PRESENTE <b>→</b></a>
+        </div>
+      </section>
+
+      <section class="clhoe-family" aria-labelledby="clhoe-family-title">
+        <div class="clhoe-family__copy" data-reveal>
+          <span class="clhoe-kicker">PROTOCOLO FAMILIAR // PRIORIDADE ABSOLUTA</span>
+          <h2 id="clhoe-family-title">SEU ÚLTIMO TERRITÓRIO<br /><em>NÃO APARECE NO MAPA.</em></h2>
+          <p>
+            Não é uma cidade nem uma bandeira. É o marido, o filho e a promessa de que ninguém
+            tocará nos seus sem passar primeiro por ela.
+          </p>
+          <a href="clhoe-familia.html">ABRIR ARQUIVO DA FAMÍLIA <b>→</b></a>
+        </div>
+        <figure class="clhoe-family__media" data-reveal>
+          <img
+            src="img-hellsing/clhoe-familia-presente.png"
+            alt="Clhoe com seu marido e seu filho no presente"
+            loading="lazy"
+          />
+          <figcaption>FAMÍLIA // IDENTIFICAÇÃO PRESERVADA</figcaption>
+        </figure>
+      </section>
+
+      <section class="clhoe-readout" aria-labelledby="clhoe-readout-title">
+        <div class="clhoe-readout__number" aria-hidden="true">C-07</div>
+        <div class="clhoe-readout__copy" data-reveal>
+          <span class="clhoe-kicker">PAINEL DE VIGILÂNCIA // ACESSO PARCIAL</span>
+          <h2 id="clhoe-readout-title">UM PERÍMETRO<br /><em>NÃO É UMA PRISÃO.</em></h2>
+          <p>
+            É a distância necessária entre o perigo e quem ainda precisa de tempo para viver.
+          </p>
+        </div>
+        <div class="clhoe-readout__terminal" data-reveal aria-live="polite">
+          <span data-clhoe-label>PERÍMETRO // LEITURA ATUAL</span>
+          <strong data-clhoe-copy>
+            Observação visual confirmada. Nenhum civil no perímetro imediato.
+          </strong>
+          <div class="clhoe-readout__controls" aria-label="Selecionar relatório de Clhoe">
+            <button class="is-active" type="button" data-clhoe-readout="0">PERÍMETRO</button>
+            <button type="button" data-clhoe-readout="1">ABRIGO</button>
+            <button type="button" data-clhoe-readout="2">FAMÍLIA</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="clhoe-records" aria-labelledby="clhoe-records-title">
+        <div data-reveal>
+          <span class="clhoe-kicker">ARQUIVO VISUAL // PRESENTE</span>
+          <h2 id="clhoe-records-title">SEIS REGISTROS.<br /><em>UM LAR PROTEGIDO.</em></h2>
+          <p>
+            O cuidado, a vigília e os vínculos que Clhoe mantém vivos — agora com os registros da
+            família preservados no mesmo arquivo.
+          </p>
+        </div>
+        <a class="clhoe-records__link" href="clhoe-registros.html" data-reveal>
+          <span>ABRIR GALERIA DE CLHOE</span><b>→</b><small>C-07 // ARQUIVO PRESERVADO</small>
+        </a>
+      </section>
+    </main>
+
+    <footer class="clhoe-footer">
+      <a href="luke-presente.html">← Luke</a>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+      <a href="dimitri-presente.html">Dimitri →</a>
+    </footer>
+
+    <script src="era-extincao-presente/clhoe-presente.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
 </html>

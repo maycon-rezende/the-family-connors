@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#081014" />
+    <meta
+      name="description"
+      content="Registros visuais do presente de Jully Connor: sinais, rotas e tecnologia de campo."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/jully-registros.css" />
+    <title>Registros do Presente — Jully Connor</title>
+  </head>
+  <body class="jully-record-archive">
+    <nav class="record-nav" aria-label="Navegação dos registros de Jully">
+      <a href="jully-presente.html">← Voltar à Jully</a>
+      <span>JC-06 // ARQUIVO VISUAL DO PRESENTE</span>
+      <a href="index.html#sobreviventes">Sobreviventes →</a>
+    </nav>
+
+    <main>
+      <header class="record-hero">
+        <span class="record-kicker">FREQUÊNCIA RECUPERADA // PRESENTE</span>
+        <h1>SINAIS<br /><em>QUE FICARAM.</em></h1>
+        <p>
+          Registros feitos depois da queda. Jully transforma antenas, peças esquecidas e rotas
+          quebradas em uma chance de alguém responder do outro lado.
+        </p>
+        <div class="record-hero__status"><i aria-hidden="true"></i> 05 REGISTROS // LEITURA ATIVA</div>
+      </header>
+
+      <section class="signal-archive" aria-labelledby="signal-archive-title">
+        <header class="signal-archive__header">
+          <div>
+            <span class="record-kicker">SEQUÊNCIA JC-PRE // TRANSMISSÃO CONTÍNUA</span>
+            <h2 id="signal-archive-title">JULLY EM <em>FREQUÊNCIA</em></h2>
+          </div>
+          <p>
+            As imagens passam sozinhas, mas você pode trocar de registro a qualquer momento. Nenhuma
+            fotografia é cortada.
+          </p>
+        </header>
+
+        <div class="signal-stage" data-record-stage aria-roledescription="carrossel">
+          <img
+            data-record-image
+            src="img-presente/personagens/jully-presente.png"
+            alt="Jully Connor em uma estação improvisada de transmissão"
+          />
+          <div class="signal-stage__shade" aria-hidden="true"></div>
+          <div class="signal-stage__copy" aria-live="polite">
+            <span data-record-code>JC-PRE-01</span>
+            <strong data-record-title>Estação de escuta</strong>
+            <p data-record-caption>Jully mantém uma estação improvisada aberta para qualquer resposta.</p>
+          </div>
+          <button
+            class="signal-stage__button signal-stage__button--previous"
+            type="button"
+            data-record-previous
+            aria-label="Registro anterior"
+          >
+            ←
+          </button>
+          <button
+            class="signal-stage__button signal-stage__button--next"
+            type="button"
+            data-record-next
+            aria-label="Próximo registro"
+          >
+            →
+          </button>
+          <button class="signal-stage__open" type="button" data-record-open>
+            Ampliar registro
+          </button>
+          <div class="signal-stage__progress" aria-hidden="true">
+            <i data-record-progress></i>
+          </div>
+        </div>
+
+        <div class="record-selector" aria-label="Selecionar registro">
+          <button class="is-active" type="button" data-record-select="0">
+            <img
+              src="img-presente/personagens/jully-presente.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>01 // ESTÁVEL</span>
+          </button>
+          <button type="button" data-record-select="1">
+            <img
+              src="img-presente/personagens/jully-presente1.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>02 // ROTA</span>
+          </button>
+          <button type="button" data-record-select="2">
+            <img
+              src="img-presente/personagens/jully-presente2.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>03 // VIGÍLIA</span>
+          </button>
+          <button type="button" data-record-select="3">
+            <img src="img-presente/personagens/jully-perda.png" alt="" aria-hidden="true" />
+            <span>04 // MEMÓRIA</span>
+          </button>
+          <button type="button" data-record-select="4">
+            <img src="img-presente/personagens/jull-presente.png" alt="" aria-hidden="true" />
+            <span>05 // ABRIGO</span>
+          </button>
+        </div>
+
+        <footer class="signal-archive__footer">
+          <span data-record-count>01 / 05</span>
+          <span>JC-06 // ACESSO PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="record-lightbox" data-record-lightbox aria-labelledby="record-lightbox-title">
+      <button
+        class="record-lightbox__close"
+        type="button"
+        data-record-close
+        aria-label="Fechar imagem ampliada"
+      >
+        ×
+      </button>
+      <img data-record-lightbox-image src="" alt="Registro ampliado de Jully Connor" />
+      <div class="record-lightbox__copy">
+        <span data-record-lightbox-code></span>
+        <strong id="record-lightbox-title" data-record-lightbox-title></strong>
+      </div>
+    </dialog>
+
+    <footer class="record-footer">
+      <a href="britney-presente.html">← Britney</a>
+      <a href="jully-presente.html">Voltar ao dossiê</a>
+      <a href="jack-presente.html">Jack →</a>
+    </footer>
+
+    <script src="js/jully-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

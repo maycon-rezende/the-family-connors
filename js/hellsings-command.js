@@ -102,7 +102,7 @@
     },
     {
       code: 'HLS-10',
-      name: 'Hellen',
+      name: 'Hellen Wren',
       role: 'Infiltração · Disfarce',
       color: '#d18450',
       skin: '#c89470',

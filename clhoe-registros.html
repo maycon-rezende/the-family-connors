@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#160b19" />
+    <meta
+      name="description"
+      content="Registros visuais do presente de Clhoe: vigilância, cuidado de campo e sua família preservada."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/clhoe-registros.css" />
+    <title>Clhoe | Registros do Presente</title>
+  </head>
+  <body class="clhoe-record-archive">
+    <nav class="archive-nav" aria-label="Navegação dos registros de Clhoe">
+      <a href="clhoe-presente.html">← Voltar ao dossiê</a>
+      <span>C-07 // REGISTROS DO PRESENTE</span>
+      <a href="clhoe-familia.html">Arquivo da família</a>
+    </nav>
+
+    <main>
+      <header class="archive-hero">
+        <span class="archive-kicker">PERÍMETRO VIVO // ARQUIVO PRESERVADO</span>
+        <h1>O QUE ELA <em>MANTÉM DE PÉ.</em></h1>
+        <p>
+          Seis registros do presente de Clhoe. A vigilância, o cuidado e os rostos que fazem cada
+          rota terminar em casa.
+        </p>
+        <span class="archive-status"><i></i> LOOP DE REGISTROS ATIVO</span>
+      </header>
+
+      <section class="watch-carousel" aria-labelledby="watch-carousel-title">
+        <div class="watch-carousel__head">
+          <div>
+            <span class="archive-kicker">ARQUIVO C-07 // LEITURA VISUAL</span>
+            <h2 id="watch-carousel-title">CUIDAR TAMBÉM<br /><em>É VIGIAR.</em></h2>
+          </div>
+          <p>
+            Use as setas, os registros abaixo ou deixe o arquivo seguir sozinho. As imagens são
+            exibidas por inteiro, sem recortes.
+          </p>
+        </div>
+
+        <div class="watch-stage" data-watch-stage>
+          <img
+            data-watch-image
+            src="img-hellsing/clhoe-presente.png"
+            alt="Clhoe preparando recursos de cuidado no acampamento dos Hellsings"
+          />
+          <div class="watch-stage__shade" aria-hidden="true"></div>
+          <div class="watch-stage__copy">
+            <span data-watch-code>C-07.1</span>
+            <strong data-watch-title>Recurso preservado</strong>
+            <p data-watch-caption>Mesmo fora da patrulha, Clhoe prepara o que pode manter alguém de pé.</p>
+          </div>
+          <button
+            class="watch-stage__button watch-stage__button--previous"
+            type="button"
+            aria-label="Registro anterior"
+            data-watch-previous
+          >
+            ←
+          </button>
+          <button
+            class="watch-stage__button watch-stage__button--next"
+            type="button"
+            aria-label="Próximo registro"
+            data-watch-next
+          >
+            →
+          </button>
+          <button class="watch-stage__open" type="button" data-watch-open>Ampliar registro</button>
+          <div class="watch-stage__progress" aria-hidden="true"><i data-watch-progress></i></div>
+        </div>
+
+        <div class="watch-selector" aria-label="Selecionar registro de Clhoe">
+          <button class="is-active" type="button" data-watch-select aria-pressed="true">
+            <img src="img-hellsing/clhoe-presente.png" alt="Prévia de Clhoe em campo" />
+            <span>CAMPO</span>
+          </button>
+          <button type="button" data-watch-select aria-pressed="false">
+            <img src="img-hellsing/alice-clhoe.png" alt="Prévia de Clhoe e Alice cuidando de um sobrevivente" />
+            <span>CUIDADO</span>
+          </button>
+          <button type="button" data-watch-select aria-pressed="false">
+            <img src="img-hellsing/alice-clhoe1.png" alt="Prévia de Clhoe e Alice organizando recursos" />
+            <span>RECURSOS</span>
+          </button>
+          <button type="button" data-watch-select aria-pressed="false">
+            <img src="img-hellsing/alice-clhoe2.png" alt="Prévia do preparo de remédios em campo" />
+            <span>REMÉDIOS</span>
+          </button>
+          <button type="button" data-watch-select aria-pressed="false">
+            <img src="img-hellsing/clhoe-presente-familia.png" alt="Prévia de Clhoe com sua família" />
+            <span>RETORNO</span>
+          </button>
+          <button type="button" data-watch-select aria-pressed="false">
+            <img src="img-hellsing/clhoe-familia-presente.png" alt="Prévia de Clhoe, marido e filho" />
+            <span>FAMÍLIA</span>
+          </button>
+        </div>
+
+        <footer class="watch-carousel__footer">
+          <span data-watch-count>01 / 06</span>
+          <span>C-07 // PERÍMETRO PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="watch-lightbox" data-watch-lightbox aria-label="Imagem ampliada do registro de Clhoe">
+      <button class="watch-lightbox__close" type="button" aria-label="Fechar imagem ampliada" data-watch-close>
+        ×
+      </button>
+      <img data-watch-lightbox-image src="" alt="Registro visual ampliado de Clhoe" />
+      <div class="watch-lightbox__copy">
+        <span data-watch-lightbox-code></span>
+        <strong data-watch-lightbox-title></strong>
+      </div>
+    </dialog>
+
+    <footer class="archive-footer">
+      <a href="luke-presente.html">← Luke</a>
+      <a href="clhoe-presente.html">Dossiê de Clhoe</a>
+      <a href="clhoe-familia.html">Família de Clhoe →</a>
+    </footer>
+
+    <script src="js/clhoe-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071619" />
+    <meta
+      name="description"
+      content="Registros visuais do presente de Naomi, inteligência dos Hellsings."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/naomi-registros.css" />
+    <title>Naomi | Registros do Presente</title>
+  </head>
+  <body class="naomi-record-archive">
+    <nav class="archive-nav" aria-label="Navegação dos registros de Naomi">
+      <a href="naomi-presente.html">← Voltar ao dossiê</a>
+      <span>N-05 // REGISTROS DO PRESENTE</span>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+    </nav>
+
+    <main>
+      <header class="archive-hero">
+        <span class="archive-kicker">TRANSMISSÕES VISUAIS // CANAL PRESERVADO</span>
+        <h1>SINAIS EM <em>MOVIMENTO.</em></h1>
+        <p>
+          Três registros do presente de Naomi. A escuta não para quando ela deixa o receptor:
+          continua na rota, no acampamento e na linha de ação.
+        </p>
+        <span class="archive-status"><i></i> LOOP DE ARQUIVO ATIVO</span>
+      </header>
+
+      <section class="signal-carousel" aria-labelledby="signal-carousel-title">
+        <div class="signal-carousel__head">
+          <div>
+            <span class="archive-kicker">ARQUIVO N-05 // LEITURA VISUAL</span>
+            <h2 id="signal-carousel-title">CADA IMAGEM<br /><em>GUARDA UM SINAL.</em></h2>
+          </div>
+          <p>
+            Use as setas, os registros abaixo ou deixe o arquivo seguir sozinho. Nenhuma imagem é
+            recortada.
+          </p>
+        </div>
+
+        <div class="signal-stage" data-signal-stage>
+          <img
+            data-signal-image
+            src="img-hellsing/naomi-presente.png"
+            alt="Naomi no acampamento dos Hellsings depois do Dia D"
+          />
+          <div class="signal-stage__shade" aria-hidden="true"></div>
+          <div class="signal-stage__copy">
+            <span data-signal-code>N-05.1</span>
+            <strong data-signal-title>Escuta de campo</strong>
+            <p data-signal-caption>Antes de qualquer rota, Naomi registra o que o acampamento ainda consegue ouvir.</p>
+          </div>
+          <button
+            class="signal-stage__button signal-stage__button--previous"
+            type="button"
+            aria-label="Registro anterior"
+            data-signal-previous
+          >
+            ←
+          </button>
+          <button
+            class="signal-stage__button signal-stage__button--next"
+            type="button"
+            aria-label="Próximo registro"
+            data-signal-next
+          >
+            →
+          </button>
+          <button class="signal-stage__open" type="button" data-signal-open>Ampliar registro</button>
+          <div class="signal-stage__progress" aria-hidden="true"><i data-signal-progress></i></div>
+        </div>
+
+        <div class="signal-selector" aria-label="Selecionar registro de Naomi">
+          <button class="is-active" type="button" data-signal-select aria-pressed="true">
+            <img src="img-hellsing/naomi-presente.png" alt="Prévia de Naomi em escuta de campo" />
+            <span>ESCUTA</span>
+          </button>
+          <button type="button" data-signal-select aria-pressed="false">
+            <img src="img-hellsing/naomi-presente1.png" alt="Prévia de Naomi em rota no presente" />
+            <span>ROTA</span>
+          </button>
+          <button type="button" data-signal-select aria-pressed="false">
+            <img src="img-hellsing/naomi-presente2.png" alt="Prévia de Naomi em ação no presente" />
+            <span>RESPOSTA</span>
+          </button>
+        </div>
+
+        <footer class="signal-carousel__footer">
+          <span data-signal-count>01 / 03</span>
+          <span>N-05 // SINAL PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="signal-lightbox" data-signal-lightbox aria-label="Imagem ampliada do registro de Naomi">
+      <button class="signal-lightbox__close" type="button" aria-label="Fechar imagem ampliada" data-signal-close>
+        ×
+      </button>
+      <img data-signal-lightbox-image src="" alt="Registro visual ampliado de Naomi" />
+      <div class="signal-lightbox__copy">
+        <span data-signal-lightbox-code></span>
+        <strong data-signal-lightbox-title></strong>
+      </div>
+    </dialog>
+
+    <footer class="archive-footer">
+      <a href="naomi-presente.html">← Dossiê de Naomi</a>
+      <a href="hellen-presente.html">Hellen Wren</a>
+      <a href="luke-presente.html">Luke →</a>
+    </footer>
+
+    <script src="js/naomi-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

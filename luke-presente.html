@@ -1,12 +1,182 @@
 <!doctype html>
-<html lang="pt-BR" data-operative="luke">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Luke // Depois do Dia D</title><meta name="description" content="Arquivo de Luke e sua trajetória após o Dia D." /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700;900&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap" rel="stylesheet" /><link rel="stylesheet" href="era-extincao-presente/hellsings-survivor.css" /></head>
-  <body><div class="signal-noise" aria-hidden="true"></div><div class="dossier-cursor" aria-hidden="true"><i></i><span>L-06</span></div><nav><a href="index.html#sobreviventes">Æ <span>ARQUIVO DO PRESENTE</span></a><i>HELLSINGS // DOSSIÊ L-06</i><a href="faccao-hellsings-presente.html">BASE HELLSINGS</a></nav>
-    <main><header class="profile-hero"><img src="img-hellsing/luke-presente.png" alt="Luke no presente" /><div class="hero-data"><p>L-06 // CAMPO // ATIVO</p><h1>LUKE</h1><span>Ele conhece caminhos seguros. O problema é o que precisou deixar para trás.</span></div><aside><b>STATUS</b><span>OPERACIONAL</span><b>ESPECIALIDADE</b><span>SOBREVIVÊNCIA</span></aside></header>
-      <section class="aftermath reveal"><div><p>DEPOIS DO DIA D</p><h2>Transformou ruínas<br /><em>em caminhos de volta.</em></h2></div><article><p>Luke passou os primeiros anos guiando civis por túneis, florestas queimadas e cidades sem nome. Aprendeu a ler vento, ferrugem e silêncio como outros liam mapas.</p><p>Cada rota segura nasceu de uma travessia que não foi. As marcas em seu mapa representam pessoas, abrigos e equipes que desapareceram antes que pudesse retornar.</p><blockquote>“Encontrar a saída é fácil. Difícil é aceitar quem não chegou até ela.”</blockquote></article></section>
-      <section class="loss reveal"><span>O QUE ELE PERDEU</span><h2>A certeza de que voltar basta.</h2><p>Luke sempre retorna ao bunker. Algumas vezes sozinho. Há uma passagem que ele selou pessoalmente e se recusa a marcar nos mapas oficiais.</p><b>ROTA L-0 REMOVIDA DO SISTEMA.</b></section>
-      <section class="family-record reveal"><img src="img-hellsing/luke-presente-familia.png" alt="Luke com sua família no presente" /><div><p>O QUE PERMANECEU</p><h2>O motivo pelo qual<br /><em>ele sempre procura voltar.</em></h2><span>Luke não marca sua família nos mapas e nunca repete pelo rádio onde eles estão. Algumas rotas existem apenas para mantê-los longe da guerra.</span></div></section>
-      <section class="records solo"><header class="reveal"><p>REGISTRO VISUAL</p><h2>O homem que sempre volta.<br /><em>Quase sempre.</em></h2></header><div class="record-grid one"><img src="img-hellsing/luke-presente.png" alt="Registro atual de Luke" /></div></section>
-      <section class="hook reveal"><p>ROTA L-0 // ACESSO NEGADO</p><h2>Algo do outro lado<br /><em>ainda bate na porta.</em></h2><span>Luke verifica o selo toda noite. Nunca explicou à equipe por que às vezes escuta o próprio nome.</span></section>
-    </main><footer><a href="naomi-presente.html">← NAOMI</a><strong>LUKE // L-06</strong><a href="index.html#sobreviventes">SOBREVIVENTES →</a></footer><script src="era-extincao-presente/hellsings-survivor.js"></script></body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101912" />
+    <meta
+      name="description"
+      content="Dossiê de Luke: mapas, rotas, estratégia e sobrevivência de campo no presente dos Hellsings."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="era-extincao-presente/luke-presente.css" />
+    <title>Luke | Rotas Mortas</title>
+  </head>
+  <body class="luke-routes">
+    <div class="luke-topography" aria-hidden="true"></div>
+
+    <nav class="luke-nav" aria-label="Navegação do dossiê de Luke">
+      <a href="naomi-presente.html">← Naomi</a>
+      <span>ARQUIVO HELLSINGS // L-06</span>
+      <a href="index.html#sobreviventes">Sobreviventes →</a>
+    </nav>
+
+    <main>
+      <header class="luke-hero">
+        <div class="luke-hero__copy" data-reveal>
+          <span class="luke-kicker"><i></i> L-06 // CAMPO // ATIVO</span>
+          <h1>LUKE <em>RETORNA.</em></h1>
+          <p>
+            Ele conhece os caminhos seguros. A parte difícil não é encontrar a saída — é carregar
+            cada pessoa que não chegou até ela.
+          </p>
+          <div class="luke-hero__metrics" aria-label="Resumo do arquivo">
+            <span>STATUS // OPERACIONAL</span>
+            <span>FUNÇÃO // ROTAS</span>
+            <span>CAMPO // ESTRATÉGIA</span>
+          </div>
+        </div>
+
+        <div class="luke-hero__media" data-reveal>
+          <img
+            src="img-hellsing/luke-presente.png"
+            alt="Luke reparando equipamento de campo entre ruínas"
+          />
+          <span class="luke-hero__file" aria-hidden="true">L-06</span>
+        </div>
+      </header>
+
+      <section class="luke-aftermath" aria-labelledby="luke-aftermath-title">
+        <div class="luke-section-heading" data-reveal>
+          <span class="luke-kicker">DEPOIS DO DIA D // LEITURA DE TERRENO</span>
+          <h2 id="luke-aftermath-title">RUÍNAS VIRARAM<br /><em>CAMINHOS.</em></h2>
+        </div>
+
+        <article class="luke-aftermath__story" data-reveal>
+          <p>
+            Luke passou os primeiros anos guiando civis por túneis, florestas queimadas e cidades
+            sem nome. Aprendeu a ler vento, ferrugem e silêncio como outros liam mapas.
+          </p>
+          <p>
+            Cada rota segura nasceu de uma travessia que não foi. As marcas em seu mapa representam
+            pessoas, abrigos e equipes que desapareceram antes que pudesse retornar.
+          </p>
+          <blockquote>“Encontrar a saída é fácil. Difícil é aceitar quem não chegou até ela.”</blockquote>
+        </article>
+
+        <aside class="luke-aftermath__card" data-reveal aria-label="Ficha técnica de Luke">
+          <span>FICHA TÉCNICA // L-06</span>
+          <dl>
+            <div><dt>NOME REGISTRADO</dt><dd>LUKE</dd></div>
+            <div><dt>FUNÇÃO ATUAL</dt><dd>MAPAS / ROTAS / ESTRATÉGIA</dd></div>
+            <div><dt>ESPECIALIDADE</dt><dd>CAMPO / SOBREVIVÊNCIA</dd></div>
+            <div><dt>CÉLULA</dt><dd>FORMAÇÃO DE CAMPO</dd></div>
+          </dl>
+          <small>COORDENADAS SENSÍVEIS NÃO SÃO TRANSMITIDAS PELO RÁDIO.</small>
+        </aside>
+      </section>
+
+      <section class="luke-skills" aria-labelledby="luke-skills-title">
+        <header class="luke-skills__head" data-reveal>
+          <div>
+            <span class="luke-kicker">PROTOCOLOS DE TRAVESSIA</span>
+            <h2 id="luke-skills-title">NÃO É SÓ<br /><em>CHEGAR VIVO.</em></h2>
+          </div>
+          <p>
+            Rotas não são linhas num papel. Para Luke, cada uma é uma decisão sobre quem vai
+            atravessar, o que pode ser levado e quando é preciso voltar.
+          </p>
+        </header>
+
+        <div class="luke-skills__grid">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Leitura de terreno</h3>
+            <p>Vento, ferrugem e silêncio revelam o que uma rota ainda não contou.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Mapas e rotas</h3>
+            <p>Marca passagens seguras e remove coordenadas quando elas passam a ameaçar alguém.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Sobrevivência de campo</h3>
+            <p>Mantém a travessia possível quando abrigo, comunicação e tecnologia falham.</p>
+          </article>
+          <article data-reveal>
+            <span>04</span>
+            <h3>Formação de campo</h3>
+            <p>Ao lado de Hellen e Naomi, transforma informação, cobertura e terreno em uma saída.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="luke-terminal" aria-labelledby="luke-terminal-title">
+        <div class="luke-terminal__image" data-reveal>
+          <img
+            src="img-hellsing/hellen-naomi-luke-presente.png"
+            alt="Hellen Wren, Naomi e Luke analisando equipamento e rotas de campo"
+          />
+        </div>
+        <div class="luke-terminal__copy" data-reveal>
+          <span class="luke-kicker">MAPA DE CAMPO // ACESSO PARCIAL</span>
+          <h2 id="luke-terminal-title">TODA ROTA<br /><em>COBRA ALGO.</em></h2>
+          <p>
+            Luke não trata um mapa como promessa. Cada linha confirma uma passagem possível, mas
+            também registra o que ficou fora dela.
+          </p>
+          <div class="luke-terminal__readout" aria-live="polite">
+            <span data-luke-channel-label>ROTA NORTE // TRÊS SAÍDAS CONFIRMADAS</span>
+            <strong data-luke-channel-copy>
+              A rota norte permanece limpa por enquanto. O campo muda; a equipe precisa mudar junto.
+            </strong>
+          </div>
+          <div class="luke-terminal__controls" aria-label="Selecionar leitura de rota">
+            <button class="is-active" type="button" data-luke-channel="0">NORTE</button>
+            <button type="button" data-luke-channel="1">TRAVESSIA</button>
+            <button type="button" data-luke-channel="2">L-0</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="luke-family" aria-labelledby="luke-family-title">
+        <figure class="luke-family__media" data-reveal>
+          <img src="img-hellsing/luke-presente-familia.png" alt="Luke ao lado de sua família no presente" />
+          <figcaption>ARQUIVO PROTEGIDO // COORDENADAS OCULTAS</figcaption>
+        </figure>
+        <div class="luke-family__copy" data-reveal>
+          <span class="luke-kicker">O QUE PERMANECEU // ACESSO RESTRITO</span>
+          <h2 id="luke-family-title">O MOTIVO<br /><em>PARA VOLTAR.</em></h2>
+          <p>
+            Luke não marca sua família nos mapas e nunca repete pelo rádio onde eles estão. Algumas
+            rotas existem apenas para mantê-los longe da guerra.
+          </p>
+        </div>
+      </section>
+
+      <section class="luke-records" aria-labelledby="luke-records-title">
+        <div data-reveal>
+          <span class="luke-kicker">ARQUIVO VISUAL // PRESENTE</span>
+          <h2 id="luke-records-title">SEIS REGISTROS.<br /><em>UMA DIREÇÃO.</em></h2>
+          <p>
+            Equipamento, vínculos e trabalho de campo: os registros preservados mostram os caminhos
+            que Luke ajuda a manter abertos.
+          </p>
+        </div>
+        <a class="luke-records__link" href="luke-registros.html" data-reveal>
+          <span>ABRIR REGISTROS DO PRESENTE</span><b>→</b><small>L-06 // MAPA PRESERVADO</small>
+        </a>
+      </section>
+    </main>
+
+    <footer class="luke-footer">
+      <a href="naomi-presente.html">← Naomi</a>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+      <a href="index.html#sobreviventes">Sobreviventes →</a>
+    </footer>
+
+    <script src="era-extincao-presente/luke-presente.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
 </html>
