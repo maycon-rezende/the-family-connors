@@ -28,6 +28,7 @@
 8. **Dimitri** — intervenção e extração como função provisória.
 9. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
 10. **Hellen Wren** — infiltração e disfarce.
+11. **Joey** — companheiro de Hellen Wren; exploração e recuperação de recursos em campo como função provisória.
 
 John também é representado atualmente com pele em tom marrom, conforme a orientação visual anterior. Bobby é outra pessoa e receberá retrato próprio. As funções marcadas como provisórias podem ser alteradas quando as biografias forem aprofundadas.
 
@@ -47,7 +48,7 @@ John também é representado atualmente com pele em tom marrom, conforme a orien
 - História completa dos descendentes.
 - Especialidades individuais dos descendentes, exceto a competência de combate já confirmada para Diana.
 - Missões históricas específicas dos Hellsings.
-- Biografias completas de Naomi, Clhoe e Dimitri.
+- Biografias completas de Naomi, Clhoe, Dimitri e Joey.
 - Funções definitivas dos agentes ainda marcados como provisórios.
 - Estado do mundo no presente, destinos dos personagens envelhecidos, territórios, veículos e facções.
 
