@@ -1,0 +1,164 @@
+/* Página fotográfica MA-02: mantém o acervo separado do dossiê narrativo. */
+body.nathan-record-page {
+  background: #071013;
+  color-scheme: dark;
+}
+
+.nathan-record-page .nathan-nav {
+  padding-inline: max(1.25rem, 6vw);
+}
+
+.nathan-record-intro {
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-height: clamp(410px, 58svh, 680px);
+  padding: clamp(10rem, 16vw, 15rem) max(1.25rem, 6vw) clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+  border-bottom: 1px solid var(--nathan-line);
+  background:
+    radial-gradient(circle at 81% 42%, rgba(121, 194, 200, .13), transparent 28%),
+    repeating-linear-gradient(90deg, transparent 0 89px, rgba(158, 211, 216, .035) 90px),
+    #081316;
+}
+
+.nathan-record-intro::after {
+  position: absolute;
+  top: 17%;
+  right: max(5vw, 1.25rem);
+  width: min(34vw, 440px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(158, 211, 216, .24);
+  border-radius: 50%;
+  box-shadow: 0 0 0 45px rgba(158, 211, 216, .035), 0 0 0 90px rgba(158, 211, 216, .02);
+  content: '';
+  pointer-events: none;
+}
+
+.nathan-record-intro h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 1rem 0 2.25rem;
+  color: var(--nathan-paper);
+  font: 900 clamp(5.4rem, 13vw, 14rem)/.75 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+
+.nathan-record-intro h1 em {
+  display: block;
+  color: var(--nathan-blue);
+  font-size: .48em;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.nathan-record-intro__bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  max-width: 1350px;
+}
+
+.nathan-record-intro__bottom p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--nathan-muted);
+  font-size: clamp(.96rem, 1.2vw, 1.08rem);
+  line-height: 1.7;
+}
+
+.nathan-record-intro__bottom > span,
+.nathan-record-page .nathan-footer span {
+  color: var(--nathan-blue);
+  font: 500 .62rem/1.5 'DM Mono', Consolas, monospace;
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+
+.nathan-record-intro__bottom i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 .6rem .1rem;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 9px currentColor;
+}
+
+.nathan-record-page .nathan-records {
+  padding-top: clamp(4rem, 6vw, 7rem);
+  padding-bottom: clamp(5rem, 9vw, 9rem);
+  border-top: 0;
+  background: linear-gradient(150deg, #0b191b, #050b0d 67%);
+}
+
+.nathan-record-page .nathan-gallery-stage {
+  height: clamp(570px, 72vw, 870px);
+}
+
+.nathan-record-page .nathan-footer {
+  align-items: center;
+  min-height: 110px;
+}
+
+@media (max-width: 760px) {
+  .nathan-record-intro {
+    min-height: 410px;
+    padding: 9rem 1.25rem 2.5rem;
+  }
+
+  .nathan-record-intro::after {
+    top: 20%;
+    right: -18%;
+    width: 67vw;
+  }
+
+  .nathan-record-intro h1 {
+    font-size: clamp(5rem, 19vw, 8rem);
+  }
+
+  .nathan-record-intro h1 em {
+    font-size: .43em;
+  }
+
+  .nathan-record-intro__bottom {
+    display: block;
+  }
+
+  .nathan-record-intro__bottom > span {
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  .nathan-record-page .nathan-gallery-stage {
+    height: min(72svh, 720px);
+    min-height: 440px;
+  }
+
+  .nathan-record-page .nathan-footer {
+    align-items: start;
+  }
+}
+
+@media (max-width: 380px) {
+  .nathan-record-intro h1 {
+    font-size: 4.8rem;
+  }
+}
+
+@media print {
+  .nathan-record-intro {
+    min-height: 0;
+    padding: 2rem 0;
+  }
+
+  .nathan-record-page .nathan-gallery-stage {
+    height: 70vh;
+  }
+}

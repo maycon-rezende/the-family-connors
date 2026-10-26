@@ -644,7 +644,7 @@ html.hellen-ready [data-reveal].is-visible {
   box-shadow: 0 0 9px rgba(209, 132, 80, 0.78);
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1180px) {
   .hellen-hero {
     grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1fr);
   }

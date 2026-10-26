@@ -16,10 +16,12 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 - Diana possui um dossiê exclusivo de combate; Isolde possui arquivo fotográfico cinematográfico em looping.
 - Galerias fotográficas separadas para Jack, Alice, Mark, Ariani, Britney e Jully; os registros de Jack ficam no dossiê independente `registros-jack.html`.
 - Alice, Mark, Ariani e Britney possuem dossiês do presente com ficha técnica, habilidades, cursor temático e arquivos fotográficos independentes sem recorte de imagens.
+- John possui um dossiê memorial e 11 registros visuais: dez imagens com ele anteriores à sua morte e um retrato associado de Amelia sem data identificada. Brian Taylor também possui memorial individual com seis registros visuais preservados. Bobby Lee possui dossiê narrativo com a agência fictícia Jingwei, três operações, sua entrada nos Hellsings e a história com Britney; a galeria independente mantém dois retratos e uma colagem. A foto de Joey com Britney foi retirada. Dimitri possui dossiê e galeria com função de campo ainda provisória.
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
 - `videos.html`: central audiovisual com registros compartilhados.
 - `hellsing.html`: experiência cinematográfica dos Hellsings, com abertura, bunker, radar, dossiês e formação oficial.
 - `era-extincao-presente/index.html`: endereço legado que redireciona para a nova entrada principal.
+- `dimitri-presente.html`: endereço legado que redireciona para `dimitri-arquivo.html`.
 
 ## Hellsings
 
@@ -53,6 +55,8 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 
 - [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
+- [LORE-PRESENTE.md](LORE-PRESENTE.md): cronologia e personagens do presente.
+- [BOBBY-LEE-LORE.md](BOBBY-LEE-LORE.md): trajetória de Lee, agência, missões e sequência familiar, com origem de cada decisão registrada.
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 - [DIREITOS-AUTORais.md](DIREITOS-AUTORais.md): inventário de mídias temporárias e checklist para publicação/AdSense.
 - [GUIA-PUBLICACAO-ADSENSE.md](GUIA-PUBLICACAO-ADSENSE.md): sequência técnica para domínio, indexação, consentimento e AdSense.
@@ -69,4 +73,4 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 20 de outubro de 2026.
+Última atualização: 25 de outubro de 2026.

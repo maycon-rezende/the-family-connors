@@ -129,7 +129,7 @@ const profiles = {
     title: 'Uma vida',
     accent: 'depois do Dia D',
     paragraphs: [
-      'Casada com Bobby, Britney estava grávida quando tudo começou. Seu filho nasceu depois da queda, em um mundo sem hospitais seguros, certezas ou infância como ela conheceu.',
+      'Quando o Dia D começou, Britney já era casada com Bobby Lee e estava grávida do filho dos dois. Ele nasceu depois da queda, em um mundo sem hospitais seguros, certezas ou infância como ela conheceu.',
       'A jovem que registrava a vida em vídeos passou a preservar relatos, rostos e pequenas alegrias. No comboio, memória não é nostalgia: é prova de que houve um antes e pode existir um depois.',
     ],
     quote:
@@ -143,9 +143,6 @@ const profiles = {
       ['img-presente/personagens/mark-brit-presente.png', 'FAMÍLIA'],
       ['img-presente/personagens/all-presente.png', 'SOBREVIVENTES'],
       ['img-hellsing/britney.png', 'ANTES DA ESTRADA'],
-      ['img-hellsing/britney-marido.png', 'BRITNEY & BOBBY'],
-      ['img-hellsing/britney-bobby.png', 'ARQUIVO FAMILIAR'],
-      ['img-hellsing/britney-boby-presente.png', 'REGISTRO DO PRESENTE'],
     ],
   },
   jully: {
@@ -207,8 +204,8 @@ if (key === 'britney' && p) {
   p.title = 'Entre duas eras';
   p.accent = 'ela encontra o caminho';
   p.paragraphs = [
-    'Britney conheceu Bobby nas festas da mansão dos Connors, quando ele ainda integrava a organização Hellsing. O casamento veio antes do Dia D — e a gravidez abriu uma ferida entre ela e Mark, que não aceitava vê-la construir uma vida fora do controle dele.',
-    'Depois de sair da casa de Mark, Britney encontrou abrigo com Jack e, mais tarde, dividiu a própria casa com Jully. O sequestro que colocou os Hellsings em ação devolveu Britney e Mark um ao outro. No presente, ela rastreia pessoas, domina armas de fogo e lâminas, luta, lê sinais e aplica os conhecimentos médicos que aprendeu com Alice.',
+    'Lee entrou nos Hellsings antes do Dia D. Jack costumava reunir a equipe em churrascos na mansão Connor; foi em um deles que ele conheceu Britney. A relação cresceu devagar. Quando ela soube que esperava o filho dos dois, saiu da casa de Mark para morar apenas com Jully. Britney e Lee se casaram depois, ainda antes da queda; o bebê nasceu após o Dia D.',
+    'O sequestro que colocou os Hellsings em ação devolveu Britney e Mark um ao outro. No presente, ela rastreia pessoas, domina armas de fogo e lâminas, luta, lê sinais e aplica os conhecimentos médicos que aprendeu com Alice.',
     'Antes da queda, Britney já vivia diante de uma câmera. Tinha seguidores, registrava a rotina e transformava pequenos momentos em histórias. Agora, cada imagem é menos uma postagem e mais uma prova de que aquela vida existiu.'
   ];
   p.memoryTitle = 'A câmera virou bússola';
@@ -249,7 +246,8 @@ if (p) {
 
 if (key === 'jack') {
   const cursor = document.querySelector('.jack-cursor');
-  if (cursor && matchMedia('(pointer: fine)').matches) {
+  if (cursor && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.body.classList.add('jack-cursor-ready');
     addEventListener('pointermove', ({ clientX, clientY }) => {
       cursor.style.left = `${clientX}px`;
       cursor.style.top = `${clientY}px`;

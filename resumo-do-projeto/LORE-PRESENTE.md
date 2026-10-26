@@ -70,17 +70,29 @@ Mark tem 50 anos. Ele conheceu os horrores da guerra antes do colapso e acredita
 
 Mark e Ariani tiveram os gêmeos Pollyana Salvatore Connor e Nathan Salvatore Connor antes da queda. Depois do Dia D, nasceu James Salvatore Connor, batizado por Mark em homenagem ao homem que havia salvado sua vida. Os três preservam Salvatore, o sobrenome materno de Ariani.
 
+Nathan atua como atirador de precisão, especialidade confirmada pelo autor. É casado com Lana, britânica. Sua formação e suas operações ainda não foram definidas.
+
+O sobrenome **Whitmore** e a trajetória de Lana descrita em `lana-presente.html` são criações autorizadas nesta etapa: nascida em Bristol, mudou-se para os Estados Unidos antes da queda; após o Dia D, recuperou rádios, conectou abrigos, conheceu Nathan quando um chamado seu guiou os Hellsings a um repetidor e passou a cuidar das comunicações do comboio. A relação amadureceu antes de um casamento simples. A origem britânica, o primeiro nome Lana e o casamento com Nathan foram informados pelo autor; os demais detalhes permanecem revisáveis. Ver `LANA-WHITMORE-LORE.md`.
+
 Ariani se tornou uma líder nata. Sua inteligência, capacidade de negociação e firmeza ajudaram a manter o grupo unido quando força e armas já não eram suficientes.
 
 ## Britney Connor
 
-Britney tem 45 anos. Antes do Dia D, casou-se com Bobby e engravidou. Naquele período, morava com Mark e Jully, enquanto tentava reorganizar a própria vida e o relacionamento. Depois, passou algum tempo com Jack, até conseguir resolver sua situação com Bobby.
+Britney tem 45 anos. Conheceu Bobby Lee em um dos churrascos que Jack oferecia aos Hellsings na Mansão Connor, depois que Lee entrou para a equipe. Os dois demoraram a ficar juntos. Quando descobriu que esperava um filho dele, Britney saiu da casa de Mark e foi morar apenas com Jully. Ela e Lee se casaram mais tarde, ainda antes do Dia D.
 
-Mark não permaneceu sozinho por muito tempo: Ariani foi morar com ele e levou os filhos. Jully ainda ficou na casa por um período, mas depois saiu. Ela e Britney encontraram um lugar onde pudessem viver juntas e reconstruir alguma sensação de normalidade.
+Depois da saída das irmãs, Ariani foi morar com Mark e levou os filhos. Britney e Jully construíram uma casa para as duas, antes do casamento de Britney com Lee.
 
-O filho de Britney nasceu depois do Dia D.
+O filho de Britney e Bobby Lee nasceu depois do Dia D.
 
 Ele não nasceu no mundo que seus pais conheceram. Nasceu quando o mundo já havia se transformado em inferno.
+
+## Bobby Lee
+
+Bobby Lee é sino-americano e mantém suas raízes chinesas como parte mais forte de sua identidade. Atuou na Unidade Jingwei, agência chinesa fictícia de inteligência transnacional. Na operação Rota das Lanternas, escolheu retirar testemunhas em vez de manter a vigilância de uma rede de tráfico e foi afastado. Depois colaborou com os Hellsings em Janela de Cinzas (HLS-126); Jack o convidou a integrar a equipe antes do Dia D. Sua especialidade passou a ser inteligência de campo e extração de testemunhas. Já como Hellsing, participou de Linha Vermelha (HLS-131).
+
+Lee conheceu Britney em um churrasco da equipe na Mansão Connor. O relacionamento amadureceu aos poucos. Após a descoberta da gravidez, Britney saiu da casa de Mark e foi morar só com Jully; o casamento com Lee veio depois. Os dois já eram casados quando o Dia D chegou. Britney estava grávida na queda, e o filho deles nasceu depois. O caminho de Bobby após o colapso ainda não foi detalhado.
+
+A sequência completa, os detalhes das operações e a distinção entre fatos confirmados pelo autor e criação desta etapa estão em [BOBBY-LEE-LORE.md](BOBBY-LEE-LORE.md).
 
 ## Jully Connor
 
@@ -97,6 +109,8 @@ Nem todos atravessaram os anos de devastação.
 Brian, o integrante mais velho da equipe, morreu em decorrência de uma doença contra a qual lutava havia muitos anos. Mesmo com todo o conhecimento de Alice, o novo mundo já não possuía os medicamentos e recursos necessários para salvá-lo.
 
 John foi mordido durante uma missão. Sabendo o que aconteceria, escolheu transformar os últimos minutos de consciência em uma oportunidade para os demais. Serviu de isca e atraiu a ameaça para longe, permitindo que os Hellsings escapassem.
+
+As imagens de John no presente foram registradas antes de sua morte.
 
 Seus nomes continuam registrados no bunker e no código da organização.
 
@@ -119,7 +133,8 @@ Mas o código dos Hellsings ainda vive.
 - A verdade é que **Dominium** é uma organização muito antiga, responsável pelos acontecimentos que conduziram ao Dia D e à Era da Extinção.
 - O nome, a antiguidade, os objetivos e a responsabilidade da organização devem permanecer ocultos neste site.
 - O site Doomsday poderá apresentar pistas e arquivos fragmentados sobre a Dominium, sem revelar imediatamente que ela causou tudo.
-- John e Bobby são personagens diferentes. O registro visual anteriormente atribuído a Bobby pertence somente a John; Bobby receberá imagem própria.
+- John e Bobby Lee são personagens diferentes. O registro visual anteriormente atribuído a Bobby pertence somente a John. Os arquivos visuais atuais de Bobby ficam em `img-presente/personagens/` (`bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png`).
+- O homem ao lado de Britney em `img-hellsing/britney-bobby.png` era Joey, não Bobby. Essa foto foi removida do projeto; outras imagens visualmente semelhantes não devem ser atribuídas a Bobby nem usadas para sugerir vínculo romântico entre Joey e Britney.
 
 ## Segunda geração — informação confirmada
 

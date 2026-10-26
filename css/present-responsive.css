@@ -1,0 +1,158 @@
+/* Ajustes de largura intermediária para os dossiês do presente. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  body[data-character='alice'] .alice-technical__grid,
+  body[data-character='mark'] .mark-technical__grid,
+  body[data-character='ariani'] .ariani-technical__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body[data-character='alice'] .alice-protocols,
+  body[data-character='mark'] .mark-protocols,
+  body[data-character='ariani'] .ariani-principles {
+    grid-column: 1 / -1;
+    min-height: 0;
+  }
+
+  body.john-dossier .john-file,
+  body.dimitri-file .dimitri-profile {
+    grid-template-columns: minmax(220px, .72fr) minmax(0, 1.15fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  body.john-dossier .john-file__card,
+  body.dimitri-file .dimitri-profile__card {
+    grid-column: 1 / -1;
+    width: min(100%, 590px);
+  }
+
+  body.john-dossier .john-protocols__grid,
+  body.dimitri-file .dimitri-skills__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.john-dossier .john-terminal,
+  body.dimitri-file .dimitri-terminal {
+    grid-template-columns: minmax(0, .5fr) minmax(0, 1fr);
+  }
+
+  body.john-dossier .john-terminal__readout,
+  body.dimitri-file .dimitri-terminal__readout {
+    grid-column: 1 / -1;
+    width: min(100%, 620px);
+  }
+
+  body.john-dossier .john-linked,
+  body.dimitri-file .dimitri-command,
+  body.john-dossier .john-records,
+  body.dimitri-file .dimitri-records {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1020px) {
+  body.john-dossier .john-hero,
+  body.dimitri-file .dimitri-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  body.john-dossier .john-hero__copy,
+  body.dimitri-file .dimitri-hero__copy {
+    min-height: 540px;
+    padding-block: 5rem 3rem;
+  }
+
+  body.john-dossier .john-hero__media,
+  body.dimitri-file .dimitri-hero__media {
+    min-height: 520px;
+    height: 520px;
+  }
+
+  body[data-character='alice'] .chapter-grid,
+  body[data-character='mark'] .chapter-grid,
+  body[data-character='ariani'] .chapter-grid,
+  body[data-character='britney'] .chapter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  body[data-character='alice'] .chapter-grid::after,
+  body[data-character='mark'] .chapter-grid::after,
+  body[data-character='ariani'] .chapter-grid::after {
+    display: none;
+  }
+
+  body[data-character='britney'] .britney-archive-tools {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-character='britney'] .archive-tool-grid {
+    max-width: 680px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 820px) {
+  body[data-character='alice'] .alice-technical__grid,
+  body[data-character='mark'] .mark-technical__grid,
+  body[data-character='ariani'] .ariani-technical__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-character='alice'] .alice-protocols,
+  body[data-character='mark'] .mark-protocols,
+  body[data-character='ariani'] .ariani-principles {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-character='alice'] .alice-technical__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-character='alice'] .alice-id-card,
+  body[data-character='alice'] .alice-skills,
+  body[data-character='alice'] .alice-protocols {
+    min-height: 0;
+  }
+
+  body[data-character='alice'] .chapter-grid,
+  body[data-character='mark'] .chapter-grid,
+  body[data-character='ariani'] .chapter-grid,
+  body[data-character='britney'] .chapter-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-character='alice'] .profile-footer,
+  body[data-character='mark'] .profile-footer,
+  body[data-character='ariani'] .profile-footer,
+  body[data-character='britney'] .profile-footer {
+    flex-wrap: wrap;
+    row-gap: 1.15rem;
+  }
+}
+
+@media (max-width: 420px) {
+  body[data-character='alice'] .profile-nav,
+  body[data-character='mark'] .profile-nav,
+  body[data-character='ariani'] .profile-nav,
+  body[data-character='britney'] .profile-nav {
+    gap: .5rem;
+    padding-inline: .8rem;
+  }
+
+  body[data-character='alice'] .profile-nav a,
+  body[data-character='mark'] .profile-nav a,
+  body[data-character='ariani'] .profile-nav a,
+  body[data-character='britney'] .profile-nav a {
+    font-size: .49rem;
+    letter-spacing: .07em;
+  }
+
+  body[data-character='alice'] .data-strip span,
+  body[data-character='mark'] .data-strip span,
+  body[data-character='ariani'] .data-strip span,
+  body[data-character='britney'] .data-strip span {
+    line-height: 1.4;
+  }
+}

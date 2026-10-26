@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **20 de outubro de 2026**.
+Atualizado em **25 de outubro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -99,6 +99,17 @@ O script só monta componentes que existem na página. Por exemplo, a galeria co
 
 ## 4. Dossiês e galerias concluídos
 
+### Jack Connor — revisão de responsividade
+
+| Arquivo | Implementação |
+| --- | --- |
+| `jack-presente.html` | Hero reorganizado para mostrar o retrato inteiro em telas estreitas; ficha de comando com experiência e quatro habilidades ligadas à lore confirmada. |
+| `era-extincao-presente/jack-responsive.css` | Enquadramento próprio no notebook, composição empilhada em tablet/celular, cartões flexíveis e cursor nativo como reserva. |
+| `era-extincao-presente/personagem-presente.js` | Ativa o cursor personalizado somente quando há mouse com capacidade de hover. |
+| `css/present-responsive.css` | Ajustes de colunas e navegação nas fichas de Alice, Mark, Ariani, Britney, John e Dimitri. |
+
+Os arquivos de Naomi, Luke, Clhoe, Hellen e Joey passaram a reorganizar suas grades já em `1180px`, antes que as três colunas comprimam o conteúdo no notebook. A revisão estática não substitui conferência visual em aparelhos reais.
+
 ### Alice Myers Connor
 
 | Arquivo | Implementação |
@@ -177,15 +188,67 @@ function go(index) { setRecord(index); startCycle(); }
 
 O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterais propositalmente, mas nunca tem conteúdo importante recortado.
 
+### John
+
+| Arquivo | Implementação |
+| --- | --- |
+| `john-presente.html` | Dossiê memorial de John: tecnologia e armamentos antes da última missão, com a baixa confirmada pela lore. |
+| `era-extincao-presente/john-presente.css` e `.js` | Identidade ciano/cobre, ficha de campo, efeitos de revelação e leitura operacional. |
+| `john-registros.html` | Arquivo independente com dez imagens de John anteriores à morte e um retrato associado de Amelia sem data identificada. |
+| `css/john-registros.css` e `js/john-registros.js` | Carrossel com imagem inteira, loop de 6,5 s, pausa por interação, pré-carregamento do próximo registro e lightbox nativo. |
+
+### Brian Taylor
+
+| Arquivo | Implementação |
+| --- | --- |
+| `brian-presente.html` | Memorial individual com parceria de Brian e Jack no FBI, atuação como veterano e rastreador dos Hellsings e perda causada pela doença após a escassez de medicamentos. |
+| `era-extincao-presente/brian-presente.css` | Identidade visual em bronze e azul-acinzentado, retratos sem recorte e layout responsivo. |
+| `img-hellsing/brian-taylor.png`, `brian-presente.png`, `brian-taylor-presente.png` e `brian-presente1.png` a `brian-presente3.png` | Seis registros visuais preservados no próprio memorial; as quatro imagens mais recentes mostram Brian em campo, sem datas ou operações identificadas. |
+
+O cartão de Brian na página inicial e a ficha do memorial dos Hellsings abrem `brian-presente.html`. O memorial de John também está ligado à ficha correspondente dos Hellsings.
+
+Brian aparece como `HLS-09` no arquivo de comando (`js/hellsings-command.js`) e como `BT-09` no índice e no memorial do presente; a página individual preserva ambos os identificadores conforme o contexto.
+
+### Bobby Lee
+
+| Arquivo | Implementação |
+| --- | --- |
+| `bobby-presente.html` | Dossiê de Bobby Lee com a Unidade Jingwei, Rota das Lanternas, Janela de Cinzas e Linha Vermelha; inclui função de inteligência de campo e cronologia do encontro com Britney, gravidez, casa com Jully e casamento. O filho é dos dois. O destino de Lee após a queda segue sem confirmação. |
+| `era-extincao-presente/bobby-presente.css` | Identidade ferrugem/oliva/âmbar, retrato de capa sem recorte, cartões de operação e linha do tempo responsivos, com foco de teclado. |
+| `bobby-registros.html` | Galeria independente com dois retratos de Bobby Lee e uma colagem de seis cenas, sem datas nem missões atribuídas. |
+| `css/bobby-registros.css` e `js/bobby-registros.js` | Imagens inteiras, ciclo de 6,5 s, setas, miniaturas, pausa por interação, foco e aba oculta, redução de movimento e ampliação em diálogo nativo com retorno de foco. |
+| `img-presente/personagens/bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png` | Dois retratos e uma colagem visualmente coerentes; as datas não estão identificadas. |
+| `resumo-do-projeto/BOBBY-LEE-LORE.md` | Fonte narrativa detalhada; separa os fatos definidos pelo autor dos elementos criados nesta etapa a pedido dele. |
+
+A imagem `img-hellsing/britney-bobby.png` foi removida: o homem retratado com Britney é Joey, conforme confirmação do autor. As outras duas imagens semelhantes (`britney-marido.png` e `britney-boby-presente.png`) permanecem no acervo, mas foram retiradas dos dados da galeria para evitar atribuição incorreta a Bobby. Nenhuma delas deve ser usada como prova de relação romântica entre Joey e Britney.
+
+### Dimitri
+
+| Arquivo | Implementação |
+| --- | --- |
+| `dimitri-arquivo.html` | Dossiê de Dimitri com origem russa confirmada; intervenção, extração e leitura de rota identificadas como hipóteses até a biografia oficial. |
+| `era-extincao-presente/dimitri-arquivo.css` e `.js` | Identidade exclusiva em aço, azul-gelo e vermelho profundo; ficha técnica, terminal interativo, cursor temático e responsividade. |
+| `dimitri-registros.html` | Arquivo independente dos três registros atuais: vigília, terreno aberto e imagem de Dimitri com Jack diante de um mapa, sem missão identificada. |
+| `css/dimitri-registros.css` e `js/dimitri-registros.js` | Carrossel de 6,5 s com `object-fit: contain`, controles de teclado, pausa por foco/mouse/aba oculta, redução de movimento e `<dialog>`. |
+
+Os links internos de Clhoe e John foram atualizados para `dimitri-arquivo.html`; o acesso **Abrir registros do presente** agora aponta para um arquivo existente e auditado.
+
+O endereço anterior `dimitri-presente.html` redireciona para `dimitri-arquivo.html`, evitando duas versões contraditórias do mesmo dossiê. John permanece no conjunto de arquivos do presente como memorial; suas imagens mostram momentos anteriores à morte confirmada em `LORE-PRESENTE.md`.
+
+### Regra de paleta exclusiva
+
+Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi (teal/azul), Clhoe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre) e Dimitri (aço/azul-gelo/vermelho). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
+
 ## 5. Herdeiros e segunda geração
 
 | Núcleo | Arquivos principais | Estado técnico |
 | --- | --- | --- |
 | Filhos de Jack e Alice | `filhos-connor.html`, `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `isolde-presente.html` | Ordem aplicada: Alucard, Diana, Nicolai, Mary, Isolde. |
-| Filhos de Mark e Ariani | `filhos-mark-ariani.html`, `pollyana-presente.html`, `nathan-presente.html` | Centro de linhagem e arquivos individuais disponíveis. |
+| Filhos de Mark e Ariani | `filhos-mark-ariani.html`, `pollyana-presente.html`, `nathan-presente.html`, `nathan-registros.html` | Três descendentes confirmados; arquivos individuais de Pollyana e Nathan abertos, arquivo visual de James selado. Nathan é atirador de precisão; seu carrossel de seis imagens solo sem recorte fica na página separada de registros. |
+| Esposa de Nathan | `lana-presente.html`, `era-extincao-presente/lana-presente.css` | Dossiê próprio de Lana Whitmore, com retrato individual e foto do casal; origem britânica e casamento informados pelo autor, sobrenome e história criados nesta etapa. |
 | Efeitos compartilhados | `era-extincao-presente/lineage-effects.css/js` | Partículas, varredura, revelação por observador, cursor em mouse/caneta e redução de movimento. |
 
-As páginas individuais dos herdeiros têm detalhes específicos — por exemplo, a ampulheta de Alucard, a transmissão de combate de Diana, o arquivo policial de Sally, a bússola de Mary e o carrossel de Isolde. Consultar `GUIA-TECNICO-HERDEIROS.md` antes de alterar essas páginas.
+As páginas individuais dos herdeiros têm detalhes específicos — por exemplo, a ampulheta de Alucard, a transmissão de combate de Diana, o arquivo policial de Sally, a bússola de Mary, o carrossel de Isolde e o álbum separado de Nathan em `nathan-registros.html`, controlado por `era-extincao-presente/nathan-presente.js`. Consultar `GUIA-TECNICO-HERDEIROS.md` antes de alterar essas páginas.
 
 ## 6. Política de mídia e nomenclatura
 
@@ -221,17 +284,23 @@ node --check js/britney-registros.js
 node --check js/ariani-fotos.js
 node --check js/alice-fotos.js
 node --check js/mark-fotos.js
+node --check js/john-registros.js
+node --check js/bobby-registros.js
+node --check js/dimitri-registros.js
+node --check era-extincao-presente/dimitri-arquivo.js
 git diff --check
 node scripts/auditar-site.js
 ```
 
 - `node --check`: valida sintaxe JavaScript sem executar a página.
 - `git diff --check`: procura espaços em branco inválidos e problemas de patch.
-- `node scripts/auditar-site.js`: verifica idioma, viewport, SEO básico, `alt`, links vazios e referências internas. No estado atual, a auditoria encontrou **56 páginas**, sem referências quebradas; os dois `alt=""` existentes são emblemas decorativos deliberados.
+- `node scripts/auditar-site.js`: verifica idioma, viewport, SEO básico, `alt`, links vazios e referências internas. No estado atual, a auditoria encontrou **68 páginas**, sem referências quebradas; avisos de `alt=""` são imagens explicitamente decorativas.
 
 ### Prévia local opcional
 
 O site não exige build. Use qualquer servidor estático local e abra, por exemplo, `britney-fotos.html`, `ariani-fotos.html` e `intro.html` em desktop e celular. Não testar apenas o arquivo aberto por `file://`, pois vídeo, fonte e comportamento podem diferir de um servidor HTTP.
+
+O comando `node scripts/preview-site.mjs` inicia uma prévia local em `http://127.0.0.1:8765/`. Para revisar Jack, abra `/jack-presente.html` e compare pelo menos notebook, tablet e celular.
 
 ### Commit e envio para GitHub
 

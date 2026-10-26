@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090d13" />
+    <meta
+      name="description"
+      content="Três registros visuais de Dimitri no presente; sua função de campo permanece em análise."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/dimitri-registros.css" />
+    <title>Dimitri | Registros do Presente</title>
+  </head>
+  <body class="dimitri-record-archive">
+    <div class="dimitri-record-archive__grid" aria-hidden="true"></div>
+    <nav class="dimitri-record-nav" aria-label="Navegação dos registros de Dimitri">
+      <a href="dimitri-arquivo.html">← Voltar ao dossiê</a>
+      <span>D-08 // REGISTROS DO PRESENTE</span>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+    </nav>
+
+    <main>
+      <header class="dimitri-record-hero">
+        <span class="dimitri-record-kicker"><i></i> ПРОТОКОЛ ВОЗВРАТА // ARQUIVO PRESERVADO</span>
+        <h1>ONDE A ROTA<br /><em>NÃO DESISTE.</em></h1>
+        <p>
+          Três registros do presente de Dimitri: acampamento, terreno aberto e um mapa ao lado de
+          Jack. A função de campo de Dimitri permanece em análise.
+        </p>
+        <span class="dimitri-record-status"><i></i> LOOP DE REGISTROS ATIVO</span>
+      </header>
+
+      <section class="dimitri-carousel" aria-labelledby="dimitri-carousel-title">
+        <div class="dimitri-carousel__head">
+          <div>
+            <span class="dimitri-record-kicker">ARQUIVO D-08 // LEITURA VISUAL</span>
+            <h2 id="dimitri-carousel-title">TRÊS CENAS.<br /><em>CONTEXTO EM ABERTO.</em></h2>
+          </div>
+          <p>
+            Use as setas ou os registros abaixo. A sequência segue sozinha quando possível, e cada
+            imagem é mantida inteira no arquivo.
+          </p>
+        </div>
+
+        <div class="dimitri-stage" data-dimitri-stage>
+          <img
+            class="is-visible"
+            data-dimitri-image
+            src="img-hellsing/dimitri-presente.png"
+            alt="Dimitri em vigília no acampamento dos Hellsings"
+          />
+          <div class="dimitri-stage__atmosphere" aria-hidden="true"></div>
+          <div class="dimitri-stage__copy">
+            <span data-dimitri-record-code>D-08.1</span>
+            <strong data-dimitri-record-title>Ponto de vigília</strong>
+            <p data-dimitri-record-caption>Dimitri aparece em vigília no acampamento dos Hellsings.</p>
+          </div>
+          <button class="dimitri-stage__button dimitri-stage__button--previous" type="button" aria-label="Registro anterior" data-dimitri-previous>←</button>
+          <button class="dimitri-stage__button dimitri-stage__button--next" type="button" aria-label="Próximo registro" data-dimitri-next>→</button>
+          <button class="dimitri-stage__open" type="button" data-dimitri-open>Ampliar registro</button>
+          <div class="dimitri-stage__progress" aria-hidden="true"><i data-dimitri-progress></i></div>
+        </div>
+
+        <div class="dimitri-selector" aria-label="Selecionar registro de Dimitri">
+          <button class="is-active" type="button" data-dimitri-select aria-pressed="true">
+            <img src="img-hellsing/dimitri-presente.png" alt="Prévia de Dimitri em vigília no acampamento" />
+            <span>VIGÍLIA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-hellsing/dimi-presente.png" alt="Prévia de Dimitri em terreno aberto" />
+            <span>TERRENO</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-hellsing/dimitri-jack.png" alt="Prévia de Dimitri e Jack diante de um mapa" />
+            <span>MAPA</span>
+          </button>
+        </div>
+
+        <footer class="dimitri-carousel__footer">
+          <span data-dimitri-count>01 / 03</span>
+          <span>КОД ВОЗВРАТА // ARQUIVO PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="dimitri-lightbox" data-dimitri-lightbox aria-label="Imagem ampliada do registro de Dimitri">
+      <button class="dimitri-lightbox__close" type="button" aria-label="Fechar imagem ampliada" data-dimitri-close>×</button>
+      <img data-dimitri-lightbox-image src="" alt="Registro visual ampliado de Dimitri" />
+      <div class="dimitri-lightbox__copy"><span data-dimitri-lightbox-code></span><strong data-dimitri-lightbox-title></strong></div>
+    </dialog>
+
+    <footer class="dimitri-record-footer">
+      <a href="clhoe-presente.html">← Clhoe</a>
+      <a href="dimitri-arquivo.html">Dossiê de Dimitri</a>
+      <a href="john-presente.html">Memorial de John →</a>
+    </footer>
+
+    <script src="js/dimitri-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

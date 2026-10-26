@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11140f" />
+    <meta
+      name="description"
+      content="Três registros visuais de Bobby Lee, sino-americano e integrante dos Hellsings antes do Dia D, preservados sem datas identificadas."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/bobby-registros.css" />
+    <title>Bobby Lee | Registros Preservados</title>
+  </head>
+  <body class="bobby-record-archive">
+    <nav class="archive-nav" aria-label="Navegação dos registros de Bobby Lee">
+      <a href="bobby-presente.html">← Voltar ao dossiê</a>
+      <span>B-11 // BOBBY LEE</span>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+    </nav>
+
+    <main>
+      <header class="archive-hero">
+        <span class="archive-kicker">B-11 // ACERVO DE BOBBY LEE</span>
+        <h1>UM ROSTO.<br /><em>TRÊS REGISTROS.</em></h1>
+        <p>
+          Este arquivo reúne três imagens de Bobby Lee. Elas mostram cenas externas e do
+          bunker, mas não trazem datas ou missões identificadas.
+        </p>
+        <span class="archive-status"><i></i> SEQUÊNCIA DE REGISTROS</span>
+      </header>
+
+      <section class="bobby-carousel" aria-labelledby="bobby-carousel-title">
+        <div class="bobby-carousel__head">
+          <div>
+            <span class="archive-kicker">ARQUIVO B-11 // LEITURA VISUAL</span>
+            <h2 id="bobby-carousel-title">IMAGENS<br /><em>SEM RECORTE.</em></h2>
+          </div>
+          <p>
+            Use as setas ou selecione um registro abaixo. A sequência avança sozinha quando não
+            houver interação; cada imagem aparece inteira.
+          </p>
+        </div>
+
+        <div class="bobby-stage" data-bobby-stage>
+          <img
+            class="is-visible"
+            data-bobby-image
+            src="img-presente/personagens/bobby-presente.png"
+            alt="Bobby Lee com equipamento de campo entre ruínas"
+          />
+          <div class="bobby-stage__shade" aria-hidden="true"></div>
+          <div class="bobby-stage__copy">
+            <span data-bobby-record-code>B-11.1</span>
+            <strong data-bobby-record-title>Área externa</strong>
+            <p data-bobby-record-caption>Bobby Lee aparece com equipamento de campo entre ruínas; data não identificada.</p>
+          </div>
+          <button class="bobby-stage__button bobby-stage__button--previous" type="button" aria-label="Registro anterior" data-bobby-previous>←</button>
+          <button class="bobby-stage__button bobby-stage__button--next" type="button" aria-label="Próximo registro" data-bobby-next>→</button>
+          <button class="bobby-stage__open" type="button" data-bobby-open>Ampliar registro</button>
+          <div class="bobby-stage__progress" aria-hidden="true"><i data-bobby-progress></i></div>
+        </div>
+
+        <div class="bobby-selector" role="group" aria-label="Selecionar registro de Bobby Lee">
+          <button class="is-active" type="button" data-bobby-select aria-pressed="true">
+            <img src="img-presente/personagens/bobby-presente.png" alt="Prévia de Bobby Lee entre ruínas" />
+            <span>EXTERIOR</span>
+          </button>
+          <button type="button" data-bobby-select aria-pressed="false">
+            <img src="img-presente/personagens/bobby-lee-presente.png" alt="Prévia de Bobby Lee no bunker" />
+            <span>BUNKER</span>
+          </button>
+          <button type="button" data-bobby-select aria-pressed="false">
+            <img src="img-presente/personagens/quadro-bobby.png" alt="Prévia de seis registros reunidos de Bobby Lee" />
+            <span>QUADRO</span>
+          </button>
+        </div>
+
+        <footer class="bobby-carousel__footer">
+          <span data-bobby-count>01 / 03</span>
+          <span>B-11 // ARQUIVO PRESERVADO</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="bobby-lightbox" data-bobby-lightbox aria-label="Imagem ampliada do registro de Bobby Lee">
+      <button class="bobby-lightbox__close" type="button" aria-label="Fechar imagem ampliada" data-bobby-close>×</button>
+      <img data-bobby-lightbox-image src="" alt="Registro visual ampliado de Bobby Lee" />
+      <div class="bobby-lightbox__copy"><span data-bobby-lightbox-code></span><strong data-bobby-lightbox-title></strong></div>
+    </dialog>
+
+    <footer class="archive-footer">
+      <a href="bobby-presente.html">← Dossiê de Bobby Lee</a>
+      <a href="index.html#sobreviventes">Arquivos do presente</a>
+      <a href="joey-presente.html">Joey →</a>
+    </footer>
+
+    <script src="js/bobby-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

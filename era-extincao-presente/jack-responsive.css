@@ -1,0 +1,452 @@
+/* Jack: enquadramento e leitura pensados para notebook, tablet e celular. */
+body[data-character='jack'] {
+  --jack-ink: #080604;
+  --jack-copper: #d27b43;
+  --jack-paper: #efe3d1;
+  background: var(--jack-ink);
+  cursor: auto;
+}
+
+body[data-character='jack'] a {
+  cursor: pointer;
+}
+
+body[data-character='jack'] .jack-cursor {
+  display: none;
+}
+
+body[data-character='jack'].jack-cursor-ready,
+body[data-character='jack'].jack-cursor-ready a {
+  cursor: none;
+}
+
+body[data-character='jack'].jack-cursor-ready .jack-cursor {
+  display: block;
+}
+
+body[data-character='jack'] .profile-backdrop {
+  height: 100%;
+  background:
+    radial-gradient(circle at 83% 15%, rgba(166, 79, 35, .2), transparent 31%),
+    linear-gradient(155deg, #100a06, #070605 60%, #130a05);
+  filter: none;
+}
+
+body[data-character='jack'] .profile-backdrop::after {
+  display: none;
+}
+
+body[data-character='jack'] .profile-hero {
+  min-height: max(710px, 100svh);
+  padding: clamp(6rem, 11vh, 8rem) clamp(1.5rem, 6vw, 6rem) clamp(2.5rem, 6vh, 5rem);
+  background:
+    radial-gradient(circle at 82% 24%, rgba(208, 113, 51, .11), transparent 26%),
+    linear-gradient(90deg, #080604, #120b07 62%, #090604);
+}
+
+body[data-character='jack'] .profile-hero > img {
+  inset: 0 0 0 auto;
+  z-index: -1;
+  width: 55%;
+  height: 100%;
+  opacity: 1;
+  object-fit: contain;
+  object-position: center right;
+  filter: saturate(.82) contrast(1.06) brightness(.88);
+  animation: none;
+}
+
+body[data-character='jack'] .profile-hero::before {
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 5, 4, .91) 0%, rgba(6, 5, 4, .58) 36%, transparent 66%),
+    linear-gradient(0deg, #080604 0%, transparent 28%);
+  pointer-events: none;
+}
+
+body[data-character='jack'] .profile-hero::after {
+  display: none;
+}
+
+body[data-character='jack'] .hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(53%, 680px);
+  max-width: none;
+  padding: clamp(1.2rem, 2.5vw, 2rem);
+  border-left: 2px solid var(--jack-copper);
+  background: linear-gradient(90deg, rgba(6, 5, 4, .85), rgba(6, 5, 4, .48) 76%, transparent);
+  backdrop-filter: none;
+}
+
+body[data-character='jack'] .hero-copy h1 {
+  font-size: clamp(4.6rem, 9vw, 8.8rem);
+  overflow-wrap: normal;
+}
+
+body[data-character='jack'] .hero-copy > p {
+  max-width: 34rem;
+  color: var(--jack-paper);
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+}
+
+body[data-character='jack'] .data-strip span {
+  line-height: 1.35;
+}
+
+body[data-character='jack'] .chapter-grid {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
+}
+
+body[data-character='jack'] .chapter-grid > *,
+body[data-character='jack'] .command-console > *,
+body[data-character='jack'] .dossier-copy {
+  min-width: 0;
+}
+
+body[data-character='jack'] .jack-identity {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, .75fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding: clamp(5rem, 8vw, 8rem) max(1.5rem, 8vw);
+  border-block: 1px solid rgba(210, 123, 67, .25);
+  background:
+    radial-gradient(circle at 84% 20%, rgba(184, 95, 40, .14), transparent 34%),
+    linear-gradient(125deg, #0a0705, #1a0d07 58%, #080605);
+}
+
+body[data-character='jack'] .jack-identity__heading {
+  align-self: start;
+}
+
+body[data-character='jack'] .jack-identity h2 {
+  margin: 1rem 0 1.5rem;
+  color: var(--jack-paper);
+  font: 800 clamp(3.8rem, 6vw, 7rem)/.8 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+body[data-character='jack'] .jack-identity h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px var(--jack-copper);
+}
+
+body[data-character='jack'] .jack-identity__heading p {
+  max-width: 470px;
+  color: #d2bdab;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+body[data-character='jack'] .jack-identity__body {
+  min-width: 0;
+  border: 1px solid rgba(210, 123, 67, .32);
+  background: rgba(7, 6, 5, .6);
+}
+
+body[data-character='jack'] .jack-identity__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+}
+
+body[data-character='jack'] .jack-identity__facts > div {
+  display: grid;
+  gap: .55rem;
+  min-width: 0;
+  padding: 1.25rem;
+  border-right: 1px solid rgba(210, 123, 67, .18);
+  border-bottom: 1px solid rgba(210, 123, 67, .18);
+}
+
+body[data-character='jack'] .jack-identity__facts dt,
+body[data-character='jack'] .jack-identity__abilities span {
+  color: var(--jack-copper);
+  font: 700 .53rem/1.35 'Cinzel', serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+body[data-character='jack'] .jack-identity__facts dd {
+  margin: 0;
+  color: #eee0ca;
+  font: 700 clamp(1.35rem, 2vw, 1.8rem)/1.15 'Barlow Condensed', sans-serif;
+  overflow-wrap: anywhere;
+}
+
+body[data-character='jack'] .jack-identity__abilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(210, 123, 67, .18);
+}
+
+body[data-character='jack'] .jack-identity__abilities article {
+  min-width: 0;
+  padding: 1.4rem;
+  background: #100905;
+}
+
+body[data-character='jack'] .jack-identity__abilities h3 {
+  margin: 1.5rem 0 .55rem;
+  color: var(--jack-paper);
+  font: 800 clamp(1.65rem, 2.4vw, 2.35rem)/.95 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+body[data-character='jack'] .jack-identity__abilities p {
+  margin: 0;
+  color: #cbb9a8;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+body[data-character='jack'] .jack-command {
+  min-height: 0;
+  padding-block: clamp(5rem, 8vw, 8rem);
+}
+
+body[data-character='jack'] .jack-command h2 {
+  max-width: 900px;
+  font-size: clamp(3.5rem, 6.7vw, 7.2rem);
+}
+
+body[data-character='jack'] .command-console {
+  width: min(760px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body[data-character='jack'] .command-console article {
+  min-height: 160px;
+}
+
+body[data-character='jack'] .route-map {
+  right: -5%;
+  width: min(43vw, 550px);
+  pointer-events: none;
+}
+
+body[data-character='jack'] .jack-records-access {
+  min-height: 0;
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+
+body[data-character='jack'] .jack-dossier {
+  width: min(920px, 100%);
+  min-height: clamp(420px, 39vw, 500px);
+  background:
+    linear-gradient(90deg, rgba(6, 5, 4, .92), rgba(6, 5, 4, .48) 58%, rgba(6, 5, 4, .16)),
+    url('../img-hellsing/jack-presente.png') center top / contain no-repeat,
+    #100a06;
+}
+
+body[data-character='jack'] .dossier-copy strong {
+  font-size: clamp(3rem, 6.6vw, 6.5rem);
+}
+
+body[data-character='jack'] .profile-footer {
+  flex-wrap: wrap;
+  gap: 1.3rem;
+}
+
+@media (max-width: 1180px) {
+  body[data-character='jack'] .jack-identity {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-character='jack'] .jack-identity__heading p {
+    max-width: 680px;
+  }
+
+  body[data-character='jack'] .profile-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding: 64px 0 0;
+  }
+
+  body[data-character='jack'] .profile-hero > img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(440px, 61vw, 650px);
+    object-position: center top;
+    background: radial-gradient(circle at 50% 39%, #4b2714, #0b0705 65%);
+  }
+
+  body[data-character='jack'] .profile-hero::before {
+    display: none;
+  }
+
+  body[data-character='jack'] .hero-copy {
+    width: min(850px, calc(100% - 3rem));
+    margin: 0 auto;
+    padding: 1.5rem 2rem 2.2rem;
+    background: linear-gradient(90deg, rgba(18, 10, 5, .96), rgba(18, 10, 5, .62));
+  }
+
+  body[data-character='jack'] .hero-copy h1 {
+    font-size: clamp(5.5rem, 13vw, 8.5rem);
+  }
+
+  body[data-character='jack'] .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  body[data-character='jack'] .chapter-grid h2 {
+    max-width: 720px;
+  }
+
+  body[data-character='jack'] .route-map {
+    opacity: .18;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-character='jack'] .jack-identity {
+    padding: 5rem 1.25rem;
+  }
+
+  body[data-character='jack'] .jack-identity h2 {
+    font-size: clamp(3.6rem, 15vw, 5.4rem);
+  }
+
+  body[data-character='jack'] .jack-identity__facts,
+  body[data-character='jack'] .jack-identity__abilities {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-character='jack'] .profile-hero {
+    padding-top: 64px;
+  }
+
+  body[data-character='jack'] .profile-hero > img {
+    height: clamp(350px, 115vw, 560px);
+    object-position: center top;
+  }
+
+  body[data-character='jack'] .hero-copy {
+    width: 100%;
+    margin: 0;
+    padding: 1.65rem 1.25rem 2.4rem;
+    border-left: 0;
+    border-top: 2px solid var(--jack-copper);
+    background: #0d0805;
+  }
+
+  body[data-character='jack'] .hero-copy h1 {
+    font-size: clamp(4.1rem, 20vw, 6.5rem);
+  }
+
+  body[data-character='jack'] .hero-copy > p {
+    font-size: 1rem;
+  }
+
+  body[data-character='jack'] .data-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  body[data-character='jack'] .data-strip span {
+    padding: .75rem;
+    font-size: .48rem;
+  }
+
+  body[data-character='jack'] .data-strip span:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  body[data-character='jack'] .chapter,
+  body[data-character='jack'] .jack-command,
+  body[data-character='jack'] .jack-records-access {
+    padding-inline: 1.25rem;
+  }
+
+  body[data-character='jack'] .chapter-grid h2 {
+    font-size: clamp(3.4rem, 16vw, 5.5rem);
+  }
+
+  body[data-character='jack'] .jack-command {
+    padding-block: 5rem;
+  }
+
+  body[data-character='jack'] .jack-command h2 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  body[data-character='jack'] .command-console {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-character='jack'] .command-console article {
+    min-height: 125px;
+    padding: 1.2rem;
+  }
+
+  body[data-character='jack'] .route-map {
+    display: none;
+  }
+
+  body[data-character='jack'] .jack-dossier {
+    min-height: clamp(460px, 125vw, 620px);
+    padding: 1.4rem;
+    background:
+      linear-gradient(0deg, #070604 0%, rgba(7, 6, 4, .72) 32%, transparent 74%),
+      url('../img-hellsing/jack-presente.png') center top / contain no-repeat,
+      #100a06;
+  }
+
+  body[data-character='jack'] .dossier-copy strong {
+    font-size: clamp(2.9rem, 13vw, 4.8rem);
+  }
+
+  body[data-character='jack'] .profile-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  body[data-character='jack'] .profile-nav a {
+    font-size: .46rem;
+    letter-spacing: .06em;
+  }
+
+  body[data-character='jack'] .hero-copy h1 {
+    font-size: 20vw;
+  }
+
+  body[data-character='jack'] .data-strip {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-character='jack'] .data-strip span:nth-child(2) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  body[data-character='jack'].jack-cursor-ready,
+  body[data-character='jack'].jack-cursor-ready a {
+    cursor: auto;
+  }
+
+  body[data-character='jack'].jack-cursor-ready .jack-cursor {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-character='jack'] .jack-dossier,
+  body[data-character='jack'] .command-console article {
+    transition: none;
+  }
+}

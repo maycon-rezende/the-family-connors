@@ -774,7 +774,7 @@ a {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1180px) {
   .luke-aftermath {
     grid-template-columns: minmax(240px, 0.7fr) minmax(300px, 1.3fr);
   }

@@ -1,0 +1,29 @@
+.bond-file--lana {
+  background: radial-gradient(circle at 88% 10%, #52776727, transparent 32%), #080d0b;
+}
+
+.bond-gallery--single {
+  max-width: 960px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: auto;
+}
+
+.bond-gallery--single .bond-card {
+  display: block;
+  width: 100%;
+}
+
+.bond-gallery--single .bond-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 780px;
+  object-fit: contain;
+  background: #090e0c;
+}
+
+@media (max-width: 520px) {
+  .bond-gallery--single {
+    grid-auto-rows: auto;
+  }
+}

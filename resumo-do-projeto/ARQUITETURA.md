@@ -43,8 +43,9 @@
 | `mark-presente.html` | `mark-fotos.html` | `era-extincao-presente/mark-presente.css`, `css/mark-fotos-polish.css`, `js/mark-fotos.js` |
 | `ariani-presente.html` | `ariani-fotos.html` | `era-extincao-presente/ariani-presente.css`, `css/ariani-fotos.css`, `js/ariani-fotos.js` |
 | `britney-presente.html` | `britney-fotos.html` | `era-extincao-presente/britney-presente.css`, `css/britney-registros.css`, `js/britney-registros.js` |
+| `bobby-presente.html` | `bobby-registros.html` | `era-extincao-presente/bobby-presente.css`, `css/bobby-registros.css`, `js/bobby-registros.js` |
 
-Os quatro arquivos fotográficos usam carrosséis independentes, controles de teclado/mouse, pausa por foco, diálogo de ampliação e `object-fit: contain` nos registros em que o enquadramento completo é obrigatório. A estrutura detalhada está em `REGISTRO-TECNICO-ATUAL.md`.
+Os arquivos fotográficos listados usam carrosséis independentes, controles de teclado/mouse, pausa por foco, diálogo de ampliação e `object-fit: contain` nos registros em que o enquadramento completo é obrigatório. A estrutura detalhada está em `REGISTRO-TECNICO-ATUAL.md`.
 
 ## Pastas de mídia
 
@@ -55,6 +56,8 @@ Os quatro arquivos fotográficos usam carrosséis independentes, controles de te
 - `herdeiros-extincao.html`: portal da nova geração, separando as linhagens de Jack/Alice e Mark/Ariani.
 - `filhos-mark-ariani.html`: central dos arquivos de Pollyana e Nathan, filhos de Mark e Ariani.
 - `pollyana-presente.html` e `nathan-presente.html`: arquivos individuais da segunda linhagem.
+- `nathan-registros.html`: álbum individual de Nathan, separado do dossiê narrativo e sem registros de outros personagens.
+- `lana-presente.html`: dossiê da esposa britânica de Nathan, com imagem individual e registro do casal; o vínculo parte do arquivo de Nathan.
 - `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos, na ordem oficial da linhagem.
 - `diana-presente.html`: dossiê de combate com doutrina, matriz de proficiência e transmissão visual organizada.
 - `isolde-presente.html`: arquivo individual com capa exclusiva e registros fotográficos em looping.
@@ -116,7 +119,7 @@ Os estilos compartilhados que antes ficavam soltos na raiz agora estão em `css/
 - `img-mark/markhellsing.png`: uniforme tático de Mark.
 - `img-jack/jack-hellsings-commander.png`: uniforme de comandante de Jack.
 - `img-alice/alice-hellsings-admin.png`: uniforme administrativo-médico de Alice.
-- `img-hellsing/`: retratos oficiais de John, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen. O retrato próprio de Bobby ainda será adicionado.
+- `img-hellsing/`: retratos de John, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen. Os retratos individuais usados no arquivo de Bobby estão em `img-presente/personagens/`; imagens antigas com Joey e Britney não devem ser apresentadas como Bobby.
 - `img-bunker/`: entrada, áreas operacionais, garagens, enfermaria, arsenal, biblioteca, alojamentos e setores de suporte.
 
 Todos os dez integrantes possuem imagens oficiais nos cartões e dossiês da organização.

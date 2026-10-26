@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1015" />
+    <meta
+      name="description"
+      content="Registros visuais preservados de John, feitos antes de sua morte no presente dos Hellsings."
+    />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="css/john-registros.css" />
+    <title>John | Registros Preservados</title>
+  </head>
+  <body class="john-record-archive">
+    <nav class="archive-nav" aria-label="Navegação dos registros de John">
+      <a href="john-presente.html">← Voltar ao dossiê</a>
+      <span>J-06 // REGISTROS PRESERVADOS</span>
+      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
+    </nav>
+
+    <main>
+      <header class="archive-hero">
+        <span class="archive-kicker">PROTOCOLO DE RETORNO // ARQUIVO PRESERVADO</span>
+        <h1>ONDE A LINHA<br /><em>SEGUROU.</em></h1>
+        <p>
+          Dez imagens com John, feitas antes de sua morte, e um retrato associado de Amelia sem data
+          identificada. Campo e registros compartilhados permanecem preservados.
+        </p>
+        <span class="archive-status"><i></i> LOOP DE REGISTROS ATIVO</span>
+      </header>
+
+      <section class="john-carousel" aria-labelledby="john-carousel-title">
+        <div class="john-carousel__head">
+          <div>
+            <span class="archive-kicker">ARQUIVO J-06 // LEITURA VISUAL</span>
+            <h2 id="john-carousel-title">NENHUMA SAÍDA<br /><em>É SOZINHA.</em></h2>
+          </div>
+          <p>
+            Use as setas, os registros abaixo ou deixe o arquivo seguir sozinho. Todas as imagens
+            são mostradas por inteiro.
+          </p>
+        </div>
+
+        <div class="john-stage" data-john-stage>
+          <img
+            class="is-visible"
+            data-john-image
+            src="img-hellsing/john-presente.png"
+            alt="John prestando atendimento de campo a um integrante dos Hellsings"
+          />
+          <div class="john-stage__shade" aria-hidden="true"></div>
+          <div class="john-stage__copy">
+            <span data-john-record-code>J-06.1</span>
+            <strong data-john-record-title>Resposta de campo</strong>
+            <p data-john-record-caption>John presta atendimento de campo a um integrante dos Hellsings.</p>
+          </div>
+          <button class="john-stage__button john-stage__button--previous" type="button" aria-label="Registro anterior" data-john-previous>←</button>
+          <button class="john-stage__button john-stage__button--next" type="button" aria-label="Próximo registro" data-john-next>→</button>
+          <button class="john-stage__open" type="button" data-john-open>Ampliar registro</button>
+          <div class="john-stage__progress" aria-hidden="true"><i data-john-progress></i></div>
+        </div>
+
+        <div class="john-selector" aria-label="Selecionar registro de John">
+          <button class="is-active" type="button" data-john-select aria-pressed="true"><img src="img-hellsing/john-presente.png" alt="Prévia de John em atendimento de campo" /><span>TRIAGEM</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-bertolai-presente.png" alt="Prévia de John em cobertura" /><span>COBERTURA</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-amelia-presente.png" alt="Prévia de John e Amelia em ação" /><span>FRENTE</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-amelia-presente1.png" alt="Prévia de John e Amelia em movimento" /><span>SAÍDA</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-amelia-presente2.png" alt="Prévia da dupla em vigilância" /><span>VIGÍLIA</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-amelia-presente3.png" alt="Prévia de John e Amelia em passagem estreita" /><span>PASSAGEM</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-amelia-presente4.png" alt="Prévia da dupla na linha de frente" /><span>LINHA</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john-amelia-presente5.png" alt="Prévia de John e Amelia em retirada" /><span>RETIRADA</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john&amelia-presente.png" alt="Prévia do arquivo associado de John e Amelia" /><span>VÍNCULO</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/john_amelia-presente.png" alt="Prévia do registro compartilhado de John e Amelia" /><span>ROTA</span></button>
+          <button type="button" data-john-select aria-pressed="false"><img src="img-hellsing/amelia-presente.png" alt="Prévia de Amelia no presente" /><span>AMELIA</span></button>
+        </div>
+
+        <footer class="john-carousel__footer">
+          <span data-john-count>01 / 11</span>
+          <span>J-06 // ACERVO MEMORIAL</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="john-lightbox" data-john-lightbox aria-label="Imagem ampliada do registro de John">
+      <button class="john-lightbox__close" type="button" aria-label="Fechar imagem ampliada" data-john-close>×</button>
+      <img data-john-lightbox-image src="" alt="Registro visual ampliado de John" />
+      <div class="john-lightbox__copy"><span data-john-lightbox-code></span><strong data-john-lightbox-title></strong></div>
+    </dialog>
+
+    <footer class="archive-footer">
+      <a href="dimitri-arquivo.html">← Dimitri</a>
+      <a href="john-presente.html">Dossiê de John</a>
+      <a href="index.html#sobreviventes">Arquivos do presente →</a>
+    </footer>
+
+    <script src="js/john-registros.js"></script>
+    <script src="js/site-cursor.js" defer></script>
+  </body>
+</html>

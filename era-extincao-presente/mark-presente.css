@@ -861,7 +861,7 @@ body[data-character='mark'] .profile-footer a:focus-visible {
   to { background-position: 10% 0, 4% 5%; opacity: 0.58; }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1180px) {
   body[data-character='mark'] .mark-technical__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -19,7 +19,7 @@
 - Cursor exclusivo dos Hellsings criado como mira tática.
 - Imagem de Mark com uniforme Hellsings integrada.
 - Novos uniformes gerados para Jack e Alice e integrados aos dossiês.
-- Retratos oficiais criados para John, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen. Bobby permanece como outro integrante e aguarda retrato próprio.
+- Retratos oficiais criados para John, Naomi, Clhoe, Luke, Dimitri, Brian Taylor e Hellen. Naquela etapa, Bobby ainda aguardava retrato próprio; seus registros individuais foram incorporados depois.
 - Abertura cinematográfica dos Hellsings criada com autenticação Ômega e entrada pelo bunker.
 - Portal visual dos Hellsings adicionado à tela principal.
 - Bunker estruturado em doze setores visuais, incluindo comando, operações, arsenal, enfermaria, biblioteca, alojamentos, cozinhas e garagens.
@@ -207,3 +207,62 @@
 4. Revisar as páginas dos herdeiros no mobile depois de cada nova identidade visual.
 
 Última atualização: 31 de agosto de 2026.
+
+## Atualização de 24 de outubro de 2026 — continuidade dos arquivos do presente
+
+- O dossiê e a galeria de John foram alinhados à lore confirmada: ele morreu em missão, e as dez imagens que o mostram são anteriores à sua morte. O retrato solo de Amelia associado ao acervo não tem data identificada. O identificador visual foi unificado em `J-06`, conforme o memorial dos Hellsings.
+- O dossiê de Dimitri mantém sua origem russa confirmada e apresenta intervenção e extração como funções provisórias. A antiga URL `dimitri-presente.html` conduz ao novo arquivo.
+- Os carrosséis de John e Dimitri passaram a pausar durante interação, foco e ampliação da imagem.
+- A seção principal reúne 15 arquivos entre sobreviventes e memórias; o total de integrantes registrados dos Hellsings foi alinhado à lista de 12 nomes.
+- Brian Taylor recebeu memorial individual com dois retratos preservados, sua trajetória confirmada no FBI e nos Hellsings e o registro de sua morte por doença após a escassez de medicamentos. O cartão da entrada principal e a ficha dos Hellsings abrem o novo arquivo; a ficha de John também liga ao memorial individual.
+- A vírgula indevida antes do `<!doctype html>` de `alice-fotos.html` foi removida.
+- Sintaxe dos scripts novos, referências internas das 67 páginas e integridade do diff passaram nas verificações locais.
+- Este conjunto permanece no diretório de trabalho, sem commit ou publicação nesta etapa. A revisão visual em notebook, tablet e celular continua pendente porque o navegador integrado não estava disponível nesta sessão.
+
+### Próximos cuidados
+
+1. Conferir visualmente os dossiês, galerias e ajustes responsivos em navegador e aparelhos reais.
+2. Confirmar a biografia e a função definitiva de Dimitri antes de transformar as leituras provisórias em lore.
+3. Prosseguir com as biografias ainda abertas dos Hellsings e a identificação das mídias pendentes.
+
+## Atualização de 25 de outubro de 2026 — arquivo de Bobby
+
+- O autor confirmou o nome **Bobby Lee** (não “Boobby”). Ele é sino-americano, valoriza especialmente suas raízes chinesas, atuou como agente chinês antes de integrar os Hellsings e entrou na equipe antes do Dia D. Esses fatos foram incorporados ao dossiê, ao cartão do presente e ao resumo da lore, sem inventar agência, missões ou função específica dentro dos Hellsings.
+- O autor confirmou que o homem na imagem `img-hellsing/britney-bobby.png` é Joey, não Bobby. A foto foi retirada das páginas e apagada do diretório de trabalho; como era versionada, pode ser recuperada pelo histórico Git.
+- As imagens `britney-marido.png` e `britney-boby-presente.png`, visualmente semelhantes, foram retiradas dos dados da galeria de Britney para evitar a atribuição incorreta a Bobby. Os arquivos foram preservados, sem inferir novo vínculo narrativo entre Joey e Britney.
+- `bobby-presente.html` foi reestruturado como dossiê com retrato de capa e texto restrito à lore confirmada. O bloco redundante "O rosto de Bobby" foi removido; os três arquivos visuais ficam apenas na galeria independente, acessível pelo dossiê. Foram removidas as afirmações não confirmadas sobre status atual, função de segurança, sobrevivência no comboio e uma fala atribuída a ele.
+- O novo estilo está em `era-extincao-presente/bobby-presente.css`; o cartão da página inicial deixou de indicar que o arquivo está em construção.
+- Bobby ganhou a galeria independente `bobby-registros.html`, ligada ao dossiê, com três arquivos visuais sem recorte (dois retratos e uma colagem), loop de 6,5 s, miniaturas, setas e ampliação em diálogo nativo. `css/bobby-registros.css` e `js/bobby-registros.js` concentram o visual e o comportamento.
+- A auditoria das 68 páginas passou sem referências quebradas, links vazios ou imagens sem texto alternativo. A sintaxe dos scripts alterados e a integridade do diff passaram. A revisão visual em navegador permanece pendente porque não havia navegador integrado disponível.
+
+## Atualização de 25 de outubro de 2026 — origem e trajetória de Bobby Lee
+
+- O autor definiu a sequência familiar: Lee conheceu Britney num churrasco oferecido por Jack aos Hellsings na Mansão Connor; o relacionamento amadureceu devagar; ao descobrir a gravidez de um filho dos dois, Britney saiu da casa de Mark para morar apenas com Jully; Lee e Britney se casaram depois, antes do Dia D. O filho nasceu após a queda.
+- A pedido do autor, foram criados a agência chinesa fictícia Unidade Jingwei, a operação Rota das Lanternas, a participação de Lee em Janela de Cinzas (HLS-126) e Linha Vermelha (HLS-131), sua saída da agência e a função de inteligência de campo e extração de testemunhas nos Hellsings. Esses elementos são criação desta etapa e ficam identificados separadamente dos fatos fornecidos pelo autor em `BOBBY-LEE-LORE.md`.
+- `bobby-presente.html` ganhou cartões narrativos, três dossiês de operação e uma linha do tempo do encontro ao casamento, sem repetir as imagens da galeria. A biografia de Britney e os resumos foram corrigidos para a nova cronologia. O destino de Lee após o Dia D continua indefinido.
+
+## Atualização de 25 de outubro de 2026 — novos registros de Brian Taylor
+
+- Quatro imagens fornecidas para o acervo de Brian (`brian-taylor-presente.png` e `brian-presente1.png` a `brian-presente3.png`) foram incorporadas ao arquivo visual de `brian-presente.html`, agora com seis registros.
+- As legendas descrevem apenas o que aparece nas cenas, sem atribuir datas, missões ou identidade às outras pessoas retratadas. A biografia e a cronologia de sua morte não foram alteradas.
+
+## Atualização de 25 de outubro de 2026 — início do arquivo de Nathan
+
+- O autor confirmou Nathan Salvatore Connor como atirador de precisão. A página preserva os fatos familiares já definidos: filho de Mark e Ariani, gêmeo de Pollyana, ambos nascidos antes do Dia D, e irmão mais velho de James, nascido depois.
+- `nathan-presente.html` foi reorganizado com ficha familiar, arquivo visual de seis imagens solo exibidas inteiras, controles de teclado e ampliação. O estilo novo está em `era-extincao-presente/nathan-arquivo.css` e o comportamento em `era-extincao-presente/nathan-presente.js`.
+- O retrato solo de Pollyana, antes legendado incorretamente como foto dos gêmeos, saiu do arquivo de Nathan. O bloco familiar usa uma imagem conjunta confirmável visualmente. A foto `nathan-iris.png` foi preservada no acervo, mas retirada da página até que identidade e vínculo sejam definidos.
+- A página da linhagem passou a contar os três filhos; grafias visíveis de Pollyana foram alinhadas nos arquivos ligados a Nathan. Formação e operações de Nathan não foram inventadas.
+
+## Atualização de 25 de outubro de 2026 — arquivo de Lana
+
+- O autor definiu Lana como britânica e esposa de Nathan Salvatore Connor, autorizando a criação do sobrenome e de sua história. O sobrenome **Whitmore** e a biografia de Bristol às comunicações do comboio são criações desta etapa, documentadas com sua proveniência em `LANA-WHITMORE-LORE.md`.
+- `lana-presente.html` apresenta a identidade, a trajetória antes e depois do Dia D e o casamento com Nathan, usando o retrato individual e a imagem conjunta. Sua especialidade em comunicações deriva da biografia criada, não de uma confirmação independente do autor.
+- O fim de `nathan-presente.html` recebeu uma chamada para Lana com retrato clicável. A capa de Nathan foi reenquadrada pelo topo para recuperar o rosto no desktop; `casais-presente.html` recebeu o terceiro registro, com âncora para o casal.
+
+## Atualização de 26 de outubro de 2026 — efeitos de Nathan
+
+- O arquivo de Nathan ganhou cursor de mira em dispositivos com mouse, pulso discreto ao clicar, varredura na capa e revelação das seções na rolagem. A implementação está isolada em `era-extincao-presente/nathan-effects.css/js`, com fallback para toque, teclado e preferência por movimento reduzido.
+
+## Atualização de 26 de outubro de 2026 — registros de Nathan
+
+- As seis fotografias solo saíram do dossiê principal e foram reunidas em `nathan-registros.html`, sem imagens de Pollyana ou Lana. O dossiê agora oferece convite e links para o álbum; a página de registros tem retorno para Nathan, controles, miniaturas e ampliação.

@@ -11,7 +11,10 @@
 - Sally Ward nunca conheceu os pais biológicos e foi criada por uma família adotiva problemática, pela qual ainda assim preservou gratidão. Sonhava em ser policial. Nicolai encontrou sua própria coragem quando a salvou de uma horda.
 - Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
+- Mark e Ariani têm três filhos: os gêmeos Pollyana e Nathan Salvatore Connor, nascidos antes do Dia D, e James Salvatore Connor, nascido depois. Nathan é atirador de precisão; sua formação e suas operações ainda não foram definidas.
+- Nathan é casado com Lana, britânica. O sobrenome Whitmore, a origem específica em Bristol e sua atuação nas comunicações de emergência dos Hellsings foram criados a pedido do autor para `lana-presente.html`; detalhes e distinção entre fatos fornecidos e criação constam em `LANA-WHITMORE-LORE.md`.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.
+- Britney conheceu Bobby Lee num dos churrascos que Jack oferecia aos Hellsings na Mansão Connor. Depois de descobrir que esperava o filho dos dois, saiu da casa de Mark e foi morar apenas com Jully; o casamento com Lee ocorreu mais tarde, antes do Dia D.
 - Jully é a caçula e seu caminho futuro permanece aberto.
 - A família possui raízes inglesas.
 
@@ -21,16 +24,16 @@
 2. **Mark Connor** — comando tático e agente de campo.
 3. **Alice Myers** — administração e contratos; não atua mais em campo.
 4. **John** — tecnologia e armamentos.
-5. **Bobby** — integrante distinto de John; função e aparência aguardam aprofundamento da lore.
-5. **Naomi** — agente japonesa; inteligência e análise como função provisória.
-6. **Clhoe** — reconhecimento e vigilância como função provisória; pele em tom marrom.
-7. **Luke** — mapas, rotas e estratégia; pele em tom marrom.
-8. **Dimitri** — intervenção e extração como função provisória.
-9. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
-10. **Hellen Wren** — infiltração e disfarce.
-11. **Joey** — companheiro de Hellen Wren; exploração e recuperação de recursos em campo como função provisória.
+5. **Bobby Lee** — sino-americano, com forte vínculo com suas raízes chinesas; ex-agente da Unidade Jingwei. Entrou nos Hellsings antes do Dia D, após colaborar em Janela de Cinzas, e atua em inteligência de campo e extração de testemunhas.
+6. **Naomi Yagami** — agente japonesa; inteligência e análise como função provisória.
+7. **Clhoe** — reconhecimento e vigilância como função provisória; pele em tom marrom.
+8. **Luke** — mapas, rotas e estratégia; pele em tom marrom.
+9. **Dimitri** — russo; intervenção e extração como função provisória.
+10. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
+11. **Hellen Wren** — infiltração e disfarce.
+12. **Joey Muller** — companheiro de Hellen Wren; exploração e recuperação de recursos em campo como função provisória.
 
-John também é representado atualmente com pele em tom marrom, conforme a orientação visual anterior. Bobby é outra pessoa e receberá retrato próprio. As funções marcadas como provisórias podem ser alteradas quando as biografias forem aprofundadas.
+Nos registros visuais, John é representado com pele em tom marrom, conforme a orientação visual anterior; essas imagens são anteriores à sua morte. Bobby Lee é outra pessoa e aparece nos arquivos visuais `bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png`. O homem ao lado de Britney na imagem removida `britney-bobby.png` é Joey, conforme confirmação do autor; isso não define um vínculo entre os dois. As funções marcadas como provisórias podem ser alteradas quando as biografias forem aprofundadas.
 
 ## Atuação dos Hellsings
 
@@ -46,9 +49,9 @@ John também é representado atualmente com pele em tom marrom, conforme a orien
 - Detalhes completos da causa e da cronologia da extinção além da ligação com o Dia Zero de Doomsday.
 - Existência definitiva, origem e regras de infectados.
 - História completa dos descendentes.
-- Especialidades individuais dos descendentes, exceto a competência de combate já confirmada para Diana.
-- Missões históricas específicas dos Hellsings.
-- Biografias completas de Naomi, Clhoe, Dimitri e Joey.
+- Especialidades individuais dos descendentes ainda não definidas, exceto as funções já confirmadas de Diana, Mary e Nathan.
+- Detalhes das demais missões históricas dos Hellsings; Janela de Cinzas e Linha Vermelha agora têm participação definida de Bobby Lee.
+- Biografias completas de Naomi Yagami, Clhoe, Dimitri e Joey Muller.
 - Funções definitivas dos agentes ainda marcados como provisórios.
 - Estado do mundo no presente, destinos dos personagens envelhecidos, territórios, veículos e facções.
 

@@ -107,7 +107,7 @@
     intel: [
       [
         'NM',
-        'Naomi',
+        'Naomi Yagami',
         'INTELIGÊNCIA',
         'O alvo mudou de identidade duas vezes nas últimas 48 horas.',
         '#d95d6f',

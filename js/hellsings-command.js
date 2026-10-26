@@ -47,7 +47,7 @@
     },
     {
       code: 'HLS-05',
-      name: 'Naomi',
+      name: 'Naomi Yagami',
       role: 'Inteligência · Análise',
       color: '#d95d6f',
       skin: '#d2a07c',

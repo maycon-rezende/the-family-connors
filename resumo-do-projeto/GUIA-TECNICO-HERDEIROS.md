@@ -133,3 +133,20 @@ Antes de publicar, conferir também todas as referências `src`/`href` e testar 
 - Sua formação combina medicina de Alice, combate e armas de Jack, além de rastreamento, mapas e estratégia ensinados por Jack e Mark.
 - O carrossel contém 12 registros. As seis cenas horizontais reutilizam `img-intro/sequence/action-mary-01.jpg` até `action-mary-06.jpg` com enquadramento integral e fundo desfocado.
 - O vídeo `video/alice-diana-mary.mp4` representa a continuidade do conhecimento entre as mulheres Myers Connor.
+
+## 9. Arquivo de Nathan Salvatore Connor
+
+- `nathan-presente.html` reúne os fatos familiares confirmados e a função de atirador de precisão, confirmada pelo autor em 25 de outubro de 2026. Lana, britânica e esposa de Nathan, foi definida depois; formação e operações dele permanecem abertas. A página principal oferece um convite textual para `nathan-registros.html`, sem duplicar a galeria.
+- `nathan-registros.html` guarda as seis imagens individuais de Nathan, sem fotografias de Pollyana, Lana ou de outros vínculos. `era-extincao-presente/nathan-registros.css` complementa a identidade azul-gelo/escura; o arquivo compartilhado `nathan-arquivo.css` continua definindo palco, miniaturas e enquadramento integral. O antigo `nathan-presente.css` não é carregado.
+- `era-extincao-presente/nathan-presente.js` agora é carregado apenas na página de registros e controla navegação circular, miniaturas e ampliação em `<dialog>`. O ciclo de 6,5 segundos pausa em hover, foco, aba oculta, diálogo aberto e preferência por movimento reduzido.
+- `era-extincao-presente/nathan-effects.css/js` acrescentam a mira de cursor no ponteiro fino, pulso em clique, varredura discreta na capa e revelação das seções durante a rolagem. O cursor nativo volta no diálogo; toque, movimento reduzido e ausência de `IntersectionObserver` mantêm a página legível. O script do carrossel permanece separado.
+- A fotografia dos gêmeos em `img-hellsing/pollyana-nathan-presente.png` aparece fora do carrossel, no bloco da família. O retrato solo da Pollyana foi retirado do arquivo de Nathan; a imagem com mulher identificada apenas pelo nome de arquivo `nathan-iris.png` aguarda definição de personagem e vínculo.
+- `nathan-salvatore.png` não deve ser usado como retrato de Nathan: apesar do nome do arquivo, mostra uma mulher loira. `nathan2.png` e `nathan3.png` continuam fora da página até associação editorial explícita.
+- A contagem da linhagem de Mark e Ariani é três filhos: Pollyana, Nathan e James. Apenas os dois primeiros possuem dossiês individuais abertos.
+
+## 10. Arquivo de Lana Whitmore
+
+- `lana-presente.html` apresenta a esposa britânica de Nathan em um dossiê próprio; o autor delegou a criação do sobrenome e da história. `LANA-WHITMORE-LORE.md` separa os fatos fornecidos dos detalhes criados.
+- `era-extincao-presente/lana-presente.css` define a apresentação do arquivo. O retrato individual é `img-hellsing/lana-presente.png`; a foto conjunta com Nathan é `img-hellsing/nathan&lana-presente.png`.
+- O arquivo de Nathan termina com um bloco de retrato e chamada clicáveis para Lana. A capa de Nathan usa `object-position: center top` para manter seu rosto no enquadramento desktop; no celular, o topo também é preservado.
+- `casais-presente.html#nathan-lana` reúne o registro conjunto e links para os dois dossiês. Evitar deduzir do nome de outras imagens a identidade de uma pessoa ou um relacionamento.

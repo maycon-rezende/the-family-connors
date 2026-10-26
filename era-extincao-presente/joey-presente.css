@@ -259,7 +259,7 @@ html.joey-ready [data-joey-reveal] { opacity: 0; transform: translateY(22px); tr
 html.joey-ready [data-joey-reveal].is-visible { opacity: 1; transform: none; }
 @keyframes joey-pulse { 50% { opacity: .35; transform: scale(.68); } }
 
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   .joey-hero, .joey-pair { grid-template-columns: 1fr; }
   .joey-hero__media, .joey-hero__media img { min-height: min(720px,78svh); }
   .joey-profile, .joey-readout { grid-template-columns: 1fr 1fr; }
