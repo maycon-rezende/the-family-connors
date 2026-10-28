@@ -5,6 +5,7 @@ html { background: #071311; scroll-behavior: smooth; }
 body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #071311; color: #eee9dc; font-family: Manrope, Arial, sans-serif; }
 .lana-page a { color: inherit; text-decoration: none; }
 .lana-page a:focus-visible { outline: 2px solid #b7d8c6; outline-offset: 4px; }
+.lana-page button:focus-visible { outline: 2px solid #b7d8c6; outline-offset: 4px; }
 .lana-page .lana-label { color: #b6d6c2; font: 500 .66rem/1.5 'DM Mono', Consolas, monospace; letter-spacing: .17em; text-transform: uppercase; }
 .lana-page h1, .lana-page h2, .lana-page h3 { font-family: 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
 .lana-page h2 { margin: .9rem 0 1.4rem; font-size: clamp(3.7rem, 7vw, 7.5rem); font-weight: 900; line-height: .86; letter-spacing: -.025em; }
@@ -25,6 +26,8 @@ body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #0
 .lana-hero__copy > p:not(.lana-hero__lead) { max-width: 600px; font-size: clamp(.98rem, 1.2vw, 1.1rem); }
 .lana-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 1.2rem; padding: .95rem 1.2rem; border: 1px solid #a4c9ad70; color: #e9f0e4!important; background: #071411b8; font: 500 .65rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; transition: border-color .2s ease, background .2s ease; }
 .lana-link:hover { border-color: #e3bc87; background: #173126; }
+.lana-link--quiet { margin-left: .6rem; border-color: transparent; background: transparent; }
+.lana-link--quiet:hover { border-color: #a4c9ad70; }
 .lana-hero__portrait { position: relative; width: 100%; max-width: 600px; height: min(700px, 72svh); margin: 0 auto; padding: .7rem; border: 1px solid #a7c5a552; background: #0b1512; box-shadow: 0 20px 85px #0008; }
 .lana-hero__portrait::before { position: absolute; inset: .7rem; content: ''; background: linear-gradient(0deg, #0a1512b0, transparent 20%); pointer-events: none; }
 .lana-hero__portrait img { display: block; width: 100%; height: 100%; object-fit: contain; }
@@ -59,13 +62,44 @@ body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #0
 .lana-work h2 { max-width: 850px; }
 .lana-work p { max-width: 640px; }
 
+.lana-archive { position: relative; isolation: isolate; overflow: hidden; padding: clamp(5rem, 8vw, 8rem) max(1.2rem, 6vw); border-bottom: 1px solid #9dbba641; background: radial-gradient(circle at 78% 22%, #547f6529, transparent 37%), #081410; }
+.lana-archive::before { position: absolute; z-index: -1; inset: 0; content: ''; pointer-events: none; opacity: .7; background: repeating-radial-gradient(circle at 82% 25%, transparent 0 77px, #b6d6c20d 78px 79px); }
+.lana-archive__head { display: flex; align-items: end; justify-content: space-between; gap: 3rem; margin-bottom: clamp(2rem, 4vw, 4rem); }
+.lana-archive__head h2 { margin-bottom: 0; }
+.lana-archive__head > p { max-width: 390px; margin: 0 0 .3rem; }
+.lana-archive__grid { display: grid; grid-template-columns: minmax(0, 1.18fr) repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.lana-archive__item { display: flex; min-width: 0; flex-direction: column; margin: 0; padding: .45rem; border: 1px solid #9dbba647; background: #0c1a16; box-shadow: 0 14px 40px #0003; }
+.lana-archive__item--feature { grid-row: span 3; }
+.lana-archive__item--wide { grid-column: span 2; }
+.lana-archive__image { display: block; min-height: 0; height: clamp(160px, 18vw, 230px); overflow: hidden; background: #05100e; cursor: zoom-in; }
+.lana-archive__item--feature .lana-archive__image { flex: 1; height: auto; min-height: 600px; }
+.lana-archive__image img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .3s ease, filter .3s ease; }
+.lana-archive__image:hover img { transform: scale(1.035); filter: brightness(1.09); }
+.lana-archive__item figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; min-height: 55px; padding: .9rem .45rem .4rem; }
+.lana-archive__item figcaption span { color: #9cc3a8; font: 500 .56rem/1.5 'DM Mono', Consolas, monospace; letter-spacing: .1em; white-space: nowrap; }
+.lana-archive__item figcaption strong { color: #eee9dc; font-size: .78rem; font-weight: 600; text-align: right; }
+
 .lana-bond { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; background: radial-gradient(circle at 65% 75%, #9a724c25, transparent 34%), #080f0e; }
+.lana-bond__photos { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: end; gap: .8rem; }
 .lana-bond figure { margin: 0; padding: .65rem; border: 1px solid #b7a17b5a; background: #111611; }
 .lana-bond figure img { display: block; width: 100%; height: auto; max-height: 780px; object-fit: contain; }
 .lana-bond figcaption { padding: 1rem .65rem .45rem; color: #d3c3a4; font: 500 .6rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .12em; }
 .lana-bond__copy { max-width: 650px; }
 .lana-bond__copy h2 { margin-bottom: 1.8rem; }
 .lana-bond__copy p { margin-bottom: 1.2rem; }
+
+.lana-lightbox { width: min(96vw, 1100px); max-width: none; max-height: 94dvh; padding: .9rem; overflow: auto; border: 1px solid #a4c9ad82; color: #eee9dc; background: #06120e; box-shadow: 0 20px 90px #000c; }
+.lana-lightbox::backdrop { background: #010806e8; backdrop-filter: blur(9px); }
+.lana-lightbox__top, .lana-lightbox__bottom { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.lana-lightbox__top { padding: .2rem .3rem .9rem; color: #b6d6c2; font: 500 .58rem/1.5 'DM Mono', Consolas, monospace; letter-spacing: .12em; }
+.lana-lightbox button { min-width: 38px; min-height: 38px; border: 1px solid #a4c9ad70; color: #eee9dc; background: #0d2119; font: 500 1rem/1 'DM Mono', Consolas, monospace; cursor: pointer; }
+.lana-lightbox button:hover { border-color: #e3bc87; background: #173126; }
+.lana-lightbox__stage { display: grid; min-height: 0; place-items: center; background: #020907; }
+.lana-lightbox__stage img { display: block; width: 100%; max-height: calc(94dvh - 170px); object-fit: contain; }
+.lana-lightbox__bottom { padding: .9rem .3rem .2rem; }
+.lana-lightbox__caption { margin: 0; color: #eee9dc!important; font-size: .85rem; line-height: 1.5!important; }
+.lana-lightbox__controls { display: flex; align-items: center; gap: .7rem; }
+.lana-lightbox__count { min-width: 4.5rem; color: #b6d6c2; font: 500 .58rem/1.5 'DM Mono', Consolas, monospace; letter-spacing: .1em; text-align: center; }
 
 .lana-footer { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 2.5rem max(1.2rem, 6vw); border-top: 1px solid #9dbba641; color: #b8c8b9; background: #06100e; }
 .lana-footer span { color: #88a994; text-align: center; }
@@ -75,6 +109,9 @@ body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #0
   .lana-identity { grid-template-columns: 1fr; }
   .lana-story__intro { display: block; }
   .lana-timeline article { grid-template-columns: minmax(140px, .35fr) minmax(180px, .7fr) minmax(260px, 1fr); }
+  .lana-archive__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lana-archive__item--feature { grid-column: span 2; grid-row: auto; }
+  .lana-archive__item--feature .lana-archive__image { height: min(80vw, 660px); min-height: 0; }
 }
 @media (max-width: 760px) {
   .lana-nav { min-height: 64px; }
@@ -83,11 +120,14 @@ body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #0
   .lana-hero h1 { font-size: clamp(5.4rem, 20vw, 9rem); }
   .lana-hero__portrait { width: min(100%, 520px); height: min(115vw, 650px); }
   .lana-frequency { display: none; }
-  .lana-identity, .lana-story, .lana-work, .lana-bond { padding: 5rem 1.2rem; }
+  .lana-identity, .lana-story, .lana-work, .lana-bond, .lana-archive { padding: 5rem 1.2rem; }
+  .lana-link--quiet { margin-left: 0; }
   .lana-timeline article { grid-template-columns: 1fr; gap: .9rem; }
   .lana-timeline h3 { font-size: 2.8rem; }
   .lana-work > div, .lana-bond { grid-template-columns: 1fr; }
-  .lana-bond figure { order: 2; }
+  .lana-archive__head { display: block; }
+  .lana-archive__head > p { margin-top: 1.5rem; }
+  .lana-bond__photos { order: 2; }
   .lana-bond__copy { order: 1; }
   .lana-footer { flex-wrap: wrap; }
   .lana-footer span { display: none; }
@@ -97,9 +137,18 @@ body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #0
   .lana-facts { grid-template-columns: 1fr; }
   .lana-facts > div { min-height: 0; }
   .lana-hero__portrait { height: 130vw; }
+  .lana-archive__grid { grid-template-columns: 1fr; }
+  .lana-archive__item--feature, .lana-archive__item--wide { grid-column: auto; }
+  .lana-archive__item--feature .lana-archive__image { height: 125vw; }
+  .lana-archive__image { height: 85vw; }
+  .lana-archive__item figcaption { flex-wrap: wrap; }
+  .lana-archive__item figcaption strong { text-align: left; }
+  .lana-bond__photos { grid-template-columns: 1fr; }
+  .lana-lightbox__bottom { flex-wrap: wrap; }
   .lana-footer { display: grid; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .lana-link { transition: none; }
+  .lana-archive__image img { transition: none; }
 }

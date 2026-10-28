@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap');
 
 body.nathan-page {
-  --nathan-ground: #071013;
-  --nathan-panel: #0d1a1c;
-  --nathan-line: rgba(119, 192, 201, .27);
-  --nathan-blue: #9ed3d8;
-  --nathan-muted: #bdc9c8;
-  --nathan-paper: #f0e9dd;
+  --nathan-ground: #090e0a;
+  --nathan-panel: #121a12;
+  --nathan-line: rgba(209, 236, 132, .28);
+  --nathan-optic: #d1ec84;
+  --nathan-muted: #c7cbbb;
+  --nathan-paper: #f2efdf;
   min-width: 320px;
   background: var(--nathan-ground);
   color: var(--nathan-paper);
@@ -21,12 +21,12 @@ body.nathan-page {
 .nathan-page a:focus-visible,
 .nathan-page button:focus-visible,
 .nathan-page [tabindex='0']:focus-visible {
-  outline: 2px solid var(--nathan-blue);
+  outline: 2px solid var(--nathan-optic);
   outline-offset: 4px;
 }
 
 .nathan-page .eyebrow {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font: 500 .64rem/1.5 'DM Mono', Consolas, monospace;
   letter-spacing: .17em;
   text-transform: uppercase;
@@ -35,7 +35,7 @@ body.nathan-page {
 .nathan-nav {
   min-height: 68px;
   border-color: var(--nathan-line);
-  background: rgba(5, 11, 13, .92);
+  background: rgba(7, 12, 8, .92);
 }
 
 .nathan-nav a,
@@ -48,12 +48,12 @@ body.nathan-page {
 }
 
 .nathan-nav span {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
 }
 
 .nathan-nav a:hover,
 .nathan-footer a:hover {
-  color: #f5bd84;
+  color: var(--nathan-optic);
 }
 
 .nathan-hero {
@@ -68,8 +68,8 @@ body.nathan-page {
 }
 
 .nathan-hero::after {
-  background: linear-gradient(90deg, rgba(5, 10, 12, .96) 0%, rgba(5, 10, 12, .68) 42%, rgba(5, 10, 12, .08) 76%),
-    linear-gradient(0deg, #071013 0%, transparent 43%);
+  background: linear-gradient(90deg, rgba(6, 10, 7, .96) 0%, rgba(6, 10, 7, .68) 42%, rgba(6, 10, 7, .08) 76%),
+    linear-gradient(0deg, var(--nathan-ground) 0%, transparent 43%);
 }
 
 .nathan-scope {
@@ -79,7 +79,7 @@ body.nathan-page {
   right: 10%;
   width: min(24vw, 350px);
   aspect-ratio: 1;
-  border: 1px solid rgba(158, 211, 216, .4);
+  border: 1px solid rgba(209, 236, 132, .4);
   border-radius: 50%;
   opacity: .55;
   animation: nathan-scope-pulse 5s ease-in-out infinite;
@@ -90,7 +90,7 @@ body.nathan-page {
 .nathan-scope::after,
 .nathan-scope i {
   position: absolute;
-  background: rgba(158, 211, 216, .4);
+  background: rgba(209, 236, 132, .4);
   content: '';
 }
 
@@ -113,7 +113,7 @@ body.nathan-page {
   left: calc(50% - 7px);
   width: 14px;
   height: 14px;
-  border: 1px solid var(--nathan-blue);
+  border: 1px solid var(--nathan-optic);
   background: transparent;
   transform: rotate(45deg);
 }
@@ -130,11 +130,11 @@ body.nathan-page {
 
 .nathan-page .child-copy h1 em {
   display: block;
-  color: #d9e7e6;
+  color: #e4ecd7;
   font-size: .48em;
   line-height: 1;
   -webkit-text-stroke: 0;
-  text-shadow: 0 0 25px rgba(119, 192, 201, .14);
+  text-shadow: 0 0 25px rgba(209, 236, 132, .14);
 }
 
 .nathan-page .child-copy .connor-name {
@@ -157,9 +157,9 @@ body.nathan-page {
 
 .nathan-tags span {
   padding: .7rem .9rem;
-  border: 1px solid rgba(158, 211, 216, .48);
-  background: rgba(5, 13, 15, .57);
-  color: #c7ecee;
+  border: 1px solid rgba(209, 236, 132, .48);
+  background: rgba(8, 16, 9, .57);
+  color: #e3f6b0;
   font: 500 .62rem/1.4 'DM Mono', Consolas, monospace;
   letter-spacing: .08em;
 }
@@ -180,8 +180,8 @@ body.nathan-page {
 }
 
 .nathan-hero__link:hover {
-  border-color: var(--nathan-blue);
-  background: rgba(158, 211, 216, .12);
+  border-color: var(--nathan-optic);
+  background: rgba(209, 236, 132, .12);
 }
 
 .nathan-profile,
@@ -193,7 +193,7 @@ body.nathan-page {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 5vw, 6rem);
-  background: radial-gradient(circle at 88% 7%, rgba(119, 192, 201, .11), transparent 30%), #091416;
+  background: radial-gradient(circle at 88% 7%, rgba(209, 236, 132, .1), transparent 30%), #0b130c;
 }
 
 .nathan-profile h2,
@@ -212,7 +212,7 @@ body.nathan-page {
 .nathan-album-access h2 em,
 .nathan-twin h2 em,
 .nathan-lana h2 em {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font-style: normal;
 }
 
@@ -244,11 +244,11 @@ body.nathan-page {
   min-width: 0;
   min-height: 125px;
   padding: 1.5rem;
-  background: #0b191b;
+  background: #111b12;
 }
 
 .nathan-profile__facts dt {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font: 500 .6rem/1.45 'DM Mono', Consolas, monospace;
   letter-spacing: .13em;
 }
@@ -287,7 +287,7 @@ body.nathan-page {
   height: clamp(570px, 72vw, 820px);
   margin: 0 auto;
   border: 1px solid var(--nathan-line);
-  background: radial-gradient(circle at 50% 45%, rgba(119, 192, 201, .1), transparent 48%), #04090b;
+  background: radial-gradient(circle at 50% 45%, rgba(209, 236, 132, .1), transparent 48%), #050906;
 }
 
 .nathan-slide {
@@ -321,7 +321,7 @@ body.nathan-page {
 }
 
 .nathan-slide figcaption span {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font: 500 .63rem/1.5 'DM Mono', Consolas, monospace;
   letter-spacing: .13em;
 }
@@ -345,7 +345,7 @@ body.nathan-page {
 .nathan-gallery-controls button,
 .nathan-gallery-thumbs button {
   border: 1px solid var(--nathan-line);
-  background: #0b181a;
+  background: #111a12;
   color: var(--nathan-paper);
   cursor: pointer;
 }
@@ -359,13 +359,13 @@ body.nathan-page {
 .nathan-gallery-controls button:hover,
 .nathan-gallery-thumbs button:hover,
 .nathan-gallery-thumbs button.is-active {
-  border-color: var(--nathan-blue);
-  background: #14292d;
+  border-color: var(--nathan-optic);
+  background: #24321b;
 }
 
 .nathan-gallery-controls > span {
   min-width: 78px;
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font: 500 .75rem/1.4 'DM Mono', Consolas, monospace;
   text-align: center;
 }
@@ -397,13 +397,13 @@ body.nathan-page {
   width: 100%;
   height: clamp(92px, 11vw, 145px);
   object-fit: contain;
-  background: #060d0f;
+  background: #080e09;
 }
 
 .nathan-gallery-thumbs span {
   display: block;
   margin-top: .6rem;
-  color: #d8e8e6;
+  color: #e1ecd2;
   font: 500 .58rem/1.4 'DM Mono', Consolas, monospace;
   letter-spacing: .08em;
 }
@@ -415,7 +415,7 @@ body.nathan-page {
   align-items: end;
   padding: clamp(5rem, 8vw, 8.5rem) max(1.25rem, 6vw);
   border-top: 1px solid var(--nathan-line);
-  background: radial-gradient(circle at 15% 80%, rgba(119, 192, 201, .12), transparent 35%), #071113;
+  background: radial-gradient(circle at 15% 80%, rgba(209, 236, 132, .12), transparent 35%), #0b130c;
 }
 
 .nathan-album-access > div:last-child {
@@ -445,7 +445,7 @@ body.nathan-page {
 }
 
 .nathan-album-access a:hover {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
 }
 
 .nathan-twin {
@@ -455,7 +455,7 @@ body.nathan-page {
   align-items: center;
   padding: clamp(5rem, 8vw, 8.5rem) max(1.25rem, 6vw);
   border-top: 1px solid var(--nathan-line);
-  background: #0b1416;
+  background: #0e150f;
 }
 
 .nathan-twin figure {
@@ -475,7 +475,7 @@ body.nathan-page {
 .nathan-twin figcaption {
   padding: 1rem 1.25rem;
   border-top: 1px solid var(--nathan-line);
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font: 500 .62rem/1.4 'DM Mono', Consolas, monospace;
   letter-spacing: .1em;
 }
@@ -503,7 +503,7 @@ body.nathan-page {
 }
 
 .nathan-twin__copy a:hover {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
 }
 
 .nathan-lana {
@@ -513,7 +513,7 @@ body.nathan-page {
   align-items: center;
   padding: clamp(5rem, 8vw, 8.5rem) max(1.25rem, 6vw);
   border-top: 1px solid var(--nathan-line);
-  background: radial-gradient(circle at 83% 34%, rgba(165, 129, 81, .13), transparent 35%), #081214;
+  background: radial-gradient(circle at 83% 34%, rgba(209, 236, 132, .1), transparent 35%), #0b140e;
 }
 
 .nathan-lana__copy {
@@ -542,8 +542,8 @@ body.nathan-page {
 }
 
 .nathan-lana__link:hover {
-  border-color: var(--nathan-blue);
-  background: rgba(158, 211, 216, .1);
+  border-color: var(--nathan-optic);
+  background: rgba(209, 236, 132, .1);
 }
 
 .nathan-lana__portrait {
@@ -552,7 +552,7 @@ body.nathan-page {
   width: min(100%, 480px);
   margin-inline: auto;
   overflow: hidden;
-  border: 1px solid rgba(158, 211, 216, .48);
+  border: 1px solid rgba(209, 236, 132, .48);
   background: #07100e;
   text-decoration: none;
 }
@@ -591,8 +591,8 @@ body.nathan-page {
   max-width: none;
   max-height: 96svh;
   padding: 3.5rem 1rem 1rem;
-  border: 1px solid rgba(158, 211, 216, .5);
-  background: #050b0d;
+  border: 1px solid rgba(209, 236, 132, .5);
+  background: #070c08;
   color: var(--nathan-paper);
 }
 
@@ -673,7 +673,7 @@ body.nathan-page {
   }
 
   .nathan-hero::after {
-    background: linear-gradient(0deg, #071013 0%, rgba(5, 10, 12, .88) 39%, rgba(5, 10, 12, .15) 86%);
+    background: linear-gradient(0deg, #090e0a 0%, rgba(6, 10, 7, .88) 39%, rgba(6, 10, 7, .15) 86%);
   }
 
   .nathan-scope {

@@ -266,3 +266,22 @@
 ## Atualização de 26 de outubro de 2026 — registros de Nathan
 
 - As seis fotografias solo saíram do dossiê principal e foram reunidas em `nathan-registros.html`, sem imagens de Pollyana ou Lana. O dossiê agora oferece convite e links para o álbum; a página de registros tem retorno para Nathan, controles, miniaturas e ampliação.
+
+## Atualização de 26 de outubro de 2026 — Nathan, Lana e Pollyana
+
+- A pedido do autor, o acervo de Nathan foi revisado visualmente. O álbum passou de seis para dez imagens solo, incluindo `nathan2.png`, `nathan3.png` e dois retratos de `img-hellsing`. A fotografia `nathan-salvatore.png` continua excluída porque mostra outra pessoa; `nathan-iris.png` permanece sem vínculo confirmado.
+- Nathan ganhou identidade própria em verde-fósforo sobre grafite, com retrato dele ao fundo da abertura do álbum, fundo desfocado correspondente à imagem selecionada, varredura suave e barra de progresso. As fotos ampliadas e no palco continuam sem recorte e sem datas ou missões presumidas.
+- A página de Lana recebeu seis fotos individuais adicionais em uma galeria ampliável e um segundo registro com Nathan. A história e a paleta verde-rádio foram preservadas.
+- A página de Pollyana foi reorganizada como dossiê familiar em ameixa e âmbar, com registro dos gêmeos e oito imagens individuais na galeria. Sua função permanece indefinida; as mídias ainda pendentes não foram promovidas a fatos.
+- A auditoria estrutural, as referências de arquivos e a sintaxe dos scripts passaram. A inspeção visual em navegador integrado ficou pendente por indisponibilidade do navegador neste ambiente.
+
+## Atualização de 27 de outubro de 2026 — proposta de lore para Pollyana
+
+- Com autorização do autor para criar uma proposta revisável, a página de Pollyana passou a apresentar a negociação de passagens de sobreviventes como função possível. O dossiê desenvolve método, personalidade, conflito e contraste com Nathan, sempre distinguindo criação provisória dos vínculos familiares confirmados.
+- `POLLYANA-LORE-PROPOSTA.md` registra a separação entre fatos e criação. A galeria continua com oito imagens individuais, sem atribuir missões às fotos.
+- O carrossel deixou de avançar automaticamente; títulos animados ganharam leitura acessível com espaço entre linhas, e rótulos e legendas foram reforçados para telas estreitas.
+
+## Atualização de 27 de outubro de 2026 — registros separados de Pollyana
+
+- As oito imagens solo saíram do dossiê `pollyana-presente.html` e foram reunidas em `pollyana-registros.html` com cinco fotos adicionais do acervo, totalizando treze registros. A foto conjunta dos gêmeos permanece no dossiê; `cunhadas-presente.png` segue fora até confirmação da segunda pessoa.
+- O dossiê agora oferece chamada e link de rodapé para o álbum. A galeria mantém ameixa/âmbar, apresenta as fotos sem recorte, miniaturas, setas, teclado, gesto de toque e ampliação; nenhuma legenda atribui datas ou missões.

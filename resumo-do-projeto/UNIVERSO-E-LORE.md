@@ -12,6 +12,7 @@
 - Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
 - Mark e Ariani têm três filhos: os gêmeos Pollyana e Nathan Salvatore Connor, nascidos antes do Dia D, e James Salvatore Connor, nascido depois. Nathan é atirador de precisão; sua formação e suas operações ainda não foram definidas.
+- A função de Pollyana não foi confirmada pelo autor. Há uma **proposta revisável**, separada do cânone, para retratá-la como negociadora de passagens de sobreviventes; detalhes em `POLLYANA-LORE-PROPOSTA.md`.
 - Nathan é casado com Lana, britânica. O sobrenome Whitmore, a origem específica em Bristol e sua atuação nas comunicações de emergência dos Hellsings foram criados a pedido do autor para `lana-presente.html`; detalhes e distinção entre fatos fornecidos e criação constam em `LANA-WHITMORE-LORE.md`.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.
 - Britney conheceu Bobby Lee num dos churrascos que Jack oferecia aos Hellsings na Mansão Connor. Depois de descobrir que esperava o filho dos dois, saiu da casa de Mark e foi morar apenas com Jully; o casamento com Lee ocorreu mais tarde, antes do Dia D.

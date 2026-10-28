@@ -1,6 +1,6 @@
 /* Página fotográfica MA-02: mantém o acervo separado do dossiê narrativo. */
 body.nathan-record-page {
-  background: #071013;
+  background: #090e0a;
   color-scheme: dark;
 }
 
@@ -10,46 +10,82 @@ body.nathan-record-page {
 
 .nathan-record-intro {
   position: relative;
+  isolation: isolate;
   display: grid;
   align-content: end;
-  min-height: clamp(410px, 58svh, 680px);
+  min-height: clamp(520px, 77svh, 820px);
   padding: clamp(10rem, 16vw, 15rem) max(1.25rem, 6vw) clamp(3rem, 6vw, 5rem);
   overflow: hidden;
   border-bottom: 1px solid var(--nathan-line);
+  background: #0b110b;
+}
+
+.nathan-record-intro__portrait {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  width: min(57%, 850px);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  filter: saturate(.7) brightness(.68) contrast(1.08);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 28%, #000);
+  mask-image: linear-gradient(90deg, transparent, #000 28%, #000);
+}
+
+.nathan-record-intro::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
   background:
-    radial-gradient(circle at 81% 42%, rgba(121, 194, 200, .13), transparent 28%),
-    repeating-linear-gradient(90deg, transparent 0 89px, rgba(158, 211, 216, .035) 90px),
-    #081316;
+    linear-gradient(90deg, #090e0a 5%, rgba(9, 14, 10, .9) 30%, rgba(9, 14, 10, .12) 76%),
+    linear-gradient(0deg, #090e0a 0%, transparent 42%),
+    repeating-linear-gradient(90deg, transparent 0 95px, rgba(209, 236, 132, .04) 96px);
+  content: '';
+  pointer-events: none;
+}
+
+.nathan-record-intro__eyeline {
+  position: absolute;
+  z-index: 2;
+  top: 7.5rem;
+  right: max(1.25rem, 6vw);
+  color: var(--nathan-optic);
+  font: 500 .58rem/1.4 'DM Mono', Consolas, monospace;
+  letter-spacing: .18em;
 }
 
 .nathan-record-intro::after {
   position: absolute;
-  top: 17%;
-  right: max(5vw, 1.25rem);
-  width: min(34vw, 440px);
+  z-index: 1;
+  top: 24%;
+  right: max(10vw, 1.25rem);
+  width: min(27vw, 350px);
   aspect-ratio: 1;
-  border: 1px solid rgba(158, 211, 216, .24);
+  border: 1px solid rgba(209, 236, 132, .32);
   border-radius: 50%;
-  box-shadow: 0 0 0 45px rgba(158, 211, 216, .035), 0 0 0 90px rgba(158, 211, 216, .02);
+  box-shadow: 0 0 0 45px rgba(209, 236, 132, .035), 0 0 0 90px rgba(209, 236, 132, .02), inset 0 0 50px rgba(209, 236, 132, .06);
   content: '';
   pointer-events: none;
+  animation: nathan-record-lock 8s ease-in-out infinite alternate;
 }
 
 .nathan-record-intro h1 {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
+  max-width: min(950px, 76vw);
   margin: 1rem 0 2.25rem;
   color: var(--nathan-paper);
-  font: 900 clamp(5.4rem, 13vw, 14rem)/.75 'Barlow Condensed', Impact, sans-serif;
+  font: 900 clamp(5.4rem, 12vw, 13rem)/.75 'Barlow Condensed', Impact, sans-serif;
   letter-spacing: -.035em;
   text-transform: uppercase;
 }
 
 .nathan-record-intro h1 em {
   display: block;
-  color: var(--nathan-blue);
-  font-size: .48em;
+  color: var(--nathan-optic);
+  font-size: .43em;
   font-style: normal;
   line-height: 1;
   letter-spacing: -.02em;
@@ -75,7 +111,7 @@ body.nathan-record-page {
 
 .nathan-record-intro__bottom > span,
 .nathan-record-page .nathan-footer span {
-  color: var(--nathan-blue);
+  color: var(--nathan-optic);
   font: 500 .62rem/1.5 'DM Mono', Consolas, monospace;
   letter-spacing: .14em;
   white-space: nowrap;
@@ -92,14 +128,97 @@ body.nathan-record-page {
 }
 
 .nathan-record-page .nathan-records {
+  position: relative;
   padding-top: clamp(4rem, 6vw, 7rem);
   padding-bottom: clamp(5rem, 9vw, 9rem);
   border-top: 0;
-  background: linear-gradient(150deg, #0b191b, #050b0d 67%);
+  background: radial-gradient(circle at 85% 8%, rgba(209, 236, 132, .07), transparent 30%), linear-gradient(150deg, #111a11, #080d09 67%);
 }
 
 .nathan-record-page .nathan-gallery-stage {
+  isolation: isolate;
+  overflow: hidden;
   height: clamp(570px, 72vw, 870px);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .42);
+}
+
+.nathan-record-page .nathan-gallery-stage::after {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 49.9%, rgba(209, 236, 132, .16) 50%, transparent 50.1%);
+  content: '';
+  pointer-events: none;
+  animation: nathan-record-scan 11s linear infinite;
+}
+
+.nathan-gallery-hud {
+  position: absolute;
+  z-index: 6;
+  top: clamp(1rem, 2.5vw, 2.5rem);
+  right: clamp(1rem, 2.5vw, 2.5rem);
+  left: clamp(1rem, 2.5vw, 2.5rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #e5f2c4;
+  font: 500 .55rem/1.5 'DM Mono', Consolas, monospace;
+  letter-spacing: .14em;
+  text-shadow: 0 2px 8px #000;
+  pointer-events: none;
+}
+
+.nathan-record-page .nathan-slide {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.nathan-record-page .nathan-slide::before {
+  position: absolute;
+  z-index: 0;
+  inset: -8%;
+  background: var(--nathan-slide-photo) center / cover no-repeat;
+  filter: blur(24px) brightness(.32) saturate(.85);
+  content: '';
+  pointer-events: none;
+}
+
+.nathan-record-page .nathan-slide img {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 18px 42px rgba(0, 0, 0, .55));
+}
+
+.nathan-record-page .nathan-slide figcaption {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(5, 10, 6, .8), rgba(5, 10, 6, .45));
+}
+
+.nathan-gallery-progress {
+  width: 100%;
+  max-width: 1500px;
+  height: 2px;
+  margin: .85rem auto 1.15rem;
+  background: rgba(209, 236, 132, .19);
+}
+
+.nathan-gallery-progress span {
+  display: block;
+  width: var(--nathan-progress, 10%);
+  height: 100%;
+  background: var(--nathan-optic);
+  box-shadow: 0 0 18px rgba(209, 236, 132, .7);
+  transition: width .45s ease;
+}
+
+.nathan-record-page .nathan-gallery-thumbs {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.nathan-record-page .nathan-gallery-thumbs button.is-active {
+  box-shadow: inset 0 -2px 0 var(--nathan-optic);
 }
 
 .nathan-record-page .nathan-footer {
@@ -107,24 +226,53 @@ body.nathan-record-page {
   min-height: 110px;
 }
 
+@keyframes nathan-record-lock {
+  from { transform: scale(.96); opacity: .44; }
+  to { transform: scale(1.03); opacity: .8; }
+}
+
+@keyframes nathan-record-scan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
 @media (max-width: 760px) {
   .nathan-record-intro {
-    min-height: 410px;
+    min-height: 620px;
     padding: 9rem 1.25rem 2.5rem;
   }
 
+  .nathan-record-intro__portrait {
+    width: 100%;
+    opacity: .58;
+    object-position: center 9%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .nathan-record-intro::before {
+    background: linear-gradient(0deg, #090e0a 0%, rgba(9, 14, 10, .92) 33%, rgba(9, 14, 10, .44) 100%);
+  }
+
   .nathan-record-intro::after {
-    top: 20%;
+    top: 16%;
     right: -18%;
     width: 67vw;
   }
 
+  .nathan-record-intro__eyeline {
+    top: 6rem;
+    right: 1.25rem;
+    font-size: .48rem;
+  }
+
   .nathan-record-intro h1 {
-    font-size: clamp(5rem, 19vw, 8rem);
+    max-width: 100%;
+    font-size: clamp(5rem, 18vw, 8rem);
   }
 
   .nathan-record-intro h1 em {
-    font-size: .43em;
+    font-size: .41em;
   }
 
   .nathan-record-intro__bottom {
@@ -141,6 +289,14 @@ body.nathan-record-page {
     min-height: 440px;
   }
 
+  .nathan-record-page .nathan-gallery-thumbs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nathan-gallery-hud span:last-child {
+    display: none;
+  }
+
   .nathan-record-page .nathan-footer {
     align-items: start;
   }
@@ -148,7 +304,18 @@ body.nathan-record-page {
 
 @media (max-width: 380px) {
   .nathan-record-intro h1 {
-    font-size: 4.8rem;
+    font-size: 4.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nathan-record-intro::after,
+  .nathan-record-page .nathan-gallery-stage::after {
+    animation: none;
+  }
+
+  .nathan-gallery-progress span {
+    transition: none;
   }
 }
 

@@ -1,12 +1,12 @@
-# Mídias recebidas ainda não publicadas
+# Mídias com associação editorial pendente
 
-Estas mídias estão na cópia local do projeto, mas não foram adicionadas ao GitHub nem associadas automaticamente a páginas. A publicação depende da confirmação de autoria/licença e da aprovação da composição visual.
+Estas mídias existem no acervo do projeto; algumas já estão versionadas no GitHub, mas isso não confirma autoria ou licença. Não associar um personagem pela aparência ou pelo nome do arquivo sem revisão editorial. Antes de uma nova publicação, confirmar direitos de uso das imagens envolvidas.
 
 ## Registros identificados
 
 - Sally: `sally-action.png`, `sally-cabelobranco.png`, `sally-outracor.png`, `sally-transiao-cabelo.png`, `sally-ward.png`, `sally-ward1.png`.
-- Nathan: `nathan-salvatore.png`, `nathan2.png`, `nathan3.png`.
-- Pollyanna: `polllyanna.png`, `polly.png`, `polly1.png`, `polly5.png`, `pollyanna5.png`.
+- Nathan: `nathan-salvatore.png` mostra uma mulher e não deve ser tratado como retrato dele; `nathan-17.png` é quase duplicata da capa; `nathan-iris.png` traz uma mulher de identidade/vínculo não confirmados. `nathan2.png` e `nathan3.png` foram visualmente confirmadas como imagens solo de Nathan e integradas ao álbum a pedido do autor.
+- `img-hellsing/cunhadas-presente.png`: Lana aparece à esquerda; a mulher loira à direita ainda precisa de confirmação de identidade. A foto não entrou nos álbuns individuais. As cinco fotos solo `polllyanna.png`, `polly.png`, `polly1.png`, `polly5.png` e `pollyanna5.png` foram incluídas em `pollyana-registros.html` a pedido do autor; os direitos de uso continuam sujeitos à verificação geral deste inventário.
 - Britney, Diana, Bobby, Ariani, Iris, Mark e registros familiares: arquivos recebidos na pasta `img-presente/personagens/` aguardando identificação individual.
 - `era-extincao-presente/iris.jpg`: registro recebido para revisão.
 
@@ -16,6 +16,6 @@ Estas mídias estão na cópia local do projeto, mas não foram adicionadas ao G
 2. Escolher a página correta de cada personagem e evitar duplicatas.
 3. Adicionar `alt`, legenda e carregamento tardio às galerias.
 4. Testar a composição em celular e desktop.
-5. Só então adicionar os binários ao Git e atualizar o inventário de direitos.
+5. Conferir o estado dos binários no Git e atualizar o inventário de direitos antes de publicar novas alterações.
 
-Até essa revisão, os arquivos permanecem locais e não fazem parte da versão pública do repositório.
+Estar no Git não equivale a ter autoria ou licença verificada; a pendência editorial deve permanecer registrada até confirmação.

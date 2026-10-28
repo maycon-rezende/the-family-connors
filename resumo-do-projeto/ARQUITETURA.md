@@ -55,9 +55,9 @@ Os arquivos fotográficos listados usam carrosséis independentes, controles de 
 - `filhos-connor.html`: central da segunda geração de Jack e Alice.
 - `herdeiros-extincao.html`: portal da nova geração, separando as linhagens de Jack/Alice e Mark/Ariani.
 - `filhos-mark-ariani.html`: central dos arquivos de Pollyana e Nathan, filhos de Mark e Ariani.
-- `pollyana-presente.html` e `nathan-presente.html`: arquivos individuais da segunda linhagem.
-- `nathan-registros.html`: álbum individual de Nathan, separado do dossiê narrativo e sem registros de outros personagens.
-- `lana-presente.html`: dossiê da esposa britânica de Nathan, com imagem individual e registro do casal; o vínculo parte do arquivo de Nathan.
+- `pollyana-presente.html` e `nathan-presente.html`: dossiês individuais da segunda linhagem. A galeria solo de Pollyana está em `pollyana-registros.html`, com treze imagens; sua proposta revisável de função narrativa consta em `POLLYANA-LORE-PROPOSTA.md`.
+- `nathan-registros.html`: álbum individual de dez imagens de Nathan, separado do dossiê narrativo e sem registros de outros personagens.
+- `lana-presente.html`: dossiê da esposa britânica de Nathan, com retrato de capa, seis fotos solo ampliáveis e dois registros do casal; o vínculo parte do arquivo de Nathan.
 - `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos, na ordem oficial da linhagem.
 - `diana-presente.html`: dossiê de combate com doutrina, matriz de proficiência e transmissão visual organizada.
 - `isolde-presente.html`: arquivo individual com capa exclusiva e registros fotográficos em looping.

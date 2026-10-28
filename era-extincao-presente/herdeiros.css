@@ -56,3 +56,103 @@ body.lineage-page{background:#090604}body.lineage-page .heirs-hero{position:rela
 /* Arquivos relacionados recuperados no presente */
 .related-file{border-top:1px solid #b8633638;background:radial-gradient(circle at 80% 20%,#9c4c2520,transparent 35%),#0b0705}.relationship-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.relationship-gallery img{height:min(52vw,680px)}.related-dossier{display:inline-flex;margin-top:2rem;padding:1rem 1.25rem;border:1px solid #b863365c;color:var(--sand);text-decoration:none;font:700 .55rem/1 Cinzel;letter-spacing:.15em;background:#120a06;transition:background .3s,color .3s}.related-dossier:hover{color:#f0d2ac;background:#241109}.related-character-page .related-character-hero:after{background:linear-gradient(0deg,#070604f7,transparent 65%),linear-gradient(90deg,#070604e8 0 34%,transparent 70%)}.related-character-page .child-copy h1 em{font-size:.38em;letter-spacing:.04em}
 @media(max-width:720px){.relationship-gallery{grid-template-columns:1fr!important}.relationship-gallery img{height:auto!important;max-height:none!important}.related-character-page .related-character-hero>img{object-position:center top}.related-character-page .child-copy h1 em{font-size:.32em}.related-dossier{width:100%;justify-content:center;text-align:center}}
+/* Acesso ao arquivo conjunto dos gêmeos */
+.lineage-page.lineage-mark .twins-access {
+  width: min(100%, 1450px);
+  margin: 1.35rem auto 0;
+}
+.lineage-page.lineage-mark .twins-access a {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .45rem 1.5rem;
+  width: min(100%, 520px);
+  min-height: 110px;
+  padding: 1.1rem 1.35rem 1.1rem 1.6rem;
+  overflow: hidden;
+  border: 1px solid #c99b5e55;
+  color: #e4dac9;
+  background:
+    radial-gradient(ellipse at 100% 0, #d45c3118, transparent 52%),
+    linear-gradient(110deg, #150d08, #0b0806 75%);
+  box-shadow: 0 12px 34px #0006, inset 0 1px #f2d9b51a;
+  text-decoration: none;
+  transition: border-color .3s, transform .3s, box-shadow .3s, background .3s;
+}
+.lineage-page.lineage-mark .twins-access a::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(#d45c31, #c99b5e 52%, #d45c31);
+  content: '';
+}
+.lineage-page.lineage-mark .twins-access a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e6b46a);
+  content: '';
+  opacity: .75;
+}
+.twins-access__code,
+.twins-access__action {
+  color: #d49a5f;
+  font: 700 .49rem/1.4 Cinzel, serif;
+  letter-spacing: .14em;
+}
+.twins-access__code { grid-column: 1 / -1; }
+.lineage-page.lineage-mark .twins-access strong {
+  color: #eee2d0;
+  font: 900 clamp(1.65rem, 3vw, 2.35rem)/.9 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  transition: color .3s, text-shadow .3s;
+}
+.twins-access__action {
+  grid-column: 2;
+  grid-row: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  white-space: nowrap;
+}
+.twins-access__action i {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid #c99b5e70;
+  color: #f0c27c;
+  font-size: .8rem;
+  font-style: normal;
+  transition: color .3s, background .3s, transform .3s;
+}
+.lineage-page.lineage-mark .twins-access a:hover {
+  transform: translateY(-3px);
+  border-color: #d99a59c9;
+  background:
+    radial-gradient(ellipse at 100% 0, #d45c3130, transparent 56%),
+    linear-gradient(110deg, #211109, #0b0806 75%);
+  box-shadow: 0 18px 42px #0009, 0 0 26px #d45c311a, inset 0 1px #f2d9b533;
+}
+.lineage-page.lineage-mark .twins-access a:hover strong { color: #fff1db; text-shadow: 0 0 18px #dc79454d; }
+.lineage-page.lineage-mark .twins-access a:hover .twins-access__action i { transform: translate(2px,-2px); color: #100904; background: #d9a663; }
+.lineage-page.lineage-mark .twins-access a:focus-visible { outline: 2px solid #e4b76f; outline-offset: 5px; }
+@media (max-width: 650px) {
+  .lineage-page.lineage-mark .twins-access { margin-top: 1rem; }
+  .lineage-page.lineage-mark .twins-access a { width: 100%; min-height: 102px; padding: 1rem 1rem 1rem 1.2rem; gap: .5rem; }
+  .twins-access__code,.twins-access__action { font-size: .43rem; letter-spacing: .1em; }
+  .lineage-page.lineage-mark .twins-access strong { font-size: 1.65rem; }
+  .twins-access__action { gap: .4rem; }
+  .twins-access__action i { width: 27px; height: 27px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lineage-page.lineage-mark .twins-access a,
+  .lineage-page.lineage-mark .twins-access strong,
+  .twins-access__action i { transition: none; }
+}

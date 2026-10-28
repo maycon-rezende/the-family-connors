@@ -11,7 +11,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  color: #b5d9dc;
+  color: var(--nathan-optic);
   transition: transform .18s ease, opacity .16s ease, color .18s ease, visibility .16s ease;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .nathan-cursor.is-active {
-  color: #efc293;
+  color: #f3f9cb;
   transform: translate(-50%, -50%) scale(1.22);
 }
 
@@ -31,7 +31,7 @@
   inset: 5px;
   border: 1px solid currentColor;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(144, 217, 222, .22), inset 0 0 12px rgba(144, 217, 222, .14);
+  box-shadow: 0 0 15px rgba(209, 236, 132, .28), inset 0 0 12px rgba(209, 236, 132, .16);
 }
 
 .nathan-cursor i::before,
@@ -92,7 +92,7 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: linear-gradient(180deg, transparent 49.7%, rgba(166, 222, 226, .19) 50%, transparent 50.3%);
+  background: linear-gradient(180deg, transparent 49.7%, rgba(209, 236, 132, .19) 50%, transparent 50.3%);
   opacity: .38;
   pointer-events: none;
   animation: nathan-scan 12s linear infinite;
@@ -104,8 +104,8 @@
 
 .nathan-gallery-stage:hover,
 .nathan-gallery-stage:focus-within {
-  border-color: rgba(158, 211, 216, .58);
-  box-shadow: 0 0 0 1px rgba(158, 211, 216, .11), 0 20px 75px rgba(0, 0, 0, .25);
+  border-color: rgba(209, 236, 132, .58);
+  box-shadow: 0 0 0 1px rgba(209, 236, 132, .11), 0 20px 75px rgba(0, 0, 0, .25);
 }
 
 .nathan-profile__facts > div {
@@ -113,7 +113,7 @@
 }
 
 .nathan-profile__facts > div:hover {
-  background: #12282a;
+  background: #202d19;
 }
 
 html.nathan-effects-ready .nathan-page [data-nathan-reveal] {
@@ -138,8 +138,8 @@ html.nathan-effects-ready .nathan-page [data-nathan-reveal]:focus-within {
 }
 
 @keyframes nathan-cursor-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(239, 194, 147, .65); }
-  100% { box-shadow: 0 0 0 17px rgba(239, 194, 147, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(209, 236, 132, .65); }
+  100% { box-shadow: 0 0 0 17px rgba(209, 236, 132, 0); }
 }
 
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {

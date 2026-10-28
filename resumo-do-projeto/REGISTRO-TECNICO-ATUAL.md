@@ -237,15 +237,15 @@ O endereço anterior `dimitri-presente.html` redireciona para `dimitri-arquivo.h
 
 ### Regra de paleta exclusiva
 
-Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi (teal/azul), Clhoe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre) e Dimitri (aço/azul-gelo/vermelho). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
+Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi (teal/azul), Clhoe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre), Dimitri (aço/azul-gelo/vermelho), Nathan (verde-fósforo/grafite), Lana (verde-rádio/areia) e Pollyana (ameixa/âmbar). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
 
 ## 5. Herdeiros e segunda geração
 
 | Núcleo | Arquivos principais | Estado técnico |
 | --- | --- | --- |
 | Filhos de Jack e Alice | `filhos-connor.html`, `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `isolde-presente.html` | Ordem aplicada: Alucard, Diana, Nicolai, Mary, Isolde. |
-| Filhos de Mark e Ariani | `filhos-mark-ariani.html`, `pollyana-presente.html`, `nathan-presente.html`, `nathan-registros.html` | Três descendentes confirmados; arquivos individuais de Pollyana e Nathan abertos, arquivo visual de James selado. Nathan é atirador de precisão; seu carrossel de seis imagens solo sem recorte fica na página separada de registros. |
-| Esposa de Nathan | `lana-presente.html`, `era-extincao-presente/lana-presente.css` | Dossiê próprio de Lana Whitmore, com retrato individual e foto do casal; origem britânica e casamento informados pelo autor, sobrenome e história criados nesta etapa. |
+| Filhos de Mark e Ariani | `filhos-mark-ariani.html`, `pollyana-presente.html`, `pollyana-registros.html`, `nathan-presente.html`, `nathan-registros.html` | Três descendentes confirmados; arquivos individuais de Pollyana e Nathan abertos, arquivo visual de James selado. Nathan é atirador de precisão; seu álbum separado reúne dez imagens solo sem recorte e usa identidade verde-fósforo, retrato de fundo e efeitos de mira. Pollyana tem dossiê familiar ameixa/âmbar, álbum próprio com treze imagens individuais e uma proposta revisável de negociação de passagens, ainda não canônica. |
+| Esposa de Nathan | `lana-presente.html`, `era-extincao-presente/lana-presente.css/js` | Dossiê próprio de Lana Whitmore, com retrato de capa, seis fotos solo ampliáveis e dois registros do casal; origem britânica e casamento informados pelo autor, sobrenome e história criados nesta etapa. |
 | Efeitos compartilhados | `era-extincao-presente/lineage-effects.css/js` | Partículas, varredura, revelação por observador, cursor em mouse/caneta e redução de movimento. |
 
 As páginas individuais dos herdeiros têm detalhes específicos — por exemplo, a ampulheta de Alucard, a transmissão de combate de Diana, o arquivo policial de Sally, a bússola de Mary, o carrossel de Isolde e o álbum separado de Nathan em `nathan-registros.html`, controlado por `era-extincao-presente/nathan-presente.js`. Consultar `GUIA-TECNICO-HERDEIROS.md` antes de alterar essas páginas.

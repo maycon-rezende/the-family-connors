@@ -62,6 +62,7 @@
 
       if (current) current.textContent = formatCount(active + 1);
       if (total) total.textContent = formatCount(slides.length);
+      gallery.style.setProperty('--nathan-progress', `${((active + 1) / slides.length) * 100}%`);
     };
 
     const navigate = (index) => {
