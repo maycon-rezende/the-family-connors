@@ -10,11 +10,9 @@
 
   function applyFilter(group) {
     let visible = 0;
-    filters.forEach((button) => {
-      const active = button.dataset.filter === group;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
+    filters.forEach((button) =>
+      button.classList.toggle('is-active', button.dataset.filter === group)
+    );
     cards.forEach((card) => {
       const show = group === 'all' || card.dataset.group === group;
       card.hidden = !show;
@@ -29,7 +27,7 @@
     button.addEventListener('click', () => applyFilter(button.dataset.filter))
   );
   const requested = new URLSearchParams(location.search).get('set');
-  applyFilter(['fbi', 'interpol', 'hellsings', 'pessoal', 'tematico'].includes(requested) ? requested : 'all');
+  applyFilter(['fbi', 'interpol', 'hellsings'].includes(requested) ? requested : 'all');
 
   function closeViewer() {
     viewer.classList.remove('is-open');
