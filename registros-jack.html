@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#080604" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/jack-registros.css?v=1" />
     <title>Registros Fotográficos de Jack Connor</title>
     <meta name="description" content="Registros fotográficos de Jack Connor, líder dos Hellsings no presente." />
   </head>
@@ -17,39 +18,105 @@
       <span>ARQUIVO FOTOGRÁFICO // ACESSO RESTRITO</span>
       <a href="index.html#sobreviventes">SOBREVIVENTES</a>
     </nav>
-    <main class="records-main">
-      <header class="records-hero">
-        <span class="eyebrow">HELLSINGS // DOSSIÊ JC-01</span>
-        <h1>Registros<br /><em>fotográficos.</em></h1>
-        <p>Fragmentos preservados de Jack Connor: comandante, irmão, marido e o homem que continua conduzindo todos pela tempestade.</p>
-        <div class="records-status"><span>10 ARQUIVOS</span><span>INTEGRIDADE // PARCIAL</span><span>ACESSO // AUTORIZADO</span></div>
+    <main class="jack-records-main">
+      <header class="jack-record-intro">
+        <img class="jack-record-intro__portrait" src="img-presente/personagens/jack-presente1.png" alt="" aria-hidden="true">
+        <div class="jack-record-intro__eyeline"><span>HELLSINGS // DOSSIÊ JC-01</span><span>ARQUIVO DO PRESENTE</span></div>
+        <div class="jack-record-intro__copy">
+          <span class="eyebrow">ACERVO FOTOGRÁFICO // ACESSO AUTORIZADO</span>
+          <h1>Jack<br><em>Connor.</em></h1>
+          <p>Dez imagens preservadas do presente. Fragmentos do comandante dos Hellsings, de sua família e da equipe que segue ao seu lado.</p>
+          <a class="jack-record-intro__link" href="#registros">PERCORRER A GALERIA <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="jack-record-intro__count"><b>10</b><span>REGISTROS<br>FOTOGRÁFICOS</span></div>
+        <span class="jack-record-intro__reticle" aria-hidden="true"></span>
       </header>
-      <section class="jack-record-grid" aria-label="Fotografias de Jack Connor">
-        <figure><img src="img-presente/personagens/jack-presente.png" alt="Jack Connor em registro de campo" /><figcaption><b>01</b> REGISTRO DE CAMPO</figcaption></figure>
-        <figure><img src="img-hellsing/jack-presente.png" alt="Jack Connor no comando dos Hellsings" /><figcaption><b>02</b> COMANDO HELLSINGS</figcaption></figure>
-        <figure><img src="img-presente/personagens/jack-mark-presente.png" alt="Jack e Mark Connor" /><figcaption><b>03</b> IRMÃOS EM MOVIMENTO</figcaption></figure>
-        <figure><img src="img-hellsing/jack-mark.png" alt="Jack e Mark em uniforme" /><figcaption><b>04</b> IRMÃOS EM ARMAS</figcaption></figure>
-        <figure><img src="img-hellsing/dimitri-jack.png" alt="Dimitri e Jack em missão" /><figcaption><b>05</b> COMANDO DE CAMPO</figcaption></figure>
-        <figure><img src="img-presente/personagens/alice-jack1.png" alt="Jack e Alice Connor" /><figcaption><b>06</b> JACK &amp; ALICE</figcaption></figure>
-        <figure><img src="img-presente/personagens/all-presente.png" alt="Jack e o comboio" /><figcaption><b>07</b> O COMBOIO</figcaption></figure>
-        <figure><img src="img-presente/personagens/jack-presente1.png" alt="Jack Connor em um retrato no acampamento dos Hellsings" /><figcaption><b>08</b> RETRATO NO ACAMPAMENTO</figcaption></figure>
-        <figure><img src="img-presente/personagens/jack-presente2.png" alt="Jack Connor entre os Hellsings no acampamento" /><figcaption><b>09</b> ENTRE OS HELLSINGS</figcaption></figure>
-        <figure><img src="img-presente/personagens/jack-acao.png" alt="Jack Connor em ação protegendo sobreviventes" /><figcaption><b>10</b> AÇÃO EM CAMPO</figcaption></figure>
+
+      <section class="jack-records" id="registros" aria-labelledby="jack-records-title">
+        <div class="jack-records__heading">
+          <div>
+            <span class="eyebrow">JC-01 // ARQUIVO VISUAL</span>
+            <h2 id="jack-records-title">Fragmentos<br><em>preservados.</em></h2>
+          </div>
+          <p>Escolha um registro pelas miniaturas ou use as setas. As imagens são exibidas inteiras e podem ser ampliadas.</p>
+        </div>
+
+        <div class="jack-gallery" data-jack-gallery tabindex="0" aria-label="Galeria de dez registros fotográficos de Jack Connor">
+          <div class="jack-gallery__stage" data-jack-stage aria-live="off">
+            <div class="jack-gallery__hud" aria-hidden="true"><span>JC-01 // REGISTRO ATIVO</span><span>IMAGEM <b data-jack-hud-current>01</b> / 10</span></div>
+            <figure class="jack-slide is-active" data-jack-slide style="--jack-slide-photo: url('img-presente/personagens/jack-presente.png')">
+              <img src="img-presente/personagens/jack-presente.png" alt="Jack Connor em registro individual no presente">
+              <figcaption><span>JC-01.01</span><b>REGISTRO DE CAMPO</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-hellsing/jack-presente.png')">
+              <img src="img-hellsing/jack-presente.png" alt="Jack Connor junto aos Hellsings" loading="lazy">
+              <figcaption><span>JC-01.02</span><b>ENTRE OS HELLSINGS</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-presente/personagens/jack-mark-presente.png')">
+              <img src="img-presente/personagens/jack-mark-presente.png" alt="Jack e Mark Connor juntos no presente" loading="lazy">
+              <figcaption><span>JC-01.03</span><b>JACK + MARK</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-hellsing/jack-mark.png')">
+              <img src="img-hellsing/jack-mark.png" alt="Jack e Mark Connor lado a lado" loading="lazy">
+              <figcaption><span>JC-01.04</span><b>IRMÃOS EM ARMAS</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-hellsing/dimitri-jack.png')">
+              <img src="img-hellsing/dimitri-jack.png" alt="Dimitri e Jack Connor juntos" loading="lazy">
+              <figcaption><span>JC-01.05</span><b>COMANDO DE CAMPO</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-presente/personagens/alice-jack1.png')">
+              <img src="img-presente/personagens/alice-jack1.png" alt="Jack e Alice Connor" loading="lazy">
+              <figcaption><span>JC-01.06</span><b>JACK + ALICE</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-presente/personagens/all-presente.png')">
+              <img src="img-presente/personagens/all-presente.png" alt="Jack e integrantes da equipe junto ao comboio" loading="lazy">
+              <figcaption><span>JC-01.07</span><b>EM MOVIMENTO</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-presente/personagens/jack-presente1.png')">
+              <img src="img-presente/personagens/jack-presente1.png" alt="Jack Connor em um retrato no acampamento dos Hellsings" loading="lazy">
+              <figcaption><span>JC-01.08</span><b>RETRATO NO ACAMPAMENTO</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-presente/personagens/jack-presente2.png')">
+              <img src="img-presente/personagens/jack-presente2.png" alt="Jack Connor entre os Hellsings no acampamento" loading="lazy">
+              <figcaption><span>JC-01.09</span><b>NO ACAMPAMENTO</b></figcaption>
+            </figure>
+            <figure class="jack-slide" data-jack-slide aria-hidden="true" style="--jack-slide-photo: url('img-presente/personagens/jack-acao.png')">
+              <img src="img-presente/personagens/jack-acao.png" alt="Jack Connor em ação protegendo sobreviventes" loading="lazy">
+              <figcaption><span>JC-01.10</span><b>AÇÃO EM CAMPO</b></figcaption>
+            </figure>
+          </div>
+
+          <div class="jack-gallery__controls" aria-label="Controles da galeria">
+            <button type="button" data-jack-prev aria-label="Registro anterior">←</button>
+            <span aria-live="polite"><b data-jack-current>01</b><i></i><b data-jack-total>10</b></span>
+            <button type="button" data-jack-next aria-label="Próximo registro">→</button>
+            <button class="jack-gallery__expand" type="button" data-jack-open>AMPLIAR IMAGEM <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="jack-gallery__progress" aria-hidden="true"><span></span></div>
+
+          <div class="jack-gallery__thumbs" aria-label="Escolher fotografia de Jack">
+            <button class="is-active" type="button" data-jack-select aria-label="Abrir registro 1: registro de campo" aria-pressed="true"><img src="img-presente/personagens/jack-presente.png" alt="" loading="lazy"><span>01</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 2: entre os Hellsings" aria-pressed="false"><img src="img-hellsing/jack-presente.png" alt="" loading="lazy"><span>02</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 3: Jack e Mark" aria-pressed="false"><img src="img-presente/personagens/jack-mark-presente.png" alt="" loading="lazy"><span>03</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 4: irmãos em armas" aria-pressed="false"><img src="img-hellsing/jack-mark.png" alt="" loading="lazy"><span>04</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 5: Jack e Dimitri" aria-pressed="false"><img src="img-hellsing/dimitri-jack.png" alt="" loading="lazy"><span>05</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 6: Jack e Alice" aria-pressed="false"><img src="img-presente/personagens/alice-jack1.png" alt="" loading="lazy"><span>06</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 7: comboio" aria-pressed="false"><img src="img-presente/personagens/all-presente.png" alt="" loading="lazy"><span>07</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 8: retrato no acampamento" aria-pressed="false"><img src="img-presente/personagens/jack-presente1.png" alt="" loading="lazy"><span>08</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 9: acampamento" aria-pressed="false"><img src="img-presente/personagens/jack-presente2.png" alt="" loading="lazy"><span>09</span></button>
+            <button type="button" data-jack-select aria-label="Abrir registro 10: ação em campo" aria-pressed="false"><img src="img-presente/personagens/jack-acao.png" alt="" loading="lazy"><span>10</span></button>
+          </div>
+        </div>
       </section>
     </main>
+
+    <dialog class="jack-gallery__dialog" data-jack-dialog aria-label="Fotografia de Jack ampliada">
+      <button type="button" data-jack-close aria-label="Fechar imagem ampliada">FECHAR ×</button>
+      <img data-jack-dialog-image src="img-presente/personagens/jack-presente.png" alt="">
+      <p data-jack-dialog-caption></p>
+    </dialog>
+
     <footer class="profile-footer"><a href="jack-presente.html">← RETORNAR AO ARQUIVO DE JACK</a></footer>
-    <script>
-      const cursor = document.querySelector('.jack-cursor');
-      if (cursor && matchMedia('(pointer: fine)').matches) {
-        addEventListener('pointermove', ({ clientX, clientY }) => {
-          cursor.style.left = `${clientX}px`;
-          cursor.style.top = `${clientY}px`;
-        });
-        document.querySelectorAll('a, figure').forEach((target) => {
-          target.addEventListener('pointerenter', () => cursor.classList.add('active'));
-          target.addEventListener('pointerleave', () => cursor.classList.remove('active'));
-        });
-      }
-    </script>
+    <script src="js/jack-registros.js?v=1" defer></script>
   </body>
 </html>

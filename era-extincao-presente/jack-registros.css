@@ -1,0 +1,680 @@
+/* Galeria atual de Jack: apresentação editorial e carrossel com imagens inteiras. */
+.jack-records-page {
+  --jack-ember: #df592f;
+  --jack-gold: #d0a365;
+  --jack-paper: #eee5d7;
+  --jack-muted: #b9ad9e;
+  --jack-panel: #100d0a;
+  background: #080705;
+  color: var(--jack-paper);
+}
+
+.jack-records-page::before {
+  opacity: .09;
+}
+
+.jack-records-page .profile-backdrop {
+  display: none !important;
+}
+
+.jack-records-page .profile-nav {
+  min-height: 68px;
+  padding-inline: max(1.5rem, 5vw);
+  border-bottom-color: #ce76413b;
+  background: #090705e8;
+}
+
+.jack-records-page .profile-nav a:first-child b {
+  color: var(--jack-ember);
+}
+
+.jack-records-page .jack-records-main {
+  position: relative;
+  z-index: 1;
+  padding: 68px 0 0;
+  overflow: hidden;
+  background: #080705;
+}
+
+.jack-record-intro {
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-height: clamp(620px, 87svh, 940px);
+  padding: clamp(9rem, 15vh, 12rem) max(1.5rem, 7vw) clamp(4rem, 7vw, 6.5rem);
+  isolation: isolate;
+  overflow: hidden;
+  border-bottom: 1px solid #d870373d;
+  background: #100b07;
+}
+
+.jack-record-intro__portrait {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 auto;
+  width: min(68%, 1120px);
+  height: 100%;
+  object-fit: cover;
+  object-position: 54% 18%;
+  filter: saturate(.7) brightness(.69) contrast(1.08);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 31%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 31%, #000 100%);
+}
+
+.jack-record-intro::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #090705 3%, #090705f2 27%, #0907059c 53%, #09070518 100%),
+    linear-gradient(0deg, #090705 0%, transparent 38%),
+    repeating-linear-gradient(90deg, transparent 0 118px, #d28a4b08 119px 120px);
+  content: '';
+  pointer-events: none;
+}
+
+.jack-record-intro__eyeline {
+  position: absolute;
+  inset: 2rem max(1.5rem, 7vw) auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--jack-gold);
+  font: 600 .58rem/1.5 'Cinzel', serif;
+  letter-spacing: .17em;
+}
+
+.jack-record-intro__copy {
+  position: relative;
+  z-index: 2;
+  width: min(790px, 75vw);
+  padding-left: clamp(1rem, 2.3vw, 2rem);
+  border-left: 1px solid #df592f9c;
+}
+
+.jack-records-page .eyebrow {
+  color: var(--jack-ember);
+  font: 700 .62rem/1.6 'Cinzel', serif;
+  letter-spacing: .2em;
+}
+
+.jack-record-intro h1 {
+  margin: 1.15rem 0 1.5rem;
+  color: var(--jack-paper);
+  font: 900 clamp(5.5rem, 11vw, 10rem)/.78 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+
+.jack-record-intro h1 em {
+  display: block;
+  color: transparent;
+  font-size: .88em;
+  font-style: normal;
+  -webkit-text-stroke: 1px var(--jack-ember);
+}
+
+.jack-record-intro__copy > p {
+  max-width: 540px;
+  margin: 0;
+  color: #d1c5b6;
+  font-size: clamp(.98rem, 1.25vw, 1.13rem);
+  line-height: 1.8;
+}
+
+.jack-record-intro__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.7rem;
+  margin-top: 1.7rem;
+  padding: .95rem 1.1rem;
+  border: 1px solid #d0a3658a;
+  color: var(--jack-paper);
+  background: #100b08c9;
+  font: 700 .65rem/1.4 'Cinzel', serif;
+  letter-spacing: .12em;
+  text-decoration: none;
+  transition: border-color .25s, color .25s, background .25s;
+}
+
+.jack-record-intro__link:hover,
+.jack-record-intro__link:focus-visible {
+  border-color: var(--jack-ember);
+  color: #fff;
+  background: #35180e;
+}
+
+.jack-record-intro__link span {
+  color: var(--jack-ember);
+  font-size: 1rem;
+}
+
+.jack-record-intro__count {
+  position: absolute;
+  right: max(1.5rem, 7vw);
+  bottom: clamp(4rem, 7vw, 6.5rem);
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  color: #f2dfc5;
+  font: 600 .6rem/1.5 'Cinzel', serif;
+  letter-spacing: .13em;
+}
+
+.jack-record-intro__count b {
+  color: var(--jack-ember);
+  font: 800 3rem/.8 'Barlow Condensed', sans-serif;
+}
+
+.jack-record-intro__reticle {
+  position: absolute;
+  top: 23%;
+  right: 14%;
+  width: min(19vw, 250px);
+  aspect-ratio: 1;
+  border: 1px solid #d89b5655;
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px #d89b560a, 0 0 0 56px #d89b5607, inset 0 0 45px #d89b5610;
+  pointer-events: none;
+  animation: jack-reticle 7s ease-in-out infinite alternate;
+}
+
+.jack-record-intro__reticle::before,
+.jack-record-intro__reticle::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 135%;
+  height: 1px;
+  background: #d89b5645;
+  content: '';
+  transform: translate(-50%, -50%);
+}
+
+.jack-record-intro__reticle::after {
+  width: 1px;
+  height: 135%;
+}
+
+.jack-records {
+  width: min(1500px, 100%);
+  margin-inline: auto;
+  padding: clamp(4.5rem, 8vw, 8rem) max(1.25rem, 5vw) clamp(5rem, 9vw, 9rem);
+}
+
+.jack-records__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 2.4rem;
+}
+
+.jack-records__heading h2 {
+  margin: .85rem 0 0;
+  font: 800 clamp(3.8rem, 7vw, 7rem)/.82 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+.jack-records__heading h2 em {
+  color: var(--jack-gold);
+  font-size: .58em;
+  font-style: normal;
+  letter-spacing: .01em;
+}
+
+.jack-records__heading > p {
+  max-width: 390px;
+  margin: 0 0 .35rem;
+  color: var(--jack-muted);
+  font-size: .95rem;
+  line-height: 1.7;
+}
+
+.jack-gallery {
+  outline: none;
+}
+
+.jack-gallery__stage {
+  position: relative;
+  height: clamp(480px, 58vw, 790px);
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid #d4773c45;
+  background: #0c0907;
+  box-shadow: 0 24px 90px #0009;
+}
+
+.jack-gallery__stage::after {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 49.9%, #d58e4618 50%, transparent 50.2%);
+  content: '';
+  pointer-events: none;
+  animation: jack-scan 10s linear infinite;
+}
+
+.jack-gallery__hud {
+  position: absolute;
+  z-index: 6;
+  inset: 1.35rem 1.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #edc995;
+  font: 600 .55rem/1.5 'Cinzel', serif;
+  letter-spacing: .15em;
+  text-shadow: 0 2px 8px #000;
+  pointer-events: none;
+}
+
+.jack-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.025);
+  transition: opacity .45s ease, transform .7s ease, visibility .45s;
+}
+
+.jack-slide::before {
+  position: absolute;
+  z-index: -1;
+  inset: -7%;
+  background: var(--jack-slide-photo) center / cover no-repeat;
+  filter: blur(24px) brightness(.28) saturate(.7);
+  content: '';
+}
+
+.jack-slide.is-active {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.jack-slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 40px #000a);
+}
+
+.jack-slide figcaption {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  min-height: 105px;
+  padding: 3.4rem clamp(1rem, 3vw, 2.5rem) 1.25rem;
+  background: linear-gradient(0deg, #080605f2, #080605a8 58%, transparent);
+  color: var(--jack-paper);
+  font: 700 .75rem/1.4 'Cinzel', serif;
+  letter-spacing: .13em;
+}
+
+.jack-slide figcaption span {
+  color: var(--jack-ember);
+  font: 600 .62rem/1.5 Consolas, monospace;
+}
+
+.jack-gallery__controls {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin-top: 1.1rem;
+}
+
+.jack-gallery__controls > button {
+  min-width: 48px;
+  min-height: 46px;
+  border: 1px solid #cf79474d;
+  color: var(--jack-paper);
+  background: #100c09;
+  font: 500 1.1rem/1 'Consolas', monospace;
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s;
+}
+
+.jack-gallery__controls > button:hover,
+.jack-gallery__controls > button:focus-visible {
+  border-color: var(--jack-ember);
+  color: #fff;
+  background: #32170e;
+}
+
+.jack-gallery__controls > span {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  min-width: 76px;
+  justify-content: center;
+  color: var(--jack-gold);
+  font: 600 .7rem/1 Consolas, monospace;
+}
+
+.jack-gallery__controls > span i {
+  width: 18px;
+  height: 1px;
+  background: #9e653c;
+}
+
+.jack-gallery__controls .jack-gallery__expand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 190px;
+  margin-left: auto;
+  padding-inline: 1rem;
+  font: 700 .58rem/1.4 'Cinzel', serif;
+  letter-spacing: .1em;
+}
+
+.jack-gallery__expand span {
+  color: var(--jack-ember);
+  font-size: 1rem;
+}
+
+.jack-gallery__progress {
+  height: 2px;
+  margin: .95rem 0 1rem;
+  background: #bd80412d;
+}
+
+.jack-gallery__progress span {
+  display: block;
+  width: var(--jack-progress, 10%);
+  height: 100%;
+  background: var(--jack-ember);
+  box-shadow: 0 0 16px #df592f99;
+  transition: width .4s ease;
+}
+
+.jack-gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .65rem;
+}
+
+.jack-gallery__thumbs button {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #b8774645;
+  background: #100c09;
+  cursor: pointer;
+  opacity: .62;
+  transition: opacity .2s, border-color .2s, transform .2s;
+}
+
+.jack-gallery__thumbs button:hover,
+.jack-gallery__thumbs button.is-active {
+  border-color: var(--jack-ember);
+  opacity: 1;
+}
+
+.jack-gallery__thumbs button.is-active {
+  box-shadow: inset 0 -2px 0 var(--jack-ember);
+}
+
+.jack-gallery__thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jack-gallery__thumbs button span {
+  position: absolute;
+  inset: auto 0 0;
+  padding: .4rem .5rem;
+  color: #fff;
+  background: linear-gradient(0deg, #080605ed, transparent);
+  font: 600 .57rem/1 Consolas, monospace;
+  text-align: left;
+}
+
+.jack-gallery__dialog {
+  position: fixed;
+  width: min(96vw, 1500px);
+  max-width: none;
+  max-height: 95svh;
+  padding: 3.6rem 1rem 1rem;
+  overflow: auto;
+  border: 1px solid #d4773c8a;
+  color: var(--jack-paper);
+  background: #090705;
+  box-shadow: 0 25px 100px #000c;
+}
+
+.jack-gallery__dialog::backdrop {
+  background: #050403e8;
+  backdrop-filter: blur(8px);
+}
+
+.jack-gallery__dialog > button {
+  position: absolute;
+  top: .7rem;
+  right: .8rem;
+  padding: .65rem .85rem;
+  border: 1px solid #d4773c75;
+  color: var(--jack-paper);
+  background: #1c100a;
+  font: 700 .65rem 'Cinzel', serif;
+  cursor: pointer;
+}
+
+.jack-gallery__dialog > img {
+  display: block;
+  width: 100%;
+  max-height: calc(95svh - 7.5rem);
+  object-fit: contain;
+}
+
+.jack-gallery__dialog > p {
+  margin: .8rem 0 0;
+  color: var(--jack-gold);
+  font: 600 .7rem/1.5 'Cinzel', serif;
+  letter-spacing: .12em;
+}
+
+.jack-records-page :where(a, button, [tabindex="0"]):focus-visible {
+  outline: 2px solid var(--jack-gold);
+  outline-offset: 4px;
+}
+
+@keyframes jack-reticle {
+  from { transform: scale(.96); opacity: .48; }
+  to { transform: scale(1.04); opacity: .85; }
+}
+
+@keyframes jack-scan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+@media (max-width: 760px) {
+  .jack-records-page .profile-nav {
+    min-height: 60px;
+    padding-inline: 1rem;
+  }
+
+  .jack-records-page .profile-nav span {
+    display: none;
+  }
+
+  .jack-records-page .profile-nav a {
+    font-size: .53rem;
+    letter-spacing: .1em;
+  }
+
+  .jack-records-page .jack-records-main {
+    padding-top: 60px;
+  }
+
+  .jack-record-intro {
+    min-height: max(760px, 96svh);
+    padding: 8rem 1.2rem 3rem;
+  }
+
+  .jack-record-intro__portrait {
+    width: 100%;
+    object-position: 55% top;
+    opacity: .78;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .jack-record-intro::before {
+    background:
+      linear-gradient(0deg, #090705 0%, #090705ed 20%, #09070578 56%, #0907052b 100%),
+      linear-gradient(90deg, #09070565, transparent 100%);
+  }
+
+  .jack-record-intro__eyeline {
+    inset: 1.5rem 1.2rem auto;
+    font-size: .48rem;
+    letter-spacing: .1em;
+  }
+
+  .jack-record-intro__eyeline span:last-child {
+    display: none;
+  }
+
+  .jack-record-intro__copy {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .jack-record-intro h1 {
+    margin-block: .8rem 1rem;
+    font-size: clamp(5.2rem, 20vw, 7.5rem);
+  }
+
+  .jack-record-intro__copy > p {
+    max-width: 35rem;
+    font-size: .94rem;
+  }
+
+  .jack-record-intro__count {
+    right: 1.3rem;
+    bottom: 1.15rem;
+    font-size: .52rem;
+  }
+
+  .jack-record-intro__count b {
+    font-size: 2.1rem;
+  }
+
+  .jack-record-intro__reticle {
+    top: 18%;
+    right: -13%;
+    width: 55vw;
+  }
+
+  .jack-records {
+    padding: 4.5rem 1rem 5rem;
+  }
+
+  .jack-records__heading {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .jack-records__heading h2 {
+    font-size: clamp(3.8rem, 15vw, 5.8rem);
+  }
+
+  .jack-records__heading > p {
+    max-width: 34rem;
+    margin-top: 1.2rem;
+    font-size: .88rem;
+  }
+
+  .jack-gallery__stage {
+    height: min(68svh, 650px);
+    min-height: 430px;
+  }
+
+  .jack-gallery__hud {
+    inset: .9rem .85rem auto;
+    font-size: .47rem;
+    letter-spacing: .08em;
+  }
+
+  .jack-slide figcaption {
+    display: grid;
+    gap: .35rem;
+    min-height: 88px;
+    padding: 2.7rem 1rem .9rem;
+    font-size: .62rem;
+  }
+
+  .jack-gallery__controls {
+    gap: .5rem;
+  }
+
+  .jack-gallery__controls > button {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .jack-gallery__controls > span {
+    min-width: 66px;
+    font-size: .61rem;
+  }
+
+  .jack-gallery__controls .jack-gallery__expand {
+    min-width: 0;
+    gap: .7rem;
+    padding-inline: .65rem;
+    font-size: .48rem;
+  }
+
+  .jack-gallery__thumbs {
+    display: flex;
+    gap: .5rem;
+    overflow-x: auto;
+    padding: .2rem .1rem .6rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: #b85d32 #21160f;
+  }
+
+  .jack-gallery__thumbs button {
+    flex: 0 0 92px;
+    scroll-snap-align: start;
+  }
+
+  .jack-gallery__dialog {
+    width: 100vw;
+    max-height: 100svh;
+    height: 100svh;
+    padding: 3.6rem .6rem .8rem;
+    border: 0;
+  }
+
+  .jack-gallery__dialog > img {
+    max-height: calc(100svh - 7rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jack-records-page *,
+  .jack-records-page *::before,
+  .jack-records-page *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
