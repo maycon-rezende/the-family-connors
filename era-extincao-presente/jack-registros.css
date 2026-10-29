@@ -239,7 +239,7 @@
 
 .jack-gallery__stage {
   position: relative;
-  height: clamp(330px, 32vw, 470px);
+  height: clamp(430px, 40vw, 560px);
   overflow: hidden;
   isolation: isolate;
   border: 1px solid #d4773c45;
@@ -278,7 +278,7 @@
   grid-template-rows: minmax(0, 1fr) auto;
   justify-items: center;
   align-items: stretch;
-  padding: 3.6rem 1rem 0;
+  padding: 2.5rem 1rem 0;
   margin: 0;
   opacity: 0;
   visibility: hidden;
@@ -303,7 +303,7 @@
   display: block;
   width: auto;
   height: auto;
-  max-width: min(78%, 980px);
+  max-width: min(84%, 1000px);
   max-height: 100%;
   object-fit: contain;
   border: 1px solid #d4773c55;
@@ -607,8 +607,8 @@
   }
 
   .jack-gallery__stage {
-    height: min(45svh, 380px);
-    min-height: 280px;
+    height: min(58svh, 520px);
+    min-height: 350px;
   }
 
   .jack-gallery__hud {
