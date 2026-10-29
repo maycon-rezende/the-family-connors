@@ -576,6 +576,25 @@ a {
 .loss-grid i {
   margin-top: auto;
 }
+.losses-index-link {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 2rem auto 0;
+  padding: .9rem 1rem;
+  border: 1px solid #b84b3d88;
+  color: #e0c9ad;
+  font: 700 .55rem/1.4 Cinzel;
+  letter-spacing: .14em;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.losses-index-link:hover,.losses-index-link:focus-visible {
+  border-color: #c3905b;
+  background: #b84b3d19;
+}
+.losses-index-link span { color: #c96b58; font-size: .9rem; }
 .mission-section {
   position: relative;
   min-height: 100svh;

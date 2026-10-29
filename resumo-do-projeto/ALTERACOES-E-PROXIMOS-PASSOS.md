@@ -285,3 +285,10 @@
 
 - As oito imagens solo saíram do dossiê `pollyana-presente.html` e foram reunidas em `pollyana-registros.html` com cinco fotos adicionais do acervo, totalizando treze registros. A foto conjunta dos gêmeos permanece no dossiê; `cunhadas-presente.png` segue fora até confirmação da segunda pessoa.
 - O dossiê agora oferece chamada e link de rodapé para o álbum. A galeria mantém ameixa/âmbar, apresenta as fotos sem recorte, miniaturas, setas, teclado, gesto de toque e ampliação; nenhuma legenda atribui datas ou missões.
+
+## Atualização de 29 de outubro de 2026 — Memorial dos Hellsings
+
+- A lore foi atualizada conforme a definição do autor: Brian Taylor morreu após ser infectado em campo; John se sacrificou durante uma fuga para salvar muitas pessoas. As imagens de John continuam identificadas como anteriores à morte.
+- Foi criada `memorial.html`, com Brian primeiro e John em seguida, ligados aos arquivos individuais por âncoras próprias. Os dois perfis e o memorial das perdas na página dos Hellsings agora apontam para o memorial central.
+- A página também preserva a lembrança do noivo de Jully, cuja morte já constava na lore, e apresenta Mara Voss, aliada civil criada para o memorial, morta ao concluir uma transmissão de rota segura durante uma tempestade. Ela não entra na contagem oficial de integrantes nem de baixas Hellsings.
+- `era-extincao-presente/memorial-hellsings.css` define o estilo e os ajustes responsivos da nova página. Os arquivos das galerias do passado foram mantidos fora desta atualização.

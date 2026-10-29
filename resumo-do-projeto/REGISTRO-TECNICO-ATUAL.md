@@ -192,7 +192,7 @@ O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterai
 
 | Arquivo | Implementação |
 | --- | --- |
-| `john-presente.html` | Dossiê memorial de John: tecnologia e armamentos antes da última missão, com a baixa confirmada pela lore. |
+| `john-presente.html` | Dossiê memorial de John: tecnologia e armamentos antes da última fuga, com link ao Memorial dos Hellsings. |
 | `era-extincao-presente/john-presente.css` e `.js` | Identidade ciano/cobre, ficha de campo, efeitos de revelação e leitura operacional. |
 | `john-registros.html` | Arquivo independente com dez imagens de John anteriores à morte e um retrato associado de Amelia sem data identificada. |
 | `css/john-registros.css` e `js/john-registros.js` | Carrossel com imagem inteira, loop de 6,5 s, pausa por interação, pré-carregamento do próximo registro e lightbox nativo. |
@@ -201,11 +201,11 @@ O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterai
 
 | Arquivo | Implementação |
 | --- | --- |
-| `brian-presente.html` | Memorial individual com parceria de Brian e Jack no FBI, atuação como veterano e rastreador dos Hellsings e perda causada pela doença após a escassez de medicamentos. |
+| `brian-presente.html` | Memorial individual com parceria de Brian e Jack no FBI, atuação como veterano e rastreador dos Hellsings, infecção fatal e link ao Memorial dos Hellsings. |
 | `era-extincao-presente/brian-presente.css` | Identidade visual em bronze e azul-acinzentado, retratos sem recorte e layout responsivo. |
 | `img-hellsing/brian-taylor.png`, `brian-presente.png`, `brian-taylor-presente.png` e `brian-presente1.png` a `brian-presente3.png` | Seis registros visuais preservados no próprio memorial; as quatro imagens mais recentes mostram Brian em campo, sem datas ou operações identificadas. |
 
-O cartão de Brian na página inicial e a ficha do memorial dos Hellsings abrem `brian-presente.html`. O memorial de John também está ligado à ficha correspondente dos Hellsings.
+O cartão de Brian na página inicial e a ficha do memorial dos Hellsings abrem `brian-presente.html`. O dossiê de John está ligado à ficha correspondente dos Hellsings. `memorial.html` reúne as baixas oficiais de Brian e John, seguidas por lembranças de pessoas ligadas às rotas da equipe; `era-extincao-presente/memorial-hellsings.css` contém a identidade visual da página. Brian morreu após ser infectado em campo; John se sacrificou durante uma fuga para que muitas pessoas escapassem. Mara Voss é uma aliada civil criada para o memorial, não integrante oficial.
 
 Brian aparece como `HLS-09` no arquivo de comando (`js/hellsings-command.js`) e como `BT-09` no índice e no memorial do presente; a página individual preserva ambos os identificadores conforme o contexto.
 

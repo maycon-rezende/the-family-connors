@@ -8,6 +8,7 @@
 | `arquivo-passado.html` | Prólogo e entrada dos Arquivos do Passado |
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Centro de comando dos Hellsings |
+| `memorial.html` | Memorial central de Brian Taylor, John e outras pessoas perdidas nas rotas dos Hellsings |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
@@ -44,6 +45,7 @@
 | `ariani-presente.html` | `ariani-fotos.html` | `era-extincao-presente/ariani-presente.css`, `css/ariani-fotos.css`, `js/ariani-fotos.js` |
 | `britney-presente.html` | `britney-fotos.html` | `era-extincao-presente/britney-presente.css`, `css/britney-registros.css`, `js/britney-registros.js` |
 | `bobby-presente.html` | `bobby-registros.html` | `era-extincao-presente/bobby-presente.css`, `css/bobby-registros.css`, `js/bobby-registros.js` |
+| `brian-presente.html`, `john-presente.html` | `memorial.html` | `era-extincao-presente/brian-presente.css`, `era-extincao-presente/john-presente.css`, `era-extincao-presente/memorial-hellsings.css` |
 
 Os arquivos fotográficos listados usam carrosséis independentes, controles de teclado/mouse, pausa por foco, diálogo de ampliação e `object-fit: contain` nos registros em que o enquadramento completo é obrigatório. A estrutura detalhada está em `REGISTRO-TECNICO-ATUAL.md`.
 

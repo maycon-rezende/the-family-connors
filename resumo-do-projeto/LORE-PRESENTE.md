@@ -106,13 +106,15 @@ As duas sobreviveram porque aprenderam a carregar uma à outra.
 
 Nem todos atravessaram os anos de devastação.
 
-Brian, o integrante mais velho da equipe, morreu em decorrência de uma doença contra a qual lutava havia muitos anos. Mesmo com todo o conhecimento de Alice, o novo mundo já não possuía os medicamentos e recursos necessários para salvá-lo.
+Brian Taylor foi infectado durante uma saída de campo. Conseguiu regressar ao bunker e avisar a equipe, mas a infecção avançou enquanto Alice e os demais usavam os recursos disponíveis para cuidar dele. Brian morreu na enfermaria. Seus mapas e anotações de rota ficaram com Jack.
 
-John foi mordido durante uma missão. Sabendo o que aconteceria, escolheu transformar os últimos minutos de consciência em uma oportunidade para os demais. Serviu de isca e atraiu a ameaça para longe, permitindo que os Hellsings escapassem.
+Durante uma fuga em que muitas pessoas precisavam alcançar uma saída, John foi mordido e se sacrificou para salvar o grupo. Ficou para trás e atraiu a horda para longe da rota, dando aos demais tempo para escapar.
 
-As imagens de John no presente foram registradas antes de sua morte.
+As imagens de John no presente foram registradas antes de sua morte. Os dois integrantes têm registros no novo [Memorial dos Hellsings](../memorial.html), que também reúne lembranças de outras pessoas perdidas ao longo das rotas.
 
-Seus nomes continuam registrados no bunker e no código da organização.
+Jully perdeu o noivo durante um ataque de horda: ele protegeu Jully e o restante do grupo para que pudessem escapar. Seu nome ainda não foi definido. Mara Voss, operadora civil de rádio criada para o memorial, morreu quando uma estrutura de retransmissão cedeu durante uma tempestade de areia, após ela orientar um comboio para uma saída segura. Mara é uma aliada lembrada no memorial, não integrante oficial dos Hellsings.
+
+Os nomes de Brian e John continuam registrados no bunker e no código da organização.
 
 ## A busca pela terra livre
 
