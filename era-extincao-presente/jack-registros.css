@@ -40,7 +40,7 @@
   position: relative;
   display: grid;
   align-content: end;
-  min-height: clamp(620px, 87svh, 940px);
+  min-height: clamp(520px, 68svh, 760px);
   padding: clamp(9rem, 15vh, 12rem) max(1.5rem, 7vw) clamp(4rem, 7vw, 6.5rem);
   isolation: isolate;
   overflow: hidden;
@@ -52,7 +52,7 @@
   position: absolute;
   z-index: -2;
   inset: 0 0 0 auto;
-  width: min(68%, 1120px);
+  width: min(58%, 920px);
   height: 100%;
   object-fit: cover;
   object-position: 54% 18%;
@@ -239,7 +239,7 @@
 
 .jack-gallery__stage {
   position: relative;
-  height: clamp(480px, 58vw, 790px);
+  height: clamp(390px, 43vw, 620px);
   overflow: hidden;
   isolation: isolate;
   border: 1px solid #d4773c45;
@@ -523,7 +523,7 @@
   }
 
   .jack-record-intro {
-    min-height: max(760px, 96svh);
+    min-height: max(650px, 82svh);
     padding: 8rem 1.2rem 3rem;
   }
 
@@ -602,8 +602,8 @@
   }
 
   .jack-gallery__stage {
-    height: min(68svh, 650px);
-    min-height: 430px;
+    height: min(54svh, 460px);
+    min-height: 320px;
   }
 
   .jack-gallery__hud {
