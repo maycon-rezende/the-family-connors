@@ -309,3 +309,10 @@
 - Foi criado um mural em formato de tópico do fórum com homenagens de Jack, Alice e John. As mensagens são identificadas como reconstruções literárias baseadas nos laços e fatos já registrados.
 - O vídeo de despedida agora encerra a homenagem e permanece sem áudio no navegador, mesmo se o controle de volume for acionado. O memorial de John continua intacto.
 - `js/memorial-video.js` mantém o vídeo silenciado; o memorial carrega uma única cópia de `js/site-cursor.js`.
+
+## Atualização de 30 de outubro de 2026 — homenagens da equipe, das famílias e do comboio
+
+- O tópico de Brian cresceu de três para 24 mensagens: reúne os Hellsings originais, Ariani, Britney e Jully; os nove filhos com nome ou vínculo familiar já preservados no projeto; e uma mensagem coletiva das pessoas do comboio.
+- As homenagens foram escritas com vozes distintas e identificadas como reconstruções literárias. John deixa uma mensagem claramente situada enquanto ainda estava vivo, antes de sua fuga final.
+- Foram incluídos Jack, Alice, Mark, Ariani, John, Bobby Lee, Naomi, Hellen Wren, Joey, Dimitri, Clhoe, Luke, Britney e Jully; os descendentes listados seguem a lore existente, incluindo o filho de Britney e Bobby sem nome oficial definido.
+- A formação adaptável do fórum em `era-extincao-presente/memorial-hellsings.css` mantém os grupos legíveis em celular, tablet e desktop. Não foram criados filhos ou nomes que ainda não constam da lore.

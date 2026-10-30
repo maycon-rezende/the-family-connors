@@ -80,6 +80,10 @@ a { color: inherit; }
 .memorial-brian-timeline li p { max-width: 650px; margin: 0; color: #bdb5a9; font-size: .88rem; line-height: 1.8; }
 .memorial-brian-tributes { background: #100e0c; }
 .memorial-brian__section-heading--thread { position: relative; padding-left: 1.25rem; border-left: 1px solid var(--mem-red); }
+.memorial-brian-forum__group + .memorial-brian-forum__group { margin-top: clamp(3.5rem, 6vw, 5.5rem); padding-top: clamp(2rem, 4vw, 3.5rem); border-top: 1px solid #c3905b32; }
+.memorial-brian-forum__heading { max-width: 1180px; margin: 0 auto 1.4rem; }
+.memorial-brian-forum__heading>span { color: var(--mem-copper); font: 500 .5rem/1.6 'DM Mono', monospace; letter-spacing: .13em; }
+.memorial-brian-forum__heading h5 { margin: .45rem 0 0; color: var(--mem-paper); font: 700 clamp(1.5rem, 2.5vw, 2.2rem)/1.15 'Cinzel', serif; }
 .memorial-brian-tributes__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; max-width: 1180px; margin: 0 auto; }
 .memorial-brian-note { position: relative; display: flex; flex-direction: column; min-height: 300px; padding: 1.5rem; border: 1px solid #c3905b3d; background: linear-gradient(145deg, #17120e, #0c0a09 76%); }
 .memorial-brian-note::before { position: absolute; top: -1px; left: 1.5rem; width: 3.5rem; height: 2px; background: var(--mem-red); content: ''; }
@@ -92,6 +96,11 @@ a { color: inherit; }
 .memorial-brian-note--alice>span,.memorial-brian-note--alice footer small { color: var(--mem-cyan); }
 .memorial-brian-note--john { border-color: #b6533e45; }
 .memorial-brian-note--john::before { background: #d0644d; }
+.memorial-brian-forum__group--people .memorial-brian-tributes__grid { grid-template-columns: minmax(0, 1fr); }
+.memorial-brian-note--collective { max-width: 880px; min-height: 260px; margin: 0 auto; border-color: #8bbfc34a; background: linear-gradient(110deg, #101817, #0b0a09 80%); }
+.memorial-brian-note--collective::before { width: 5.5rem; background: var(--mem-cyan); }
+.memorial-brian-note--collective>span,.memorial-brian-note--collective footer small { color: var(--mem-cyan); }
+.memorial-brian-note--collective blockquote { font-size: clamp(1.05rem, 1.7vw, 1.35rem); }
 .memorial-brian-film { background: radial-gradient(ellipse at 50% 0, #8c392018, transparent 45%), #080706; }
 .memorial-brian-film>header { max-width: 1180px; margin: 0 auto 2rem; }
 .memorial-brian-film h4 { margin-bottom: .4rem; font-size: clamp(3.5rem, 7vw, 6rem); }
@@ -126,6 +135,10 @@ a { color: inherit; }
 .memorial-close>a:hover { color: var(--mem-red); }
 .memorial-footer { min-height: 86px; border-top: 1px solid var(--mem-line); }
 :where(a):focus-visible { outline: 2px solid var(--mem-copper); outline-offset: 4px; }
+
+@media (max-width: 1080px) {
+  .memorial-brian-tributes__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 820px) {
   .memorial-hero { min-height: max(690px, 90svh); padding: 9rem 1.3rem 4rem; }
