@@ -8,7 +8,7 @@
 | `arquivo-passado.html` | Prólogo e entrada dos Arquivos do Passado |
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Centro de comando dos Hellsings |
-| `memorial.html` | Memorial central de Brian Taylor, John e outras pessoas perdidas nas rotas dos Hellsings |
+| `memorial.html` | Memorial central de Brian Taylor (com vídeo de despedida), John e outras pessoas perdidas nas rotas dos Hellsings |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |

@@ -298,3 +298,7 @@
 - A galeria de Brian passou de seis para quinze imagens, com retratos de campo, cenas com Jack e registros da enfermaria. As legendas descrevem apenas o que aparece nas imagens, sem atribuir datas ou novas operações.
 - O arquivo fotográfico de Lana passou a reunir 21 registros ampliáveis: imagens individuais, cenas de campo, alojamento e imagens com Nathan. A imagem `lana-exploracao-2.png` é uma cópia exata do retrato de capa e foi deixada fora da grade para evitar repetição.
 - Foi acrescentada uma seção separada de dezesseis registros de Lana e Pollyana como cunhadas. Ela reúne chegada, patrulha, busca de suprimentos e travessia; a cópia exata `lana-polly.png` não foi duplicada. Todas as imagens podem ser ampliadas pelo mesmo visualizador da galeria.
+
+## Atualização de 30 de outubro de 2026 — vídeo de despedida de Brian
+
+- O vídeo `video/despedida.mp4` foi incluído no registro de Brian em `memorial.html`, com controles de reprodução. O retrato que aparecia nesse bloco já faz parte da galeria individual de Brian e foi retirado do memorial central; a imagem de John foi mantida.
