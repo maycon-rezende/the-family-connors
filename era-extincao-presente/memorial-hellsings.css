@@ -101,6 +101,40 @@ a { color: inherit; }
 .memorial-brian-note--collective::before { width: 5.5rem; background: var(--mem-cyan); }
 .memorial-brian-note--collective>span,.memorial-brian-note--collective footer small { color: var(--mem-cyan); }
 .memorial-brian-note--collective blockquote { font-size: clamp(1.05rem, 1.7vw, 1.35rem); }
+.memorial-brian-journal { max-width: 1180px; margin: 0 auto; }
+.memorial-brian-journal [hidden] { display: none !important; }
+.memorial-brian-journal__cover { position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: 100%; min-height: 365px; padding: clamp(2rem, 6vw, 5rem) clamp(2rem, 8vw, 7rem); overflow: hidden; border: 1px solid #c3905b83; color: var(--mem-paper); text-align: left; cursor: pointer; background: linear-gradient(110deg, #251a12 0%, #17110d 48%, #0e0c0a 100%); box-shadow: inset 12px 0 20px #0008, inset 15px 0 #8b623c44, 0 24px 65px #0008; transition: border-color .25s, transform .25s, box-shadow .25s; }
+.memorial-brian-journal__cover::before { position: absolute; inset: 1rem; border: 1px solid #c3905b32; content: ''; pointer-events: none; }
+.memorial-brian-journal__cover::after { position: absolute; inset: 0 0 0 47%; background: repeating-linear-gradient(0deg, transparent 0 31px, #c3905b13 32px 33px); content: ''; opacity: .7; mask-image: linear-gradient(90deg, transparent, #000 35%, #000); pointer-events: none; }
+.memorial-brian-journal__cover:hover,.memorial-brian-journal__cover:focus-visible { transform: translateY(-3px); border-color: var(--mem-copper); box-shadow: inset 12px 0 20px #0008, inset 15px 0 #b6533e88, 0 30px 75px #000b; }
+.memorial-brian-journal__eyebrow,.memorial-brian-journal__description,.memorial-brian-journal__action { position: relative; z-index: 1; font-family: 'DM Mono', monospace; letter-spacing: .13em; }
+.memorial-brian-journal__eyebrow { color: var(--mem-copper); font-size: .55rem; }
+.memorial-brian-journal__title { position: relative; z-index: 1; display: block; margin: 1.4rem 0 .9rem; font: 800 clamp(3.4rem, 7vw, 6.4rem)/.83 'Barlow Condensed', Impact, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+.memorial-brian-journal__title em { color: var(--mem-copper); font-style: normal; }
+.memorial-brian-journal__description { max-width: 480px; color: #c9bdad; font-size: .65rem; line-height: 1.8; letter-spacing: .04em; }
+.memorial-brian-journal__action { display: flex; align-items: center; gap: 1rem; margin-top: 1.8rem; padding: .8rem 1rem; border: 1px solid #c3905b77; color: var(--mem-paper); font-size: .53rem; transition: background .2s, border-color .2s; }
+.memorial-brian-journal__action b { color: var(--mem-red); font-size: .95rem; }
+.memorial-brian-journal__cover:hover .memorial-brian-journal__action { border-color: var(--mem-red); background: #b6533e18; }
+.memorial-brian-journal__seal { position: absolute; z-index: 1; top: 50%; right: clamp(2.2rem, 10vw, 8rem); display: grid; width: clamp(100px, 14vw, 168px); aspect-ratio: 1; place-content: center; border: 1px solid #b6533e91; border-radius: 50%; color: #d9b994; font: 500 .55rem/1.3 'DM Mono', monospace; letter-spacing: .2em; text-align: center; transform: translateY(-50%) rotate(-12deg); box-shadow: 0 0 0 10px #b6533e12, inset 0 0 25px #b6533e15; }
+.memorial-brian-journal__seal b { color: var(--mem-red); font: 800 2.4rem/.9 'Barlow Condensed', sans-serif; }
+.memorial-brian-journal__reader { margin-top: 1.2rem; padding: clamp(.8rem, 2vw, 1.3rem); border: 1px solid #c3905b50; background: linear-gradient(145deg, #15110d, #090807); box-shadow: 0 20px 65px #0008; }
+.memorial-brian-journal__toolbar { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .9rem 1rem 1.1rem; border-bottom: 1px solid #c3905b36; color: #ae9a80; font: 500 .48rem/1.5 'DM Mono', monospace; letter-spacing: .12em; }
+.memorial-brian-journal__toolbar b { color: var(--mem-red); font-size: .66rem; white-space: nowrap; }
+.memorial-brian-journal__toolbar span:last-child { color: var(--mem-cyan); text-align: right; }
+.memorial-brian-journal__page { min-height: 350px; padding: clamp(1.2rem, 4vw, 3rem) 0; background: repeating-linear-gradient(0deg, transparent 0 35px, #c3905b0b 36px 37px); }
+.memorial-brian-journal__page.is-turning { animation: memorial-page-turn .42s ease both; transform-origin: left center; }
+.memorial-brian-journal__page .memorial-brian-forum__group[hidden],.memorial-brian-journal__page .memorial-brian-note[hidden] { display: none !important; }
+.memorial-brian-journal__page .memorial-brian-forum__group { max-width: 900px; margin: 0 auto; }
+.memorial-brian-journal__page .memorial-brian-forum__heading { margin-bottom: 1rem; }
+.memorial-brian-journal__page .memorial-brian-tributes__grid { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
+.memorial-brian-journal__page .memorial-brian-note { min-height: 325px; padding: clamp(1.6rem, 5vw, 3.4rem); background: linear-gradient(145deg, #17130f, #0b0a09 76%), repeating-linear-gradient(0deg, transparent 0 34px, #c3905b0a 35px 36px); }
+.memorial-brian-journal__page .memorial-brian-note blockquote { max-width: 730px; font-size: clamp(1.12rem, 2vw, 1.5rem); line-height: 1.9; }
+.memorial-brian-journal__controls { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: 1rem 0 .4rem; border-top: 1px solid #c3905b36; }
+.memorial-brian-journal__controls button,.memorial-brian-journal__close { min-height: 44px; padding: .75rem 1rem; border: 1px solid #c3905b6b; background: #0b0908; color: #e7d6c1; font: 700 .51rem/1.4 'DM Mono', monospace; letter-spacing: .1em; cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
+.memorial-brian-journal__controls button:hover:not(:disabled),.memorial-brian-journal__controls button:focus-visible,.memorial-brian-journal__close:hover { border-color: var(--mem-red); color: #fff; background: #28120e; }
+.memorial-brian-journal__controls button:disabled { opacity: .38; cursor: not-allowed; }
+.memorial-brian-journal__close { display: block; margin: .7rem auto 0; border-color: transparent; background: transparent; color: #a99b89; }
+@keyframes memorial-page-turn { from { opacity: .35; transform: perspective(900px) rotateY(-5deg) translateX(12px); } to { opacity: 1; transform: perspective(900px) rotateY(0) translateX(0); } }
 .memorial-brian-film { background: radial-gradient(ellipse at 50% 0, #8c392018, transparent 45%), #080706; }
 .memorial-brian-film>header { max-width: 1180px; margin: 0 auto 2rem; }
 .memorial-brian-film h4 { margin-bottom: .4rem; font-size: clamp(3.5rem, 7vw, 6rem); }
@@ -165,6 +199,15 @@ a { color: inherit; }
   .memorial-brian__road,.memorial-brian-tributes,.memorial-brian-film { padding: 3.5rem 1.4rem; }
   .memorial-brian-tributes__grid { grid-template-columns: 1fr; }
   .memorial-brian-note { min-height: 240px; }
+  .memorial-brian-journal__cover { min-height: 330px; padding: 2.2rem 1.6rem; }
+  .memorial-brian-journal__title { max-width: 75%; font-size: clamp(3.2rem, 12vw, 5.2rem); }
+  .memorial-brian-journal__description { max-width: 70%; font-size: .57rem; }
+  .memorial-brian-journal__seal { top: 2.5rem; right: 2rem; width: 74px; transform: rotate(-12deg); }
+  .memorial-brian-journal__seal b { font-size: 1.6rem; }
+  .memorial-brian-journal__toolbar { flex-wrap: wrap; }
+  .memorial-brian-journal__page { min-height: 0; }
+  .memorial-brian-journal__page .memorial-brian-note { min-height: 280px; padding: 1.5rem; }
+  .memorial-brian-journal__controls button { min-height: 46px; padding: .7rem .6rem; font-size: .44rem; }
 }
 
 @media (max-width: 600px) {

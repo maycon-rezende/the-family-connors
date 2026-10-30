@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John e as pessoas que cruzaram a rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=3" />
+    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=4" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
   </head>
   <body class="hellsings-memorial-page">
@@ -94,14 +94,30 @@
 
           <section class="memorial-brian-tributes" aria-labelledby="memorial-brian-tributes-title">
             <header class="memorial-brian__section-heading memorial-brian__section-heading--thread">
-              <span class="memorial-kicker">FÓRUM DE MEMÓRIAS // TÓPICO HLS-09 // 24 RESPOSTAS</span>
-              <h4 id="memorial-brian-tributes-title">Uma equipe inteira<br /><em>sentiu sua falta.</em></h4>
-              <p>Homenagens reconstruídas a partir dos vínculos e fatos já registrados. Cada voz guarda um jeito diferente de sentir a mesma ausência.</p>
+              <span class="memorial-kicker">CADERNO DE MEMÓRIAS // ARQUIVO HLS-09 // 24 PÁGINAS</span>
+              <h4 id="memorial-brian-tributes-title">Vozes que ficaram<br /><em>quando ele partiu.</em></h4>
+              <p>As homenagens foram guardadas como páginas de um caderno de campo. Abra, leia uma voz de cada vez e siga para a próxima folha.</p>
             </header>
 
+            <div class="memorial-brian-journal" data-brian-journal>
+              <button class="memorial-brian-journal__cover" type="button" data-journal-open aria-expanded="false" aria-controls="memorial-brian-journal-reader">
+                <span class="memorial-brian-journal__eyebrow">ARQUIVO PESSOAL // BT-09</span>
+                <span class="memorial-brian-journal__title">O caderno<br /><em>de quem ficou.</em></span>
+                <span class="memorial-brian-journal__description">24 páginas. Uma equipe inteira tentando aprender a continuar sem Brian.</span>
+                <span class="memorial-brian-journal__action">ABRIR O CADERNO <b aria-hidden="true">↗</b></span>
+                <span class="memorial-brian-journal__seal" aria-hidden="true">BT<br /><b>09</b></span>
+              </button>
+
+              <div class="memorial-brian-journal__reader" id="memorial-brian-journal-reader" data-journal-reader hidden>
+                <div class="memorial-brian-journal__toolbar">
+                  <span>FOLHAS PRESERVADAS // HLS-09</span>
+                  <b data-journal-counter aria-live="polite">01 / 24</b>
+                  <span data-journal-category>EQUIPE E FAMÍLIA</span>
+                </div>
+                <div class="memorial-brian-journal__page" data-journal-page aria-live="polite" aria-atomic="true">
             <section class="memorial-brian-forum__group" aria-labelledby="memorial-brian-team-title">
               <header class="memorial-brian-forum__heading">
-                <span>RESPOSTAS 01–14 // FORMAÇÃO, FAMÍLIA E AMIGOS</span>
+                <span>PÁGINAS 01–14 // FORMAÇÃO, FAMÍLIA E AMIGOS</span>
                 <h5 id="memorial-brian-team-title">Quem dividiu a estrada com ele</h5>
               </header>
               <div class="memorial-brian-tributes__grid">
@@ -180,7 +196,7 @@
 
             <section class="memorial-brian-forum__group" aria-labelledby="memorial-brian-children-title">
               <header class="memorial-brian-forum__heading">
-                <span>RESPOSTAS 15–23 // A GERAÇÃO QUE VEIO DEPOIS</span>
+                <span>PÁGINAS 15–23 // A GERAÇÃO QUE VEIO DEPOIS</span>
                 <h5 id="memorial-brian-children-title">Os filhos também lembram</h5>
               </header>
               <div class="memorial-brian-tributes__grid">
@@ -234,7 +250,7 @@
 
             <section class="memorial-brian-forum__group memorial-brian-forum__group--people" aria-labelledby="memorial-brian-people-title">
               <header class="memorial-brian-forum__heading">
-                <span>RESPOSTA 24 // VOZES DO COMBOIO</span>
+                <span>PÁGINA 24 // VOZES DO COMBOIO</span>
                 <h5 id="memorial-brian-people-title">De quem encontrou uma rota</h5>
               </header>
               <div class="memorial-brian-tributes__grid">
@@ -245,6 +261,14 @@
                 </article>
               </div>
             </section>
+                </div>
+                <nav class="memorial-brian-journal__controls" aria-label="Navegação do caderno de homenagens">
+                  <button type="button" data-journal-prev disabled>← FOLHA ANTERIOR</button>
+                  <button type="button" data-journal-next>PRÓXIMA FOLHA →</button>
+                </nav>
+                <button class="memorial-brian-journal__close" type="button" data-journal-close>FECHAR O CADERNO</button>
+              </div>
+            </div>
           </section>
 
           <section class="memorial-brian-film" aria-labelledby="memorial-brian-film-title">
@@ -321,5 +345,6 @@
     </footer>
     <script src="js/site-cursor.js" defer></script>
     <script src="js/memorial-video.js" defer></script>
+    <script src="js/memorial-journal.js" defer></script>
   </body>
 </html>

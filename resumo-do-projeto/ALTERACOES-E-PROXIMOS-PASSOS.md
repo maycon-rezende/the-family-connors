@@ -316,3 +316,9 @@
 - As homenagens foram escritas com vozes distintas e identificadas como reconstruções literárias. John deixa uma mensagem claramente situada enquanto ainda estava vivo, antes de sua fuga final.
 - Foram incluídos Jack, Alice, Mark, Ariani, John, Bobby Lee, Naomi, Hellen Wren, Joey, Dimitri, Clhoe, Luke, Britney e Jully; os descendentes listados seguem a lore existente, incluindo o filho de Britney e Bobby sem nome oficial definido.
 - A formação adaptável do fórum em `era-extincao-presente/memorial-hellsings.css` mantém os grupos legíveis em celular, tablet e desktop. Não foram criados filhos ou nomes que ainda não constam da lore.
+
+## Atualização de 30 de outubro de 2026 — caderno interativo de homenagens
+
+- O mural de 24 respostas foi redesenhado como um caderno de memórias: a capa abre a leitura, e cada homenagem aparece sozinha em sua página.
+- Contador, categoria da página, botões de folha anterior/próxima, suporte às setas do teclado e Escape permitem acompanhar o caderno sem despejar todas as mensagens na tela.
+- O vídeo de despedida permanece depois do caderno como encerramento do memorial.
