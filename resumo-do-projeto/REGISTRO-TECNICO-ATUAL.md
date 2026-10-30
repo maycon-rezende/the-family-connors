@@ -201,7 +201,7 @@ O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterai
 
 | Arquivo | Implementação |
 | --- | --- |
-| `brian-presente.html` | Memorial individual com parceria de Brian e Jack no FBI, atuação como veterano e rastreador dos Hellsings, infecção fatal e link ao Memorial dos Hellsings. |
+| `brian-presente.html` | Memorial individual com parceria de Brian e Jack no FBI, atuação como veterano e rastreador dos Hellsings, infecção fatal, link ao Memorial dos Hellsings e galeria integrada com quinze registros. |
 | `era-extincao-presente/brian-presente.css` | Identidade visual em bronze e azul-acinzentado, retratos sem recorte e layout responsivo. |
 | `img-hellsing/brian-taylor.png`, `brian-presente.png`, `brian-taylor-presente.png` e `brian-presente1.png` a `brian-presente3.png` | Seis registros visuais preservados no próprio memorial; as quatro imagens mais recentes mostram Brian em campo, sem datas ou operações identificadas. |
 
@@ -245,7 +245,7 @@ Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa
 | --- | --- | --- |
 | Filhos de Jack e Alice | `filhos-connor.html`, `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html`, `isolde-presente.html` | Ordem aplicada: Alucard, Diana, Nicolai, Mary, Isolde. |
 | Filhos de Mark e Ariani | `filhos-mark-ariani.html`, `pollyana-presente.html`, `pollyana-registros.html`, `nathan-presente.html`, `nathan-registros.html` | Três descendentes confirmados; arquivos individuais de Pollyana e Nathan abertos, arquivo visual de James selado. Nathan é atirador de precisão; seu álbum separado reúne dez imagens solo sem recorte e usa identidade verde-fósforo, retrato de fundo e efeitos de mira. Pollyana tem dossiê familiar ameixa/âmbar, álbum próprio com treze imagens individuais e uma proposta revisável de negociação de passagens, ainda não canônica. |
-| Esposa de Nathan | `lana-presente.html`, `era-extincao-presente/lana-presente.css/js` | Dossiê próprio de Lana Whitmore, com retrato de capa, seis fotos solo ampliáveis e dois registros do casal; origem britânica e casamento informados pelo autor, sobrenome e história criados nesta etapa. |
+| Esposa de Nathan | `lana-presente.html`, `era-extincao-presente/lana-presente.css/js` | Dossiê próprio de Lana Whitmore, com retrato de capa, galeria ampliável de 21 registros e seção própria com dezesseis imagens dela e de Pollyana como cunhadas; origem britânica e casamento informados pelo autor, sobrenome e história criados nesta etapa. |
 | Efeitos compartilhados | `era-extincao-presente/lineage-effects.css/js` | Partículas, varredura, revelação por observador, cursor em mouse/caneta e redução de movimento. |
 
 As páginas individuais dos herdeiros têm detalhes específicos — por exemplo, a ampulheta de Alucard, a transmissão de combate de Diana, o arquivo policial de Sally, a bússola de Mary, o carrossel de Isolde e o álbum separado de Nathan em `nathan-registros.html`, controlado por `era-extincao-presente/nathan-presente.js`. Consultar `GUIA-TECNICO-HERDEIROS.md` antes de alterar essas páginas.

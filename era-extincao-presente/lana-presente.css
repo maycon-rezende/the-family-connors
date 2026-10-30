@@ -78,6 +78,9 @@ body.lana-page { margin: 0; min-width: 320px; overflow-x: hidden; background: #0
 .lana-archive__item figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; min-height: 55px; padding: .9rem .45rem .4rem; }
 .lana-archive__item figcaption span { color: #9cc3a8; font: 500 .56rem/1.5 'DM Mono', Consolas, monospace; letter-spacing: .1em; white-space: nowrap; }
 .lana-archive__item figcaption strong { color: #eee9dc; font-size: .78rem; font-weight: 600; text-align: right; }
+.lana-archive__more { display: flex; width: max-content; margin: 0 0 1.5rem auto; }
+.lana-sisters { border-top: 1px solid #d2b27d45; background: radial-gradient(circle at 16% 20%, #ba9b6422, transparent 34%), #091411; }
+.lana-sisters .lana-archive__head h2 em { color: #b9d1b5; }
 
 .lana-bond { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; background: radial-gradient(circle at 65% 75%, #9a724c25, transparent 34%), #080f0e; }
 .lana-bond__photos { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: end; gap: .8rem; }

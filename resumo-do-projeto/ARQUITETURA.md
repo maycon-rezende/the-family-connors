@@ -45,6 +45,8 @@
 | `ariani-presente.html` | `ariani-fotos.html` | `era-extincao-presente/ariani-presente.css`, `css/ariani-fotos.css`, `js/ariani-fotos.js` |
 | `britney-presente.html` | `britney-fotos.html` | `era-extincao-presente/britney-presente.css`, `css/britney-registros.css`, `js/britney-registros.js` |
 | `bobby-presente.html` | `bobby-registros.html` | `era-extincao-presente/bobby-presente.css`, `css/bobby-registros.css`, `js/bobby-registros.js` |
+| `brian-presente.html` | Arquivo visual integrado com quinze registros | `era-extincao-presente/brian-presente.css` |
+| `lana-presente.html` | Galeria de 21 registros e arquivo de dezesseis imagens com Pollyana | `era-extincao-presente/lana-presente.css`, `era-extincao-presente/lana-presente.js` |
 | `brian-presente.html`, `john-presente.html` | `memorial.html` | `era-extincao-presente/brian-presente.css`, `era-extincao-presente/john-presente.css`, `era-extincao-presente/memorial-hellsings.css` |
 
 Os arquivos fotográficos listados usam carrosséis independentes, controles de teclado/mouse, pausa por foco, diálogo de ampliação e `object-fit: contain` nos registros em que o enquadramento completo é obrigatório. A estrutura detalhada está em `REGISTRO-TECNICO-ATUAL.md`.
@@ -59,7 +61,7 @@ Os arquivos fotográficos listados usam carrosséis independentes, controles de 
 - `filhos-mark-ariani.html`: central dos arquivos de Pollyana e Nathan, filhos de Mark e Ariani.
 - `pollyana-presente.html` e `nathan-presente.html`: dossiês individuais da segunda linhagem. A galeria solo de Pollyana está em `pollyana-registros.html`, com treze imagens; sua proposta revisável de função narrativa consta em `POLLYANA-LORE-PROPOSTA.md`.
 - `nathan-registros.html`: álbum individual de dez imagens de Nathan, separado do dossiê narrativo e sem registros de outros personagens.
-- `lana-presente.html`: dossiê da esposa britânica de Nathan, com retrato de capa, seis fotos solo ampliáveis e dois registros do casal; o vínculo parte do arquivo de Nathan.
+- `lana-presente.html`: dossiê da esposa britânica de Nathan, com retrato de capa, 21 registros fotográficos ampliáveis, arquivo separado de dezesseis imagens com Pollyana e acesso a partir do perfil de Nathan.
 - `alucard-presente.html`, `diana-presente.html`, `nicolai-presente.html`, `mary-presente.html` e `isolde-presente.html`: arquivos individuais dos cinco filhos, na ordem oficial da linhagem.
 - `diana-presente.html`: dossiê de combate com doutrina, matriz de proficiência e transmissão visual organizada.
 - `isolde-presente.html`: arquivo individual com capa exclusiva e registros fotográficos em looping.

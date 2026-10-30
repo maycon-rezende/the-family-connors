@@ -292,3 +292,9 @@
 - Foi criada `memorial.html`, com Brian primeiro e John em seguida, ligados aos arquivos individuais por âncoras próprias. Os dois perfis e o memorial das perdas na página dos Hellsings agora apontam para o memorial central.
 - A página também preserva a lembrança do noivo de Jully, cuja morte já constava na lore, e apresenta Mara Voss, aliada civil criada para o memorial, morta ao concluir uma transmissão de rota segura durante uma tempestade. Ela não entra na contagem oficial de integrantes nem de baixas Hellsings.
 - `era-extincao-presente/memorial-hellsings.css` define o estilo e os ajustes responsivos da nova página. Os arquivos das galerias do passado foram mantidos fora desta atualização.
+
+## Atualização de 30 de outubro de 2026 — novos registros de Lana e Brian
+
+- A galeria de Brian passou de seis para quinze imagens, com retratos de campo, cenas com Jack e registros da enfermaria. As legendas descrevem apenas o que aparece nas imagens, sem atribuir datas ou novas operações.
+- O arquivo fotográfico de Lana passou a reunir 21 registros ampliáveis: imagens individuais, cenas de campo, alojamento e imagens com Nathan. A imagem `lana-exploracao-2.png` é uma cópia exata do retrato de capa e foi deixada fora da grade para evitar repetição.
+- Foi acrescentada uma seção separada de dezesseis registros de Lana e Pollyana como cunhadas. Ela reúne chegada, patrulha, busca de suprimentos e travessia; a cópia exata `lana-polly.png` não foi duplicada. Todas as imagens podem ser ampliadas pelo mesmo visualizador da galeria.
