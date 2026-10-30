@@ -302,3 +302,10 @@
 ## Atualização de 30 de outubro de 2026 — vídeo de despedida de Brian
 
 - O vídeo `video/despedida.mp4` foi incluído no registro de Brian em `memorial.html`, com controles de reprodução. O retrato que aparecia nesse bloco já faz parte da galeria individual de Brian e foi retirado do memorial central; a imagem de John foi mantida.
+
+## Atualização de 30 de outubro de 2026 — homenagem individual de Brian
+
+- O registro `#brian` do memorial passou a abrir com o retrato de Brian no presente, seguido pela seção **A estrada até o último momento**, em ordem cronológica e sem inventar datas ou missões.
+- Foi criado um mural em formato de tópico do fórum com homenagens de Jack, Alice e John. As mensagens são identificadas como reconstruções literárias baseadas nos laços e fatos já registrados.
+- O vídeo de despedida agora encerra a homenagem e permanece sem áudio no navegador, mesmo se o controle de volume for acionado. O memorial de John continua intacto.
+- `js/memorial-video.js` mantém o vídeo silenciado; o memorial carrega uma única cópia de `js/site-cursor.js`.
