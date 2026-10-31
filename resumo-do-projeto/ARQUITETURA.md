@@ -9,7 +9,7 @@
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Arquivo do centro de comando Hellsings antes do Dia D |
 | `faccao-hellsings-presente.html` | Dossiê da facção no presente, com operações, integrantes ativos e o piloto de conversas Malha Hellsings |
-| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário com 24 homenagens individuais, respostas e reações da equipe e despedida sem áudio), John e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
+| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário com 24 homenagens individuais, respostas e reações da equipe, chat coletivo dos sobreviventes e despedida sem áudio), John e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
@@ -26,6 +26,7 @@
 - O piloto de facção fica em `faccao-hellsings-presente.html`; `index.html` também oferece um chat flutuante da Malha no canto inferior esquerdo. `hellsing.html`, que guarda o arquivo anterior ao Dia D, não foi alterado.
 - `era-extincao-presente/malha-hellsings.css` define o visual do canal; `js/malha-hellsings.js` controla a troca acessível entre canais por mouse e teclado.
 - Na página inicial, `era-extincao-presente/malha-chat.css` e `js/malha-chat.js` controlam o botão **ABRIR CHAT**, o painel responsivo, as abas e o fechamento por botão, Escape ou clique fora. As conversas apresentam dois recortes ficcionais do presente: uma operação e uma conversa de convivência que lembra Brian.
+- `memorial.html` reutiliza o componente flutuante com dois recortes próprios: a vigília de Brian e a lembrança da última rota de John. Os dois são mencionados pelos sobreviventes, sem publicar mensagens deles após a morte.
 - Os canais iniciais são `Rota sem nome` (operações) e `Entre os seus` (convívio do bunker). As mensagens são cenas escritas e preservadas no HTML, com respostas e reações; não são uma conversa ao vivo nem conteúdo enviado por visitantes.
 - A linha do presente inclui integrantes ativos. Brian e John aparecem apenas nos registros de memória; uma conversa de Jully e Alice preserva a lembrança de Brian sem atribuir mensagens a ele.
 - `memorial.html` aplica a mesma ideia nas 24 homenagens individuais, por meio de reações e uma resposta de personagem em cada post. `js/memorial-journal.js` monta as conversas; `era-extincao-presente/memorial-hellsings.css` estiliza o fio de respostas dentro do diálogo.

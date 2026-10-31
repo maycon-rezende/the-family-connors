@@ -7,6 +7,7 @@
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John e as pessoas que cruzaram a rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=7" />
+    <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=1" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
   </head>
   <body class="hellsings-memorial-page">
@@ -384,6 +385,68 @@
       </section>
     </main>
 
+    <section class="malha-chat-widget" data-malha-chat aria-label="Malha Hellsings no memorial">
+      <button class="malha-chat-launcher" type="button" data-chat-launcher aria-expanded="false" aria-controls="memorial-malha-chat-panel">
+        <span class="malha-chat-launcher__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>ABRIR CHAT</span><b aria-hidden="true">F-01</b>
+      </button>
+      <section class="malha-chat-panel" id="memorial-malha-chat-panel" role="dialog" aria-modal="false" aria-labelledby="memorial-malha-chat-title" aria-describedby="memorial-malha-chat-description" data-chat-panel hidden>
+        <header class="malha-chat-panel__header">
+          <div class="malha-chat-panel__signal"><i aria-hidden="true"></i><span>MALHA H // CANAL DA VIGÍLIA</span></div>
+          <button class="malha-chat-panel__close" type="button" data-chat-close aria-label="Fechar chat">×</button>
+          <h2 id="memorial-malha-chat-title">Vozes que ficaram</h2>
+          <p id="memorial-malha-chat-description">Conversas reconstruídas dos sobreviventes // recortes narrativos</p>
+        </header>
+        <div class="malha-chat-tabs" role="tablist" aria-label="Conversas do memorial">
+          <button type="button" role="tab" id="memorial-malha-tab-brian" aria-selected="true" aria-controls="memorial-malha-thread-brian" tabindex="0" data-chat-tab="brian">DEPOIS DA VIGÍLIA</button>
+          <button type="button" role="tab" id="memorial-malha-tab-john" aria-selected="false" aria-controls="memorial-malha-thread-john" tabindex="-1" data-chat-tab="john">A ÚLTIMA ROTA</button>
+        </div>
+        <section class="malha-chat-thread" id="memorial-malha-thread-brian" role="tabpanel" aria-labelledby="memorial-malha-tab-brian" data-chat-thread="brian">
+          <p class="malha-chat-thread__date">RECORTE 01 // CASA CONNOR, APÓS A VIGÍLIA</p>
+          <ol class="malha-chat-messages" aria-label="Conversa dos Hellsings depois da vigília de Brian">
+            <li class="malha-chat-message">
+              <img src="img-presente/personagens/jully-presente1.png" alt="" aria-hidden="true" />
+              <div><header><b>Jully Connor</b><time datetime="23:48">23:48</time></header><p>A cadeira dele ainda está perto da porta. A que ele puxava para quem chegava por último.</p><div class="malha-chat-reactions"><span aria-label="Britney reagiu com carinho">♥ <small>Britney</small></span></div></div>
+            </li>
+            <li class="malha-chat-message">
+              <img src="img-presente/personagens/britney-presente1.png" alt="" aria-hidden="true" />
+              <div><header><b>Britney Connor</b><time datetime="23:51">23:51</time></header><p>Passei a noite esperando ouvir ele perguntar quem deixou a cozinha escura.</p><div class="malha-chat-reply"><b>Alice</b><p>Eu quase respondi. A frase veio inteira, como se ele tivesse acabado de sair do corredor.</p></div></div>
+            </li>
+            <li class="malha-chat-message">
+              <img src="img-presente/personagens/mark-presente2.png" alt="" aria-hidden="true" />
+              <div><header><b>Mark Connor</b><time datetime="23:59">23:59</time></header><p>Amanhã abro a sala de mapas. Ele não deixaria a manhã começar com gente sem rota.</p><div class="malha-chat-reactions"><span aria-label="Jack marcou como importante">⌖ <small>Jack</small></span></div></div>
+            </li>
+            <li class="malha-chat-message">
+              <img src="img-presente/personagens/jack-presente1.png" alt="" aria-hidden="true" />
+              <div><header><b>Jack Connor</b><time datetime="00:02">00:02</time></header><p>Então abrimos juntos. Hoje a cadeira fica.</p><div class="malha-chat-reactions"><span aria-label="Alice concordou">✓ <small>Alice</small></span><span aria-label="Jully reagiu com carinho">♥ <small>Jully</small></span></div></div>
+            </li>
+          </ol>
+        </section>
+        <section class="malha-chat-thread" id="memorial-malha-thread-john" role="tabpanel" aria-labelledby="memorial-malha-tab-john" data-chat-thread="john" hidden>
+          <p class="malha-chat-thread__date">RECORTE 02 // ROTA DE FUGA, REGISTRO RECUPERADO</p>
+          <ol class="malha-chat-messages" aria-label="Conversa dos Hellsings sobre o sacrifício de John">
+            <li class="malha-chat-message">
+              <img src="img-hellsing/naomi-presente.png" alt="" aria-hidden="true" />
+              <div><header><b>Naomi Yagami</b><time datetime="05:17">05:17</time></header><p>O último sinal de John foi curto. Não pediu resgate. Pediu que eu mantivesse o canal aberto para os que ainda vinham atrás.</p><div class="malha-chat-reactions"><span aria-label="Mark confirmou o registro">⌖ <small>Mark</small></span></div></div>
+            </li>
+            <li class="malha-chat-message">
+              <img src="img-hellsing/hellen-presente.png" alt="" aria-hidden="true" />
+              <div><header><b>Hellen Wren</b><time datetime="05:19">05:19</time></header><p>A linha de fuga continua no mapa. O ponto onde ele ficou também.</p><div class="malha-chat-reply"><b>Mark</b><p>Não encurta a rota quando contar essa história. Cada metro que ele ganhou foi alguém chegando vivo.</p></div></div>
+            </li>
+            <li class="malha-chat-message">
+              <img src="img-presente/personagens/jack-presente1.png" alt="" aria-hidden="true" />
+              <div><header><b>Jack Connor</b><time datetime="05:24">05:24</time></header><p>Vou contar os nomes de quem passou. Não quero que o último homem naquela saída vire só um ponto no papel.</p><div class="malha-chat-reactions"><span aria-label="Naomi marcou a mensagem">✓ <small>Naomi</small></span></div></div>
+            </li>
+            <li class="malha-chat-message">
+              <img src="img-presente/personagens/alice-presente1.png" alt="" aria-hidden="true" />
+              <div><header><b>Alice Connor</b><time datetime="05:28">05:28</time></header><p>John não desapareceu da equipe. Ele está no espaço entre quem ficou e a porta que se abriu.</p></div>
+            </li>
+          </ol>
+        </section>
+        <footer class="malha-chat-panel__footer"><span>MEMORIAL F-01 // CANAL FIXO</span><span>SEM MENSAGENS DE QUEM PARTIU</span></footer>
+      </section>
+    </section>
+
     <footer class="memorial-footer">
       <a href="brian-presente.html#memorial">BRIAN TAYLOR</a>
       <span>ARQUIVO DA MEMÓRIA // F-01</span>
@@ -392,5 +455,6 @@
     <script src="js/site-cursor.js" defer></script>
     <script src="js/memorial-video.js" defer></script>
     <script src="js/memorial-journal.js?v=4" defer></script>
+    <script src="js/malha-chat.js?v=1" defer></script>
   </body>
 </html>

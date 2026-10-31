@@ -336,6 +336,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `index.html` monta o botão **ABRIR CHAT** e o painel não modal da Malha Hellsings. O componente é exclusivo da página principal do presente; não altera páginas do passado.
 - `era-extincao-presente/malha-chat.css` fornece o painel âmbar, a disposição compacta de mensagens e retratos, a adaptação mobile e os ajustes de foco/redução de movimento.
 - `js/malha-chat.js` implementa a alternância dos canais, navegação por setas/Home/End, fechamento por Escape, botão e clique fora, e fecha o painel se o menu global for aberto.
+- `memorial.html` reutiliza o componente e os mesmos arquivos compartilhados, com os canais `Depois da vigília` (Brian) e `A última rota` (John). Os registros vêm dos sobreviventes; os falecidos não enviam novas mensagens.
 - As mensagens e reações são trechos narrativos escritos no HTML. O protótipo não envia, armazena nem atualiza mensagens de usuários ou de bots; o livro público em Supabase permanece planejado para uma etapa futura.
 
 ## 10. Índice de documentação complementar

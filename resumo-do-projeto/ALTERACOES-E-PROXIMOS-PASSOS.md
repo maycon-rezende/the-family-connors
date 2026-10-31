@@ -359,3 +359,9 @@
 - Os recortes mostram sobreviventes em uma operação e uma conversa sobre a caneca e o mapa de Brian. Brian é lembrado, sem publicar mensagens; John não aparece como ativo no presente.
 - `era-extincao-presente/malha-chat.css` define o acabamento âmbar, cartões de mensagens, retratos, reações, responsividade e respeito a `prefers-reduced-motion`. `js/malha-chat.js` controla abertura/fechamento, clique fora e Escape, abas por teclado e ocultação quando o menu principal abre.
 - O conteúdo é narrativo, fixo no HTML e sem backend: não há mensagens de visitantes nem automação de bots. O livro público com armazenamento Supabase segue planejado para depois da conclusão do site.
+
+## Atualização de 31 de outubro de 2026 — Malha H no memorial
+
+- `memorial.html` recebeu o mesmo botão flutuante **ABRIR CHAT**, agora com dois recortes próprios: os sobreviventes depois da vigília de Brian e a lembrança da última rota de John.
+- O diálogo inclui retratos atuais, respostas e reações entre personagens. Brian e John são lembrados, sem falas atribuídas a eles depois da morte.
+- O memorial carrega `era-extincao-presente/malha-chat.css` e `js/malha-chat.js`, compartilhados com a página inicial. Os canais permanecem conteúdo narrativo fixo, sem mensagens públicas ou transmissão ao vivo.
