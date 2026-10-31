@@ -322,3 +322,10 @@
 - O mural de 24 respostas foi redesenhado como um caderno de memórias: a capa abre a leitura, e cada homenagem aparece sozinha em sua página.
 - Contador, categoria da página, botões de folha anterior/próxima, suporte às setas do teclado e Escape permitem acompanhar o caderno sem despejar todas as mensagens na tela.
 - O vídeo de despedida permanece depois do caderno como encerramento do memorial.
+
+## Atualização de 31 de outubro de 2026 — retratos e posts de homenagem
+
+- O caderno passou a abrir um mural responsivo com um cartão de retrato para cada homenagem. Clicar em um cartão abre um post individual com a fotografia, o texto completo e a autoria; botões e setas permitem seguir para a voz anterior ou seguinte.
+- Cada post combina a imagem preservada da pessoa com o retrato atual de Brian; o registro conjunto de Jack e Brian é usado no post de Jack. Os arquivos sem retrato identificado continuam visualmente selados, incluindo o arquivo de James, que já constava como não recuperado.
+- As 24 homenagens foram ampliadas com lembranças distintas e cenas reconstruídas para dar voz própria à equipe, às famílias, aos filhos e às pessoas do comboio. Elas permanecem propostas literárias revisáveis para receber as cenas e imagens definitivas do autor. A mensagem de John segue marcada como anterior à sua morte.
+- `js/memorial-journal.js` cria os cartões a partir das homenagens preservadas no HTML e controla a abertura, a navegação, o teclado e a restauração do foco. `era-extincao-presente/memorial-hellsings.css` define o mural, os posts e os ajustes para telas menores.
