@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John e as pessoas que cruzaram a rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=5" />
+    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=6" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
   </head>
   <body class="hellsings-memorial-page">
@@ -274,7 +274,9 @@
                 <header class="memorial-memory-post__topline">
                   <span>ARQUIVO DE MEMÓRIAS // BT-09</span>
                   <span data-post-counter>01 / 24</span>
-                  <button type="button" data-post-close aria-label="Fechar homenagem">FECHAR <b aria-hidden="true">×</b></button>
+                  <form method="dialog" class="memorial-memory-post__close-form">
+                    <button type="submit" data-post-close aria-label="Fechar homenagem">FECHAR <b aria-hidden="true">×</b></button>
+                  </form>
                 </header>
                 <div class="memorial-memory-post__layout">
                   <div class="memorial-memory-post__images" data-post-images>
@@ -300,12 +302,12 @@
                     <blockquote data-post-quote></blockquote>
                     <footer><b data-post-name>Jack Connor</b><small data-post-role>COMANDANTE // PARCEIRO DE BRIAN</small></footer>
                     <p class="memorial-memory-post__signoff">Há pessoas que continuam voltando toda vez que alguém repete o que ensinaram.</p>
-                    <nav class="memorial-memory-post__controls" aria-label="Outras homenagens">
-                      <button type="button" data-post-prev disabled>← ANTERIOR</button>
-                      <button type="button" data-post-next>PRÓXIMA VOZ →</button>
-                    </nav>
                   </article>
                 </div>
+                <nav class="memorial-memory-post__controls" aria-label="Outras homenagens">
+                  <button type="button" data-post-prev disabled>← ANTERIOR</button>
+                  <button type="button" data-post-next>PRÓXIMA VOZ →</button>
+                </nav>
               </div>
             </dialog>
           </section>
@@ -384,6 +386,6 @@
     </footer>
     <script src="js/site-cursor.js" defer></script>
     <script src="js/memorial-video.js" defer></script>
-    <script src="js/memorial-journal.js?v=2" defer></script>
+    <script src="js/memorial-journal.js?v=3" defer></script>
   </body>
 </html>

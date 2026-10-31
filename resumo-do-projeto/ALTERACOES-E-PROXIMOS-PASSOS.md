@@ -329,3 +329,5 @@
 - Cada post combina a imagem preservada da pessoa com o retrato atual de Brian; o registro conjunto de Jack e Brian é usado no post de Jack. Os arquivos sem retrato identificado continuam visualmente selados, incluindo o arquivo de James, que já constava como não recuperado.
 - As 24 homenagens foram ampliadas com lembranças distintas e cenas reconstruídas para dar voz própria à equipe, às famílias, aos filhos e às pessoas do comboio. Elas permanecem propostas literárias revisáveis para receber as cenas e imagens definitivas do autor. A mensagem de John segue marcada como anterior à sua morte.
 - `js/memorial-journal.js` cria os cartões a partir das homenagens preservadas no HTML e controla a abertura, a navegação, o teclado e a restauração do foco. `era-extincao-presente/memorial-hellsings.css` define o mural, os posts e os ajustes para telas menores.
+- Os retratos de Ariani, Britney e Jully foram substituídos por imagens do presente. A homenagem de Alice agora usa a cena dela cuidando de Brian na enfermaria, com Jack ao lado.
+- O botão de fechar usa o mecanismo nativo do diálogo; a navegação anterior/próxima fica presa à base do post durante a rolagem.

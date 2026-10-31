@@ -271,9 +271,10 @@ a { color: inherit; }
 .memorial-memory-post[open] { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 .memorial-memory-post::backdrop { background: #030201dd; backdrop-filter: blur(8px); }
 .memorial-memory-post__frame { min-height: 560px; }
-.memorial-memory-post__topline { position: sticky; z-index: 2; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 52px; padding: .7rem 1.2rem; border-bottom: 1px solid #c3905b45; background: #0b0908ee; color: #bd9f7b; font: 500 .47rem/1.5 'DM Mono', monospace; letter-spacing: .13em; }
+.memorial-memory-post__topline { position: sticky; z-index: 5; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 52px; padding: .7rem 1.2rem; border-bottom: 1px solid #c3905b45; background: #0b0908; box-shadow: 0 8px 20px #0008; color: #bd9f7b; font: 500 .47rem/1.5 'DM Mono', monospace; letter-spacing: .13em; }
 .memorial-memory-post__topline span:nth-child(2) { color: var(--mem-red); white-space: nowrap; }
-.memorial-memory-post__topline button { padding: .45rem .6rem; border: 1px solid #c3905b43; background: transparent; color: #d5c7b4; font: 500 .44rem/1.4 'DM Mono', monospace; letter-spacing: .1em; cursor: pointer; }
+.memorial-memory-post__close-form { position: relative; z-index: 6; margin: 0; }
+.memorial-memory-post__topline button { min-height: 42px; padding: .55rem .7rem; border: 1px solid #c3905b75; background: #100d0b; color: #f0e2d0; font: 700 .48rem/1.4 'DM Mono', monospace; letter-spacing: .1em; cursor: pointer; pointer-events: auto; }
 .memorial-memory-post__topline button b { margin-left: .45rem; color: var(--mem-red); font-size: .8rem; }
 .memorial-memory-post__layout { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); min-height: 510px; }
 .memorial-memory-post__images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: center; gap: .55rem; padding: clamp(1rem, 2vw, 1.6rem); border-right: 1px solid #c3905b35; background: radial-gradient(ellipse at 50% 20%, #9a592317, transparent 50%), repeating-linear-gradient(0deg, transparent 0 34px, #c3905b0a 35px 36px); }
@@ -298,7 +299,7 @@ a { color: inherit; }
 .memorial-memory-post__letter footer b { color: #f0e2d0; font: 700 .9rem/1.35 'Cinzel', serif; }
 .memorial-memory-post__letter footer small { color: #c3905b; font: 500 .44rem/1.6 'DM Mono', monospace; letter-spacing: .1em; }
 .memorial-memory-post__signoff { margin: 1rem 0 0; color: #a99b89; font: italic .82rem/1.7 'Cinzel', Georgia, serif; }
-.memorial-memory-post__controls { display: flex; align-items: center; justify-content: space-between; gap: .8rem; width: 100%; margin-top: 1.4rem; }
+.memorial-memory-post__controls { position: sticky; z-index: 5; bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: .8rem; width: 100%; margin: 0; padding: .85rem clamp(1rem, 4vw, 2.5rem); border-top: 1px solid #c3905b4a; background: #0b0908f7; box-shadow: 0 -10px 24px #0008; }
 .memorial-memory-post__controls button { min-height: 42px; padding: .65rem .8rem; border: 1px solid #c3905b58; background: #0b0908; color: #e5d3bc; font: 700 .45rem/1.4 'DM Mono', monospace; letter-spacing: .09em; cursor: pointer; }
 .memorial-memory-post__controls button:hover:not(:disabled),.memorial-memory-post__controls button:focus-visible { border-color: var(--mem-red); background: #28120e; }
 .memorial-memory-post__controls button:disabled { opacity: .38; cursor: not-allowed; }

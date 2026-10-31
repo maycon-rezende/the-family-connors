@@ -16,7 +16,7 @@
   const portraitFiles = {
     'Jack Connor': ['img-presente/personagens/jack-presente.png', 'Retrato de Jack Connor no presente'],
     'Mark Connor': ['img-presente/personagens/mark-presente.png', 'Retrato de Mark Connor no presente'],
-    'Alice Myers Connor': ['img-presente/personagens/alice-presente.png', 'Retrato de Alice Myers Connor no presente'],
+    'Alice Myers Connor': ['img-hellsing/alice-examinando-taylor.png', 'Alice cuidando de Brian na enfermaria, com Jack ao lado'],
     John: ['img-hellsing/john-presente.png', 'John em um registro anterior ao seu sacrifício'],
     'Bobby Lee': ['img-presente/personagens/bobby-presente.png', 'Retrato de Bobby Lee no presente'],
     'Naomi Yagami': ['img-hellsing/naomi-presente.png', 'Retrato de Naomi Yagami no presente'],
@@ -25,9 +25,9 @@
     Dimitri: ['img-hellsing/dimitri-presente.png', 'Retrato de Dimitri no presente'],
     Clhoe: ['img-hellsing/clhoe-presente.png', 'Retrato de Clhoe no presente'],
     Luke: ['img-hellsing/luke-presente.png', 'Retrato de Luke no presente'],
-    'Ariani Salvatore Connor': ['img-presente/personagens/ariani-presente.png', 'Retrato de Ariani Salvatore Connor no presente'],
-    'Britney Connor': ['img-presente/personagens/britney-presente.png', 'Retrato de Britney Connor no presente'],
-    'Jully Connor': ['img-presente/personagens/jully-presente.png', 'Retrato de Jully Connor no presente'],
+    'Ariani Salvatore Connor': ['img-presente/personagens/ariani-presente2.png', 'Ariani Salvatore Connor no acampamento Hellsing no presente'],
+    'Britney Connor': ['img-presente/personagens/britney-presente1.png', 'Britney Connor no acampamento Hellsing no presente'],
+    'Jully Connor': ['img-presente/personagens/jully-presente1.png', 'Jully Connor no acampamento Hellsing no presente'],
     'Alucard Myers Connor': ['img-presente/personagens/alucard-hellsing.png', 'Retrato de Alucard Myers Connor'],
     'Diana Myers Connor': ['img-presente/personagens/diana-presente.png', 'Retrato de Diana Myers Connor no presente'],
     'Nicolai Myers Connor': ['img-presente/personagens/nicolai.png', 'Retrato de Nicolai Myers Connor'],
@@ -63,6 +63,11 @@
     'James Salvatore Connor': 'Uma estrada de lápis',
     'Filho de Bobby Lee e Britney': 'As histórias que começam com Brian',
     'As pessoas da rota': 'A estrada chegou até nós',
+  };
+
+  const sharedPhotos = {
+    'Jack Connor': ['img-hellsing/brian&jack-presente.png', 'Registro preservado de Brian e Jack juntos', 'JACK + BRIAN // UMA ROTA QUE OS DOIS CONHECIAM'],
+    'Alice Myers Connor': ['img-hellsing/alice-examinando-taylor.png', 'Alice cuidando de Brian na enfermaria, com Jack ao lado', 'ALICE + BRIAN // ENFERMARIA DO BUNKER'],
   };
 
   const fields = {
@@ -171,9 +176,7 @@
   const renderRecord = () => {
     const record = records[current];
     const personPhoto = record.photo;
-    const togetherPhoto = record.name === 'Jack Connor'
-      ? ['img-hellsing/brian&jack-presente.png', 'Registro preservado de Brian e Jack juntos']
-      : null;
+    const togetherPhoto = sharedPhotos[record.name] || null;
 
     fields.counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(records.length).padStart(2, '0')}`;
     fields.code.textContent = record.code;
@@ -191,7 +194,7 @@
     if (togetherPhoto) {
       fields.sharedImage.src = togetherPhoto[0];
       fields.sharedImage.alt = togetherPhoto[1];
-      fields.sharedCaption.textContent = 'JACK + BRIAN // UMA ROTA QUE OS DOIS CONHECIAM';
+      fields.sharedCaption.textContent = togetherPhoto[2];
       return;
     }
 
@@ -245,7 +248,6 @@
 
   cover.addEventListener('click', openJournal);
   closeJournal?.addEventListener('click', closeJournalView);
-  fields.close?.addEventListener('click', () => dialog.close());
   fields.previous?.addEventListener('click', showPrevious);
   fields.next?.addEventListener('click', showNext);
 
