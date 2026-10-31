@@ -355,3 +355,73 @@ a { color: inherit; }
   .memorial-brian-journal__page .memorial-brian-tributes__grid.memorial-brian-memory-grid { grid-template-columns: 1fr; }
   .memorial-memory-card { min-height: 350px; }
 }
+
+/* Homenagem individual de John: imagens e relatos pertencem ao arquivo anterior à sua morte. */
+.memorial-john-tribute {
+  padding: clamp(4.5rem, 8vw, 8rem) 5vw;
+  border-top: 1px solid #8bbfc33b;
+  background:
+    radial-gradient(ellipse at 100% 0, #4d899012, transparent 42%),
+    linear-gradient(155deg, #0e1110, #090807 58%, #0b0a08);
+}
+.memorial-john-heading { max-width: 1180px; margin: 0 auto clamp(3rem, 6vw, 5.5rem); }
+.memorial-john-heading h2 { color: var(--mem-paper); }
+.memorial-john-heading h2 em,
+.memorial-john-tribute .memorial-brian__section-heading h3 em { color: var(--mem-cyan); font-style: normal; }
+.memorial-john-heading > p { max-width: 700px; }
+.memorial-john__road { max-width: 1180px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem); border: 1px solid #8bbfc329; }
+.memorial-john-tribute .memorial-brian__section-heading { max-width: 100%; }
+.memorial-john-tribute .memorial-brian__section-heading h3 {
+  margin: .8rem 0 1rem;
+  color: var(--mem-paper);
+  font: 800 clamp(3.2rem, 6vw, 5.5rem)/.88 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+.memorial-john-tribute .memorial-brian__section-heading > p { max-width: 720px; }
+.memorial-john-timeline::before { background: linear-gradient(var(--mem-cyan), #8bbfc325); }
+.memorial-john-timeline li > i { border-color: var(--mem-cyan); box-shadow: 0 0 0 5px #8bbfc315; }
+.memorial-john-timeline .memorial-brian-timeline__index { color: var(--mem-cyan); }
+.memorial-john-tributes { max-width: 1180px; margin: clamp(4rem, 8vw, 7rem) auto 0; }
+.memorial-john-tributes > .memorial-brian__section-heading { margin-bottom: 2rem; }
+.memorial-john-journal__cover {
+  border-color: #8bbfc383;
+  background: linear-gradient(110deg, #15201f 0%, #111615 48%, #0b0d0c 100%);
+  box-shadow: inset 12px 0 20px #0008, inset 15px 0 #8bbfc344, 0 24px 65px #0008;
+}
+.memorial-john-journal__cover::before { border-color: #8bbfc332; }
+.memorial-john-journal__cover:hover,
+.memorial-john-journal__cover:focus-visible { border-color: var(--mem-cyan); box-shadow: inset 12px 0 20px #0008, inset 15px 0 #8bbfc388, 0 30px 75px #000b; }
+.memorial-john-journal .memorial-brian-journal__eyebrow,
+.memorial-john-journal .memorial-brian-journal__title em,
+.memorial-john-journal .memorial-brian-journal__action b { color: var(--mem-cyan); }
+.memorial-john-journal .memorial-brian-journal__seal { border-color: #8bbfc391; color: #bed4d2; box-shadow: 0 0 0 10px #8bbfc312, inset 0 0 25px #8bbfc315; }
+.memorial-john-journal .memorial-brian-journal__seal b { color: var(--mem-cyan); }
+.memorial-john-journal__reader { border-color: #8bbfc34d; }
+.memorial-john-journal .memorial-brian-journal__toolbar b,
+.memorial-john-journal .memorial-brian-journal__toolbar span:last-child { color: var(--mem-cyan); }
+.memorial-john-journal__controls { justify-content: center; min-height: 54px; color: #aabbb5; font: 500 .49rem/1.7 'DM Mono', monospace; letter-spacing: .12em; text-align: center; }
+.memorial-memory-card--john { border-color: #8bbfc358; }
+.memorial-memory-card--john::before { border-color: #b5d8d41b; }
+.memorial-memory-card--john:hover,
+.memorial-memory-card--john:focus-visible { border-color: var(--mem-cyan); box-shadow: 0 16px 38px #0009, 0 0 24px #8bbfc318; }
+.memorial-memory-card--john .memorial-memory-card__index,
+.memorial-memory-card--john .memorial-memory-card__action b { color: var(--mem-cyan); }
+.memorial-memory-card--john .memorial-memory-card__activity { color: #b6d3cf; }
+.memorial-memory-post--john { border-color: #8bbfc391; }
+.memorial-memory-post--john .memorial-memory-post__topline span:nth-child(2),
+.memorial-memory-post--john .memorial-memory-post__code { color: var(--mem-cyan); }
+.memorial-memory-post--john .memorial-memory-post__portrait--john { border-color: #8bbfc36b; }
+.memorial-memory-post--john .memorial-memory-post__portrait--john figcaption span { color: var(--mem-cyan); }
+.memorial-memory-post--john .memorial-memory-thread__heading b { color: var(--mem-cyan); }
+.memorial-memory-post--john .memorial-memory-post__letter h4 { margin: 1.4rem 0 .9rem; color: #f0e5d6; font: 700 clamp(1.7rem, 3vw, 2.5rem)/1.13 'Cinzel', Georgia, serif; }
+
+@media (max-width: 820px) {
+  .memorial-john-tribute { padding: 3.5rem 1.4rem; }
+  .memorial-john__road { padding: 2rem 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .memorial-john-tribute { padding: 4.5rem 1rem; }
+  .memorial-john__road { padding: 1.5rem .9rem; }
+}

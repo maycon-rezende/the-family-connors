@@ -339,6 +339,13 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `memorial.html` reutiliza o componente e os mesmos arquivos compartilhados, com os canais `Depois da vigília` (Brian) e `A última rota` (John). Os registros vêm dos sobreviventes; os falecidos não enviam novas mensagens.
 - As mensagens e reações são trechos narrativos escritos no HTML. O protótipo não envia, armazena nem atualiza mensagens de usuários ou de bots; o livro público em Supabase permanece planejado para uma etapa futura.
 
+## Memorial individual de John
+
+- `memorial.html#john` mantém a entrada de John e acrescenta a seção **A estrada até a última fuga**, com a mordida e o sacrifício confirmados; as cenas de transição são identificadas como reconstruções literárias revisáveis.
+- O caderno J-06 tem 14 homenagens individuais, geradas por `js/john-memorial.js`. Cada cartão abre um diálogo com o retrato de quem escreve e uma imagem de John registrada antes da morte, além do texto, reações, resposta e navegação anterior/próxima.
+- Brian aparece somente em um registro histórico marcado como escrito enquanto ainda estava vivo, depois da morte de John. Nenhuma mensagem é atribuída a John após sua morte.
+- `era-extincao-presente/memorial-hellsings.css` compartilha o layout responsivo dos posts de Brian e acrescenta a paleta ciano/cobre de John.
+
 ## 10. Índice de documentação complementar
 
 - [README.md](README.md): visão geral e links para todos os documentos.

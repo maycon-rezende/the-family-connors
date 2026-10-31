@@ -365,3 +365,10 @@
 - `memorial.html` recebeu o mesmo botão flutuante **ABRIR CHAT**, agora com dois recortes próprios: os sobreviventes depois da vigília de Brian e a lembrança da última rota de John.
 - O diálogo inclui retratos atuais, respostas e reações entre personagens. Brian e John são lembrados, sem falas atribuídas a eles depois da morte.
 - O memorial carrega `era-extincao-presente/malha-chat.css` e `js/malha-chat.js`, compartilhados com a página inicial. Os canais permanecem conteúdo narrativo fixo, sem mensagens públicas ou transmissão ao vivo.
+
+## Atualização de 31 de outubro de 2026 — homenagem completa de John
+
+- O registro resumido de John foi ampliado em `memorial.html` com **A estrada até a última fuga**, preservando a lore confirmada: ele foi mordido e se sacrificou para que muitas pessoas escapassem. O caminho entre os fatos confirmados está identificado como reconstrução literária revisável, sem datas inventadas.
+- Um caderno independente apresenta 14 homenagens, uma voz por vez, com retratos dos autores, o registro de John anterior à morte, textos, reações, respostas, navegação pelo teclado e restauração do foco.
+- Brian contribui com um registro histórico claramente marcado como escrito após a morte de John e antes de Brian morrer. John não escreve postumamente; nenhuma foto posterior à morte foi atribuída a ele.
+- `js/john-memorial.js` controla o caderno e o diálogo de leitura. `era-extincao-presente/memorial-hellsings.css` define o acabamento ciano/cobre de John e as adaptações para telas menores; a estrutura visual do post reutiliza o diálogo do memorial de Brian.
