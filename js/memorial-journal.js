@@ -65,6 +65,33 @@
     'As pessoas da rota': 'A estrada chegou até nós',
   };
 
+  const memoryThreads = {
+    'Jack Connor': { reactions: [{ by: 'Mark Connor', icon: '🫡' }, { by: 'Alice Myers Connor', icon: '🕯' }], reply: { by: 'Mark Connor', role: 'COMANDO TÁTICO', text: 'A saída do túnel ainda está no meu mapa. Nunca apaguei o círculo que você desenhou.' } },
+    'Mark Connor': { reactions: [{ by: 'Ariani Salvatore Connor', icon: '🤍' }, { by: 'Jully Connor', icon: '🪑' }], reply: { by: 'Ariani Salvatore Connor', role: 'FAMÍLIA HELLSINGS', text: 'Você ainda puxa a cadeira antes de a comida chegar. Aprendeu com ele sem perceber.' } },
+    'Alice Myers Connor': { reactions: [{ by: 'Jack Connor', icon: '🤍' }, { by: 'Naomi Yagami', icon: '🕯' }], reply: { by: 'Jack Connor', role: 'COMANDO', text: 'Naquela manhã, ninguém tentou preencher o silêncio. Ficamos do lado de fora até você sair.' } },
+    John: { era: 'RECADO DEIXADO EM VIDA // JOHN AINDA ESTAVA VIVO AO ESCREVER', reactions: [{ by: 'Jack Connor', icon: '🫡' }, { by: 'Alice Myers Connor', icon: '🕯' }], reply: { by: 'Jack Connor', role: 'COMANDO', text: 'Li seu recado antes da fuga. Guardei o mapa; ainda procuro nele a saída que você nos deu.' } },
+    'Bobby Lee': { reactions: [{ by: 'Britney Connor', icon: '❤️' }, { by: 'Jully Connor', icon: '🍽' }], reply: { by: 'Britney Connor', role: 'FAMÍLIA', text: 'A cadeira que ele puxou continua em todas as mesas que a gente constrói.' } },
+    'Naomi Yagami': { reactions: [{ by: 'Alice Myers Connor', icon: '☕' }, { by: 'Jack Connor', icon: '👁' }], reply: { by: 'Alice Myers Connor', role: 'COMANDO MÉDICO', text: 'O relatório ficou completo. A caneca voltou vazia para a enfermaria; você nem percebeu que eu a deixei lá.' } },
+    'Hellen Wren': { reactions: [{ by: 'Naomi Yagami', icon: '👁' }, { by: 'Joey Muller', icon: '🫂' }], reply: { by: 'Naomi Yagami', role: 'INTELIGÊNCIA', text: 'Você também reconhece quem voltou antes de perguntar qual nome está usando.' } },
+    'Joey Muller': { reactions: [{ by: 'Luke', icon: '🧭' }, { by: 'Jack Connor', icon: '✓' }], reply: { by: 'Luke', role: 'CAMPO', text: 'Aquela fita no portão guiou mais gente do que nós dois conseguimos contar.' } },
+    Dimitri: { reactions: [{ by: 'Mark Connor', icon: '🔢' }, { by: 'Naomi Yagami', icon: '🕯' }], reply: { by: 'Mark Connor', role: 'COMANDO TÁTICO', text: 'A lista de extração ainda está aberta. Eu também paro no número que falta.' } },
+    Clhoe: { reactions: [{ by: 'Hellen Wren', icon: '🔓' }, { by: 'Alice Myers Connor', icon: '🕯' }], reply: { by: 'Hellen Wren', role: 'INFILTRAÇÃO', text: 'Deixar a porta aberta não é fraqueza quando alguém ainda está tentando voltar.' } },
+    Luke: { reactions: [{ by: 'Naomi Yagami', icon: '🗺' }, { by: 'Mark Connor', icon: '🫡' }], reply: { by: 'Naomi Yagami', role: 'INTELIGÊNCIA', text: 'Os nomes no verso continuam chegando ao abrigo. Cada rota sua ainda cumpre a promessa de volta.' } },
+    'Ariani Salvatore Connor': { reactions: [{ by: 'Mark Connor', icon: '❤️' }, { by: 'Jully Connor', icon: '🍽' }], reply: { by: 'Jully Connor', role: 'FAMÍLIA HELLSINGS', text: 'Quando a mesa enche, ainda dá para notar o espaço que ele deixava entre todo mundo.' } },
+    'Britney Connor': { reactions: [{ by: 'Bobby Lee', icon: '❤️' }, { by: 'Jully Connor', icon: '🪑' }], reply: { by: 'Bobby Lee', role: 'FAMÍLIA', text: 'Ele abriu espaço para mim naquela mesa. Você me ensinou a não ter medo de sentar.' } },
+    'Jully Connor': { reactions: [{ by: 'Alice Myers Connor', icon: '😔' }, { by: 'Britney Connor', icon: '🤍' }], reply: { by: 'Britney Connor', role: 'FAMÍLIA', text: 'Eu lembro da chuva. Você não precisava falar; eu só fiquei ali com você.' } },
+    'Alucard Myers Connor': { reactions: [{ by: 'Diana Myers Connor', icon: '🥐' }, { by: 'Jack Connor', icon: '🕯' }], reply: { by: 'Alice Myers Connor', role: 'COMANDO MÉDICO', text: 'A padaria nunca existiu. O lugar ao lado dele para você respirar, sim.' } },
+    'Diana Myers Connor': { reactions: [{ by: 'Alice Myers Connor', icon: '🫡' }, { by: 'Mark Connor', icon: '🎯' }], reply: { by: 'Jack Connor', role: 'COMANDO', text: 'Ele viu o que você estava protegendo antes de você mesma conseguir dar nome a isso.' } },
+    'Nicolai Myers Connor': { reactions: [{ by: 'Luke', icon: '💧' }, { by: 'Jack Connor', icon: '✓' }], reply: { by: 'Luke', role: 'CAMPO', text: 'A mochila que traz alguém de volta nunca parece heroica. Parece pesada. E isso basta.' } },
+    'Mary Myers Connor': { reactions: [{ by: 'Alice Myers Connor', icon: '🌒' }, { by: 'Alucard Myers Connor', icon: '🕯' }], reply: { by: 'Alucard Myers Connor', role: 'FILHO DE JACK E ALICE', text: 'A sombra da janela continua lá. Eu conto uma história ruim quando a luz fica forte demais.' } },
+    'Isolde Myers Connor': { reactions: [{ by: 'Mary Myers Connor', icon: '🕯' }, { by: 'Jack Connor', icon: '🛠' }], reply: { by: 'Mary Myers Connor', role: 'FILHA DE JACK E ALICE', text: 'A prateleira continua torta. Gosto de lembrar que foi consertada sem pressa.' } },
+    'Pollyana Salvatore Connor': { reactions: [{ by: 'Nathan Salvatore Connor', icon: '🔁' }, { by: 'Ariani Salvatore Connor', icon: '🤍' }], reply: { by: 'Nathan Salvatore Connor', role: 'GÊMEO DE POLLYANA', text: 'Eu ainda reclamaria a viagem inteira. Mas agora voltaria para buscar as latas.' } },
+    'Nathan Salvatore Connor': { reactions: [{ by: 'Pollyana Salvatore Connor', icon: '🎯' }, { by: 'Mark Connor', icon: '👁' }], reply: { by: 'Mark Connor', role: 'COMANDO TÁTICO', text: 'Você já olha para quem está atrás do alvo. Ele teria percebido isso primeiro.' } },
+    'James Salvatore Connor': { reactions: [{ by: 'Mark Connor', icon: '🛣' }, { by: 'Nathan Salvatore Connor', icon: '📝' }], reply: { by: 'Nathan Salvatore Connor', role: 'ATIRADOR DE PRECISÃO', text: 'O mapa torto ainda está guardado. Marquei a sua volta ao lado da minha.' } },
+    'Filho de Bobby Lee e Britney': { reactions: [{ by: 'Britney Connor', icon: '❤️' }, { by: 'Bobby Lee', icon: '🕯' }], reply: { by: 'Bobby Lee', role: 'PAI', text: 'Ele puxou uma cadeira para nós antes de saber quem seríamos um para o outro.' } },
+    'As pessoas da rota': { reactions: [{ by: 'Naomi Yagami', icon: '🗺' }, { by: 'Jack Connor', icon: '🕯' }], reply: { by: 'Naomi Yagami', role: 'INTELIGÊNCIA', text: 'Seguimos as marcas sem saber quem as deixou. Agora sabemos o nome que acompanha essa estrada.' } },
+  };
+
   const sharedPhotos = {
     'Jack Connor': ['img-hellsing/brian&jack-presente.png', 'Registro preservado de Brian e Jack juntos', 'JACK + BRIAN // UMA ROTA QUE OS DOIS CONHECIAM'],
     'Alice Myers Connor': ['img-hellsing/alice-examinando-taylor.png', 'Alice cuidando de Brian na enfermaria, com Jack ao lado', 'ALICE + BRIAN // ENFERMARIA DO BUNKER'],
@@ -85,6 +112,9 @@
     quote: dialog.querySelector('[data-post-quote]'),
     name: dialog.querySelector('[data-post-name]'),
     role: dialog.querySelector('[data-post-role]'),
+    threadEra: dialog.querySelector('[data-post-thread-era]'),
+    threadReactions: dialog.querySelector('[data-post-thread-reactions]'),
+    threadReplies: dialog.querySelector('[data-post-thread-replies]'),
     previous: dialog.querySelector('[data-post-prev]'),
     next: dialog.querySelector('[data-post-next]'),
     close: dialog.querySelector('[data-post-close]'),
@@ -107,6 +137,7 @@
       label: match?.[1] || 'MEMÓRIA PRESERVADA',
       title: memoryTitles[name] || 'O que ficou de você',
       code: `RESPOSTA ${String(index + 1).padStart(2, '0')}`,
+      thread: memoryThreads[name] || { reactions: [], reply: null },
     };
   });
 
@@ -117,7 +148,7 @@
     if (record.note.classList.contains('memorial-brian-note--john')) button.classList.add('memorial-memory-card--red');
     button.type = 'button';
     button.setAttribute('aria-haspopup', 'dialog');
-    button.setAttribute('aria-label', `Abrir a homenagem de ${record.name}`);
+    button.setAttribute('aria-label', `Abrir a homenagem e a conversa de ${record.name}`);
 
     const imageFrame = document.createElement('span');
     imageFrame.className = 'memorial-memory-card__image';
@@ -153,9 +184,25 @@
 
     const action = document.createElement('span');
     action.className = 'memorial-memory-card__action';
-    action.innerHTML = 'LER MEMÓRIA <b aria-hidden="true">↗</b>';
+    action.append(document.createTextNode('LER MEMÓRIA E CONVERSA'));
+    const actionIcon = document.createElement('b');
+    actionIcon.setAttribute('aria-hidden', 'true');
+    actionIcon.textContent = '↗';
+    action.append(actionIcon);
 
-    button.append(indexLabel, imageFrame, identity, action);
+    const activity = document.createElement('span');
+    activity.className = 'memorial-memory-card__activity';
+    activity.setAttribute('aria-hidden', 'true');
+    record.thread.reactions.forEach((reaction) => {
+      const icon = document.createElement('span');
+      icon.textContent = reaction.icon;
+      activity.append(icon);
+    });
+    const activityCount = document.createElement('small');
+    activityCount.textContent = `${record.thread.reactions.length} REAÇÕES // ${record.thread.reply ? '1 RESPOSTA' : 'SEM RESPOSTAS'}`;
+    activity.append(activityCount);
+
+    button.append(indexLabel, imageFrame, identity, activity, action);
     button.addEventListener('click', () => openRecord(index, button));
     return button;
   };
@@ -185,6 +232,51 @@
     fields.quote.textContent = record.note.querySelector('blockquote')?.textContent.trim() || '';
     fields.name.textContent = record.name;
     fields.role.textContent = record.role;
+    fields.threadEra.textContent = record.thread.era || 'MEMORIAL DE BRIAN // RESPOSTAS PRESERVADAS';
+    fields.threadReactions.replaceChildren(...record.thread.reactions.map((reaction) => {
+      const badge = document.createElement('span');
+      badge.className = 'memorial-memory-thread__reaction';
+      badge.setAttribute('aria-label', `${reaction.by} reagiu com ${reaction.icon}`);
+      const icon = document.createElement('b');
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = reaction.icon;
+      const name = document.createElement('small');
+      name.textContent = reaction.by;
+      badge.append(icon, name);
+      return badge;
+    }));
+    fields.threadReplies.replaceChildren();
+    if (record.thread.reply) {
+      const reply = record.thread.reply;
+      const item = document.createElement('li');
+      item.className = 'memorial-memory-thread__reply';
+      const portrait = document.createElement('span');
+      portrait.className = 'memorial-memory-thread__avatar';
+      const replyPhoto = portraitFiles[reply.by];
+      if (replyPhoto) {
+        const image = document.createElement('img');
+        image.src = replyPhoto[0];
+        image.alt = '';
+        image.setAttribute('aria-hidden', 'true');
+        image.loading = 'lazy';
+        portrait.append(image);
+      } else {
+        portrait.textContent = reply.by.split(/\s+/).map((part) => part[0]).join('').slice(0, 2);
+      }
+      const body = document.createElement('div');
+      body.className = 'memorial-memory-thread__body';
+      const heading = document.createElement('header');
+      const name = document.createElement('b');
+      name.textContent = reply.by;
+      const role = document.createElement('small');
+      role.textContent = reply.role;
+      heading.append(name, role);
+      const message = document.createElement('p');
+      message.textContent = reply.text;
+      body.append(heading, message);
+      item.append(portrait, body);
+      fields.threadReplies.append(item);
+    }
     fields.previous.disabled = current === 0;
     fields.next.disabled = current === records.length - 1;
 

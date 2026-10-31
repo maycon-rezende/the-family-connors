@@ -9,7 +9,7 @@
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Arquivo do centro de comando Hellsings antes do Dia D |
 | `faccao-hellsings-presente.html` | Dossiê da facção no presente, com operações, integrantes ativos e o piloto de conversas Malha Hellsings |
-| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário interativo com 24 homenagens individuais e despedida sem áudio), John e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
+| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário com 24 homenagens individuais, respostas e reações da equipe e despedida sem áudio), John e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
@@ -24,10 +24,12 @@
 ## Malha Hellsings — conversas narrativas
 
 - O piloto fica em `faccao-hellsings-presente.html`, somente na página da facção no presente. `hellsing.html`, que guarda o arquivo anterior ao Dia D, não foi alterado.
-- `era-extincao-presente/malha-hellsings.css` define o visual; `js/malha-hellsings.js` controla a troca acessível entre canais por mouse e teclado.
+- `era-extincao-presente/malha-hellsings.css` define o visual do canal; `js/malha-hellsings.js` controla a troca acessível entre canais por mouse e teclado.
 - Os canais iniciais são `Rota sem nome` (operações) e `Entre os seus` (convívio do bunker). As mensagens são cenas escritas e preservadas no HTML, com respostas e reações; não são uma conversa ao vivo nem conteúdo enviado por visitantes.
 - A linha do presente inclui integrantes ativos. Brian e John aparecem apenas nos registros de memória; uma conversa de Jully e Alice preserva a lembrança de Brian sem atribuir mensagens a ele.
-- A estrutura visual foi preparada para ser reaproveitada depois no memorial e em outras páginas de facções. O livro de mensagens do público continua separado e planejado para Supabase após a conclusão do site.
+- `memorial.html` aplica a mesma ideia nas 24 homenagens individuais, por meio de reações e uma resposta de personagem em cada post. `js/memorial-journal.js` monta as conversas; `era-extincao-presente/memorial-hellsings.css` estiliza o fio de respostas dentro do diálogo.
+- John deixa um recado identificado como escrito em vida; ele e Brian não aparecem reagindo às conversas atuais. O livro público de visitantes continua separado e planejado para Supabase após a conclusão do site.
+- As demais páginas de facções aguardam a adaptação do formato. O conteúdo atual da Malha é narrativo e fixo, sem publicação pública ou armazenamento de mensagens.
 
 ## Abertura cinematográfica do presente
 

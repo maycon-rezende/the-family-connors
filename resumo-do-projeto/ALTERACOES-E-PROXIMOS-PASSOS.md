@@ -343,4 +343,12 @@
 - A página `faccao-hellsings-presente.html` recebeu um canal de conversas internas chamado **Malha Hellsings**, com atalho no banner e dois canais navegáveis: operações na rota sem nome e convivência no bunker.
 - Os registros têm vozes, horários, respostas e reações entre integrantes ativos. A conversa de Jully sobre a caneca de Brian recebe uma resposta de Alice e reações de Alice e Jack; Brian não publica mensagens. John também não aparece como ativo no canal do presente.
 - O fluxo de mensagens é conteúdo narrativo curado no próprio HTML, sem backend e sem publicações de visitantes. As abas funcionam com clique e teclado.
-- `era-extincao-presente/malha-hellsings.css` e `js/malha-hellsings.js` formam o piloto reutilizável. `hellsing.html` e as demais páginas ainda não foram alteradas; a expansão para memorial e outras facções fica para as próximas etapas.
+- `era-extincao-presente/malha-hellsings.css` e `js/malha-hellsings.js` formam o piloto visual da facção. `hellsing.html`, o memorial e as demais facções ainda não tinham sido alterados nesta etapa inicial.
+
+## Atualização de 31 de outubro de 2026 — conversas no memorial de Brian
+
+- As 24 homenagens do caderno ganharam reações de outros personagens e uma resposta contextualizada em cada post. Os cartões mostram um resumo da atividade; ao abrir a homenagem, o diálogo apresenta os nomes, reações e a resposta completa.
+- A mensagem de Jully recebe uma reação de tristeza de Alice e uma resposta de Britney. As demais respostas retomam detalhes de cada lembrança, sem criar mensagens de Brian.
+- O recado de John mantém o rótulo de que foi escrito enquanto ainda estava vivo. John não é usado como autor de reações ou respostas posteriores.
+- `js/memorial-journal.js` monta os fios de conversa e `era-extincao-presente/memorial-hellsings.css` os estiliza no diálogo existente. Os controles fixos de fechar e navegar continuam no mesmo lugar; os parâmetros de cache da página foram atualizados.
+- A Malha está agora na facção presente e nas homenagens de Brian. Outras páginas de facção continuam como expansão futura; as mensagens são roteirizadas, sem backend ou participação pública.
