@@ -369,6 +369,6 @@
 ## Atualização de 31 de outubro de 2026 — homenagem completa de John
 
 - O registro resumido de John foi ampliado em `memorial.html` com **A estrada até a última fuga**, preservando a lore confirmada: ele foi mordido e se sacrificou para que muitas pessoas escapassem. O caminho entre os fatos confirmados está identificado como reconstrução literária revisável, sem datas inventadas.
-- Um caderno independente apresenta 14 homenagens, uma voz por vez, com retratos dos autores, o registro de John anterior à morte, textos, reações, respostas, navegação pelo teclado e restauração do foco.
-- Brian contribui com um registro histórico claramente marcado como escrito após a morte de John e antes de Brian morrer. John não escreve postumamente; nenhuma foto posterior à morte foi atribuída a ele.
-- `js/john-memorial.js` controla o caderno e o diálogo de leitura. `era-extincao-presente/memorial-hellsings.css` define o acabamento ciano/cobre de John e as adaptações para telas menores; a estrutura visual do post reutiliza o diálogo do memorial de Brian.
+- O arquivo de John ganhou 13 homenagens dos sobreviventes, exibidas como transcrições de frequência selecionadas uma por vez. A navegação não repete o mural de retratos usado no memorial de Brian; não há áudio ou foto individual por post.
+- A ordem canônica foi corrigida: Brian morreu primeiro; John morreu depois, na fuga. Brian não publica homenagem no memorial de John. John não escreve postumamente e todas as fotos dele continuam identificadas como anteriores à morte.
+- `js/john-transmission-log.js` controla o índice de frequências, leitura, reações, respostas e teclado. `era-extincao-presente/memorial-hellsings.css` define a interface ciano/cobre, a onda de sinal decorativa e os ajustes para celular.

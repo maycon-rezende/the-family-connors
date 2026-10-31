@@ -342,9 +342,9 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 ## Memorial individual de John
 
 - `memorial.html#john` mantém a entrada de John e acrescenta a seção **A estrada até a última fuga**, com a mordida e o sacrifício confirmados; as cenas de transição são identificadas como reconstruções literárias revisáveis.
-- O caderno J-06 tem 14 homenagens individuais, geradas por `js/john-memorial.js`. Cada cartão abre um diálogo com o retrato de quem escreve e uma imagem de John registrada antes da morte, além do texto, reações, resposta e navegação anterior/próxima.
-- Brian aparece somente em um registro histórico marcado como escrito enquanto ainda estava vivo, depois da morte de John. Nenhuma mensagem é atribuída a John após sua morte.
-- `era-extincao-presente/memorial-hellsings.css` compartilha o layout responsivo dos posts de Brian e acrescenta a paleta ciano/cobre de John.
+- Brian morreu antes de John; a ordem consta em `LORE-PRESENTE.md`. Nenhuma fala de Brian aparece no registro de John.
+- O arquivo J-06 apresenta 13 homenagens como transcrições de frequência, sem retratos individuais e sem repetir o mural do memorial de Brian. A pessoa escolhe uma voz na lista; o painel mostra a mensagem, reações e resposta.
+- `js/john-transmission-log.js` controla a seleção por clique e teclado. A onda gráfica é decorativa: não há áudio inventado. `era-extincao-presente/memorial-hellsings.css` define o console ciano/cobre e sua disposição responsiva.
 
 ## 10. Índice de documentação complementar
 

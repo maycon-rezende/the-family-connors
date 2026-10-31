@@ -108,7 +108,7 @@ Nem todos atravessaram os anos de devastação.
 
 Brian Taylor foi infectado durante uma saída de campo. Conseguiu regressar ao bunker e avisar a equipe, mas a infecção avançou enquanto Alice e os demais usavam os recursos disponíveis para cuidar dele. Brian morreu na enfermaria. Seus mapas e anotações de rota ficaram com Jack.
 
-Durante uma fuga em que muitas pessoas precisavam alcançar uma saída, John foi mordido e se sacrificou para salvar o grupo. Ficou para trás e atraiu a horda para longe da rota, dando aos demais tempo para escapar.
+Brian morreu antes de John. Mais tarde, durante outra fuga em que muitas pessoas precisavam alcançar uma saída, John foi mordido e se sacrificou para salvar o grupo. Ficou para trás e atraiu a horda para longe da rota, dando aos demais tempo para escapar.
 
 As imagens de John no presente foram registradas antes de sua morte. Os dois integrantes têm registros no novo [Memorial dos Hellsings](../memorial.html), que também reúne lembranças de outras pessoas perdidas ao longo das rotas.
 

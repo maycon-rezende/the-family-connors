@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John e as pessoas que cruzaram a rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=8" />
+    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=9" />
     <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=1" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
   </head>
@@ -394,79 +394,32 @@
 
         <section class="memorial-john-tributes" aria-labelledby="memorial-john-tributes-title">
           <header class="memorial-brian__section-heading memorial-brian__section-heading--thread">
-            <span class="memorial-kicker">CADERNO J-06 // VOZES DOS SOBREVIVENTES</span>
-            <h3 id="memorial-john-tributes-title">Quem voltou<br /><em>fala por ele.</em></h3>
-            <p>Cada retrato abre uma homenagem de cada vez. Brian deixou a sua enquanto ainda estava vivo; as demais vozes pertencem a quem continuou carregando a rota.</p>
+            <span class="memorial-kicker">ARQUIVO DE FREQUÊNCIAS // J-06</span>
+            <h3 id="memorial-john-tributes-title">O canal fechou.<br /><em>As vozes ficaram.</em></h3>
+            <p>As homenagens são reconstruções literárias revisáveis. Escolha uma frequência para ler uma voz por vez; não há retratos individuais nem áudio original.</p>
           </header>
 
-          <div class="memorial-brian-journal memorial-john-journal" data-john-journal>
-            <button class="memorial-brian-journal__cover memorial-john-journal__cover" type="button" data-john-journal-open aria-expanded="false" aria-controls="memorial-john-journal-reader">
-              <span class="memorial-brian-journal__eyebrow">ARQUIVO PESSOAL // J-06</span>
-              <span class="memorial-brian-journal__title">O caderno<br /><em>da última rota.</em></span>
-              <span class="memorial-brian-journal__description">Vozes preservadas de quem atravessou a saída que John manteve aberta.</span>
-              <span class="memorial-brian-journal__action">ABRIR AS HOMENAGENS <b aria-hidden="true">↗</b></span>
-              <span class="memorial-brian-journal__seal" aria-hidden="true">J<br /><b>06</b></span>
-            </button>
-
-            <div class="memorial-brian-journal__reader" id="memorial-john-journal-reader" data-john-journal-reader hidden>
-              <div class="memorial-brian-journal__toolbar">
-                <span>RETRATOS ANTERIORES À FUGA // J-06</span>
-                <b data-john-journal-counter aria-live="polite">14 VOZES</b>
-                <span data-john-journal-category>ESCOLHA UM NOME</span>
+          <div class="john-transmission-console" data-john-journal>
+            <nav class="john-transmission-index" data-john-transmission-index role="listbox" aria-label="Escolha uma voz do arquivo de John" aria-orientation="vertical"></nav>
+            <article class="john-transmission" aria-live="polite" aria-labelledby="john-transmission-title">
+              <header class="john-transmission__header">
+                <div><span data-john-post-counter>FREQUÊNCIA 01 / 13</span><b>RECONSTRUÇÃO TEXTUAL</b></div>
+                <h4 id="john-transmission-title" data-john-post-title>Selecione uma frequência.</h4>
+                <p data-john-post-role>ARQUIVO J-06 // REGISTRO DE MEMÓRIA</p>
+              </header>
+              <div class="john-transmission__wave" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               </div>
-              <div class="memorial-brian-journal__page">
-                <div class="memorial-brian-tributes__grid memorial-brian-memory-grid memorial-john-memory-grid" data-john-memory-grid></div>
-              </div>
-              <nav class="memorial-brian-journal__controls memorial-john-journal__controls" aria-label="Navegação das homenagens de John">
-                <span>UMA VOZ DE CADA VEZ // CENAS RECONSTRUÍDAS E REVISÁVEIS</span>
-              </nav>
-              <button class="memorial-brian-journal__close" type="button" data-john-journal-close>FECHAR O CADERNO</button>
-            </div>
+              <blockquote class="john-transmission__message" data-john-post-message>Selecione um nome à esquerda para abrir a mensagem preservada.</blockquote>
+              <footer class="john-transmission__signature"><b data-john-post-name>SEM FREQUÊNCIA SELECIONADA</b><small data-john-post-signoff>Uma voz por vez // registro sem áudio original</small></footer>
+              <section class="john-transmission__thread" aria-label="Reações e resposta a esta mensagem">
+                <header><span>LINHA DE RETORNO // RESPOSTAS PRESERVADAS</span><b data-john-post-era>ARQUIVO J-06</b></header>
+                <div class="john-transmission__reactions" data-john-post-reactions aria-label="Reações a esta mensagem"></div>
+                <div class="john-transmission__reply" data-john-post-reply></div>
+              </section>
+            </article>
           </div>
         </section>
-
-        <dialog class="memorial-memory-post memorial-memory-post--john" data-john-post aria-labelledby="memorial-john-post-title">
-          <div class="memorial-memory-post__frame">
-            <header class="memorial-memory-post__topline">
-              <span>ARQUIVO DE MEMÓRIAS // J-06</span>
-              <span data-john-post-counter>01 / 14</span>
-              <form method="dialog" class="memorial-memory-post__close-form">
-                <button type="submit" data-john-post-close aria-label="Fechar homenagem de John">FECHAR <b aria-hidden="true">×</b></button>
-              </form>
-            </header>
-            <div class="memorial-memory-post__layout">
-              <div class="memorial-memory-post__images">
-                <figure class="memorial-memory-post__portrait" data-john-speaker-frame>
-                  <img data-john-speaker-image alt="" />
-                  <figcaption><span>QUEM LEMBRA</span><b data-john-speaker-caption></b></figcaption>
-                </figure>
-                <figure class="memorial-memory-post__portrait memorial-memory-post__portrait--john">
-                  <img src="img-hellsing/john-presente.png" alt="Registro de John feito antes de sua morte" />
-                  <figcaption><span>REGISTRO ANTERIOR À MORTE</span><b>John // J-06</b></figcaption>
-                </figure>
-              </div>
-              <article class="memorial-memory-post__letter">
-                <div class="memorial-memory-post__identity">
-                  <span class="memorial-memory-post__code" data-john-post-code>MEMÓRIA 01</span>
-                  <span class="memorial-memory-post__category" data-john-post-category>FORMAÇÃO HELLSINGS</span>
-                </div>
-                <h4 id="memorial-john-post-title" data-john-post-title>Uma voz que ficou.</h4>
-                <blockquote data-john-post-quote></blockquote>
-                <footer><b data-john-post-name></b><small data-john-post-role></small></footer>
-                <p class="memorial-memory-post__signoff" data-john-post-signoff></p>
-                <section class="memorial-memory-thread" aria-label="Respostas e reações à homenagem de John">
-                  <header class="memorial-memory-thread__heading"><span>LINHA DA MEMÓRIA // RESPOSTAS PRESERVADAS</span><b data-john-post-era>MEMORIAL DE JOHN</b></header>
-                  <div class="memorial-memory-thread__reactions" data-john-post-reactions aria-label="Reações a esta homenagem"></div>
-                  <ol class="memorial-memory-thread__replies" data-john-post-replies aria-label="Resposta de outro sobrevivente"></ol>
-                </section>
-              </article>
-            </div>
-            <nav class="memorial-memory-post__controls" aria-label="Navegação entre as homenagens de John">
-              <button type="button" data-john-post-prev disabled>← ANTERIOR</button>
-              <button type="button" data-john-post-next>PRÓXIMA VOZ →</button>
-            </nav>
-          </div>
-        </dialog>
       </section>
 
       <section class="memorial-road" aria-labelledby="memorial-road-title">
@@ -574,6 +527,6 @@
     <script src="js/memorial-video.js" defer></script>
     <script src="js/memorial-journal.js?v=4" defer></script>
     <script src="js/malha-chat.js?v=1" defer></script>
-    <script src="js/john-memorial.js?v=1" defer></script>
+    <script src="js/john-transmission-log.js?v=1" defer></script>
   </body>
 </html>
