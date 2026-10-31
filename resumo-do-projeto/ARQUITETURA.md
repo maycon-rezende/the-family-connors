@@ -4,7 +4,7 @@
 
 | Arquivo | Função |
 | --- | --- |
-| `index.html` | Experiência principal no presente devastado |
+| `index.html` | Experiência principal no presente devastado, agora com o atalho flutuante da Malha Hellsings no canto inferior esquerdo |
 | `arquivo-passado.html` | Prólogo e entrada dos Arquivos do Passado |
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Arquivo do centro de comando Hellsings antes do Dia D |
@@ -23,8 +23,9 @@
 
 ## Malha Hellsings — conversas narrativas
 
-- O piloto fica em `faccao-hellsings-presente.html`, somente na página da facção no presente. `hellsing.html`, que guarda o arquivo anterior ao Dia D, não foi alterado.
+- O piloto de facção fica em `faccao-hellsings-presente.html`; `index.html` também oferece um chat flutuante da Malha no canto inferior esquerdo. `hellsing.html`, que guarda o arquivo anterior ao Dia D, não foi alterado.
 - `era-extincao-presente/malha-hellsings.css` define o visual do canal; `js/malha-hellsings.js` controla a troca acessível entre canais por mouse e teclado.
+- Na página inicial, `era-extincao-presente/malha-chat.css` e `js/malha-chat.js` controlam o botão **ABRIR CHAT**, o painel responsivo, as abas e o fechamento por botão, Escape ou clique fora. As conversas apresentam dois recortes ficcionais do presente: uma operação e uma conversa de convivência que lembra Brian.
 - Os canais iniciais são `Rota sem nome` (operações) e `Entre os seus` (convívio do bunker). As mensagens são cenas escritas e preservadas no HTML, com respostas e reações; não são uma conversa ao vivo nem conteúdo enviado por visitantes.
 - A linha do presente inclui integrantes ativos. Brian e John aparecem apenas nos registros de memória; uma conversa de Jully e Alice preserva a lembrança de Brian sem atribuir mensagens a ele.
 - `memorial.html` aplica a mesma ideia nas 24 homenagens individuais, por meio de reações e uma resposta de personagem em cada post. `js/memorial-journal.js` monta as conversas; `era-extincao-presente/memorial-hellsings.css` estiliza o fio de respostas dentro do diálogo.

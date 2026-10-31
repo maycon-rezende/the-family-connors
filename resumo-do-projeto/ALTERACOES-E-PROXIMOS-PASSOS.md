@@ -352,3 +352,10 @@
 - O recado de John mantém o rótulo de que foi escrito enquanto ainda estava vivo. John não é usado como autor de reações ou respostas posteriores.
 - `js/memorial-journal.js` monta os fios de conversa e `era-extincao-presente/memorial-hellsings.css` os estiliza no diálogo existente. Os controles fixos de fechar e navegar continuam no mesmo lugar; os parâmetros de cache da página foram atualizados.
 - A Malha está agora na facção presente e nas homenagens de Brian. Outras páginas de facção continuam como expansão futura; as mensagens são roteirizadas, sem backend ou participação pública.
+
+## Atualização de 31 de outubro de 2026 — atalho de chat na página inicial
+
+- `index.html` recebeu o botão flutuante **ABRIR CHAT** no canto inferior esquerdo. Ao abrir, ele mostra a **Malha Hellsings** em um painel responsivo com os canais `Rota sem nome` e `Entre os seus`.
+- Os recortes mostram sobreviventes em uma operação e uma conversa sobre a caneca e o mapa de Brian. Brian é lembrado, sem publicar mensagens; John não aparece como ativo no presente.
+- `era-extincao-presente/malha-chat.css` define o acabamento âmbar, cartões de mensagens, retratos, reações, responsividade e respeito a `prefers-reduced-motion`. `js/malha-chat.js` controla abertura/fechamento, clique fora e Escape, abas por teclado e ocultação quando o menu principal abre.
+- O conteúdo é narrativo, fixo no HTML e sem backend: não há mensagens de visitantes nem automação de bots. O livro público com armazenamento Supabase segue planejado para depois da conclusão do site.

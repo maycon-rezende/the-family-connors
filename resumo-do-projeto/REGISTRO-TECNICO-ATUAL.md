@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **25 de outubro de 2026**.
+Atualizado em **31 de outubro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -330,6 +330,13 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - A abertura usa música e referências temporárias. Não monetizar nem solicitar AdSense antes de regularizar licenças.
 - Arquivos de mídia novos podem estar guardados no repositório antes de serem ligados a uma página; isso não significa que a lore foi confirmada.
 - Priorizar revisão visual em telas pequenas sempre que uma galeria receber nova imagem, principalmente para confirmar que retratos verticais não foram cortados.
+
+## Chat narrativo flutuante na página principal
+
+- `index.html` monta o botão **ABRIR CHAT** e o painel não modal da Malha Hellsings. O componente é exclusivo da página principal do presente; não altera páginas do passado.
+- `era-extincao-presente/malha-chat.css` fornece o painel âmbar, a disposição compacta de mensagens e retratos, a adaptação mobile e os ajustes de foco/redução de movimento.
+- `js/malha-chat.js` implementa a alternância dos canais, navegação por setas/Home/End, fechamento por Escape, botão e clique fora, e fecha o painel se o menu global for aberto.
+- As mensagens e reações são trechos narrativos escritos no HTML. O protótipo não envia, armazena nem atualiza mensagens de usuários ou de bots; o livro público em Supabase permanece planejado para uma etapa futura.
 
 ## 10. Índice de documentação complementar
 

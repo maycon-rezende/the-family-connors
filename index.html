@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="era-extincao-presente/extinction-hellsings-present.css?v=2" />
   <link rel="stylesheet" href="era-extincao-presente/world-archive.css?v=4" />
   <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
+  <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=1" />
   <style>
     @keyframes scenarioAwaken {
       from {
@@ -506,6 +507,72 @@
   <link rel="stylesheet" href="css/diary-clues.css">
   <script src="js/diary-clues.js" defer></script>
 <button class="diary-clue" data-diary-clue="mark" type="button">FRAGMENTO BC-05 // REGISTRO DE ORIGEM</button>
+<section class="malha-chat-widget" data-malha-chat aria-label="Malha Hellsings">
+  <button class="malha-chat-launcher" type="button" data-chat-launcher aria-expanded="false" aria-controls="malha-chat-panel">
+    <span class="malha-chat-launcher__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span>ABRIR CHAT</span><b aria-hidden="true">H-01</b>
+  </button>
+  <section class="malha-chat-panel" id="malha-chat-panel" role="dialog" aria-modal="false" aria-labelledby="malha-chat-title" aria-describedby="malha-chat-description" data-chat-panel hidden>
+    <header class="malha-chat-panel__header">
+      <div class="malha-chat-panel__signal"><i aria-hidden="true"></i><span>FREQUÊNCIA H // CANAL INTERNO</span></div>
+      <button class="malha-chat-panel__close" type="button" data-chat-close aria-label="Fechar chat">×</button>
+      <h2 id="malha-chat-title">Malha Hellsings</h2>
+      <p id="malha-chat-description">Recortes narrativos recuperados // canal dos sobreviventes</p>
+    </header>
+    <div class="malha-chat-tabs" role="tablist" aria-label="Conversas da Malha">
+      <button type="button" role="tab" id="malha-chat-tab-route" aria-selected="true" aria-controls="malha-chat-route" tabindex="0" data-chat-tab="route">ROTA SEM NOME</button>
+      <button type="button" role="tab" id="malha-chat-tab-bunker" aria-selected="false" aria-controls="malha-chat-bunker" tabindex="-1" data-chat-tab="bunker">ENTRE OS SEUS</button>
+    </div>
+    <section class="malha-chat-thread" id="malha-chat-route" role="tabpanel" aria-labelledby="malha-chat-tab-route" data-chat-thread="route">
+      <p class="malha-chat-thread__date">RECORTE 01 // TURNO DA MANHÃ</p>
+      <ol class="malha-chat-messages" aria-label="Conversa sobre a transmissão de Braddock">
+        <li class="malha-chat-message">
+          <img src="img-hellsing/naomi-presente.png" alt="" aria-hidden="true" />
+          <div><header><b>Naomi Yagami</b><time datetime="06:12">06:12</time></header><p>O sinal de Braddock voltou por três segundos. Ainda sem coordenadas.</p><div class="malha-chat-reactions"><span aria-label="Jack marcou como importante">⌖ <small>Jack</small></span><span aria-label="Mark sinalizou cautela">⚠ <small>Mark</small></span></div></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-presente/personagens/jack-presente1.png" alt="" aria-hidden="true" />
+          <div><header><b>Jack Connor</b><time datetime="06:14">06:14</time></header><p>Ninguém desloca o comboio por uma hipótese. Esperamos confirmação.</p><div class="malha-chat-reply"><b>Mark</b><p>Escolta pronta. Nenhum motor ligado até a leitura fechar.</p></div></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-hellsing/luke-presente.png" alt="" aria-hidden="true" />
+          <div><header><b>Luke</b><time datetime="06:19">06:19</time></header><p>O leito seco continua aberto até a curva. Depois disso, as marcas não são confiáveis.</p></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-hellsing/hellen-presente.png" alt="" aria-hidden="true" />
+          <div><header><b>Hellen Wren</b><time datetime="06:20">06:20</time></header><p>Verifico a curva a pé. Sem motores, sem rastro.</p><div class="malha-chat-reactions"><span aria-label="Naomi marcou para conferir">⌕ <small>Naomi</small></span></div></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-presente/personagens/alice-presente1.png" alt="" aria-hidden="true" />
+          <div><header><b>Alice Connor</b><time datetime="06:23">06:23</time></header><p>E todo mundo passa pela triagem na volta. Não vou repetir isso.</p><div class="malha-chat-reply"><b>Mark</b><p>Recebido, Alice. Já entendi.</p></div></div>
+        </li>
+      </ol>
+    </section>
+    <section class="malha-chat-thread" id="malha-chat-bunker" role="tabpanel" aria-labelledby="malha-chat-tab-bunker" data-chat-thread="bunker" hidden>
+      <p class="malha-chat-thread__date">RECORTE 02 // FIM DE TURNO</p>
+      <ol class="malha-chat-messages" aria-label="Conversa de Jully e Alice sobre uma lembrança de Brian">
+        <li class="malha-chat-message">
+          <img src="img-presente/personagens/jully-presente1.png" alt="" aria-hidden="true" />
+          <div><header><b>Jully Connor</b><time datetime="20:11">20:11</time></header><p>Encontrei a caneca do Brian atrás do rádio. Lavei e deixei na prateleira de cima. Não consegui guardar no armário.</p><div class="malha-chat-reactions"><span aria-label="Alice reagiu com tristeza">😔 <small>Alice</small></span><span aria-label="Jack deixou uma homenagem">♥ <small>Jack</small></span></div></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-presente/personagens/alice-presente1.png" alt="" aria-hidden="true" />
+          <div><header><b>Alice Connor</b><time datetime="20:13">20:13</time></header><p>Deixa onde está. Hoje ninguém precisa decidir o que fazer com ela.</p></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-presente/personagens/jack-presente1.png" alt="" aria-hidden="true" />
+          <div><header><b>Jack Connor</b><time datetime="20:14">20:14</time></header><p>Amanhã deixo o mapa com as anotações dele ao lado. Assim ninguém vai procurar no escuro.</p><div class="malha-chat-reactions"><span aria-label="Alice concordou">✓ <small>Alice</small></span></div></div>
+        </li>
+        <li class="malha-chat-message">
+          <img src="img-hellsing/naomi-presente.png" alt="" aria-hidden="true" />
+          <div><header><b>Naomi Yagami</b><time datetime="20:17">20:17</time></header><p>Caneca intacta. Mapa preservado. Vou registrar sem data, por enquanto.</p></div>
+        </li>
+      </ol>
+    </section>
+    <footer class="malha-chat-panel__footer"><span>RECORTES NARRATIVOS // MALHA H</span><span>ROTINA // MEMÓRIA</span></footer>
+  </section>
+</section>
+<script src="js/malha-chat.js?v=1" defer></script>
 </body>
 
 </html>
