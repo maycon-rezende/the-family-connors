@@ -7,11 +7,27 @@
 | `index.html` | Experiência principal no presente devastado |
 | `arquivo-passado.html` | Prólogo e entrada dos Arquivos do Passado |
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
-| `hellsing.html` | Centro de comando dos Hellsings |
-| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, mural de 24 homenagens em posts individuais e despedida sem áudio), John e outras pessoas perdidas nas rotas dos Hellsings |
+| `hellsing.html` | Arquivo do centro de comando Hellsings antes do Dia D |
+| `faccao-hellsings-presente.html` | Dossiê da facção no presente, com operações, integrantes ativos e o piloto de conversas Malha Hellsings |
+| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário interativo com 24 homenagens individuais e despedida sem áudio), John e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
+
+## Livro público de visitantes — planejado para a fase final
+
+- O autor decidiu deixar o mural de mensagens dos visitantes para depois que o restante do site estiver concluído.
+- A preferência é que visitantes possam escrever sem conta GitHub e que as mensagens publicadas apareçam para as próximas pessoas que acessarem o memorial.
+- Supabase é a opção escolhida para armazenar essas mensagens; o site estático não as guarda por conta própria. A configuração de moderação, aprovação e proteção contra spam ainda será decidida na implementação.
+- Giscus não foi integrado. A busca no projeto confirmou que não há código ou configuração dele.
+
+## Malha Hellsings — conversas narrativas
+
+- O piloto fica em `faccao-hellsings-presente.html`, somente na página da facção no presente. `hellsing.html`, que guarda o arquivo anterior ao Dia D, não foi alterado.
+- `era-extincao-presente/malha-hellsings.css` define o visual; `js/malha-hellsings.js` controla a troca acessível entre canais por mouse e teclado.
+- Os canais iniciais são `Rota sem nome` (operações) e `Entre os seus` (convívio do bunker). As mensagens são cenas escritas e preservadas no HTML, com respostas e reações; não são uma conversa ao vivo nem conteúdo enviado por visitantes.
+- A linha do presente inclui integrantes ativos. Brian e John aparecem apenas nos registros de memória; uma conversa de Jully e Alice preserva a lembrança de Brian sem atribuir mensagens a ele.
+- A estrutura visual foi preparada para ser reaproveitada depois no memorial e em outras páginas de facções. O livro de mensagens do público continua separado e planejado para Supabase após a conclusão do site.
 
 ## Abertura cinematográfica do presente
 

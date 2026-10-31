@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="era-extincao-presente/faccao-hellsings.css" />
+    <link rel="stylesheet" href="era-extincao-presente/malha-hellsings.css?v=1" />
   </head>
   <body>
     <div class="faction-noise" aria-hidden="true"></div>
@@ -44,6 +45,7 @@
           <div class="hero-status">
             <b>STATUS // ATIVA</b><b>BASE // CLASSIFICADA</b><b>COMANDO // JACK CONNOR</b>
           </div>
+          <a class="malha-hero-link" href="#malha-hellsings"><span>ACESSAR A MALHA H</span><b aria-hidden="true">↘</b></a>
         </div>
         <small>QUANDO O SISTEMA NÃO PODE AGIR, NÓS ENTRAMOS.</small>
       </header>
@@ -187,6 +189,94 @@
             >Rumores falam de uma região livre das hordas e das grandes facções. Braddock pode
             conhecer o caminho. Sua transmissão, porém, está desaparecendo.</span
           ><a href="index.html#desaparecidos">RASTREAR SINAL DE BRADDOCK →</a>
+        </div>
+      </section>
+
+      <section class="malha-section" id="malha-hellsings" aria-labelledby="malha-title">
+        <div class="malha-shell">
+          <header class="malha-heading">
+            <div>
+              <p class="eyebrow">REDE INTERNA // CANAL H-01</p>
+              <h2 id="malha-title">Malha<br /><em>Hellsings.</em></h2>
+            </div>
+            <p>
+              Antes de uma ordem virar movimento, antes de uma rota virar caminho — alguém sempre
+              escreve primeiro. Recortes preservados da equipe que continua em operação.
+            </p>
+          </header>
+
+          <div class="malha-console" data-malha>
+            <header class="malha-console__topbar">
+              <div class="malha-console__identity">
+                <span class="malha-signal" aria-hidden="true"></span>
+                <div><small>TERMINAL DO BUNKER // ACESSO INTERNO</small><b>MALHA H</b></div>
+              </div>
+              <div class="malha-console__connection"><b>SINAL ESTÁVEL</b><span>CRIPTOGRAFIA LOCAL // H-01</span></div>
+            </header>
+
+            <div class="malha-console__body">
+              <div class="malha-tabs" role="tablist" aria-label="Canais da Malha Hellsings">
+                <button id="malha-tab-rota" class="malha-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="malha-panel-rota" tabindex="0" data-malha-tab="rota">
+                  <span class="malha-tab__index">01</span><span class="malha-tab__label"><b>ROTA SEM NOME</b><small>CANAL DE OPERAÇÕES</small></span><span class="malha-tab__count">04</span>
+                </button>
+                <button id="malha-tab-bunker" class="malha-tab" type="button" role="tab" aria-selected="false" aria-controls="malha-panel-bunker" tabindex="-1" data-malha-tab="bunker">
+                  <span class="malha-tab__index">02</span><span class="malha-tab__label"><b>ENTRE OS SEUS</b><small>CANAL DO BUNKER</small></span><span class="malha-tab__count">05</span>
+                </button>
+              </div>
+
+              <div class="malha-panels">
+                <section id="malha-panel-rota" class="malha-panel" role="tabpanel" aria-labelledby="malha-tab-rota" tabindex="0" data-malha-panel="rota">
+                  <header class="malha-panel__heading"><div><span>LINHA DE OPERAÇÃO // RECORTE 01</span><b>Rota sem nome</b></div><small>04 REGISTROS // TURNO DA MANHÃ</small></header>
+                  <ol class="malha-feed" aria-label="Conversa sobre o sinal de Braddock">
+                    <li class="malha-message">
+                      <img src="img-hellsing/naomi-presente.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Naomi Yagami</b><span>N-05 // INTELIGÊNCIA</span><time datetime="06:12">06:12</time></header><p>O sinal de Braddock voltou por três segundos. Ainda não há coordenadas — só uma repetição curta no fim.</p><div class="malha-reactions" aria-label="Reações"><span aria-label="Jack marcou como importante"><b aria-hidden="true">⌖</b><small>Jack</small></span><span aria-label="Mark sinalizou cautela"><b aria-hidden="true">⚠</b><small>Mark</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-presente/personagens/jack-presente1.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Jack Connor</b><span>JC-01 // COMANDO</span><time datetime="06:14">06:14</time></header><p>Ninguém desloca o comboio por uma hipótese. Preparem os veículos; a saída depende de confirmação.</p><div class="malha-reply"><small>MARK // COMANDO TÁTICO</small><p>Escolta pronta. Nenhum motor ligado até a Naomi fechar a leitura.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Alice aprovou"><b aria-hidden="true">✓</b><small>Alice</small></span><span aria-label="Luke confirmou"><b aria-hidden="true">👍</b><small>Luke</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-hellsing/luke-presente.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Luke</b><span>H-06 // CAMPO</span><time datetime="06:19">06:19</time></header><p>O leito seco continua aberto até a curva. Depois disso, as marcas ficam velhas demais para confiar.</p><div class="malha-reply"><small>HELLEN WREN // INFILTRAÇÃO</small><p>Eu verifico a curva antes de alguém colocar uma roda lá.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Naomi marcou para verificar"><b aria-hidden="true">⌕</b><small>Naomi</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-presente/personagens/mark-presente2.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Mark Connor</b><span>COMANDO TÁTICO</span><time datetime="06:23">06:23</time></header><p>Hellen confirma. Luke marca. Naomi cruza os pulsos. Só então a rota vira uma ordem.</p><div class="malha-reply"><small>ALICE CONNOR // COMANDO MÉDICO</small><p>E toda ordem termina na triagem. Ninguém pula essa parte.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Naomi marcou o plano para conferir"><b aria-hidden="true">⌕</b><small>Naomi</small></span><span aria-label="Jack concordou"><b aria-hidden="true">✓</b><small>Jack</small></span></div></div>
+                    </li>
+                  </ol>
+                </section>
+
+                <section id="malha-panel-bunker" class="malha-panel" role="tabpanel" aria-labelledby="malha-tab-bunker" tabindex="0" data-malha-panel="bunker" hidden>
+                  <header class="malha-panel__heading"><div><span>LINHA DE CONVÍVIO // RECORTE 02</span><b>Entre os seus</b></div><small>05 REGISTROS // FIM DE TURNO</small></header>
+                  <ol class="malha-feed" aria-label="Conversa cotidiana no bunker">
+                    <li class="malha-message">
+                      <img src="img-presente/personagens/alice-presente1.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Alice Connor</b><span>COMANDO MÉDICO</span><time datetime="19:41">19:41</time></header><p>Se a caixa de curativos voltar para o arsenal, vou colar a ficha médica na testa de quem a levar.</p><div class="malha-reply"><small>MARK CONNOR // COMANDO TÁTICO</small><p>A caixa estava ao lado da porta do arsenal.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Jack reconheceu o aviso"><b aria-hidden="true">🫡</b><small>Jack</small></span><span aria-label="Hellen achou graça"><b aria-hidden="true">☻</b><small>Hellen</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-hellsing/hellen-presente.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Hellen Wren</b><span>H-10 // INFILTRAÇÃO</span><time datetime="19:46">19:46</time></header><p>Quem deixou a lanterna acesa no corredor de operações?</p><div class="malha-reply"><small>JACK CONNOR // COMANDO</small><p>Fui eu. Estava conferindo o mapa.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Naomi apontou um detalhe"><b aria-hidden="true">👁</b><small>Naomi</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-hellsing/luke-presente.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Luke</b><span>H-06 // CAMPO</span><time datetime="19:52">19:52</time></header><p>O filtro de água está fazendo um ruído diferente.</p><div class="malha-reply"><small>ALICE CONNOR // COMANDO MÉDICO</small><p>Não mexa nele até eu chegar. Ruído diferente também pode ser vazamento.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Mark prometeu verificar"><b aria-hidden="true">⚙</b><small>Mark</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-hellsing/naomi-presente.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Naomi Yagami</b><span>N-05 // INTELIGÊNCIA</span><time datetime="20:03">20:03</time></header><p>Braddock não respondeu. Já registrei: silêncio confirmado, sem coordenadas novas.</p><div class="malha-reply"><small>JACK CONNOR // COMANDO</small><p>Assim fica no arquivo. A gente espera pelo próximo sinal.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Alice enviou um café"><b aria-hidden="true">☕</b><small>Alice</small></span><span aria-label="Luke confirmou"><b aria-hidden="true">✓</b><small>Luke</small></span></div></div>
+                    </li>
+                    <li class="malha-message">
+                      <img src="img-presente/personagens/jully-presente1.png" alt="" aria-hidden="true" />
+                      <div class="malha-message__content"><header><b>Jully Connor</b><span>FORMAÇÃO H // PRESENTE</span><time datetime="20:11">20:11</time></header><p>Encontrei a caneca do Brian atrás do rádio. Lavei e deixei na prateleira de cima. Não consegui guardar no armário.</p><div class="malha-reply"><small>ALICE CONNOR // COMANDO MÉDICO</small><p>Deixa onde está. Hoje ninguém precisa decidir o que fazer com ela.</p></div><div class="malha-reactions" aria-label="Reações"><span aria-label="Alice reagiu com tristeza"><b aria-hidden="true">😔</b><small>Alice</small></span><span aria-label="Jack deixou uma homenagem"><b aria-hidden="true">♥</b><small>Jack</small></span></div></div>
+                    </li>
+                  </ol>
+                </section>
+              </div>
+            </div>
+            <footer class="malha-console__footer"><span>RECORTES NARRATIVOS // PRESENTE DOS HELLSINGS</span><span>CANAL H-01 // <b>FREQUÊNCIA ABERTA</b></span></footer>
+          </div>
+          <p class="malha-note">Os registros acompanham a cronologia atual da facção. Brian e John permanecem nos arquivos do memorial.</p>
         </div>
       </section>
 
@@ -368,5 +458,6 @@
       ><a href="hellsing.html">ARQUIVO ANTES DO DIA D →</a>
     </footer>
     <script src="era-extincao-presente/faccao-hellsings.js"></script>
+    <script src="js/malha-hellsings.js?v=1" defer></script>
   </body>
 </html>

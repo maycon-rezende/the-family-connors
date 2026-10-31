@@ -331,3 +331,16 @@
 - `js/memorial-journal.js` cria os cartões a partir das homenagens preservadas no HTML e controla a abertura, a navegação, o teclado e a restauração do foco. `era-extincao-presente/memorial-hellsings.css` define o mural, os posts e os ajustes para telas menores.
 - Os retratos de Ariani, Britney e Jully foram substituídos por imagens do presente. A homenagem de Alice agora usa a cena dela cuidando de Brian na enfermaria, com Jack ao lado.
 - O botão de fechar usa o mecanismo nativo do diálogo; a navegação anterior/próxima fica presa à base do post durante a rolagem.
+
+## Atualização de 31 de outubro de 2026 — livro público de visitantes (planejado)
+
+- O autor decidiu adiar o livro de mensagens dos visitantes até o restante do site estar concluído. A ideia é permitir que pessoas deixem mensagens sem conta GitHub e que elas apareçam no memorial para os próximos visitantes.
+- Supabase foi escolhido como opção de armazenamento; o mural ainda não foi implementado nem conectado a um projeto Supabase. A forma de publicação, moderação e proteção contra spam será definida nessa etapa.
+- Giscus não foi integrado. A busca confirmou que não há código ou configuração dele no projeto, portanto não existia integração a remover.
+
+## Atualização de 31 de outubro de 2026 — piloto da Malha Hellsings
+
+- A página `faccao-hellsings-presente.html` recebeu um canal de conversas internas chamado **Malha Hellsings**, com atalho no banner e dois canais navegáveis: operações na rota sem nome e convivência no bunker.
+- Os registros têm vozes, horários, respostas e reações entre integrantes ativos. A conversa de Jully sobre a caneca de Brian recebe uma resposta de Alice e reações de Alice e Jack; Brian não publica mensagens. John também não aparece como ativo no canal do presente.
+- O fluxo de mensagens é conteúdo narrativo curado no próprio HTML, sem backend e sem publicações de visitantes. As abas funcionam com clique e teclado.
+- `era-extincao-presente/malha-hellsings.css` e `js/malha-hellsings.js` formam o piloto reutilizável. `hellsing.html` e as demais páginas ainda não foram alteradas; a expansão para memorial e outras facções fica para as próximas etapas.
