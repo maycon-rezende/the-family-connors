@@ -114,11 +114,11 @@
       reaction: '✓'
     },
     {
-      author: { name: 'Clhoe', role: 'HELLSINGS // RECONHECIMENTO', avatar: 'img-hellsing/clhoe-presente.png' },
+      author: { name: 'Chloe', role: 'HELLSINGS // RECONHECIMENTO', avatar: 'img-hellsing/clhoe-presente.png' },
       text: 'A luz de sinalização piscou três vezes no posto sul. Confirmei com a ronda: bateria em teste, sem alerta.',
       replies: [
         { name: 'Naomi Yagami', avatar: 'img-hellsing/naomi-presente.png', text: 'Registro atualizado. Obrigada por confirmar antes de abrir o canal.' },
-        { name: 'Clhoe', avatar: 'img-hellsing/clhoe-presente.png', replyTo: 'Naomi', text: 'Ótimo. Já posso tomar o café que deixei esfriar.' }
+        { name: 'Chloe', avatar: 'img-hellsing/clhoe-presente.png', replyTo: 'Naomi', text: 'Ótimo. Já posso tomar o café que deixei esfriar.' }
       ],
       reaction: '☕'
     }

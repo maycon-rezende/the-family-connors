@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **1 de novembro de 2026**.
+Atualizado em **2 de novembro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -237,7 +237,7 @@ O endereço anterior `dimitri-presente.html` redireciona para `dimitri-arquivo.h
 
 ### Regra de paleta exclusiva
 
-Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi (teal/azul), Clhoe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre), Dimitri (aço/azul-gelo/vermelho), Nathan (verde-fósforo/grafite), Lana (verde-rádio/areia) e Pollyana (ameixa/âmbar). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
+Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi (teal/azul), Chloe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre), Dimitri (aço/azul-gelo/vermelho), Nathan (verde-fósforo/grafite), Lana (verde-rádio/areia) e Pollyana (ameixa/âmbar). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
 
 ## 5. Herdeiros e segunda geração
 
@@ -258,7 +258,7 @@ As páginas individuais dos herdeiros têm detalhes específicos — por exemplo
 | `era-extincao-presente/hilary-caldwell-ashford.css`, `era-extincao-presente/hilary-cursor.css` e `js/hilary-archive.js` | Paleta exclusiva verde clínico/âmbar, cursor de rastreamento para mouse, navegação por período e visualizador acessível de imagens com botões, setas e Escape. Cursor desativado em touch e para preferência por movimento reduzido. |
 | `img-hilary-passado=presente/` | Pasta com 20 arquivos do núcleo de Hilary; o perfil seleciona dez fotos anteriores ao Dia D e quatro registros do presente, sem misturar os períodos. |
 
-O índice `membros-hellsings.html` agora apresenta Lana Whitmore, Sally Ward e Hilary. O background de Hilary está consolidado em `LORE-PRESENTE.md`; Leona, filha de Joey Muller e Hellen Wren, permanece como personagem separada em desenvolvimento.
+O índice `membros-hellsings.html` apresenta Lana Whitmore, Sally Ward, Hilary Caldwell Ashford, Sophie Romanoff e Leona. Leona tem página própria; sua história detalhada está marcada como proposta.
 
 ## 6. Política de mídia e nomenclatura
 
@@ -416,3 +416,27 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `js/malha-chat.js`, `js/malha-hellsings.js` e `js/malha-faccoes.js` ganharam novas sequências dialogadas, com respostas contextualizadas e vozes próprias para Cobras, Fogo, Sal, Ferro e Dominus. Dominus permanece anônimo.
 - O canal de rota dos Hellsings menciona o sinal perdido de Doomsday e a busca sem antecipar o reencontro. As homenagens roteirizadas de Brian incluem diferentes integrantes e filhos; Brian não escreve após morrer, e John aparece falando enquanto ainda estava vivo.
 - Lore atualizada em `UNIVERSO-E-LORE.md` e `LORE-PRESENTE.md`: Doomsday e Era pertencem ao mesmo universo; no final planejado, os Hellsings destroem Dominus, encontram a estufa do governo dos Estados Unidos e iniciam a restauração vegetal e o combate aos patógenos zumbis. Cenas, localização e método ainda não foram escritos.
+
+### Perfis das famílias de Chloe e Luke — 2 de novembro de 2026
+
+- `clhoe-familia.html` identifica Darius e Micah Bennett e liga aos dossiês `darius-bennett.html` e `micah-bennett.html`.
+- `luke-familia.html` reúne Imani, Asha e Nyla Carver e liga a `imani-carver.html`, `asha-carver.html` e `nyla-carver.html`.
+- `era-extincao-presente/family-profile.css` contém o layout responsivo comum. Cada perfil tem acentos próprios: Darius (ferrugem/sálvia), Micah (azul/cidreira), Imani (verde-mar/coral), Asha (lima/ardósia) e Nyla (ouro/azul-glacial). Chloe mantém violeta/rosa; Luke, musgo/âmbar.
+- Os nomes e backgrounds foram criados como propostas revisáveis. As páginas identificam os recortes de fotos familiares usados enquanto não houver retratos individuais.
+
+### Sophie Romanoff — membro da família Connor — 2 de novembro de 2026
+
+- A antiga Nathália agora aparece como **Sophie Romanoff**, esposa de Alucard. O perfil visível continua em `nathalia-presente.html`; classes, CSS, JavaScript e arquivos de imagem mantêm seus nomes técnicos antigos para preservar compatibilidade.
+- A galeria individual reúne três retratos diferentes: `nathalia.png`, `nathália.png` e `nthalia.png`. As imagens conjuntas com Alucard continuam no arquivo de casais.
+- `alucard-presente.html` não apresenta mais a esposa nem a foto individual relacionada. `casais-presente.html` mantém os registros do casal com o nome atualizado.
+- `membros-hellsings.html` inclui Sophie na quarta posição e, após a entrada de Leona, reúne cinco perfis individuais.
+- A história pessoal e a função de Sophie permanecem em aberto.
+
+### Leona — perfil e arquivo visual — 2 de novembro de 2026
+
+- `leona-presente.html` apresenta a ficha, o arco entre a infância e o presente, competências e a missão proposta **A Escada Cega**.
+- `era-extincao-presente/leona-presente.css` cria uma paleta individual oliva/amarelo com acentos azul-frio e vermelho; `leona-presente.js` cuida do cursor e da ampliação de imagens quando os arquivos existem.
+- A pasta `img-leona-presente/` já continha dez imagens atuais: nove registros de exploração e família, além do retrato de capa. A página usa esses arquivos na galeria do presente e no cartão de Leona em `membros-hellsings.html`.
+- Nenhuma foto infantil ou anterior ao Dia D foi encontrada nessa pasta. A página mantém esse período identificado como arquivo em aberto, sem classificar imagens atuais como passado.
+- `membros-hellsings.html` agora lista Leona como quinto perfil.
+- Joey Muller e Hellen Wren são os pais, conforme a ficha. O background detalhado e o feito de campo são propostas revisáveis; data de nascimento, especialidade dos pais e demais operações não foram definidos.

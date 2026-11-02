@@ -9,7 +9,7 @@
         ['img-hellsing/scenes/comando-jack-mark-alice.png', 'Comando — Jack, Mark & Alice'],
         [
           'img-hellsing/scenes/inteligencia-john-naomi-clhoe.png',
-          'Inteligência — John, Naomi & Clhoe',
+          'Inteligência — John, Naomi & Chloe',
         ],
         [
           'img-hellsing/scenes/retorno-luke-dimitri-brian-hellen.png',
@@ -20,7 +20,7 @@
         ['img-alice/alice-hellsings-admin.png', 'Alice Myers — Administração'],
         ['img-hellsing/john.png', 'John — Tecnologia'],
         ['img-hellsing/naomi.png', 'Naomi — Inteligência'],
-        ['img-hellsing/clhoe.png', 'Clhoe — Reconhecimento'],
+        ['img-hellsing/clhoe.png', 'Chloe — Reconhecimento'],
         ['img-hellsing/luke.png', 'Luke — Estratégia'],
         ['img-hellsing/dimitri.png', 'Dimitri — Extração'],
         ['img-hellsing/brian-taylor.png', 'Brian Taylor — Rastreamento'],

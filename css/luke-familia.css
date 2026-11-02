@@ -1,0 +1,39 @@
+body.carver-family {
+  --profile-ink: #101912;
+  --profile-deep: #182319;
+  --profile-panel: #243026;
+  --profile-paper: #edf0dd;
+  --profile-accent: #9acb81;
+  --profile-secondary: #d5a85f;
+}
+.carver-family .profile-grid { background: repeating-linear-gradient(0deg, transparent 0 72px, rgb(154 203 129 / 5%) 73px), linear-gradient(90deg, transparent 0 8vw, rgb(213 168 95 / 8%) 8.06vw 8.12vw, transparent 8.2vw); }
+.carver-family .profile-hero__image { --profile-source: url('../img-hellsing/luck2.png'); }
+.carver-family .profile-hero__image img { object-position: center 43%; }
+.carver-intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 7vw, 7rem); max-width: 1300px; margin: 0 auto; padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem); }
+.carver-intro h2, .carver-people h2 { margin: .8rem 0 0; font: 700 clamp(3.5rem, 6vw, 6.5rem)/.85 'Barlow Condensed', sans-serif; letter-spacing: -.04em; text-transform: uppercase; }
+.carver-intro h2 em, .carver-people h2 em { display: block; color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--profile-accent); }
+.carver-intro__copy { align-self: center; }
+.carver-intro__copy p { margin: 0 0 1rem; color: #cdd3c4; font-size: 1rem; line-height: 1.85; }
+.carver-people { padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 4rem); border-block: 1px solid color-mix(in srgb, var(--profile-accent) 30%, transparent); background: linear-gradient(130deg, rgb(32 48 32 / 86%), rgb(12 19 14 / 95%)); }
+.carver-people__head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; max-width: 1380px; margin: 0 auto 2.5rem; }
+.carver-people__head > p { max-width: 390px; margin: 0; color: #c3cbbb; font-size: .92rem; line-height: 1.75; }
+.carver-people__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: 1380px; margin: auto; }
+.carver-person { position: relative; display: flex; min-height: 500px; flex-direction: column; justify-content: flex-end; padding: 1.5rem; overflow: hidden; border: 1px solid rgb(154 203 129 / 30%); background: #101912; text-decoration: none; isolation: isolate; }
+.carver-person::before { position: absolute; z-index: -1; inset: 0; content: ''; background: linear-gradient(0deg, rgb(8 13 9 / 96%), transparent 72%), linear-gradient(180deg, rgb(12 16 13 / 17%), transparent 45%); transition: background-color .25s ease; }
+.carver-person img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.68) brightness(.7); transition: transform .65s cubic-bezier(.2,.7,.25,1), filter .3s ease; }
+.carver-person--imani img { object-position: 20% center; }
+.carver-person--asha img { object-position: 12% center; }
+.carver-person--nyla img { object-position: 90% center; }
+.carver-person:hover img, .carver-person:focus-visible img { transform: scale(1.045); filter: saturate(.9) brightness(.82); }
+.carver-person__index { position: absolute; top: 1.15rem; left: 1.15rem; color: var(--profile-accent); font: 500 .48rem/1.5 'DM Mono', monospace; letter-spacing: .14em; }
+.carver-person b { color: var(--profile-paper); font: 800 clamp(3rem, 5vw, 5rem)/.78 'Barlow Condensed', sans-serif; letter-spacing: -.04em; }
+.carver-person b em { color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--profile-secondary); }
+.carver-person small { display: flex; justify-content: space-between; margin-top: 1.5rem; padding-top: .8rem; border-top: 1px solid rgb(237 240 221 / 28%); color: var(--profile-secondary); font: 500 .5rem/1.4 'DM Mono', monospace; letter-spacing: .13em; }
+.carver-person small i { font-style: normal; font-size: .8rem; }
+.carver-last { display: flex; align-items: center; justify-content: space-between; gap: 2rem; max-width: 1380px; margin: auto; padding: 4rem clamp(1.25rem, 6vw, 5rem); }
+.carver-last > span { max-width: 190px; }
+.carver-last p { max-width: 520px; margin: 0; color: #d8dacd; font: 600 clamp(1rem, 1.5vw, 1.25rem)/1.65 'Playfair Display', Georgia, serif; }
+.carver-last a { display: inline-flex; align-items: center; gap: 1rem; padding: .95rem 1rem; border: 1px solid var(--profile-secondary); color: var(--profile-paper); font: 500 .5rem/1.4 'DM Mono', monospace; letter-spacing: .1em; text-decoration: none; }
+.carver-last a:hover { background: var(--profile-secondary); color: var(--profile-ink); }
+@media (max-width: 850px) { .carver-people__grid { grid-template-columns: 1fr 1fr; } .carver-person:last-child { grid-column: 1 / -1; min-height: 420px; } }
+@media (max-width: 680px) { .carver-intro { grid-template-columns: 1fr; gap: 1.6rem; } .carver-people__head { display: block; } .carver-people__head > p { margin-top: 1.2rem; } .carver-people__grid { grid-template-columns: 1fr; } .carver-person, .carver-person:last-child { grid-column: auto; min-height: 460px; } .carver-last { align-items: stretch; flex-direction: column; } .carver-last > span { max-width: none; } .carver-last a { align-self: flex-start; } }

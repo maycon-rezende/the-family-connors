@@ -118,6 +118,12 @@ Antes do Dia D, Hilary era amiga de Maya Braddock, Lana Whitmore e Lisa. Perdeu 
 
 O autor corrigiu uma identificação anterior: Hilary é **Hilary Caldwell Ashford**. A filha de Joey Muller e Hellen Wren é **Leona**, personagem cujo background ainda está em desenvolvimento.
 
+## Leona
+
+Leona tem 30 anos no presente e cerca de 10 no Dia D. É filha de Joey Muller, ex-militar, e Hellen Wren, espiã da CIA. Desde pequena recebeu formação de combate, observação e leitura de ambientes; hoje atua como combatente e exploradora. Usa dois sais personalizados com cabos vermelhos. Sua data de nascimento, a especialidade concreta dos pais e outras operações ainda não foram definidas.
+
+O episódio da passagem de serviço durante a primeira fuga e a missão **A Escada Cega** foram criados para o dossiê como proposta revisável, não como acontecimentos já confirmados pelo autor.
+
 ## As perdas dos Hellsings
 
 Nem todos atravessaram os anos de devastação.
@@ -168,4 +174,4 @@ Os Hellsings enfrentarão e destruirão Dominus. Depois da batalha, encontrarão
 - A página pode apresentar essas competências como dados operacionais, mas missões, perdas e acontecimentos específicos continuam dependentes da lore oficial do autor.
 - Isolde Myers Connor possui novos registros visuais no presente, porém sua função definitiva ainda não foi estabelecida.
 
-Última atualização: 1º de novembro de 2026.
+Última atualização: 2 de novembro de 2026.

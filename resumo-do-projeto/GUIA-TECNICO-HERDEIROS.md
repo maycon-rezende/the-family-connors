@@ -48,13 +48,13 @@ Cada foto utiliza `data-alucard-slide`. O botão `data-alucard-hourglass` avanç
 </figure>
 ```
 
-## 4. Arquivo de Nathália
+## 4. Arquivo de Sophie Romanoff
 
-- `nathalia-presente.html`: estrutura do dossiê.
+- `nathalia-presente.html`: estrutura do dossiê de Sophie Romanoff; o endereço antigo foi mantido para preservar links existentes.
 - `era-extincao-presente/nathalia-presente.css`: capa e arquivo térmico.
 - `era-extincao-presente/nathalia-presente.js`: seleção, transições, cursor e controles.
 
-A galeria usa coordenadas de seleção e mostra uma fotografia por vez. Os registros relacionados ficam em `img-presente/personagens/`.
+A galeria usa coordenadas de seleção e mostra uma fotografia por vez. Os registros relacionados ficam em `img-presente/personagens/`. O perfil identifica Sophie como esposa de Alucard; apenas o nome e esse vínculo estão confirmados até agora.
 
 ## 5. Galeria operacional de Diana
 

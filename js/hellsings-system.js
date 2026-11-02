@@ -114,7 +114,7 @@
       ],
       [
         'CH',
-        'Clhoe',
+        'Chloe',
         'RECONHECIMENTO',
         'Observação visual confirmada. Nenhum civil no perímetro imediato.',
         '#bd6ed2',

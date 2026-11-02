@@ -55,7 +55,7 @@ const profiles = {
       ['img-presente/personagens/alice-presente.png', 'ARQUIVO MÉDICO'],
       ['img-presente/personagens/alice-presente2.png', 'REGISTRO PRESERVADO'],
       ['img-presente/personagens/alice-jack-presente.png', 'JACK & ALICE'],
-      ['img-hellsing/alice-clhoe.png', 'ALICE & CLHOE'],
+      ['img-hellsing/alice-clhoe.png', 'ALICE & CHLOE'],
       ['img-hellsing/alice-clhoe1.png', 'REGISTRO HELLSINGS'],
       ['img-hellsing/alice-clhoe2.png', 'VÍNCULO PRESERVADO'],
     ],

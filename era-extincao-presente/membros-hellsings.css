@@ -42,6 +42,10 @@ a { color: inherit; }
 .member-card--sally h3 em { color: #79b6d5; }
 .member-card--hilary { --member-accent: #86c9a9; border-color: rgba(134, 201, 169, .28); }
 .member-card--hilary h3 em { color: #86c9a9; }
+.member-card--sophie { --member-accent: #d6a267; border-color: rgba(214, 162, 103, .3); }
+.member-card--sophie h3 em { color: #d6a267; }
+.member-card--leona { --member-accent: #e6c94e; border-color: rgba(230, 201, 78, .32); }
+.member-card--leona h3 em { color: #87945c; }
 .member-card__body > p { margin: 0; color: #b9b0a2; font-size: .9rem; line-height: 1.7; }
 .member-card__eras { display: grid; width: 100%; gap: .65rem; margin: 1.4rem 0; padding: .8rem 0; border-block: 1px solid rgba(206,151,94,.18); color: #8e877b; font-size: .48rem; }
 .member-card__eras span { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .45rem; }

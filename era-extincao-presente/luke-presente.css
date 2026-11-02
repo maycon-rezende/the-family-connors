@@ -627,6 +627,29 @@ a {
   line-height: 1.75;
 }
 
+.luke-family__copy > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-self: flex-start;
+  margin-top: 2rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(154, 203, 129, 0.48);
+  color: #e8edda;
+  font: 500 0.5rem/1.5 'DM Mono', monospace;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.luke-family__copy > a:hover,
+.luke-family__copy > a:focus-visible {
+  border-color: #d5a85f;
+  background: rgba(154, 203, 129, 0.12);
+  color: #fff;
+}
+
 .luke-records {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(290px, 0.7fr);

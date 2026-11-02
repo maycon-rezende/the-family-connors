@@ -6,6 +6,7 @@
 - Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
 - Jack e Alice têm cinco filhos, nesta ordem: Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
+- Alucard é casado com **Sophie Romanoff**. Sua história pessoal e sua função ainda estão em desenvolvimento.
 - Diana Myers Connor tornou-se especialista em combate e no uso de diferentes tipos de armas no presente devastado.
 - Mary Myers Connor aprendeu medicina com Alice; combate, armas de fogo e disciplina com Jack; rastreamento, leitura de mapas e estratégia com Jack e Mark. Atua como socorrista tática e rastreadora de campo.
 - Sally Ward nunca conheceu os pais biológicos e foi criada por uma família adotiva problemática, pela qual ainda assim preservou gratidão. Sonhava em ser policial. Nicolai encontrou sua própria coragem quando a salvou de uma horda.
@@ -27,12 +28,19 @@
 4. **John** — tecnologia e armamentos.
 5. **Bobby Lee** — sino-americano, com forte vínculo com suas raízes chinesas; ex-agente da Unidade Jingwei. Entrou nos Hellsings antes do Dia D, após colaborar em Janela de Cinzas, e atua em inteligência de campo e extração de testemunhas.
 6. **Naomi Yagami** — agente japonesa; inteligência e análise como função provisória.
-7. **Clhoe** — reconhecimento e vigilância como função provisória; pele em tom marrom.
-8. **Luke** — mapas, rotas e estratégia; pele em tom marrom.
+7. **Chloe** — reconhecimento e vigilância como função provisória; pele em tom marrom; sobrenome Bennett proposto para o núcleo familiar.
+8. **Luke** — mapas, rotas e estratégia; pele em tom marrom; sobrenome Carver proposto para o núcleo familiar.
 9. **Dimitri** — russo; intervenção e extração como função provisória.
 10. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
 11. **Hellen Wren** — infiltração e disfarce.
 12. **Joey Muller** — companheiro de Hellen Wren; exploração e recuperação de recursos em campo como função provisória.
+
+### Leona — filha de Joey Muller e Hellen Wren
+
+- Leona tem 30 anos no presente e tinha aproximadamente 10 anos no Dia D; não há data de nascimento definida.
+- A ficha fornecida pelo autor estabelece que recebeu desde pequena formação inspirada pela disciplina militar de Joey e pela experiência de espionagem de Hellen na CIA. Atua como combatente e exploradora, com treino corporal, armas brancas, reconhecimento de acessos e avaliação de risco.
+- Leona usa dois sais personalizados com cabos vermelhos. Sua personalidade combina atenção e determinação com a dificuldade de dividir responsabilidades.
+- A história detalhada, a operação **A Escada Cega** e a frase final do dossiê foram criadas como proposta para revisão. Especialidades concretas dos pais, datas e outras missões continuam abertas.
 
 Nos registros visuais, John é representado com pele em tom marrom, conforme a orientação visual anterior; essas imagens são anteriores à sua morte. Bobby Lee é outra pessoa e aparece nos arquivos visuais `bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png`. O homem ao lado de Britney na imagem removida `britney-bobby.png` é Joey, conforme confirmação do autor; isso não define um vínculo entre os dois. As funções marcadas como provisórias podem ser alteradas quando as biografias forem aprofundadas.
 
@@ -52,7 +60,7 @@ Nos registros visuais, John é representado com pele em tom marrom, conforme a o
 - História completa dos descendentes.
 - Especialidades individuais dos descendentes ainda não definidas, exceto as funções já confirmadas de Diana, Mary e Nathan.
 - Detalhes das demais missões históricas dos Hellsings; Janela de Cinzas e Linha Vermelha agora têm participação definida de Bobby Lee.
-- Biografias completas de Naomi Yagami, Clhoe, Dimitri e Joey Muller.
+- Biografias completas de Naomi Yagami, Chloe Bennett, Dimitri e Joey Muller.
 - Funções definitivas dos agentes ainda marcados como provisórios.
 - Estado do mundo no presente, destinos dos personagens envelhecidos, territórios, veículos e facções.
 - Geografia definitiva do atlas: os setores do mapa do site são rótulos provisórios sem escala, fronteiras ou coordenadas oficiais. As posições de missões e rotas ainda não registradas continuam desconhecidas.
@@ -81,3 +89,11 @@ Os pontos acima são direção narrativa confirmada pelo autor. Não inventar da
 ## Diretriz narrativa
 
 Não transformar possibilidades em fatos antes da conclusão do manuscrito. Elementos provisórios devem permanecer identificados como tais na documentação e ser fáceis de substituir no site.
+
+## Proposta revisável — famílias de Chloe Bennett e Luke Carver
+
+Os nomes de família e os backgrounds abaixo foram criados para as páginas individuais a pedido do autor. Permanecem como proposta até ele revisar ou alterar os detalhes.
+
+- **Chloe Bennett** é casada com **Darius Bennett** e mãe de **Micah Bennett**. Darius é proposto como técnico de redes elétricas e comunicação antes do Dia D, hoje responsável por rádios e relés comunitários. Ele conheceu Chloe durante uma evacuação em que ela conduzia civis e ele manteve o transmissor da equipe funcionando. Micah cresceu entre abrigos; mantém listas de quem partiu e voltou e leva recados civis sem registrar coordenadas sensíveis. Não tem patente ou função militar.
+- **Luke Carver** é casado com **Imani Carver** e pai de **Asha Carver** e **Nyla Carver**. Imani é proposta como educadora que organiza rotinas e atividades nos abrigos. Ela e Luke se aproximaram quando questionou uma rota rápida que não previa pausas seguras para os civis; Luke refez o trajeto. Asha trabalha com recuperação de ferramentas e equipamento, sempre preparando alternativas para quando um plano falhar. Nyla preserva histórias, nomes e memória comunitária em cadernos analógicos sem expor localizações atuais.
+- As páginas marcam essas biografias como propostas. As imagens usadas são recortes de fotos familiares existentes; retratos individuais podem substituí-las quando forem fornecidos.

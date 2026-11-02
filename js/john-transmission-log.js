@@ -81,7 +81,7 @@
       reply: { by: 'Mark Connor', role: 'COMANDO TÁTICO', text: 'Ninguém te apressou naquela noite. Ninguém vai apressar agora.' },
     },
     {
-      name: 'Clhoe', role: 'HELLSING // INFILTRAÇÃO', channel: 'A PASSAGEM ESTREITA',
+      name: 'Chloe', role: 'HELLSING // INFILTRAÇÃO', channel: 'A PASSAGEM ESTREITA',
       title: 'A porta não fechou',
       message: 'A passagem tinha uma porta emperrada que voltava a fechar sempre que alguém soltava a alavanca. John ficou segurando o mecanismo enquanto o grupo atravessava. Eu disse que podia trocar com ele. Ele olhou para o espaço que ainda faltava e apontou para a fila. Não foi uma despedida; foi uma instrução. Acho que é por isso que demorei tanto para entender que aquela seria a última vez que eu o veria.',
       signoff: 'A porta abriu para todos. Ele não passou por ela.',

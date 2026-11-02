@@ -58,7 +58,7 @@
     },
     {
       code: 'HLS-06',
-      name: 'Clhoe',
+      name: 'Chloe',
       role: 'Reconhecimento · Campo',
       color: '#bd6ed2',
       skin: '#754a35',

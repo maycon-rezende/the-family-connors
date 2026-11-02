@@ -449,3 +449,26 @@
 - A página separa dez registros anteriores ao Dia D e quatro registros do presente. As imagens podem ser ampliadas em um visualizador com controles de navegação e fechamento por teclado.
 - `membros-hellsings.html` agora mostra três perfis e aponta para o dossiê de Hilary. A página recebeu acento verde clínico e âmbar; seu cursor, animações e leitura respeitam redução de movimento.
 - Continuidade corrigida pelo autor: Hilary é Hilary Caldwell Ashford. Leona é a filha de Joey Muller e Hellen Wren, com background ainda em desenvolvimento.
+
+# Atualização de 2 de novembro de 2026 — famílias de Chloe e Luke
+
+- Chloe passou a aparecer como **Chloe Bennett**; o arquivo e o identificador técnico antigos (`clhoe-*`) foram preservados para não quebrar os links existentes.
+- O núcleo de Chloe ganhou Darius, marido e técnico de rádio/comunicações, e Micah, filho que mantém os registros de retorno e leva mensagens entre abrigos.
+- Luke passou a aparecer como **Luke Carver**. O novo arquivo familiar apresenta Imani, educadora e esposa de Luke, e as filhas Asha, voltada à recuperação de equipamentos, e Nyla, guardiã da memória comunitária.
+- Foram criadas páginas individuais para Darius, Micah, Imani, Asha e Nyla, com histórias e paletas próprias. Os backgrounds e sobrenomes são propostas autorais para revisão, não lore confirmada.
+- Até haver retratos individuais, as páginas usam recortes identificados de imagens familiares já existentes.
+
+# Atualização de 2 de novembro de 2026 — Sophie Romanoff
+
+- Nathália passou a se chamar **Sophie Romanoff**; o usuário confirmou que ela é esposa de Alucard Myers Connor. A história pessoal e a função dela continuam abertas.
+- O bloco e a imagem de Sophie foram retirados do dossiê individual de Alucard. O arquivo de casais preserva as imagens dos dois e passou a usar o nome Sophie Romanoff.
+- A pasta de imagens já continha dois retratos individuais adicionais de Sophie. O dossiê agora exibe três retratos distintos, em vez de repetir a mesma foto; as imagens com Alucard permanecem no arquivo de casais.
+- `membros-hellsings.html` agora inclui Sophie como quarto perfil, com link para seu dossiê. O endereço técnico `nathalia-presente.html` foi mantido para não quebrar links existentes.
+
+# Atualização de 2 de novembro de 2026 — Leona
+
+- Criada `leona-presente.html` com os dados fornecidos pelo autor: 30 anos no presente, cerca de 10 anos no Dia D, filha de Joey Muller e Hellen Wren, formação de combate/exploração e dois sais com cabos vermelhos.
+- A história **A Escada Cega** e os demais detalhes narrativos novos aparecem identificados como proposta para revisão. Data de nascimento, especialidades operacionais dos pais e outras missões permanecem indefinidas.
+- A pasta `img-leona-presente/` já tinha dez imagens atuais. A capa e os nove registros foram ligados ao perfil e à galeria de Leona; os arquivos mostram a personagem adulta, explorando e com a família.
+- O período **Antes do Dia D** permanece em aberto porque não há fotos da infância ou do treinamento nessa pasta. O cartão de Leona em `membros-hellsings.html` agora usa seu retrato atual.
+- `membros-hellsings.html` passou a incluir Leona como quinto perfil, com uma paleta oliva/amarelo e acentos próprios.
