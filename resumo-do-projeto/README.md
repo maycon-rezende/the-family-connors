@@ -9,6 +9,7 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 ## Experiência atual
 
 - `index.html`: experiência principal da Era da Extinção no presente devastado.
+- `jack-presente.html` e `mark-presente.html`: dossiês atuais com terminais de celular interativos; os registros de Jack preservam o convite de Mick Braddock para encontrar os Hellsings e a perda do sinal, enquanto os de Mark guardam fragmentos com Hanson e Salazar.
 - `arquivo-passado.html`: portal cinematográfico para a vida dos Connor antes do Dia D.
 - `telainicial.html`: narrativa do passado e apresentação da família jovem.
 - Páginas individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
@@ -18,6 +19,8 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 - Alice, Mark, Ariani e Britney possuem dossiês do presente com ficha técnica, habilidades, cursor temático e arquivos fotográficos independentes sem recorte de imagens.
 - John possui um dossiê memorial e 11 registros visuais: dez imagens com ele anteriores à sua morte e um retrato associado de Amelia sem data identificada. Brian Taylor possui memorial individual com quinze registros visuais; a página central apresenta um retrato do presente, a jornada até sua morte, 24 homenagens reconstruídas da formação, das famílias, dos filhos e das pessoas do comboio em um mural responsivo de retratos clicáveis, com leitura em posts individuais, e o vídeo de despedida reproduzido sem áudio. A mensagem de John no memorial de Brian está identificada como escrita em vida. Brian morreu antes de John. O memorial de John reúne 13 transcrições textuais de vozes preservadas em um console de frequências, sem repetir o mural de retratos de Brian. `memorial.html` reúne as duas mortes, com links a partir dos dossiês, e homenageia pessoas ligadas às rotas dos Hellsings. A página de Lana tem 21 registros fotográficos e um arquivo separado de dezesseis imagens com Pollyana, sua cunhada. Bobby Lee possui dossiê narrativo com a agência fictícia Jingwei, três operações, sua entrada nos Hellsings e a história com Britney; a galeria independente mantém dois retratos e uma colagem. A foto de Joey com Britney foi retirada. Dimitri possui dossiê e galeria com função de campo ainda provisória.
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
+- `membros-hellsings.html`: índice de personagens ligados aos Hellsings, com perfis de Lana Whitmore, Sally Ward e Hilary Caldwell Ashford. O dossiê de Hilary reúne seu background, cronologia e galerias distintas de antes do Dia D e do presente.
+- As páginas presentes das Cobras, do Fogo, da Ordem do Sal, dos Nômades de Ferro e de Dominus incluem canais roteirizados e um controle opcional para gerar duas falas com IA por solicitação. A IA também está disponível, quando configurada no servidor, no chat da página inicial, no memorial e no **Assemble Hellsings**. A página separada `posts-hellsings.html` exibe publicações contínuas dos Hellsings em ordem aleatória, com comentários e reações; é acessível pelo destaque da página e pelo submenu **Arquivos**, sem publicação de visitantes.
 - `videos.html`: central audiovisual com registros compartilhados.
 - `hellsing.html`: experiência cinematográfica dos Hellsings, com abertura, bunker, radar, dossiês e formação oficial.
 - `era-extincao-presente/index.html`: endereço legado que redireciona para a nova entrada principal.
@@ -43,6 +46,8 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - O presente devastado é agora a experiência principal e a primeira página do projeto.
 - A narrativa familiar construída nas páginas principais representa o passado dos personagens.
 - O portal `ANT-DOOM-00` conduz ao site **Apocalipse/Doomsday**, que representa o Dia Zero.
+- Doomsday e Era da Extinção são o mesmo universo em períodos diferentes. Jack preparou Mick no FBI para liderar os agentes especiais quando partiu para a Interpol e mais tarde o chamou para encontrar os Hellsings; o sinal caiu antes do encontro. Mark cumpriu seu tempo na Marinha e deixou o serviço antes do Dia D; Hanson e Salazar o conhecem por sua vida militar. Detalhes e limites estão em `UNIVERSO-E-LORE.md` e `LORE-PRESENTE.md`.
+- A direção de encerramento definida pelo autor é derrotar Dominus e descobrir uma estufa do governo dos Estados Unidos, com variedades de plantas, para iniciar a restauração de regiões cuja vegetação morreu com as bombas nucleares e a recuperação da terra frente aos patógenos zumbis. Essa direção contém spoilers e ainda precisa de cenas e método definidos.
 - A caixa-preta Connor conduz aos Arquivos do Passado e altera cinematograficamente o período da experiência.
 - O presente possui identidade pós-colapso própria, com deserto, radiação, escassez e arquivos dos Connor envelhecidos.
 - Destinos, territórios e atividades atuais permanecerão classificados até a entrega da nova lore.
@@ -52,8 +57,11 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [GUIA-TECNICO-INTRO.md](GUIA-TECNICO-INTRO.md): passo a passo da intro, código, sincronização, efeitos, mídias e pontos de manutenção.
 - [GUIA-TECNICO-HERDEIROS.md](GUIA-TECNICO-HERDEIROS.md): ordem oficial, páginas, cursores, efeitos e galerias dos descendentes.
 - [REGISTRO-TECNICO-ATUAL.md](REGISTRO-TECNICO-ATUAL.md): mapa detalhado das páginas, código, comandos, validação, galerias e manutenção atual.
+- [ESCOPO-ATLAS-REGIOES.md](ESCOPO-ATLAS-REGIOES.md): planejamento narrativo e técnico da página independente de regiões e rotas.
+- [ROTA-BRADDOCK-PROPOSTA.md](ROTA-BRADDOCK-PROPOSTA.md): proposta revisável para o encontro presencial de Mick com os Hellsings, uma operação seguinte e a ligação com a busca pela terra livre.
 
 - [ARQUITETURA.md](ARQUITETURA.md): páginas, pastas e componentes.
+- [INTEGRACAO-IA-CHATS.md](INTEGRACAO-IA-CHATS.md): backend, canais, limites de cânone e ativação local da IA.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
 - [LORE-PRESENTE.md](LORE-PRESENTE.md): cronologia e personagens do presente.
 - [BOBBY-LEE-LORE.md](BOBBY-LEE-LORE.md): trajetória de Lee, agência, missões e sequência familiar, com origem de cada decisão registrada.
@@ -73,4 +81,4 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 25 de outubro de 2026.
+Última atualização: 1º de novembro de 2026.

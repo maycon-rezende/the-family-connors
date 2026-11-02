@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700;900&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="era-extincao-presente/faccao-fogo.css" />
+    <link rel="stylesheet" href="era-extincao-presente/malha-faccoes.css?v=1" />
+    <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
   </head>
   <body>
     <div class="heat" aria-hidden="true"></div>
@@ -82,9 +84,24 @@
         <img src="img-presente/personagens/destruicao.jpg" alt="Cidade industrial em ruínas" />
         <div class="reveal"><p>INCIDENTE 04-19 // SINAL NÃO IDENTIFICADO</p><h2>A chama central<br /><em>apagou por treze segundos.</em></h2><span>Isso nunca havia acontecido. Antes de retornar, os sensores registraram um símbolo nos terminais: o mesmo encontrado nos arquivos de Dominus.</span></div>
       </section>
+      <section id="canal-fogo" class="faction-live-channel" data-faction-chat="fogo" aria-labelledby="fogo-chat-title">
+        <div class="faction-live-channel__shell">
+          <header class="faction-live-channel__heading">
+            <div><p class="faction-live-channel__eyebrow">CANAL INTERNO // F-04</p><h2 id="fogo-chat-title">Vozes da <em>Fornalha.</em></h2><p>O turno segue: ferramentas voltam para a oficina, as máquinas continuam acesas e ninguém admite quem usou a bancada errada.</p></div>
+            <div class="faction-live-channel__meta"><span>CANAL LOCAL</span><b><span data-faction-count>00</span> RECORTES</b></div>
+          </header>
+          <div class="faction-chat-console">
+            <header class="faction-chat-console__top"><div class="faction-chat-console__identity"><i class="faction-chat-console__signal" aria-hidden="true"></i><div><small>TERMINAL DO CINTURÃO</small><b>FOGO // CONVERSA INTERNA</b></div></div><div class="faction-chat-console__connection"><b>CANAL LOCAL</b><span>RECORTES PROGRAMADOS</span></div></header>
+            <ol class="faction-chat-feed" data-faction-feed aria-label="Conversa roteirizada da Facção do Fogo" aria-live="polite" aria-relevant="additions text"></ol>
+            <footer class="faction-live-channel__footer"><span>DIÁLOGO PREPARADO // SEM ENVIO DE VISITANTES</span><span data-faction-status aria-live="polite" aria-atomic="true">AGUARDANDO LEITURA DO CANAL</span></footer>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer><a href="faccao-cobras.html">← COBRAS // F-02</a><strong>FACÇÃO DO FOGO // F-04</strong><a href="index.html#faccoes">MAPA DAS FACÇÕES →</a></footer>
     <script src="era-extincao-presente/faccao-fogo.js"></script>
+    <script src="js/malha-faccoes.js?v=1" defer></script>
+    <script src="js/ai-dialogue.js?v=1" defer></script>
   </body>
 </html>

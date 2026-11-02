@@ -358,13 +358,15 @@
 - `index.html` recebeu o botão flutuante **ABRIR CHAT** no canto inferior esquerdo. Ao abrir, ele mostra a **Malha Hellsings** em um painel responsivo com os canais `Rota sem nome` e `Entre os seus`.
 - Os recortes mostram sobreviventes em uma operação e uma conversa sobre a caneca e o mapa de Brian. Brian é lembrado, sem publicar mensagens; John não aparece como ativo no presente.
 - `era-extincao-presente/malha-chat.css` define o acabamento âmbar, cartões de mensagens, retratos, reações, responsividade e respeito a `prefers-reduced-motion`. `js/malha-chat.js` controla abertura/fechamento, clique fora e Escape, abas por teclado e ocultação quando o menu principal abre.
-- O conteúdo é narrativo, fixo no HTML e sem backend: não há mensagens de visitantes nem automação de bots. O livro público com armazenamento Supabase segue planejado para depois da conclusão do site.
+- Com o painel aberto, cada canal libera uma sequência limitada de mensagens pré-escritas, com pausas, indicador de digitação e reações. A sequência pausa ao fechar ou trocar de canal e continua de onde parou quando reaberta.
+- As mensagens são iguais no roteiro, mas a progressão acontece só no navegador de cada visitante: não há IA, API, servidor, sincronização entre visitantes ou armazenamento. O mural público com Supabase segue planejado para depois da conclusão do site.
+- A Malha H-01 embutida em `faccao-hellsings-presente.html` também recebeu sequências programadas nos canais de operação e convivência; elas começam ao chegar à seção e os contadores acompanham os recortes novos.
 
 ## Atualização de 31 de outubro de 2026 — Malha H no memorial
 
 - `memorial.html` recebeu o mesmo botão flutuante **ABRIR CHAT**, agora com dois recortes próprios: os sobreviventes depois da vigília de Brian e a lembrança da última rota de John.
 - O diálogo inclui retratos atuais, respostas e reações entre personagens. Brian e John são lembrados, sem falas atribuídas a eles depois da morte.
-- O memorial carrega `era-extincao-presente/malha-chat.css` e `js/malha-chat.js`, compartilhados com a página inicial. Os canais permanecem conteúdo narrativo fixo, sem mensagens públicas ou transmissão ao vivo.
+- O memorial carrega `era-extincao-presente/malha-chat.css` e `js/malha-chat.js`, compartilhados com a página inicial. O arquivo base é fixo; recortes roteirizados de sobreviventes aparecem em sequência durante a leitura. Brian e John não enviam mensagens depois da morte.
 
 ## Atualização de 31 de outubro de 2026 — homenagem completa de John
 
@@ -372,3 +374,78 @@
 - O arquivo de John ganhou 13 homenagens dos sobreviventes, exibidas como transcrições de frequência selecionadas uma por vez. A navegação não repete o mural de retratos usado no memorial de Brian; não há áudio ou foto individual por post.
 - A ordem canônica foi corrigida: Brian morreu primeiro; John morreu depois, na fuga. Brian não publica homenagem no memorial de John. John não escreve postumamente e todas as fotos dele continuam identificadas como anteriores à morte.
 - `js/john-transmission-log.js` controla o índice de frequências, leitura, reações, respostas e teclado. `era-extincao-presente/memorial-hellsings.css` define a interface ciano/cobre, a onda de sinal decorativa e os ajustes para celular.
+
+## Atualização de 1º de novembro de 2026 — conversas das facções e mural Hellsings
+
+- As páginas presentes de Cobras, Fogo, Ordem do Sal, Nômades de Ferro e Dominus agora têm canais com diálogos roteirizados de ida e volta. As falas surgem com indicador de digitação quando o leitor chega à seção e pausam ao sair dela.
+- Helena e Silas, Aurelia e Dário, Samira e Elias e Atlas com uma função anônima da oficina móvel usam apenas nomes já definidos ou papéis sem nome próprio. Dominus aparece como sinais sem assinatura, preservando o mistério da facção.
+- `mural-hellsings.html` cria uma página independente para posts dos Hellsings, com imagens de perfil, comentários encadeados e reações locais. O acesso aparece no dossiê dos Hellsings no presente; `index.html` e `hellsing.html` não receberam esse mural.
+- O mural e os canais são conteúdo ficcional preparado no projeto, sem IA, publicação de visitantes, banco de dados ou sincronização entre pessoas. As reações do mural só mudam no navegador atual; a participação pública via Supabase permanece planejada para depois da conclusão do site.
+- Os posts e diálogos são cenas revisáveis, não confirmações de acontecimentos novos da trama. Brian e John não publicam após a morte.
+
+## Atualização de 1 de novembro de 2026 — atlas interativo de regiões
+
+- `mapa-regioes.html` foi criada como página independente, depois que o autor definiu um mapa de territórios das facções e de acontecimentos dos Hellsings.
+- O mapa tem seis territórios, filtros por facção/operação/perda/sinal, marcadores clicáveis, dossiê contextual, imagens ampliáveis e rota cronológica. A página inicial aponta para o atlas sem embutir o mapa nela.
+- Foram incluídos locais confirmados e estados atuais, como a Bacia Branca, o bunker, o Cinturão Rubro em impasse antes do primeiro disparo e a rota móvel Delta-09. Operações e eventos sem localização permanecem registrados sem coordenadas inventadas.
+- Resgate da coluna de água e aviso **“NÃO SE DEVE PISAR AQUI”** são reconstruções literárias revisáveis; imagens de ambientação recebem legenda para não parecerem fotografias exatas do local.
+- `ESCOPO-ATLAS-REGIOES.md` registra o desenho da página, os pontos de lore abertos e a distinção entre fatos e propostas. O contato por rádio de Jack com Mick está confirmado; o futuro encontro presencial e a origem do caos ainda aguardam os detalhes do livro.
+- A página recebeu uma camada de interação visual em todo o percurso: cursor tático para mouse, brilho ambiente móvel, progresso de rolagem, transições de entrada, varredura do mapa, rotas animadas e realce do dossiê selecionado. O movimento é reduzido quando o sistema assim solicita e o cursor customizado não aparece em touch.
+- A seção inferior do atlas agora apresenta uma rota narrativa revisável de Braddock em três etapas clicáveis. A proposta introduz a Estação da Agulha e a passagem do leito seco como nomes e cenas provisórios, conecta com cuidado os registros confirmados das Cobras e da Facção do Fogo e mantém a terra livre como rumor sem posição confirmada. O texto integral está em `ROTA-BRADDOCK-PROPOSTA.md`.
+# Atualização de 1º de novembro de 2026 — integração inicial da IA nos chats
+
+- O chat da página inicial, o chat de `memorial.html`, a Malha Hellsings e os canais Cobras, Fogo, Sal, Ferro e Dominus receberam o controle **CONTINUAR CONVERSA COM IA**.
+- Um clique gera uma troca de duas falas, com identificação visível da origem. Não há geração automática nem publicação livre de visitantes; os roteiros existentes seguem disponíveis como fallback.
+- `server.js` mantém a chave no processo Node e restringe o elenco e o canal no servidor. Brian e John estão bloqueados como autores após suas mortes; o anonimato de Dominus e da mecânica do Ferro foi preservado.
+- O endpoint foi preparado localmente em `http://127.0.0.1:8787/`. Sem `OPENAI_API_KEY`, os controles ficam desativados e os chats roteirizados continuam normais.
+- Próximo passo técnico para uso local: configurar a chave no terminal conforme `INTEGRACAO-IA-CHATS.md`. Para o site público, escolher hospedagem que execute backend e guardar a chave como segredo; ainda não há deploy nem plataforma definida.
+- O mural separado de posts dos Hellsings não usa IA e continua sem publicação de visitantes; a ideia de mensagens públicas com Supabase segue para depois da conclusão do site.
+# Atualização de 1º de novembro de 2026 — navegação principal
+
+- A barra de navegação da página inicial foi reduzida de nove links para seis acessos diretos e o grupo **Arquivos**.
+- **Desaparecidos**, **Cronologia** e **O passado** continuam disponíveis dentro do grupo expansível; Mundo, Hellsings, Sobreviventes, Facções, Regiões e Fórum seguem na barra.
+- O grupo usa `details/summary`, com dropdown estilizado e expansão responsiva no menu móvel. `world-menu.js` fecha o grupo ao fechar a navegação.
+
+# Atualização de 1º de novembro de 2026 — Assemble Hellsings e posts
+
+- O chat dos Hellsings no presente passa a se chamar **Assemble Hellsings** na página inicial, no dossiê e no memorial. O nome identifica as conversas roteirizadas e os canais de diálogo com IA.
+- A página independente `mural-hellsings.html` foi apresentada como **Posts dos Hellsings**. Ela já tinha feed com publicações ficcionais, comentários, respostas e reações; recebe acesso destacado na página inicial e agora está no submenu **Arquivos**.
+- O chat e o feed têm funções distintas. As publicações continuam preparadas para a narrativa; o feed não recebe posts de visitantes. A IA dos chats segue dependente de configurar `OPENAI_API_KEY` no servidor, conforme `INTEGRACAO-IA-CHATS.md`.
+
+# Atualização de 1º de novembro de 2026 — Posts dos Hellsings separados do mural
+
+- A página de publicações foi renomeada de `mural-hellsings.html` para `posts-hellsings.html`, com estilos em `era-extincao-presente/posts-hellsings.css` e comportamento em `js/posts-hellsings.js`.
+- O submenu **Arquivos**, o destaque da página inicial e o dossiê dos Hellsings apontam para **Posts dos Hellsings**. O termo “mural” não é usado como sinônimo dos posts.
+
+# Atualização de 1º de novembro de 2026 — feed vivo dos Hellsings
+
+- `posts-hellsings.html` agora recebe publicações continuamente enquanto a página está aberta. O ciclo embaralha autores de treze integrantes vivos, mostra quem está escrevendo, adiciona respostas e mantém as reações clicáveis; o mesmo autor não aparece em duas publicações consecutivas.
+- Os textos ficam no próprio `js/posts-hellsings.js`: não usam IA, API, login ou banco de dados. O feed mantém no máximo doze publicações novas por sessão além das cinco iniciais, descartando as mais antigas para não crescer sem limite. Publicações de visitantes seguem desativadas.
+
+# Atualização de 2 de novembro de 2026 — índice de membros e cronologia visual
+
+- Foi criada `membros-hellsings.html`, acessível pelo submenu **Arquivos** e pelo dossiê da facção. O índice reúne integrantes, familiares e vínculos; os primeiros perfis são Lana Whitmore e Sally Ward.
+- `lana-presente.html` e `sally-presente.html` agora têm navegação entre **Antes do Dia D** e **Presente**. As galerias existentes foram identificadas como registros do presente; os dois períodos anteriores exibem um estado de arquivo sem retratos recuperados, para não classificar imagens atuais como antigas.
+- Lana e Sally mantêm suas páginas e conteúdos próprios. Quando chegarem imagens de antes do Dia D, elas serão adicionadas ao período correspondente.
+
+# Atualização de 1º de novembro de 2026 — crossover Doomsday e dispositivos móveis
+
+- A lore foi atualizada para registrar que **Doomsday e A Era da Extinção compartilham o mesmo universo**, com Doomsday no Dia D e a Era muitos anos depois.
+- Jack chamou Mick para encontrar os Hellsings; a comunicação caiu antes do encontro. Os Hellsings procuraram o grupo e a reunião continua como acontecimento futuro. Mick, Hanson e Salazar não receberam destinos inventados.
+- `jack-presente.html` ganhou um celular com mensagens de Jack e Mick e um caderno de busca. `mark-presente.html` ganhou contatos roteirizados para o Major James Hanson e o Coronel Samuel Salazar. O terminal é responsivo, usa as cores próprias de Jack e Mark, funciona por teclado e não depende de IA ou de rede.
+- Os roteiros da página inicial, do Assemble Hellsings, do memorial e dos canais individuais das cinco facções foram ampliados com novas respostas e interações. O memorial preserva a ordem: Brian morreu primeiro e John ainda estava vivo na homenagem a Brian.
+- A direção do final foi documentada como spoiler: destruir Dominus, encontrar uma estufa do governo dos Estados Unidos com várias plantas e iniciar a recuperação de áreas sem vegetação e da terra afetada pelos patógenos zumbis.
+- O autor confirmou **Braddock**, com dois “d”, como a grafia oficial. A página de Doomsday ainda mostra “Bradock” e será corrigida pelo autor; os arquivos locais já usam “Braddock”.
+- A etapa clicável antiga de “primeiro contato” no Atlas foi corrigida: o contato por rádio já aconteceu; a Estação da Agulha agora aparece apenas como possível local para o encontro presencial futuro. A data da troca de mensagens permanece aberta.
+
+# Atualização de 1º de novembro de 2026 — continuidade dos terminais de Jack e Mark
+
+- O celular de Mark agora deixa claro que ele serviu na Marinha, cumpriu seu tempo e saiu do serviço antes do Dia D. Hanson e Salazar o conhecem por sua vida militar; a conversa com Hanson não o coloca como subordinado.
+- O diálogo do celular de Jack registra que ele preparou Mick no FBI para liderar os agentes especiais quando Jack seguiu para a Interpol. O convite posterior para encontrar os Hellsings e a interrupção do sinal permanecem como estavam na cronologia.
+
+# Atualização de 2 de novembro de 2026 — Hilary Caldwell Ashford
+
+- `hilary-caldwell-ashford.html` apresenta o background fornecido pelo autor, com cronologia da infância, cativeiro, resgate, acolhimento dos Connor, revelação feita por Mark, Dia D e trabalho médico nos Hellsings.
+- A página separa dez registros anteriores ao Dia D e quatro registros do presente. As imagens podem ser ampliadas em um visualizador com controles de navegação e fechamento por teclado.
+- `membros-hellsings.html` agora mostra três perfis e aponta para o dossiê de Hilary. A página recebeu acento verde clínico e âmbar; seu cursor, animações e leitura respeitam redução de movimento.
+- Continuidade corrigida pelo autor: Hilary é Hilary Caldwell Ashford. Leona é a filha de Joey Muller e Hellen Wren, com background ainda em desenvolvimento.

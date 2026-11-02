@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0805" />
+  <meta name="description" content="Atlas de campanha dos Hellsings: territórios, rotas, confrontos e lugares que ficaram para trás." />
+  <title>Atlas de Regiões — Hellsings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="era-extincao-presente/atlas-campanha.css?v=3" />
+</head>
+<body class="atlas-page">
+  <div class="atlas-grain" aria-hidden="true"></div>
+  <div class="atlas-cursor" id="atlasCursor" aria-hidden="true">
+    <span class="atlas-cursor__reticle"></span>
+    <span class="atlas-cursor__ring"></span>
+    <span class="atlas-cursor__core"></span>
+  </div>
+  <header class="atlas-nav">
+    <a class="atlas-brand" href="index.html"><span>Æ</span><b>ERA DA EXTINÇÃO</b><small>ARQUIVO DO PRESENTE</small></a>
+    <div class="atlas-nav-center"><span>HLS // CARTOGRAFIA DE CAMPANHA</span><b>SEIS FACÇÕES · ROTAS INTERROMPIDAS</b></div>
+    <a class="atlas-back" href="index.html#faccoes"><i aria-hidden="true">←</i> VOLTAR AO PRESENTE</a>
+  </header>
+
+  <main>
+    <section class="atlas-hero" aria-labelledby="atlas-title">
+      <div class="atlas-hero-stamp"><span>ARQUIVO 06</span><i>CLASSIFICAÇÃO: FRAGMENTADA</i></div>
+    <p class="atlas-kicker">REGISTRO DE CAMPO // HELLSINGS + TERRITÓRIOS</p>
+      <h1 id="atlas-title">NENHUMA ROTA<br /><em>VOLTA INTACTA.</em></h1>
+      <p class="atlas-hero-copy">Há lugares que os mapas esqueceram. Os Hellsings lembram pelo que precisaram fazer para atravessá-los — e por quem não voltou.</p>
+      <div class="atlas-hero-meta"><span><b>06</b> FACÇÕES NO ARQUIVO</span><span><b>04</b> CAMADAS DE LEITURA</span><span><b>01</b> AVISO EM VERMELHO</span></div>
+      <a class="atlas-scroll" href="#cartografia"><span>ACESSAR CARTOGRAFIA</span><i aria-hidden="true">↓</i></a>
+    </section>
+
+    <section class="atlas-briefing" aria-label="Nota de cartografia">
+      <span class="briefing-code">NOTA DO COMANDO // LEIA ANTES DE RASTREAR</span>
+      <p>Este é um mapa de campanha, ainda sem escala geográfica. Posições e fronteiras representam relações entre os registros; coordenadas ausentes e histórias em reconstrução estão identificadas no próprio arquivo.</p>
+      <span class="briefing-mark" aria-hidden="true">H</span>
+    </section>
+
+    <section class="atlas-console-section" id="cartografia" aria-labelledby="map-heading">
+      <div class="atlas-section-heading">
+        <div><p class="atlas-kicker">TEATRO DE OPERAÇÕES // PRESENTE E MEMÓRIA</p><h2 id="map-heading">O mapa de quem<br /><em>continuou andando.</em></h2></div>
+        <p>Escolha uma camada. Depois, selecione um ponto para abrir o relato, ver a imagem de arquivo e seguir para o dossiê relacionado.</p>
+      </div>
+
+      <div class="atlas-filters" role="group" aria-label="Filtrar pontos do mapa">
+        <button type="button" data-atlas-filter="all" aria-pressed="true"><i>00</i> TODOS OS REGISTROS</button>
+        <button type="button" data-atlas-filter="faction" aria-pressed="false"><i>01</i> FACÇÕES</button>
+        <button type="button" data-atlas-filter="operation" aria-pressed="false"><i>02</i> OPERAÇÕES</button>
+        <button type="button" data-atlas-filter="memory" aria-pressed="false"><i>03</i> PERDAS</button>
+        <button type="button" data-atlas-filter="signal" aria-pressed="false"><i>04</i> SINAIS SEM COORDENADAS</button>
+      </div>
+
+      <div class="atlas-workspace">
+        <div class="atlas-map-column">
+          <div class="atlas-map-frame">
+            <div class="atlas-map-head"><span>MAPA TÁTICO // EDE-HLS-06</span><span>ESCALA <b>INDEFINIDA</b></span><span class="atlas-map-live"><i></i> SINAL ATIVO</span></div>
+            <div class="atlas-map-scroll">
+              <div class="atlas-map-stage" id="atlasMapStage">
+                <svg class="atlas-svg" viewBox="0 0 1200 760" role="img" aria-labelledby="atlas-map-title atlas-map-description">
+                  <title id="atlas-map-title">Mapa esquemático das facções e rotas Hellsings</title>
+                  <desc id="atlas-map-description">Territórios da Bacia Branca, do Cinturão Rubro, do Serpentário e da rota móvel Delta-09. Pontos de operação, memória e sinais sem localização precisa podem ser selecionados.</desc>
+                  <defs>
+                    <pattern id="map-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(206,163,111,.13)" stroke-width="1" /><circle cx="0" cy="0" r="1.4" fill="rgba(228,166,94,.28)" /></pattern>
+                    <pattern id="warning-hatch" width="12" height="12" patternTransform="rotate(42)" patternUnits="userSpaceOnUse"><path d="M0 0V12" stroke="rgba(226,69,47,.56)" stroke-width="4" /></pattern>
+                    <linearGradient id="land-wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#393126" /><stop offset=".5" stop-color="#211e19" /><stop offset="1" stop-color="#34231a" /></linearGradient>
+                    <radialGradient id="dominus-wash"><stop stop-color="rgba(178,54,45,.24)" /><stop offset="1" stop-color="rgba(178,54,45,0)" /></radialGradient>
+                    <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+                  </defs>
+                  <rect width="1200" height="760" fill="url(#map-grid)" />
+                  <path class="map-land" d="M92 169 162 112 243 129 305 94 383 122 433 104 492 133 569 94 639 117 704 101 770 131 850 108 910 149 987 133 1051 172 1108 221 1085 279 1122 326 1096 378 1124 432 1076 482 1084 537 1020 578 985 641 914 646 856 692 781 658 722 697 656 655 589 674 526 640 455 672 391 630 318 652 274 604 210 593 190 543 131 523 142 466 100 421 126 369 94 319 126 265 87 219Z" fill="url(#land-wash)" stroke="#9b7046" stroke-width="2" />
+                  <path d="M92 169 162 112 243 129 305 94 383 122 433 104 492 133 569 94 639 117 704 101 770 131 850 108 910 149 987 133 1051 172 1108 221 1085 279 1122 326 1096 378 1124 432 1076 482 1084 537 1020 578 985 641 914 646 856 692 781 658 722 697 656 655 589 674 526 640 455 672 391 630 318 652 274 604 210 593 190 543 131 523 142 466 100 421 126 369 94 319 126 265 87 219Z" fill="url(#warning-hatch)" opacity=".1" />
+
+                  <path class="territory territory--salt" d="M191 168 331 140 425 190 408 289 331 332 222 297 158 238Z" />
+                  <path class="territory territory--cobras" d="M427 148 568 122 659 166 670 267 593 321 466 302 408 241Z" />
+                  <path class="territory territory--iron" d="M332 374C435 331 524 370 621 354S815 352 896 403" />
+                  <path class="territory territory--fire" d="M742 246 885 220 1002 266 1025 375 956 444 815 426 740 348Z" />
+                  <path class="territory territory--hellsings" d="M165 421 298 386 419 424 433 532 355 581 222 558 154 493Z" />
+                  <path class="territory territory--unknown" d="M505 453 612 420 716 459 741 552 675 612 560 593 494 524Z" />
+                  <path class="territory-outline" d="M149 338C292 314 366 352 447 333S608 329 698 360 890 315 1052 347M205 613C363 589 422 625 523 607S735 633 861 597 989 575 1060 590" />
+
+                  <path class="map-route map-route--known" d="M279 481C320 450 350 407 389 360" />
+                  <path class="map-route map-route--tense" d="M279 481C445 506 589 490 738 365" />
+                  <path class="map-route map-route--mobile" d="M343 411C475 361 566 380 671 367S813 366 895 408" />
+                  <path class="map-route map-route--lost" d="M279 481C391 536 475 564 571 526" />
+
+                  <ellipse class="dominus-signal" cx="671" cy="373" rx="325" ry="255" fill="url(#dominus-wash)" />
+                  <path class="dominus-ring" d="M417 246c82-67 225-95 338-40 97 47 163 154 137 254-22 87-112 168-211 168-100 0-206-55-248-145-43-91-30-185 18-237Z" />
+
+                  <g class="map-label map-label--salt"><text x="212" y="196">BACIA BRANCA</text><text x="212" y="216">F-06 // PRIMEIRA FONTE</text></g>
+                  <g class="map-label map-label--cobras"><text x="468" y="177">METRÓPOLE SOTERRADA</text><text x="468" y="197">SERPENTÁRIO // F-02</text></g>
+                  <g class="map-label map-label--fire"><text x="815" y="272">CINTURÃO RUBRO</text><text x="815" y="292">F-04 // SETE COMPLEXOS</text></g>
+                  <g class="map-label map-label--iron"><text x="505" y="407">DELTA-09 // ROTA MÓVEL F-05</text></g>
+                  <g class="map-label map-label--hls"><text x="184" y="552">ZONA DE ORIGEM H-01</text><text x="184" y="570">BASE HELLSINGS // POSIÇÃO SELADA</text></g>
+                  <g class="map-label map-label--unknown"><text x="575" y="605">ÚLTIMO SINAL // REGIÃO NÃO CONFIRMADA</text></g>
+                  <g class="map-warning-label"><path d="M563 510 601 488 639 510 639 554 601 576 563 554Z" /><text x="585" y="532">!</text><text x="532" y="590">ÁREA RESTRITA</text></g>
+                  <g class="map-dominus-label"><text x="690" y="470">DOMINUS</text><text x="690" y="489">INFLUÊNCIA // SEM CENTRO FIXO</text></g>
+                  <g class="map-measure"><path d="M1028 658h92m-92-8v16m46-12v8m46-12v16" /><text x="1028" y="645">SEM ESCALA</text></g>
+                </svg>
+
+                <button class="atlas-point atlas-point--faction point-salt" style="--x:27%;--y:31%" type="button" data-atlas-point="salt" data-point-kind="faction" aria-label="Abrir território da Ordem do Sal: Bacia Branca"><i>F-06</i><span>BACIA BRANCA</span></button>
+                <button class="atlas-point atlas-point--faction point-cobras" style="--x:48%;--y:29%" type="button" data-atlas-point="cobras" data-point-kind="faction" aria-label="Abrir território das Cobras: Serpentário"><i>F-02</i><span>SERPENTÁRIO</span></button>
+                <button class="atlas-point atlas-point--faction point-fire" style="--x:76%;--y:43%" type="button" data-atlas-point="fire" data-point-kind="faction" aria-label="Abrir território da Facção do Fogo: Cinturão Rubro"><i>F-04</i><span>CINTURÃO RUBRO</span></button>
+                <button class="atlas-point atlas-point--faction point-iron" style="--x:60%;--y:50%" type="button" data-atlas-point="iron" data-point-kind="faction" aria-label="Abrir a rota móvel Delta-09 dos Nômades de Ferro"><i>F-05</i><span>DELTA-09</span></button>
+                <button class="atlas-point atlas-point--faction point-hellsings" style="--x:24%;--y:63%" type="button" data-atlas-point="hellsings" data-point-kind="faction" aria-label="Abrir a base subterrânea dos Hellsings, com posição protegida"><i>F-01</i><span>BASE SELADA</span></button>
+                <button class="atlas-point atlas-point--faction point-dominus" style="--x:69%;--y:56%" type="button" data-atlas-point="dominus" data-point-kind="faction" aria-label="Abrir registro de Dominus: influência sem território fixo confirmado"><i>F-03</i><span>SEM CENTRO</span></button>
+
+                <button class="atlas-point atlas-point--event point-dayd" style="--x:19%;--y:70%" type="button" data-atlas-point="dayd" data-point-kind="operation" aria-label="Abrir registro do Dia D na propriedade Connor"><i>H-01</i><span>DIA D</span></button>
+                <button class="atlas-point atlas-point--event point-rescue" style="--x:33%;--y:40%" type="button" data-atlas-point="rescue" data-point-kind="operation" aria-label="Abrir a reconstrução proposta do resgate na Bacia Branca"><i>R-01</i><span>RESGATE</span></button>
+                <button class="atlas-point atlas-point--event point-border" style="--x:69%;--y:50%" type="button" data-atlas-point="border" data-point-kind="operation" aria-label="Abrir o impasse atual na fronteira do Cinturão Rubro"><i>F-04</i><span>IMPASSE</span></button>
+                <button class="atlas-point atlas-point--danger point-warning" style="--x:50%;--y:71%" type="button" data-atlas-point="warning" data-point-kind="memory restricted" aria-label="Abrir a zona de perigo: não se deve pisar aqui"><i>!</i><span>NÃO SE DEVE<br />PISAR AQUI</span></button>
+                <button class="atlas-point atlas-point--memory point-brian" style="--x:15%;--y:60%" type="button" data-atlas-point="brian" data-point-kind="memory" aria-label="Abrir registro da morte de Brian Taylor no bunker"><i>BT</i><span>ENFERMARIA</span></button>
+                <button class="atlas-point atlas-point--signal point-first-contact" style="--x:37%;--y:57%" type="button" data-atlas-point="braddock-contact" data-point-kind="signal" aria-label="Abrir arquivo do sinal perdido de Mick e proposta de encontro presencial"><i>··</i><span>MICK // SINAL PERDIDO</span></button>
+                <button class="atlas-point atlas-point--signal point-origin" style="--x:55%;--y:20%" type="button" data-atlas-point="origin" data-point-kind="signal" aria-label="Abrir arquivo incompleto sobre a origem do caos"><i>Ø</i><span>ORIGEM DO CAOS</span></button>
+              </div>
+            </div>
+            <div class="atlas-map-foot"><span><i class="legend-dot legend-faction"></i> TERRITÓRIO / FACÇÃO</span><span><i class="legend-dot legend-event"></i> OPERAÇÃO</span><span><i class="legend-dot legend-memory"></i> MEMÓRIA / PERDA</span><span><i class="legend-dot legend-signal"></i> POSIÇÃO INCERTA</span></div>
+          </div>
+          <div class="atlas-map-coordinates"><span>COORDENADAS CORROMPIDAS</span><span>REGISTROS VISUAIS PODEM SER RECONSTRUÇÕES</span><span>ARQUIVO HLS // 06</span></div>
+        </div>
+
+        <aside class="atlas-record" id="atlasRecord" aria-live="polite" aria-atomic="true">
+          <div class="record-top"><span data-record-class>ARQUIVO DE CAMPO // SELECIONE UM PONTO</span><b data-record-code>HLS / —</b></div>
+          <div class="record-state"><i data-record-state-dot></i><span data-record-state>AGUARDANDO SELEÇÃO</span></div>
+          <h2 data-record-title>O que ficou<br /><em>marcado no mapa.</em></h2>
+          <p class="record-location" data-record-location>Escolha uma facção, um acontecimento ou um sinal incompleto.</p>
+          <div class="record-divider"><span>TRANSCRIÇÃO // MEMÓRIA DE CAMPO</span><i></i></div>
+          <p class="record-copy" data-record-copy>Alguns pontos guardam uma história inteira. Outros terminam no último sinal recebido.</p>
+          <figure class="record-visual" data-record-visual hidden>
+            <button type="button" class="record-image-button" data-open-image aria-label="Ampliar imagem do registro">
+              <img data-record-image src="" alt="" />
+              <span>AMPLIAR REGISTRO <i aria-hidden="true">↗</i></span>
+            </button>
+            <figcaption data-record-caption></figcaption>
+          </figure>
+          <div class="record-links"><a data-record-link href="#" hidden>ABRIR DOSSIÊ RELACIONADO <i aria-hidden="true">↗</i></a><span data-record-reference>ARQUIVO PARCIAL // SEM PONTO SELECIONADO</span></div>
+          <div class="record-signature"><span>HELLSINGS // MEMÓRIA OPERACIONAL</span><b>H</b></div>
+        </aside>
+      </div>
+
+      <div class="atlas-field-index">
+        <header><div><p class="atlas-kicker">ARQUIVOS SEM PONTO FIXO</p><h3>Há histórias que não cabem<br /><em>em uma coordenada.</em></h3></div><p>Selecione um registro para abrir a ficha ao lado do mapa. Os lugares permanecem em branco até que a história os localize.</p></header>
+        <div class="unmapped-grid">
+          <button type="button" data-atlas-open="missions"><span>HLS-126 // BOBBY LEE</span><b>Janela de Cinzas</b><i>MISSÃO REGISTRADA · LOCAL AUSENTE</i></button>
+          <button type="button" data-atlas-open="redline"><span>HLS-131 // HELLSINGS</span><b>Linha Vermelha</b><i>MISSÃO REGISTRADA · LOCAL AUSENTE</i></button>
+          <button type="button" data-atlas-open="origin"><span>ARQUIVO DE ORIGEM // EDE-00</span><b>Onde o caos começou</b><i>CAUSA E LOCAL AINDA NÃO FIXADOS</i></button>
+          <button type="button" data-atlas-open="free-land"><span>SINAL // BUSCA EM CURSO</span><b>Terra livre?</b><i>RUMOR · DESTINO NÃO CONFIRMADO</i></button>
+        </div>
+
+        <section class="braddock-route-proposal" aria-labelledby="braddock-route-title">
+          <header>
+            <div><p class="atlas-kicker">LINHA NARRATIVA // PROPOSTA REVISÁVEL</p><h4 id="braddock-route-title">Uma voz.<br /><em>Um mapa em pedaços.</em></h4></div>
+            <p>Os pontos abaixo encadeiam uma proposta de história. São arquivos sem coordenadas: os fatos confirmados aparecem nos dossiês, e as cenas novas estão marcadas para sua revisão.</p>
+          </header>
+          <div class="braddock-route-steps" aria-label="Etapas propostas da rota de Braddock">
+            <button type="button" data-atlas-open="braddock-contact"><span>01 // ENCONTRO PRESENCIAL · PROPOSTA</span><b>A Estação da Agulha</b><i>NOME E LUGAR PROVISÓRIOS</i></button>
+            <button type="button" data-atlas-open="braddock-crossing"><span>02 // CONFIANÇA EM CAMPO</span><b>A passagem do leito seco</b><i>RESGATE E DESVIO DA HORDA · PROPOSTA</i></button>
+            <button type="button" data-atlas-open="braddock-fragments"><span>03 // BUSCA ATUAL</span><b>A rota em fragmentos</b><i>COBRAS → CINTURÃO · ORDEM EM REVISÃO</i></button>
+          </div>
+          <p class="braddock-route-note">O contato por rádio e a perda do sinal estão confirmados; o encontro presencial, as rotas e a geografia continuam em aberto.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="atlas-chronology" aria-labelledby="chronology-title">
+      <header><p class="atlas-kicker">LINHA DE PASSAGEM // SEM DATAS INVENTADAS</p><h2 id="chronology-title">O caminho também<br /><em>é uma testemunha.</em></h2></header>
+      <div class="chronology-track">
+        <article><span>ORDEM ABERTA // ENCONTRO PRESENCIAL</span><b>JACK + MARK + MICK</b><p>O contato por rádio e a perda do sinal estão confirmados. O encontro presencial é futuro; o período e o lugar ainda não foram definidos.</p></article>
+        <article><span>ORDEM FIXADA // DIA D</span><b>MANSÃO → BUNKER</b><p>A propriedade vira refúgio. A cidade, um clarão visto antes da descida.</p></article>
+        <article><span>ROTAS DO PRESENTE // EM CURSO</span><b>BACIA · CINTURÃO · DELTA</b><p>Um corredor médico, uma fronteira em tensão e uma cidade que nunca para.</p></article>
+        <article><span>ORDEM FIXADA // ARQUIVO DE PERDAS</span><b>BRIAN → JOHN</b><p>Brian morreu primeiro. John veio depois, na fuga que abriu passagem para muitos.</p></article>
+      </div>
+      <p class="chronology-note">A posição dos territórios é esquemática. A ordem das missões históricas será ajustada conforme o manuscrito.</p>
+    </section>
+  </main>
+
+  <dialog class="atlas-image-dialog" aria-label="Imagem ampliada do arquivo">
+    <button class="image-dialog-close" type="button" data-close-image aria-label="Fechar imagem">×</button>
+    <figure><img data-lightbox-image src="" alt="" /><figcaption data-lightbox-caption></figcaption></figure>
+    <span>ARQUIVO VISUAL HELLSINGS // RECONSTRUÇÃO DE CAMPO</span>
+  </dialog>
+
+  <footer class="atlas-footer"><a href="index.html#faccoes">← PRESENTE</a><b>A ERA DA EXTINÇÃO // CARTOGRAFIA HLS</b><a href="memorial.html">MEMORIAL DOS HELLSINGS →</a></footer>
+  <script src="era-extincao-presente/atlas-campanha.js?v=3" defer></script>
+</body>
+</html>

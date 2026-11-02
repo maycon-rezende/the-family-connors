@@ -7,7 +7,8 @@
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John e as pessoas que cruzaram a rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=9" />
-    <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=1" />
+    <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=3" />
+    <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
   </head>
   <body class="hellsings-memorial-page">
@@ -304,7 +305,7 @@
                     <footer><b data-post-name>Jack Connor</b><small data-post-role>COMANDANTE // PARCEIRO DE BRIAN</small></footer>
                     <p class="memorial-memory-post__signoff">Há pessoas que continuam voltando toda vez que alguém repete o que ensinaram.</p>
                     <section class="memorial-memory-thread" data-post-thread aria-label="Respostas e reações dos Hellsings">
-                      <header class="memorial-memory-thread__heading"><span>MALHA DA MEMÓRIA // RESPOSTAS PRESERVADAS</span><b data-post-thread-era>MEMORIAL DE BRIAN</b></header>
+                      <header class="memorial-memory-thread__heading"><span>ASSEMBLE // RESPOSTAS PRESERVADAS</span><b data-post-thread-era>MEMORIAL DE BRIAN</b></header>
                       <div class="memorial-memory-thread__reactions" data-post-thread-reactions aria-label="Reações a esta homenagem"></div>
                       <ol class="memorial-memory-thread__replies" data-post-thread-replies aria-label="Resposta de outro personagem"></ol>
                     </section>
@@ -456,19 +457,19 @@
       </section>
     </main>
 
-    <section class="malha-chat-widget" data-malha-chat aria-label="Malha Hellsings no memorial">
+    <section class="malha-chat-widget" data-malha-chat data-ai-chat-scope="memorial" aria-label="Assemble Hellsings no memorial">
       <button class="malha-chat-launcher" type="button" data-chat-launcher aria-expanded="false" aria-controls="memorial-malha-chat-panel">
         <span class="malha-chat-launcher__icon" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>ABRIR CHAT</span><b aria-hidden="true">F-01</b>
+        <span>ABRIR ASSEMBLE</span><b aria-hidden="true">F-01</b>
       </button>
       <section class="malha-chat-panel" id="memorial-malha-chat-panel" role="dialog" aria-modal="false" aria-labelledby="memorial-malha-chat-title" aria-describedby="memorial-malha-chat-description" data-chat-panel hidden>
         <header class="malha-chat-panel__header">
-          <div class="malha-chat-panel__signal"><i aria-hidden="true"></i><span>MALHA H // CANAL DA VIGÍLIA</span></div>
+          <div class="malha-chat-panel__signal"><i aria-hidden="true"></i><span>ASSEMBLE HELLSINGS // CANAL DA VIGÍLIA</span></div>
           <button class="malha-chat-panel__close" type="button" data-chat-close aria-label="Fechar chat">×</button>
-          <h2 id="memorial-malha-chat-title">Vozes que ficaram</h2>
+          <h2 id="memorial-malha-chat-title">Assemble Hellsings</h2>
           <p id="memorial-malha-chat-description">Conversas reconstruídas dos sobreviventes // recortes narrativos</p>
         </header>
-        <div class="malha-chat-tabs" role="tablist" aria-label="Conversas do memorial">
+        <div class="malha-chat-tabs" role="tablist" aria-label="Conversas do Assemble Hellsings no memorial">
           <button type="button" role="tab" id="memorial-malha-tab-brian" aria-selected="true" aria-controls="memorial-malha-thread-brian" tabindex="0" data-chat-tab="brian">DEPOIS DA VIGÍLIA</button>
           <button type="button" role="tab" id="memorial-malha-tab-john" aria-selected="false" aria-controls="memorial-malha-thread-john" tabindex="-1" data-chat-tab="john">A ÚLTIMA ROTA</button>
         </div>
@@ -514,7 +515,7 @@
             </li>
           </ol>
         </section>
-        <footer class="malha-chat-panel__footer"><span>MEMORIAL F-01 // CANAL FIXO</span><span>SEM MENSAGENS DE QUEM PARTIU</span></footer>
+        <footer class="malha-chat-panel__footer"><span>ARQUIVO // REPRODUÇÃO PROGRAMADA</span><span>SEM MENSAGENS DE QUEM PARTIU</span><span data-chat-status aria-live="polite" aria-atomic="true">AGUARDANDO MEMÓRIA</span></footer>
       </section>
     </section>
 
@@ -526,7 +527,8 @@
     <script src="js/site-cursor.js" defer></script>
     <script src="js/memorial-video.js" defer></script>
     <script src="js/memorial-journal.js?v=4" defer></script>
-    <script src="js/malha-chat.js?v=1" defer></script>
+    <script src="js/malha-chat.js?v=3" defer></script>
+    <script src="js/ai-dialogue.js?v=1" defer></script>
     <script src="js/john-transmission-log.js?v=1" defer></script>
   </body>
 </html>

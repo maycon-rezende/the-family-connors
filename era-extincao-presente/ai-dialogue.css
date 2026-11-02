@@ -1,0 +1,51 @@
+.malha-ai-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem .85rem;
+  margin: .5rem 0 .9rem;
+  padding: .65rem .75rem;
+  border: 1px solid color-mix(in srgb, var(--channel-accent, #cc814b), transparent 72%);
+  background: linear-gradient(105deg, color-mix(in srgb, var(--channel-accent, #cc814b), transparent 93%), rgba(6, 7, 7, .62));
+}
+.malha-ai-button {
+  min-height: 34px;
+  padding: .55rem .75rem;
+  border: 1px solid color-mix(in srgb, var(--channel-accent, #cc814b), transparent 42%);
+  background: rgba(8, 8, 7, .86);
+  color: var(--channel-accent, #db9560);
+  font: 700 .58rem/1.25 "Special Elite", "Courier New", monospace;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.malha-ai-button:hover:not(:disabled) {
+  border-color: var(--channel-accent, #db9560);
+  background: color-mix(in srgb, var(--channel-accent, #db9560), transparent 88%);
+  color: #f3e9d7;
+  transform: translateY(-1px);
+}
+.malha-ai-button:focus-visible { outline: 2px solid var(--channel-accent, #db9560); outline-offset: 3px; }
+.malha-ai-button:disabled { opacity: .48; cursor: not-allowed; }
+.malha-ai-status {
+  color: rgba(226, 213, 194, .58);
+  font: .53rem/1.5 "Special Elite", "Courier New", monospace;
+  letter-spacing: .07em;
+}
+.malha-ai-origin {
+  display: block;
+  margin-top: .55rem;
+  color: #d68e58;
+  font: 700 .47rem/1.4 "Special Elite", "Courier New", monospace;
+  letter-spacing: .1em;
+}
+.malha-chat-message--ai,
+.malha-message--ai,
+.faction-chat__message--ai { animation: malha-ai-arrive .38s ease both; }
+@keyframes malha-ai-arrive { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 520px) {
+  .malha-ai-controls { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .malha-ai-button, .malha-chat-message--ai, .malha-message--ai, .faction-chat__message--ai { transition: none; animation: none; }
+}

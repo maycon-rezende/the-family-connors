@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **31 de outubro de 2026**.
+Atualizado em **1 de novembro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -8,7 +8,7 @@ Este documento é o mapa operacional do projeto no estado atual. Ele registra o 
 
 ## 1. Visão geral do sistema
 
-O projeto é um site estático em HTML, CSS e JavaScript sem framework e sem etapa obrigatória de compilação. As páginas HTML ficam na raiz para preservar URLs públicas. Os estilos compartilhados ficam em `css/`, os scripts compartilhados em `js/` e os estilos/scripts específicos do presente em `era-extincao-presente/`.
+O site continua construído em HTML, CSS e JavaScript sem framework nem etapa obrigatória de compilação. As páginas HTML ficam na raiz para preservar URLs públicas. Os estilos compartilhados ficam em `css/`, os scripts compartilhados em `js/` e os estilos/scripts específicos do presente em `era-extincao-presente/`. A integração opcional dos chats usa o servidor Node local `server.js`; hospedagem estática, por si só, não executa o endpoint da IA.
 
 | Camada | Responsabilidade | Exemplos |
 | --- | --- | --- |
@@ -250,6 +250,16 @@ Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa
 
 As páginas individuais dos herdeiros têm detalhes específicos — por exemplo, a ampulheta de Alucard, a transmissão de combate de Diana, o arquivo policial de Sally, a bússola de Mary, o carrossel de Isolde e o álbum separado de Nathan em `nathan-registros.html`, controlado por `era-extincao-presente/nathan-presente.js`. Consultar `GUIA-TECNICO-HERDEIROS.md` antes de alterar essas páginas.
 
+### Hilary Caldwell Ashford — membro e vínculo dos Hellsings
+
+| Arquivo | Implementação |
+| --- | --- |
+| `hilary-caldwell-ashford.html` | Dossiê de Hilary com biografia, cronologia e galerias separadas de antes do Dia D e do presente. |
+| `era-extincao-presente/hilary-caldwell-ashford.css`, `era-extincao-presente/hilary-cursor.css` e `js/hilary-archive.js` | Paleta exclusiva verde clínico/âmbar, cursor de rastreamento para mouse, navegação por período e visualizador acessível de imagens com botões, setas e Escape. Cursor desativado em touch e para preferência por movimento reduzido. |
+| `img-hilary-passado=presente/` | Pasta com 20 arquivos do núcleo de Hilary; o perfil seleciona dez fotos anteriores ao Dia D e quatro registros do presente, sem misturar os períodos. |
+
+O índice `membros-hellsings.html` agora apresenta Lana Whitmore, Sally Ward e Hilary. O background de Hilary está consolidado em `LORE-PRESENTE.md`; Leona, filha de Joey Muller e Hellen Wren, permanece como personagem separada em desenvolvimento.
+
 ## 6. Política de mídia e nomenclatura
 
 1. **Não misturar passado e presente.** Arquivos de álbuns do presente usam somente mídias que mostram a versão atual dos personagens.
@@ -333,11 +343,21 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 
 ## Chat narrativo flutuante na página principal
 
-- `index.html` monta o botão **ABRIR CHAT** e o painel não modal da Malha Hellsings. O componente é exclusivo da página principal do presente; não altera páginas do passado.
+- `index.html` monta o botão **ABRIR ASSEMBLE** e o painel não modal do Assemble Hellsings. O componente é exclusivo da página principal do presente; não altera páginas do passado.
 - `era-extincao-presente/malha-chat.css` fornece o painel âmbar, a disposição compacta de mensagens e retratos, a adaptação mobile e os ajustes de foco/redução de movimento.
-- `js/malha-chat.js` implementa a alternância dos canais, navegação por setas/Home/End, fechamento por Escape, botão e clique fora, e fecha o painel se o menu global for aberto.
+- `js/malha-chat.js` implementa a alternância dos canais, navegação por setas/Home/End, fechamento por Escape, botão e clique fora, ocultação ao abrir o menu global e recortes roteirizados em ciclos automáticos nos quatro canais.
 - `memorial.html` reutiliza o componente e os mesmos arquivos compartilhados, com os canais `Depois da vigília` (Brian) e `A última rota` (John). Os registros vêm dos sobreviventes; os falecidos não enviam novas mensagens.
-- As mensagens e reações são trechos narrativos escritos no HTML. O protótipo não envia, armazena nem atualiza mensagens de usuários ou de bots; o livro público em Supabase permanece planejado para uma etapa futura.
+- O histórico inicial permanece no HTML; os recortes roteirizados são revelados com indicador de digitação. `js/ai-dialogue.js` também oferece duas falas geradas por solicitação quando `/api/chat` está configurado. As respostas não são sincronizadas entre visitantes nem guardadas em banco pelo site. Nos canais de Brian e John, só sobreviventes falam; o mural público em Supabase permanece planejado para depois da conclusão do site.
+- O console integrado de `faccao-hellsings-presente.html` usa `js/malha-hellsings.js` para a Malha H-01: libera mensagens roteirizadas quando a seção entra em vista, atualiza os contadores dos canais e pausa/resume o ciclo conforme a rolagem e a aba selecionada.
+
+## Conversas das facções e mural dos Hellsings
+
+- `faccao-cobras.html`, `faccao-fogo.html`, `faccao-ordem-sal.html`, `faccao-nomades-ferro.html` e `faccao-dominus.html` receberam consoles de conversa em sequência, com digitação simulada, respostas explícitas, avatar ou sinal anônimo e pausa fora da área visível.
+- `js/malha-faccoes.js` contém os roteiros locais para Helena e Silas, Aurelia e Dário, Samira e Elias, Atlas e uma função anônima da oficina móvel. Dominus exibe dois sinais não atribuídos e não define personagens, nomes ou origem.
+- `era-extincao-presente/malha-faccoes.css` adapta o console às paletas de cada dossiê: verde para Cobras, brasa para Fogo, ciano salino para Sal, aço para Ferro e violeta para Dominus.
+- `posts-hellsings.html` é a página Posts dos Hellsings, separada do chat Assemble e do mural. O JavaScript intercala novos posts continuamente entre treze integrantes vivos em ciclos aleatórios, com avatar, respostas em fio, status de escrita e reação local; o acesso aparece no dossiê presente e também na página inicial.
+- `membros-hellsings.html` é o índice de membros, família e vínculos. Reúne Lana Whitmore, Sally Ward e Hilary Caldwell Ashford; o dossiê de Hilary contém fotos dos dois períodos e separa visualmente **Antes do Dia D** e **Presente**.
+- Os textos roteirizados continuam como fallback revisável. O controle de IA usa `/api/chat` somente por solicitação; as sequências roteirizadas das facções avançam enquanto a seção está visível. O mural não usa IA nem inclui posts de Brian ou John depois de suas mortes.
 
 ## Memorial individual de John
 
@@ -345,6 +365,16 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - Brian morreu antes de John; a ordem consta em `LORE-PRESENTE.md`. Nenhuma fala de Brian aparece no registro de John.
 - O arquivo J-06 apresenta 13 homenagens como transcrições de frequência, sem retratos individuais e sem repetir o mural do memorial de Brian. A pessoa escolhe uma voz na lista; o painel mostra a mensagem, reações e resposta.
 - `js/john-transmission-log.js` controla a seleção por clique e teclado. A onda gráfica é decorativa: não há áudio inventado. `era-extincao-presente/memorial-hellsings.css` define o console ciano/cobre e sua disposição responsiva.
+
+## Atlas geográfico e narrativo
+
+- `mapa-regioes.html` é a página independente de cartografia, acessível pelo menu **Regiões** e pela chamada na seção de facções de `index.html`.
+- `era-extincao-presente/atlas-campanha.css` contém o mapa vetorial, seis territórios, filtros, painel de leitura, cronologia, responsividade e diálogo de imagem. `era-extincao-presente/atlas-campanha.js` alimenta os registros, filtros e ampliação das imagens.
+- A camada visual inclui cursor tático em dispositivos com mouse, brilho ambiente que acompanha o ponteiro, barra de progresso da página, varredura luminosa do mapa, rotas e territórios animados, entrada gradual das seções e pulso do dossiê ao selecionar um ponto. O cursor customizado é omitido em telas touch e as animações respeitam `prefers-reduced-motion`.
+- O mapa inclui Hellsings, Cobras, Dominus, Facção do Fogo, Nômades de Ferro e Ordem do Sal; distingue o impasse ainda sem disparos no Cinturão Rubro, as rotas móveis de Delta-09, os sinais sem coordenadas e as memórias de Brian e John.
+- Imagens contextuais abrem no painel e podem ser ampliadas. As legendas identificam reconstruções visuais quando a imagem não documenta literalmente o lugar.
+- O resgate na Bacia e a placa **“NÃO SE DEVE PISAR AQUI”** estão marcados como propostas revisáveis. O local do encontro presencial futuro com Mick, a origem do caos e coordenadas não recuperadas permanecem abertos conforme `ESCOPO-ATLAS-REGIOES.md`.
+- `ROTA-BRADDOCK-PROPOSTA.md` reúne uma sequência narrativa revisável. No atlas, três cartões interativos abrem o registro de sinal perdido e a proposta de encontro presencial, a operação conjunta sugerida e a ligação proposta entre os fragmentos das Cobras, o impasse no Cinturão Rubro e a busca pela terra livre. Nenhum dos novos eventos recebe coordenadas nem passa a ser canon sem revisão do autor.
 
 ## 10. Índice de documentação complementar
 
@@ -355,3 +385,34 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): histórico resumido de entregas e continuidade.
 - [LORE-PRESENTE.md](LORE-PRESENTE.md) e [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos narrativos confirmados e limites de criação.
 - [DIREITOS-AUTORais.md](DIREITOS-AUTORais.md) e [GUIA-PUBLICACAO-ADSENSE.md](GUIA-PUBLICACAO-ADSENSE.md): preparação jurídica/técnica para publicação e monetização.
+# Integração de IA nos chats — 1º de novembro de 2026
+
+- Foi adicionado `server.js`, um servidor Node sem dependências externas que serve as páginas e expõe `/api/status` e `/api/chat`.
+- A Responses API é chamada apenas pelo servidor. O navegador não recebe nem armazena a chave. Defina `OPENAI_API_KEY` no ambiente local; `OPENAI_MODEL` é opcional e o padrão é `gpt-6.1-terra`.
+- `js/ai-dialogue.js` injeta controles em onze canais: dois na página inicial, dois no memorial, dois na Malha Hellsings e um em cada uma das cinco páginas de facção.
+- Cada solicitação leva até oito falas recentes e gera exatamente duas falas, identificadas como IA. O elenco é validado pelo canal; os memoriais impedem falas postumamente atribuídas a Brian ou John.
+- O site não guarda conversas em banco. A API recebe `store: false`; isso não descreve a política de retenção da OpenAI.
+- A IA só gera quando solicitada, para evitar chamadas automáticas. Sem a chave, ficam disponíveis os roteiros locais.
+- O servidor está preparado para abrir localmente em `http://127.0.0.1:8787/`. A integração pública depende de uma hospedagem com backend e segredo configurado; não houve deploy nem publicação.
+- Ativação, segurança, elenco e próximos passos estão detalhados em `INTEGRACAO-IA-CHATS.md`.
+
+# Navegação principal — 1º de novembro de 2026
+
+- `index.html` mostra seis links diretos no menu; **Arquivos** contém Desaparecidos, Cronologia, Posts dos Hellsings e O passado.
+- O submenu nativo usa `details/summary`, mantém navegação por teclado e fecha junto com o menu móvel. Estilos responsivos estão em `era-extincao-presente/world-archive.css`; o comportamento compartilhado fica em `era-extincao-presente/world-menu.js`.
+
+# Terminais de celular do crossover — 1º de novembro de 2026
+
+- `jack-presente.html` e `mark-presente.html` carregam o diálogo modal interativo, restrito às páginas presentes; as páginas do passado não foram alteradas por esta etapa.
+- `js/dispositivo-recuperado.js` seleciona o conteúdo pelo `data-character`, monta a lista de contatos e as mensagens com `textContent`, alterna entre **Mensagens** e **Caderno de campo**, aceita teclado, fecha por botão, Escape ou clique no fundo e devolve o foco ao botão de abertura.
+- `era-extincao-presente/dispositivo-recuperado.css` dá ao terminal de Jack uma cor âmbar e ao de Mark uma cor azul-aço, com layout responsivo e respeito a movimento reduzido.
+- Jack tem um arquivo de contato com Mick: o diálogo registra que Jack o preparou no FBI para liderar os agentes especiais ao seguir para a Interpol; anos depois, convida-o a encontrar os Hellsings. Há respostas parciais e interrupção antes do encontro. O caderno mantém a busca aberta; o reencontro permanece futuro.
+- Mark cumpriu seu tempo na Marinha e deixou o serviço antes do Dia D. Os fragmentos com o Major James Hanson e o Coronel Samuel Salazar refletem que eles o conheciam por sua vida militar, sem transformar Mark em subordinado de Hanson. Os destinos dos oficiais continuam sem confirmação.
+- Os arquivos públicos de Doomsday apresentam Mick como “Mick Bradock”, Hanson como major em uma instalação militar e Salazar como coronel no Pentágono. O autor confirmou que o sobrenome correto é **Braddock**; o site de Doomsday será corrigido por ele. As telas locais usam a grafia canônica. Fonte: [arquivo público de Doomsday](https://maycon-rezende.github.io/apocalipse/).
+- As mensagens dos terminais são conteúdo ficcional escrito para o projeto, sem integração de IA, rede, áudio ou armazenamento externo.
+
+# Diversidade dos chats e direção futura — 1º de novembro de 2026
+
+- `js/malha-chat.js`, `js/malha-hellsings.js` e `js/malha-faccoes.js` ganharam novas sequências dialogadas, com respostas contextualizadas e vozes próprias para Cobras, Fogo, Sal, Ferro e Dominus. Dominus permanece anônimo.
+- O canal de rota dos Hellsings menciona o sinal perdido de Doomsday e a busca sem antecipar o reencontro. As homenagens roteirizadas de Brian incluem diferentes integrantes e filhos; Brian não escreve após morrer, e John aparece falando enquanto ainda estava vivo.
+- Lore atualizada em `UNIVERSO-E-LORE.md` e `LORE-PRESENTE.md`: Doomsday e Era pertencem ao mesmo universo; no final planejado, os Hellsings destroem Dominus, encontram a estufa do governo dos Estados Unidos e iniciam a restauração vegetal e o combate aos patógenos zumbis. Cenas, localização e método ainda não foram escritos.

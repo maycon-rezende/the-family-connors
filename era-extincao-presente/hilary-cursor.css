@@ -1,0 +1,17 @@
+.hilary-cursor{position:fixed;z-index:99999;top:0;left:0;display:none;width:48px;height:48px;pointer-events:none;opacity:0;transform:translate3d(-100px,-100px,0);transition:opacity .18s ease,transform .08s linear}
+.hilary-cursor.is-active{opacity:1}
+.hilary-cursor__ring{position:absolute;inset:4px;display:block;border:1px solid var(--h-green);border-radius:50%;background:#07100e25;box-shadow:0 0 16px #86c9a938,inset 0 0 12px #86c9a91c;transition:transform .2s,border-color .2s,box-shadow .2s}
+.hilary-cursor__ring:before,.hilary-cursor__ring:after{position:absolute;top:50%;left:50%;display:block;background:var(--h-green);content:'';transform:translate(-50%,-50%)}
+.hilary-cursor__ring:before{width:1px;height:60px}
+.hilary-cursor__ring:after{width:60px;height:1px}
+.hilary-cursor__ring i{position:absolute;inset:9px;border:1px solid #86c9a953;border-radius:50%}
+.hilary-cursor__ring b{position:absolute;top:50%;left:50%;width:6px;height:6px;border-radius:50%;background:var(--h-amber);box-shadow:0 0 12px var(--h-amber);transform:translate(-50%,-50%)}
+.hilary-cursor small{position:absolute;top:50%;left:54px;min-width:max-content;padding:.24rem .38rem;border:1px solid #86c9a955;background:#07100ee8;color:var(--h-green-bright);font:500 .42rem 'DM Mono',Consolas,monospace;letter-spacing:.13em;transform:translateY(-50%)}
+.hilary-cursor.is-target .hilary-cursor__ring{border-color:var(--h-amber);box-shadow:0 0 21px #d9aa6854,inset 0 0 14px #d9aa6824;transform:scale(1.14)}
+.hilary-cursor.is-target .hilary-cursor__ring:before,.hilary-cursor.is-target .hilary-cursor__ring:after{background:var(--h-amber)}
+.hilary-cursor.is-pressing .hilary-cursor__ring{transform:scale(.84)}
+html.has-hilary-cursor .hilary-page,html.has-hilary-cursor .hilary-page *{cursor:none!important}
+.hilary-lightbox[open],.hilary-lightbox[open] *{cursor:auto!important}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.hilary-cursor{display:block}}
+@media(max-width:700px),(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.hilary-cursor{display:none!important}html.has-hilary-cursor .hilary-page,html.has-hilary-cursor .hilary-page *{cursor:auto!important}}
+@media(prefers-reduced-motion:reduce){.hilary-cursor,.hilary-cursor__ring{transition:none!important}}

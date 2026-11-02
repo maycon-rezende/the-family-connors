@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#090806" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
     <link rel="stylesheet" href="era-extincao-presente/jack-responsive.css" />
+    <link rel="stylesheet" href="era-extincao-presente/dispositivo-recuperado.css" />
     <title>Jack Connor | Era da Extinção</title>
     <meta name="description" content="Jack Connor no presente: liderança, família e sobrevivência após o Dia D." />
   </head>
@@ -87,6 +88,37 @@
       ><a href="filhos-connor.html">OS CINCO FILHOS</a
       ><a href="alice-presente.html">ALICE CONNOR →</a>
     </footer>
+    <button class="recovered-device-launch" type="button" data-device-open aria-haspopup="dialog" aria-controls="recovered-device" aria-expanded="false">
+      <span class="recovered-device-launch__icon" aria-hidden="true"><svg viewBox="0 0 20 28" fill="none"><rect x="2.5" y="1.5" width="15" height="25" rx="2.5" /><path d="M7 5h6M8.5 22.5h3" /></svg></span>
+      <span><small>JC-01 // ARQUIVO RECUPERADO</small><strong>ABRIR CELULAR</strong></span>
+    </button>
+    <dialog class="recovered-device" id="recovered-device" data-recovered-device aria-labelledby="recovered-device-title">
+      <div class="recovered-device__shell">
+        <header class="recovered-device__header">
+          <div><p data-device-kicker></p><h2 id="recovered-device-title">Terminal de campo</h2></div>
+          <button class="recovered-device__close" type="button" data-device-close>FECHAR <span aria-hidden="true">×</span></button>
+        </header>
+        <div class="recovered-device__status"><span>ARQUIVO OFFLINE</span><span data-device-signal></span></div>
+        <div class="recovered-device__screen">
+          <nav class="recovered-device__apps" role="tablist" aria-label="Aplicativos do dispositivo">
+            <button type="button" role="tab" id="device-app-messages" aria-controls="device-view-messages" data-device-app="messages" aria-selected="true">MENSAGENS</button>
+            <button type="button" role="tab" id="device-app-archive" aria-controls="device-view-archive" data-device-app="archive" aria-selected="false" tabindex="-1">CADERNO DE CAMPO</button>
+          </nav>
+          <section class="recovered-device__view" id="device-view-messages" role="tabpanel" aria-labelledby="device-app-messages" data-device-view="messages" aria-label="Mensagens recuperadas">
+            <div class="recovered-device__contacts" data-device-contacts role="tablist" aria-label="Contatos recuperados"></div>
+            <div class="recovered-device__thread" id="device-thread" role="tabpanel" data-device-thread></div>
+          </section>
+          <section class="recovered-device__view recovered-device__archive" id="device-view-archive" role="tabpanel" aria-labelledby="device-app-archive" data-device-view="archive" hidden>
+            <span class="recovered-device__archive-label">ANOTAÇÃO PRESERVADA</span>
+            <h3 data-device-note-title></h3>
+            <p data-device-note></p>
+            <a href="https://maycon-rezende.github.io/apocalipse/" target="_blank" rel="noopener noreferrer">CONSULTAR ARQUIVO DO DIA ZERO ↗</a>
+          </section>
+        </div>
+        <p class="recovered-device__footnote">FRAGMENTOS ROTEIRIZADOS // REGISTRO DE FICÇÃO</p>
+      </div>
+    </dialog>
     <script src="era-extincao-presente/personagem-presente.js"></script>
+    <script src="js/dispositivo-recuperado.js" defer></script>
   </body>
 </html>

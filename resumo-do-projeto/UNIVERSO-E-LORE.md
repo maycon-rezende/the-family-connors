@@ -2,7 +2,7 @@
 
 ## Família Connor
 
-- Jack Connor é o primogênito, trabalhou no FBI e na Interpol e criou os Hellsings.
+- Jack Connor é o primogênito, trabalhou no FBI e na Interpol e criou os Hellsings. No FBI, preparou Mick Braddock para liderar os agentes especiais em seu lugar quando Jack seguiu para a Interpol.
 - Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
 - Jack e Alice têm cinco filhos, nesta ordem: Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
@@ -47,7 +47,7 @@ Nos registros visuais, John é representado com pele em tom marrom, conforme a o
 
 ## Elementos ainda não definidos
 
-- Detalhes completos da causa e da cronologia da extinção além da ligação com o Dia Zero de Doomsday.
+- Datas e detalhes completos da ligação entre os arquivos de Doomsday e as jornadas da Era da Extinção ainda precisam ser escritos; o contato de Jack com Mick e o sinal perdido estão confirmados.
 - Existência definitiva, origem e regras de infectados.
 - História completa dos descendentes.
 - Especialidades individuais dos descendentes ainda não definidas, exceto as funções já confirmadas de Diana, Mary e Nathan.
@@ -55,12 +55,28 @@ Nos registros visuais, John é representado com pele em tom marrom, conforme a o
 - Biografias completas de Naomi Yagami, Clhoe, Dimitri e Joey Muller.
 - Funções definitivas dos agentes ainda marcados como provisórios.
 - Estado do mundo no presente, destinos dos personagens envelhecidos, territórios, veículos e facções.
+- Geografia definitiva do atlas: os setores do mapa do site são rótulos provisórios sem escala, fronteiras ou coordenadas oficiais. As posições de missões e rotas ainda não registradas continuam desconhecidas.
 
 ## Cronologia confirmada
 
 1. As páginas familiares e dos Hellsings representam o passado, antes do Dia D.
 2. O universo **Doomsday/Apocalipse** representa a ruptura e o Dia Zero.
 3. A verdadeira **Era da Extinção** acontece no presente dos personagens, muitos anos depois, quando eles já estão envelhecidos e o mundo está devastado.
+
+## Crossover autor-confirmado — Doomsday e Era da Extinção
+
+- **Doomsday e A Era da Extinção pertencem ao mesmo universo**, em etapas diferentes: o primeiro acompanha o Dia D; a segunda se passa depois, no mundo devastado.
+- Jack falou com Mick e o convidou a encontrar os Hellsings. A comunicação foi interrompida antes do encontro. Depois, os Hellsings procuraram o grupo de Doomsday; o encontro entre eles ainda acontecerá na história e não deve ser apresentado como passado concluído. A data do contato não foi definida.
+- Mark serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. O Major James Hanson e o Coronel Samuel Salazar o conhecem por sua vida militar; Mark não era subordinado de Hanson. Os arquivos públicos de Doomsday identificam Hanson ligado a uma instalação militar e Salazar no Pentágono durante os registros do Dia D. Os destinos posteriores dos dois não estão confirmados.
+- A grafia oficial do sobrenome de Mick é **Braddock**, com dois “d”. A página pública de Doomsday ainda mostra “Bradock”; o autor planeja corrigi-la. Os materiais locais usam a grafia oficial **Braddock**.
+
+## Direção confirmada para o final — spoiler
+
+- No arco final, os Hellsings enfrentarão e destruirão a facção Dominus.
+- Depois, encontrarão uma estufa mantida pelo governo dos Estados Unidos, com muitas variedades de plantas.
+- As bombas nucleares mataram a vegetação em várias áreas. A estufa será o ponto de partida para recuperar plantas e iniciar a cura da terra dos patógenos zumbis; os métodos e as etapas dessa recuperação ainda serão desenvolvidos.
+
+Os pontos acima são direção narrativa confirmada pelo autor. Não inventar datas, coordenadas, a identidade do responsável pela estufa ou o destino de Mick, Hanson e Salazar sem nova confirmação.
 
 ## Diretriz narrativa
 

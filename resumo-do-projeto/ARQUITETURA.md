@@ -4,11 +4,14 @@
 
 | Arquivo | Função |
 | --- | --- |
-| `index.html` | Experiência principal no presente devastado, agora com o atalho flutuante da Malha Hellsings no canto inferior esquerdo |
+| `index.html` | Experiência principal no presente devastado, com o atalho do chat Assemble Hellsings e acesso a Posts dos Hellsings pelo destaque e pelo submenu **Arquivos** |
 | `arquivo-passado.html` | Prólogo e entrada dos Arquivos do Passado |
 | `telainicial.html` | Narrativa do passado dos Connor antes do Dia D |
 | `hellsing.html` | Arquivo do centro de comando Hellsings antes do Dia D |
-| `faccao-hellsings-presente.html` | Dossiê da facção no presente, com operações, integrantes ativos e o piloto de conversas Malha Hellsings |
+| `faccao-hellsings-presente.html` | Dossiê dos Hellsings no presente, com operações, integrantes ativos, chat Assemble Hellsings e acesso à página de posts |
+| `jack-presente.html` e `mark-presente.html` | Dossiês atuais com terminal de celular, mensagens arquivadas do crossover Doomsday e caderno de campo interativo |
+| `posts-hellsings.html` | Posts dos Hellsings: feed separado com publicações que entram continuamente em ciclo aleatório, comentários em fio e reações locais |
+| `membros-hellsings.html` | Índice de personagens ligados aos Hellsings, com acesso aos arquivos individuais da Lana e da Sally |
 | `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário com 24 homenagens individuais, respostas e reações da equipe, chat coletivo dos sobreviventes e despedida sem áudio), homenagem ampliada de John com trajetória e 13 transmissões textuais, e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
@@ -21,18 +24,24 @@
 - Supabase é a opção escolhida para armazenar essas mensagens; o site estático não as guarda por conta própria. A configuração de moderação, aprovação e proteção contra spam ainda será decidida na implementação.
 - Giscus não foi integrado. A busca no projeto confirmou que não há código ou configuração dele.
 
-## Malha Hellsings — conversas narrativas
+## Assemble Hellsings — conversas narrativas
 
-- O piloto de facção fica em `faccao-hellsings-presente.html`; `index.html` também oferece um chat flutuante da Malha no canto inferior esquerdo. `hellsing.html`, que guarda o arquivo anterior ao Dia D, não foi alterado.
+- O chat Hellsings aparece para o público como **Assemble Hellsings**. Ele fica em `faccao-hellsings-presente.html`; `index.html` também oferece o atalho flutuante no canto inferior esquerdo. `hellsing.html`, que guarda o arquivo anterior ao Dia D, permanece fora destas mudanças.
 - `era-extincao-presente/malha-hellsings.css` define o visual do canal; `js/malha-hellsings.js` controla a troca acessível entre canais por mouse e teclado.
-- Na página inicial, `era-extincao-presente/malha-chat.css` e `js/malha-chat.js` controlam o botão **ABRIR CHAT**, o painel responsivo, as abas e o fechamento por botão, Escape ou clique fora. As conversas apresentam dois recortes ficcionais do presente: uma operação e uma conversa de convivência que lembra Brian.
+- Na página inicial, `era-extincao-presente/malha-chat.css` e `js/malha-chat.js` controlam o botão **ABRIR ASSEMBLE**, o painel responsivo, as abas e o fechamento por botão, Escape ou clique fora. As conversas apresentam dois recortes ficcionais do presente: uma operação e uma conversa de convivência que lembra Brian.
 - `memorial.html` reutiliza o componente flutuante com dois recortes próprios: a vigília de Brian e a lembrança da última rota de John. Os dois são mencionados pelos sobreviventes, sem publicar mensagens deles após a morte.
 - O registro de John em `memorial.html` inclui a estrada até a última fuga e um arquivo de 13 transmissões textuais, selecionadas uma por vez, com reações e respostas; o formato não repete o mural de retratos de Brian. Brian morreu antes de John e não publica homenagem no memorial dele.
-- Os canais iniciais são `Rota sem nome` (operações) e `Entre os seus` (convívio do bunker). As mensagens são cenas escritas e preservadas no HTML, com respostas e reações; não são uma conversa ao vivo nem conteúdo enviado por visitantes.
+- Os canais iniciais são `Rota sem nome` (operações) e `Entre os seus` (convívio do bunker). As cenas roteirizadas continuam preservadas no HTML; com o servidor Node e a chave configurados, cada canal também pode gerar duas falas por solicitação.
 - A linha do presente inclui integrantes ativos. Brian e John aparecem apenas nos registros de memória; uma conversa de Jully e Alice preserva a lembrança de Brian sem atribuir mensagens a ele.
 - `memorial.html` aplica a mesma ideia nas 24 homenagens individuais, por meio de reações e uma resposta de personagem em cada post. `js/memorial-journal.js` monta as conversas; `era-extincao-presente/memorial-hellsings.css` estiliza o fio de respostas dentro do diálogo.
 - John deixa um recado identificado como escrito em vida; ele e Brian não aparecem reagindo às conversas atuais. O livro público de visitantes continua separado e planejado para Supabase após a conclusão do site.
-- As demais páginas de facções aguardam a adaptação do formato. O conteúdo atual da Malha é narrativo e fixo, sem publicação pública ou armazenamento de mensagens.
+- `faccao-cobras.html`, `faccao-fogo.html`, `faccao-ordem-sal.html`, `faccao-nomades-ferro.html` e `faccao-dominus.html` têm canais próprios de diálogo. `js/malha-faccoes.js` libera falas roteirizadas em sequência quando cada canal entra na área visível; `era-extincao-presente/malha-faccoes.css` preserva uma cor temática por facção. Dominus usa sinais sem nomes, mantendo as identidades desconhecidas.
+- `posts-hellsings.html` é a página **Posts dos Hellsings**, separada do chat e do mural: mostra publicações dos integrantes vivos, comentários em fio e reações. `js/posts-hellsings.js` acrescenta novas publicações continuamente, sorteando uma sequência sem repetir o mesmo autor em posts consecutivos; há textos para treze membros e cada publicação recebe respostas e reações. A página inicial dá acesso pelo destaque e pelo submenu **Arquivos**; o dossiê presente também tem o link. Não existe publicação de visitantes nem armazenamento compartilhado neste feed.
+- `membros-hellsings.html` reúne integrantes, familiares e vínculos em um índice separado, acessível pelo submenu **Arquivos** e pelo dossiê da facção. As páginas existentes de Lana e Sally agora distinguem **Antes do Dia D** e **Presente**; as imagens já disponíveis ficam no período presente. Os blocos visuais anteriores ao Dia D aguardam fotos desse período.
+- Os roteiros, posts, respostas e reações locais continuam revisáveis. Os onze canais podem pedir uma troca de duas falas à IA por clique quando o backend está configurado; a chave fica no servidor e o site não persiste as respostas. O mural de posts e o livro público de visitantes seguem separados dessa integração.
+- `js/dispositivo-recuperado.js` controla os celulares de Jack e Mark. `era-extincao-presente/dispositivo-recuperado.css` define a interface responsiva com paleta individual, seleção de contatos e aplicativos por teclado, foco restaurado ao fechar e leitura offline. Os registros são texto ficcional roteirizado; não consultam IA nem serviço externo.
+- O terminal de Jack conserva o convite de encontro enviado a Mick e a interrupção do sinal; uma mensagem registra que Jack o preparou no FBI para liderar os agentes especiais quando seguiu para a Interpol. O caderno mantém a busca aberta e o reencontro futuro. O terminal de Mark registra que ele cumpriu seu tempo na Marinha e deixou o serviço; as mensagens de Hanson e Salazar refletem conhecidos de sua vida militar, sem colocar Mark sob o comando de Hanson nem afirmar os destinos dos oficiais depois do Dia D.
+- Os diálogos do chat inicial, Assemble Hellsings, memorial e cinco facções foram ampliados com conversas encadeadas e vozes específicas. Brian e John não publicam postumamente; no memorial de Brian, John pode falar porque ainda estava vivo quando Brian morreu. As linhas são recortes roteirizados que terminam após o conjunto preparado.
 
 ## Abertura cinematográfica do presente
 
@@ -148,3 +157,16 @@ Os estilos compartilhados que antes ficavam soltos na raiz agora estão em `css/
 - `img-bunker/`: entrada, áreas operacionais, garagens, enfermaria, arsenal, biblioteca, alojamentos e setores de suporte.
 
 Todos os dez integrantes possuem imagens oficiais nos cartões e dossiês da organização.
+# IA nos chats do presente — 1º de novembro de 2026
+
+- `server.js` serve o site localmente e fornece `/api/status` e `/api/chat`; a chave é lida somente de `OPENAI_API_KEY` no processo do servidor.
+- `js/ai-dialogue.js` conecta os controles da página inicial, memorial, Malha Hellsings e canais das cinco facções ao endpoint. `era-extincao-presente/ai-dialogue.css` estiliza os controles e identifica as falas geradas.
+- `js/malha-chat.js`, `js/malha-hellsings.js` e `js/malha-faccoes.js` suspendem os roteiros enquanto chega uma resposta e os retomam em seguida.
+- A geração é iniciada pelo visitante em cada clique; cada resposta acrescenta duas falas identificadas como geradas por IA. Os roteiros ainda funcionam quando o servidor não tem chave.
+- A hospedagem atual do projeto não tinha backend configurado. A integração local está pronta; a hospedagem pública precisa executar Node ou uma função equivalente e armazenar a chave como segredo. Consulte `INTEGRACAO-IA-CHATS.md`.
+
+# Navegação principal simplificada — 1º de novembro de 2026
+
+- A barra de `index.html` mantém seis acessos diretos: Mundo, Hellsings, Sobreviventes, Facções, Regiões e Fórum.
+- Desaparecidos, Cronologia e O Passado foram agrupados sob o menu expansível **Arquivos**. As páginas e seções continuam acessíveis.
+- `era-extincao-presente/world-archive.css` estiliza o dropdown para desktop e celular; `world-menu.js` fecha o grupo quando o menu principal fecha ou um link é escolhido.

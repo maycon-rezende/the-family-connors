@@ -1,0 +1,93 @@
+.faction-live-channel {
+  --channel-accent: #e5a256;
+  --channel-glow: rgba(229, 162, 86, .15);
+  position: relative;
+  isolation: isolate;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem);
+  overflow: hidden;
+}
+
+.faction-live-channel[data-faction-chat="cobras"] { --channel-accent: #a4c66f; --channel-glow: rgba(164, 198, 111, .14); }
+.faction-live-channel[data-faction-chat="fogo"] { --channel-accent: #ed7947; --channel-glow: rgba(237, 121, 71, .16); }
+.faction-live-channel[data-faction-chat="sal"] { --channel-accent: #a8d2d5; --channel-glow: rgba(168, 210, 213, .15); }
+.faction-live-channel[data-faction-chat="ferro"] { --channel-accent: #a7bac5; --channel-glow: rgba(167, 186, 197, .14); }
+.faction-live-channel[data-faction-chat="dominus"] { --channel-accent: #b298e7; --channel-glow: rgba(178, 152, 231, .16); }
+
+.faction-live-channel::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  opacity: .7;
+  background: radial-gradient(ellipse at 80% 20%, var(--channel-glow), transparent 48%), repeating-linear-gradient(0deg, transparent 0 5px, rgba(255,255,255,.022) 6px);
+  pointer-events: none;
+}
+
+.faction-live-channel__shell { width: min(100%, 1120px); margin-inline: auto; }
+.faction-live-channel__heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.faction-live-channel__heading > div { max-width: 700px; }
+.faction-live-channel__eyebrow,
+.faction-live-channel__meta,
+.faction-live-channel__status,
+.faction-chat__origin,
+.faction-live-channel__footer { font: 700 .68rem/1.5 "Special Elite", monospace; letter-spacing: .16em; }
+.faction-live-channel__eyebrow { margin: 0 0 .8rem; color: var(--channel-accent); }
+.faction-live-channel__heading h2 { margin: 0; color: #eee7d7; font: 700 clamp(2.2rem, 5vw, 4.5rem)/.92 "Barlow Condensed", Impact, sans-serif; letter-spacing: .025em; text-transform: uppercase; }
+.faction-live-channel__heading h2 em { color: var(--channel-accent); font-style: normal; }
+.faction-live-channel__heading p:not(.faction-live-channel__eyebrow) { max-width: 34rem; margin: 1rem 0 0; color: rgba(238,231,215,.72); font: 1rem/1.7 Georgia, serif; }
+.faction-live-channel__meta { display: grid; gap: .5rem; min-width: 11rem; padding: 1rem 1.2rem; border-left: 1px solid color-mix(in srgb, var(--channel-accent), transparent 45%); color: rgba(238,231,215,.72); }
+.faction-live-channel__meta b { color: var(--channel-accent); }
+
+.faction-chat-console { overflow: hidden; border: 1px solid color-mix(in srgb, var(--channel-accent), transparent 54%); background: rgba(8, 9, 8, .9); box-shadow: 0 30px 90px rgba(0,0,0,.35), 0 0 70px var(--channel-glow); }
+.faction-chat-console__top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem clamp(1rem, 3vw, 2rem); border-bottom: 1px solid rgba(230,220,198,.12); background: rgba(255,255,255,.025); }
+.faction-chat-console__identity { display: flex; align-items: center; gap: .9rem; color: #eee7d7; }
+.faction-chat-console__signal { width: .72rem; height: .72rem; border-radius: 50%; background: var(--channel-accent); box-shadow: 0 0 1rem var(--channel-accent); animation: faction-signal-pulse 2s ease-in-out infinite; }
+.faction-chat-console__identity b { display: block; font: 700 1rem/1 "Barlow Condensed", Impact, sans-serif; letter-spacing: .1em; }
+.faction-chat-console__identity small { display: block; margin-bottom: .3rem; color: var(--channel-accent); font: .58rem/1.3 "Special Elite", monospace; letter-spacing: .12em; }
+.faction-chat-console__connection { color: rgba(238,231,215,.55); font: .6rem/1.6 "Special Elite", monospace; letter-spacing: .12em; text-align: right; }
+.faction-chat-console__connection b { display: block; color: var(--channel-accent); }
+
+.faction-chat-feed { display: grid; gap: .75rem; max-height: min(34rem, 68vh); min-height: 15rem; margin: 0; padding: clamp(1rem, 3vw, 2rem); overflow-y: auto; list-style: none; scrollbar-color: color-mix(in srgb, var(--channel-accent), transparent 30%) #10110f; }
+.faction-chat-feed:empty::before { align-self: center; justify-self: center; color: rgba(238,231,215,.45); content: "Aguardando a primeira voz..."; font: .8rem "Special Elite", monospace; letter-spacing: .12em; }
+.faction-chat__message { display: grid; grid-template-columns: 3rem minmax(0, 1fr); align-items: start; gap: .85rem; animation: faction-message-in .42s ease both; }
+.faction-chat__avatar { display: grid; width: 3rem; aspect-ratio: 1; place-items: center; border: 1px solid color-mix(in srgb, var(--channel-accent), transparent 34%); background: #171715; color: var(--channel-accent); object-fit: cover; font: 700 .65rem "Special Elite", monospace; }
+.faction-chat__bubble { min-width: 0; padding: .9rem 1rem; border: 1px solid rgba(238,231,215,.11); background: linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.015)); }
+.faction-chat__bubble header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .55rem; }
+.faction-chat__bubble header > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .7rem; }
+.faction-chat__bubble header b { color: #f0e8d7; font: 700 .98rem/1.2 "Barlow Condensed", Impact, sans-serif; letter-spacing: .035em; }
+.faction-chat__bubble header small,
+.faction-chat__bubble time { color: var(--channel-accent); font: .56rem/1.3 "Special Elite", monospace; letter-spacing: .08em; }
+.faction-chat__bubble time { flex: 0 0 auto; color: rgba(238,231,215,.48); }
+.faction-chat__bubble p { margin: 0; color: rgba(238,231,215,.84); font: .96rem/1.65 Georgia, serif; overflow-wrap: anywhere; }
+.faction-chat__bubble blockquote { margin: 0 0 .65rem; padding: .45rem .7rem; border-left: 2px solid var(--channel-accent); background: rgba(0,0,0,.2); }
+.faction-chat__bubble blockquote b { display: block; margin-bottom: .25rem; color: var(--channel-accent); font: .55rem/1.4 "Special Elite", monospace; letter-spacing: .1em; }
+.faction-chat__bubble blockquote span { color: rgba(238,231,215,.53); font: italic .82rem/1.5 Georgia, serif; }
+.faction-chat__origin { display: block; margin-top: .75rem; color: rgba(238,231,215,.34); font-size: .5rem; }
+.faction-chat__message--typing .faction-chat__bubble { display: flex; align-items: center; gap: .8rem; min-height: 3rem; }
+.faction-chat__message--typing .faction-chat__bubble b { color: var(--channel-accent); font: .65rem "Special Elite", monospace; letter-spacing: .08em; }
+.faction-chat__dots { display: inline-flex; gap: .22rem; }
+.faction-chat__dots i { width: .25rem; height: .25rem; border-radius: 50%; background: var(--channel-accent); animation: faction-dot 1s ease-in-out infinite; }
+.faction-chat__dots i:nth-child(2) { animation-delay: .15s; }
+.faction-chat__dots i:nth-child(3) { animation-delay: .3s; }
+.faction-live-channel__footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; padding: .85rem clamp(1rem, 3vw, 2rem); border-top: 1px solid rgba(230,220,198,.12); color: rgba(238,231,215,.46); font-size: .56rem; }
+.faction-live-channel__footer [data-faction-status] { color: var(--channel-accent); }
+
+@keyframes faction-message-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes faction-signal-pulse { 50% { opacity: .48; box-shadow: 0 0 .4rem var(--channel-accent); } }
+@keyframes faction-dot { 50% { opacity: .3; transform: translateY(-3px); } }
+
+@media (max-width: 680px) {
+  .faction-live-channel__heading { align-items: start; flex-direction: column; gap: 1rem; }
+  .faction-live-channel__meta { display: flex; flex-wrap: wrap; gap: .5rem 1rem; border-left: 0; border-top: 1px solid color-mix(in srgb, var(--channel-accent), transparent 45%); padding: .7rem 0 0; }
+  .faction-chat-console__connection { max-width: 8rem; font-size: .52rem; }
+  .faction-chat__message { grid-template-columns: 2.5rem minmax(0, 1fr); gap: .6rem; }
+  .faction-chat__avatar { width: 2.5rem; }
+  .faction-chat__bubble { padding: .75rem; }
+  .faction-chat__bubble header { align-items: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faction-chat__message,
+  .faction-chat-console__signal,
+  .faction-chat__dots i { animation: none !important; }
+}

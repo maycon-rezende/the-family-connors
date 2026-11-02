@@ -37,9 +37,10 @@
   <link rel="stylesheet" href="era-extincao-presente/extinction-title-impact.css?v=18" />
   <link rel="stylesheet" href="era-extincao-presente/extinction-scenario.css?v=6" />
   <link rel="stylesheet" href="era-extincao-presente/extinction-hellsings-present.css?v=2" />
-  <link rel="stylesheet" href="era-extincao-presente/world-archive.css?v=4" />
+  <link rel="stylesheet" href="era-extincao-presente/world-archive.css?v=7" />
   <link rel="stylesheet" href="era-extincao-presente/soundtrack.css" />
-  <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=1" />
+  <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=3" />
+  <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
   <style>
     @keyframes scenarioAwaken {
       from {
@@ -66,10 +67,18 @@
       <a href="#hellsings">Hellsings</a>
       <a href="#sobreviventes">Sobreviventes</a>
       <a href="#faccoes">Facções</a>
+      <a href="mapa-regioes.html">Regiões</a>
       <a href="#forum">Fórum</a>
-      <a href="#desaparecidos">Desaparecidos</a>
-      <a href="#cronologia">Cronologia</a>
-      <a href="#passado">O passado</a>
+      <details class="world-nav-archive">
+        <summary>Arquivos</summary>
+        <div class="world-nav-archive__menu">
+          <a href="#desaparecidos">Desaparecidos</a>
+          <a href="#cronologia">Cronologia</a>
+          <a href="posts-hellsings.html">Posts dos Hellsings</a>
+          <a href="membros-hellsings.html">Membros dos Hellsings</a>
+          <a href="#passado">O passado</a>
+        </div>
+      </details>
     </nav>
     <button class="world-menu-toggle" type="button" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="worldMenu">
       <i></i><i></i><span>MENU</span>
@@ -347,8 +356,6 @@
         <span>Conheça os Connor quando ainda eram jovens. Entre na mansão, abra seus arquivos
           pessoais, veja as fotografias e descubra como os Hellsings existiam antes da
           extinção.</span>
-        <a href="arquivo-passado.html" data-open-past><b>DESBLOQUEAR ARQUIVOS DO PASSADO</b><i>→</i></a>
-        <small>O acesso altera o período da experiência.</small>
       </div>
     </section>
 
@@ -394,6 +401,7 @@
           <i>SOLICITAR ACESSO →</i>
         </a>
       </div>
+      <a class="faction-atlas-entry" href="mapa-regioes.html"><span>CARTOGRAFIA HELLSINGS // TERRITÓRIOS, ROTAS E MEMÓRIAS</span><b>ABRIR O ATLAS DE CAMPANHA <i aria-hidden="true">↗</i></b></a>
     </section>
 
     <section class="survivor-network" id="forum">
@@ -429,6 +437,12 @@
         </form>
       </div>
     </section>
+
+    <a class="world-posts-entry reveal" href="posts-hellsings.html">
+      <span>ASSEMBLE HELLSINGS // FEED INTERNO</span>
+      <b>POSTS DOS PERSONAGENS <i aria-hidden="true">↗</i></b>
+      <small>Publicações, comentários e reações da equipe entre as missões.</small>
+    </a>
 
     <section class="missing-frequency" id="desaparecidos">
       <header class="world-heading reveal">
@@ -502,24 +516,24 @@
       src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trailer-music-movie/avengers4-endgame-official-trailer-music-audiomachine-so-say-we-all&color=%23d8552d&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"></iframe>
   </div>
   <script src="https://w.soundcloud.com/player/api.js"></script>
-  <script src="era-extincao-presente/world-menu.js?v=1"></script>
+  <script src="era-extincao-presente/world-menu.js?v=3"></script>
   <script src="era-extincao-presente/extinction-index.js?v=21"></script>
   <link rel="stylesheet" href="css/diary-clues.css">
   <script src="js/diary-clues.js" defer></script>
 <button class="diary-clue" data-diary-clue="mark" type="button">FRAGMENTO BC-05 // REGISTRO DE ORIGEM</button>
-<section class="malha-chat-widget" data-malha-chat aria-label="Malha Hellsings">
+<section class="malha-chat-widget" data-malha-chat data-ai-chat-scope="home" aria-label="Assemble Hellsings">
   <button class="malha-chat-launcher" type="button" data-chat-launcher aria-expanded="false" aria-controls="malha-chat-panel">
     <span class="malha-chat-launcher__icon" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span>ABRIR CHAT</span><b aria-hidden="true">H-01</b>
+    <span>ABRIR ASSEMBLE</span><b aria-hidden="true">H-01</b>
   </button>
   <section class="malha-chat-panel" id="malha-chat-panel" role="dialog" aria-modal="false" aria-labelledby="malha-chat-title" aria-describedby="malha-chat-description" data-chat-panel hidden>
     <header class="malha-chat-panel__header">
-      <div class="malha-chat-panel__signal"><i aria-hidden="true"></i><span>FREQUÊNCIA H // CANAL INTERNO</span></div>
+      <div class="malha-chat-panel__signal"><i aria-hidden="true"></i><span>ASSEMBLE HELLSINGS // CANAL INTERNO</span></div>
       <button class="malha-chat-panel__close" type="button" data-chat-close aria-label="Fechar chat">×</button>
-      <h2 id="malha-chat-title">Malha Hellsings</h2>
+      <h2 id="malha-chat-title">Assemble Hellsings</h2>
       <p id="malha-chat-description">Recortes narrativos recuperados // canal dos sobreviventes</p>
     </header>
-    <div class="malha-chat-tabs" role="tablist" aria-label="Conversas da Malha">
+    <div class="malha-chat-tabs" role="tablist" aria-label="Conversas do Assemble Hellsings">
       <button type="button" role="tab" id="malha-chat-tab-route" aria-selected="true" aria-controls="malha-chat-route" tabindex="0" data-chat-tab="route">ROTA SEM NOME</button>
       <button type="button" role="tab" id="malha-chat-tab-bunker" aria-selected="false" aria-controls="malha-chat-bunker" tabindex="-1" data-chat-tab="bunker">ENTRE OS SEUS</button>
     </div>
@@ -569,10 +583,10 @@
         </li>
       </ol>
     </section>
-    <footer class="malha-chat-panel__footer"><span>RECORTES NARRATIVOS // MALHA H</span><span>ROTINA // MEMÓRIA</span></footer>
   </section>
 </section>
-<script src="js/malha-chat.js?v=1" defer></script>
+<script src="js/malha-chat.js?v=3" defer></script>
+<script src="js/ai-dialogue.js?v=1" defer></script>
 </body>
 
 </html>

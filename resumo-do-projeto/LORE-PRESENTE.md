@@ -36,9 +36,13 @@ O mundo já havia morrido uma vez. Naquele dia, nós o matamos novamente.
 
 ## O mundo depois das bombas
 
-Os anos passaram e a natureza começou a tomar de volta aquilo que sempre lhe pertenceu. A areia invadiu cidades inteiras. Estradas desapareceram. Prédios foram engolidos pelo deserto e os sobreviventes passaram a se reunir em comboios, fortalezas improvisadas e pequenas comunidades.
+Os anos passaram e a natureza começou a tomar de volta aquilo que sempre lhe pertenceu. A areia invadiu cidades inteiras. Estradas desapareceram. Prédios foram engolidos pelo deserto e os sobreviventes passaram a se reunir em comboios, fortalezas improvisadas e pequenas comunidades. Em várias áreas, porém, as bombas nucleares mataram a vegetação; a recuperação natural não alcançou todo o território.
 
 Facções surgiram em todas as regiões. Algumas protegiam pessoas. Outras descobriram que, em um mundo sem leis, o medo era uma forma de poder.
+
+O atlas geográfico e narrativo está em `mapa-regioes.html`. O mapa é esquemático, sem escala geográfica: a propriedade Connor e o bunker dos Hellsings são marcos confirmados, assim como a cidade sem nome atingida pelo míssil. A Bacia Branca está ligada ao grupo pelo corredor médico negociado por Alice; sua posição geográfica ainda não foi definida. O Cinturão Rubro contém a fronteira em tensão com a Facção do Fogo, ainda antes do primeiro disparo; Serpentário e Delta-09 mostram os territórios das Cobras e dos Nômades sem presumir que os Hellsings já passaram por todas as suas rotas. Jack e Mick tiveram contato por rádio e o sinal se perdeu antes do encontro; o local do futuro encontro presencial ainda não foi definido. A origem do caos, as missões Janela de Cinzas e Linha Vermelha, a infecção de Brian e a última fuga de John também seguem sem coordenadas recuperadas. As cenas de resgate na Bacia e o aviso **“NÃO SE DEVE PISAR AQUI”** são propostas narrativas marcadas como revisáveis; os fatos confirmados continuam separados no [escopo do Atlas](ESCOPO-ATLAS-REGIOES.md).
+
+O encadeamento do futuro encontro presencial com Mick, de uma operação conjunta e das pistas para a terra livre está registrado como proposta separada em [ROTA-BRADDOCK-PROPOSTA.md](ROTA-BRADDOCK-PROPOSTA.md). A Estação da Agulha, o resgate no leito seco e a ordem Cobras → Cinturão Rubro são rascunhos revisáveis, não fatos da lore.
 
 Durante anos, procuramos os responsáveis pelo que aconteceu. Encontramos fragmentos, transmissões e arquivos corrompidos. Em todos eles, um mesmo nome aparecia como assinatura, organização ou ameaça.
 
@@ -52,7 +56,7 @@ E um alvo.
 
 ## Jack Connor
 
-Jack Connor, líder dos Hellsings, irmão mais velho dos Connor e pai de cinco filhos com Alice Myers Connor, tem hoje 55 anos. O treinamento adquirido no FBI, na Interpol e durante os anos à frente dos Hellsings permitiu que ele se adaptasse rapidamente ao novo mundo.
+Jack Connor, líder dos Hellsings, irmão mais velho dos Connor e pai de cinco filhos com Alice Myers Connor, tem hoje 55 anos. O treinamento adquirido no FBI, na Interpol e durante os anos à frente dos Hellsings permitiu que ele se adaptasse rapidamente ao novo mundo. No FBI, preparou Mick Braddock para liderar os agentes especiais em seu lugar quando Jack seguiu para a Interpol.
 
 Jack sempre foi protetor com a família e os amigos. Depois do Dia D, essa proteção se transformou em uma missão quase obsessiva. Ele lidera um grande comboio de sobreviventes pelas regiões devastadas, mantendo vivo o código da organização que criou.
 
@@ -66,7 +70,7 @@ Se Jack mantém o comboio em movimento, Alice mantém suas pessoas vivas.
 
 ## Mark Connor e Ariani
 
-Mark tem 50 anos. Ele conheceu os horrores da guerra antes do colapso e acreditava que já havia visto o pior que a humanidade era capaz de fazer. O Dia D provou que estava enganado.
+Mark tem 50 anos. Serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. Ele conheceu os horrores da guerra e acreditava que já havia visto o pior que a humanidade era capaz de fazer. O Dia D provou que estava enganado.
 
 Mark e Ariani tiveram os gêmeos Pollyana Salvatore Connor e Nathan Salvatore Connor antes da queda. Depois do Dia D, nasceu James Salvatore Connor, batizado por Mark em homenagem ao homem que havia salvado sua vida. Os três preservam Salvatore, o sobrenome materno de Ariani.
 
@@ -102,6 +106,18 @@ Pouco tempo depois, Jully sofreu um aborto em consequência dos traumas e das co
 
 As duas sobreviveram porque aprenderam a carregar uma à outra.
 
+## Hilary Caldwell Ashford
+
+Hilary tem 36–37 anos no presente e tinha 20 no Dia D. Seus pais biológicos foram assassinados durante sua infância depois que a mãe descobriu que a empresa em que trabalhava servia de fachada para tráfico de crianças. O casal criminoso conseguiu a guarda de Hilary e a criou sem que ela conhecesse a verdade. Aos 13–14 anos, Hilary permaneceu em cativeiro por aproximadamente três a seis meses. Britney também foi levada ao mesmo local e conseguiu pedir ajuda a Mark; Jack, Mark, Alice e outros Hellsings participaram do resgate.
+
+Sem uma família segura para receber Hilary, os Connor a acolheram. Alice tornou-se sua figura materna e mentora; Jack e Mark representaram segurança; Britney tornou-se amiga próxima. A Fundação Connor, criada por Alice após o resgate, ofereceu apoio médico, psicológico, educacional e um lar seguro. Aos 19 anos, Mark revelou a Hilary que seus pais adotivos haviam ordenado a morte de seus pais biológicos. Os responsáveis foram localizados e eliminados pelos Hellsings.
+
+Hilary iniciou estudos de enfermagem antes do Dia D. Aos 20, estava de folga na casa de Britney e Bobby Lee, junto de Jully; Britney estava grávida de seis meses. Eles conseguiram chegar à mansão de Jack e Alice. No presente, Hilary é uma integrante ativa dos Hellsings, enfermeira de campo e parte da assistência humanitária: presta primeiros socorros, estabiliza feridos, acompanha evacuações e acolhe sobreviventes, com atenção especial a crianças, mulheres e vítimas de violência.
+
+Antes do Dia D, Hilary era amiga de Maya Braddock, Lana Whitmore e Lisa. Perdeu contato com as três após o colapso. Anos depois, reencontrou Lana, então ligada aos Connor por seu casamento com Nathan. O reencontro com Maya ainda está por acontecer; o destino de Lisa permanece desconhecido.
+
+O autor corrigiu uma identificação anterior: Hilary é **Hilary Caldwell Ashford**. A filha de Joey Muller e Hellen Wren é **Leona**, personagem cujo background ainda está em desenvolvimento.
+
 ## As perdas dos Hellsings
 
 Nem todos atravessaram os anos de devastação.
@@ -120,17 +136,24 @@ Os nomes de Brian e John continuam registrados no bunker e no código da organiz
 
 Hoje, os Hellsings atravessam as ruínas em busca de uma terra que, segundo rumores, permanece livre das hordas e das grandes facções.
 
-Jack ainda mantém contato com Braddock, um antigo amigo e seu antigo “aprendiz” no FBI. As transmissões são raras, fragmentadas e perigosas, mas podem conter as coordenadas do único lugar onde o grupo ainda teria a chance de construir um futuro.
+Jack falou com Mick e o chamou para encontrar os Hellsings. No FBI, Jack havia preparado Mick para liderar os agentes especiais quando ele seguisse para a Interpol; a confiança entre os dois vem dessa passagem. O sinal se perdeu antes que o encontro acontecesse. Depois, os Hellsings procuraram o grupo de Doomsday. A reunião dos dois grupos ainda será mostrada na história; nenhuma mensagem confirma que ela já ocorreu nem esclarece o destino de Mick, Mei e seus filhos. A data desse contato não está definida.
+
+Mark também preserva registros de contato com o Major James Hanson e o Coronel Samuel Salazar, que o conheciam por sua vida militar. Mark já havia cumprido seu tempo na Marinha e deixado o serviço; as conversas com Hanson não são ordens de um superior a um subordinado. Os fragmentos podem aparecer no celular de Mark, mas não estabelecem o que aconteceu com os dois oficiais depois da queda das comunicações.
 
 O mundo mudou. A humanidade que existia antes do Dia D está extinta.
 
 Mas o código dos Hellsings ainda vive.
+
+## Direção planejada para o desfecho — spoiler
+
+Os Hellsings enfrentarão e destruirão Dominus. Depois da batalha, encontrarão uma estufa do governo dos Estados Unidos, com muitas variedades de plantas. Como as bombas nucleares mataram a vegetação em várias regiões, essa descoberta abrirá o caminho para replantar e iniciar a recuperação da terra diante dos patógenos zumbis. O local, as espécies preservadas e o método de recuperação ainda serão definidos.
 
 ## Nota confidencial do autor — não revelar nos sites por enquanto
 
 - Alice tem 54 anos.
 - Jully tem 40 anos.
 - A grafia definitiva é Braddock, com dois “d”.
+- A página pública de Doomsday ainda usa “Bradock”, com um “d”; o autor confirmou **Braddock**, com dois, como a grafia oficial e corrigirá o outro site depois.
 - Para os personagens e visitantes dos sites, **Dominus** é apenas uma facção misteriosa surgida depois do colapso.
 - A verdade é que **Dominium** é uma organização muito antiga, responsável pelos acontecimentos que conduziram ao Dia D e à Era da Extinção.
 - O nome, a antiguidade, os objetivos e a responsabilidade da organização devem permanecer ocultos neste site.
@@ -145,4 +168,4 @@ Mas o código dos Hellsings ainda vive.
 - A página pode apresentar essas competências como dados operacionais, mas missões, perdas e acontecimentos específicos continuam dependentes da lore oficial do autor.
 - Isolde Myers Connor possui novos registros visuais no presente, porém sua função definitiva ainda não foi estabelecida.
 
-Última atualização: 31 de agosto de 2026.
+Última atualização: 1º de novembro de 2026.

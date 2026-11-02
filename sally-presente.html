@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071019"><meta name="description" content="Dossiê de Sally Ward, sobrevivente que encontrou coragem ao lado de Nicolai Connor.">
   <title>Sally Ward // Distintivo Interrompido</title>
-  <link rel="stylesheet" href="era-extincao-presente/herdeiros.css"><link rel="stylesheet" href="era-extincao-presente/sally-presente.css?v=2">
+  <link rel="stylesheet" href="era-extincao-presente/herdeiros.css"><link rel="stylesheet" href="era-extincao-presente/sally-presente.css?v=3">
 </head>
 <body class="sally-page">
   <div class="sally-emergency-light" aria-hidden="true"></div><div class="sally-noise" aria-hidden="true"></div>
@@ -18,12 +18,23 @@
   </header>
 
   <main>
+    <nav class="sally-era-nav" aria-label="Períodos do arquivo de Sally">
+      <a href="#sally-before"><span>01</span> ANTES DO DIA D</a>
+      <i aria-hidden="true"></i>
+      <a href="#sally-present"><span>02</span> PRESENTE</a>
+    </nav>
+
     <section class="sally-case" id="arquivo">
-      <header data-sally-reveal><span class="eyebrow">HISTÓRICO RECUPERADO // TRÊS OCORRÊNCIAS</span><h2>Uma vida antes<br><em>do distintivo.</em></h2></header>
+      <header id="sally-before" data-sally-reveal><span class="eyebrow">ANTES DO DIA D // TRÊS REGISTROS DE ORIGEM</span><h2>Uma vida antes<br><em>do distintivo.</em></h2></header>
       <div class="sally-case-grid">
         <article data-sally-reveal><span>01 // SEM ORIGEM</span><b>ARQUIVO BIOLÓGICO</b><h3>Os nomes que nunca conheceu</h3><p data-sally-prose>Sally cresceu sem conhecer os pais biológicos. O começo de sua história permaneceu como um espaço vazio que nenhuma certidão conseguiu preencher.</p><i>ACESSO NEGADO</i></article>
         <article data-sally-reveal><span>02 // LAR PROVISÓRIO</span><b>REGISTRO DE ADOÇÃO</b><h3>Grata, apesar de tudo</h3><p data-sally-prose>A família adotiva estava longe de ser um bom exemplo. Ainda assim, Sally foi grata por terem lhe dado um teto — mesmo que aquele lugar nunca tenha se tornado o lar que imaginava.</p><i>DADOS PARCIALMENTE CENSURADOS</i></article>
         <article data-sally-reveal><span>03 // FUTURO INTERROMPIDO</span><b>CANDIDATURA NÃO CONCLUÍDA</b><h3>O sonho de ser policial</h3><p data-sally-prose>Ela queria sair, mudar de vida e vestir um distintivo. Queria transformar o próprio passado em motivo para proteger outras pessoas. O Dia D reservou outro caminho.</p><i>CARREIRA INTERROMPIDA</i></article>
+      </div>
+      <div class="sally-before-records" data-sally-reveal>
+        <span>SW-07 // ARQUIVO VISUAL // ANTES DO DIA D</span>
+        <strong>Sem retratos recuperados.</strong>
+        <p>O histórico desse período está preservado acima. As imagens anteriores ao Dia D ainda não fazem parte do arquivo visual.</p>
       </div>
     </section>
 
@@ -32,8 +43,8 @@
       <figure><img src="img-presente/personagens/sally-quadro.png" alt="Registro individual de Sally após o encontro" loading="lazy"><figcaption>SW-07 // SOBREVIVENTE CONFIRMADA</figcaption></figure>
     </section>
 
-    <section class="child-file sally-evidence" data-sally-reveal>
-      <span class="eyebrow">MURAL DE EVIDÊNCIAS // REGISTROS 01—07</span><h2>Fragmentos que<br>sobreviveram.</h2><p data-sally-prose>Este arquivo preserva somente os registros individuais de Sally. Os vínculos afetivos permanecem guardados em um dossiê próprio.</p>
+    <section class="child-file sally-evidence" id="sally-present" data-sally-reveal>
+      <span class="eyebrow">PRESENTE // REGISTROS FOTOGRÁFICOS 01—07</span><h2>Fragmentos que<br>sobreviveram.</h2><p data-sally-prose>Este arquivo preserva os registros individuais de Sally no presente. Os vínculos afetivos permanecem guardados em um dossiê próprio.</p>
       <div class="sally-carousel" data-sally-carousel><div class="sally-viewport">
         <figure class="sally-slide is-active" data-sally-slide><img src="img-presente/personagens/sally.png" alt="Retrato individual de Sally Ward"><figcaption><span>SW-07.1</span><b>IDENTIDADE</b></figcaption></figure>
         <figure class="sally-slide" data-sally-slide aria-hidden="true"><img src="img-presente/personagens/sally1.png" alt="Sally estudando plantas em um abrigo" loading="lazy"><figcaption><span>SW-07.2</span><b>CONHECIMENTO DE CAMPO</b></figcaption></figure>
@@ -47,6 +58,6 @@
 
     <section class="sally-transmission" data-sally-reveal><div><span class="eyebrow">REGISTRO AUDIOVISUAL // OCORRÊNCIA ZERO</span><h2>A prova em<br><em>movimento.</em></h2><p data-sally-prose>Uma gravação preservada de Sally e Nicolai. O arquivo confirma a proximidade entre eles; o restante será revelado pela história.</p><a href="nicolai-presente.html">RETORNAR AO ARQUIVO DE NICOLAI →</a></div><div class="sally-video-shell" data-sally-video><header><span>BODYCAM // SW-07</span><b data-sally-video-state>PRONTO</b></header><video controls playsinline preload="metadata" poster="img-presente/personagens/nick-sally.png"><source src="video/sally&amp;nicolai.mp4" type="video/mp4">Seu navegador não oferece suporte a este registro.</video></div></section>
   </main>
-  <footer><a href="nicolai-presente.html">← NICOLAI MYERS CONNOR</a><a href="filhos-connor.html">ARQUIVOS DOS HERDEIROS →</a></footer>
+  <footer><a href="nicolai-presente.html">← NICOLAI MYERS CONNOR</a><a href="membros-hellsings.html">MEMBROS DOS HELLSINGS</a><a href="filhos-connor.html">ARQUIVOS DOS HERDEIROS →</a></footer>
   <script src="era-extincao-presente/sally-presente.js?v=2"></script>
 </body></html>

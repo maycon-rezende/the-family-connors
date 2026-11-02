@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700;800&family=Cinzel:wght@500;700;900&family=Special+Elite&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="era-extincao-presente/faccao-cobras.css" />
+    <link rel="stylesheet" href="era-extincao-presente/malha-faccoes.css?v=1" />
+    <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
   </head>
   <body>
     <div class="cobra-noise" aria-hidden="true"></div>
@@ -54,8 +56,23 @@
       <section class="hellsings-relation"><div class="relation-card reveal"><span>RELAÇÃO F-02 × F-01</span><h2>HELLSINGS</h2><b>TRÉGUA FRIA // INTERESSE MÚTUO</b><p>Jack desconfia de Helena. Helena respeita Jack porque ele nunca vendeu alguém para comprar uma vitória. As Cobras possuem fragmentos sobre a rota de Braddock; os Hellsings possuem a força necessária para atravessar o território onde essa rota desaparece.</p><i>UMA ALIANÇA PODE SER INEVITÁVEL.</i></div><div class="relation-card dominus reveal"><span>RELAÇÃO F-02 × F-03</span><h2>DOMINUS</h2><b>INFORMAÇÃO NEGADA</b><p>Helena reconhece o símbolo, mas se recusa a dizer onde o viu. Pela primeira vez, as Cobras parecem temer mais uma resposta do que o preço que poderiam cobrar por ela.</p><i>ARQUIVO BLOQUEADO PELA NAJA.</i></div></section>
 
       <section class="route-section"><img src="img-presente/personagens/deserto.jpg" alt="Rota desértica conhecida como Veia Verde" /><div class="route-copy reveal"><p>ROTA ATIVA // VEIA VERDE</p><h2>O próximo encontro<br /><em>já foi marcado.</em></h2><span>O comboio Hellsings precisa atravessar um corredor dominado pela Facção do Fogo. Silas conhece uma passagem. Helena conhece o preço.</span><a href="faccao-hellsings-presente.html">CONSULTAR DOSSIÊ HELLSINGS →</a></div></section>
+      <section id="canal-cobras" class="faction-live-channel" data-faction-chat="cobras" aria-labelledby="cobras-chat-title">
+        <div class="faction-live-channel__shell">
+          <header class="faction-live-channel__heading">
+            <div><p class="faction-live-channel__eyebrow">CANAL INTERNO // F-02</p><h2 id="cobras-chat-title">Vozes do <em>Serpentário.</em></h2><p>Uma pergunta curta, uma resposta atravessada e a rotina do mercado voltando ao seu lugar.</p></div>
+            <div class="faction-live-channel__meta"><span>CANAL LOCAL</span><b><span data-faction-count>00</span> RECORTES</b></div>
+          </header>
+          <div class="faction-chat-console">
+            <header class="faction-chat-console__top"><div class="faction-chat-console__identity"><i class="faction-chat-console__signal" aria-hidden="true"></i><div><small>TERMINAL DO SERPENTÁRIO</small><b>COBRAS // CONVERSA INTERNA</b></div></div><div class="faction-chat-console__connection"><b>CANAL LOCAL</b><span>RECORTES PROGRAMADOS</span></div></header>
+            <ol class="faction-chat-feed" data-faction-feed aria-label="Conversa roteirizada das Cobras" aria-live="polite" aria-relevant="additions text"></ol>
+            <footer class="faction-live-channel__footer"><span>DIÁLOGO PREPARADO // SEM ENVIO DE VISITANTES</span><span data-faction-status aria-live="polite" aria-atomic="true">AGUARDANDO LEITURA DO CANAL</span></footer>
+          </div>
+        </div>
+      </section>
     </main>
     <footer><a href="index.html#faccoes">← MAPA DAS FACÇÕES</a><strong>COBRAS // F-02</strong><a href="faccao-hellsings-presente.html">HELLSINGS // F-01 →</a></footer>
     <script src="era-extincao-presente/faccao-cobras.js"></script>
+    <script src="js/malha-faccoes.js?v=1" defer></script>
+    <script src="js/ai-dialogue.js?v=1" defer></script>
   </body>
 </html>

@@ -13,7 +13,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="era-extincao-presente/faccao-hellsings.css" />
-    <link rel="stylesheet" href="era-extincao-presente/malha-hellsings.css?v=1" />
+  <link rel="stylesheet" href="era-extincao-presente/malha-hellsings.css?v=4" />
+  <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
   </head>
   <body>
     <div class="faction-noise" aria-hidden="true"></div>
@@ -45,7 +46,7 @@
           <div class="hero-status">
             <b>STATUS // ATIVA</b><b>BASE // CLASSIFICADA</b><b>COMANDO // JACK CONNOR</b>
           </div>
-          <a class="malha-hero-link" href="#malha-hellsings"><span>ACESSAR A MALHA H</span><b aria-hidden="true">↘</b></a>
+          <a class="malha-hero-link" href="#malha-hellsings"><span>ACESSAR ASSEMBLE HELLSINGS</span><b aria-hidden="true">↘</b></a>
         </div>
         <small>QUANDO O SISTEMA NÃO PODE AGIR, NÓS ENTRAMOS.</small>
       </header>
@@ -196,12 +197,12 @@
         <div class="malha-shell">
           <header class="malha-heading">
             <div>
-              <p class="eyebrow">REDE INTERNA // CANAL H-01</p>
-              <h2 id="malha-title">Malha<br /><em>Hellsings.</em></h2>
+              <p class="eyebrow">ASSEMBLE HELLSINGS // CANAL H-01</p>
+              <h2 id="malha-title">Assemble<br /><em>Hellsings.</em></h2>
             </div>
             <p>
               Antes de uma ordem virar movimento, antes de uma rota virar caminho — alguém sempre
-              escreve primeiro. Recortes preservados da equipe que continua em operação.
+              escreve primeiro. Conversas preservadas da equipe que continua em operação.
             </p>
           </header>
 
@@ -209,24 +210,24 @@
             <header class="malha-console__topbar">
               <div class="malha-console__identity">
                 <span class="malha-signal" aria-hidden="true"></span>
-                <div><small>TERMINAL DO BUNKER // ACESSO INTERNO</small><b>MALHA H</b></div>
+                <div><small>TERMINAL DO BUNKER // ACESSO INTERNO</small><b>ASSEMBLE H</b></div>
               </div>
               <div class="malha-console__connection"><b>SINAL ESTÁVEL</b><span>CRIPTOGRAFIA LOCAL // H-01</span></div>
             </header>
 
             <div class="malha-console__body">
-              <div class="malha-tabs" role="tablist" aria-label="Canais da Malha Hellsings">
+              <div class="malha-tabs" role="tablist" aria-label="Canais do Assemble Hellsings">
                 <button id="malha-tab-rota" class="malha-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="malha-panel-rota" tabindex="0" data-malha-tab="rota">
-                  <span class="malha-tab__index">01</span><span class="malha-tab__label"><b>ROTA SEM NOME</b><small>CANAL DE OPERAÇÕES</small></span><span class="malha-tab__count">04</span>
+                  <span class="malha-tab__index">01</span><span class="malha-tab__label"><b>ROTA SEM NOME</b><small>CANAL DE OPERAÇÕES</small></span><span class="malha-tab__count" data-malha-count="rota">04</span>
                 </button>
                 <button id="malha-tab-bunker" class="malha-tab" type="button" role="tab" aria-selected="false" aria-controls="malha-panel-bunker" tabindex="-1" data-malha-tab="bunker">
-                  <span class="malha-tab__index">02</span><span class="malha-tab__label"><b>ENTRE OS SEUS</b><small>CANAL DO BUNKER</small></span><span class="malha-tab__count">05</span>
+                  <span class="malha-tab__index">02</span><span class="malha-tab__label"><b>ENTRE OS SEUS</b><small>CANAL DO BUNKER</small></span><span class="malha-tab__count" data-malha-count="bunker">05</span>
                 </button>
               </div>
 
               <div class="malha-panels">
                 <section id="malha-panel-rota" class="malha-panel" role="tabpanel" aria-labelledby="malha-tab-rota" tabindex="0" data-malha-panel="rota">
-                  <header class="malha-panel__heading"><div><span>LINHA DE OPERAÇÃO // RECORTE 01</span><b>Rota sem nome</b></div><small>04 REGISTROS // TURNO DA MANHÃ</small></header>
+                  <header class="malha-panel__heading"><div><span>LINHA DE OPERAÇÃO // RECORTE 01</span><b>Rota sem nome</b></div><small><span data-malha-total="rota">04</span> REGISTROS // TURNO DA MANHÃ</small></header>
                   <ol class="malha-feed" aria-label="Conversa sobre o sinal de Braddock">
                     <li class="malha-message">
                       <img src="img-hellsing/naomi-presente.png" alt="" aria-hidden="true" />
@@ -248,7 +249,7 @@
                 </section>
 
                 <section id="malha-panel-bunker" class="malha-panel" role="tabpanel" aria-labelledby="malha-tab-bunker" tabindex="0" data-malha-panel="bunker" hidden>
-                  <header class="malha-panel__heading"><div><span>LINHA DE CONVÍVIO // RECORTE 02</span><b>Entre os seus</b></div><small>05 REGISTROS // FIM DE TURNO</small></header>
+                  <header class="malha-panel__heading"><div><span>LINHA DE CONVÍVIO // RECORTE 02</span><b>Entre os seus</b></div><small><span data-malha-total="bunker">05</span> REGISTROS // FIM DE TURNO</small></header>
                   <ol class="malha-feed" aria-label="Conversa cotidiana no bunker">
                     <li class="malha-message">
                       <img src="img-presente/personagens/alice-presente1.png" alt="" aria-hidden="true" />
@@ -274,9 +275,11 @@
                 </section>
               </div>
             </div>
-            <footer class="malha-console__footer"><span>RECORTES NARRATIVOS // PRESENTE DOS HELLSINGS</span><span>CANAL H-01 // <b>FREQUÊNCIA ABERTA</b></span></footer>
+            <footer class="malha-console__footer"><span>ROTEIRO // MENSAGENS PROGRAMADAS</span><span>CANAL H-01 // <b data-malha-status aria-live="polite" aria-atomic="true">AGUARDANDO SINAL</b></span></footer>
           </div>
           <p class="malha-note">Os registros acompanham a cronologia atual da facção. Brian e John permanecem nos arquivos do memorial.</p>
+          <a class="malha-social-link" href="posts-hellsings.html"><span>ASSEMBLE // POSTS</span><b>Ver as publicações dos Hellsings</b><i aria-hidden="true">→</i></a>
+          <a class="malha-social-link" href="membros-hellsings.html"><span>ARQUIVO // MEMBROS</span><b>Conhecer as pessoas ligadas aos Hellsings</b><i aria-hidden="true">→</i></a>
         </div>
       </section>
 
@@ -458,6 +461,7 @@
       ><a href="hellsing.html">ARQUIVO ANTES DO DIA D →</a>
     </footer>
     <script src="era-extincao-presente/faccao-hellsings.js"></script>
-    <script src="js/malha-hellsings.js?v=1" defer></script>
+    <script src="js/malha-hellsings.js?v=3" defer></script>
+    <script src="js/ai-dialogue.js?v=1" defer></script>
   </body>
 </html>
