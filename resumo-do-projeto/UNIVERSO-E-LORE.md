@@ -6,7 +6,7 @@
 - Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
 - Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
 - Jack e Alice têm cinco filhos, nesta ordem: Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
-- Alucard é casado com **Sophie Romanoff**. Sua história pessoal e sua função ainda estão em desenvolvimento.
+- Alucard Myers Connor e sua esposa **Sophie Romanoff** têm 37 anos no presente. Sophie é russa, passou boa parte da vida na Rússia e se mudou para o Canadá antes do Dia D. Estudava para ser fisioterapeuta quando conheceu Alucard durante as férias prolongadas dos Connors no Canadá; o Dia D interrompeu sua formação. As cenas do encontro, os detalhes cotidianos da relação e a atuação de reabilitação no presente são expansões narrativas escritas para o dossiê e ainda podem ser ajustadas pelo autor.
 - Diana Myers Connor tornou-se especialista em combate e no uso de diferentes tipos de armas no presente devastado.
 - Mary Myers Connor aprendeu medicina com Alice; combate, armas de fogo e disciplina com Jack; rastreamento, leitura de mapas e estratégia com Jack e Mark. Atua como socorrista tática e rastreadora de campo.
 - Sally Ward nunca conheceu os pais biológicos e foi criada por uma família adotiva problemática, pela qual ainda assim preservou gratidão. Sonhava em ser policial. Nicolai encontrou sua própria coragem quando a salvou de uma horda.

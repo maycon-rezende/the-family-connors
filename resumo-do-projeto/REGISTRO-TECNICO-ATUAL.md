@@ -430,7 +430,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - A galeria individual reúne três retratos diferentes: `nathalia.png`, `nathália.png` e `nthalia.png`. As imagens conjuntas com Alucard continuam no arquivo de casais.
 - `alucard-presente.html` não apresenta mais a esposa nem a foto individual relacionada. `casais-presente.html` mantém os registros do casal com o nome atualizado.
 - `membros-hellsings.html` inclui Sophie na quarta posição e, após a entrada de Leona, reúne cinco perfis individuais.
-- A história pessoal e a função de Sophie permanecem em aberto.
+- O dossiê agora registra que Sophie tem 37 anos, é russa, viveu parte importante da vida na Rússia, mudou-se para o Canadá e estudava fisioterapia quando conheceu Alucard durante as férias prolongadas dos Connors. O Dia D interrompeu sua formação. A proposta de atuação em reabilitação e os detalhes de cena seguem editáveis pelo autor.
 
 ### Leona — perfil e arquivo visual — 2 de novembro de 2026
 

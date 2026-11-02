@@ -68,6 +68,12 @@ Alice tem hoje 54 anos. Médica antes do Dia D, tornou-se responsável pela saú
 
 Se Jack mantém o comboio em movimento, Alice mantém suas pessoas vivas.
 
+## Sophie Romanoff
+
+Sophie tem 37 anos no presente, a mesma idade de Alucard Myers Connor. Russa, passou boa parte da infância e da juventude na Rússia antes de se mudar para o Canadá. Estudava para ser fisioterapeuta quando conheceu Alucard durante as férias dos Connors; a família prolongou a estadia, e o vínculo dos dois cresceu ao longo desse período. O Dia D interrompeu os estudos de Sophie antes que ela pudesse concluir a formação.
+
+No presente, o conhecimento que guardou dos estudos pode ajudá-la a orientar movimentos seguros, preservar força e equilíbrio e apoiar a recuperação de pessoas feridas. A cena do primeiro encontro, esses detalhes de sua atuação e o conflito entre cuidar e aceitar limites foram desenvolvidos para o dossiê de Sophie e seguem abertos à revisão do autor.
+
 ## Mark Connor e Ariani
 
 Mark tem 50 anos. Serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. Ele conheceu os horrores da guerra e acreditava que já havia visto o pior que a humanidade era capaz de fazer. O Dia D provou que estava enganado.

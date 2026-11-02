@@ -460,7 +460,8 @@
 
 # Atualização de 2 de novembro de 2026 — Sophie Romanoff
 
-- Nathália passou a se chamar **Sophie Romanoff**; o usuário confirmou que ela é esposa de Alucard Myers Connor. A história pessoal e a função dela continuam abertas.
+- Nathália passou a se chamar **Sophie Romanoff**; o usuário confirmou que ela é esposa de Alucard Myers Connor, tem 37 anos e é russa. A biografia agora registra sua vida na Rússia, mudança para o Canadá, estudos de fisioterapia e encontro com Alucard durante as férias prolongadas dos Connors.
+- O dossiê ganhou uma linha do tempo da vida de Sophie até o presente. A cena específica do encontro, o caderno de anatomia, o uso de conhecimentos de reabilitação e o conflito pessoal dela foram escritos como expansões narrativas para revisão.
 - O bloco e a imagem de Sophie foram retirados do dossiê individual de Alucard. O arquivo de casais preserva as imagens dos dois e passou a usar o nome Sophie Romanoff.
 - A pasta de imagens já continha dois retratos individuais adicionais de Sophie. O dossiê agora exibe três retratos distintos, em vez de repetir a mesma foto; as imagens com Alucard permanecem no arquivo de casais.
 - `membros-hellsings.html` agora inclui Sophie como quarto perfil, com link para seu dossiê. O endereço técnico `nathalia-presente.html` foi mantido para não quebrar links existentes.

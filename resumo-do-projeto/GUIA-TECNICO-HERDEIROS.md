@@ -54,7 +54,7 @@ Cada foto utiliza `data-alucard-slide`. O botão `data-alucard-hourglass` avanç
 - `era-extincao-presente/nathalia-presente.css`: capa e arquivo térmico.
 - `era-extincao-presente/nathalia-presente.js`: seleção, transições, cursor e controles.
 
-A galeria usa coordenadas de seleção e mostra uma fotografia por vez. Os registros relacionados ficam em `img-presente/personagens/`. O perfil identifica Sophie como esposa de Alucard; apenas o nome e esse vínculo estão confirmados até agora.
+A galeria usa coordenadas de seleção e mostra uma fotografia por vez. Os registros relacionados ficam em `img-presente/personagens/`. O dossiê registra Sophie aos 37 anos, russa, estudante de fisioterapia que se mudou para o Canadá e conheceu Alucard durante a estadia prolongada dos Connors. A seção de história também apresenta detalhes narrativos criados para revisão: a cena do primeiro encontro, hábitos de estudo, adaptação dos conhecimentos de fisioterapia no presente e seu conflito com os limites do cuidado.
 
 ## 5. Galeria operacional de Diana
 
