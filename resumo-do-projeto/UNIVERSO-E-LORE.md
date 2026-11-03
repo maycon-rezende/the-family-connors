@@ -97,3 +97,9 @@ Os nomes de família e os backgrounds abaixo foram criados para as páginas indi
 - **Chloe Bennett** é casada com **Darius Bennett** e mãe de **Micah Bennett**. Darius é proposto como técnico de redes elétricas e comunicação antes do Dia D, hoje responsável por rádios e relés comunitários. Ele conheceu Chloe durante uma evacuação em que ela conduzia civis e ele manteve o transmissor da equipe funcionando. Micah cresceu entre abrigos; mantém listas de quem partiu e voltou e leva recados civis sem registrar coordenadas sensíveis. Não tem patente ou função militar.
 - **Luke Carver** é casado com **Imani Carver** e pai de **Asha Carver** e **Nyla Carver**. Imani é proposta como educadora que organiza rotinas e atividades nos abrigos. Ela e Luke se aproximaram quando questionou uma rota rápida que não previa pausas seguras para os civis; Luke refez o trajeto. Asha trabalha com recuperação de ferramentas e equipamento, sempre preparando alternativas para quando um plano falhar. Nyla preserva histórias, nomes e memória comunitária em cadernos analógicos sem expor localizações atuais.
 - As páginas marcam essas biografias como propostas. As imagens usadas são recortes de fotos familiares existentes; retratos individuais podem substituí-las quando forem fornecidos.
+
+## Amelia — esposa de John
+
+- Amelia é a esposa de John, conforme indicado pelo autor. As imagens preservadas em que os dois aparecem juntos são anteriores à morte de John.
+- O retrato individual disponível (`img-hellsing/amelia-presente.png`) não tem data identificada; ele não deve ser usado para afirmar uma fase específica da vida dela.
+- Sobrenome, idade, origem, ocupação e background de Amelia permanecem em aberto. A página `amelia-arquivo.html` registra apenas o vínculo e a procedência conhecida das imagens.

@@ -46,6 +46,24 @@ a { color: inherit; }
 .member-card--sophie h3 em { color: #d6a267; }
 .member-card--leona { --member-accent: #e6c94e; border-color: rgba(230, 201, 78, .32); }
 .member-card--leona h3 em { color: #87945c; }
+.member-card--darius { --member-accent: #d56a4f; border-color: rgba(213, 106, 79, .32); }
+.member-card--darius h3 em { color: #9cbbb2; }
+.member-card--darius figure img { object-position: 19% 20%; }
+.member-card--micah { --member-accent: #5d89ff; border-color: rgba(93, 137, 255, .32); }
+.member-card--micah h3 em { color: #d2e66c; }
+.member-card--micah figure img { object-position: 84% 20%; }
+.member-card--imani { --member-accent: #65c2b2; border-color: rgba(101, 194, 178, .32); }
+.member-card--imani h3 em { color: #efa17f; }
+.member-card--imani figure img { object-position: 22% 20%; }
+.member-card--asha { --member-accent: #c5dc58; border-color: rgba(197, 220, 88, .32); }
+.member-card--asha h3 em { color: #83a5bc; }
+.member-card--asha figure img { object-position: 13% 20%; }
+.member-card--nyla { --member-accent: #e5b94f; border-color: rgba(229, 185, 79, .32); }
+.member-card--nyla h3 em { color: #a3c8d4; }
+.member-card--nyla figure img { object-position: 91% 20%; }
+.member-card--amelia { --member-accent: #a9b5e8; border-color: rgba(169, 181, 232, .32); }
+.member-card--amelia h3 em { color: #d9dff5; }
+.member-card--amelia figure img { object-position: center 28%; }
 .member-card__body > p { margin: 0; color: #b9b0a2; font-size: .9rem; line-height: 1.7; }
 .member-card__eras { display: grid; width: 100%; gap: .65rem; margin: 1.4rem 0; padding: .8rem 0; border-block: 1px solid rgba(206,151,94,.18); color: #8e877b; font-size: .48rem; }
 .member-card__eras span { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .45rem; }

@@ -473,3 +473,10 @@
 - A pasta `img-leona-presente/` já tinha dez imagens atuais. A capa e os nove registros foram ligados ao perfil e à galeria de Leona; os arquivos mostram a personagem adulta, explorando e com a família.
 - O período **Antes do Dia D** permanece em aberto porque não há fotos da infância ou do treinamento nessa pasta. O cartão de Leona em `membros-hellsings.html` agora usa seu retrato atual.
 - `membros-hellsings.html` passou a incluir Leona como quinto perfil, com uma paleta oliva/amarelo e acentos próprios.
+
+# Atualização de 2 de novembro de 2026 — índice ampliado de membros
+
+- `membros-hellsings.html` passou a listar Darius e Micah Bennett, Imani, Asha e Nyla Carver e Amelia, esposa de John. O contador foi atualizado de cinco para onze perfis.
+- Cada familiar de Chloe e Luke abre seu dossiê existente. Os cartões usam fotos familiares e recortes posicionados para identificar a pessoa retratada; backgrounds criados anteriormente continuam marcados como propostas revisáveis.
+- Foi criado `amelia-arquivo.html`, com visual próprio e links para os registros de John e para o memorial. O retrato individual de Amelia fica sem data atribuída; as imagens dela com John são anteriores à morte dele.
+- Sobrenome, idade, origem e história pessoal de Amelia seguem em aberto, sem acréscimos de lore.

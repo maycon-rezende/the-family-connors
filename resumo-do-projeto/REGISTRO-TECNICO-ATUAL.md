@@ -440,3 +440,10 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - Nenhuma foto infantil ou anterior ao Dia D foi encontrada nessa pasta. A página mantém esse período identificado como arquivo em aberto, sem classificar imagens atuais como passado.
 - `membros-hellsings.html` agora lista Leona como quinto perfil.
 - Joey Muller e Hellen Wren são os pais, conforme a ficha. O background detalhado e o feito de campo são propostas revisáveis; data de nascimento, especialidade dos pais e demais operações não foram definidos.
+
+### Índice ampliado de membros — 2 de novembro de 2026
+
+- `membros-hellsings.html` agora apresenta onze perfis: os cinco já listados, Darius e Micah Bennett, Imani, Asha e Nyla Carver, e Amelia, esposa de John.
+- Os cinco familiares de Chloe e Luke apontam para seus dossiês existentes. Os cartões usam recortes das fotos de família, com foco ajustado ao integrante retratado; as imagens não são apresentadas como retratos individuais.
+- `amelia-arquivo.html` e `era-extincao-presente/amelia-arquivo.css` reúnem o vínculo confirmado entre Amelia e John e seus registros visuais. O retrato solo permanece sem data; as fotos compartilhadas com John são anteriores à morte dele.
+- O arquivo de Amelia não cria sobrenome, idade, origem ou background. Seu perfil aguarda informações do autor.

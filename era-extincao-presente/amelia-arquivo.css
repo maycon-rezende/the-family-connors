@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Cinzel:wght@500;700&family=DM+Mono:wght@400;500&display=swap');
+
+:root { color-scheme: dark; --amelia-bg: #0b0d15; --amelia-ink: #e8e9ef; --amelia-dim: #a3a7b7; --amelia-line: rgba(169,181,232,.28); --amelia-accent: #a9b5e8; --amelia-copper: #c47b58; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--amelia-bg); }
+body { min-width: 320px; margin: 0; overflow-x: hidden; color: var(--amelia-ink); background: radial-gradient(ellipse at 78% 13%, rgba(81,92,142,.19), transparent 36%), repeating-linear-gradient(0deg, rgba(255,255,255,.024) 0 1px, transparent 1px 5px), var(--amelia-bg); font-family: Georgia, 'Times New Roman', serif; }
+.amelia-grain { position: fixed; z-index: 0; inset: 0; pointer-events: none; opacity: .38; background: repeating-linear-gradient(90deg, transparent 0 4rem, rgba(169,181,232,.025) 4rem 4.06rem); }
+.amelia-nav, .amelia-nav a, .amelia-nav span, .amelia-kicker, .amelia-facts, .amelia-portrait figcaption, .amelia-links span, .amelia-links small, .amelia-footer { font-family: 'DM Mono', Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.amelia-nav { position: relative; z-index: 1; display: flex; min-height: 4.5rem; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem clamp(1rem, 5vw, 4.5rem); border-bottom: 1px solid var(--amelia-line); background: rgba(8,9,14,.92); }
+.amelia-nav a { color: var(--amelia-ink); font-size: .58rem; text-decoration: none; transition: color .2s ease; }
+.amelia-nav a:hover, .amelia-footer a:hover { color: var(--amelia-accent); }
+.amelia-nav span { color: var(--amelia-dim); font-size: .54rem; text-align: center; }
+.amelia-archive a:focus-visible { outline: 2px solid var(--amelia-accent); outline-offset: 4px; }
+.amelia-archive main { position: relative; z-index: 1; width: min(100% - 2rem, 1240px); margin-inline: auto; }
+.amelia-hero { display: grid; min-height: min(52rem, calc(100svh - 4.5rem)); grid-template-columns: 1.05fr .75fr; align-items: center; gap: clamp(2rem, 7vw, 7rem); padding: clamp(4rem, 9vw, 8rem) 0; border-bottom: 1px solid var(--amelia-line); }
+.amelia-kicker { display: inline-flex; align-items: center; gap: .65rem; margin: 0 0 1.3rem; color: var(--amelia-accent); font-size: .59rem; line-height: 1.6; }
+.amelia-kicker i { width: .45rem; height: .45rem; border-radius: 50%; background: var(--amelia-copper); box-shadow: 0 0 1rem var(--amelia-copper); }
+.amelia-hero h1 { margin: 0; font: 900 clamp(4.4rem, 10vw, 9.3rem)/.78 'Barlow Condensed', Impact, sans-serif; letter-spacing: .015em; }
+.amelia-hero h1 em { color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--amelia-accent); }
+.amelia-hero__copy > p { max-width: 43rem; margin: 1.8rem 0 0; color: var(--amelia-dim); font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.75; }
+.amelia-facts { display: grid; max-width: 33rem; gap: .7rem; margin-top: 2rem; padding: 1rem 0; border-block: 1px solid var(--amelia-line); color: var(--amelia-dim); font-size: .52rem; }
+.amelia-facts span { display: flex; justify-content: space-between; gap: 1rem; }
+.amelia-facts b { color: var(--amelia-ink); font-weight: 500; text-align: right; }
+.amelia-portrait { position: relative; width: min(100%, 29rem); justify-self: end; margin: 0; padding: .6rem; border: 1px solid var(--amelia-line); background: rgba(18,21,32,.78); }
+.amelia-portrait::before { position: absolute; z-index: 1; top: -.6rem; right: -.6rem; width: 4rem; height: 4rem; border-top: 1px solid var(--amelia-copper); border-right: 1px solid var(--amelia-copper); content: ''; }
+.amelia-portrait img { display: block; width: 100%; max-height: 38rem; aspect-ratio: 4/5; object-fit: cover; object-position: center 28%; filter: saturate(.72) contrast(1.06); }
+.amelia-portrait figcaption { padding: .8rem .5rem .35rem; color: var(--amelia-accent); font-size: .5rem; }
+.amelia-record { display: grid; grid-template-columns: .8fr 1fr; gap: clamp(2rem, 8vw, 8rem); padding: clamp(4rem, 9vw, 8rem) 0; border-bottom: 1px solid var(--amelia-line); }
+.amelia-record h2 { margin: 0; font: 800 clamp(3.3rem, 6vw, 6.5rem)/.83 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.amelia-record h2 em { color: var(--amelia-accent); font-style: normal; }
+.amelia-record__copy p { margin: 0 0 1.2rem; color: #c6c8d2; font-size: 1.03rem; line-height: 1.85; }
+.amelia-record__copy blockquote { margin: 2rem 0 0; padding: 1rem 0 0 1.2rem; border-top: 1px solid var(--amelia-line); border-left: 2px solid var(--amelia-copper); color: var(--amelia-accent); font-size: 1.1rem; font-style: italic; line-height: 1.7; }
+.amelia-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: clamp(3rem, 7vw, 6rem) 0; }
+.amelia-links a { position: relative; display: flex; min-height: 12rem; flex-direction: column; align-items: start; padding: 1.5rem; border: 1px solid var(--amelia-line); background: linear-gradient(145deg, rgba(25,28,41,.88), rgba(11,13,21,.94)); text-decoration: none; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+.amelia-links a:hover { transform: translateY(-3px); border-color: var(--amelia-accent); background: rgba(29,32,46,.95); }
+.amelia-links span { color: var(--amelia-copper); font-size: .52rem; }
+.amelia-links b { margin: 1.8rem 2rem 1rem 0; font: 700 clamp(1.5rem, 3vw, 2.3rem) 'Cinzel', Georgia, serif; }
+.amelia-links i { position: absolute; top: 1.3rem; right: 1.3rem; color: var(--amelia-accent); font-size: 1.2rem; font-style: normal; }
+.amelia-links small { margin-top: auto; color: var(--amelia-dim); font-size: .48rem; line-height: 1.6; }
+.amelia-footer { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 1rem; padding: 1.4rem clamp(1rem, 5vw, 4.5rem); border-top: 1px solid var(--amelia-line); color: var(--amelia-dim); font-size: .54rem; }
+.amelia-footer a { color: var(--amelia-ink); text-decoration: none; transition: color .2s ease; }
+@media (max-width: 800px) { .amelia-hero { min-height: 0; grid-template-columns: 1fr; gap: 2.5rem; padding-block: 4.5rem; } .amelia-portrait { width: min(100%, 34rem); justify-self: start; } .amelia-record { grid-template-columns: 1fr; gap: 1.7rem; } }
+@media (max-width: 560px) { .amelia-nav { flex-wrap: wrap; min-height: 0; } .amelia-nav span { display: none; } .amelia-archive main { width: min(100% - 1.4rem, 1240px); } .amelia-hero h1 { font-size: clamp(3.9rem, 19vw, 6rem); } .amelia-facts span { flex-direction: column; gap: .25rem; } .amelia-facts b { text-align: left; } .amelia-links { grid-template-columns: 1fr; } .amelia-footer { flex-direction: column; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .amelia-nav a, .amelia-links a, .amelia-footer a { transition: none; } }
