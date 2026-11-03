@@ -446,6 +446,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `membros-hellsings.html` agora apresenta onze perfis: os cinco já listados, Darius e Micah Bennett, Imani, Asha e Nyla Carver, e Amelia, esposa de John.
 - Os familiares de Chloe e Luke apontam para seus dossiês existentes. Os cartões de Darius e Micah ainda usam recortes identificados; Imani, Asha e Nyla agora usam retratos individuais do presente.
 - A página `membros-hellsings.html` tem uma camada de tempestade de areia ao abrir e grãos leves caindo continuamente. O efeito não bloqueia interações e respeita `prefers-reduced-motion`.
+- A mesma página carrega o cursor compartilhado do site, com núcleo, anel e rastro de poeira em tons de areia, além de ondas discretas ao clicar.
 - `amelia-arquivo.html` e `era-extincao-presente/amelia-arquivo.css` reúnem o vínculo confirmado entre Amelia e John e seus registros visuais. O retrato solo permanece sem data; as fotos compartilhadas com John são anteriores à morte dele.
 - O arquivo de Amelia não cria sobrenome, idade, origem ou background. Seu perfil aguarda informações do autor.
 

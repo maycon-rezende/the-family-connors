@@ -479,6 +479,7 @@
 - `membros-hellsings.html` passou a listar Darius e Micah Bennett, Imani, Asha e Nyla Carver e Amelia, esposa de John. O contador foi atualizado de cinco para onze perfis.
 - Cada familiar de Chloe e Luke abre seu dossiê existente. Imani, Asha e Nyla receberam retratos individuais do presente integrados aos dossiês, à página da família e ao índice; seus backgrounds continuam marcados como propostas revisáveis.
 - A página dos membros recebeu uma tempestade de areia breve na entrada e partículas sutis caindo enquanto o índice fica aberto. O efeito respeita `prefers-reduced-motion`.
+- O cursor da página agora usa o sistema compartilhado de núcleo, anel, poeira e impacto no clique, com a paleta ajustada para areia dourada.
 - Foi criado `amelia-arquivo.html`, com visual próprio e links para os registros de John e para o memorial. O retrato individual de Amelia fica sem data atribuída; as imagens dela com John são anteriores à morte dele.
 - Sobrenome, idade, origem e história pessoal de Amelia seguem em aberto, sem acréscimos de lore.
 
