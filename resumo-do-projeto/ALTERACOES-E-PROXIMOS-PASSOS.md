@@ -510,3 +510,9 @@
 - `luke-familia.html` ganhou o arquivo **A casa ainda era casa**, com três cenas individuais do cotidiano dos Carver antes do Dia D. As imagens são reconstruções individuais; não são apresentadas como uma nova foto dos quatro juntos.
 - `micah-bennett.html` agora separa uma lembrança visual da infância, antes do Dia D, de seus registros atuais. A imagem o mostra em casa com Chloe e Darius ao fundo.
 - `era-extincao-presente/family-profile.css` estiliza os arquivos em tamanhos médios, com colunas responsivas, legendas e imagens inteiras; os links CSS das páginas afetadas receberam nova versão de cache.
+
+# Atualização de 3 de novembro de 2026 — Naomi Yagami
+
+- O sobrenome **Yagami** já constava nas páginas e registros; foi mantido como grafia oficial.
+- `naomi-presente.html` e `naomi-registros.html` agora usam uma paleta de roxo escuro e roxo claro, inspirada nas cores de Iori Yagami. Fundos, sinais, detalhes de interface e cursor acompanham a nova paleta.
+- Os dois estilos receberam versões de cache atualizadas; o registro técnico lista a paleta exclusiva da Naomi.
