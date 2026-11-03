@@ -30,6 +30,17 @@ body { min-width: 320px; margin: 0; overflow-x: hidden; color: var(--amelia-ink)
 .amelia-record h2 em { color: var(--amelia-accent); font-style: normal; }
 .amelia-record__copy p { margin: 0 0 1.2rem; color: #c6c8d2; font-size: 1.03rem; line-height: 1.85; }
 .amelia-record__copy blockquote { margin: 2rem 0 0; padding: 1rem 0 0 1.2rem; border-top: 1px solid var(--amelia-line); border-left: 2px solid var(--amelia-copper); color: var(--amelia-accent); font-size: 1.1rem; font-style: italic; line-height: 1.7; }
+.amelia-gallery { padding: clamp(4rem, 8vw, 7rem) 0; border-bottom: 1px solid var(--amelia-line); }
+.amelia-gallery__head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.amelia-gallery__head h2 { margin: .8rem 0 0; font: 800 clamp(3.3rem, 6vw, 6.5rem)/.83 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.amelia-gallery__head h2 em { color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--amelia-accent); }
+.amelia-gallery__head > p { max-width: 410px; margin: 0 0 .3rem; color: var(--amelia-dim); font-size: .94rem; line-height: 1.8; }
+.amelia-gallery__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.amelia-gallery figure { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--amelia-line); background: linear-gradient(145deg, rgba(25,28,41,.88), rgba(11,13,21,.94)); }
+.amelia-gallery figure img { display: block; width: 100%; height: clamp(280px, 34vw, 450px); object-fit: contain; background: radial-gradient(ellipse, rgba(169,181,232,.1), transparent 75%); }
+.amelia-gallery figcaption { display: grid; gap: .5rem; padding: 1rem 1.15rem 1.2rem; border-top: 1px solid var(--amelia-line); }
+.amelia-gallery figcaption span { color: var(--amelia-accent); font: 500 .5rem/1.5 'DM Mono', Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.amelia-gallery figcaption b { color: var(--amelia-ink); font: 700 1rem/1.4 Georgia, 'Times New Roman', serif; }
 .amelia-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: clamp(3rem, 7vw, 6rem) 0; }
 .amelia-links a { position: relative; display: flex; min-height: 12rem; flex-direction: column; align-items: start; padding: 1.5rem; border: 1px solid var(--amelia-line); background: linear-gradient(145deg, rgba(25,28,41,.88), rgba(11,13,21,.94)); text-decoration: none; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
 .amelia-links a:hover { transform: translateY(-3px); border-color: var(--amelia-accent); background: rgba(29,32,46,.95); }
@@ -39,6 +50,6 @@ body { min-width: 320px; margin: 0; overflow-x: hidden; color: var(--amelia-ink)
 .amelia-links small { margin-top: auto; color: var(--amelia-dim); font-size: .48rem; line-height: 1.6; }
 .amelia-footer { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 1rem; padding: 1.4rem clamp(1rem, 5vw, 4.5rem); border-top: 1px solid var(--amelia-line); color: var(--amelia-dim); font-size: .54rem; }
 .amelia-footer a { color: var(--amelia-ink); text-decoration: none; transition: color .2s ease; }
-@media (max-width: 800px) { .amelia-hero { min-height: 0; grid-template-columns: 1fr; gap: 2.5rem; padding-block: 4.5rem; } .amelia-portrait { width: min(100%, 34rem); justify-self: start; } .amelia-record { grid-template-columns: 1fr; gap: 1.7rem; } }
+@media (max-width: 800px) { .amelia-hero { min-height: 0; grid-template-columns: 1fr; gap: 2.5rem; padding-block: 4.5rem; } .amelia-portrait { width: min(100%, 34rem); justify-self: start; } .amelia-record { grid-template-columns: 1fr; gap: 1.7rem; } .amelia-gallery__head { display: block; } .amelia-gallery__head > p { margin-top: 1rem; } .amelia-gallery__grid { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .amelia-nav { flex-wrap: wrap; min-height: 0; } .amelia-nav span { display: none; } .amelia-archive main { width: min(100% - 1.4rem, 1240px); } .amelia-hero h1 { font-size: clamp(3.9rem, 19vw, 6rem); } .amelia-facts span { flex-direction: column; gap: .25rem; } .amelia-facts b { text-align: left; } .amelia-links { grid-template-columns: 1fr; } .amelia-footer { flex-direction: column; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .amelia-nav a, .amelia-links a, .amelia-footer a { transition: none; } }

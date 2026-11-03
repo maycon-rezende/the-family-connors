@@ -422,7 +422,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `clhoe-familia.html` identifica Darius e Micah Bennett e liga aos dossiês `darius-bennett.html` e `micah-bennett.html`.
 - `luke-familia.html` reúne Imani, Asha e Nyla Carver e liga a `imani-carver.html`, `asha-carver.html` e `nyla-carver.html`.
 - `era-extincao-presente/family-profile.css` contém o layout responsivo comum. Cada perfil tem acentos próprios: Darius (ferrugem/sálvia), Micah (azul/cidreira), Imani (verde-mar/coral), Asha (lima/ardósia) e Nyla (ouro/azul-glacial). Chloe mantém violeta/rosa; Luke, musgo/âmbar.
-- Os nomes e backgrounds foram criados como propostas revisáveis. As páginas identificam os recortes de fotos familiares usados enquanto não houver retratos individuais.
+- Os nomes e backgrounds foram criados como propostas revisáveis. Em 3 de novembro, Imani, Asha e Nyla receberam retratos individuais do presente, criados com base nas fotos familiares de referência. A foto dos quatro juntos continua no cabeçalho de `luke-familia.html`.
 
 ### Sophie Romanoff — membro da família Connor — 2 de novembro de 2026
 
@@ -444,6 +444,27 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 ### Índice ampliado de membros — 2 de novembro de 2026
 
 - `membros-hellsings.html` agora apresenta onze perfis: os cinco já listados, Darius e Micah Bennett, Imani, Asha e Nyla Carver, e Amelia, esposa de John.
-- Os cinco familiares de Chloe e Luke apontam para seus dossiês existentes. Os cartões usam recortes das fotos de família, com foco ajustado ao integrante retratado; as imagens não são apresentadas como retratos individuais.
+- Os familiares de Chloe e Luke apontam para seus dossiês existentes. Os cartões de Darius e Micah ainda usam recortes identificados; Imani, Asha e Nyla agora usam retratos individuais do presente.
+- A página `membros-hellsings.html` tem uma camada de tempestade de areia ao abrir e grãos leves caindo continuamente. O efeito não bloqueia interações e respeita `prefers-reduced-motion`.
 - `amelia-arquivo.html` e `era-extincao-presente/amelia-arquivo.css` reúnem o vínculo confirmado entre Amelia e John e seus registros visuais. O retrato solo permanece sem data; as fotos compartilhadas com John são anteriores à morte dele.
 - O arquivo de Amelia não cria sobrenome, idade, origem ou background. Seu perfil aguarda informações do autor.
+
+### Darius Bennett — arquivo visual e vida antes do Dia D — 2 de novembro de 2026
+
+- `darius-bennett.html` agora apresenta uma proposta biográfica mais completa e uma seção visual para o período anterior ao Dia D. Antes do colapso, Darius trabalhava como técnico de manutenção para uma empresa local de telefone e internet, atendendo chamados cotidianos em casas e pequenos comércios.
+- A narrativa acompanha uma rotina civil, o uso das habilidades de telecomunicações no começo do colapso e o encontro já estabelecido com Chloe durante uma retirada de civis. No presente, ele mantém rádios e relés comunitários.
+- `img-darius/` guarda três imagens individuais geradas com a foto familiar como referência visual: duas reconstruções do trabalho cotidiano antes do Dia D e um retrato de Darius reparando rádio no presente. O retrato atual também substituiu o recorte familiar no cartão de Darius em `membros-hellsings.html`.
+- Os detalhes biográficos novos permanecem identificados como proposta revisável, e as duas cenas anteriores ao Dia D recebem a legenda **RECONSTRUÇÃO VISUAL**.
+
+### Micah Bennett — perfil aos 20 anos — 3 de novembro de 2026
+
+- `micah-bennett.html` informa a idade atual confirmada de 20 anos e apresenta uma trajetória no mundo pós-Dia D. A lore o propõe como mensageiro civil e responsável pelos registros de retorno dos abrigos.
+- A proposta inclui sua infância em abrigos móveis, uma divergência de listas que o levou a registrar pessoas como “em trânsito” até a confirmação, e sua prática atual de duplicar cadernos e usar rotas confirmadas. Não fixa datas ou lugares.
+- `img-micah/` contém três retratos presentes gerados a partir da foto familiar como referência: Micah como mensageiro, atualizando registros e atravessando uma rota entre abrigos.
+- O retrato individual substituiu o recorte familiar na capa de `micah-bennett.html` e no cartão dele em `membros-hellsings.html`. A galeria usa a paleta azul/cidreira própria do perfil e não cria um período anterior ao nascimento dele.
+
+### Amelia — arquivo visual — 3 de novembro de 2026
+
+- O autor enviou uma referência visual para Amelia. Foram geradas três reconstruções individuais, preservando seus traços visuais reconhecíveis; os arquivos ficam em `img-amelia/`.
+- `amelia-arquivo.html` usa a primeira imagem como retrato de abertura e as outras duas em uma galeria própria. O cartão dela em `membros-hellsings.html` agora usa o mesmo retrato individual.
+- Todas as novas imagens são identificadas como reconstruções sem data. Não atribuem época, idade, sobrenome ou acontecimentos à personagem. Os registros compartilhados com John continuam identificados como anteriores à morte dele.

@@ -456,7 +456,7 @@
 - O núcleo de Chloe ganhou Darius, marido e técnico de rádio/comunicações, e Micah, filho que mantém os registros de retorno e leva mensagens entre abrigos.
 - Luke passou a aparecer como **Luke Carver**. O novo arquivo familiar apresenta Imani, educadora e esposa de Luke, e as filhas Asha, voltada à recuperação de equipamentos, e Nyla, guardiã da memória comunitária.
 - Foram criadas páginas individuais para Darius, Micah, Imani, Asha e Nyla, com histórias e paletas próprias. Os backgrounds e sobrenomes são propostas autorais para revisão, não lore confirmada.
-- Até haver retratos individuais, as páginas usam recortes identificados de imagens familiares já existentes.
+- As páginas de Imani, Asha e Nyla agora usam retratos individuais do presente, gerados com as fotos familiares como referência. O cabeçalho da família mantém a foto conjunta de Luke, Imani e as filhas. As paletas exclusivas das três foram preservadas.
 
 # Atualização de 2 de novembro de 2026 — Sophie Romanoff
 
@@ -477,6 +477,27 @@
 # Atualização de 2 de novembro de 2026 — índice ampliado de membros
 
 - `membros-hellsings.html` passou a listar Darius e Micah Bennett, Imani, Asha e Nyla Carver e Amelia, esposa de John. O contador foi atualizado de cinco para onze perfis.
-- Cada familiar de Chloe e Luke abre seu dossiê existente. Os cartões usam fotos familiares e recortes posicionados para identificar a pessoa retratada; backgrounds criados anteriormente continuam marcados como propostas revisáveis.
+- Cada familiar de Chloe e Luke abre seu dossiê existente. Imani, Asha e Nyla receberam retratos individuais do presente integrados aos dossiês, à página da família e ao índice; seus backgrounds continuam marcados como propostas revisáveis.
+- A página dos membros recebeu uma tempestade de areia breve na entrada e partículas sutis caindo enquanto o índice fica aberto. O efeito respeita `prefers-reduced-motion`.
 - Foi criado `amelia-arquivo.html`, com visual próprio e links para os registros de John e para o memorial. O retrato individual de Amelia fica sem data atribuída; as imagens dela com John são anteriores à morte dele.
 - Sobrenome, idade, origem e história pessoal de Amelia seguem em aberto, sem acréscimos de lore.
+
+# Atualização de 2 de novembro de 2026 — Darius Bennett
+
+- A página de Darius foi ampliada com uma vida civil antes do Dia D: ele trabalhava na manutenção de linhas telefônicas e de internet, atendendo casas e pequenos comércios.
+- A história mantém o encontro com Chloe durante uma retirada de civis e acompanha o reaproveitamento de suas habilidades técnicas no presente. Os detalhes criados seguem como proposta revisável.
+- Foram criadas três imagens individuais com a foto familiar como referência: Darius na oficina, em uma pausa de expediente e reparando um rádio comunitário no presente. A página usa a foto de rádio como capa e as duas cenas pré-Dia D em uma seção própria.
+- A galeria identifica as cenas anteriores como reconstruções visuais; o cartão dele em `membros-hellsings.html` agora usa o retrato solo do presente.
+
+# Atualização de 3 de novembro de 2026 — Micah Bennett
+
+- Micah tem 20 anos no presente, conforme informado pelo autor. A página agora o apresenta como mensageiro civil e responsável pelos registros de retorno dos abrigos, com infância no mundo pós-Dia D.
+- A trajetória criada inclui uma divergência de listas aos 13 anos, resolvida ao manter pessoas como “em trânsito” até a confirmação. O background permanece como proposta revisável; nenhum local ou data exata foi inventado.
+- Foram geradas três imagens presentes de Micah usando a foto familiar como referência visual: levando uma mensagem, atualizando registros e percorrendo uma rota entre abrigos.
+- `micah-bennett.html` usa o novo retrato solo na capa e exibe os outros dois em sua galeria. O cartão de Micah em `membros-hellsings.html` também usa o novo retrato; a página mantém a paleta azul/cidreira do personagem.
+
+# Atualização de 3 de novembro de 2026 — imagens de Amelia
+
+- A imagem enviada pelo autor foi usada como referência para três reconstruções visuais de Amelia, reunidas em `img-amelia/`.
+- `amelia-arquivo.html` agora abre com um retrato solo novo e inclui os outros dois em uma galeria. O cartão de Amelia em `membros-hellsings.html` também recebeu o novo retrato.
+- As imagens ficam sem data ou época atribuída. Sobrenome, idade e história pessoal continuam em aberto; as fotos de Amelia com John permanecem como registros anteriores à morte dele.

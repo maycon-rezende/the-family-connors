@@ -48,19 +48,19 @@ a { color: inherit; }
 .member-card--leona h3 em { color: #87945c; }
 .member-card--darius { --member-accent: #d56a4f; border-color: rgba(213, 106, 79, .32); }
 .member-card--darius h3 em { color: #9cbbb2; }
-.member-card--darius figure img { object-position: 19% 20%; }
+.member-card--darius figure img { object-position: center 24%; }
 .member-card--micah { --member-accent: #5d89ff; border-color: rgba(93, 137, 255, .32); }
 .member-card--micah h3 em { color: #d2e66c; }
-.member-card--micah figure img { object-position: 84% 20%; }
+.member-card--micah figure img { object-position: center 24%; }
 .member-card--imani { --member-accent: #65c2b2; border-color: rgba(101, 194, 178, .32); }
 .member-card--imani h3 em { color: #efa17f; }
-.member-card--imani figure img { object-position: 22% 20%; }
+.member-card--imani figure img { object-position: center 24%; }
 .member-card--asha { --member-accent: #c5dc58; border-color: rgba(197, 220, 88, .32); }
 .member-card--asha h3 em { color: #83a5bc; }
-.member-card--asha figure img { object-position: 13% 20%; }
+.member-card--asha figure img { object-position: center 24%; }
 .member-card--nyla { --member-accent: #e5b94f; border-color: rgba(229, 185, 79, .32); }
 .member-card--nyla h3 em { color: #a3c8d4; }
-.member-card--nyla figure img { object-position: 91% 20%; }
+.member-card--nyla figure img { object-position: center 24%; }
 .member-card--amelia { --member-accent: #a9b5e8; border-color: rgba(169, 181, 232, .32); }
 .member-card--amelia h3 em { color: #d9dff5; }
 .member-card--amelia figure img { object-position: center 28%; }
@@ -90,3 +90,45 @@ a { color: inherit; }
   .members-footer { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .member-card, .member-card img, .member-card__body > strong i { transition: none; } }
+
+/* Rajada de areia ao abrir; grãos sutis continuam caindo depois. */
+.members-sandstorm {
+  position: fixed;
+  z-index: 9;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.members-sandstorm canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.members-sandstorm__gust {
+  position: absolute;
+  top: -18vh;
+  bottom: -18vh;
+  left: 100vw;
+  width: 170vw;
+  opacity: 0;
+  transform: translateX(0);
+  background:
+    repeating-linear-gradient(169deg, transparent 0 17px, rgba(233, 190, 130, .16) 18px, transparent 20px 39px),
+    linear-gradient(105deg, transparent 0 13%, rgba(157, 109, 62, .08) 27%, rgba(226, 174, 108, .22) 45%, rgba(164, 111, 59, .15) 61%, transparent 86%);
+  filter: blur(7px);
+  will-change: transform, opacity;
+  animation: members-sand-gust 6.2s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes members-sand-gust {
+  0% { opacity: 0; transform: translateX(0); }
+  12% { opacity: .78; }
+  42% { opacity: .47; }
+  78% { opacity: .32; }
+  100% { opacity: 0; transform: translateX(-160vw); }
+}
+.members-sandstorm--still .members-sandstorm__gust {
+  animation: none;
+  opacity: .08;
+  transform: none;
+  filter: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .members-sandstorm__gust { animation: none; opacity: .08; transform: none; filter: none; }
+}
