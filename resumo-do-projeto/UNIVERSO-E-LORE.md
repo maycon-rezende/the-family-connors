@@ -29,7 +29,7 @@
 5. **Bobby Lee** — sino-americano, com forte vínculo com suas raízes chinesas; ex-agente da Unidade Jingwei. Entrou nos Hellsings antes do Dia D, após colaborar em Janela de Cinzas, e atua em inteligência de campo e extração de testemunhas.
 6. **Naomi Yagami** — agente japonesa; inteligência e análise como função provisória.
 7. **Chloe** — reconhecimento e vigilância como função provisória; pele em tom marrom; sobrenome Bennett proposto para o núcleo familiar.
-8. **Luke** — mapas, rotas e estratégia; pele em tom marrom; sobrenome Carver proposto para o núcleo familiar.
+8. **Luke Carver** — mapas, rotas e estratégia; pele em tom marrom; o autor passou a usar Carver para seu núcleo familiar, que tem raízes africanas.
 9. **Dimitri** — russo; intervenção e extração como função provisória.
 10. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
 11. **Hellen Wren** — infiltração e disfarce.
@@ -92,13 +92,14 @@ Não transformar possibilidades em fatos antes da conclusão do manuscrito. Elem
 
 ## Proposta revisável — famílias de Chloe Bennett e Luke Carver
 
-Os nomes de família e os backgrounds abaixo foram criados para as páginas individuais a pedido do autor. Permanecem como proposta até ele revisar ou alterar os detalhes.
+Os sobrenomes Bennett e os backgrounds pessoais foram criados para as páginas individuais e permanecem revisáveis. O autor passou a usar Carver para o núcleo de Luke e confirmou suas relações familiares, a cronologia pré-Dia D e raízes africanas; a região ou país de origem não foi especificado.
 
-- **Chloe Bennett** é casada com **Darius Bennett** e mãe de **Micah Bennett**. A proposta de Darius foi ampliada: antes do Dia D, trabalhava como técnico de manutenção para uma empresa local de telefone e internet, atendendo casas e pequenos comércios. Sua rotina incluía chamados, cabos, conectores e modems. No começo do colapso, continuou ajudando pessoas com as ferramentas de trabalho que tinha; meses depois, conheceu Chloe durante uma retirada de civis, quando consertou o transmissor que ligava o abrigo à equipe de busca. Hoje mantém rádios e relés comunitários. Esses detalhes novos são uma proposta revisável e não fixam data ou local exatos.
-- Micah tem **20 anos no presente**, idade confirmada pelo autor. Como Chloe e Darius se conheceram depois do Dia D, a proposta é que Micah tenha nascido e crescido no mundo posterior ao colapso; ele não tem uma fase de vida anterior ao Dia D.
-- A história criada para Micah o apresenta como mensageiro civil e guardião dos registros de chegada e retorno entre abrigos. Cresceu em comunidades móveis e, aos 13 anos, ajudou a resolver uma divergência entre listas mantendo os nomes “em trânsito” até confirmação. Hoje duplica os cadernos, preserva a privacidade das famílias e leva recados por rotas confirmadas. O episódio, a função e os detalhes pessoais são proposta revisável, sem local ou data fixados.
-- **Luke Carver** é casado com **Imani Carver** e pai de **Asha Carver** e **Nyla Carver**. Imani é proposta como educadora que organiza rotinas e atividades nos abrigos. Ela e Luke se aproximaram quando questionou uma rota rápida que não previa pausas seguras para os civis; Luke refez o trajeto. Asha trabalha com recuperação de ferramentas e equipamento, sempre preparando alternativas para quando um plano falhar. Nyla preserva histórias, nomes e memória comunitária em cadernos analógicos sem expor localizações atuais.
-- As páginas marcam essas biografias como propostas. As imagens usadas são recortes de fotos familiares existentes; retratos individuais podem substituí-las quando forem fornecidos.
+- **Chloe Bennett** e **Darius Bennett** já eram casados antes do Dia D e tiveram **Micah Bennett** antes do colapso, conforme confirmação do autor. Darius é proposto como técnico de manutenção para uma empresa local de telefone e internet antes do Dia D; no presente mantém rádios e relés comunitários. A história anterior em que conhecia Chloe numa retirada pós-Dia D foi descartada.
+- Micah tem **20 anos no presente** e nasceu antes do Dia D, conforme confirmação do autor. A idade exata dele no início do colapso ainda não foi definida; o perfil o descreve como criança e preserva lembranças fragmentárias do lar.
+- A história criada para Micah o apresenta como mensageiro civil e guardião dos registros de chegada e retorno entre abrigos. Aos 13 anos, ajudou a resolver uma divergência entre listas mantendo os nomes “em trânsito” até confirmação. Hoje duplica os cadernos, preserva a privacidade das famílias e leva recados por rotas confirmadas. O episódio, a função e os detalhes pessoais são propostas revisáveis, sem local ou data fixados.
+- **Luke Carver** e **Imani Carver** já eram casados antes do Dia D e tiveram suas filhas, **Asha** e **Nyla**, antes do colapso. A família Carver tem raízes africanas; país e região de origem seguem indefinidos. A narrativa anterior de que Luke e Imani se conheceram numa retirada pós-Dia D foi removida por contradizer essa cronologia.
+- Os ofícios e trajetórias pessoais de Imani, Asha e Nyla continuam como propostas revisáveis: Imani é educadora e organiza rotinas nos abrigos; Asha recupera ferramentas e equipamentos; Nyla preserva a memória comunitária em cadernos sem expor localizações atuais.
+- As páginas individuais mostram retratos do presente e uma reconstrução visual de cada familiar no período anterior ao Dia D. `luke-familia.html` reúne as três cenas domésticas em um arquivo Carver separado; os perfis identificam as imagens históricas como reconstruções, não como fotografias documentais.
 
 ## Amelia — esposa de John
 

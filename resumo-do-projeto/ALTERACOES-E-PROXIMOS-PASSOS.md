@@ -455,8 +455,9 @@
 - Chloe passou a aparecer como **Chloe Bennett**; o arquivo e o identificador técnico antigos (`clhoe-*`) foram preservados para não quebrar os links existentes.
 - O núcleo de Chloe ganhou Darius, marido e técnico de rádio/comunicações, e Micah, filho que mantém os registros de retorno e leva mensagens entre abrigos.
 - Luke passou a aparecer como **Luke Carver**. O novo arquivo familiar apresenta Imani, educadora e esposa de Luke, e as filhas Asha, voltada à recuperação de equipamentos, e Nyla, guardiã da memória comunitária.
-- Foram criadas páginas individuais para Darius, Micah, Imani, Asha e Nyla, com histórias e paletas próprias. Os backgrounds e sobrenomes são propostas autorais para revisão, não lore confirmada.
-- As páginas de Imani, Asha e Nyla agora usam retratos individuais do presente, gerados com as fotos familiares como referência. O cabeçalho da família mantém a foto conjunta de Luke, Imani e as filhas. As paletas exclusivas das três foram preservadas.
+- Foram criadas páginas individuais para Darius, Micah, Imani, Asha e Nyla, com histórias e paletas próprias. Os backgrounds pessoais seguem revisáveis; o autor depois confirmou o núcleo familiar Carver, sua cronologia anterior ao Dia D e suas raízes africanas, sem especificar a região ou o país.
+- As páginas de Imani, Asha e Nyla usam retratos individuais do presente, gerados com as fotos familiares como referência. O autor confirmou que Luke e Imani já eram casados e que suas filhas nasceram antes do Dia D; confirmou também as raízes africanas dos Carver, sem indicar país ou região. As paletas exclusivas das três foram preservadas.
+- As páginas e o resumo da lore foram corrigidos para retirar a versão anterior em que Luke e Imani se conheciam durante uma retirada pós-Dia D. Em 3 de novembro, cada dossiê recebeu uma reconstrução visual do período anterior ao Dia D, e o arquivo da família passou a reunir as três cenas.
 
 # Atualização de 2 de novembro de 2026 — Sophie Romanoff
 
@@ -486,13 +487,13 @@
 # Atualização de 2 de novembro de 2026 — Darius Bennett
 
 - A página de Darius foi ampliada com uma vida civil antes do Dia D: ele trabalhava na manutenção de linhas telefônicas e de internet, atendendo casas e pequenos comércios.
-- A história mantém o encontro com Chloe durante uma retirada de civis e acompanha o reaproveitamento de suas habilidades técnicas no presente. Os detalhes criados seguem como proposta revisável.
+- Em atualização posterior, o autor confirmou que Chloe e Darius já eram casados antes do Dia D e que Micah nasceu antes do colapso. A versão do encontro durante uma retirada pós-Dia D foi removida; detalhes pessoais novos seguem como proposta revisável.
 - Foram criadas três imagens individuais com a foto familiar como referência: Darius na oficina, em uma pausa de expediente e reparando um rádio comunitário no presente. A página usa a foto de rádio como capa e as duas cenas pré-Dia D em uma seção própria.
 - A galeria identifica as cenas anteriores como reconstruções visuais; o cartão dele em `membros-hellsings.html` agora usa o retrato solo do presente.
 
 # Atualização de 3 de novembro de 2026 — Micah Bennett
 
-- Micah tem 20 anos no presente, conforme informado pelo autor. A página agora o apresenta como mensageiro civil e responsável pelos registros de retorno dos abrigos, com infância no mundo pós-Dia D.
+- Micah tem 20 anos no presente e nasceu antes do Dia D, conforme confirmado pelo autor. A página mantém em aberto a idade exata que tinha no início do colapso e acompanha lembranças fragmentárias de casa e a infância entre abrigos.
 - A trajetória criada inclui uma divergência de listas aos 13 anos, resolvida ao manter pessoas como “em trânsito” até a confirmação. O background permanece como proposta revisável; nenhum local ou data exata foi inventado.
 - Foram geradas três imagens presentes de Micah usando a foto familiar como referência visual: levando uma mensagem, atualizando registros e percorrendo uma rota entre abrigos.
 - `micah-bennett.html` usa o novo retrato solo na capa e exibe os outros dois em sua galeria. O cartão de Micah em `membros-hellsings.html` também usa o novo retrato; a página mantém a paleta azul/cidreira do personagem.
@@ -502,3 +503,10 @@
 - A imagem enviada pelo autor foi usada como referência para três reconstruções visuais de Amelia, reunidas em `img-amelia/`.
 - `amelia-arquivo.html` agora abre com um retrato solo novo e inclui os outros dois em uma galeria. O cartão de Amelia em `membros-hellsings.html` também recebeu o novo retrato.
 - As imagens ficam sem data ou época atribuída. Sobrenome, idade e história pessoal continuam em aberto; as fotos de Amelia com John permanecem como registros anteriores à morte dele.
+
+# Atualização de 3 de novembro de 2026 — arquivos visuais das famílias Carver e Bennett
+
+- `imani-carver.html`, `asha-carver.html` e `nyla-carver.html` agora têm uma reconstrução visual individual de antes do Dia D, além dos retratos do presente já usados nas capas. Cada seção tem legenda própria e usa a paleta exclusiva da personagem.
+- `luke-familia.html` ganhou o arquivo **A casa ainda era casa**, com três cenas individuais do cotidiano dos Carver antes do Dia D. As imagens são reconstruções individuais; não são apresentadas como uma nova foto dos quatro juntos.
+- `micah-bennett.html` agora separa uma lembrança visual da infância, antes do Dia D, de seus registros atuais. A imagem o mostra em casa com Chloe e Darius ao fundo.
+- `era-extincao-presente/family-profile.css` estiliza os arquivos em tamanhos médios, com colunas responsivas, legendas e imagens inteiras; os links CSS das páginas afetadas receberam nova versão de cache.
