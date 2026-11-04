@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John e as pessoas que cruzaram a rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=10" />
+    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=11" />
     <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=3" />
     <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
@@ -335,21 +335,32 @@
           </section>
         </article>
 
-        <article class="memorial-entry memorial-entry--john" id="john">
-          <figure class="memorial-entry__image">
-            <img src="img-hellsing/john-presente.png" alt="John prestando apoio de campo antes de sua morte" loading="lazy" />
-            <figcaption>J-06 // REGISTRO ANTERIOR À ÚLTIMA FUGA</figcaption>
-          </figure>
-          <div class="memorial-entry__copy">
-            <span class="memorial-entry__number">02 // J-06</span>
-            <span class="memorial-kicker">TECNOLOGIA // ARMAMENTOS</span>
-            <h3>John.</h3>
-            <p class="memorial-entry__cause">CAUSA DA MORTE // EXPLOSÃO DURANTE A FUGA</p>
-            <p>John foi mordido; Olivia, sua filha, havia sido arranhada. Quando a horda alcançou a passagem, os dois ficaram para trás e seguraram o avanço enquanto o comboio escapava.</p>
-            <p>John havia preparado a bomba que detonou quando todos atravessaram. Ele e Olivia morreram juntos; o restante do comboio sobreviveu. Todas as imagens preservadas de John são anteriores àquela fuga.</p>
-            <a href="john-presente.html">LER O ARQUIVO DE JOHN <span aria-hidden="true">↗</span></a>
+        <section class="memorial-john-arrival" id="john" data-john-arrival aria-labelledby="john-arrival-title">
+          <div class="memorial-john-arrival__voices" aria-live="polite" aria-atomic="true">
+            <p class="memorial-john-arrival__quote memorial-john-arrival__quote--daughter">
+              <span>OLIVIA // ÚLTIMO REGISTRO</span>
+              <q>Vai ficar tudo bem, papai...</q>
+            </p>
+            <p class="memorial-john-arrival__quote memorial-john-arrival__quote--father">
+              <span>JOHN // RESPOSTA PRESERVADA</span>
+              <q>...eu te amo, filha!</q>
+            </p>
           </div>
-        </article>
+          <a class="memorial-john-arrival__card" href="john-memorial.html#dedicatoria" data-john-arrival-card>
+            <figure>
+              <img src="img-hellsing/john-memorial-portrait.png" alt="John ao lado de um mapa de rota, em uma fotografia preservada antes de sua última fuga" loading="lazy" />
+              <figcaption>J-06 // RETRATO PRESERVADO ANTES DA ÚLTIMA FUGA</figcaption>
+            </figure>
+            <div class="memorial-john-arrival__copy">
+              <span class="memorial-entry__number">02 // J-06</span>
+              <span class="memorial-kicker">JOHN BERTOLAI WINCHESTER // MEMÓRIA DOS HELLSINGS</span>
+              <h3 id="john-arrival-title">John.<br /><em>Olivia.</em></h3>
+              <p class="memorial-entry__cause">CAUSA DA MORTE // EXPLOSÃO PARA SALVAR O COMBOIO</p>
+              <p>Ele preparou uma saída para o comboio. Quando a horda alcançou a passagem, pai e filha ficaram para trás — e fizeram daquela rota a chance de todos os outros chegarem vivos.</p>
+              <strong>ABRIR DEDICATÓRIA E HOMENAGENS <span aria-hidden="true">↗</span></strong>
+            </div>
+          </a>
+        </section>
       </section>
 
       <section class="memorial-john-tribute" aria-labelledby="memorial-john-title">
@@ -604,7 +615,8 @@
     <script src="js/memorial-journal.js?v=4" defer></script>
     <script src="js/malha-chat.js?v=3" defer></script>
     <script src="js/ai-dialogue.js?v=1" defer></script>
-    <script src="js/john-transmission-log.js?v=1" defer></script>
+    <script src="js/john-transmission-log.js?v=2" defer></script>
     <script src="js/john-memorial-book.js?v=1" defer></script>
+    <script src="js/john-memorial-reveal.js?v=1" defer></script>
   </body>
 </html>

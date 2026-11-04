@@ -526,3 +526,13 @@
 - `naomi-registros.html` agora mantém os três sinais do carrossel e apresenta a sequência abaixo em uma grade de quadros médios. Cada quadro abre a imagem em tamanho completo no lightbox existente.
 - `js/naomi-registros.js` monta os cartões na ordem da pasta e usa carregamento tardio para as miniaturas. `css/naomi-registros.css` aplica a grade responsiva e os tons de roxo próprios da Naomi.
 - A comparação por hash não encontrou duplicatas exatas entre as 30 imagens novas e as três imagens do carrossel. Alterações ainda locais; não houve publicação no GitHub.
+
+# Atualização de 4 de novembro de 2026 — homenagem de John e Olivia
+
+- `memorial.html` agora revela a entrada de John depois das frases “Vai ficar tudo bem, papai...” e “...eu te amo, filha!”. O retrato novo surge depois da sequência e é identificado como anterior à última fuga.
+- `john-memorial.html` abre a página de homenagens com uma carta principal de Amélia para John e Olivia. O texto é uma proposta literária baseada na ficha e permanece revisável pelo autor.
+- Abaixo da carta, 32 publicações aparecem por nome e por grupo: núcleo original, geração seguinte, membros atuais da facção e uma mensagem coletiva do comboio. Respostas e reações acompanham cada voz; Brian não publica porque morreu antes de John, e Olivia não aparece como autora porque morreu com ele.
+- As 13 vozes originais reaproveitam os registros já construídos; as demais publicações foram propostas a partir dos perfis atuais e ficam abertas à revisão do autor.
+- A nova imagem foi gerada com referências visuais de John já existentes e salva como `img-hellsing/john-memorial-portrait.png`; as demais imagens dele permanecem nos outros arquivos.
+- `faccao-hellsings-presente.html` também usa o novo retrato, corrige a descrição da morte de John e Olivia e liga diretamente à dedicatória de Amélia.
+- O relato interativo **O Último Abraço** continua em `memorial.html` e pode ser aberto a partir da página de homenagens.

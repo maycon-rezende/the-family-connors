@@ -486,3 +486,12 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - O autor enviou uma referência visual para Amelia. Foram geradas três reconstruções individuais, preservando seus traços visuais reconhecíveis; os arquivos ficam em `img-amelia/`.
 - `amelia-arquivo.html` usa a primeira imagem como retrato de abertura e as outras duas em uma galeria própria. O cartão dela em `membros-hellsings.html` agora usa o mesmo retrato individual.
 - Todas as novas imagens são identificadas como reconstruções sem data. Não atribuem época, idade, sobrenome ou acontecimentos à personagem. Os registros compartilhados com John continuam identificados como anteriores à morte dele.
+
+### John e Olivia — entrada visual e página de homenagens — 4 de novembro de 2026
+
+- `memorial.html` substitui a entrada imediata de John por `section.memorial-john-arrival`. `js/john-memorial-reveal.js` aciona, por `IntersectionObserver`, as duas frases em sequência e revela depois o cartão clicável. O movimento é removido para `prefers-reduced-motion` e quando `IntersectionObserver` não existe.
+- O cartão usa `img-hellsing/john-memorial-portrait.png`, imagem horizontal nova baseada em `john-presente.png` e `john-bertolai-presente.png`. As demais fotos não foram trocadas.
+- O cartão J-06 em `faccao-hellsings-presente.html` usa o retrato novo, descreve John e Olivia na passagem e aponta para a dedicatória.
+- `john-memorial.html` reúne a carta em destaque de Amélia e um seletor de 32 publicações, agrupadas entre núcleo original, geração seguinte, outros membros da facção e comboio. As 13 mensagens originais são preservadas; os demais textos são propostas revisáveis.
+- `js/john-transmission-log.js` expõe `window.JOHN_MEMORIAL_RECORDS` e continua renderizando o diário em `memorial.html`; `js/john-memorial-wall.js` usa os mesmos registros na nova página, com respostas e reações.
+- `era-extincao-presente/memorial-hellsings.css` recebeu o efeito de revelação; `era-extincao-presente/john-memorial.css` cuida do retrato, carta, seleção de vozes e layout responsivo.
