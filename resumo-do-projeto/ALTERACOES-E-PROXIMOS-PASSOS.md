@@ -516,3 +516,10 @@
 - O sobrenome **Yagami** já constava nas páginas e registros; foi mantido como grafia oficial.
 - `naomi-presente.html` e `naomi-registros.html` agora usam uma paleta de roxo escuro e roxo claro, inspirada nas cores de Iori Yagami. Fundos, sinais, detalhes de interface e cursor acompanham a nova paleta.
 - Os dois estilos receberam versões de cache atualizadas; o registro técnico lista a paleta exclusiva da Naomi.
+
+# Atualização de 4 de novembro de 2026 — sequência visual de Naomi
+
+- Foram encontradas 30 imagens novas em `img-naomi-presente/`, organizadas como uma sequência do presente: retratos e preparação, exploração, abrigo, fuga, resgate e chegada ao acampamento.
+- `naomi-registros.html` agora mantém os três sinais do carrossel e apresenta a sequência abaixo em uma grade de quadros médios. Cada quadro abre a imagem em tamanho completo no lightbox existente.
+- `js/naomi-registros.js` monta os cartões na ordem da pasta e usa carregamento tardio para as miniaturas. `css/naomi-registros.css` aplica a grade responsiva e os tons de roxo próprios da Naomi.
+- A comparação por hash não encontrou duplicatas exatas entre as 30 imagens novas e as três imagens do carrossel. Alterações ainda locais; não houve publicação no GitHub.

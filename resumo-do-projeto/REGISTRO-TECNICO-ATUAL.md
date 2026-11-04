@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **2 de novembro de 2026**.
+Atualizado em **4 de novembro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -238,6 +238,13 @@ O endereço anterior `dimitri-presente.html` redireciona para `dimitri-arquivo.h
 ### Regra de paleta exclusiva
 
 Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi Yagami (roxo escuro/roxo claro, inspirado na paleta de Iori Yagami), Chloe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre), Dimitri (aço/azul-gelo/vermelho), Nathan (verde-fósforo/grafite), Lana (verde-rádio/areia) e Pollyana (ameixa/âmbar). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
+
+### Naomi Yagami — sequência visual do presente — 4 de novembro de 2026
+
+- `img-naomi-presente/` reúne 30 imagens novas, ordenadas como uma sequência de campo desde os retratos e a preparação de Naomi até exploração, esconderijo, fuga, resgate e chegada ao acampamento Hellsing.
+- `naomi-registros.html` mantém o carrossel de três imagens que já existia e acrescenta abaixo uma grade própria para a sequência. Os quadros são de tamanho médio, responsivos e abrem a imagem completa no mesmo lightbox do arquivo.
+- `js/naomi-registros.js` cria os quadros a partir da lista sequencial; as miniaturas usam carregamento tardio para reduzir o peso inicial. A paleta roxa exclusiva de Naomi permanece aplicada.
+- As 30 imagens foram comparadas por hash com as três imagens já usadas no carrossel; não há duplicatas exatas entre elas. O trabalho está local e ainda não foi publicado no GitHub.
 
 ## 5. Herdeiros e segunda geração
 

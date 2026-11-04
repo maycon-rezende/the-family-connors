@@ -9,7 +9,7 @@
       content="Registros visuais do presente de Naomi Yagami, inteligência dos Hellsings."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="css/naomi-registros.css?v=2" />
+    <link rel="stylesheet" href="css/naomi-registros.css?v=3" />
     <title>Naomi Yagami | Registros do Presente</title>
   </head>
   <body class="naomi-record-archive">
@@ -24,8 +24,8 @@
         <span class="archive-kicker">TRANSMISSÕES VISUAIS // CANAL PRESERVADO</span>
         <h1>SINAIS EM <em>MOVIMENTO.</em></h1>
         <p>
-          Três registros do presente de Naomi Yagami. A escuta não para quando ela deixa o receptor:
-          continua na rota, no acampamento e na linha de ação.
+          O carrossel preserva três registros do presente. Abaixo, uma sequência de 30 imagens acompanha
+          Naomi entre rastros, passagens, fuga, resgate e chegada ao acampamento.
         </p>
         <span class="archive-status"><i></i> LOOP DE ARQUIVO ATIVO</span>
       </header>
@@ -94,6 +94,20 @@
           <span>N-05 // SINAL PRESERVADO</span>
         </footer>
       </section>
+
+      <section class="naomi-sequence" aria-labelledby="naomi-sequence-title">
+        <header class="naomi-sequence__head">
+          <div>
+            <span class="archive-kicker">ARQUIVO N-05 // SÉRIE DE CAMPO</span>
+            <h2 id="naomi-sequence-title">O PERCURSO<br /><em>QUADRO A QUADRO.</em></h2>
+          </div>
+          <p>
+            Trinta novos registros, organizados na sequência recebida. Selecione um quadro para abrir
+            a imagem completa.
+          </p>
+        </header>
+        <ul class="naomi-sequence__grid" data-naomi-sequence-grid aria-label="Sequência visual de Naomi Yagami"></ul>
+      </section>
     </main>
 
     <dialog class="signal-lightbox" data-signal-lightbox aria-label="Imagem ampliada do registro de Naomi">
@@ -113,7 +127,7 @@
       <a href="luke-presente.html">Luke →</a>
     </footer>
 
-    <script src="js/naomi-registros.js"></script>
+    <script src="js/naomi-registros.js?v=2"></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

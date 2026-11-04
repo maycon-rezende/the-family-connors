@@ -25,6 +25,44 @@
     },
   ];
 
+  const sequenceRecords = [
+    ['naomi.png', 'Retrato de campo', 'Retrato de Naomi Yagami no presente.'],
+    ['naomi-yagami.png', 'Naomi Yagami', 'Naomi observa o ambiente antes de avançar.'],
+    ['naomi-presente.png', 'Pausa no acampamento', 'Naomi no acampamento dos Hellsings.'],
+    ['afiando-katana.png', 'Preparação', 'Naomi afia sua katana antes de sair.'],
+    ['afiando.png', 'Lâmina pronta', 'Naomi confere o fio da katana.'],
+    ['exploracao.png', 'Exploração', 'Naomi avança por uma área abandonada.'],
+    ['encontrando-esconderijo.png', 'Abrigo à vista', 'Naomi localiza um possível esconderijo.'],
+    ['sirene-foi-descoberta.png', 'O alarme', 'Uma sirene denuncia a presença do grupo.'],
+    ['escondendo-hotel.png', 'Hotel em silêncio', 'Naomi procura cobertura dentro de um hotel.'],
+    ['acao.png', 'Ação', 'Naomi reage quando a rota deixa de estar segura.'],
+    ['escapando.png', 'Saída de serviço', 'Naomi escapa por uma passagem de serviço.'],
+    ['seguindo-rastro.png', 'Seguindo o rastro', 'Naomi acompanha os sinais deixados no caminho.'],
+    ['passagem-secreta.png', 'Passagem oculta', 'Naomi encontra uma passagem escondida.'],
+    ['passagem-secreta-aberta.png', 'A passagem se abre', 'Naomi abre a passagem oculta.'],
+    ['esconderijo.png', 'Refúgio', 'O grupo alcança um esconderijo temporário.'],
+    ['som-atraiu.png', 'Ruído ao longe', 'Um som inesperado ameaça revelar a posição do grupo.'],
+    ['rota-de-fuga.png', 'Rota de fuga', 'Naomi identifica uma rota para deixar a área.'],
+    ['fugindo.png', 'Retirada', 'Naomi conduz a fuga por uma área em ruínas.'],
+    ['blocoacoes.png', 'Bloqueando o acesso', 'O grupo tenta conter o avanço atrás de si.'],
+    ['prisioneiros.png', 'Prisioneiros', 'Naomi encontra sobreviventes mantidos em cativeiro.'],
+    ['save-prisioneiros.png', 'Libertação', 'Naomi ajuda a retirar os prisioneiros.'],
+    ['resgate.png', 'Operação de resgate', 'O grupo inicia a retirada dos sobreviventes.'],
+    ['resgate1.png', 'Rota segura', 'Naomi acompanha os sobreviventes durante o resgate.'],
+    ['naomi-e-zoe.png', 'Naomi e Zoe', 'Naomi e Zoe seguem juntas pela zona de evacuação.'],
+    ['fugindo1.png', 'Atravessando a rua', 'Naomi e o grupo atravessam uma rua exposta.'],
+    ['fugindo2.png', 'Último trecho', 'O grupo corre para alcançar a saída.'],
+    ['naomi-e-zoe-encontra-o-carro.png', 'O carro', 'Naomi e Zoe alcançam o veículo de fuga.'],
+    ['resgate2.png', 'Retirada em andamento', 'O resgate continua enquanto o grupo deixa a área.'],
+    ['acampamento-hellsings.png', 'Chegada ao acampamento', 'Naomi chega ao acampamento dos Hellsings.'],
+    ['indo-ate-jack.png', 'Em direção a Jack', 'Naomi atravessa o acampamento para encontrar Jack.'],
+  ].map(([file, title, alt], index) => ({
+    code: 'N-05.Q' + String(index + 1).padStart(2, '0'),
+    title,
+    alt,
+    src: 'img-naomi-presente/' + file,
+  }));
+
   const stage = document.querySelector('[data-signal-stage]');
   if (!stage) return;
 
@@ -43,6 +81,7 @@
   const dialogCode = document.querySelector('[data-signal-lightbox-code]');
   const dialogTitle = document.querySelector('[data-signal-lightbox-title]');
   const close = document.querySelector('[data-signal-close]');
+  const sequenceGrid = document.querySelector('[data-naomi-sequence-grid]');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!image || !code || !title || !caption || !progress || !count || !previous || !next || !open) return;
@@ -52,6 +91,30 @@
   let transition = 0;
 
   const digits = (value) => String(value).padStart(2, '0');
+
+  if (sequenceGrid) {
+    sequenceRecords.forEach((record, index) => {
+      const item = document.createElement('li');
+      const button = document.createElement('button');
+      const thumbnail = document.createElement('img');
+      const label = document.createElement('span');
+      const name = document.createElement('strong');
+
+      button.type = 'button';
+      button.className = 'naomi-sequence__card';
+      button.dataset.sequenceIndex = String(index);
+      button.setAttribute('aria-label', record.code + ' — ' + record.title + '. Abrir imagem ampliada.');
+      thumbnail.src = record.src;
+      thumbnail.alt = '';
+      thumbnail.loading = 'lazy';
+      thumbnail.decoding = 'async';
+      label.textContent = record.code;
+      name.textContent = record.title;
+      button.append(thumbnail, label, name);
+      item.append(button);
+      sequenceGrid.append(item);
+    });
+  }
 
   function setRecord(index, immediate = false) {
     current = (index + records.length) % records.length;
@@ -120,14 +183,26 @@
   });
 
   if (dialog && dialogImage && dialogCode && dialogTitle && close) {
-    open.addEventListener('click', () => {
-      const record = records[current];
+    function showLightbox(record) {
       dialogImage.src = record.src;
       dialogImage.alt = record.alt;
       dialogCode.textContent = record.code;
       dialogTitle.textContent = record.title;
       if (typeof dialog.showModal === 'function') dialog.showModal();
+    }
+
+    open.addEventListener('click', () => {
+      showLightbox(records[current]);
     });
+
+    if (sequenceGrid) {
+      sequenceGrid.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-sequence-index]');
+        if (!button || !sequenceGrid.contains(button)) return;
+        const record = sequenceRecords[Number(button.dataset.sequenceIndex)];
+        if (record) showLightbox(record);
+      });
+    }
 
     close.addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (event) => {
