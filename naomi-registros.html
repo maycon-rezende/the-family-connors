@@ -9,7 +9,7 @@
       content="Registros visuais do presente de Naomi Yagami, inteligência dos Hellsings."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="css/naomi-registros.css?v=3" />
+    <link rel="stylesheet" href="css/naomi-registros.css?v=4" />
     <title>Naomi Yagami | Registros do Presente</title>
   </head>
   <body class="naomi-record-archive">
@@ -24,8 +24,8 @@
         <span class="archive-kicker">TRANSMISSÕES VISUAIS // CANAL PRESERVADO</span>
         <h1>SINAIS EM <em>MOVIMENTO.</em></h1>
         <p>
-          O carrossel preserva três registros do presente. Abaixo, uma sequência de 30 imagens acompanha
-          Naomi entre rastros, passagens, fuga, resgate e chegada ao acampamento.
+          Trinta e três fotografias percorrem o presente de Naomi num único álbum: da escuta inicial,
+          pelas rotas e resgates, até a chegada ao acampamento.
         </p>
         <span class="archive-status"><i></i> LOOP DE ARQUIVO ATIVO</span>
       </header>
@@ -37,12 +37,12 @@
             <h2 id="signal-carousel-title">CADA IMAGEM<br /><em>GUARDA UM SINAL.</em></h2>
           </div>
           <p>
-            Use as setas, os registros abaixo ou deixe o arquivo seguir sozinho. Nenhuma imagem é
-            recortada.
+            Use as setas, passe a foto com o dedo ou deixe o álbum seguir em looping. As imagens
+            permanecem inteiras no quadro.
           </p>
         </div>
 
-        <div class="signal-stage" data-signal-stage>
+        <div class="signal-stage" data-signal-stage role="region" aria-label="Álbum de fotografias de Naomi" tabindex="0">
           <img
             data-signal-image
             src="img-hellsing/naomi-presente.png"
@@ -74,39 +74,10 @@
           <div class="signal-stage__progress" aria-hidden="true"><i data-signal-progress></i></div>
         </div>
 
-        <div class="signal-selector" aria-label="Selecionar registro de Naomi">
-          <button class="is-active" type="button" data-signal-select aria-pressed="true">
-            <img src="img-hellsing/naomi-presente.png" alt="Prévia de Naomi em escuta de campo" />
-            <span>ESCUTA</span>
-          </button>
-          <button type="button" data-signal-select aria-pressed="false">
-            <img src="img-hellsing/naomi-presente1.png" alt="Prévia de Naomi em rota no presente" />
-            <span>ROTA</span>
-          </button>
-          <button type="button" data-signal-select aria-pressed="false">
-            <img src="img-hellsing/naomi-presente2.png" alt="Prévia de Naomi em ação no presente" />
-            <span>RESPOSTA</span>
-          </button>
-        </div>
-
         <footer class="signal-carousel__footer">
-          <span data-signal-count>01 / 03</span>
-          <span>N-05 // SINAL PRESERVADO</span>
+          <span data-signal-count aria-live="polite">01 / 33</span>
+          <span>N-05 // ÁLBUM EM LOOPING</span>
         </footer>
-      </section>
-
-      <section class="naomi-sequence" aria-labelledby="naomi-sequence-title">
-        <header class="naomi-sequence__head">
-          <div>
-            <span class="archive-kicker">ARQUIVO N-05 // SÉRIE DE CAMPO</span>
-            <h2 id="naomi-sequence-title">O PERCURSO<br /><em>QUADRO A QUADRO.</em></h2>
-          </div>
-          <p>
-            Trinta novos registros, organizados na sequência recebida. Selecione um quadro para abrir
-            a imagem completa.
-          </p>
-        </header>
-        <ul class="naomi-sequence__grid" data-naomi-sequence-grid aria-label="Sequência visual de Naomi Yagami"></ul>
       </section>
     </main>
 
@@ -127,7 +98,7 @@
       <a href="luke-presente.html">Luke →</a>
     </footer>
 
-    <script src="js/naomi-registros.js?v=2"></script>
+    <script src="js/naomi-registros.js?v=3" defer></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

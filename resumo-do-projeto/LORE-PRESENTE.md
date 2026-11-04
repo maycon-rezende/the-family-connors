@@ -108,6 +108,8 @@ A sequência completa, os detalhes das operações e a distinção entre fatos c
 
 Jully tem hoje 40 anos. Durante o ataque de uma horda, perdeu o noivo. Para salvá-la e permitir que o restante do grupo escapasse, ele entregou a própria vida.
 
+Como proposta revisável, o noivo recebe o nome Gabriel Mercer: um técnico civil de manutenção que conheceu Jully em um abrigo dos Hellsings. A reconstrução da relação e da última travessia está em [JULLY-NOIVO-LORE-PROPOSTA.md](JULLY-NOIVO-LORE-PROPOSTA.md); esse nome e os detalhes ainda não foram confirmados como cânone.
+
 Pouco tempo depois, Jully sofreu um aborto em consequência dos traumas e das condições extremas daquele período. Ela passou anos mergulhada no luto. Assim como Jully permaneceu ao lado de Britney em seu momento mais sombrio, Britney se recusou a abandoná-la quando foi a vez da irmã desmoronar.
 
 As duas sobreviveram porque aprenderam a carregar uma à outra.
@@ -142,7 +144,7 @@ John era casado com Amélia Brown Smith Winchester. Ela não ouviu a última con
 
 As imagens de John no presente foram registradas antes de sua morte. Os dois integrantes têm registros no novo [Memorial dos Hellsings](../memorial.html), que também reúne lembranças de outras pessoas perdidas ao longo das rotas.
 
-Jully perdeu o noivo durante um ataque de horda: ele protegeu Jully e o restante do grupo para que pudessem escapar. Seu nome ainda não foi definido. Mara Voss, operadora civil de rádio criada para o memorial, morreu quando uma estrutura de retransmissão cedeu durante uma tempestade de areia, após ela orientar um comboio para uma saída segura. Mara é uma aliada lembrada no memorial, não integrante oficial dos Hellsings.
+Jully perdeu o noivo durante um ataque de horda: ele protegeu Jully e o restante do grupo para que pudessem escapar. Gabriel Mercer é o nome proposto, ainda sujeito à revisão do autor. Mara Voss, operadora civil de rádio criada para o memorial, morreu quando uma estrutura de retransmissão cedeu durante uma tempestade de areia, após ela orientar um comboio para uma saída segura. Mara é uma aliada lembrada no memorial, não integrante oficial dos Hellsings.
 
 Os nomes de Brian e John continuam registrados no bunker e no código da organização.
 
@@ -182,4 +184,4 @@ Os Hellsings enfrentarão e destruirão Dominus. Depois da batalha, encontrarão
 - A página pode apresentar essas competências como dados operacionais, mas missões, perdas e acontecimentos específicos continuam dependentes da lore oficial do autor.
 - Isolde Myers Connor possui novos registros visuais no presente, porém sua função definitiva ainda não foi estabelecida.
 
-Última atualização: 2 de novembro de 2026.
+Última atualização: 4 de novembro de 2026.

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const records = [
+  const leadRecords = [
     {
       code: 'N-05.1',
       title: 'Escuta de campo',
@@ -63,6 +63,8 @@
     src: 'img-naomi-presente/' + file,
   }));
 
+  const records = [...leadRecords, ...sequenceRecords];
+
   const stage = document.querySelector('[data-signal-stage]');
   if (!stage) return;
 
@@ -75,13 +77,11 @@
   const previous = stage.querySelector('[data-signal-previous]');
   const next = stage.querySelector('[data-signal-next]');
   const open = stage.querySelector('[data-signal-open]');
-  const selectors = [...document.querySelectorAll('[data-signal-select]')];
   const dialog = document.querySelector('[data-signal-lightbox]');
   const dialogImage = document.querySelector('[data-signal-lightbox-image]');
   const dialogCode = document.querySelector('[data-signal-lightbox-code]');
   const dialogTitle = document.querySelector('[data-signal-lightbox-title]');
   const close = document.querySelector('[data-signal-close]');
-  const sequenceGrid = document.querySelector('[data-naomi-sequence-grid]');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!image || !code || !title || !caption || !progress || !count || !previous || !next || !open) return;
@@ -89,31 +89,17 @@
   let current = 0;
   let cycle = null;
   let transition = 0;
+  const preloadedSources = new Set([records[0].src]);
 
   const digits = (value) => String(value).padStart(2, '0');
 
-  if (sequenceGrid) {
-    sequenceRecords.forEach((record, index) => {
-      const item = document.createElement('li');
-      const button = document.createElement('button');
-      const thumbnail = document.createElement('img');
-      const label = document.createElement('span');
-      const name = document.createElement('strong');
-
-      button.type = 'button';
-      button.className = 'naomi-sequence__card';
-      button.dataset.sequenceIndex = String(index);
-      button.setAttribute('aria-label', record.code + ' — ' + record.title + '. Abrir imagem ampliada.');
-      thumbnail.src = record.src;
-      thumbnail.alt = '';
-      thumbnail.loading = 'lazy';
-      thumbnail.decoding = 'async';
-      label.textContent = record.code;
-      name.textContent = record.title;
-      button.append(thumbnail, label, name);
-      item.append(button);
-      sequenceGrid.append(item);
-    });
+  function preloadNext() {
+    const record = records[(current + 1) % records.length];
+    if (preloadedSources.has(record.src)) return;
+    preloadedSources.add(record.src);
+    const preload = new Image();
+    preload.decoding = 'async';
+    preload.src = record.src;
   }
 
   function setRecord(index, immediate = false) {
@@ -127,12 +113,6 @@
     count.textContent = digits(current + 1) + ' / ' + digits(records.length);
     progress.style.width = ((current + 1) / records.length) * 100 + '%';
     stage.style.setProperty('--signal-background', 'url("' + record.src + '")');
-
-    selectors.forEach((button, buttonIndex) => {
-      const active = buttonIndex === current;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
 
     const showImage = () => {
       if (token !== transition) return;
@@ -148,6 +128,7 @@
     image.classList.remove('is-visible');
     if (immediate) showImage();
     else window.setTimeout(showImage, 180);
+    window.setTimeout(preloadNext, 900);
   }
 
   function stopCycle() {
@@ -168,7 +149,32 @@
 
   previous.addEventListener('click', () => go(current - 1));
   next.addEventListener('click', () => go(current + 1));
-  selectors.forEach((button, index) => button.addEventListener('click', () => go(index)));
+
+  let touchStartX = null;
+  stage.addEventListener('touchstart', (event) => {
+    if (event.target.closest('button')) {
+      touchStartX = null;
+      return;
+    }
+    touchStartX = event.changedTouches[0]?.clientX ?? null;
+  }, { passive: true });
+  stage.addEventListener('touchend', (event) => {
+    if (touchStartX === null) return;
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    touchStartX = null;
+    if (Math.abs(distance) < 48) return;
+    go(current + (distance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  stage.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      go(current - 1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      go(current + 1);
+    }
+  });
 
   stage.addEventListener('mouseenter', stopCycle);
   stage.addEventListener('mouseleave', startCycle);
@@ -193,18 +199,11 @@
 
     open.addEventListener('click', () => {
       showLightbox(records[current]);
+      stopCycle();
     });
 
-    if (sequenceGrid) {
-      sequenceGrid.addEventListener('click', (event) => {
-        const button = event.target.closest('[data-sequence-index]');
-        if (!button || !sequenceGrid.contains(button)) return;
-        const record = sequenceRecords[Number(button.dataset.sequenceIndex)];
-        if (record) showLightbox(record);
-      });
-    }
-
     close.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', startCycle);
     dialog.addEventListener('click', (event) => {
       if (event.target === dialog) dialog.close();
     });
@@ -212,11 +211,5 @@
 
   setRecord(0, true);
   startCycle();
-
-  window.setTimeout(() => {
-    records.slice(1).forEach((record) => {
-      const preload = new Image();
-      preload.src = record.src;
-    });
-  }, 1500);
+  window.setTimeout(preloadNext, 1200);
 })();

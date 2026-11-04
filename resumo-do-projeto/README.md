@@ -64,6 +64,7 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [INTEGRACAO-IA-CHATS.md](INTEGRACAO-IA-CHATS.md): backend, canais, limites de cânone e ativação local da IA.
 - [UNIVERSO-E-LORE.md](UNIVERSO-E-LORE.md): fatos confirmados e limites narrativos.
 - [LORE-PRESENTE.md](LORE-PRESENTE.md): cronologia e personagens do presente.
+- [JULLY-NOIVO-LORE-PROPOSTA.md](JULLY-NOIVO-LORE-PROPOSTA.md): proposta revisável para Gabriel Mercer, noivo de Jully, e seu memorial.
 - [BOBBY-LEE-LORE.md](BOBBY-LEE-LORE.md): trajetória de Lee, agência, missões e sequência familiar, com origem de cada decisão registrada.
 - [ALTERACOES-E-PROXIMOS-PASSOS.md](ALTERACOES-E-PROXIMOS-PASSOS.md): entregas recentes e roteiro futuro.
 - [DIREITOS-AUTORais.md](DIREITOS-AUTORais.md): inventário de mídias temporárias e checklist para publicação/AdSense.
@@ -76,9 +77,9 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 
 ## Preparação para publicação
 
-- As 56 páginas HTML possuem descrição SEO, idioma declarado e referências internas verificadas.
+- O inventário atual contém 86 páginas HTML. A nova página de Gabriel inclui descrição SEO, idioma declarado, texto alternativo e links internos.
 - A auditoria estática confirmou `alt` em todas as imagens e nenhum link vazio.
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 1º de novembro de 2026.
+Última atualização: 4 de novembro de 2026.

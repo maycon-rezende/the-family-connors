@@ -238,6 +238,31 @@ body.jully-present *::after { box-sizing: border-box; }
   font: 600 clamp(1.18rem, 2.1vw, 1.65rem) / 1.45 'Playfair Display', Georgia, serif;
 }
 
+.jully-memorial-link {
+  position: relative;
+  display: grid;
+  gap: .65rem;
+  margin-top: 2rem;
+  padding: 1.2rem 1.35rem;
+  border: 1px solid rgba(212, 168, 117, .44);
+  background: linear-gradient(120deg, rgba(212, 168, 117, .09), rgba(4, 13, 22, .56));
+  color: #e5dccf;
+  text-decoration: none;
+  transition: border-color .25s, transform .25s, background .25s;
+}
+
+.jully-memorial-link > span,
+.jully-memorial-link > b {
+  color: #d4a875;
+  font: 500 .46rem/1.6 'DM Mono', monospace;
+  letter-spacing: .12em;
+}
+
+.jully-memorial-link > strong { font: 700 clamp(1.15rem, 2vw, 1.45rem)/1.35 'Cinzel', serif; }
+.jully-memorial-link > b { display: flex; align-items: center; justify-content: space-between; margin-top: .35rem; }
+.jully-memorial-link > b i { font-style: normal; font-size: .9rem; }
+.jully-memorial-link:hover,.jully-memorial-link:focus-visible { transform: translateY(-3px); border-color: #d4a875; background: linear-gradient(120deg, rgba(212, 168, 117, .15), rgba(4, 13, 22, .7)); outline: none; }
+
 .jully-intel__card {
   align-self: start;
   padding: 1.2rem;

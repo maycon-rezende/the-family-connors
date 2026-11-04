@@ -17,7 +17,7 @@
 - Nathan é casado com Lana, britânica. O sobrenome Whitmore, a origem específica em Bristol e sua atuação nas comunicações de emergência dos Hellsings foram criados a pedido do autor para `lana-presente.html`; detalhes e distinção entre fatos fornecidos e criação constam em `LANA-WHITMORE-LORE.md`.
 - Britney estuda medicina, gosta de moda, criação de vídeos e música eletrônica.
 - Britney conheceu Bobby Lee num dos churrascos que Jack oferecia aos Hellsings na Mansão Connor. Depois de descobrir que esperava o filho dos dois, saiu da casa de Mark e foi morar apenas com Jully; o casamento com Lee ocorreu mais tarde, antes do Dia D.
-- Jully é a caçula e seu caminho futuro permanece aberto.
+- Jully é a caçula e seu caminho futuro permanece aberto. O noivo e a morte dele após o Dia D têm fatos gerais confirmados, mas o nome Gabriel Mercer e os detalhes de sua história estão em proposta revisável, sem status de cânone, em `JULLY-NOIVO-LORE-PROPOSTA.md`.
 - A família possui raízes inglesas.
 
 ## Formação oficial dos Hellsings

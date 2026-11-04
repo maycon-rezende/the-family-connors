@@ -6,6 +6,7 @@
   --naomi-deep: #1B0821;
   --naomi-panel: #220C2A;
   --naomi-paper: #edf0df;
+  --naomi-blood: #ff4f63;
   --naomi-purple-dark: #64267D;
   --naomi-purple-light: #D3A0E1;
   --naomi-line: rgba(211, 160, 225, 0.26);
@@ -155,10 +156,11 @@ a {
 
 .naomi-hero h1 {
   margin: 1rem 0 1.35rem;
-  color: var(--naomi-paper);
+  color: var(--naomi-blood);
   font: 800 clamp(5.35rem, 10vw, 10.3rem) / 0.73 'Barlow Condensed', sans-serif;
   letter-spacing: -0.058em;
   text-transform: uppercase;
+  text-shadow: 0 0 26px rgba(255, 50, 74, 0.2);
 }
 
 .naomi-hero h1 em {

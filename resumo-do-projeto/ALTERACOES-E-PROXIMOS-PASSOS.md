@@ -522,9 +522,11 @@
 
 # Atualização de 4 de novembro de 2026 — sequência visual de Naomi
 
+*(Organização inicial; consolidada no álbum único logo abaixo.)*
+
 - Foram encontradas 30 imagens novas em `img-naomi-presente/`, organizadas como uma sequência do presente: retratos e preparação, exploração, abrigo, fuga, resgate e chegada ao acampamento.
-- `naomi-registros.html` agora mantém os três sinais do carrossel e apresenta a sequência abaixo em uma grade de quadros médios. Cada quadro abre a imagem em tamanho completo no lightbox existente.
-- `js/naomi-registros.js` monta os cartões na ordem da pasta e usa carregamento tardio para as miniaturas. `css/naomi-registros.css` aplica a grade responsiva e os tons de roxo próprios da Naomi.
+- Na primeira organização, `naomi-registros.html` manteve os três sinais do carrossel e colocou as imagens novas em uma grade abaixo. Essa composição foi substituída pela atualização do álbum único logo abaixo.
+- Inicialmente, `js/naomi-registros.js` montava cartões separados para as imagens novas e `css/naomi-registros.css` estilizou aquela grade; os cartões já foram removidos do HTML e do JavaScript.
 - A comparação por hash não encontrou duplicatas exatas entre as 30 imagens novas e as três imagens do carrossel. Alterações ainda locais; não houve publicação no GitHub.
 
 # Atualização de 4 de novembro de 2026 — homenagem de John e Olivia
@@ -536,3 +538,18 @@
 - A nova imagem foi gerada com referências visuais de John já existentes e salva como `img-hellsing/john-memorial-portrait.png`; as demais imagens dele permanecem nos outros arquivos.
 - `faccao-hellsings-presente.html` também usa o novo retrato, corrige a descrição da morte de John e Olivia e liga diretamente à dedicatória de Amélia.
 - O relato interativo **O Último Abraço** continua em `memorial.html` e pode ser aberto a partir da página de homenagens.
+
+# Atualização de 4 de novembro de 2026 — álbum único de Naomi
+
+- As três imagens iniciais e as 30 novas fotos de `img-naomi-presente/` agora formam um único álbum de 33 imagens em `naomi-registros.html`.
+- Removidas a fileira de miniaturas e a grade separada abaixo da foto principal. O álbum troca de imagem em looping, com navegação por setas, toque, teclado e abertura ampliada; a sequência pausa durante interação, ao ocultar a página e para quem prefere movimento reduzido.
+- `css/naomi-registros.css` mantém um zoom lento e discreto na foto ativa. O nome “NAOMI” em `naomi-presente.html` agora aparece em vermelho-sangue claro, preservando os tons roxos do sobrenome e da identidade visual.
+- Alterações locais nesta etapa; ainda não publicadas no GitHub.
+
+# Atualização de 4 de novembro de 2026 — memorial proposto para o noivo de Jully
+
+- O nome **Gabriel Mercer** e sua trajetória foram criados como proposta revisável; o fato confirmado permanece sendo que o noivo de Jully morreu após o Dia D ao salvar Jully e o grupo de uma horda.
+- `gabriel-memorial.html` traz um retrato original, sua vida civil como técnico de manutenção, o encontro com Jully, a última travessia e uma carta proposta da personagem. `img-memorial/gabriel-mercer.png` é o retrato do abrigo antes da morte.
+- A cena usa um gerador de emergência para reativar o motor e a sirene de um veículo de serviço que desvia a horda. A luz verde da escada vira o motivo da despedida e conecta a perda ao trabalho de comunicações de Jully no presente.
+- `memorial.html` agora liga o registro associado a Jully à página individual sem alterar as duas baixas oficiais da formação. `jully-presente.html` recebeu o link direto para o memorial.
+- Os fatos já confirmados e os detalhes criados estão separados em `JULLY-NOIVO-LORE-PROPOSTA.md`; nome, cena, carta e menção à perda gestacional continuam abertos à revisão. Trabalho local, não publicado no GitHub.

@@ -239,11 +239,18 @@ O endereço anterior `dimitri-presente.html` redireciona para `dimitri-arquivo.h
 
 Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa do personagem. Exemplos já consolidados: Alice (turquesa médico/cobre), Mark (aço/âmbar), Ariani (vinho/rosa), Britney (framboesa/azul-claro), Hellen (latão/fumaça), Joey (areia/sálvia), Naomi Yagami (roxo escuro/roxo claro, inspirado na paleta de Iori Yagami), Chloe (violeta/rosa), Luke (musgo/âmbar), John (ciano/cobre), Dimitri (aço/azul-gelo/vermelho), Nathan (verde-fósforo/grafite), Lana (verde-rádio/areia) e Pollyana (ameixa/âmbar). Novas páginas devem definir sua própria paleta antes de reutilizar uma existente.
 
-### Naomi Yagami — sequência visual do presente — 4 de novembro de 2026
+### Naomi Yagami — organização visual inicial — 4 de novembro de 2026
 
 - `img-naomi-presente/` reúne 30 imagens novas, ordenadas como uma sequência de campo desde os retratos e a preparação de Naomi até exploração, esconderijo, fuga, resgate e chegada ao acampamento Hellsing.
-- `naomi-registros.html` mantém o carrossel de três imagens que já existia e acrescenta abaixo uma grade própria para a sequência. Os quadros são de tamanho médio, responsivos e abrem a imagem completa no mesmo lightbox do arquivo.
-- `js/naomi-registros.js` cria os quadros a partir da lista sequencial; as miniaturas usam carregamento tardio para reduzir o peso inicial. A paleta roxa exclusiva de Naomi permanece aplicada.
+- A primeira versão de `naomi-registros.html` manteve o carrossel antigo e acrescentou uma grade de quadros médios para a sequência. Essa estrutura foi substituída na seção seguinte.
+- Na versão inicial, `js/naomi-registros.js` montava cartões separados; o HTML e o JavaScript atuais não incluem essa grade. A paleta roxa exclusiva de Naomi permanece aplicada.
+
+### Naomi Yagami — álbum único — 4 de novembro de 2026
+
+- A galeria foi consolidada em um único carrossel com as 3 imagens anteriores mais as 30 imagens de `img-naomi-presente/` (33 no total). O HTML não contém mais miniaturas nem a grade independente; os estilos órfãos da grade foram removidos.
+- `js/naomi-registros.js` avança automaticamente a cada 6,5 segundos em looping, permite setas, teclado e gesto de toque, pré-carrega apenas a próxima foto e pausa em interação, lightbox, aba oculta e preferência por movimento reduzido.
+- A capa de Naomi usa vermelho-sangue claro no primeiro nome; os tons roxos continuam como paleta de apoio e no sobrenome.
+- Versões de cache atualizadas nos arquivos HTML afetados. Alterações locais, sem publicação nesta etapa.
 - As 30 imagens foram comparadas por hash com as três imagens já usadas no carrossel; não há duplicatas exatas entre elas. O trabalho está local e ainda não foi publicado no GitHub.
 
 ### John e Amélia — memorial e família — 4 de novembro de 2026
@@ -495,3 +502,11 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `john-memorial.html` reúne a carta em destaque de Amélia e um seletor de 32 publicações, agrupadas entre núcleo original, geração seguinte, outros membros da facção e comboio. As 13 mensagens originais são preservadas; os demais textos são propostas revisáveis.
 - `js/john-transmission-log.js` expõe `window.JOHN_MEMORIAL_RECORDS` e continua renderizando o diário em `memorial.html`; `js/john-memorial-wall.js` usa os mesmos registros na nova página, com respostas e reações.
 - `era-extincao-presente/memorial-hellsings.css` recebeu o efeito de revelação; `era-extincao-presente/john-memorial.css` cuida do retrato, carta, seleção de vozes e layout responsivo.
+
+## Memorial proposto de Gabriel Mercer — noivo de Jully
+
+- `gabriel-memorial.html` é uma página individual ligada a `memorial.html` e `jully-presente.html`. O registro é associado à rota, não altera a contagem de duas baixas da formação dos Hellsings.
+- `img-memorial/gabriel-mercer.png` é o retrato novo; `era-extincao-presente/gabriel-memorial.css` cria uma identidade âmbar/oliva e ajustes responsivos para a página.
+- A história e a carta de Jully são reconstruções literárias revisáveis. O fato confirmado é a morte do noivo de Jully depois do Dia D, ao salvar Jully e o grupo de uma horda. O nome Gabriel Mercer, a profissão de técnico civil, o encontro e a cena da sirene são propostas documentadas em `JULLY-NOIVO-LORE-PROPOSTA.md`.
+- A cena proposta usa um gerador de emergência para reativar o motor e a sirene do veículo de serviço; o grupo escapa pela escada de manutenção enquanto a horda segue o som. A perda gestacional é mencionada com cuidado, seguindo a lore que já existia para Jully.
+- Nenhum JavaScript novo foi necessário; a página usa o cursor global e os estilos existentes de memorial.
