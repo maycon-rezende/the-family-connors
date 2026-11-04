@@ -136,7 +136,9 @@ Nem todos atravessaram os anos de devastação.
 
 Brian Taylor foi infectado durante uma saída de campo. Conseguiu regressar ao bunker e avisar a equipe, mas a infecção avançou enquanto Alice e os demais usavam os recursos disponíveis para cuidar dele. Brian morreu na enfermaria. Seus mapas e anotações de rota ficaram com Jack.
 
-Brian morreu antes de John. Mais tarde, durante outra fuga em que muitas pessoas precisavam alcançar uma saída, John foi mordido e se sacrificou para salvar o grupo. Ficou para trás e atraiu a horda para longe da rota, dando aos demais tempo para escapar.
+Brian morreu antes de John. Mais tarde, durante a fuga de um comboio, John foi mordido e sua filha Olivia foi arranhada. John havia preparado uma bomba para impedir que a horda alcançasse os sobreviventes. Pai e filha ficaram na passagem, seguraram o avanço e só acionaram o último recurso depois que o comboio conseguiu escapar. A explosão matou John e Olivia e atingiu a horda; todos os demais sobreviveram. John e Olivia morreram juntos.
+
+John era casado com Amélia Brown Smith Winchester. Ela não ouviu a última conversa entre pai e filha; soube da morte dos dois, mas não da frase que John disse a Olivia antes da explosão.
 
 As imagens de John no presente foram registradas antes de sua morte. Os dois integrantes têm registros no novo [Memorial dos Hellsings](../memorial.html), que também reúne lembranças de outras pessoas perdidas ao longo das rotas.
 

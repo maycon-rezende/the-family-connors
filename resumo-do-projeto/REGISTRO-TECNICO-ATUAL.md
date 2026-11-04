@@ -246,6 +246,15 @@ Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa
 - `js/naomi-registros.js` cria os quadros a partir da lista sequencial; as miniaturas usam carregamento tardio para reduzir o peso inicial. A paleta roxa exclusiva de Naomi permanece aplicada.
 - As 30 imagens foram comparadas por hash com as três imagens já usadas no carrossel; não há duplicatas exatas entre elas. O trabalho está local e ainda não foi publicado no GitHub.
 
+### John e Amélia — memorial e família — 4 de novembro de 2026
+
+- `memorial.html` narra **O Último Abraço** em sete páginas viráveis. A capa usa `img-hellsing/john-presente.png`, identificada como registro anterior à morte. O leitor funciona por botões, setas esquerda/direita, início/fim do teclado e deslize horizontal por toque; `prefers-reduced-motion` desativa as animações.
+- `js/john-memorial-book.js` muda a página ativa, contador, progresso e controles. `era-extincao-presente/memorial-hellsings.css` estiliza o livro com papel de arquivo e detalhes ciano/cobre, com layout compacto para celular.
+- Cânone: Brian morreu primeiro; na fuga do comboio John foi mordido, Olivia foi arranhada; John havia preparado a bomba; os dois ficaram na passagem e morreram na explosão depois da fuga de todos os demais. Amélia não ouviu as últimas palavras.
+- `john-presente.html`, `js/john-transmission-log.js` e as conversas do memorial foram alinhados a essa versão. As homenagens em frequência permanecem separadas da leitura do livro.
+- `amelia-arquivo.html` agora registra a ficha fornecida: Amélia Brown Smith Winchester, 47 anos no presente, estudos de arquitetura, trabalho com Mei Braddock, casamento com John antes do Dia D, três filhos, família de origem e luto. `membros-hellsings.html` e `UNIVERSO-E-LORE.md` apontam para esses dados atualizados.
+- `img-amelia/amelia-recepcao.png` entrou na galeria como reconstrução do cotidiano de trabalho no Ateliê Braddock antes do Dia D; os dois retratos anteriores continuam sem data específica.
+
 ## 5. Herdeiros e segunda geração
 
 | Núcleo | Arquivos principais | Estado técnico |

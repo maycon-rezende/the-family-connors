@@ -368,12 +368,15 @@
 - O diálogo inclui retratos atuais, respostas e reações entre personagens. Brian e John são lembrados, sem falas atribuídas a eles depois da morte.
 - O memorial carrega `era-extincao-presente/malha-chat.css` e `js/malha-chat.js`, compartilhados com a página inicial. O arquivo base é fixo; recortes roteirizados de sobreviventes aparecem em sequência durante a leitura. Brian e John não enviam mensagens depois da morte.
 
-## Atualização de 31 de outubro de 2026 — homenagem completa de John
+## Atualização de 4 de novembro de 2026 — memorial de John e Olivia
 
-- O registro resumido de John foi ampliado em `memorial.html` com **A estrada até a última fuga**, preservando a lore confirmada: ele foi mordido e se sacrificou para que muitas pessoas escapassem. O caminho entre os fatos confirmados está identificado como reconstrução literária revisável, sem datas inventadas.
-- O arquivo de John ganhou 13 homenagens dos sobreviventes, exibidas como transcrições de frequência selecionadas uma por vez. A navegação não repete o mural de retratos usado no memorial de Brian; não há áudio ou foto individual por post.
-- A ordem canônica foi corrigida: Brian morreu primeiro; John morreu depois, na fuga. Brian não publica homenagem no memorial de John. John não escreve postumamente e todas as fotos dele continuam identificadas como anteriores à morte.
-- `js/john-transmission-log.js` controla o índice de frequências, leitura, reações, respostas e teclado. `era-extincao-presente/memorial-hellsings.css` define a interface ciano/cobre, a onda de sinal decorativa e os ajustes para celular.
+- O autor confirmou a versão definitiva da última fuga: John foi mordido, Olivia foi arranhada, e John preparou a bomba. Pai e filha seguraram a horda na passagem até o comboio escapar; John detonou o artefato e os dois morreram juntos. Todos os demais sobreviveram. Brian morreu antes de John.
+- `memorial.html` agora apresenta **O Último Abraço** como livro digital de sete páginas, com a foto de John anterior à morte, a frase final escolhida pelo autor, virada animada, botões, setas do teclado e gesto de deslizar em telas sensíveis ao toque. As treze homenagens dos sobreviventes continuam logo abaixo, uma voz por vez.
+- `js/john-memorial-book.js` controla a leitura e o progresso; `era-extincao-presente/memorial-hellsings.css` define o livro responsivo e a animação de páginas, respeitando movimento reduzido. A antiga cronologia de John foi substituída pela narrativa detalhada.
+- O relato foi alinhado em `john-presente.html`, nas conversas do memorial e no depoimento de Luke. Nenhuma fala foi atribuída a John depois da morte; todas as imagens dele permanecem anteriores à última fuga.
+- A ficha enviada define Amélia Brown Smith Winchester, 47 anos no presente, viúva de John e mãe de Henry, Samuel e Olivia. `amelia-arquivo.html` passou a incluir a vida antes do Dia D, o encontro e casamento com John, a família, o ingresso nos Hellsings e o luto pela morte de John e Olivia. O cartão dos membros e os links relacionados também foram atualizados.
+- `img-amelia/amelia-recepcao.png` foi integrado como reconstrução visual de uma pausa de Amélia no Ateliê Braddock antes do Dia D; os outros retratos continuam sem data atribuída.
+- `LORE-PRESENTE.md` e `UNIVERSO-E-LORE.md` foram alinhados ao relato oficial. As imagens de Amélia e John juntos continuam identificadas como anteriores à morte dele; o retrato individual de Amélia permanece sem data.
 
 ## Atualização de 1º de novembro de 2026 — conversas das facções e mural Hellsings
 
@@ -482,7 +485,7 @@
 - A página dos membros recebeu uma tempestade de areia breve na entrada e partículas sutis caindo enquanto o índice fica aberto. O efeito respeita `prefers-reduced-motion`.
 - O cursor da página agora usa o sistema compartilhado de núcleo, anel, poeira e impacto no clique, com a paleta ajustada para areia dourada.
 - Foi criado `amelia-arquivo.html`, com visual próprio e links para os registros de John e para o memorial. O retrato individual de Amelia fica sem data atribuída; as imagens dela com John são anteriores à morte dele.
-- Sobrenome, idade, origem e história pessoal de Amelia seguem em aberto, sem acréscimos de lore.
+- Naquele estágio, sobrenome, idade e história de Amélia ainda estavam em aberto. A ficha recebida em 4 de novembro resolveu esses dados; o perfil atualizado está descrito na seção **memorial de John e Olivia**.
 
 # Atualização de 2 de novembro de 2026 — Darius Bennett
 
@@ -498,11 +501,11 @@
 - Foram geradas três imagens presentes de Micah usando a foto familiar como referência visual: levando uma mensagem, atualizando registros e percorrendo uma rota entre abrigos.
 - `micah-bennett.html` usa o novo retrato solo na capa e exibe os outros dois em sua galeria. O cartão de Micah em `membros-hellsings.html` também usa o novo retrato; a página mantém a paleta azul/cidreira do personagem.
 
-# Atualização de 3 de novembro de 2026 — imagens de Amelia
+# Atualização de 3 de novembro de 2026 — imagens de Amélia
 
 - A imagem enviada pelo autor foi usada como referência para três reconstruções visuais de Amelia, reunidas em `img-amelia/`.
 - `amelia-arquivo.html` agora abre com um retrato solo novo e inclui os outros dois em uma galeria. O cartão de Amelia em `membros-hellsings.html` também recebeu o novo retrato.
-- As imagens ficam sem data ou época atribuída. Sobrenome, idade e história pessoal continuam em aberto; as fotos de Amelia com John permanecem como registros anteriores à morte dele.
+- Naquele registro, as imagens eram identificadas como reconstruções sem data e os detalhes biográficos ainda estavam em aberto. A ficha enviada em 4 de novembro atualiza os dados oficiais; consulte a seção **memorial de John e Olivia** acima.
 
 # Atualização de 3 de novembro de 2026 — arquivos visuais das famílias Carver e Bennett
 

@@ -101,9 +101,14 @@ Os sobrenomes Bennett e os backgrounds pessoais foram criados para as páginas i
 - Os ofícios e trajetórias pessoais de Imani, Asha e Nyla continuam como propostas revisáveis: Imani é educadora e organiza rotinas nos abrigos; Asha recupera ferramentas e equipamentos; Nyla preserva a memória comunitária em cadernos sem expor localizações atuais.
 - As páginas individuais mostram retratos do presente e uma reconstrução visual de cada familiar no período anterior ao Dia D. `luke-familia.html` reúne as três cenas domésticas em um arquivo Carver separado; os perfis identificam as imagens históricas como reconstruções, não como fotografias documentais.
 
-## Amelia — esposa de John
+## Amélia Brown Smith Winchester — esposa de John
 
-- Amelia é a esposa de John, conforme indicado pelo autor. As imagens preservadas em que os dois aparecem juntos são anteriores à morte de John.
-- O retrato individual disponível (`img-hellsing/amelia-presente.png`) não tem data identificada; ele não deve ser usado para afirmar uma fase específica da vida dela.
-- Sobrenome, idade, origem, ocupação e background de Amelia permanecem em aberto. A página `amelia-arquivo.html` registra apenas o vínculo e a procedência conhecida das imagens.
-- O autor enviou uma referência visual de Amelia; as reconstruções em `img-amelia/` preservam os traços dessa imagem e não recebem data ou período. A referência não define sobrenome, idade ou eventos de sua vida.
+- Seu nome de nascimento é **Amélia Brown Smith**; após se casar com John Bertolai Winchester, passou a usar **Amélia Brown Smith Winchester**. Tem 47 anos durante *A Era da Extinção*, embora aparente cerca de 30. Tinha aproximadamente 27 anos no Dia D; o intervalo de cerca de vinte anos é aproximado.
+- Tem pele morena clara, olhos cor de mel e cabelos pretos, longos e lisos. Usa aparelho metálico e um piercing discreto abaixo do lábio.
+- É filha de Rachel Brown, professora, e Bruce Smith, chefe de cozinha. Tem dois irmãos mais velhos, Gabriel e Daniel Brown Smith, e uma irmã mais nova, Rebecca Brown Smith. A família perdeu contato com Gabriel, Daniel e suas famílias durante o caos; o destino deles permanece desconhecido.
+- Antes do Dia D, Amélia trabalhava no Ateliê Braddock como assistente de Mei Braddock e estudava arquitetura. Acompanhava projetos e obras com Mei, mas não concluiu a faculdade depois do colapso.
+- Conheceu John em um evento invadido por criminosos. John e Bobby Lee ajudaram a protegê-la durante a tomada de reféns. Ela e John voltaram a se encontrar em uma cafeteria, iniciaram um relacionamento, casaram-se antes do Dia D e tiveram três filhos: Henry, Samuel e Olivia.
+- John contou a Amélia sobre os Hellsings depois do casamento. Ela passou a integrar o grupo depois do Dia D, em *A Era da Extinção*.
+- Brian morreu primeiro. Mais tarde, na fuga de um comboio, John foi mordido e Olivia foi arranhada. John havia preparado uma bomba como último recurso. Pai e filha ficaram na passagem, seguraram a horda e morreram juntos na explosão depois que todos os demais escaparam.
+- Amélia não ouviu a conversa final de John e Olivia. Após a perda, Naomi, Alice, Hellen e Ariani permaneceram ao lado dela; os demais Hellsings também lhe deram apoio.
+- As imagens de Amélia e John juntos são anteriores à morte dele. O retrato individual sem data não deve ser usado para afirmar uma fase específica. As reconstruções visuais em `img-amelia/` preservam a referência enviada pelo autor.

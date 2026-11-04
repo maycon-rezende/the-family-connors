@@ -31,7 +31,7 @@
     },
     {
       label: 'RETORNO // ÚLTIMA MISSÃO',
-      copy: 'John atraiu a ameaça para longe e permitiu que o restante da equipe escapasse.',
+      copy: 'John ficou com Olivia na passagem e detonou a bomba que havia preparado depois que o comboio escapou.',
     },
   ];
 

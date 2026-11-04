@@ -91,10 +91,10 @@
     {
       name: 'Luke', role: 'HELLSING // CAMPO', channel: 'AS MARCAS NO CHÃO',
       title: 'A trilha que se divide',
-      message: 'Eu reconheci a direção que John escolheu porque as marcas no chão deixaram de apontar para a saída. Ele levou a horda para longe. Por um instante, pensei em seguir aquele rastro e puxá-lo de volta. Então ouvi o último grupo cruzar atrás de mim. Fiquei com a rota que ele tinha aberto, porque voltar significaria fechar a passagem para todos os outros.',
+      message: 'Eu reconheci o som antes de ver o clarão: John tinha preparado a bomba para o caso de a horda alcançar a passagem. Ele e Olivia ainda seguravam a retaguarda. Por um instante, pensei em correr de volta. Então ouvi Jack chamar os últimos nomes do comboio; fiquei na rota, porque retornar teria colocado todos outra vez diante da horda. A explosão veio depois que o último sobrevivente cruzou. Não houve terceira contagem para os dois.',
       signoff: 'Ainda sei onde o rastro se separa. Nunca mais chamei aquele lugar de atalho.',
       reactions: [{ by: 'Jack Connor', icon: '⌖' }, { by: 'Hellen Wren', icon: '🕯' }],
-      reply: { by: 'Jack Connor', role: 'COMANDO', text: 'Você manteve a escolha dele viva quando trouxe os últimos para fora.' },
+      reply: { by: 'Jack Connor', role: 'COMANDO', text: 'Você manteve a escolha dos dois viva quando trouxe os últimos para fora.' },
     },
     {
       name: 'Hellen Wren', role: 'HELLSING // INTELIGÊNCIA DE CAMPO', channel: 'A LINHA NO MAPA',
