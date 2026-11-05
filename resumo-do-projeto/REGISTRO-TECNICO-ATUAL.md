@@ -205,7 +205,7 @@ O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterai
 | `era-extincao-presente/brian-presente.css` | Identidade visual em bronze e azul-acinzentado, retratos sem recorte e layout responsivo. |
 | `img-hellsing/brian-taylor.png`, `brian-presente.png`, `brian-taylor-presente.png`, `brian-presente1.png` a `brian-presente3.png` e os novos registros de campo e enfermaria | Quinze registros visuais preservados na galeria individual de Brian; as imagens não recebem datas ou operações não confirmadas. |
 
-O cartão de Brian na página inicial e a ficha do memorial dos Hellsings abrem `brian-presente.html`. O dossiê de John está ligado à ficha correspondente dos Hellsings. `memorial.html` reúne as baixas oficiais de Brian e John. A homenagem de Brian abre com `img-hellsing/brian-presente.png`, percorre a jornada dele até a morte e apresenta 24 mensagens reconstruídas — da formação original, de familiares, de nove descendentes identificados e das pessoas do comboio — em um mural responsivo de retratos clicáveis, com um post individual para cada voz. `js/memorial-journal.js` organiza os retratos, abre os posts, controla a navegação entre homenagens e restaura o foco ao fechar. Quando não há uma foto conjunta, o post mostra os retratos preservados da pessoa e de Brian; as cenas conjuntas de Jack com Brian e de Alice cuidando de Brian são usadas como imagem única. Ariani, Britney e Jully usam novos retratos do presente; Alice aparece na enfermaria do bunker. Os cartões sem imagem identificada permanecem selados, em linha com os arquivos ainda não recuperados. Os textos atuais são reconstruções literárias editáveis, abertas às cenas definitivas e imagens que o autor enviar. A homenagem termina com `video/despedida.mp4` silenciado por `js/memorial-video.js`. A mensagem de John está identificada como registrada enquanto ele ainda estava vivo; a fotografia dele anterior à morte permanece no memorial. `era-extincao-presente/memorial-hellsings.css` contém a identidade visual e os ajustes responsivos. Brian morreu após ser infectado em campo; John se sacrificou durante uma fuga para que muitas pessoas escapassem. Mara Voss é uma aliada civil criada para o memorial, não integrante oficial.
+O cartão de Brian na página inicial e a ficha do memorial dos Hellsings abrem `brian-presente.html`. O dossiê de John está ligado à ficha correspondente dos Hellsings. `memorial.html` reúne as baixas oficiais de Brian e John. A homenagem de Brian abre com `img-hellsing/brian-presente.png`, percorre a jornada dele até a morte e apresenta 24 mensagens reconstruídas — da formação original, de familiares, de nove descendentes identificados e das pessoas do comboio — em um mural responsivo de retratos clicáveis, com um post individual para cada voz. `js/memorial-journal.js` organiza os retratos, abre os posts, controla a navegação entre homenagens e restaura o foco ao fechar. Quando não há uma foto conjunta, o post mostra os retratos preservados da pessoa e de Brian; as cenas conjuntas de Jack com Brian e de Alice cuidando de Brian são usadas como imagem única. Ariani, Britney e Jully usam novos retratos do presente; Alice aparece na enfermaria do bunker. Os cartões sem imagem identificada permanecem selados, em linha com os arquivos ainda não recuperados. Os textos atuais são reconstruções literárias editáveis, abertas às cenas definitivas e imagens que o autor enviar. O vídeo `video/despedida.mp4` fica no fim do caderno: o atalho “Ir direto à despedida” abre a leitura e leva até ele, com o áudio original disponível nos controles; a página não força o player ao mudo. A mensagem de John está identificada como registrada enquanto ele ainda estava vivo; a fotografia dele anterior à morte permanece no memorial. `john-memorial.html` reúne a carta principal de Amélia e 32 publicações dos Hellsings; as antigas 13 frequências foram retiradas de `memorial.html` para evitar repetir as homenagens. `era-extincao-presente/memorial-hellsings.css` contém a identidade visual e os ajustes responsivos. Brian morreu após ser infectado em campo; John se sacrificou durante uma fuga para que muitas pessoas escapassem. Mara Voss é uma aliada civil criada para o memorial, não integrante oficial.
 
 Brian aparece como `HLS-09` no arquivo de comando (`js/hellsings-command.js`) e como `BT-09` no índice e no memorial do presente; a página individual preserva ambos os identificadores conforme o contexto.
 
@@ -247,7 +247,7 @@ Cada dossiê usa variáveis e acentos próprios, derivados da função narrativa
 
 ### Naomi Yagami — álbum único — 4 de novembro de 2026
 
-- A galeria foi consolidada em um único carrossel com as 3 imagens anteriores mais as 30 imagens de `img-naomi-presente/` (33 no total). O HTML não contém mais miniaturas nem a grade independente; os estilos órfãos da grade foram removidos.
+- A galeria foi consolidada em um único carrossel com as 3 imagens anteriores mais as 32 imagens atuais de `img-naomi-presente/` (35 no total). O HTML não contém mais miniaturas nem a grade independente; os estilos órfãos da grade foram removidos.
 - `js/naomi-registros.js` avança automaticamente a cada 6,5 segundos em looping, permite setas, teclado e gesto de toque, pré-carrega apenas a próxima foto e pausa em interação, lightbox, aba oculta e preferência por movimento reduzido.
 - A capa de Naomi usa vermelho-sangue claro no primeiro nome; os tons roxos continuam como paleta de apoio e no sobrenome.
 - Versões de cache atualizadas nos arquivos HTML afetados. Alterações locais, sem publicação nesta etapa.
@@ -279,7 +279,7 @@ As páginas individuais dos herdeiros têm detalhes específicos — por exemplo
 | --- | --- |
 | `hilary-caldwell-ashford.html` | Dossiê de Hilary com biografia, cronologia e galerias separadas de antes do Dia D e do presente. |
 | `era-extincao-presente/hilary-caldwell-ashford.css`, `era-extincao-presente/hilary-cursor.css` e `js/hilary-archive.js` | Paleta exclusiva verde clínico/âmbar, cursor de rastreamento para mouse, navegação por período e visualizador acessível de imagens com botões, setas e Escape. Cursor desativado em touch e para preferência por movimento reduzido. |
-| `img-hilary-passado=presente/` | Pasta com 20 arquivos do núcleo de Hilary; o perfil seleciona dez fotos anteriores ao Dia D e quatro registros do presente, sem misturar os períodos. |
+| `img-hilary-passado=presente/` | Pasta atualmente com 26 arquivos do núcleo de Hilary; o perfil seleciona dez fotos anteriores ao Dia D e nove registros do presente, sem misturar os períodos. |
 
 O índice `membros-hellsings.html` apresenta Lana Whitmore, Sally Ward, Hilary Caldwell Ashford, Sophie Romanoff e Leona. Leona tem página própria; sua história detalhada está marcada como proposta.
 
@@ -510,3 +510,31 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - A história e a carta de Jully são reconstruções literárias revisáveis. O fato confirmado é a morte do noivo de Jully depois do Dia D, ao salvar Jully e o grupo de uma horda. O nome Gabriel Mercer, a profissão de técnico civil, o encontro e a cena da sirene são propostas documentadas em `JULLY-NOIVO-LORE-PROPOSTA.md`.
 - A cena proposta usa um gerador de emergência para reativar o motor e a sirene do veículo de serviço; o grupo escapa pela escada de manutenção enquanto a horda segue o som. A perda gestacional é mencionada com cuidado, seguindo a lore que já existia para Jully.
 - Nenhum JavaScript novo foi necessário; a página usa o cursor global e os estilos existentes de memorial.
+
+## Registros visuais novos — 5 de novembro de 2026
+
+- `jully-presente.html` usa `img-jully/jully-presente.png` como retrato de capa. `jully-registros.html` e `js/jully-registros.js` incorporam a mesma imagem como registro 06; o carrossel agora informa seis registros.
+- `amelia-arquivo.html` inclui nove imagens novas de `img-amelia.passado.presente/` na galeria, com textos alternativos e legendas por período. As três imagens já existentes foram mantidas.
+- `hilary-caldwell-ashford.html` integra cinco novas imagens na seção do presente. O visualizador navega por todos os registros usando a mesma lista de gatilhos; as versões de cache do CSS e do JavaScript foram atualizadas.
+- `naomi-registros.html` e `js/naomi-registros.js` integram `roupa-nova.png` e `naomi-hilary.png` ao álbum em looping. O total atual é de 35 imagens: três anteriores e 32 da sequência nova.
+- As páginas afetadas e este resumo técnico estão atualizados localmente; nenhuma publicação foi feita nesta etapa.
+
+## Tema musical de Jack no presente — 5 de novembro de 2026
+
+- `audio/theme-jack-presente.mp3` foi ligado somente à página `jack-presente.html`; o dossiê do passado não foi alterado.
+- A faixa inicia junto com a página e toca em looping. Não há controle de áudio visível; o carregamento começa com a página.
+- `era-extincao-presente/jack-theme.js` tenta iniciar o autoplay e tenta novamente após uma interação geral, caso a política do navegador bloqueie a reprodução automática com som.
+- Regra do projeto: nenhuma música terá botão de ligar, desligar ou pausar. A faixa de Britney também permanece automática; o controle antigo foi removido.
+
+## Tema musical do memorial — 5 de novembro de 2026
+
+- `video/theme-memorial.mp4` fornece somente a trilha da página `memorial.html`: é carregado por um elemento `<audio>` oculto, sem exibir o vídeo.
+- `era-extincao-presente/memorial-theme.js` tenta iniciar a reprodução automaticamente e retenta após um gesto geral se o navegador bloquear autoplay com som.
+- Para não sobrepor a despedida de Brian, a trilha de fundo pausa enquanto o vídeo existente toca e retorna quando ele pausa ou termina. Também pausa quando a página fica oculta.
+- Nenhum botão de música foi adicionado; a regra global permanece aplicada.
+
+## Entrada de presença de Jack — 5 de novembro de 2026
+
+- `jack-presente.html` agora abre com uma sequência visual de presença sobre a página atual de Jack. Antes da música, três registros mostram que Jack preparou Mick para assumir o comando antes de seguir para a Interpol, sua leitura de campo e sua liderança protetora. Aos 12 segundos, ele diz: “Sigam-me. Eu abro a rota. Ninguém fica para trás.” A fala permanece até a trilha começar no segundo 14; então o nome surge em fade e depois entra a foto atual dele.
+- `era-extincao-presente/jack-presence.js` sincroniza as fases pelo `currentTime` real de `theme-jack-presente.mp3`, evitando descompasso caso a reprodução comece atrasada. Depois da imagem, a sobreposição se dissolve para revelar o dossiê.
+- `era-extincao-presente/jack-presence.css` cria o pulso de sinal e o tratamento visual cobre/fumaça, com adaptação mobile e respeito a `prefers-reduced-motion`. A fala e os dois atributos de liderança acrescentados são uma proposta literária revisável, baseada na trajetória já estabelecida de Jack e Mick. A intro não adiciona controles de áudio.

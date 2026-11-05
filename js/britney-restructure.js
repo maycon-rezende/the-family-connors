@@ -33,32 +33,6 @@
     });
   }
 
-  const audio = document.querySelector('#britney-audio');
-  const musicButton = document.querySelector('.music-control');
-  const equalizer = document.querySelector('.equalizer');
-  const syncMusicUI = () => {
-    const playing = audio && !audio.paused;
-    musicButton?.setAttribute('aria-pressed', String(playing));
-    if (musicButton) musicButton.querySelector('span').textContent = playing ? '❚❚' : '▶';
-    equalizer?.classList.toggle('paused', !playing);
-  };
-  musicButton?.addEventListener('click', async () => {
-    if (!audio) return;
-    if (audio.paused) {
-      try {
-        await audio.play();
-      } catch (_) {
-        /* o navegador pode exigir interação */
-      }
-    } else {
-      audio.pause();
-    }
-    syncMusicUI();
-  });
-  audio?.addEventListener('play', syncMusicUI);
-  audio?.addEventListener('pause', syncMusicUI);
-  syncMusicUI();
-
   if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
     document.querySelectorAll('[data-tilt]').forEach((card) => {
       card.addEventListener('pointermove', (event) => {

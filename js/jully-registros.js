@@ -37,6 +37,13 @@
       src: 'img-presente/personagens/jull-presente.png',
       alt: 'Jully Connor em um abrigo de campo no presente',
     },
+    {
+      code: 'JC-PRE-06',
+      title: 'Em movimento no acampamento',
+      caption: 'Jully atravessa a base dos Hellsings entre uma tarefa e a próxima.',
+      src: 'img-jully/jully-presente.png',
+      alt: 'Jully Connor caminhando pelo acampamento dos Hellsings no presente',
+    },
   ];
 
   const stage = document.querySelector('[data-record-stage]');

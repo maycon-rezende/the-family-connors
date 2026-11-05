@@ -12,7 +12,7 @@
 | `jack-presente.html` e `mark-presente.html` | Dossiês atuais com terminal de celular, mensagens arquivadas do crossover Doomsday e caderno de campo interativo |
 | `posts-hellsings.html` | Posts dos Hellsings: feed separado com publicações que entram continuamente em ciclo aleatório, comentários em fio e reações locais |
 | `membros-hellsings.html` | Índice de personagens ligados aos Hellsings, com acesso aos arquivos individuais da Lana e da Sally |
-| `memorial.html` | Memorial central de Brian Taylor (retrato do presente, jornada, diário com 24 homenagens individuais, respostas e reações da equipe, chat coletivo dos sobreviventes e despedida sem áudio), homenagem ampliada de John com trajetória e 13 transmissões textuais, e outras pessoas perdidas nas rotas dos Hellsings; ainda sem livro público de visitantes |
+| `memorial.html` | Memorial central com jornada e caderno de 24 homenagens de Brian, chat coletivo dos sobreviventes e vídeo de despedida com áudio habilitado e atalho no caderno; também contém o relato interativo da última fuga de John. A dedicatória e as 32 homenagens de John ficam em `john-memorial.html`; o canal duplicado foi removido daqui. |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
@@ -84,6 +84,10 @@ Os arquivos fotográficos listados usam carrosséis independentes, controles de 
 ## Pastas de mídia
 
 - `img-jack/`, `img-alice/`, `img-mark/`, `img-ariani/`, `img-britney/` e `img-jully/`: imagens individuais.
+- `img-amelia.passado.presente/`: nove imagens adicionadas à galeria de `amelia-arquivo.html`, identificadas por período nas legendas.
+- `img-hilary-passado=presente/`: pasta com 26 imagens; a galeria atual reúne dez registros anteriores ao Dia D e nove do presente.
+- `img-naomi-presente/`: sequência de 32 imagens novas integrada ao álbum único de Naomi.
+- `img-jully/jully-presente.png`: foto atual usada na capa do dossiê e como sexto registro em `jully-registros.html`.
 - `jack-presente.html`: perfil narrativo de Jack no presente, com fundo contínuo e acesso ao dossiê visual.
 - `registros-jack.html`: arquivo fotográfico independente de Jack Connor.
 - `filhos-connor.html`: central da segunda geração de Jack e Alice.
@@ -100,6 +104,12 @@ Os arquivos fotográficos listados usam carrosséis independentes, controles de 
 - `img-brothers/`: irmãos, casais e núcleos familiares.
 - `casa/`: 24 ambientes da Mansão Connor.
 - `audio/`: trilhas das páginas.
+- `audio/theme-jack-presente.mp3`: tema da página atual de Jack, iniciado junto com `jack-presente.html`.
+- `era-extincao-presente/jack-theme.js`: tenta iniciar a trilha na abertura da página e repete a tentativa em interação geral se o navegador bloquear autoplay.
+- `era-extincao-presente/jack-presence.css/js`: sequência cinematográfica sincronizada à faixa; antes do segundo 14 apresenta a formação e a liderança de Jack e uma fala dele, depois revela nome, foto atual e perfil.
+- `video/theme-memorial.mp4`: em `memorial.html`, é usado apenas como fonte de áudio dentro de `<audio>`; nenhum vídeo dessa faixa é exibido.
+- `era-extincao-presente/memorial-theme.js`: inicia a trilha do memorial, retenta após interação geral se autoplay for bloqueado e pausa a música enquanto o vídeo de despedida de Brian toca.
+- Padrão de áudio do projeto: músicas de página tocam junto com a página; não usar botões de ligar, desligar ou pausar música.
 - `video/`: vídeos compartilhados.
 - `galeria-assets/`: recursos auxiliares e versões otimizadas anteriores.
 

@@ -553,3 +553,37 @@
 - A cena usa um gerador de emergência para reativar o motor e a sirene de um veículo de serviço que desvia a horda. A luz verde da escada vira o motivo da despedida e conecta a perda ao trabalho de comunicações de Jully no presente.
 - `memorial.html` agora liga o registro associado a Jully à página individual sem alterar as duas baixas oficiais da formação. `jully-presente.html` recebeu o link direto para o memorial.
 - Os fatos já confirmados e os detalhes criados estão separados em `JULLY-NOIVO-LORE-PROPOSTA.md`; nome, cena, carta e menção à perda gestacional continuam abertos à revisão. Trabalho local, não publicado no GitHub.
+
+# Atualização de 5 de novembro de 2026 — despedida de Brian no caderno
+
+- O botão **Ir direto à despedida** abre o caderno de depoimentos de Brian e desloca a leitura até o vídeo no final.
+- O player permite ouvir a faixa original do vídeo; `memorial.html` já não carrega o script que forçava o mudo. O vídeo mantém controles nativos e respeita movimento reduzido no atalho.
+- A antiga seção de 13 frequências de John foi removida do memorial central para evitar repetição. A página `john-memorial.html` mantém a carta de Amélia e as homenagens dos Hellsings.
+- Os resumos atuais em `README.md`, `ARQUITETURA.md` e `REGISTRO-TECNICO-ATUAL.md` foram alinhados com essa organização.
+
+# Atualização de 5 de novembro de 2026 — novas imagens de Jully, Amélia, Hilary e Naomi
+
+- A foto atual `img-jully/jully-presente.png` agora aparece no topo do dossiê de Jully e como sexto registro do álbum. Contagem, seletor e legenda foram atualizados.
+- Nove imagens novas de Amélia entraram na galeria de `amelia-arquivo.html`, incluindo cenas do período anterior ao Dia D e do presente. As legendas descrevem o que está visível e não atribuem nome às companheiras sem identificação.
+- A galeria presente de Hilary recebeu cinco imagens novas: três registros individuais e duas cenas com Naomi e Alice. O visualizador passa a navegar por elas junto às imagens já existentes.
+- Duas imagens novas de Naomi entraram no álbum em looping. A sequência atual tem 35 registros: três imagens anteriores e 32 imagens de `img-naomi-presente/`.
+- Atualizados os resumos técnicos e as versões de cache das páginas afetadas. Trabalho local, sem publicação no GitHub.
+
+# Atualização de 5 de novembro de 2026 — tema musical de Jack
+
+- A faixa `audio/theme-jack-presente.mp3` foi integrada apenas a `jack-presente.html`, que é a página de Jack no presente.
+- A trilha toca junto com a abertura da página, em looping, sem botão de controle. Se o navegador bloquear autoplay com som, o código tenta novamente no primeiro gesto geral do visitante.
+- Regra registrada para o projeto: nenhuma música terá botão de ligar, desligar ou pausar. O controle antigo da página `britney.html` também foi removido; a faixa de Britney continua automática.
+- As mudanças estão locais e ainda não foram publicadas no GitHub.
+
+# Atualização de 5 de novembro de 2026 — tema musical do memorial
+
+- `video/theme-memorial.mp4` foi vinculado apenas como fonte de áudio em `memorial.html`; não foi adicionado player visual para esse vídeo.
+- A trilha tenta iniciar automaticamente, sem controle de música. `memorial-theme.js` retenta após uma interação geral se o navegador bloquear autoplay e pausa o tema enquanto toca o vídeo de despedida de Brian.
+- O resumo técnico mantém a regra de não adicionar botões para ligar, desligar ou pausar músicas.
+
+# Atualização de 5 de novembro de 2026 — intro de presença de Jack
+
+- A entrada de `jack-presente.html` começa com o sinal JC-01 e apresenta, em sequência, Jack preparando Mick para substituí-lo no comando antes de seguir para a Interpol, sua leitura de campo e sua liderança protetora.
+- Aos 12 segundos, antes da música, aparece a fala proposta para Jack: “Sigam-me. Eu abro a rota. Ninguém fica para trás.” Ela permanece até a faixa começar no segundo 14. Então o nome aparece devagar; depois surge a foto atual dele no presente e a intro se dissolve para mostrar o perfil.
+- A sequência acompanha o tempo real do áudio, usa animações reduzidas quando solicitado pelo navegador e não cria botão de música.

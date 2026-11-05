@@ -56,6 +56,8 @@
     ['resgate2.png', 'Retirada em andamento', 'O resgate continua enquanto o grupo deixa a área.'],
     ['acampamento-hellsings.png', 'Chegada ao acampamento', 'Naomi chega ao acampamento dos Hellsings.'],
     ['indo-ate-jack.png', 'Em direção a Jack', 'Naomi atravessa o acampamento para encontrar Jack.'],
+    ['roupa-nova.png', 'Novo equipamento', 'Naomi aparece com sua nova roupa de campo no acampamento dos Hellsings.'],
+    ['naomi-hilary.png', 'Uma pausa com Hilary', 'Naomi e Hilary dividem um momento descontraído no acampamento.'],
   ].map(([file, title, alt], index) => ({
     code: 'N-05.Q' + String(index + 1).padStart(2, '0'),
     title,

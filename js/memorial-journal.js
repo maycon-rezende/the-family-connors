@@ -7,6 +7,9 @@
   const counter = journal.querySelector('[data-journal-counter]');
   const category = journal.querySelector('[data-journal-category]');
   const closeJournal = journal.querySelector('[data-journal-close]');
+  const filmShortcut = journal.querySelector('[data-journal-film-link]');
+  const farewellFilm = journal.querySelector('#despedida-brian');
+  const farewellVideo = farewellFilm?.querySelector('video');
   const dialog = document.querySelector('[data-journal-post]');
   const notes = [...journal.querySelectorAll('.memorial-brian-note')];
   const groups = [...journal.querySelectorAll('.memorial-brian-forum__group')];
@@ -324,6 +327,7 @@
 
   const openJournal = () => {
     cover.hidden = true;
+    if (filmShortcut) filmShortcut.hidden = true;
     cover.setAttribute('aria-expanded', 'true');
     reader.hidden = false;
     const firstCard = reader.querySelector('.memorial-memory-card');
@@ -332,14 +336,30 @@
 
   const closeJournalView = () => {
     if (dialog.open) dialog.close();
+    farewellVideo?.pause();
     reader.hidden = true;
     cover.hidden = false;
+    if (filmShortcut) filmShortcut.hidden = false;
     cover.setAttribute('aria-expanded', 'false');
     cover.focus();
   };
 
+  const goToFarewell = (event) => {
+    event.preventDefault();
+    if (reader.hidden) openJournal();
+    requestAnimationFrame(() => {
+      if (!farewellFilm) return;
+      farewellFilm.focus({ preventScroll: true });
+      farewellFilm.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'start',
+      });
+    });
+  };
+
   cover.addEventListener('click', openJournal);
   closeJournal?.addEventListener('click', closeJournalView);
+  filmShortcut?.addEventListener('click', goToFarewell);
   fields.previous?.addEventListener('click', showPrevious);
   fields.next?.addEventListener('click', showNext);
 

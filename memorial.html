@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John, Gabriel Mercer e as pessoas ligadas à rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=12" />
+    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=13" />
     <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=3" />
     <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
@@ -105,10 +105,11 @@
               <button class="memorial-brian-journal__cover" type="button" data-journal-open aria-expanded="false" aria-controls="memorial-brian-journal-reader">
                 <span class="memorial-brian-journal__eyebrow">ARQUIVO PESSOAL // BT-09</span>
                 <span class="memorial-brian-journal__title">O caderno<br /><em>de quem ficou.</em></span>
-                <span class="memorial-brian-journal__description">24 vozes. Retratos e lembranças preservam o lugar que ele deixou.</span>
+                <span class="memorial-brian-journal__description">24 vozes e, ao fim do caderno, a despedida de Brian — preservadas por quem ficou.</span>
                 <span class="memorial-brian-journal__action">ABRIR O CADERNO <b aria-hidden="true">↗</b></span>
                 <span class="memorial-brian-journal__seal" aria-hidden="true">BT<br /><b>09</b></span>
               </button>
+              <a class="memorial-brian-journal__film-link" href="#despedida-brian" data-journal-film-link>IR DIRETO À DESPEDIDA <span aria-hidden="true">↓</span></a>
 
               <div class="memorial-brian-journal__reader" id="memorial-brian-journal-reader" data-journal-reader hidden>
                 <div class="memorial-brian-journal__toolbar">
@@ -267,6 +268,20 @@
                 <nav class="memorial-brian-journal__controls" aria-label="Navegação do caderno de homenagens">
                   <span>UMA FOTOGRAFIA. UMA VOZ. UMA PARTE DE BRIAN QUE A EQUIPE LEVA CONSIGO.</span>
                 </nav>
+                <section class="memorial-brian-film memorial-brian-film--journal" id="despedida-brian" aria-labelledby="memorial-brian-film-title" tabindex="-1">
+                  <header>
+                    <span class="memorial-kicker">REGISTRO FINAL // BT-09</span>
+                    <h4 id="memorial-brian-film-title">Despedida.</h4>
+                    <p>O áudio original está disponível nos controles do vídeo.</p>
+                  </header>
+                  <figure>
+                    <video controls preload="metadata" playsinline aria-label="Vídeo de despedida de Brian Taylor, com áudio disponível">
+                      <source src="video/despedida.mp4" type="video/mp4" />
+                      Seu navegador não conseguiu reproduzir o vídeo de despedida de Brian.
+                    </video>
+                    <figcaption>BT-09 // IMAGEM E ÁUDIO PRESERVADOS</figcaption>
+                  </figure>
+                </section>
                 <button class="memorial-brian-journal__close" type="button" data-journal-close>FECHAR O CADERNO</button>
               </div>
             </div>
@@ -319,20 +334,6 @@
             </dialog>
           </section>
 
-          <section class="memorial-brian-film" aria-labelledby="memorial-brian-film-title">
-            <header>
-              <span class="memorial-kicker">REGISTRO FINAL // BT-09</span>
-              <h4 id="memorial-brian-film-title">Despedida.</h4>
-              <p>O vídeo é reproduzido em silêncio nesta página.</p>
-            </header>
-            <figure>
-              <video controls muted preload="metadata" playsinline aria-label="Vídeo de despedida de Brian Taylor, sem áudio">
-                <source src="video/despedida.mp4" type="video/mp4" />
-                Seu navegador não conseguiu reproduzir o vídeo de despedida de Brian.
-              </video>
-              <figcaption>BT-09 // IMAGEM PRESERVADA, ÁUDIO DESATIVADO</figcaption>
-            </figure>
-          </section>
         </article>
 
         <section class="memorial-john-arrival" id="john" data-john-arrival aria-labelledby="john-arrival-title">
@@ -479,34 +480,6 @@
           </div>
         </section>
 
-        <section class="memorial-john-tributes" aria-labelledby="memorial-john-tributes-title">
-          <header class="memorial-brian__section-heading memorial-brian__section-heading--thread">
-            <span class="memorial-kicker">ARQUIVO DE FREQUÊNCIAS // J-06</span>
-            <h3 id="memorial-john-tributes-title">O canal fechou.<br /><em>As vozes ficaram.</em></h3>
-            <p>As homenagens são reconstruções literárias revisáveis. Escolha uma frequência para ler uma voz por vez; não há retratos individuais nem áudio original.</p>
-          </header>
-
-          <div class="john-transmission-console" data-john-journal>
-            <nav class="john-transmission-index" data-john-transmission-index role="listbox" aria-label="Escolha uma voz do arquivo de John" aria-orientation="vertical"></nav>
-            <article class="john-transmission" aria-live="polite" aria-labelledby="john-transmission-title">
-              <header class="john-transmission__header">
-                <div><span data-john-post-counter>FREQUÊNCIA 01 / 13</span><b>RECONSTRUÇÃO TEXTUAL</b></div>
-                <h4 id="john-transmission-title" data-john-post-title>Selecione uma frequência.</h4>
-                <p data-john-post-role>ARQUIVO J-06 // REGISTRO DE MEMÓRIA</p>
-              </header>
-              <div class="john-transmission__wave" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
-              <blockquote class="john-transmission__message" data-john-post-message>Selecione um nome à esquerda para abrir a mensagem preservada.</blockquote>
-              <footer class="john-transmission__signature"><b data-john-post-name>SEM FREQUÊNCIA SELECIONADA</b><small data-john-post-signoff>Uma voz por vez // registro sem áudio original</small></footer>
-              <section class="john-transmission__thread" aria-label="Reações e resposta a esta mensagem">
-                <header><span>LINHA DE RETORNO // RESPOSTAS PRESERVADAS</span><b data-john-post-era>ARQUIVO J-06</b></header>
-                <div class="john-transmission__reactions" data-john-post-reactions aria-label="Reações a esta mensagem"></div>
-                <div class="john-transmission__reply" data-john-post-reply></div>
-              </section>
-            </article>
-          </div>
-        </section>
       </section>
 
       <section class="memorial-road" aria-labelledby="memorial-road-title">
@@ -611,13 +584,15 @@
       <span>ARQUIVO DA MEMÓRIA // F-01</span>
       <a href="john-presente.html">JOHN</a>
     </footer>
+    <audio data-memorial-theme autoplay loop preload="auto" hidden>
+      <source src="video/theme-memorial.mp4" type="audio/mp4" />
+    </audio>
     <script src="js/site-cursor.js" defer></script>
-    <script src="js/memorial-video.js" defer></script>
-    <script src="js/memorial-journal.js?v=4" defer></script>
+    <script src="js/memorial-journal.js?v=5" defer></script>
     <script src="js/malha-chat.js?v=3" defer></script>
     <script src="js/ai-dialogue.js?v=1" defer></script>
-    <script src="js/john-transmission-log.js?v=2" defer></script>
     <script src="js/john-memorial-book.js?v=1" defer></script>
     <script src="js/john-memorial-reveal.js?v=1" defer></script>
+    <script src="era-extincao-presente/memorial-theme.js?v=1" defer></script>
   </body>
 </html>

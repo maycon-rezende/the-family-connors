@@ -499,29 +499,6 @@
 .equalizer i:nth-child(3n) {
   animation-duration: 1.05s;
 }
-.equalizer.paused i {
-  animation-play-state: paused;
-  height: 8%;
-}
-.music-control {
-  width: 100%;
-  padding: 0.85rem;
-  border: 1px solid rgba(112, 240, 193, 0.25);
-  background: rgba(112, 240, 193, 0.05);
-  color: var(--neon);
-  font:
-    500 0.58rem 'Cinzel',
-    serif;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.music-control span {
-  margin-right: 0.6rem;
-}
-.music-control:hover {
-  background: rgba(112, 240, 193, 0.1);
-}
 .social-strip {
   display: flex;
   align-items: center;

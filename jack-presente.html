@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#090806" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
     <link rel="stylesheet" href="era-extincao-presente/jack-responsive.css" />
+    <link rel="stylesheet" href="era-extincao-presente/jack-presence.css?v=2" />
     <link rel="stylesheet" href="era-extincao-presente/dispositivo-recuperado.css" />
     <title>Jack Connor | Era da Extinção</title>
     <meta name="description" content="Jack Connor no presente: liderança, família e sobrevivência após o Dia D." />
@@ -14,6 +15,34 @@
     <div class="profile-backdrop" aria-hidden="true"></div>
     <div class="jack-sand" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="jack-cursor" aria-hidden="true"><i></i><span>JC-01</span></div>
+    <div class="jack-presence-intro" data-jack-presence-intro aria-hidden="true" hidden>
+      <img class="jack-presence-intro__portrait" src="img-presente/personagens/jack-presente1.png" alt="" />
+      <div class="jack-presence-intro__shade"></div>
+      <div class="jack-presence-intro__signal" aria-hidden="true"><i></i><b></b><span>JC-01</span></div>
+      <div class="jack-presence-intro__copy">
+        <span class="jack-presence-intro__code">ARQUIVO DE COMANDO // PRESENÇA DETECTADA</span>
+        <div class="jack-presence-intro__readouts" aria-hidden="true">
+          <article data-jack-presence-capability="1">
+            <span>01 // FBI → INTERPOL</span>
+            <p>Preparou Mick para assumir o comando antes de seguir para a Interpol.</p>
+          </article>
+          <article data-jack-presence-capability="2">
+            <span>02 // LEITURA DE CAMPO</span>
+            <p>Enxerga uma saída antes de conduzir os seus para o perigo.</p>
+          </article>
+          <article data-jack-presence-capability="3">
+            <span>03 // LIDERANÇA HELLSING</span>
+            <p>Não envia ninguém a um risco que ele mesmo não enfrentaria primeiro.</p>
+          </article>
+        </div>
+        <blockquote class="jack-presence-intro__quote" data-jack-presence-quote>
+          <p>“Sigam-me. Eu abro a rota. Ninguém fica para trás.”</p>
+          <cite>JACK CONNOR // JC-01</cite>
+        </blockquote>
+        <h2><span>JACK</span><em>CONNOR</em></h2>
+      </div>
+      <span class="jack-presence-intro__edge" aria-hidden="true">HELLSINGS // JC-01</span>
+    </div>
     <nav class="profile-nav">
       <a href="index.html#sobreviventes"><b>Æ</b> ERA DA EXTINÇÃO</a
       ><span>ARQUIVO HELLSINGS // PRESENTE</span><a href="alice-presente.html">PRÓXIMO →</a>
@@ -92,6 +121,7 @@
       <span class="recovered-device-launch__icon" aria-hidden="true"><svg viewBox="0 0 20 28" fill="none"><rect x="2.5" y="1.5" width="15" height="25" rx="2.5" /><path d="M7 5h6M8.5 22.5h3" /></svg></span>
       <span><small>JC-01 // ARQUIVO RECUPERADO</small><strong>ABRIR CELULAR</strong></span>
     </button>
+    <audio data-jack-theme src="audio/theme-jack-presente.mp3" autoplay loop preload="auto" hidden></audio>
     <dialog class="recovered-device" id="recovered-device" data-recovered-device aria-labelledby="recovered-device-title">
       <div class="recovered-device__shell">
         <header class="recovered-device__header">
@@ -120,5 +150,7 @@
     </dialog>
     <script src="era-extincao-presente/personagem-presente.js"></script>
     <script src="js/dispositivo-recuperado.js" defer></script>
+    <script src="era-extincao-presente/jack-theme.js?v=2" defer></script>
+    <script src="era-extincao-presente/jack-presence.js?v=2" defer></script>
   </body>
 </html>
