@@ -6,13 +6,23 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Memorial dos Hellsings: Brian Taylor, John, Gabriel Mercer e as pessoas ligadas à rota da equipe." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=14" />
+    <link rel="stylesheet" href="era-extincao-presente/memorial-hellsings.css?v=17" />
     <link rel="stylesheet" href="era-extincao-presente/malha-chat.css?v=3" />
     <link rel="stylesheet" href="era-extincao-presente/ai-dialogue.css?v=1" />
     <title>Memorial dos Hellsings | A Era da Extinção</title>
   </head>
   <body class="hellsings-memorial-page">
     <div class="memorial-noise" aria-hidden="true"></div>
+    <section class="memorial-dedication" data-memorial-dedication role="dialog" aria-modal="true" aria-labelledby="memorial-dedication-title" aria-describedby="memorial-dedication-copy" hidden>
+      <div class="memorial-dedication__content">
+        <span class="memorial-dedication__eyebrow">ANTES DE ABRIR OS ARQUIVOS // UMA DEDICATÓRIA</span>
+        <h1 id="memorial-dedication-title">Aos que deram a própria vida<br /><em>para que outras pudessem continuar.</em></h1>
+        <p id="memorial-dedication-copy">Dedicamos este memorial aos bravos Hellsings. Seus nomes, suas escolhas e os caminhos que abriram permanecerão vivos por toda a eternidade.</p>
+        <span class="memorial-dedication__mark" aria-hidden="true"></span>
+        <button class="memorial-dedication__enter" type="button" data-memorial-enter>ENTRAR NO MEMORIAL <span aria-hidden="true">↓</span></button>
+        <span class="memorial-dedication__record">HELLSINGS // MEMÓRIA PRESERVADA // F-01</span>
+      </div>
+    </section>
     <nav class="memorial-nav" aria-label="Navegação do memorial">
       <a href="faccao-hellsings-presente.html">← BASE HELLSINGS</a>
       <span>F-01 // ARQUIVO DA MEMÓRIA</span>
@@ -34,6 +44,15 @@
         </div>
       </header>
 
+      <section class="memorial-journey" aria-labelledby="memorial-journey-title">
+        <div class="memorial-journey__inner">
+          <span class="memorial-kicker">ANTES DOS NOMES // A FORMAÇÃO</span>
+          <h2 id="memorial-journey-title">A estrada<br /><em>até aqui...</em></h2>
+          <p>Antes de serem Hellsings, Jack, Brian e John foram uma equipe de agentes especiais no FBI. Quando Jack seguiu para a Interpol e fundou a unidade, chamou os dois para perto outra vez. Vieram as missões, os resgates e as rotas abertas para que outros chegassem vivos. Esta é a estrada que trouxe seus nomes até estas páginas.</p>
+          <span class="memorial-journey__rule" aria-hidden="true"></span>
+        </div>
+      </section>
+
       <section class="memorial-records" id="registros" aria-labelledby="memorial-records-title">
         <header class="memorial-section-heading">
           <div>
@@ -46,8 +65,8 @@
         <article class="memorial-brian" id="brian" aria-labelledby="memorial-brian-title">
           <header class="memorial-brian__opening">
             <figure class="memorial-brian__portrait">
-              <img src="img-hellsing/brian-presente.png" alt="Brian Taylor sentado na enfermaria do bunker, em um registro do presente" />
-              <figcaption>BT-09 // BRIAN NO BUNKER</figcaption>
+              <img src="img-hellsing/brian-memorial-portrait.png" alt="Reconstrução visual de Brian Taylor no presente, consultando um mapa de operações no bunker" data-memorial-aging-photo />
+              <figcaption>BT-09 // RECONSTRUÇÃO VISUAL</figcaption>
             </figure>
             <div class="memorial-brian__identity">
               <span class="memorial-entry__number">01 // HLS-09</span>
@@ -354,7 +373,7 @@
           </div>
           <a class="memorial-john-arrival__card" href="john-memorial.html#dedicatoria" data-john-arrival-card>
             <figure>
-              <img src="img-hellsing/john-memorial-portrait.png" alt="John ao lado de um mapa de rota, em uma fotografia preservada antes de sua última fuga" loading="lazy" />
+              <img src="img-hellsing/john-memorial-portrait.png" alt="John ao lado de um mapa de rota, em uma fotografia preservada antes de sua última fuga" loading="lazy" data-memorial-aging-photo data-memorial-aging-delay="5700" />
               <figcaption>J-06 // RETRATO PRESERVADO ANTES DA ÚLTIMA FUGA</figcaption>
             </figure>
             <div class="memorial-john-arrival__copy">
@@ -394,7 +413,7 @@
               <div class="memorial-john-book__pages" data-john-book-pages>
                 <article class="john-book-page john-book-page--cover" data-john-book-page aria-label="Capa do depoimento">
                   <figure class="john-book-page__portrait">
-                    <img src="img-hellsing/john-presente.png" alt="John Bertolai Winchester em um registro anterior à última fuga" loading="lazy" />
+                    <img src="img-hellsing/john-presente.png" alt="John Bertolai Winchester em um registro anterior à última fuga" loading="lazy" data-memorial-aging-photo />
                     <figcaption>J-06 // RETRATO ANTERIOR À ÚLTIMA FUGA</figcaption>
                   </figure>
                   <div class="john-book-page__cover-copy">
@@ -406,7 +425,7 @@
                   </div>
                 </article>
 
-                <article class="john-book-page" data-john-book-page aria-label="Página 2 de 7">
+                <article class="john-book-page" data-john-book-page aria-label="Página 2 de 8">
                   <header><span>02 // A PASSAGEM</span><b>J-06</b></header>
                   <div class="john-book-page__body">
                     <h4>O comboio ainda não havia passado.</h4>
@@ -417,7 +436,7 @@
                   <footer><span>JOHN + OLIVIA // A ÚLTIMA FUGA</span><b>02</b></footer>
                 </article>
 
-                <article class="john-book-page" data-john-book-page aria-label="Página 3 de 7">
+                <article class="john-book-page" data-john-book-page aria-label="Página 3 de 8">
                   <header><span>03 // A ESCOLHA</span><b>J-06</b></header>
                   <div class="john-book-page__body">
                     <h4>Ela olhou para quem ainda corria.</h4>
@@ -429,7 +448,7 @@
                   <footer><span>JOHN + OLIVIA // A ÚLTIMA FUGA</span><b>03</b></footer>
                 </article>
 
-                <article class="john-book-page" data-john-book-page aria-label="Página 4 de 7">
+                <article class="john-book-page" data-john-book-page aria-label="Página 4 de 8">
                   <header><span>04 // O PLANO DE JOHN</span><b>J-06</b></header>
                   <div class="john-book-page__body">
                     <h4>Ele já havia preparado a última saída.</h4>
@@ -440,7 +459,7 @@
                   <footer><span>JOHN + OLIVIA // A ÚLTIMA FUGA</span><b>04</b></footer>
                 </article>
 
-                <article class="john-book-page" data-john-book-page aria-label="Página 5 de 7">
+                <article class="john-book-page" data-john-book-page aria-label="Página 5 de 8">
                   <header><span>05 // A PASSAGEM SE ESVAZIA</span><b>J-06</b></header>
                   <div class="john-book-page__body">
                     <h4>Então, as vozes atrás deles cessaram.</h4>
@@ -451,7 +470,7 @@
                   <footer><span>JOHN + OLIVIA // A ÚLTIMA FUGA</span><b>05</b></footer>
                 </article>
 
-                <article class="john-book-page john-book-page--embrace" data-john-book-page aria-label="Página 6 de 7">
+                <article class="john-book-page john-book-page--embrace" data-john-book-page aria-label="Página 6 de 8">
                   <header><span>06 // O ÚLTIMO ABRAÇO</span><b>J-06</b></header>
                   <div class="john-book-page__body">
                     <h4>Por um instante, só havia os dois.</h4>
@@ -464,7 +483,7 @@
                   <footer><span>JOHN + OLIVIA // A ÚLTIMA FUGA</span><b>06</b></footer>
                 </article>
 
-                <article class="john-book-page john-book-page--ending" data-john-book-page aria-label="Página 7 de 7">
+                <article class="john-book-page john-book-page--ending" data-john-book-page aria-label="Página 7 de 8">
                   <header><span>07 // O QUE ELES SALVARAM</span><b>J-06</b></header>
                   <div class="john-book-page__body">
                     <h4>A bomba explodiu.</h4>
@@ -475,14 +494,27 @@
                   </div>
                   <footer><span>FIM DO RELATO // NINGUÉM FICA PARA TRÁS</span><b>07</b></footer>
                 </article>
+
+                <article class="john-book-page john-book-page--memory" data-john-book-page aria-label="Página 8 de 8">
+                  <header><span>08 // A LEMBRANÇA QUE FICOU</span><b>J-06</b></header>
+                  <div class="john-book-page__body john-book-page__body--memory">
+                    <h4>O abraço que permaneceu.</h4>
+                    <figure class="john-book-memory-image">
+                      <img src="img-hellsing/john-olivia-memorial.png" alt="Reconstrução visual de John abraçando sua filha Olivia em um momento de carinho" data-memorial-aging-photo />
+                      <figcaption>JOHN + OLIVIA // MEMÓRIA PRESERVADA</figcaption>
+                    </figure>
+                    <p>Uma lembrança reconstruída de um momento tranquilo antes da última fuga. O abraço final aconteceu na passagem; esta imagem guarda o amor que os acompanhou até lá.</p>
+                  </div>
+                  <footer><span>JOHN + OLIVIA // PARA ALÉM DA ÚLTIMA PASSAGEM</span><b>08</b></footer>
+                </article>
               </div>
             </div>
 
             <nav class="john-book-controls" aria-label="Controles do livro de John">
               <button type="button" data-john-book-previous aria-label="Página anterior" disabled>← <span>PÁGINA ANTERIOR</span></button>
               <div class="john-book-controls__progress">
-                <span data-john-book-counter aria-live="polite">CAPA // 01 / 07</span>
-                <div role="progressbar" aria-label="Progresso da leitura" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" data-john-book-progress><i data-john-book-progress-fill></i></div>
+                <span data-john-book-counter aria-live="polite">CAPA // 01 / 08</span>
+                <div role="progressbar" aria-label="Progresso da leitura" aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" data-john-book-progress><i data-john-book-progress-fill></i></div>
               </div>
               <button type="button" data-john-book-next aria-label="Próxima página"><span>PRÓXIMA PÁGINA</span> →</button>
             </nav>
@@ -601,8 +633,9 @@
     <script src="js/memorial-journal.js?v=5" defer></script>
     <script src="js/malha-chat.js?v=3" defer></script>
     <script src="js/ai-dialogue.js?v=1" defer></script>
-    <script src="js/john-memorial-book.js?v=1" defer></script>
+    <script src="js/john-memorial-book.js?v=2" defer></script>
     <script src="js/john-memorial-reveal.js?v=1" defer></script>
-    <script src="era-extincao-presente/memorial-theme.js?v=1" defer></script>
+    <script src="js/memorial-photo-aging.js?v=1" defer></script>
+    <script src="era-extincao-presente/memorial-theme.js?v=3" defer></script>
   </body>
 </html>

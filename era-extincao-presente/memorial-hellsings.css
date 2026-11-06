@@ -589,6 +589,13 @@ a { color: inherit; }
 .john-book-page__cover-copy > small { margin-top: 1.1rem; color: #ad8055; font: 500 .44rem/1.7 'DM Mono', monospace; letter-spacing: .11em; }
 .john-book-page--embrace .john-book-page__body blockquote { margin: 1.7rem 0; padding: 1rem 0 1rem 1.2rem; border-left: 2px solid #b78354; color: #694620; font: 700 clamp(1.35rem, 3vw, 2.15rem)/1.45 'Playfair Display', Georgia, serif; }
 .john-book-page__closing { margin-top: 1.8rem !important; padding-top: 1rem; border-top: 1px solid #4038292b; color: #694620 !important; font: italic 700 clamp(1.1rem, 2vw, 1.5rem)/1.6 'Playfair Display', Georgia, serif !important; }
+.john-book-page--memory { display: flex; flex-direction: column; }
+.john-book-page__body--memory { display: flex; flex: 1; flex-direction: column; justify-content: center; max-width: 850px; padding-block: 1rem; }
+.john-book-page__body--memory h4 { text-align: center; }
+.john-book-memory-image { display: grid; justify-items: center; gap: .65rem; width: min(100%, 760px); margin: 0 auto 1rem; }
+.john-book-memory-image img { display: block; width: 100%; max-height: min(36vh, 390px); border: 1px solid #9d896a; object-fit: contain; box-shadow: 0 10px 35px #4038292b; }
+.john-book-memory-image figcaption { color: #786c58; font: 500 .48rem/1.5 'DM Mono', monospace; letter-spacing: .12em; text-align: center; }
+.john-book-page__memory-note { max-width: 700px; margin: 0 auto !important; color: #5b4e3b !important; font: italic 500 clamp(.85rem, 1.2vw, .98rem)/1.7 'Playfair Display', Georgia, serif !important; text-align: center; }
 .john-book-page.is-turning-away[data-flip='next'] { animation: john-page-turn-out-next .19s ease-in both; }
 .john-book-page.is-turning-away[data-flip='previous'] { animation: john-page-turn-out-previous .19s ease-in both; }
 .john-book-page.is-turning-in[data-flip='next'] { animation: john-page-turn-in-next .42s cubic-bezier(.2,.7,.2,1) both; }
@@ -626,6 +633,9 @@ a { color: inherit; }
   .john-book-page__cover-copy blockquote { padding: .6rem 0 .6rem .8rem; font-size: 1rem; }
   .john-book-page__body { padding: 1.2rem 0 1rem; }
   .john-book-page__body p { font-size: .88rem; line-height: 1.68; }
+  .john-book-page__body--memory { padding-block: .8rem; }
+  .john-book-memory-image img { max-height: 35vh; }
+  .john-book-memory-image figcaption { font-size: .42rem; }
   .john-book-controls { grid-template-columns: 44px minmax(100px, 1fr) 44px; gap: .5rem; }
   .john-book-controls button { width: 44px; min-height: 44px; padding: .5rem; font-size: .75rem; }
   .john-book-controls button span { display: none; }
@@ -740,4 +750,138 @@ a { color: inherit; }
   .memorial-john-arrival.is-revealed .memorial-john-arrival__voices,
   .memorial-john-arrival.is-revealed .memorial-john-arrival__card { animation: none; }
   .memorial-john-arrival.is-revealed .memorial-john-arrival__voices { display: none; }
+}
+
+/* A dedicatória precede a entrada visual no arquivo do memorial. */
+.memorial-dedication[hidden] { display: none !important; }
+.memorial-intro-active { overflow: hidden; }
+.memorial-dedication {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 5rem);
+  background: radial-gradient(ellipse at 50% 42%, #211810 0, #100d0a 36%, #070605 78%);
+  color: var(--mem-paper);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+  isolation: isolate;
+}
+.memorial-dedication::before,
+.memorial-dedication::after { position: absolute; z-index: -1; inset: 0; content: ''; pointer-events: none; }
+.memorial-dedication::before {
+  background: repeating-linear-gradient(0deg, transparent 0 4px, #f2e8d10a 5px 6px),
+    linear-gradient(90deg, transparent 14%, #c3905b0d 50%, transparent 86%);
+  opacity: .7;
+}
+.memorial-dedication::after {
+  inset: 7vh 5vw;
+  border-top: 1px solid #c3905b35;
+  border-bottom: 1px solid #c3905b35;
+  box-shadow: 0 0 100px #050403aa inset;
+}
+.memorial-dedication__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(920px, 100%);
+  text-align: center;
+}
+.memorial-dedication__eyebrow,
+.memorial-dedication__record {
+  color: var(--mem-copper);
+  font: 500 .58rem/1.6 'DM Mono', monospace;
+  letter-spacing: .2em;
+}
+.memorial-dedication__content h1 {
+  margin: clamp(2rem, 5vh, 3.6rem) 0 1.5rem;
+  font: 500 clamp(2rem, 5.1vw, 4.8rem)/1.18 'Cinzel', Georgia, serif;
+  text-wrap: balance;
+}
+.memorial-dedication__content h1 em { color: #d1a66f; font-style: normal; }
+.memorial-dedication__content p {
+  max-width: 690px;
+  margin: 0;
+  color: #c8bfb1;
+  font: 400 clamp(.95rem, 1.5vw, 1.12rem)/1.9 'Manrope', Arial, sans-serif;
+  text-wrap: balance;
+}
+.memorial-dedication__mark {
+  width: 1px;
+  height: clamp(2rem, 5vh, 3.25rem);
+  margin: 1.5rem 0 1.1rem;
+  background: linear-gradient(transparent, var(--mem-copper), transparent);
+}
+.memorial-dedication__enter {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.2rem;
+  padding: .95rem 1.15rem;
+  border: 1px solid #c3905b75;
+  background: #100d0ac9;
+  color: var(--mem-paper);
+  cursor: pointer;
+  font: 700 .62rem/1.4 'Cinzel', serif;
+  letter-spacing: .13em;
+  transition: border-color .25s ease, background .25s ease, color .25s ease;
+}
+.memorial-dedication__enter:hover,
+.memorial-dedication__enter:focus-visible { border-color: var(--mem-copper); background: #24170f; color: #fff5e6; outline: none; }
+.memorial-dedication__enter span { color: var(--mem-red); font: 700 1rem/1 'DM Mono', monospace; }
+.memorial-dedication__record { margin-top: clamp(2rem, 5vh, 3rem); color: #88745e; font-size: .48rem; }
+.memorial-dedication.is-leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+.memorial-dedication.is-visible .memorial-dedication__eyebrow { animation: memorial-dedication-rise .9s .15s both; }
+.memorial-dedication.is-visible .memorial-dedication__content h1 { animation: memorial-dedication-rise 1.2s .8s both; }
+.memorial-dedication.is-visible .memorial-dedication__content p { animation: memorial-dedication-rise 1.1s 1.8s both; }
+.memorial-dedication.is-visible .memorial-dedication__mark,
+.memorial-dedication.is-visible .memorial-dedication__enter,
+.memorial-dedication.is-visible .memorial-dedication__record { animation: memorial-dedication-rise 1s 2.4s both; }
+@keyframes memorial-dedication-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+.memorial-journey {
+  position: relative;
+  padding: clamp(5.2rem, 8vw, 8rem) max(1.25rem, 7vw);
+  overflow: hidden;
+  border-bottom: 1px solid var(--mem-line);
+  background: radial-gradient(ellipse at 88% 54%, #b6533e12, transparent 34%), linear-gradient(105deg, #100e0c, #090807 72%);
+}
+.memorial-journey__inner { position: relative; max-width: 940px; margin: 0 auto; }
+.memorial-journey__inner h2 {
+  margin: 1rem 0 1.7rem;
+  font: 900 clamp(4rem, 8.4vw, 8rem)/.82 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+.memorial-journey__inner h2 em { color: var(--mem-red); font-style: normal; }
+.memorial-journey__inner p { max-width: 770px; margin: 0; color: #c8bfb1; font: 400 clamp(.97rem, 1.4vw, 1.08rem)/1.9 'Manrope', Arial, sans-serif; }
+.memorial-journey__rule { display: block; width: clamp(4rem, 10vw, 8rem); height: 1px; margin-top: 2rem; background: linear-gradient(90deg, var(--mem-copper), transparent); }
+
+@media (max-width: 600px) {
+  .memorial-dedication { padding: 1.3rem; }
+  .memorial-dedication::after { inset: 4vh 1rem; }
+  .memorial-dedication__eyebrow { max-width: 24rem; font-size: .5rem; }
+  .memorial-dedication__content h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .memorial-dedication__content p { font-size: .9rem; }
+  .memorial-dedication__record { font-size: .42rem; }
+  .memorial-journey { padding: 4.6rem 1.1rem; }
+  .memorial-journey__inner h2 { font-size: clamp(4rem, 17vw, 6.5rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .memorial-dedication,
+  .memorial-dedication__content > *,
+  .memorial-dedication__content h1,
+  .memorial-dedication__content p { animation: none !important; transition: none !important; }
+}
+
+/* Retratos começam em cor e perdem a saturação quando entram na leitura. */
+img.memorial-aging-photo {
+  filter: saturate(1) contrast(1.05);
+  transition: filter 4s cubic-bezier(.2, .65, .3, 1);
+}
+img.memorial-aging-photo.is-monochrome { filter: grayscale(1) saturate(0) contrast(1.08); }
+@media (prefers-reduced-motion: reduce) {
+  img.memorial-aging-photo { transition: none; }
 }

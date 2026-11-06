@@ -605,3 +605,62 @@
 - Não foram inventados totais individuais de fracassos, infectados neutralizados ou pessoas salvas; as páginas marcam esses números como não consolidados. O balanço coletivo não é apresentado como estatística individual.
 - O cartão de John na tela inicial exibe **John B. Winchester**; o nome completo nas fichas é **John Bertolai Winchester**.
 - Naomi Yagami e Bobby Lee Yagami devem ser irmãos, com Naomi mais velha. As páginas deles ficam aguardando as fichas completas do autor antes da atualização.
+
+# Atualização de 6 de novembro de 2026 — abertura solene do memorial
+
+- `memorial.html` agora abre com uma dedicatória aos Hellsings que deram a vida para que outras pessoas pudessem continuar. A sequência se dissolve para revelar a abertura normal da página, **Memorial dos Hellsings**; pode ser avançada pelo botão **Entrar no memorial** ou pela tecla Esc.
+- Entre a abertura e os registros de Brian e John, entrou a chamada **A estrada até aqui...**, com a trajetória já confirmada de Jack, Brian e John do FBI à formação dos Hellsings.
+- A faixa que o autor identificou como *Nothing Else Matters*, na versão da Apocalyptica, continua em `video/theme-memorial.mp4`, usada apenas como áudio oculto e automático. Nenhum controle de ligar ou desligar música foi adicionado.
+- `memorial-theme.js` controla a entrada e mantém o comportamento da trilha e da pausa durante o vídeo de despedida. A página respeita a preferência de movimento reduzido.
+- Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — última página do relato de John
+
+- O livro interativo em `memorial.html` ganhou uma oitava página após **A bomba explodiu**.
+- A página final mostra `img-hellsing/john-olivia-memorial.png`, a reconstrução de John abraçando Olivia em um momento de afeto anterior à última fuga. O texto distingue essa lembrança da despedida final na passagem.
+- Contador, barra de progresso, rótulos acessíveis e apresentação mobile foram atualizados para oito páginas. O relato e as sete páginas anteriores permaneceram intactos.
+- Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — fotografias que perdem a cor no memorial
+
+- Os retratos principais de Brian e John e a reconstrução de John com Olivia entram coloridos e passam gradualmente ao preto e branco quando aparecem na leitura.
+- O retrato de John mantém a sequência das falas de Olivia e John antes da transição de cor. O efeito também acompanha as fotos do livro quando cada página é revelada.
+- `js/memorial-photo-aging.js` observa a entrada das imagens na tela; `era-extincao-presente/memorial-hellsings.css` conduz a transição em quatro segundos e respeita movimento reduzido.
+- Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — retrato exclusivo de Brian para o memorial
+
+- Foi criado `img-hellsing/brian-memorial-portrait.png` com base nas fotos de Brian no presente, preservando cabelo prateado, barba longa, idade e vestuário de campo.
+- O novo retrato mostra Brian sozinho na sala de operações, consultando um mapa, e substitui a foto repetida somente na abertura do registro dele em `memorial.html`. A legenda identifica a imagem como reconstrução visual; as demais páginas e galerias permanecem com seus registros existentes.
+- A imagem continua integrada à transição gradual para preto e branco do memorial. Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — retratos dos filhos de John e Amélia
+
+- Foram criados retratos individuais de Henry (34), Samuel (27) e Olivia (5 na última fuga), usando fotos dos pais e, no caso de Olivia, a imagem familiar já existente como referências visuais.
+- Os arquivos `img-winchester/henry-winchester.png`, `img-winchester/samuel-winchester.png` e `img-winchester/olivia-winchester.png` estão integrados aos três cartões da seção **Três nomes. Uma família.** em `amelia-arquivo.html`.
+- As imagens estão identificadas como reconstruções visuais. Como a aparência de Henry e Samuel não foi definida pelo autor, os dois retratos permanecem propostas revisáveis; a imagem de Olivia mostra um momento tranquilo antes da última fuga.
+- O resumo, a arquitetura e a lore do projeto registram que essas imagens não confirmam cânone. Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — retrato da família Winchester
+
+- Foi criado `img-winchester/winchester-family-before-last-flight.jpg`, um retrato horizontal que reúne John, Amélia, Henry, Samuel e Olivia usando as cinco referências individuais. O arquivo foi otimizado para JPEG para caber no espaço disponível do disco.
+- A seção **Cinco nomes. Uma família.** entrou em `john-presente.html`, depois do registro de John e Amélia. A legenda descreve a cena como reconstrução visual sem data documental.
+- O estilo responsivo foi adicionado a `era-extincao-presente/john-presente.css`; o link da folha de estilos foi versionado para evitar cache antigo. O resumo e a lore foram atualizados. Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — trilhas de Alice e Mark
+
+- `audio/theme-alice-presente.mp3` foi integrado a `alice-presente.html`; `audio/theme-mark-presente.mp3`, a `mark-presente.html`.
+- As duas trilhas iniciam em autoplay, repetem em loop e não exibem botão ou controles de áudio. `js/personagem-theme.js` tenta reproduzir ao abrir a página e retoma no primeiro toque, clique ou tecla caso o navegador bloqueie autoplay com som.
+- Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — continuidade da trilha do memorial
+
+- A mesma trilha de fundo de `memorial.html` foi integrada a `john-memorial.html`, `gabriel-memorial.html`, `brian-presente.html`, `john-presente.html` e `john-registros.html`.
+- `era-extincao-presente/memorial-theme.js` guarda a posição da faixa em `sessionStorage` ao trocar de página e a retoma no arquivo seguinte. A pausa da trilha durante o vídeo de despedida de Brian foi mantida.
+- Nenhum controle de áudio foi criado; as páginas usam apenas o som do arquivo `video/theme-memorial.mp4`, sem exibir o vídeo. Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 6 de novembro de 2026 — trilha de Naomi
+
+- `audio/theme-naomi-presente.mp3` foi integrada a `naomi-presente.html` em reprodução contínua, sem controles visíveis.
+- A página usa `js/personagem-theme.js`, que tenta iniciar a música ao carregar e retoma no primeiro toque, clique ou tecla caso o navegador bloqueie autoplay audível.
+- Alteração local; ainda não publicada no GitHub.

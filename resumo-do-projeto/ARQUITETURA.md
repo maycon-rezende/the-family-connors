@@ -12,7 +12,8 @@
 | `jack-presente.html` e `mark-presente.html` | Dossiês atuais com terminal de celular, mensagens arquivadas do crossover Doomsday e caderno de campo interativo |
 | `posts-hellsings.html` | Posts dos Hellsings: feed separado com publicações que entram continuamente em ciclo aleatório, comentários em fio e reações locais |
 | `membros-hellsings.html` | Índice de personagens ligados aos Hellsings, com acesso aos arquivos individuais da Lana e da Sally |
-| `memorial.html` | Memorial central com jornada, registro coletivo da equipe de Jack (100+ missões, êxito acima de 90%), caderno de 24 homenagens de Brian, chat dos sobreviventes e vídeo de despedida; também guarda a última fuga de John. A dedicatória e as 34 homenagens de John ficam em `john-memorial.html`. |
+| `amelia-arquivo.html` | Dossiê de Amélia e arquivo da família Winchester, com retratos individuais reconstruídos de Henry, Samuel e Olivia |
+| `memorial.html` | Abre com uma dedicatória solene e a chamada **A estrada até aqui...** antes das perdas; reúne o registro coletivo da equipe de Jack (100+ missões, êxito acima de 90%), o caderno de 24 homenagens de Brian, chat dos sobreviventes, vídeo de despedida e o relato da última fuga de John em um livro interativo de oito páginas, que termina com a imagem de John e Olivia. A dedicatória e as 34 homenagens de John ficam em `john-memorial.html`. |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
@@ -86,6 +87,7 @@ Os arquivos fotográficos listados usam carrosséis independentes, controles de 
 
 - `img-jack/`, `img-alice/`, `img-mark/`, `img-ariani/`, `img-britney/` e `img-jully/`: imagens individuais.
 - `img-amelia.passado.presente/`: nove imagens adicionadas à galeria de `amelia-arquivo.html`, identificadas por período nas legendas.
+- `img-winchester/`: retratos reconstruídos de Henry, Samuel e Olivia usados nos cartões dos filhos na página de Amélia. Aparências de Henry e Samuel são propostas visuais revisáveis.
 - `img-hilary-passado=presente/`: pasta com 26 imagens; a galeria atual reúne dez registros anteriores ao Dia D e nove do presente.
 - `img-naomi-presente/`: sequência de 32 imagens novas integrada ao álbum único de Naomi.
 - `img-jully/jully-presente.png`: foto atual usada na capa do dossiê e como sexto registro em `jully-registros.html`.
@@ -108,8 +110,10 @@ Os arquivos fotográficos listados usam carrosséis independentes, controles de 
 - `audio/theme-jack-presente.mp3`: tema da página atual de Jack, iniciado junto com `jack-presente.html`.
 - `era-extincao-presente/jack-theme.js`: tenta iniciar a trilha na abertura da página e repete a tentativa em interação geral se o navegador bloquear autoplay.
 - `era-extincao-presente/jack-presence.css/js`: sequência cinematográfica sincronizada à faixa; antes do segundo 14 apresenta a formação e a liderança de Jack e uma fala dele, depois revela nome, foto atual e perfil.
-- `video/theme-memorial.mp4`: em `memorial.html`, é usado apenas como fonte de áudio dentro de `<audio>`; nenhum vídeo dessa faixa é exibido.
-- `era-extincao-presente/memorial-theme.js`: inicia a trilha do memorial, retenta após interação geral se autoplay for bloqueado e pausa a música enquanto o vídeo de despedida de Brian toca.
+- `video/theme-memorial.mp4`: trilha identificada pelo autor como *Nothing Else Matters* na versão da Apocalyptica; em `memorial.html`, é usada apenas como fonte de áudio dentro de `<audio hidden>`, sem exibir vídeo ou controles.
+- `era-extincao-presente/memorial-theme.js`: inicia a dedicatória de abertura, permite dispensá-la por botão ou tecla Esc, inicia a trilha do memorial, retenta após interação geral se autoplay for bloqueado e pausa a música enquanto o vídeo de despedida de Brian toca.
+- `js/memorial-photo-aging.js`: detecta quando os retratos de Brian e John e a imagem de John com Olivia entram na tela e conduz a transição gradual da cor para preto e branco.
+- `img-hellsing/brian-memorial-portrait.png`: retrato de memória exclusivo da página de Brian no memorial, gerado a partir das referências do presente; não substitui os registros das outras páginas.
 - Padrão de áudio do projeto: músicas de página tocam junto com a página; não usar botões de ligar, desligar ou pausar música.
 - `video/`: vídeos compartilhados.
 - `galeria-assets/`: recursos auxiliares e versões otimizadas anteriores.
