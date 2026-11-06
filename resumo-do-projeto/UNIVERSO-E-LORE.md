@@ -103,11 +103,13 @@ Os sobrenomes Bennett e os backgrounds pessoais foram criados para as páginas i
 
 ## Amélia Brown Smith Winchester — esposa de John
 
-- Seu nome de nascimento é **Amélia Brown Smith**; após se casar com John Bertolai Winchester, passou a usar **Amélia Brown Smith Winchester**. Tem 47 anos durante *A Era da Extinção*, embora aparente cerca de 30. Tinha aproximadamente 27 anos no Dia D; o intervalo de cerca de vinte anos é aproximado.
+- Seu nome de nascimento é **Amélia Brown Smith**; após se casar com John Bertolai Winchester, passou a usar **Amélia Brown Smith Winchester**. Tem 55 anos durante *A Era da Extinção*, embora aparente cerca de 30. Tinha aproximadamente 35 anos no Dia D; o intervalo de cerca de vinte anos é aproximado. A idade foi ajustada para manter coerência com o primogênito Henry, de 34 anos.
 - Tem pele morena clara, olhos cor de mel e cabelos pretos, longos e lisos. Usa aparelho metálico e um piercing discreto abaixo do lábio.
 - É filha de Rachel Brown, professora, e Bruce Smith, chefe de cozinha. Tem dois irmãos mais velhos, Gabriel e Daniel Brown Smith, e uma irmã mais nova, Rebecca Brown Smith. A família perdeu contato com Gabriel, Daniel e suas famílias durante o caos; o destino deles permanece desconhecido.
 - Antes do Dia D, Amélia trabalhava no Ateliê Braddock como assistente de Mei Braddock e estudava arquitetura. Acompanhava projetos e obras com Mei, mas não concluiu a faculdade depois do colapso.
 - Conheceu John em um evento invadido por criminosos. John e Bobby Lee ajudaram a protegê-la durante a tomada de reféns. Ela e John voltaram a se encontrar em uma cafeteria, iniciaram um relacionamento, casaram-se antes do Dia D e tiveram três filhos: Henry, Samuel e Olivia.
+- **Henry Winchester** tem 34 anos no presente e é o filho mais velho; **Samuel Winchester** tem 27 e é o filho do meio. As idades foram confirmadas pelo autor. As trajetórias propostas para Henry, que ajuda a organizar rotas e suprimentos, e para Samuel, que preserva e compartilha relatos dos sobreviventes, são revisáveis.
+- **Olivia Winchester** é a filha caçula. Tinha cinco anos na fuga em que morreu com John. Ferida e decidida a ajudar os demais, permaneceu com o pai na passagem; John detonou a bomba que preparara depois que o comboio escapou. A idade e a morte conjunta são fatos confirmados pelo autor.
 - John contou a Amélia sobre os Hellsings depois do casamento. Ela passou a integrar o grupo depois do Dia D, em *A Era da Extinção*.
 - Brian morreu primeiro. Mais tarde, na fuga de um comboio, John foi mordido e Olivia foi arranhada. John havia preparado uma bomba como último recurso. Pai e filha ficaram na passagem, seguraram a horda e morreram juntos na explosão depois que todos os demais escaparam.
 - Amélia não ouviu a conversa final de John e Olivia. Após a perda, Naomi, Alice, Hellen e Ariani permaneceram ao lado dela; os demais Hellsings também lhe deram apoio.

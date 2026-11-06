@@ -12,7 +12,7 @@
 | `jack-presente.html` e `mark-presente.html` | Dossiês atuais com terminal de celular, mensagens arquivadas do crossover Doomsday e caderno de campo interativo |
 | `posts-hellsings.html` | Posts dos Hellsings: feed separado com publicações que entram continuamente em ciclo aleatório, comentários em fio e reações locais |
 | `membros-hellsings.html` | Índice de personagens ligados aos Hellsings, com acesso aos arquivos individuais da Lana e da Sally |
-| `memorial.html` | Memorial central com jornada e caderno de 24 homenagens de Brian, chat coletivo dos sobreviventes e vídeo de despedida com áudio habilitado e atalho no caderno; também contém o relato interativo da última fuga de John. A dedicatória e as 32 homenagens de John ficam em `john-memorial.html`; o canal duplicado foi removido daqui. |
+| `memorial.html` | Memorial central com jornada e caderno de 24 homenagens de Brian, chat coletivo dos sobreviventes e vídeo de despedida com áudio habilitado e atalho no caderno; também contém o relato interativo da última fuga de John. A dedicatória e as 34 homenagens de John ficam em `john-memorial.html`; o canal duplicado foi removido daqui. |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |

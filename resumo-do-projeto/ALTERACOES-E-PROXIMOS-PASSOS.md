@@ -587,3 +587,12 @@
 - A entrada de `jack-presente.html` começa com o sinal JC-01 e apresenta, em sequência, Jack preparando Mick para substituí-lo no comando antes de seguir para a Interpol, sua leitura de campo e sua liderança protetora.
 - Aos 12 segundos, antes da música, aparece a fala proposta para Jack: “Sigam-me. Eu abro a rota. Ninguém fica para trás.” Ela permanece até a faixa começar no segundo 14. Então o nome aparece devagar; depois surge a foto atual dele no presente e a intro se dissolve para mostrar o perfil.
 - A sequência acompanha o tempo real do áudio, usa animações reduzidas quando solicitado pelo navegador e não cria botão de música.
+
+# Atualização de 5 de novembro de 2026 — filhos de John e Amélia e entrada do memorial
+
+- Henry Winchester (34), Samuel Winchester (27) e Olivia Winchester (5 na última fuga) estão reunidos na página de Amélia. Os dois filhos adultos seguem vivos; as trajetórias atuais deles são propostas revisáveis.
+- A idade de Amélia foi ajustada para 55 no presente e aproximadamente 35 no Dia D, conforme a escolha do autor para manter coerência com Henry.
+- `img-hellsing/john-olivia-memorial.png` é uma reconstrução visual de John e Olivia num momento tranquilo antes da morte. A homenagem de Amélia usa a imagem e deixa claro que se trata de uma reconstrução.
+- O diário de John ganhou as vozes de Henry e Samuel, com respostas entre irmãos; o total passou de 32 para 34 publicações. Brian morreu antes de John, portanto não publica no memorial dele; Olivia também não é autora de mensagens póstumas.
+- O menu Arquivos agora inclui o memorial central. Os links de memorial nas páginas de John e Brian abrem `memorial.html`, sem direcionar diretamente à página individual de John.
+- Atualizados `README.md`, `ARQUITETURA.md`, `UNIVERSO-E-LORE.md` e `REGISTRO-TECNICO-ATUAL.md`. Trabalho local, ainda não publicado no GitHub.
