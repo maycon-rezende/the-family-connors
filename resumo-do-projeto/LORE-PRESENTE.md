@@ -132,6 +132,10 @@ Leona tem 30 anos no presente e cerca de 10 no Dia D. É filha de Joey Muller, e
 
 O episódio da passagem de serviço durante a primeira fuga e a missão **A Escada Cega** foram criados para o dossiê como proposta revisável, não como acontecimentos já confirmados pelo autor.
 
+## A equipe especial de Jack
+
+John Bertolai Winchester e Brian Taylor atuaram como agentes especiais do FBI na equipe de Jack Connor. Brian era mais velho que Jack e ainda assim seguia suas ordens sem questionar. Quando Jack saiu do Bureau para ir à Interpol, John e Brian permaneceram no FBI; mais tarde, Jack fundou os Hellsings e chamou os dois. A equipe registrou mais de 100 missões e uma taxa de êxito superior a 90%, em dados coletivos que cobrem FBI e Hellsings. Os totais individuais de fracassos, abates e pessoas salvas não foram preservados.
+
 ## As perdas dos Hellsings
 
 Nem todos atravessaram os anos de devastação.

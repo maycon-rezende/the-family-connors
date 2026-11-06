@@ -20,18 +20,25 @@
 - Jully é a caçula e seu caminho futuro permanece aberto. O noivo e a morte dele após o Dia D têm fatos gerais confirmados, mas o nome Gabriel Mercer e os detalhes de sua história estão em proposta revisável, sem status de cânone, em `JULLY-NOIVO-LORE-PROPOSTA.md`.
 - A família possui raízes inglesas.
 
+## A equipe especial de Jack — FBI e Hellsings
+
+- **John Bertolai Winchester** e **Brian Taylor** eram agentes especiais do FBI na equipe liderada por **Jack Connor**. Brian era mais velho que Jack, mas seguia as ordens dele sem questionar.
+- Quando Jack deixou o FBI para seguir à Interpol, John e Brian permaneceram no Bureau. Mais tarde, quando Jack fundou os Hellsings, chamou os dois para integrarem o grupo.
+- Os três somaram **mais de 100 missões** e uma **taxa de êxito superior a 90%**. Esses números são do registro coletivo da equipe, entre FBI e Hellsings; não representam a contagem individual de cada agente.
+- A contagem individual de fracassos, pessoas salvas e infectados neutralizados ainda não está consolidada. A ausência de contagem preservada não equivale a zero.
+
 ## Formação oficial dos Hellsings
 
 1. **Jack Connor** — criador e comandante.
 2. **Mark Connor** — comando tático e agente de campo.
 3. **Alice Myers** — administração e contratos; não atua mais em campo.
-4. **John** — tecnologia e armamentos.
+4. **John Bertolai Winchester** — agente especial do FBI na equipe de Jack; entre os Hellsings, tecnologia, armamentos e suporte tático.
 5. **Bobby Lee** — sino-americano, com forte vínculo com suas raízes chinesas; ex-agente da Unidade Jingwei. Entrou nos Hellsings antes do Dia D, após colaborar em Janela de Cinzas, e atua em inteligência de campo e extração de testemunhas.
 6. **Naomi Yagami** — agente japonesa; inteligência e análise como função provisória.
 7. **Chloe** — reconhecimento e vigilância como função provisória; pele em tom marrom; sobrenome Bennett proposto para o núcleo familiar.
 8. **Luke Carver** — mapas, rotas e estratégia; pele em tom marrom; o autor passou a usar Carver para seu núcleo familiar, que tem raízes africanas.
 9. **Dimitri** — russo; intervenção e extração como função provisória.
-10. **Brian Taylor** — veterano e rastreador, antigo parceiro de Jack no FBI.
+10. **Brian Taylor** — veterano e rastreador; agente especial do FBI na equipe de Jack e antigo parceiro de John.
 11. **Hellen Wren** — infiltração e disfarce.
 12. **Joey Muller** — companheiro de Hellen Wren; exploração e recuperação de recursos em campo como função provisória.
 

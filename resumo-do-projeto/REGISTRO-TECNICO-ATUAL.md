@@ -192,7 +192,7 @@ O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterai
 
 | Arquivo | Implementação |
 | --- | --- |
-| `john-presente.html` | Dossiê memorial de John: tecnologia e armamentos antes da última fuga, com link ao Memorial dos Hellsings. |
+| `john-presente.html` | Dossiê de John Bertolai Winchester: trajetória como agente especial do FBI e Hellsing, registro coletivo de 100+ missões com êxito acima de 90%, especialidades e frase final. Abates, resgates e fracassos individuais não estão consolidados. |
 | `era-extincao-presente/john-presente.css` e `.js` | Identidade ciano/cobre, ficha de campo, efeitos de revelação e leitura operacional. |
 | `john-registros.html` | Arquivo independente com dez imagens de John anteriores à morte e um retrato associado de Amelia sem data identificada. |
 | `css/john-registros.css` e `js/john-registros.js` | Carrossel com imagem inteira, loop de 6,5 s, pausa por interação, pré-carregamento do próximo registro e lightbox nativo. |
@@ -201,7 +201,7 @@ O estilo usa `object-fit: contain`; portanto, uma imagem pode ter faixas laterai
 
 | Arquivo | Implementação |
 | --- | --- |
-| `brian-presente.html` | Memorial individual com parceria de Brian e Jack no FBI, atuação como veterano e rastreador dos Hellsings, infecção fatal, link ao Memorial dos Hellsings e galeria integrada com quinze registros. |
+| `brian-presente.html` | Memorial individual com parceria de Brian, John e Jack no FBI, atuação como veterano e rastreador dos Hellsings, registro operacional coletivo de 100+ missões com êxito acima de 90%, frase proposta, infecção fatal, link ao Memorial dos Hellsings e galeria integrada com quinze registros. |
 | `era-extincao-presente/brian-presente.css` | Identidade visual em bronze e azul-acinzentado, retratos sem recorte e layout responsivo. |
 | `img-hellsing/brian-taylor.png`, `brian-presente.png`, `brian-taylor-presente.png`, `brian-presente1.png` a `brian-presente3.png` e os novos registros de campo e enfermaria | Quinze registros visuais preservados na galeria individual de Brian; as imagens não recebem datas ou operações não confirmadas. |
 
@@ -547,3 +547,12 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `js/john-transmission-log.js` ganhou as vozes de Henry e Samuel, com respostas entre irmãos. O mural individual de John totaliza 34 publicações. Brian morreu antes de John e Olivia morreu com ele, portanto nenhum dos dois publica mensagens póstumas.
 - O menu Arquivos de `index.html` e os atalhos de memorial nas páginas de John e Brian levam à página central `memorial.html`; não saltam direto à homenagem individual.
 - Atualização local, ainda não publicada no GitHub.
+
+## Registros operacionais de Brian e John — 6 de novembro de 2026
+
+- Cânone confirmado pelo autor: Brian Taylor e John Bertolai Winchester eram agentes especiais do FBI na equipe de Jack Connor. Brian era mais velho que Jack e seguia suas ordens sem questionar. Quando Jack saiu do FBI para a Interpol, Brian e John permaneceram no Bureau; Jack os chamou para os Hellsings depois de fundá-los.
+- A equipe conjunta realizou mais de 100 missões, com taxa de êxito superior a 90%. Esse balanço é coletivo, cobre FBI e Hellsings e não deve ser tratado como estatística individual.
+- `brian-presente.html` e `john-presente.html` agora mostram a trajetória, os tipos de operação, o balanço coletivo e uma frase de cada personagem. O fragmento de Brian é uma reconstrução literária proposta; as últimas palavras de John para Olivia são uma fala confirmada pelo autor.
+- `memorial.html` apresenta um resumo desse balanço junto às entradas de Brian e John. Contagens individuais de fracassos, pessoas salvas e infectados neutralizados seguem sem consolidação; a página explicita que dado ausente não equivale a zero.
+- O cartão de John em `index.html` passa a exibir **John B. Winchester**; nome completo e metadados usam **John Bertolai Winchester**.
+- Direção de lore anunciada pelo autor, ainda aguardando as fichas completas antes de alterar as páginas: Naomi Yagami é a irmã mais velha de Bobby Lee Yagami.

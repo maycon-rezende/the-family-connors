@@ -12,7 +12,7 @@
 | `jack-presente.html` e `mark-presente.html` | Dossiês atuais com terminal de celular, mensagens arquivadas do crossover Doomsday e caderno de campo interativo |
 | `posts-hellsings.html` | Posts dos Hellsings: feed separado com publicações que entram continuamente em ciclo aleatório, comentários em fio e reações locais |
 | `membros-hellsings.html` | Índice de personagens ligados aos Hellsings, com acesso aos arquivos individuais da Lana e da Sally |
-| `memorial.html` | Memorial central com jornada e caderno de 24 homenagens de Brian, chat coletivo dos sobreviventes e vídeo de despedida com áudio habilitado e atalho no caderno; também contém o relato interativo da última fuga de John. A dedicatória e as 34 homenagens de John ficam em `john-memorial.html`; o canal duplicado foi removido daqui. |
+| `memorial.html` | Memorial central com jornada, registro coletivo da equipe de Jack (100+ missões, êxito acima de 90%), caderno de 24 homenagens de Brian, chat dos sobreviventes e vídeo de despedida; também guarda a última fuga de John. A dedicatória e as 34 homenagens de John ficam em `john-memorial.html`. |
 | `galeria.html` | Álbuns familiares e ambientes da mansão |
 | `videos.html` | Central de registros audiovisuais |
 | `era-extincao-presente/index.html` | Redirecionamento legado para a entrada principal |
@@ -75,7 +75,8 @@
 | `ariani-presente.html` | `ariani-fotos.html` | `era-extincao-presente/ariani-presente.css`, `css/ariani-fotos.css`, `js/ariani-fotos.js` |
 | `britney-presente.html` | `britney-fotos.html` | `era-extincao-presente/britney-presente.css`, `css/britney-registros.css`, `js/britney-registros.js` |
 | `bobby-presente.html` | `bobby-registros.html` | `era-extincao-presente/bobby-presente.css`, `css/bobby-registros.css`, `js/bobby-registros.js` |
-| `brian-presente.html` | Arquivo visual integrado com quinze registros | `era-extincao-presente/brian-presente.css` |
+| `brian-presente.html` | Arquivo visual de quinze registros, trajetória FBI/Hellsings, ficha operacional coletiva e especialidades de Brian | `era-extincao-presente/brian-presente.css` |
+| `john-presente.html` | Dossiê de John Bertolai Winchester, trajetória FBI/Hellsings, ficha operacional coletiva, funções e frase final | `era-extincao-presente/john-presente.css` |
 | `lana-presente.html` | Galeria de 21 registros e arquivo de dezesseis imagens com Pollyana | `era-extincao-presente/lana-presente.css`, `era-extincao-presente/lana-presente.js` |
 | `brian-presente.html`, `john-presente.html` | `memorial.html` | `era-extincao-presente/brian-presente.css`, `era-extincao-presente/john-presente.css`, `era-extincao-presente/memorial-hellsings.css` |
 

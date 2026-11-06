@@ -596,3 +596,12 @@
 - O diário de John ganhou as vozes de Henry e Samuel, com respostas entre irmãos; o total passou de 32 para 34 publicações. Brian morreu antes de John, portanto não publica no memorial dele; Olivia também não é autora de mensagens póstumas.
 - O menu Arquivos agora inclui o memorial central. Os links de memorial nas páginas de John e Brian abrem `memorial.html`, sem direcionar diretamente à página individual de John.
 - Atualizados `README.md`, `ARQUITETURA.md`, `UNIVERSO-E-LORE.md` e `REGISTRO-TECNICO-ATUAL.md`. Trabalho local, ainda não publicado no GitHub.
+
+# Atualização de 6 de novembro de 2026 — registros operacionais de Brian e John
+
+- As páginas de Brian e John e o memorial central agora apresentam o registro compartilhado da equipe de Jack: mais de 100 missões e taxa de êxito acima de 90%, abrangendo as fases no FBI e nos Hellsings.
+- A trajetória foi alinhada à confirmação do autor: John Bertolai Winchester e Brian Taylor eram agentes especiais do FBI na equipe de Jack Connor. Brian era mais velho, mas seguia o comando de Jack sem questionar; quando Jack foi para a Interpol, John e Brian ficaram no FBI até o convite para os Hellsings.
+- Os perfis incluem especialidades e frases marcantes. A frase de Brian é proposta literária identificada como reconstrução; a última fala de John para Olivia é confirmada pelo autor.
+- Não foram inventados totais individuais de fracassos, infectados neutralizados ou pessoas salvas; as páginas marcam esses números como não consolidados. O balanço coletivo não é apresentado como estatística individual.
+- O cartão de John na tela inicial exibe **John B. Winchester**; o nome completo nas fichas é **John Bertolai Winchester**.
+- Naomi Yagami e Bobby Lee Yagami devem ser irmãos, com Naomi mais velha. As páginas deles ficam aguardando as fichas completas do autor antes da atualização.

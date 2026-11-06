@@ -697,6 +697,14 @@ a { color: inherit; }
 .memorial-john-arrival__copy p { max-width: 560px; color: #c8c0b5; font-size: .94rem; line-height: 1.85; }
 .memorial-john-arrival__copy strong { display: inline-flex; align-items: center; gap: 1.4rem; margin-top: 1rem; padding: .9rem 1rem; border: 1px solid #8bbfc35d; color: #e9e0d2; font: 700 .55rem/1.5 'Cinzel', serif; letter-spacing: .1em; }
 .memorial-john-arrival__copy strong span { color: var(--mem-cyan); font-size: 1rem; }
+.memorial-service-snapshot { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; width: min(100%, 390px); margin: .9rem 0 .25rem; }
+.memorial-service-snapshot > span { display: grid; gap: .3rem; padding: .72rem .8rem; border: 1px solid #c3905b52; background: #15100d99; }
+.memorial-service-snapshot b { color: var(--mem-paper); font: 800 clamp(1.45rem, 3vw, 2.1rem)/.9 'Barlow Condensed', Impact, sans-serif; }
+.memorial-service-snapshot small { color: var(--mem-copper); font: 500 .43rem/1.45 'DM Mono', monospace; letter-spacing: .11em; }
+.memorial-service-snapshot--john > span { border-color: #8bbfc354; background: #0e1514a8; }
+.memorial-service-snapshot--john b { color: #d9e9e4; }
+.memorial-service-snapshot--john small { color: var(--mem-cyan); }
+.memorial-service-snapshot__note { display: block; max-width: 500px; margin-top: .4rem; color: #a69c8f; font: 500 .39rem/1.6 'DM Mono', monospace; letter-spacing: .075em; }
 .memorial-john-arrival__voices { position: absolute; z-index: 3; inset: 0; display: none; place-items: center; overflow: hidden; background: radial-gradient(ellipse at center, #171411, #070605 72%); text-align: center; pointer-events: none; }
 .memorial-john-arrival.has-sequence .memorial-john-arrival__voices { display: grid; }
 .memorial-john-arrival__voices::before { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 4px, #d3c5ad0a 5px 6px), radial-gradient(circle at 20% 28%, #c3905b14 0 1px, transparent 2px); content: ''; }
