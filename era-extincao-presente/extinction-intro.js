@@ -5,10 +5,14 @@
   const stage = $('.intro-stage');
   const awakening = $('.awakening');
   const audio = $('#introReferenceAudio');
+  const windAudio = $('#introWindAudio');
   const copy = $('.intro-copy');
   const finalCard = $('.intro-final');
   const status = $('#introStatus');
   const cursor = $('.intro-cursor');
+  const enterButton = $('[data-awaken]');
+  const enterButtonLabel = enterButton.querySelector('span');
+  const windGestureEvents = ['pointerdown', 'keydown', 'touchstart'];
   const I = (src, start, end, text = null, className = '') => ({ kind: 'img', src, start, end, text, className });
   const V = (src, start, end, text = null, className = '', offset = 0) => ({ kind: 'video', src, start, end, text, className, offset });
 
@@ -59,6 +63,8 @@
   ];
 
   let nodes = [], current = -1, raf = 0, started = false, leaving = false, monsterPhase = 0;
+  let finalSequenceStarted = false, windNeedsGesture = false;
+  let windStartTimer = 0, windRevealTimer = 0;
   function build() {
     const fragment = document.createDocumentFragment();
     scenes.forEach((scene, index) => {
@@ -165,24 +171,103 @@
     try { await audio.play(); cancelAnimationFrame(raf); raf = requestAnimationFrame(render); }
     catch { started = false; awakening.classList.remove('is-running'); status.textContent = 'ÁUDIO BLOQUEADO // TOQUE NOVAMENTE'; }
   }
+  function revealEnterButton(label) {
+    enterButtonLabel.textContent = label;
+    enterButton.hidden = false;
+  }
+  function removeWindGestureListeners() {
+    windGestureEvents.forEach((eventName) => window.removeEventListener(eventName, retryWindAfterGesture));
+  }
+  function waitForWindGesture() {
+    removeWindGestureListeners();
+    windGestureEvents.forEach((eventName) => window.addEventListener(eventName, retryWindAfterGesture, { once: true, passive: true }));
+  }
+  function retryWindAfterGesture() {
+    if (!windNeedsGesture) return;
+    startWind();
+  }
+  function completeWind() {
+    window.clearTimeout(windRevealTimer);
+    windNeedsGesture = false;
+    removeWindGestureListeners();
+    status.textContent = 'ACESSO LIBERADO';
+    if (enterButton.hidden) revealEnterButton('ENTRAR NO SITE');
+  }
+  function revealButtonDuringWind() {
+    if (!windAudio || windAudio.paused || windAudio.ended) return;
+    status.textContent = 'EFEITO DE VENTO // ATIVO';
+    revealEnterButton('ENTRAR NO SITE');
+  }
+  function scheduleButtonDuringWind() {
+    window.clearTimeout(windRevealTimer);
+    const duration = Number.isFinite(windAudio.duration) && windAudio.duration > 0
+      ? windAudio.duration
+      : 13.4;
+    windRevealTimer = window.setTimeout(revealButtonDuringWind, (duration / 2) * 1000);
+  }
+  function startWind() {
+    window.clearTimeout(windStartTimer);
+    window.clearTimeout(windRevealTimer);
+    enterButton.hidden = true;
+    removeWindGestureListeners();
+    if (!windAudio || windAudio.error) {
+      status.textContent = 'EFEITO INDISPONÍVEL // ACESSO LIBERADO';
+      revealEnterButton('ENTRAR NO SITE');
+      return;
+    }
+
+    windNeedsGesture = false;
+    windAudio.loop = false;
+    windAudio.currentTime = 0;
+    windAudio.volume = .82;
+    windAudio.removeEventListener('ended', completeWind);
+    windAudio.removeEventListener('error', completeWind);
+    windAudio.removeEventListener('playing', scheduleButtonDuringWind);
+    windAudio.addEventListener('ended', completeWind, { once: true });
+    windAudio.addEventListener('error', completeWind, { once: true });
+    windAudio.addEventListener('playing', scheduleButtonDuringWind, { once: true });
+
+    try {
+      const playback = windAudio.play();
+      if (playback && typeof playback.catch === 'function') {
+        playback.catch(() => {
+          windNeedsGesture = true;
+          status.textContent = 'TOQUE NA TELA // LIBERE O VENTO';
+          waitForWindGesture();
+        });
+      }
+    } catch {
+      windNeedsGesture = true;
+      status.textContent = 'TOQUE NA TELA // LIBERE O VENTO';
+      waitForWindGesture();
+    }
+  }
   function finish() {
+    if (finalSequenceStarted) return;
+    finalSequenceStarted = true;
     started = true; audio.pause(); current = scenes.length - 1; load(current);
+    enterButton.hidden = true;
     nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
     copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
     awakening.classList.add('is-running', 'is-finished');
+    status.textContent = 'TRANSMISSÃO CONCLUÍDA';
+    windStartTimer = window.setTimeout(startWind, 3000);
   }
   function enter() {
-    if (leaving) return; leaving = true; audio.pause(); awakening.classList.add('is-leaving');
+    if (leaving) return; leaving = true;
+    window.clearTimeout(windStartTimer); window.clearTimeout(windRevealTimer); removeWindGestureListeners();
+    audio.pause(); windAudio?.pause(); awakening.classList.add('is-leaving');
     try { sessionStorage.setItem('ede-intro-liberada', 'sim'); } catch {}
     setTimeout(() => { location.href = 'index.html?intro=concluida'; }, 1700);
   }
   build(); prepareTitle();
+  enterButton.hidden = true;
   audio.addEventListener('ended', finish, { once: true });
   audio.addEventListener('play', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(render); });
   audio.addEventListener('pause', () => nodes[current]?.querySelector('video')?.pause());
   $('[data-start-cinema]').addEventListener('click', start);
   $('[data-skip-cinema]').addEventListener('click', finish);
-  $('[data-awaken]').addEventListener('click', enter);
+  enterButton.addEventListener('click', enter);
   if (cursor && matchMedia('(pointer: fine)').matches) {
     addEventListener('pointermove', (event) => {
       cursor.style.opacity = '1';
