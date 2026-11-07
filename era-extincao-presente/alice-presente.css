@@ -872,3 +872,197 @@ body[data-character='alice'] .alice-memory-dots button:hover {
   body[data-character='alice'] .alice-memories__status i { animation: none; }
   body[data-character='alice'] .alice-memory-gallery figure { transition: none; }
 }
+
+.alice-opening[hidden] {
+  display: none;
+}
+
+.alice-opening {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: grid;
+  overflow: hidden;
+  place-items: stretch;
+  background: #071011;
+  isolation: isolate;
+  opacity: 1;
+  transition: opacity 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.alice-opening.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.alice-opening__portrait,
+.alice-opening__atmosphere {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.alice-opening__portrait {
+  z-index: -2;
+  display: block;
+  object-fit: cover;
+  object-position: center 47%;
+  animation: alice-opening-drift 9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.alice-opening__atmosphere {
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 5px, rgba(143, 214, 207, 0.045) 6px),
+    linear-gradient(90deg, rgba(4, 13, 14, 0.94), rgba(4, 13, 14, 0.68) 34%, rgba(4, 13, 14, 0.04) 77%),
+    linear-gradient(0deg, rgba(4, 13, 14, 0.72), transparent 58%, rgba(4, 13, 14, 0.14));
+}
+
+.alice-opening__atmosphere::before,
+.alice-opening__atmosphere::after {
+  position: absolute;
+  inset: -18%;
+  content: '';
+  pointer-events: none;
+}
+
+.alice-opening__atmosphere::before {
+  opacity: 0.42;
+  background:
+    radial-gradient(ellipse at 76% 43%, rgba(143, 214, 207, 0.16), transparent 34%),
+    linear-gradient(108deg, transparent 32%, rgba(217, 107, 61, 0.12) 47%, transparent 59%);
+  animation: alice-opening-wind 7.5s ease-in-out infinite alternate;
+}
+
+.alice-opening__atmosphere::after {
+  opacity: 0.3;
+  background: repeating-linear-gradient(112deg, transparent 0 82px, rgba(238, 205, 153, 0.12) 83px 84px, transparent 85px 142px);
+  mask-image: linear-gradient(90deg, transparent 22%, #000 58%, transparent 95%);
+  animation: alice-opening-dust 10s linear infinite;
+}
+
+.alice-opening__copy {
+  position: absolute;
+  top: clamp(5.5rem, 17vh, 9.5rem);
+  left: clamp(1.5rem, 7vw, 7.5rem);
+  z-index: 1;
+  width: min(50vw, 720px);
+}
+
+.alice-opening__eyebrow,
+.alice-opening__role {
+  display: block;
+  color: rgba(143, 214, 207, 0.86);
+  font: 600 0.55rem/1.5 'Cinzel', Georgia, serif;
+  letter-spacing: 0.2em;
+}
+
+.alice-opening__eyebrow {
+  opacity: 0;
+  animation: alice-opening-reveal 800ms ease 250ms forwards;
+}
+
+.alice-opening__quote {
+  max-width: 500px;
+  margin: clamp(2.1rem, 6vh, 4rem) 0 1.6rem;
+  color: #e5d8c1;
+  font: 600 clamp(1.2rem, 2.1vw, 1.8rem)/1.45 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  animation: alice-opening-reveal 900ms ease 650ms forwards;
+}
+
+.alice-opening__title {
+  margin: 0;
+  transform: translateY(18px);
+  color: #f0e5d0;
+  font: 800 clamp(4.3rem, 9.8vw, 9.6rem)/0.76 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: alice-opening-arrival 950ms cubic-bezier(0.2, 0.7, 0.2, 1) 2.15s forwards;
+}
+
+.alice-opening__title em {
+  display: block;
+  color: var(--cyan);
+  font-style: normal;
+  text-shadow: 0 0 24px rgba(143, 214, 207, 0.2);
+}
+
+.alice-opening__surname,
+body[data-character='alice'] .hero-copy h1 em {
+  color: #e6534b;
+  text-shadow: 0 0 24px rgba(230, 83, 75, 0.28);
+}
+
+.alice-opening__role {
+  margin-top: 1.6rem;
+  color: #d9ad79;
+  font-size: 0.49rem;
+  opacity: 0;
+  animation: alice-opening-reveal 800ms ease 3.25s forwards;
+}
+
+body.alice-opening-active {
+  overflow: hidden;
+}
+
+@keyframes alice-opening-drift {
+  from { transform: scale(1.035) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(-0.7%, -0.4%, 0); }
+}
+
+@keyframes alice-opening-wind {
+  from { transform: translate3d(-2%, 0, 0) scale(1); opacity: 0.26; }
+  to { transform: translate3d(2%, -1%, 0) scale(1.04); opacity: 0.58; }
+}
+
+@keyframes alice-opening-dust {
+  from { transform: translate3d(2%, 1%, 0); }
+  to { transform: translate3d(-3%, -1%, 0); }
+}
+
+@keyframes alice-opening-reveal {
+  to { opacity: 1; }
+}
+
+@keyframes alice-opening-arrival {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .alice-opening__portrait { object-position: 69% center; }
+  .alice-opening__atmosphere {
+    background:
+      repeating-linear-gradient(0deg, transparent 0 5px, rgba(143, 214, 207, 0.04) 6px),
+      linear-gradient(90deg, rgba(4, 13, 14, 0.76), rgba(4, 13, 14, 0.48) 56%, rgba(4, 13, 14, 0.12)),
+      linear-gradient(0deg, rgba(4, 13, 14, 0.72), transparent 62%);
+  }
+  .alice-opening__copy {
+    top: 13vh;
+    left: 1.25rem;
+    width: min(82vw, 520px);
+  }
+  .alice-opening__quote { margin-top: 2.7rem; }
+  .alice-opening__title { font-size: clamp(3.7rem, 15vw, 6.2rem); }
+  .alice-opening__eyebrow,
+  .alice-opening__role { font-size: 0.45rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alice-opening,
+  .alice-opening__portrait,
+  .alice-opening__atmosphere::before,
+  .alice-opening__atmosphere::after,
+  .alice-opening__eyebrow,
+  .alice-opening__quote,
+  .alice-opening__title,
+  .alice-opening__role {
+    animation: none;
+    transition: none;
+  }
+}

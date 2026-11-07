@@ -9,11 +9,39 @@
       content="Dossiê de Naomi Yagami: inteligência, sinais perdidos e a rede clandestina dos Hellsings depois do Dia D."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/naomi-presente.css?v=4" />
+    <link rel="stylesheet" href="era-extincao-presente/naomi-presente.css?v=7" />
     <title>Naomi Yagami | Sinais Perdidos</title>
   </head>
   <body class="naomi-intel">
     <div class="naomi-signal-field" aria-hidden="true"></div>
+    <section
+      class="naomi-opening"
+      data-naomi-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="naomi-opening-title"
+      aria-describedby="naomi-opening-description"
+      hidden
+    >
+      <video
+        class="naomi-opening__video"
+        data-naomi-opening-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-hellsing/naomi-presente.png"
+        aria-hidden="true"
+      >
+        <source src="video/naomi.mp4" type="video/mp4" />
+      </video>
+      <div class="naomi-opening__shade" aria-hidden="true"></div>
+      <div class="naomi-opening__copy">
+        <span class="naomi-opening__eyebrow"><i></i> N-05 // FREQUÊNCIA RECUPERADA</span>
+        <h2 id="naomi-opening-title">NAOMI <em>YAGAMI.</em></h2>
+        <p id="naomi-opening-description">INTELIGÊNCIA HELLSINGS // SINAL ATIVO</p>
+      </div>
+    </section>
 
     <nav class="naomi-nav" aria-label="Navegação do dossiê de Naomi Yagami">
       <a href="index.html#sobreviventes">← Sobreviventes</a>
@@ -114,6 +142,35 @@
         </div>
       </section>
 
+      <section class="naomi-scene naomi-scene--rescue" aria-labelledby="naomi-rescue-title">
+        <div class="naomi-scene__layout">
+          <figure class="naomi-scene__poster" data-reveal>
+            <img
+              src="img-naomi-presente/resgate.png"
+              alt="Naomi conduz sobreviventes para fora de uma instalação em ruínas"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="naomi-scene__index">SEQ. 01 // EXTRAÇÃO</span>
+            <figcaption>
+              <span>QUADRO-GUIA // RESGATE</span>
+              <b>VÍDEO EM PREPARAÇÃO</b>
+            </figcaption>
+          </figure>
+
+          <div class="naomi-scene__copy" data-reveal>
+            <span class="naomi-kicker">CENA PLANEJADA // MISSÃO DE RESGATE</span>
+            <h2 id="naomi-rescue-title">O SINAL<br /><em>VIROU ROTA.</em></h2>
+            <p>
+              O pedido de socorro chegava cortado pela interferência, mas Naomi reconheceu o padrão.
+              Ela marcou a saída no rádio, entrou no setor com a equipe e conduziu os sobreviventes
+              para fora. A lâmina comprou alguns segundos; foi a rota que trouxe todos de volta.
+            </p>
+            <small>SEQUÊNCIA EM DESENVOLVIMENTO // TRILHA DA PÁGINA</small>
+          </div>
+        </div>
+      </section>
+
       <section class="naomi-terminal" aria-labelledby="naomi-terminal-title">
         <div class="naomi-terminal__image" data-reveal>
           <img
@@ -162,6 +219,36 @@
         </figure>
       </section>
 
+      <section class="naomi-scene naomi-scene--siblings" aria-labelledby="naomi-siblings-title">
+        <div class="naomi-scene__layout">
+          <div class="naomi-scene__copy" data-reveal>
+            <span class="naomi-kicker">LAÇO DE SANGUE // NAOMI + BOBBY</span>
+            <h2 id="naomi-siblings-title">DOIS IRMÃOS.<br /><em>UM SINAL.</em></h2>
+            <p>
+              Na retirada, Bobby cobre a passagem enquanto Naomi guia um sobrevivente. Um olhar
+              basta para os dois acertarem o próximo movimento. Por um instante, entre rádios e
+              destroços, aparece a confiança que existe entre irmãos — a certeza silenciosa de que
+              nenhum dos dois vai deixar o outro para trás.
+            </p>
+            <small>CENA PLANEJADA // BOBBY É O IRMÃO MAIS NOVO</small>
+          </div>
+
+          <figure class="naomi-scene__poster" data-reveal>
+            <img
+              src="img-naomi-presente/naomi-bobby-lee.png"
+              alt="Naomi e Bobby Lee lutam lado a lado, cada um cobrindo uma direção"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="naomi-scene__index">SEQ. 02 // IRMÃOS</span>
+            <figcaption>
+              <span>QUADRO-GUIA // NAOMI E BOBBY</span>
+              <b>VÍDEO EM PREPARAÇÃO</b>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="naomi-records" aria-labelledby="naomi-records-title">
         <div data-reveal>
           <span class="naomi-kicker">ARQUIVO VISUAL // PRESENTE</span>
@@ -183,11 +270,20 @@
       <a href="luke-presente.html">Luke →</a>
     </footer>
 
-    <audio data-character-theme autoplay loop preload="auto" hidden aria-hidden="true">
+    <audio
+      data-character-theme
+      data-theme-position-key="naomi-present-theme-position"
+      autoplay
+      loop
+      preload="auto"
+      hidden
+      aria-hidden="true"
+    >
       <source src="audio/theme-naomi-presente.mp3" type="audio/mpeg" />
     </audio>
-    <script src="js/personagem-theme.js" defer></script>
+    <script src="js/personagem-theme.js?v=2" defer></script>
     <script src="era-extincao-presente/naomi-presente.js"></script>
+    <script src="era-extincao-presente/naomi-opening.js?v=2" defer></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

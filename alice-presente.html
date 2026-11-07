@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#090806" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
-    <link rel="stylesheet" href="era-extincao-presente/alice-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/alice-presente.css?v=3" />
     <link rel="stylesheet" href="css/present-responsive.css" />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <title>Alice M Connor | Era da Extinção</title>
     <meta name="description" content="Alice Myers Connor no presente: medicina, família e sobrevivência." />
   </head>
   <body data-character="alice">
+    <section
+      class="alice-opening"
+      data-alice-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="alice-opening-title"
+      aria-describedby="alice-opening-quote"
+      hidden
+    >
+      <img
+        class="alice-opening__portrait"
+        src="img-presente/personagens/alice-abertura-presente.png"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+      />
+      <div class="alice-opening__atmosphere" aria-hidden="true"></div>
+      <div class="alice-opening__copy">
+        <span class="alice-opening__eyebrow">AMC // TRIAGEM ATIVA</span>
+        <p class="alice-opening__quote" id="alice-opening-quote">Cuidar de alguém também é resistir.</p>
+        <h2 class="alice-opening__title" id="alice-opening-title">ALICE <em>MYERS <span class="alice-opening__surname">CONNOR.</span></em></h2>
+        <span class="alice-opening__role">MÉDICA // O CORAÇÃO DO COMBOIO</span>
+      </div>
+    </section>
+
     <nav class="profile-nav">
       <a href="index.html#sobreviventes"><b>Æ</b> ERA DA EXTINÇÃO</a
       ><span>ARQUIVO HELLSINGS // PRESENTE</span><a href="mark-presente.html">PRÓXIMO →</a>
@@ -102,6 +128,7 @@
     </audio>
     <script src="js/personagem-theme.js" defer></script>
     <script src="era-extincao-presente/personagem-presente.js"></script>
+    <script src="era-extincao-presente/alice-opening.js?v=1" defer></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

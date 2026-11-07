@@ -612,7 +612,7 @@
 - Entre a abertura e os registros de Brian e John, entrou a chamada **A estrada até aqui...**, com a trajetória já confirmada de Jack, Brian e John do FBI à formação dos Hellsings.
 - A faixa que o autor identificou como *Nothing Else Matters*, na versão da Apocalyptica, continua em `video/theme-memorial.mp4`, usada apenas como áudio oculto e automático. Nenhum controle de ligar ou desligar música foi adicionado.
 - `memorial-theme.js` controla a entrada e mantém o comportamento da trilha e da pausa durante o vídeo de despedida. A página respeita a preferência de movimento reduzido.
-- Alteração local; ainda não publicada no GitHub.
+- A correção está na versão publicada do dossiê.
 
 # Atualização de 6 de novembro de 2026 — última página do relato de John
 
@@ -670,3 +670,27 @@
 - O retrato vertical estava expandindo a altura do destaque e empurrando o nome de Naomi para baixo da primeira tela. `naomi-presente.css` agora limita o destaque à altura da janela em desktop, remove a altura mínima da imagem e alinha o texto próximo ao topo do painel.
 - Em telas pequenas, o destaque continua empilhado e mantém sua altura natural. `naomi-presente.html` aponta para `naomi-presente.css?v=4` para evitar cache da versão anterior.
 - Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 7 de novembro de 2026 — abertura em vídeo de Naomi
+
+- O clipe de teste `video/naomi.mp4` foi integrado como abertura silenciosa e reproduzida uma vez antes da página de Naomi. O título N-05 / Naomi Yagami aparece sobre o vídeo; a trilha existente continua pela página.
+- `naomi-opening.js` encerra a abertura ao final do clipe, em caso de erro ou ao pressionar Esc. O botão visível de pular foi removido. A página respeita a preferência por movimento reduzido e mostra o perfil sem abrir o vídeo.
+- A abertura é um ensaio com o vídeo atual, ainda sujeito à revisão visual do autor.
+
+# Continuidade da trilha de Naomi entre perfil e galeria
+
+- `naomi-presente.html` e `naomi-registros.html` usam a mesma música e a mesma chave de sessão para guardar a posição da faixa. Ao alternar entre o dossiê e **Sinais em Movimento**, a música retoma do ponto salvo, sem controles visíveis.
+- `js/personagem-theme.js` preserva essa posição apenas nas páginas que declaram `data-theme-position-key`; os demais perfis mantêm o comportamento atual.
+
+# Abertura cinematográfica de Alice — plano B
+
+- Como o Gemini recusou animar o retrato fotorrealista, `alice-presente.html` agora usa uma abertura visual de aproximadamente nove segundos, criada com CSS/JS a partir de `img-presente/personagens/alice-abertura-presente.png`.
+- A frase “Cuidar de alguém também é resistir.” e o nome de Alice surgem em camadas; zoom lento, luz, poeira e tons azul-petróleo/cobre dão movimento à imagem. A trilha `theme-alice-presente.mp3` permanece separada e sem controles.
+- O sobrenome **Connor** recebeu destaque vermelho tanto na abertura quanto no título principal do perfil.
+- A abertura fecha sozinha, aceita Esc e é omitida com preferência por movimento reduzido.
+- Foram preparados dois espaços de cena ao longo do perfil, fora da abertura: um resgate de sobreviventes e uma retirada coordenada entre Naomi e o irmão mais novo, Bobby. As imagens existentes `resgate.png` e `naomi-bobby-lee.png` funcionam como quadros-guia até a geração dos vídeos; a trilha da página segue sem áudio concorrente.
+
+# Intro global — efeito de vento e entrada
+
+- A música `audio/intro-ultron-reference.mp3` termina antes da pausa de três segundos. Em seguida toca `audio/efeito-sonoro-vento-intro.mp3`.
+- O botão **ENTRAR NO SITE** surge na metade do efeito de vento. Se o navegador bloquear a reprodução automática do efeito, a intro aguarda uma interação na tela e tenta novamente, sem exibir um botão separado para o áudio.

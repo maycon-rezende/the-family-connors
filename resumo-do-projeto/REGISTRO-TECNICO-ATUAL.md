@@ -624,3 +624,25 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `era-extincao-presente/naomi-presente.css` limita a altura do destaque desktop à janela, remove o mínimo de 650px da imagem vertical e alinha o bloco de texto próximo ao topo. Isso evita que a proporção natural do retrato empurre o título para baixo.
 - A regra mobile redefine o destaque para altura automática e preserva a disposição em coluna. `naomi-presente.html` usa a versão de cache `v=4` da folha de estilos.
 - Alteração local, ainda não publicada no GitHub.
+
+## Abertura experimental em vídeo de Naomi — 7 de novembro de 2026
+
+- `naomi-presente.html` exibe `video/naomi.mp4` em um overlay modal silencioso antes do dossiê. O título HTML aparece por cima do clipe; a trilha de Naomi continua no elemento de áudio independente.
+- `era-extincao-presente/naomi-opening.js` toca o clipe uma vez, permite pular com Esc, restaura o foco no fim, pula a abertura com movimento reduzido e fecha em erro ou após o limite de segurança. O botão visual de pular foi removido; o diálogo recebe o foco no início.
+- `era-extincao-presente/naomi-presente.css` estiliza o overlay para desktop e celular; a abertura usa o clipe experimental atual e pode ser refinada após a avaliação visual do autor.
+- O perfil também reserva dois quadros para vídeos posteriores: a cena de resgate usa `img-naomi-presente/resgate.png`; a cena dos irmãos usa `img-naomi-presente/naomi-bobby-lee.png`. Os blocos `naomi-scene` são responsivos e apresentam imagens-guia, texto revisável e indicação de vídeo em preparação; as trilhas continuam controladas somente pela música da página.
+
+## Continuidade da trilha de Naomi entre páginas
+
+- O áudio de `naomi-presente.html` e `naomi-registros.html` compartilha a chave `naomi-present-theme-position` em `sessionStorage`; o helper `js/personagem-theme.js` restaura a posição após carregar os metadados e grava em `timeupdate`/`pagehide`.
+- O comportamento é opt-in via `data-theme-position-key`, então outras trilhas de personagens não passam a compartilhar a posição. As duas páginas mantêm autoplay/loop e não exibem controles.
+
+## Abertura de Alice em CSS/JS
+
+- `alice-presente.html` mostra `img-presente/personagens/alice-abertura-presente.png` como abertura de nove segundos, sem arquivo de vídeo. `era-extincao-presente/alice-opening.js` controla a camada, fecha ao fim ou com Esc, bloqueia a navegação atrás dela durante a sequência e respeita movimento reduzido.
+- `era-extincao-presente/alice-presente.css` anima aproximação lenta, atmosferas de poeira/luz e entrada da frase/nome. A música original da Alice continua no elemento de áudio independente; não há controle visível nem som embutido.
+
+## Efeito de vento após a intro global
+
+- `intro.html` carrega a faixa `audio/efeito-sonoro-vento-intro.mp3`. Ao terminar `audio/intro-ultron-reference.mp3`, `era-extincao-presente/extinction-intro.js` aguarda três segundos e inicia o efeito.
+- O botão **ENTRAR NO SITE** permanece oculto até a metade da reprodução do vento; ao ser acionado, a navegação segue para a página inicial. Se a reprodução automática for bloqueada, a intro tenta novamente após uma interação geral na tela, sem um botão dedicado ao efeito.
