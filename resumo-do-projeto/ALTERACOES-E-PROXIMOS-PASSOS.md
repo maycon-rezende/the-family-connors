@@ -694,3 +694,15 @@
 
 - A música `audio/intro-ultron-reference.mp3` termina antes da pausa de três segundos. Em seguida toca `audio/efeito-sonoro-vento-intro.mp3`.
 - O botão **ENTRAR NO SITE** surge na metade do efeito de vento. Se o navegador bloquear a reprodução automática do efeito, a intro aguarda uma interação na tela e tenta novamente, sem exibir um botão separado para o áudio.
+
+# Tema sonoro da facção Dominus — 7 de novembro de 2026
+
+- `faccao-dominus.html` reproduz `audio/theme-dominus.mp3` em loop ao abrir a página, sem controles visíveis.
+- A página usa `js/personagem-theme.js` para tentar iniciar a música e retomá-la após uma interação caso o navegador bloqueie a reprodução automática.
+
+# Dossiê presente de Jack — 7 de novembro de 2026
+
+- `jack-presente.html` agora narra a trajetória a partir do Dia D: reunião dos Hellsings, resgates antes dos bombardeios, rota secreta até a entrada secundária do bunker, confinamento e sobrevivência na Extinção.
+- A cronologia registra as mortes de Brian Taylor e John Bertolai Winchester e o objetivo atual de desmantelar a Dominus e encontrar a estufa do governo.
+- O balanço de campo propõe 121 operações, 113 objetivos concluídos, oito missões redirecionadas, zero fracassos oficiais, 1.286 infectados neutralizados, 19 combatentes hostis mortos e cerca de 1.486 entradas de evacuação. São números ficcionais provisórios; as entradas podem contar a mesma pessoa em mais de uma retirada.
+- `era-extincao-presente/jack-dossier.css` estiliza a seção de estatísticas e a cronologia com a identidade visual do personagem. A história anterior ao Dia D continua na página do passado.

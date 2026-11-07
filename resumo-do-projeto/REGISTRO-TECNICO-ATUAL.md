@@ -646,3 +646,15 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 
 - `intro.html` carrega a faixa `audio/efeito-sonoro-vento-intro.mp3`. Ao terminar `audio/intro-ultron-reference.mp3`, `era-extincao-presente/extinction-intro.js` aguarda três segundos e inicia o efeito.
 - O botão **ENTRAR NO SITE** permanece oculto até a metade da reprodução do vento; ao ser acionado, a navegação segue para a página inicial. Se a reprodução automática for bloqueada, a intro tenta novamente após uma interação geral na tela, sem um botão dedicado ao efeito.
+
+## Tema sonoro da facção Dominus
+
+- `faccao-dominus.html` carrega `audio/theme-dominus.mp3` em um elemento de áudio oculto, com autoplay e loop, sem controles visíveis.
+- A reprodução usa `js/personagem-theme.js`, que tenta iniciar a faixa ao abrir a página e tenta novamente no primeiro toque, tecla ou clique se o navegador bloquear o autoplay.
+
+## Dossiê presente de Jack — 7 de novembro de 2026
+
+- `jack-presente.html` inclui os blocos `jack-operations` (indicadores e divisão por tipo de missão) e `jack-chronicle` (cronologia do Dia D ao presente). O novo estilo responsivo fica em `era-extincao-presente/jack-dossier.css`.
+- `era-extincao-presente/personagem-presente.js` atualiza a apresentação de Jack para tratar do resgate antes dos bombardeios e da chegada ao bunker; referências ao FBI e à Interpol permanecem reservadas à história pré-Dia D.
+- As contagens exibidas são propostas ficcionais revisáveis, com 121 operações, 113 objetivos concluídos e oito redirecionamentos. Os ~1.486 registros são entradas de evacuação, não uma contagem confirmada de indivíduos únicos.
+- A cronologia informa que Brian Taylor morreu primeiro e John Bertolai Winchester depois, junto de Olivia, na explosão preparada para salvar o comboio. O objetivo atual é combater a Dominus e localizar a estufa governamental.

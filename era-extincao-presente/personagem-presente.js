@@ -8,14 +8,14 @@ const profiles = {
     hero: 'img-presente/personagens/jack-presente1.png',
     focus: '50% 22%',
     intro:
-      'O homem que passou a vida caçando monstros agora conduz uma família por um mundo que se tornou um deles.',
-    title: 'O peso',
-    accent: 'da liderança',
+      'Quando anunciaram os bombardeios, Jack ouviu no rádio os nomes de quem não chegaria ao bunker sem ajuda.',
+    title: 'A rota',
+    accent: 'que ainda faltava',
     paragraphs: [
-      'Ex-agente do FBI e da Interpol, criador dos Hellsings e sobrevivente de incontáveis operações, Jack transformou experiência em instinto. No presente, cada rota, parada e confronto do comboio passa por sua decisão.',
-      'O tempo não o tornou menos perigoso. Tornou-o mais silencioso, mais calculista e ainda mais protetor com Alice, os irmãos, os filhos e todos que passaram a depender de seu comando.',
+      'A ordem era levar os Hellsings ao bunker. Jack conhecia a lista dos que ainda estavam pelo caminho: Naomi, Luke e sua família, Joey e outros sobreviventes. Ele desviou para buscá-los enquanto as estradas se fechavam e os infectados avançavam.',
+      'Quando a primeira bomba caiu no centro da cidade, Jack conduziu o grupo por um túnel que só ele conhecia. A porta do bunker fechou no último minuto. O abrigo os manteve vivos; a Extinção começou do lado de fora.',
     ],
-    quote: 'Ele não promete um lugar seguro. Promete que ninguém será abandonado no caminho.',
+    quote: 'Se ainda falta alguém no caminho, a rota ainda não terminou.',
     memory: 'img-presente/personagens/alice-jack-presente.png',
     memoryTitle: 'Ainda juntos',
     memoryText:

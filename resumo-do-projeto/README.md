@@ -10,6 +10,7 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 
 - `index.html`: experiência principal da Era da Extinção no presente devastado.
 - `jack-presente.html` e `mark-presente.html`: dossiês atuais com terminais de celular interativos; os registros de Jack preservam o convite de Mick Braddock para encontrar os Hellsings e a perda do sinal, enquanto os de Mark guardam fragmentos com Hanson e Salazar.
+- O dossiê presente de Jack começa no Dia D e acompanha a retirada antes dos bombardeios, o resgate de Naomi, Luke e sua família, Joey e outros sobreviventes, a entrada pelo túnel até o bunker, o longo confinamento e a luta na Era da Extinção. Inclui um balanço de 121 operações e uma cronologia até o confronto com a Dominus; as contagens de campo são estimativas revisáveis, e a biografia anterior ao Dia D permanece na página do passado.
 - `arquivo-passado.html`: portal cinematográfico para a vida dos Connor antes do Dia D.
 - `telainicial.html`: narrativa do passado e apresentação da família jovem.
 - Páginas individuais de Jack, Alice, Mark, Ariani, Britney e Jully.
@@ -26,6 +27,7 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 - As páginas de Alice, Mark e Naomi tocam suas trilhas temáticas em loop, sem controles visíveis. A trilha de Naomi também acompanha a navegação entre o dossiê e `naomi-registros.html`, retomando a posição salva na sessão; a reprodução tenta iniciar ao abrir e é retomada no primeiro toque/tecla se o navegador bloquear áudio automático.
 - Alice ganhou uma abertura cinematográfica em CSS baseada no quadro gerado `img-presente/personagens/alice-abertura-presente.png`. A imagem recebe movimento sutil, poeira e luz, enquanto frase e nome surgem; “Connor” aparece em vermelho na abertura e no título do perfil. A trilha da página continua sem áudio adicional.
 - A intro global toca `audio/intro-ultron-reference.mp3`; três segundos depois do fim, começa `audio/efeito-sonoro-vento-intro.mp3`. **ENTRAR NO SITE** aparece no meio do efeito. Caso o navegador bloqueie o áudio, a intro tenta reproduzi-lo após uma interação na tela.
+- A página `faccao-dominus.html` toca `audio/theme-dominus.mp3` em loop, sem controles visíveis; o helper compartilhado tenta iniciar a faixa e pode retomá-la após uma interação se o navegador bloquear o autoplay.
 - O destaque do dossiê de Naomi fica limitado à altura da janela em desktop, para manter nome e apresentação visíveis no início; em telas pequenas, a composição continua vertical.
 - O vídeo experimental `video/naomi.mp4` abre o dossiê uma vez, sem som, com o título sobreposto; a trilha própria da página continua. Não há botão visível; Esc encerra a abertura e a preferência por movimento reduzido a omite.
 - O perfil de Naomi ganhou duas cenas planejadas com quadros-guia: `img-naomi-presente/resgate.png` para um resgate em campo e `img-naomi-presente/naomi-bobby-lee.png` para uma retirada coordenada entre os irmãos. Os espaços são responsivos, sem áudio próprio, e aguardam os clipes finais do Gemini.
@@ -94,4 +96,4 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 6 de novembro de 2026.
+Última atualização: 7 de novembro de 2026.
