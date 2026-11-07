@@ -664,3 +664,9 @@
 - `audio/theme-naomi-presente.mp3` foi integrada a `naomi-presente.html` em reprodução contínua, sem controles visíveis.
 - A página usa `js/personagem-theme.js`, que tenta iniciar a música ao carregar e retoma no primeiro toque, clique ou tecla caso o navegador bloqueie autoplay audível.
 - Alteração local; ainda não publicada no GitHub.
+
+# Atualização de 7 de novembro de 2026 — altura do destaque de Naomi
+
+- O retrato vertical estava expandindo a altura do destaque e empurrando o nome de Naomi para baixo da primeira tela. `naomi-presente.css` agora limita o destaque à altura da janela em desktop, remove a altura mínima da imagem e alinha o texto próximo ao topo do painel.
+- Em telas pequenas, o destaque continua empilhado e mantém sua altura natural. `naomi-presente.html` aponta para `naomi-presente.css?v=4` para evitar cache da versão anterior.
+- Alteração local; ainda não publicada no GitHub.

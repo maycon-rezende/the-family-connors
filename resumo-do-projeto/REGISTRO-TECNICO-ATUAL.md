@@ -618,3 +618,9 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `naomi-presente.html` toca `audio/theme-naomi-presente.mp3` em loop, sem controles de interface.
 - A página reutiliza `js/personagem-theme.js` para iniciar a reprodução ao carregar e tentar novamente após a primeira interação caso o navegador bloqueie o autoplay com som.
 - Alteração local, ainda não publicada no GitHub.
+
+## Ajuste do destaque da página de Naomi — 7 de novembro de 2026
+
+- `era-extincao-presente/naomi-presente.css` limita a altura do destaque desktop à janela, remove o mínimo de 650px da imagem vertical e alinha o bloco de texto próximo ao topo. Isso evita que a proporção natural do retrato empurre o título para baixo.
+- A regra mobile redefine o destaque para altura automática e preserva a disposição em coluna. `naomi-presente.html` usa a versão de cache `v=4` da folha de estilos.
+- Alteração local, ainda não publicada no GitHub.

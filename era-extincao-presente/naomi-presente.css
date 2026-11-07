@@ -124,15 +124,16 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 0.93fr) minmax(440px, 1.07fr);
   align-items: stretch;
-  min-height: min(830px, 100svh);
+  height: min(830px, 100svh);
+  min-height: min(650px, 100svh);
   border-bottom: 1px solid var(--naomi-line);
 }
 
 .naomi-hero__copy {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 6.5vw, 7rem) clamp(3rem, 8vw, 7rem);
+  justify-content: flex-start;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 6.5vw, 7rem) clamp(2rem, 4vw, 3rem);
 }
 
 .naomi-kicker {
@@ -197,7 +198,7 @@ a {
 .naomi-hero__media {
   position: relative;
   display: grid;
-  min-height: 650px;
+  min-height: 0;
   overflow: hidden;
   place-items: center;
   isolation: isolate;
@@ -230,7 +231,7 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 650px;
+  min-height: 0;
   object-fit: contain;
   object-position: center;
   filter: saturate(0.8) contrast(1.06) brightness(0.9);
@@ -846,6 +847,7 @@ a {
 
   .naomi-hero {
     grid-template-columns: 1fr;
+    height: auto;
     min-height: 0;
   }
 

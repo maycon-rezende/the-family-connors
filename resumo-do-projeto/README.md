@@ -24,6 +24,7 @@ A experiência combina drama familiar, espionagem, operações clandestinas e um
 - A abertura do registro de Brian usa o retrato exclusivo `img-hellsing/brian-memorial-portrait.png`, criado com fotos do presente como referência e identificado no site como reconstrução de memória.
 - `amelia-arquivo.html` agora mostra um retrato individual de cada filho: Henry (34), Samuel (27) e Olivia (5 na última fuga). Os três são reconstruções visuais; as aparências de Henry e Samuel permanecem propostas revisáveis.
 - As páginas de Alice, Mark e Naomi tocam suas trilhas temáticas em loop, sem controles visíveis. A reprodução tenta iniciar com a página e é retomada no primeiro toque/tecla se o navegador bloquear áudio automático.
+- O destaque do dossiê de Naomi fica limitado à altura da janela em desktop, para manter nome e apresentação visíveis no início; em telas pequenas, a composição continua vertical.
 - `john-presente.html` inclui `img-winchester/winchester-family-before-last-flight.jpg`, retrato reconstruído de John, Amélia e os três filhos. A página identifica a imagem como memória visual sem data documental.
 - `galeria.html`: arquivo visual por núcleos familiares e Mansão Connor.
 - `membros-hellsings.html`: índice de personagens ligados aos Hellsings, com perfis de Lana Whitmore, Sally Ward e Hilary Caldwell Ashford. O dossiê de Hilary reúne seu background, cronologia e galerias distintas de antes do Dia D e do presente.
