@@ -65,23 +65,23 @@ const profiles = {
     name: 'Mark',
     surname: 'Connor',
     age: '50 ANOS',
-    role: 'VETERANO // DEFESA HELLSINGS',
+    role: 'COMANDO TÁTICO // DEFESA DO COMBOIO',
     hero: 'img-presente/personagens/mark-presente2.png',
     focus: '51% 14%',
     intro:
-      'A guerra acabou muitas vezes para Mark Connor. O problema é que sempre começou outra no dia seguinte.',
-    title: 'A muralha',
-    accent: 'que caminha',
+      'A estrada só está segura quando todos respondem à chamada. Mark aprendeu a fechar a retaguarda sem deixar ninguém para trás.',
+    title: 'A última',
+    accent: 'resposta',
     paragraphs: [
-      'Veterano de guerra e integrante dos Hellsings, Mark é a linha de defesa quando o comboio não pode recuar. A experiência militar lhe ensinou a ler terreno, silêncio e medo antes que se transformem em emboscada.',
-      'Com Ariani, criou Pollyana e Nathan — ambos Salvatore Connor — antes da queda. James Salvatore Connor nasceu depois do Dia D e recebeu o nome do homem que salvou Mark — uma lembrança de que algumas dívidas atravessam o fim do mundo.',
+      'Mark serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. Quando o colapso começou, sua formação ajudou a manter civis e Hellsings em movimento até a Mansão Connor. Depois, no bunker e na superfície, tornou-se o comando tático que lê o terreno e protege a retaguarda do comboio.',
+      'Na Travessia sem Faróis, Mark voltou para buscar um motorista ferido. O comboio salvou as pessoas, mas perdeu o veículo e os suprimentos. Ao retornar, ele conferiu os nomes duas vezes. Desde então, a chamada só termina quando todos respondem.',
+      'Com Ariani, criou Pollyana e Nathan — ambos Salvatore Connor — antes da queda. James Salvatore Connor nasceu depois do Dia D e recebeu o nome do homem que salvou Mark. Hanson e Salazar o conhecem por sua vida militar; os contatos preservados entre eles não são ordens de um superior a um subordinado.',
     ],
-    quote:
-      'Ele não luta porque acredita que vencerá. Luta para que sua família tenha a chance de tentar.',
+    quote: 'Toda rota precisa ter um caminho de volta.',
     memory: 'img-presente/personagens/mark-ariani1.png',
     memoryTitle: 'Aquilo que permanece',
     memoryText:
-      'Ariani é estratégia onde Mark é força. Juntos, protegem uma família que nasceu em dois mundos diferentes.',
+      'Ariani encontra o acordo. Mark mantém a passagem segura. Juntos, protegem Pollyana, Nathan e James sem esquecer quem mais viaja com eles.',
     gallery: [
       ['img-presente/personagens/mark-presente.png', 'VETERANO'],
       ['img-presente/personagens/jack-mark1-presente.png', 'JACK & MARK'],

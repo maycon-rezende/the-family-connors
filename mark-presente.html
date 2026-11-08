@@ -4,15 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#090806" />
-    <meta name="description" content="Dossiê presente de Mark Connor, estrategista e membro central dos Hellsings." />
+    <meta name="description" content="Mark Connor, comando tático dos Hellsings: operações, defesa do comboio e a Travessia sem Faróis." />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
-    <link rel="stylesheet" href="era-extincao-presente/mark-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/mark-presente.css?v=4" />
+    <link rel="stylesheet" href="era-extincao-presente/mark-opening.css?v=1" />
     <link rel="stylesheet" href="era-extincao-presente/dispositivo-recuperado.css" />
     <link rel="stylesheet" href="css/present-responsive.css" />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <title>Mark Connor | Era da Extinção</title>
   </head>
   <body data-character="mark">
+    <section
+      class="mark-opening"
+      data-mark-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="mark-opening-title"
+      aria-describedby="mark-opening-description"
+      hidden
+    >
+      <video
+        class="mark-opening__video"
+        data-mark-opening-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-presente/personagens/mark-presente2.png"
+        aria-hidden="true"
+      >
+        <source src="video/abertura-mark-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="mark-opening__shade" aria-hidden="true"></div>
+      <div class="mark-opening__reticle" aria-hidden="true"><i></i><b></b></div>
+      <div class="mark-opening__copy">
+        <span class="mark-opening__eyebrow"><i></i> MC-03 // REGISTRO DE CAMPO // HELLSINGS</span>
+        <h2 id="mark-opening-title">MARK <em>CONNOR.</em></h2>
+        <p id="mark-opening-description">COMANDO TÁTICO // DEFESA DO COMBOIO</p>
+        <blockquote>“A missão só termina quando todos respondem à chamada.”</blockquote>
+      </div>
+      <span class="mark-opening__coordinate" aria-hidden="true">34° 08′ N // ROTA ATIVA</span>
+    </section>
     <nav class="profile-nav">
       <a href="index.html#sobreviventes"><b>Æ</b> ERA DA EXTINÇÃO</a
       ><span>ARQUIVO HELLSINGS // PRESENTE</span><a href="ariani-presente.html">PRÓXIMO →</a>
@@ -49,8 +81,8 @@
             <strong>Mark Connor</strong>
             <dl>
               <div><dt>Idade</dt><dd>50 anos</dd></div>
-              <div><dt>Função</dt><dd>Defesa Hellsings</dd></div>
-              <div><dt>Perfil</dt><dd>Veterano de guerra</dd></div>
+              <div><dt>Função</dt><dd>Comando tático / defesa do comboio</dd></div>
+              <div><dt>Serviço</dt><dd>Marinha // antes do Dia D</dd></div>
               <div><dt>Status</dt><dd>Em movimento</dd></div>
             </dl>
             <p>Uma presença de contenção: Mark transforma experiência, atenção ao terreno e disciplina em tempo para que os outros possam escapar.</p>
@@ -99,6 +131,55 @@
             <p>Ariani, Pollyana, Nathan e James são a razão de cada escolha. Mark não protege apenas um perímetro: protege a chance de eles continuarem.</p>
           </article>
         </div>
+      </section>
+      <section class="mark-operations" aria-labelledby="mark-operations-title">
+        <header class="mark-operations__heading">
+          <span class="eyebrow">MC-03 // REGISTRO DE CAMPO // DIA D — PRESENTE</span>
+          <h2 id="mark-operations-title">A defesa que<br /><em>abre caminho.</em></h2>
+          <p>O arquivo pessoal de Mark reúne operações táticas, retiradas e a proteção de pessoas ao longo da vida dos Hellsings.</p>
+        </header>
+        <dl class="mark-operations__metrics">
+          <div><dt>OPERAÇÕES REGISTRADAS</dt><dd>132<small>DO DIA D AO PRESENTE</small></dd></div>
+          <div><dt>OBJETIVOS CONCLUÍDOS</dt><dd>123<small>93,2% DO REGISTRO</small></dd></div>
+          <div><dt>OPERAÇÕES REDIRECIONADAS</dt><dd>9<small>POR SEGURANÇA OU ACESSO</small></dd></div>
+          <div><dt>FRACASSOS OFICIAIS</dt><dd>0<small>REDIRECIONAMENTOS NÃO CONTAM COMO FALHA</small></dd></div>
+          <div class="mark-operations__saved"><dt>PESSOAS RETIRADAS DO RISCO</dt><dd>~1.950<small>ESTIMATIVA DE CAMPO</small></dd></div>
+          <div><dt>INFECTADOS NEUTRALIZADOS</dt><dd>~1.450<small>CONTAGEM ESTIMADA</small></dd></div>
+          <div><dt>COMBATENTES HOSTIS MORTOS</dt><dd>29<small>CONTAGEM ESTIMADA</small></dd></div>
+        </dl>
+        <div class="mark-operations__breakdown">
+          <header><span>TIPO DE OPERAÇÃO</span><span>REGISTROS</span></header>
+          <ul>
+            <li><span>Defesa de perímetro</span><b>42</b></li>
+            <li><span>Escolta e evacuação</span><b>36</b></li>
+            <li><span>Abertura de rotas e reconhecimento</span><b>25</b></li>
+            <li><span>Resgate e extração</span><b>18</b></li>
+            <li><span>Contenção de ameaças</span><b>11</b></li>
+          </ul>
+        </div>
+        <p class="mark-operations__note">Contagens narrativas revisáveis do Dia D ao presente. O registro individual de Mark pode se sobrepor ao de operações comandadas por Jack; retiradas podem incluir pessoas transportadas mais de uma vez.</p>
+      </section>
+
+      <section class="mark-operation-story" aria-labelledby="mark-operation-story-title">
+        <header class="mark-operation-story__heading">
+          <span class="eyebrow">OPERAÇÃO MC-03-044 // EVACUAÇÃO</span>
+          <h2 id="mark-operation-story-title">A travessia<br /><em>sem faróis.</em></h2>
+          <p>O comboio atravessou. O caminhão ficou. Mark voltou pelo homem que ainda não havia respondido à chamada.</p>
+        </header>
+        <article class="mark-operation-story__account">
+          <p>A estrada terminou antes de anoitecer. À frente, veículos abandonados bloqueavam a passagem. Atrás, a horda se aproximava. O comboio não podia avançar junto, e voltar pelo caminho de onde viera já não era uma opção segura.</p>
+          <p>Jack ouviu as alternativas de Mark e confiou a ele a retirada. Mark mandou apagar os faróis para não revelar a posição dos veículos. Os sobreviventes começaram a atravessar em grupos, guiados pelas instruções que chegavam pelo rádio.</p>
+          <p>Então um veículo de apoio parou. O motorista estava ferido e não conseguia sair sozinho. A carga faria falta ao comboio; o tempo para voltar por ela também.</p>
+          <p>— O grupo está passando — avisaram no rádio.</p>
+          <p>Mark olhou para o espaço vazio atrás da coluna. Ainda faltava uma resposta na chamada.</p>
+          <p>— Então mantenham a passagem aberta. Vou buscar o motorista.</p>
+          <p>Ele voltou com dois integrantes da equipe. Encontraram o homem preso na cabine, assustado demais para mover a perna. Mark segurou seu braço e falou sem levantar a voz:</p>
+          <blockquote>— Não precisa correr. Só precisa vir comigo.</blockquote>
+          <p>A carga ficou para trás. O motorista, não.</p>
+          <p>Quando Mark voltou ao comboio, a travessia estava quase concluída. Ele contou as pessoas uma vez, conferiu os nomes no rádio e contou de novo. Só então atravessou por último.</p>
+          <p>O relatório registrou uma evacuação concluída com perda de veículo e suprimentos. Mark guardou outra medida daquele resultado: todos os que estavam na chamada responderam.</p>
+        </article>
+        <blockquote class="mark-operation-story__quote">“A missão só termina quando todos respondem à chamada.”</blockquote>
       </section>
       <section class="mark-memories-entry" aria-labelledby="mark-memories-entry-title">
         <div>
@@ -157,6 +238,7 @@
     </dialog>
     <script src="js/personagem-theme.js" defer></script>
     <script src="era-extincao-presente/personagem-presente.js"></script>
+    <script src="era-extincao-presente/mark-opening.js" defer></script>
     <script src="js/site-cursor.js" defer></script>
     <script src="js/dispositivo-recuperado.js" defer></script>
   </body>
