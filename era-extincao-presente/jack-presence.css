@@ -1,7 +1,9 @@
+.jack-presence-intro[hidden] { display: none; }
 .jack-presence-intro {
   position: fixed;
   z-index: 120;
   inset: 0;
+  display: none;
   overflow: hidden;
   color: #f0e5d3;
   background:
@@ -12,13 +14,13 @@
   pointer-events: none;
   transition: opacity 1.35s ease, visibility 1.35s ease;
 }
-.jack-presence-intro[hidden] { display: none; }
-.jack-presence-intro__portrait,
+html.jack-opening-pending .jack-presence-intro { display: block; }
+.jack-presence-intro__video,
 .jack-presence-intro__shade { position: absolute; inset: 0; width: 100%; height: 100%; }
-.jack-presence-intro__portrait {
-  object-fit: contain;
-  object-position: 62% 100%;
-  opacity: 0;
+.jack-presence-intro__video {
+  object-fit: cover;
+  object-position: 62% center;
+  opacity: .62;
   filter: saturate(.68) contrast(1.09) brightness(.78);
   transform: scale(1.055);
   transition: opacity 2.2s ease, transform 5.5s cubic-bezier(.2,.65,.2,1);
@@ -189,7 +191,7 @@
   transform: translateY(0);
 }
 .jack-presence-intro.is-name .jack-presence-intro__quote { opacity: 0; transform: translateY(-.4rem); }
-.jack-presence-intro.is-portrait .jack-presence-intro__portrait { opacity: .76; transform: scale(1); }
+.jack-presence-intro.is-portrait .jack-presence-intro__video { opacity: .82; transform: scale(1); }
 .jack-presence-intro.is-portrait .jack-presence-intro__shade { opacity: 1; }
 .jack-presence-intro.is-portrait .jack-presence-intro__signal { opacity: .18; }
 .jack-presence-intro.is-releasing { visibility: hidden; opacity: 0; }
@@ -200,7 +202,7 @@
 }
 
 @media (max-width: 700px) {
-  .jack-presence-intro__portrait { object-position: center center; }
+  .jack-presence-intro__video { object-position: 70% center; }
   .jack-presence-intro__shade {
     background:
       linear-gradient(0deg, rgba(6, 5, 4, .96), rgba(6, 5, 4, .22) 74%),
@@ -217,7 +219,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .jack-presence-intro,
-  .jack-presence-intro__portrait,
+  .jack-presence-intro__video,
   .jack-presence-intro__shade,
   .jack-presence-intro__readouts article,
   .jack-presence-intro__quote,

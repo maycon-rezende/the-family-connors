@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="jack-opening-pending">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#090806" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
     <link rel="stylesheet" href="era-extincao-presente/jack-responsive.css" />
-    <link rel="stylesheet" href="era-extincao-presente/jack-presence.css?v=2" />
+    <link rel="stylesheet" href="era-extincao-presente/jack-presence.css?v=4" />
     <link rel="stylesheet" href="era-extincao-presente/jack-dossier.css?v=1" />
     <link rel="stylesheet" href="era-extincao-presente/dispositivo-recuperado.css" />
     <title>Jack Connor | Era da Extinção</title>
@@ -16,8 +16,18 @@
     <div class="profile-backdrop" aria-hidden="true"></div>
     <div class="jack-sand" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="jack-cursor" aria-hidden="true"><i></i><span>JC-01</span></div>
-    <div class="jack-presence-intro" data-jack-presence-intro aria-hidden="true" hidden>
-      <img class="jack-presence-intro__portrait" src="img-presente/personagens/jack-presente1.png" alt="" />
+    <div class="jack-presence-intro" data-jack-presence-intro aria-hidden="true">
+      <video
+        class="jack-presence-intro__video"
+        data-jack-presence-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-presente/jack-abertura-acampamento-v2.png"
+        tabindex="-1"
+      >
+        <source src="video/abertura2-jack-presente.mp4" type="video/mp4" />
+      </video>
       <div class="jack-presence-intro__shade"></div>
       <div class="jack-presence-intro__signal" aria-hidden="true"><i></i><b></b><span>JC-01</span></div>
       <div class="jack-presence-intro__copy">
@@ -175,6 +185,6 @@
     <script src="era-extincao-presente/personagem-presente.js"></script>
     <script src="js/dispositivo-recuperado.js" defer></script>
     <script src="era-extincao-presente/jack-theme.js?v=2" defer></script>
-    <script src="era-extincao-presente/jack-presence.js?v=2" defer></script>
+    <script src="era-extincao-presente/jack-presence.js?v=4" defer></script>
   </body>
 </html>

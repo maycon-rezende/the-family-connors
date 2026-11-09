@@ -96,4 +96,10 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 7 de novembro de 2026.
+Última atualização: 9 de novembro de 2026.
+
+## Abertura do Jack — 9 de novembro de 2026
+
+- `jack-presente.html` usa `video/abertura2-jack-presente.mp4` na sequência de presença, mantendo a faixa `audio/theme-jack-presente.mp3` como único áudio.
+- O vídeo dura aproximadamente 10 segundos, fica sem loop e começa conforme a duração da faixa para terminar junto com a entrada musical aos 14 segundos. A sequência de frases e o surgimento do nome permanecem sincronizados pelo áudio.
+- `img-presente/jack-abertura-acampamento-v2.png` aparece como quadro de carregamento correspondente à cena do acampamento à luz do dia.
