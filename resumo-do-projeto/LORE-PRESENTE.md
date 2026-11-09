@@ -64,9 +64,15 @@ Os Hellsings ainda vivem.
 
 ## Alice Myers Connor
 
-Alice tem hoje 54 anos. Médica antes do Dia D, tornou-se responsável pela saúde do grupo e pela formação de novos socorristas. Ao longo dos anos, transmitiu seus conhecimentos aos cinco filhos — Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor —, que agora já são adultos e preservam seu sobrenome materno.
+Alice tem hoje 54 anos. Antes do Dia D, era uma neurocirurgiã renomada; também atendia traumas e assumia a cirurgia geral quando necessário. Gostava de cuidar dos pacientes e possui treinamento em artes marciais e combate.
 
-Se Jack mantém o comboio em movimento, Alice mantém suas pessoas vivas.
+No Dia D, Alice organizou a triagem dos sobreviventes que chegaram à Mansão Connor. Quando os Hellsings entraram no bunker, ela assumiu a ala hospitalar avançada construída por Jack. O complexo, com equipamentos de diagnóstico, vários leitos e salas cirúrgicas, tem investimento narrativo estimado em cerca de **US$ 900 milhões**. Durante o confinamento, Alice coordenou atendimentos, cirurgias e recursos; ensinou Diana, Mary e Isolde desde os fundamentos médicos até preparar e realizar cirurgias sob sua orientação.
+
+Com o retorno à superfície e a vida em comboio, Alice deixou as operações de campo como rotina e passou a coordenar a saúde, os contratos, as equipes e os recursos dos Hellsings. Continua treinada para se defender e proteger pacientes quando uma ameaça alcança o atendimento. Negociou o corredor médico associado à Bacia Branca. Jack é chamado de Boss; Alice é conhecida como a mãe dos Hellsings e, entre eles, como a rainha do Boss. Os dois são respeitados porque não hesitam em arriscar-se para salvar uma vida.
+
+No presente, Alice organiza os recursos e o conhecimento necessários para examinar as plantas da estufa do governo, objetivo ligado à luta contra a Dominus e à recuperação da terra. A possibilidade de cura permanece uma busca, sem resultado garantido.
+
+O painel do perfil contém estimativas ficcionais revisáveis para o período inteiro entre o Dia D e o presente: 386 operações médicas coordenadas, 361 objetivos concluídos, 25 rotas redirecionadas, cerca de 4.680 atendimentos, aproximadamente 3.100 vidas preservadas e 51 socorristas formados. Abates não são usados como medida do trabalho de Alice. Os atendimentos podem incluir retornos da mesma pessoa.
 
 ## Sophie Romanoff
 
@@ -77,6 +83,14 @@ No presente, o conhecimento que guardou dos estudos pode ajudá-la a orientar mo
 ## Mark Connor e Ariani
 
 Mark tem 50 anos. Serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. Ele conheceu os horrores da guerra e acreditava que já havia visto o pior que a humanidade era capaz de fazer. O Dia D provou que estava enganado.
+
+Quando o Dia D começou, Mark ajudou os Hellsings a chegar à Mansão Connor com os sobreviventes que conseguiram resgatar. Depois da entrada no bunker, organizou a defesa e, no retorno à superfície, tornou-se o comando tático do comboio.
+
+Na **Travessia sem Faróis**, um veículo de apoio parou durante uma evacuação. Mark voltou com dois integrantes para retirar o motorista ferido. O comboio perdeu o veículo e os suprimentos, mas concluiu a retirada de pessoas. O relato mostra o cuidado de Mark em conferir cada nome antes de seguir.
+
+O Major James Hanson e o Coronel Samuel Salazar conhecem Mark por sua vida militar. Mark já havia deixado a Marinha; os contatos preservados entre eles não são ordens de um superior a um subordinado.
+
+O painel do perfil registra estimativas ficcionais revisáveis do Dia D ao presente: 132 operações táticas, 123 objetivos concluídos, nove operações redirecionadas, zero fracassos oficialmente registrados, aproximadamente 1.950 pessoas retiradas de zonas de risco, ~1.450 infectados neutralizados e 29 combatentes hostis mortos. As operações individuais de Mark podem se sobrepor às registradas no comando de Jack.
 
 Mark e Ariani tiveram os gêmeos Pollyana Salvatore Connor e Nathan Salvatore Connor antes da queda. Depois do Dia D, nasceu James Salvatore Connor, batizado por Mark em homenagem ao homem que havia salvado sua vida. Os três preservam Salvatore, o sobrenome materno de Ariani.
 

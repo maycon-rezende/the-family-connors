@@ -64,7 +64,6 @@
 
   let nodes = [], current = -1, raf = 0, started = false, leaving = false, monsterPhase = 0;
   let finalSequenceStarted = false, windNeedsGesture = false;
-  let windStartTimer = 0, windRevealTimer = 0;
   function build() {
     const fragment = document.createDocumentFragment();
     scenes.forEach((scene, index) => {
@@ -187,7 +186,6 @@
     startWind();
   }
   function completeWind() {
-    window.clearTimeout(windRevealTimer);
     windNeedsGesture = false;
     removeWindGestureListeners();
     status.textContent = 'ACESSO LIBERADO';
@@ -198,16 +196,7 @@
     status.textContent = 'EFEITO DE VENTO // ATIVO';
     revealEnterButton('ENTRAR NO SITE');
   }
-  function scheduleButtonDuringWind() {
-    window.clearTimeout(windRevealTimer);
-    const duration = Number.isFinite(windAudio.duration) && windAudio.duration > 0
-      ? windAudio.duration
-      : 13.4;
-    windRevealTimer = window.setTimeout(revealButtonDuringWind, (duration / 2) * 1000);
-  }
   function startWind() {
-    window.clearTimeout(windStartTimer);
-    window.clearTimeout(windRevealTimer);
     enterButton.hidden = true;
     removeWindGestureListeners();
     if (!windAudio || windAudio.error) {
@@ -222,10 +211,10 @@
     windAudio.volume = .82;
     windAudio.removeEventListener('ended', completeWind);
     windAudio.removeEventListener('error', completeWind);
-    windAudio.removeEventListener('playing', scheduleButtonDuringWind);
+    windAudio.removeEventListener('playing', revealButtonDuringWind);
     windAudio.addEventListener('ended', completeWind, { once: true });
     windAudio.addEventListener('error', completeWind, { once: true });
-    windAudio.addEventListener('playing', scheduleButtonDuringWind, { once: true });
+    windAudio.addEventListener('playing', revealButtonDuringWind, { once: true });
 
     try {
       const playback = windAudio.play();
@@ -251,11 +240,11 @@
     copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
     awakening.classList.add('is-running', 'is-finished');
     status.textContent = 'TRANSMISSÃO CONCLUÍDA';
-    windStartTimer = window.setTimeout(startWind, 3000);
+    startWind();
   }
   function enter() {
     if (leaving) return; leaving = true;
-    window.clearTimeout(windStartTimer); window.clearTimeout(windRevealTimer); removeWindGestureListeners();
+    removeWindGestureListeners();
     audio.pause(); windAudio?.pause(); awakening.classList.add('is-leaving');
     try { sessionStorage.setItem('ede-intro-liberada', 'sim'); } catch {}
     setTimeout(() => { location.href = 'index.html?intro=concluida'; }, 1700);

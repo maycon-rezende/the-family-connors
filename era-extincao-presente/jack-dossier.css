@@ -293,7 +293,10 @@ body[data-character='jack'] {
 
   .jack-operations__metrics dt,
   .jack-operations__metrics small {
-    font-size: 0.37rem;
+    font-size: 0.5rem;
+    line-height: 1.45;
+    letter-spacing: 0.06em;
+    overflow-wrap: anywhere;
   }
 
   .jack-operations__metrics dd {
@@ -318,7 +321,8 @@ body[data-character='jack'] {
   }
 
   .jack-operations__note {
-    font-size: 0.39rem;
+    font-size: 0.58rem;
+    line-height: 1.55;
   }
 
   .jack-chronicle__timeline li {

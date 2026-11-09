@@ -309,6 +309,42 @@ body[data-character='jack'] .profile-footer {
 }
 
 @media (max-width: 760px) {
+  body[data-character='jack'] .profile-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: 'home next' 'label label';
+    align-content: center;
+    gap: .28rem .75rem;
+    min-height: 64px;
+    padding: .45rem 1rem;
+  }
+
+  body[data-character='jack'] .profile-nav > a:first-child {
+    grid-area: home;
+    justify-self: start;
+    white-space: nowrap;
+    font-size: .55rem;
+    letter-spacing: .08em;
+  }
+
+  body[data-character='jack'] .profile-nav > span {
+    grid-area: label;
+    justify-self: center;
+    max-width: 100%;
+    font-size: .42rem;
+    line-height: 1.2;
+    letter-spacing: .12em;
+    text-align: center;
+  }
+
+  body[data-character='jack'] .profile-nav > a:last-child {
+    grid-area: next;
+    justify-self: end;
+    white-space: nowrap;
+    font-size: .55rem;
+    letter-spacing: .08em;
+  }
+
   body[data-character='jack'] .jack-identity {
     padding: 5rem 1.25rem;
   }
@@ -415,8 +451,31 @@ body[data-character='jack'] .profile-footer {
 
 @media (max-width: 420px) {
   body[data-character='jack'] .profile-nav a {
-    font-size: .46rem;
+    font-size: .48rem;
+    letter-spacing: .04em;
+  }
+
+  body[data-character='jack'] .profile-nav {
+    column-gap: .4rem;
+    padding-inline: .75rem;
+  }
+
+  body[data-character='jack'] .profile-nav > span {
+    font-size: .39rem;
+    letter-spacing: .09em;
+  }
+
+  body[data-character='jack'] .jack-operations__metrics dt,
+  body[data-character='jack'] .jack-operations__metrics small {
+    font-size: .48rem;
+    line-height: 1.45;
     letter-spacing: .06em;
+    overflow-wrap: anywhere;
+  }
+
+  body[data-character='jack'] .jack-operations__note {
+    font-size: .58rem;
+    line-height: 1.55;
   }
 
   body[data-character='jack'] .hero-copy h1 {

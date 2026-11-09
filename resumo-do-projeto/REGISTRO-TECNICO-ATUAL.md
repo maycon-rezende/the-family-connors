@@ -644,8 +644,8 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 
 ## Efeito de vento após a intro global
 
-- `intro.html` carrega a faixa `audio/efeito-sonoro-vento-intro.mp3`. Ao terminar `audio/intro-ultron-reference.mp3`, `era-extincao-presente/extinction-intro.js` aguarda três segundos e inicia o efeito.
-- O botão **ENTRAR NO SITE** permanece oculto até a metade da reprodução do vento; ao ser acionado, a navegação segue para a página inicial. Se a reprodução automática for bloqueada, a intro tenta novamente após uma interação geral na tela, sem um botão dedicado ao efeito.
+- `intro.html` carrega a faixa `audio/efeito-sonoro-vento-intro.mp3`. Quando `audio/intro-ultron-reference.mp3` termina, `era-extincao-presente/extinction-intro.js` inicia o vento imediatamente.
+- O evento `playing` do efeito revela **ENTRAR NO SITE** junto com o início do vento; clicar nele navega para a página inicial. Se o autoplay for bloqueado, uma interação geral tenta iniciar o efeito e o botão surge quando ele começa, sem um botão dedicado ao áudio.
 
 ## Tema sonoro da facção Dominus
 
@@ -658,3 +658,17 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `era-extincao-presente/personagem-presente.js` atualiza a apresentação de Jack para tratar do resgate antes dos bombardeios e da chegada ao bunker; referências ao FBI e à Interpol permanecem reservadas à história pré-Dia D.
 - As contagens exibidas são propostas ficcionais revisáveis, com 121 operações, 113 objetivos concluídos e oito redirecionamentos. Os ~1.486 registros são entradas de evacuação, não uma contagem confirmada de indivíduos únicos.
 - A cronologia informa que Brian Taylor morreu primeiro e John Bertolai Winchester depois, junto de Olivia, na explosão preparada para salvar o comboio. O objetivo atual é combater a Dominus e localizar a estufa governamental.
+
+## Dossiê presente de Alice — 8 de novembro de 2026
+
+- `alice-presente.html` inclui `alice-service-record` (estatísticas de atendimento) e `alice-chronicle` (linha do tempo do Dia D ao presente), além da imagem da ala médica em `img-bunker/enfermaria-bunker.png`.
+- `era-extincao-presente/personagem-presente.js` atualiza introdução, cargo, narrativa e frase de Alice; `era-extincao-presente/alice-presente.css` estiliza o registro e a cronologia responsivos em verde-azulado, cobre e areia.
+- O registro propõe 386 operações médicas coordenadas, 361 concluídas, 25 redirecionadas, ~4.680 atendimentos, ~3.100 vidas preservadas e 51 socorristas formados. As contagens são estimativas ficcionais para o período após o Dia D; atendimentos podem incluir retornos. Abates não são usados como medida do papel médico.
+- O investimento do bunker é apresentado como estimativa narrativa de cerca de US$ 900 milhões. A página mantém o corredor médico da Bacia Branca como realizado e a estufa governamental como objetivo futuro.
+
+## Dossiê presente de Mark — 8 de novembro de 2026
+
+- `mark-presente.html` recebe `mark-operations` (contagens e divisão de tarefas) e `mark-operation-story` (relato narrativo da Travessia sem Faróis). O estilo responsivo usa a paleta laranja, areia e verde-acinzentada existente em `era-extincao-presente/mark-presente.css`.
+- `era-extincao-presente/personagem-presente.js` atualiza a apresentação de Mark para focar no comando tático, na defesa do comboio e na família; a carreira na Marinha permanece anterior ao Dia D.
+- O painel registra 132 operações, 123 objetivos concluídos, nove redirecionamentos, zero fracassos oficiais, ~1.950 pessoas retiradas de risco, ~1.450 infectados neutralizados e 29 combatentes hostis mortos. As contagens são propostas ficcionais revisáveis; operações individuais podem se sobrepor às registradas no comando de Jack.
+- A página mantém Hanson e Salazar como contatos por experiência militar, sem estabelecer uma relação superior-subordinado entre Hanson e Mark.

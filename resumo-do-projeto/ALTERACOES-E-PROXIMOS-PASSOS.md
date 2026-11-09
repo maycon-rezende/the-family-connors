@@ -692,8 +692,8 @@
 
 # Intro global — efeito de vento e entrada
 
-- A música `audio/intro-ultron-reference.mp3` termina antes da pausa de três segundos. Em seguida toca `audio/efeito-sonoro-vento-intro.mp3`.
-- O botão **ENTRAR NO SITE** surge na metade do efeito de vento. Se o navegador bloquear a reprodução automática do efeito, a intro aguarda uma interação na tela e tenta novamente, sem exibir um botão separado para o áudio.
+- Assim que `audio/intro-ultron-reference.mp3` termina, `audio/efeito-sonoro-vento-intro.mp3` começa imediatamente.
+- **ENTRAR NO SITE** aparece junto com o início do vento, sem esperar o efeito terminar. Se o navegador bloquear a reprodução automática, uma interação na tela tenta iniciar o vento; o botão aparece quando o efeito começa, sem um controle de áudio separado.
 
 # Tema sonoro da facção Dominus — 7 de novembro de 2026
 
@@ -706,3 +706,17 @@
 - A cronologia registra as mortes de Brian Taylor e John Bertolai Winchester e o objetivo atual de desmantelar a Dominus e encontrar a estufa do governo.
 - O balanço de campo propõe 121 operações, 113 objetivos concluídos, oito missões redirecionadas, zero fracassos oficiais, 1.286 infectados neutralizados, 19 combatentes hostis mortos e cerca de 1.486 entradas de evacuação. São números ficcionais provisórios; as entradas podem contar a mesma pessoa em mais de uma retirada.
 - `era-extincao-presente/jack-dossier.css` estiliza a seção de estatísticas e a cronologia com a identidade visual do personagem. A história anterior ao Dia D continua na página do passado.
+
+# Dossiê presente de Alice — 8 de novembro de 2026
+
+- `alice-presente.html` agora reúne a trajetória de Alice do Dia D ao presente, com sua atuação como neurocirurgiã, médica de trauma e cirurgia geral, a ala hospitalar do bunker, a formação médica das filhas e seu trabalho atual de coordenação.
+- A imagem `img-bunker/enfermaria-bunker.png` ilustra o hospital subterrâneo. O investimento do complexo foi registrado como estimativa narrativa de cerca de US$ 900 milhões.
+- O painel de serviço troca abates por vidas preservadas e cobre todo o período pós-Dia D: 386 operações coordenadas, 361 objetivos concluídos, 25 redirecionamentos, ~4.680 atendimentos, ~3.100 vidas preservadas e 51 socorristas formados. São estimativas ficcionais revisáveis.
+- A cronologia registra o corredor médico da Bacia Branca e a preparação para a futura busca pela estufa do governo. Alice é apresentada como mãe dos Hellsings e rainha do Boss.
+
+# Dossiê presente de Mark — 8 de novembro de 2026
+
+- `mark-presente.html` agora apresenta a história de Mark do Dia D ao presente, incluindo a chegada à Mansão Connor, a defesa no bunker e o comando tático do comboio. A Marinha é citada como serviço concluído antes do Dia D.
+- A **Travessia sem Faróis** ganhou relato completo: Mark volta com dois Hellsings para salvar um motorista ferido; a evacuação é concluída, com perda do veículo e da carga.
+- O painel registra estimativas revisáveis de 132 operações, 123 objetivos concluídos, nove redirecionamentos, zero fracassos oficiais, ~1.950 pessoas retiradas de risco, ~1.450 infectados neutralizados e 29 combatentes hostis mortos.
+- Os registros distinguem o contato de Mark com Hanson e Salazar por suas vidas militares, sem sugerir que Mark estivesse subordinado ao Major Hanson.

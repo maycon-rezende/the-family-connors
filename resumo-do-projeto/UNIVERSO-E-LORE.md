@@ -3,14 +3,16 @@
 ## Família Connor
 
 - Jack Connor é o primogênito, trabalhou no FBI e na Interpol e criou os Hellsings. No FBI, preparou Mick Braddock para liderar os agentes especiais em seu lugar quando Jack seguiu para a Interpol.
-- Alice Myers Connor é médica, esposa de Jack e possui treinamento em artes marciais.
-- Alice deixou as operações de campo. Atualmente administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings.
+- Alice Myers Connor é esposa de Jack, neurocirurgiã renomada, com experiência também em trauma e cirurgia geral; gosta de atender e cuidar das pessoas e possui treinamento em artes marciais.
+- Alice deixou as operações de campo como rotina. No presente, administra negócios, contratos, clientes, recursos, investimentos e coordenação médica dos Hellsings. Ela assumiu o hospital avançado do bunker e ensinou Diana, Mary e Isolde desde a medicina básica até preparar e realizar cirurgias sob sua orientação, mantendo treinamento para se defender e proteger pacientes.
+- O bunker tem ala hospitalar, salas cirúrgicas, diagnóstico, arsenal, garagem e outros setores. Seu investimento narrativo é estimado em cerca de US$ 900 milhões. Alice é reconhecida como mãe dos Hellsings e chamada, afetuosamente, de rainha do Boss.
 - Jack e Alice têm cinco filhos, nesta ordem: Alucard Myers Connor, Diana Myers Connor, Nicolai Myers Connor, Mary Myers Connor e Isolde Myers Connor. Alucard é o mais velho; todos preservam Myers, o sobrenome materno.
 - Alucard Myers Connor e sua esposa **Sophie Romanoff** têm 37 anos no presente. Sophie é russa, passou boa parte da vida na Rússia e se mudou para o Canadá antes do Dia D. Estudava para ser fisioterapeuta quando conheceu Alucard durante as férias prolongadas dos Connors no Canadá; o Dia D interrompeu sua formação. As cenas do encontro, os detalhes cotidianos da relação e a atuação de reabilitação no presente são expansões narrativas escritas para o dossiê e ainda podem ser ajustadas pelo autor.
 - Diana Myers Connor tornou-se especialista em combate e no uso de diferentes tipos de armas no presente devastado.
 - Mary Myers Connor aprendeu medicina com Alice; combate, armas de fogo e disciplina com Jack; rastreamento, leitura de mapas e estratégia com Jack e Mark. Atua como socorrista tática e rastreadora de campo.
 - Sally Ward nunca conheceu os pais biológicos e foi criada por uma família adotiva problemática, pela qual ainda assim preservou gratidão. Sonhava em ser policial. Nicolai encontrou sua própria coragem quando a salvou de uma horda.
-- Mark Connor serviu na Marinha e integra o comando tático dos Hellsings.
+- Mark Connor serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. No presente, integra o comando tático dos Hellsings. O Major James Hanson e o Coronel Samuel Salazar o conhecem por sua vida militar; Mark não era subordinado de Hanson.
+- A **Travessia sem Faróis** é uma evacuação ficcional do período pós-Dia D: Mark voltou para buscar um motorista ferido, e o comboio perdeu um veículo e os suprimentos, mas retirou as pessoas. As estatísticas do perfil de Mark são estimativas narrativas, e seu registro individual pode se sobrepor ao de operações sob o comando de Jack.
 - Ariani Salvatore construiu carreira como advogada e forma uma família com Mark.
 - Mark e Ariani têm três filhos: os gêmeos Pollyana e Nathan Salvatore Connor, nascidos antes do Dia D, e James Salvatore Connor, nascido depois. Nathan é atirador de precisão; sua formação e suas operações ainda não foram definidas.
 - A função de Pollyana não foi confirmada pelo autor. Há uma **proposta revisável**, separada do cânone, para retratá-la como negociadora de passagens de sobreviventes; detalhes em `POLLYANA-LORE-PROPOSTA.md`.

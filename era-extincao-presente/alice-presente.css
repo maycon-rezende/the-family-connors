@@ -597,6 +597,264 @@ body[data-character='alice'] .gallery figcaption {
   }
 }
 
+/* Registro médico e cronologia de Alice, em tons de vidro clínico e cobre. */
+body[data-character='alice'] .alice-service-record,
+body[data-character='alice'] .alice-chronicle {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4.5rem, 8vw, 7.5rem) 7vw;
+  border-top: 1px solid rgba(143, 214, 207, 0.2);
+  background:
+    radial-gradient(circle at 86% 13%, rgba(143, 214, 207, 0.12), transparent 27%),
+    linear-gradient(135deg, #061113, #0b1a1b 50%, #071011);
+}
+
+body[data-character='alice'] .alice-service-record::before,
+body[data-character='alice'] .alice-chronicle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(143, 214, 207, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 214, 207, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(90deg, #000, transparent 94%);
+}
+
+body[data-character='alice'] .alice-service-record__heading,
+body[data-character='alice'] .alice-service-record__metrics,
+body[data-character='alice'] .alice-service-record__note,
+body[data-character='alice'] .alice-chronicle__heading,
+body[data-character='alice'] .alice-chronicle__hospital,
+body[data-character='alice'] .alice-chronicle__timeline,
+body[data-character='alice'] .alice-chronicle__quote {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+body[data-character='alice'] .alice-service-record__heading,
+body[data-character='alice'] .alice-chronicle__heading {
+  margin-bottom: 2.8rem;
+}
+
+body[data-character='alice'] .alice-service-record__heading h2,
+body[data-character='alice'] .alice-chronicle__heading h2 {
+  margin: 0.9rem 0 1rem;
+  color: #e6f3f0;
+  font: 800 clamp(3.5rem, 8vw, 7rem)/0.82 'Barlow Condensed';
+  text-transform: uppercase;
+}
+
+body[data-character='alice'] .alice-service-record__heading h2 em,
+body[data-character='alice'] .alice-chronicle__heading h2 em {
+  color: var(--cyan);
+  font-style: normal;
+}
+
+body[data-character='alice'] .alice-service-record__heading > p,
+body[data-character='alice'] .alice-chronicle__heading > p {
+  max-width: 660px;
+  margin: 0;
+  color: #b9d1cd;
+  font: 600 1.2rem/1.55 'Cormorant Garamond', Georgia, serif;
+}
+
+body[data-character='alice'] .alice-service-record__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+}
+
+body[data-character='alice'] .alice-service-record__metrics > div {
+  min-height: 150px;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(143, 214, 207, 0.22);
+  background: linear-gradient(145deg, rgba(9, 29, 30, 0.88), rgba(3, 12, 14, 0.94));
+  transition: border-color 220ms ease, transform 220ms ease, background 220ms ease;
+}
+
+body[data-character='alice'] .alice-service-record__metrics > div:hover {
+  transform: translateY(-3px);
+  border-color: rgba(143, 214, 207, 0.58);
+  background: linear-gradient(145deg, rgba(12, 39, 40, 0.92), rgba(3, 12, 14, 0.96));
+}
+
+body[data-character='alice'] .alice-service-record__metrics dt,
+body[data-character='alice'] .alice-service-record__metrics small,
+body[data-character='alice'] .alice-service-record__note,
+body[data-character='alice'] .alice-chronicle__hospital figcaption span,
+body[data-character='alice'] .alice-chronicle__hospital figcaption small,
+body[data-character='alice'] .alice-chronicle__timeline li > span {
+  color: rgba(143, 214, 207, 0.72);
+  font: 600 0.48rem/1.55 'Cinzel', Georgia, serif;
+  letter-spacing: 0.14em;
+}
+
+body[data-character='alice'] .alice-service-record__metrics dd {
+  margin: 0.8rem 0 0;
+  color: #e7f3ef;
+  font: 800 clamp(2.5rem, 5vw, 4rem)/0.9 'Barlow Condensed';
+}
+
+body[data-character='alice'] .alice-service-record__metrics small {
+  display: block;
+  margin-top: 0.65rem;
+  color: #8aa9a5;
+  font-size: 0.4rem;
+}
+
+body[data-character='alice'] .alice-service-record__metrics .alice-service-record__lives {
+  border-color: rgba(199, 170, 114, 0.5);
+  background: linear-gradient(145deg, rgba(54, 47, 31, 0.76), rgba(6, 16, 17, 0.94));
+}
+
+body[data-character='alice'] .alice-service-record__metrics .alice-service-record__lives dt,
+body[data-character='alice'] .alice-service-record__metrics .alice-service-record__lives dd,
+body[data-character='alice'] .alice-service-record__metrics .alice-service-record__lives small {
+  color: #d9c18f;
+}
+
+body[data-character='alice'] .alice-service-record__note {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #8da7a3;
+  font: 500 0.62rem/1.7 'DM Mono', monospace;
+  letter-spacing: 0.035em;
+}
+
+body[data-character='alice'] .alice-chronicle {
+  background:
+    radial-gradient(circle at 12% 28%, rgba(143, 214, 207, 0.08), transparent 28%),
+    linear-gradient(145deg, #071011, #0a1718 52%, #061011);
+}
+
+body[data-character='alice'] .alice-chronicle__hospital {
+  position: relative;
+  min-height: 320px;
+  aspect-ratio: 2.2 / 1;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  border: 1px solid rgba(143, 214, 207, 0.35);
+  background: #030809;
+}
+
+body[data-character='alice'] .alice-chronicle__hospital img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  object-position: center 55%;
+  filter: saturate(0.65) brightness(0.78) contrast(1.04);
+  transition: transform 900ms ease, filter 600ms ease;
+}
+
+body[data-character='alice'] .alice-chronicle__hospital:hover img {
+  transform: scale(1.025);
+  filter: saturate(0.82) brightness(0.88) contrast(1.02);
+}
+
+body[data-character='alice'] .alice-chronicle__hospital::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(2, 9, 10, 0.96), transparent 58%), linear-gradient(90deg, rgba(2, 9, 10, 0.32), transparent 66%);
+}
+
+body[data-character='alice'] .alice-chronicle__hospital figcaption {
+  position: absolute;
+  z-index: 1;
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: clamp(1rem, 4vw, 2.5rem);
+  left: clamp(1rem, 4vw, 3rem);
+  display: grid;
+  gap: 0.55rem;
+}
+
+body[data-character='alice'] .alice-chronicle__hospital figcaption b {
+  max-width: 760px;
+  color: #e6f3f0;
+  font: 600 clamp(1.5rem, 3.3vw, 2.8rem)/1.05 'Cormorant Garamond', Georgia, serif;
+}
+
+body[data-character='alice'] .alice-chronicle__hospital figcaption small {
+  color: #c7aa72;
+  font-size: 0.43rem;
+}
+
+body[data-character='alice'] .alice-chronicle__timeline {
+  display: grid;
+  gap: 0;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-character='alice'] .alice-chronicle__timeline li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.45rem 0 1.7rem;
+  border-top: 1px solid rgba(143, 214, 207, 0.2);
+}
+
+body[data-character='alice'] .alice-chronicle__timeline li > span {
+  padding-top: 0.35rem;
+  color: #c7aa72;
+}
+
+body[data-character='alice'] .alice-chronicle__timeline h3 {
+  margin: 0 0 0.45rem;
+  color: #e3f0ed;
+  font: 700 clamp(1.45rem, 2.5vw, 2.15rem)/1.06 'Cormorant Garamond', Georgia, serif;
+}
+
+body[data-character='alice'] .alice-chronicle__timeline p {
+  max-width: 800px;
+  margin: 0;
+  color: #b7ceca;
+  font: 600 1.15rem/1.55 'Cormorant Garamond', Georgia, serif;
+}
+
+body[data-character='alice'] .alice-chronicle__quote {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 1.6rem 0 0 1.6rem;
+  border-left: 1px solid var(--sand);
+  color: #e3d3ad;
+  font: 700 clamp(1.7rem, 3vw, 2.5rem)/1.2 'Cormorant Garamond', Georgia, serif;
+}
+
+@media (max-width: 900px) {
+  body[data-character='alice'] .alice-service-record__metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-character='alice'] .alice-chronicle__hospital { min-height: 280px; }
+}
+
+@media (max-width: 600px) {
+  body[data-character='alice'] .alice-service-record,
+  body[data-character='alice'] .alice-chronicle { padding: 4.5rem 1rem; }
+  body[data-character='alice'] .alice-service-record__metrics { grid-template-columns: 1fr; }
+  body[data-character='alice'] .alice-service-record__metrics > div { min-height: 125px; }
+  body[data-character='alice'] .alice-chronicle__hospital { min-height: 340px; aspect-ratio: auto; }
+  body[data-character='alice'] .alice-chronicle__hospital img { object-position: 50% center; }
+  body[data-character='alice'] .alice-chronicle__timeline li { grid-template-columns: 1fr; gap: 0.5rem; }
+  body[data-character='alice'] .alice-chronicle__timeline li > span { font-size: 0.42rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-character='alice'] .alice-service-record__metrics > div,
+  body[data-character='alice'] .alice-chronicle__hospital img { transition: none; }
+}
+
 /* Entrada para o arquivo fotográfico separado. */
 body[data-character='alice'] .alice-memories-entry {
   position: relative;
@@ -881,7 +1139,7 @@ body[data-character='alice'] .alice-memory-dots button:hover {
   position: fixed;
   z-index: 10000;
   inset: 0;
-  display: grid;
+  display: none;
   overflow: hidden;
   place-items: stretch;
   background: #071011;
@@ -890,12 +1148,16 @@ body[data-character='alice'] .alice-memory-dots button:hover {
   transition: opacity 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+html.alice-opening-pending .alice-opening {
+  display: grid;
+}
+
 .alice-opening.is-leaving {
   opacity: 0;
   pointer-events: none;
 }
 
-.alice-opening__portrait,
+.alice-opening__video,
 .alice-opening__atmosphere {
   position: absolute;
   inset: 0;
@@ -903,12 +1165,12 @@ body[data-character='alice'] .alice-memory-dots button:hover {
   height: 100%;
 }
 
-.alice-opening__portrait {
+.alice-opening__video {
   z-index: -2;
   display: block;
   object-fit: cover;
-  object-position: center 47%;
-  animation: alice-opening-drift 9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  object-position: center 45%;
+  background: #05090a;
 }
 
 .alice-opening__atmosphere {
@@ -916,8 +1178,8 @@ body[data-character='alice'] .alice-memory-dots button:hover {
   pointer-events: none;
   background:
     repeating-linear-gradient(0deg, transparent 0 5px, rgba(143, 214, 207, 0.045) 6px),
-    linear-gradient(90deg, rgba(4, 13, 14, 0.94), rgba(4, 13, 14, 0.68) 34%, rgba(4, 13, 14, 0.04) 77%),
-    linear-gradient(0deg, rgba(4, 13, 14, 0.72), transparent 58%, rgba(4, 13, 14, 0.14));
+    linear-gradient(90deg, rgba(4, 13, 14, 0.76), rgba(4, 13, 14, 0.35) 34%, transparent 64%),
+    linear-gradient(0deg, rgba(4, 13, 14, 0.96), rgba(4, 13, 14, 0.7) 30%, transparent 66%, rgba(4, 13, 14, 0.16));
 }
 
 .alice-opening__atmosphere::before,
@@ -929,26 +1191,27 @@ body[data-character='alice'] .alice-memory-dots button:hover {
 }
 
 .alice-opening__atmosphere::before {
-  opacity: 0.42;
+  opacity: 0.35;
   background:
-    radial-gradient(ellipse at 76% 43%, rgba(143, 214, 207, 0.16), transparent 34%),
-    linear-gradient(108deg, transparent 32%, rgba(217, 107, 61, 0.12) 47%, transparent 59%);
-  animation: alice-opening-wind 7.5s ease-in-out infinite alternate;
+    radial-gradient(ellipse at 28% 78%, rgba(143, 214, 207, 0.2), transparent 32%),
+    linear-gradient(90deg, transparent 38%, rgba(217, 107, 61, 0.12) 49%, transparent 60%);
+  animation: alice-opening-monitor 5s ease-in-out infinite alternate;
 }
 
 .alice-opening__atmosphere::after {
-  opacity: 0.3;
-  background: repeating-linear-gradient(112deg, transparent 0 82px, rgba(238, 205, 153, 0.12) 83px 84px, transparent 85px 142px);
-  mask-image: linear-gradient(90deg, transparent 22%, #000 58%, transparent 95%);
-  animation: alice-opening-dust 10s linear infinite;
+  opacity: 0.22;
+  background: linear-gradient(90deg, transparent 35%, rgba(143, 214, 207, 0.22) 49%, transparent 63%);
+  mask-image: linear-gradient(0deg, transparent 18%, #000 48%, #000 65%, transparent 90%);
+  animation: alice-opening-scan 7s ease-in-out infinite alternate;
 }
 
 .alice-opening__copy {
   position: absolute;
-  top: clamp(5.5rem, 17vh, 9.5rem);
+  top: auto;
+  bottom: clamp(3rem, 8vh, 6.5rem);
   left: clamp(1.5rem, 7vw, 7.5rem);
   z-index: 1;
-  width: min(50vw, 720px);
+  width: min(48vw, 680px);
 }
 
 .alice-opening__eyebrow,
@@ -965,8 +1228,8 @@ body[data-character='alice'] .alice-memory-dots button:hover {
 }
 
 .alice-opening__quote {
-  max-width: 500px;
-  margin: clamp(2.1rem, 6vh, 4rem) 0 1.6rem;
+  max-width: 460px;
+  margin: clamp(1.1rem, 3vh, 2rem) 0 1rem;
   color: #e5d8c1;
   font: 600 clamp(1.2rem, 2.1vw, 1.8rem)/1.45 'Cormorant Garamond', Georgia, serif;
   letter-spacing: 0.02em;
@@ -978,7 +1241,7 @@ body[data-character='alice'] .alice-memory-dots button:hover {
   margin: 0;
   transform: translateY(18px);
   color: #f0e5d0;
-  font: 800 clamp(4.3rem, 9.8vw, 9.6rem)/0.76 'Barlow Condensed', Impact, sans-serif;
+  font: 800 clamp(4rem, 8.6vw, 8rem)/0.76 'Barlow Condensed', Impact, sans-serif;
   letter-spacing: -0.055em;
   text-transform: uppercase;
   text-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
@@ -989,6 +1252,7 @@ body[data-character='alice'] .alice-memory-dots button:hover {
 .alice-opening__title em {
   display: block;
   color: var(--cyan);
+  font-size: clamp(3.1rem, 6.1vw, 5.6rem);
   font-style: normal;
   text-shadow: 0 0 24px rgba(143, 214, 207, 0.2);
 }
@@ -1011,19 +1275,14 @@ body.alice-opening-active {
   overflow: hidden;
 }
 
-@keyframes alice-opening-drift {
-  from { transform: scale(1.035) translate3d(0, 0, 0); }
-  to { transform: scale(1.12) translate3d(-0.7%, -0.4%, 0); }
+@keyframes alice-opening-monitor {
+  from { opacity: 0.2; }
+  to { opacity: 0.52; }
 }
 
-@keyframes alice-opening-wind {
-  from { transform: translate3d(-2%, 0, 0) scale(1); opacity: 0.26; }
-  to { transform: translate3d(2%, -1%, 0) scale(1.04); opacity: 0.58; }
-}
-
-@keyframes alice-opening-dust {
-  from { transform: translate3d(2%, 1%, 0); }
-  to { transform: translate3d(-3%, -1%, 0); }
+@keyframes alice-opening-scan {
+  from { transform: translate3d(-5%, 0, 0); }
+  to { transform: translate3d(5%, 0, 0); }
 }
 
 @keyframes alice-opening-reveal {
@@ -1035,27 +1294,32 @@ body.alice-opening-active {
 }
 
 @media (max-width: 760px) {
-  .alice-opening__portrait { object-position: 69% center; }
+  .alice-opening__video { object-position: center; }
   .alice-opening__atmosphere {
     background:
       repeating-linear-gradient(0deg, transparent 0 5px, rgba(143, 214, 207, 0.04) 6px),
-      linear-gradient(90deg, rgba(4, 13, 14, 0.76), rgba(4, 13, 14, 0.48) 56%, rgba(4, 13, 14, 0.12)),
-      linear-gradient(0deg, rgba(4, 13, 14, 0.72), transparent 62%);
+      linear-gradient(90deg, rgba(4, 13, 14, 0.62), rgba(4, 13, 14, 0.25) 60%, transparent),
+      linear-gradient(0deg, rgba(4, 13, 14, 0.98), rgba(4, 13, 14, 0.68) 32%, transparent 70%);
   }
   .alice-opening__copy {
-    top: 13vh;
+    top: auto;
+    bottom: 2.5rem;
     left: 1.25rem;
-    width: min(82vw, 520px);
+    width: min(90vw, 520px);
   }
-  .alice-opening__quote { margin-top: 2.7rem; }
-  .alice-opening__title { font-size: clamp(3.7rem, 15vw, 6.2rem); }
+  .alice-opening__quote { margin-top: 1.5rem; }
+  .alice-opening__title { font-size: clamp(3.5rem, 15vw, 6.2rem); }
+  .alice-opening__title em { font-size: clamp(2.6rem, 11vw, 4.5rem); }
   .alice-opening__eyebrow,
   .alice-opening__role { font-size: 0.45rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html.alice-opening-pending .alice-opening {
+    display: none;
+  }
   .alice-opening,
-  .alice-opening__portrait,
+  .alice-opening__video,
   .alice-opening__atmosphere::before,
   .alice-opening__atmosphere::after,
   .alice-opening__eyebrow,

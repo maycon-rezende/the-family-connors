@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="alice-opening-pending">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#090806" />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
-    <link rel="stylesheet" href="era-extincao-presente/alice-presente.css?v=3" />
+    <link rel="stylesheet" href="era-extincao-presente/alice-presente.css?v=6" />
     <link rel="stylesheet" href="css/present-responsive.css" />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <title>Alice M Connor | Era da Extinção</title>
-    <meta name="description" content="Alice Myers Connor no presente: medicina, família e sobrevivência." />
+    <title>Alice Myers Connor | Era da Extinção</title>
+    <meta name="description" content="Alice Myers Connor: neurocirurgiã, mãe dos Hellsings e responsável por milhares de vidas preservadas desde o Dia D." />
   </head>
   <body data-character="alice">
     <section
@@ -20,21 +20,24 @@
       aria-modal="true"
       aria-labelledby="alice-opening-title"
       aria-describedby="alice-opening-quote"
-      hidden
     >
-      <img
-        class="alice-opening__portrait"
-        src="img-presente/personagens/alice-abertura-presente.png"
-        alt=""
+      <video
+        class="alice-opening__video"
+        data-alice-opening-video
+        muted
+        playsinline
+        preload="auto"
         aria-hidden="true"
-        fetchpriority="high"
-      />
+        tabindex="-1"
+      >
+        <source src="video/abertura-alice-presente.mp4" type="video/mp4" />
+      </video>
       <div class="alice-opening__atmosphere" aria-hidden="true"></div>
       <div class="alice-opening__copy">
         <span class="alice-opening__eyebrow">AMC // TRIAGEM ATIVA</span>
         <p class="alice-opening__quote" id="alice-opening-quote">Cuidar de alguém também é resistir.</p>
         <h2 class="alice-opening__title" id="alice-opening-title">ALICE <em>MYERS <span class="alice-opening__surname">CONNOR.</span></em></h2>
-        <span class="alice-opening__role">MÉDICA // O CORAÇÃO DO COMBOIO</span>
+        <span class="alice-opening__role">NEUROCIRURGIÃ // MÃE DOS HELLSINGS</span>
       </div>
     </section>
 
@@ -74,19 +77,19 @@
             <strong>Alice Myers Connor</strong>
             <dl>
               <div><dt>Idade</dt><dd>54 anos</dd></div>
-              <div><dt>Função</dt><dd>Médica / Comando civil</dd></div>
+              <div><dt>Função</dt><dd>Neurocirurgia / comando médico</dd></div>
               <div><dt>Base</dt><dd>Comboio Hellsings</dd></div>
               <div><dt>Estado</dt><dd>Em movimento</dd></div>
             </dl>
             <p>Quando o estoque termina e a rota falha, Alice transforma conhecimento em tempo — e tempo em vida.</p>
           </article>
           <article class="alice-skills" aria-label="Habilidades de Alice">
-            <span class="alice-skills__label">CAPACIDADES CONFIRMADAS</span>
-            <div class="alice-skill"><span>Triagem e medicina de campo</span><b style="--level: 98%">98%</b></div>
-            <div class="alice-skill"><span>Diagnóstico e estabilização</span><b style="--level: 95%">95%</b></div>
-            <div class="alice-skill"><span>Gestão de medicamentos e recursos</span><b style="--level: 92%">92%</b></div>
-            <div class="alice-skill"><span>Coordenação de sobreviventes</span><b style="--level: 89%">89%</b></div>
-            <div class="alice-skill"><span>Resistência emocional</span><b style="--level: 94%">94%</b></div>
+            <span class="alice-skills__label">FORMAÇÃO E ATUAÇÃO</span>
+            <div class="alice-skill"><span>Neurocirurgia</span><b>ESPECIALIDADE</b></div>
+            <div class="alice-skill"><span>Trauma e cirurgia geral</span><b>EMERGÊNCIA</b></div>
+            <div class="alice-skill"><span>Triagem e estabilização</span><b>COMANDO MÉDICO</b></div>
+            <div class="alice-skill"><span>Ensino cirúrgico</span><b>FORMAÇÃO</b></div>
+            <div class="alice-skill"><span>Defesa pessoal e combate</span><b>TREINADA</b></div>
           </article>
           <article class="alice-protocols">
             <span>PROTOCOLOS PESSOAIS</span>
@@ -98,6 +101,43 @@
             </ul>
           </article>
         </div>
+      </section>
+      <section class="alice-service-record" aria-labelledby="alice-service-title">
+        <header class="alice-service-record__heading">
+          <span class="eyebrow">AC-02 // REGISTRO MÉDICO // DIA D — PRESENTE</span>
+          <h2 id="alice-service-title">Quantas vidas<br /><em>continuaram.</em></h2>
+          <p>O arquivo mede a missão de Alice pelo atendimento que chegou às pessoas e pela vida que conseguiu preservar.</p>
+        </header>
+        <dl class="alice-service-record__metrics">
+          <div><dt>OPERAÇÕES MÉDICAS COORDENADAS</dt><dd>386<small>DESDE O DIA D</small></dd></div>
+          <div><dt>OBJETIVOS CONCLUÍDOS</dt><dd>361<small>93,5% DO REGISTRO</small></dd></div>
+          <div><dt>ROTAS REDIRECIONADAS</dt><dd>25<small>POR SEGURANÇA OU ACESSO</small></dd></div>
+          <div class="alice-service-record__lives"><dt>VIDAS PRESERVADAS</dt><dd>~3.100<small>ESTIMATIVA DE CAMPO</small></dd></div>
+          <div><dt>ATENDIMENTOS REGISTRADOS</dt><dd>~4.680<small>INCLUI RETORNOS</small></dd></div>
+          <div><dt>SOCORRISTAS FORMADOS</dt><dd>51<small>PREPARADOS POR ALICE</small></dd></div>
+        </dl>
+        <p class="alice-service-record__note">Estimativas reconstruídas de registros de triagem, cirurgia, evacuação e formação desde o Dia D. Uma pessoa pode aparecer em mais de um atendimento; o total de vidas preservadas é aproximado.</p>
+      </section>
+
+      <section class="alice-chronicle" aria-labelledby="alice-chronicle-title">
+        <header class="alice-chronicle__heading">
+          <span class="eyebrow">A ESTRADA DE ALICE // AC-02</span>
+          <h2 id="alice-chronicle-title">A enfermaria<br /><em>nunca fechou.</em></h2>
+          <p>Da primeira triagem na Mansão Connor ao hospital do bunker e às rotas médicas do presente.</p>
+        </header>
+        <figure class="alice-chronicle__hospital">
+          <img src="img-bunker/enfermaria-bunker.png" alt="A ampla ala hospitalar subterrânea dos Hellsings, equipada com leitos, monitores, material clínico e sala cirúrgica." loading="lazy" />
+          <figcaption><span>COMPLEXO HELLSINGS // ALA HOSPITALAR</span><b>Um hospital construído para continuar funcionando quando o mundo parasse.</b><small>INVESTIMENTO TOTAL ESTIMADO DO BUNKER // US$ 900 MILHÕES</small></figcaption>
+        </figure>
+        <ol class="alice-chronicle__timeline">
+          <li><span>01 // DIA D</span><div><h3>A mansão virou ponto de triagem</h3><p>Quando os Hellsings voltaram com sobreviventes, Alice organizou o atendimento na propriedade. Ela distribuía funções, avaliava ferimentos e preparava os pacientes para seguir ao abrigo. Para cada pessoa que chegava, registrava um nome e o próximo cuidado necessário.</p></div></li>
+          <li><span>02 // PORTAS DO BUNKER</span><div><h3>O hospital subterrâneo entrou em operação</h3><p>Jack havia investido quase um bilhão de dólares no complexo, que já possuía leitos, equipamentos de diagnóstico e salas cirúrgicas. Alice assumiu a ala médica e coordenou o atendimento de civis e Hellsings durante a chegada dos feridos e o confinamento.</p></div></li>
+          <li><span>03 // ANOS SOB A TERRA</span><div><h3>Conhecimento compartilhado</h3><p>Alice operou, tratou traumas e organizou o uso dos recursos médicos. O hospital tinha estrutura; ainda assim, era preciso cuidar de cada estoque e preparar mais pessoas para agir. Ela ensinou as filhas Diana, Mary e Isolde desde os fundamentos médicos até a preparar e realizar cirurgias sob sua orientação.</p></div></li>
+          <li><span>04 // RETORNO À SUPERFÍCIE</span><div><h3>Outra forma de estar na linha de frente</h3><p>Com os Hellsings vivendo em movimento, Alice deixou as operações de campo como rotina e passou a coordenar medicina, recursos, contratos e equipes. Sua formação de combate continuou com ela; se uma ameaça alcançasse os pacientes, sabia proteger a si mesma e os outros.</p></div></li>
+          <li><span>05 // BACIA BRANCA</span><div><h3>Uma passagem para quem precisava de cuidado</h3><p>Alice negociou o corredor médico ligado à Bacia Branca. A passagem permitiu que equipes de atendimento e busca se deslocassem com proteção, fazendo da negociação uma parte concreta do trabalho de salvar vidas.</p></div></li>
+          <li><span>06 // PRESENTE</span><div><h3>Preparar o que vem depois da Dominus</h3><p>Enquanto os Hellsings enfrentam a Dominus e procuram a estufa do governo, Alice organiza recursos, conhecimento e pessoas para examinar as plantas preservadas. Ela não promete uma cura pronta: prepara o grupo para descobrir o que ainda pode devolver vida à terra.</p></div></li>
+        </ol>
+        <blockquote class="alice-chronicle__quote">“Eu não conto as pessoas que conseguimos salvar. Eu lembro dos nomes.”</blockquote>
       </section>
       <section class="memory">
         <img data-memory src="" alt="Memória preservada" />
@@ -128,7 +168,7 @@
     </audio>
     <script src="js/personagem-theme.js" defer></script>
     <script src="era-extincao-presente/personagem-presente.js"></script>
-    <script src="era-extincao-presente/alice-opening.js?v=1" defer></script>
+    <script src="era-extincao-presente/alice-opening.js?v=2" defer></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>
