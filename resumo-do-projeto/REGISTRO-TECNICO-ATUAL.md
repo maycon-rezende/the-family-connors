@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **6 de novembro de 2026**.
+Atualizado em **9 de novembro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -672,3 +672,10 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `era-extincao-presente/personagem-presente.js` atualiza a apresentação de Mark para focar no comando tático, na defesa do comboio e na família; a carreira na Marinha permanece anterior ao Dia D.
 - O painel registra 132 operações, 123 objetivos concluídos, nove redirecionamentos, zero fracassos oficiais, ~1.950 pessoas retiradas de risco, ~1.450 infectados neutralizados e 29 combatentes hostis mortos. As contagens são propostas ficcionais revisáveis; operações individuais podem se sobrepor às registradas no comando de Jack.
 - A página mantém Hanson e Salazar como contatos por experiência militar, sem estabelecer uma relação superior-subordinado entre Hanson e Mark.
+
+## Publicação compacta no GitHub Pages — 9 de novembro de 2026
+
+- `/.github/workflows/deploy-pages.yml` publica o site quando há mudanças em `main`, usando o fluxo oficial do GitHub Pages Actions.
+- `scripts/build-pages.py` monta `_site/` a partir dos arquivos rastreados pelo Git, exclui somente material de desenvolvimento/documentação e converte PNGs para WebP de alta qualidade quando o resultado fica menor. As referências locais em HTML, CSS e JavaScript acompanham a extensão nova; imagens animadas, incompatíveis ou maiores permanecem PNG.
+- A conversão acontece somente no artefato de publicação. As imagens originais do repositório não são substituídas. `_site/` fica ignorado pelo Git e o processo interrompe a publicação se o pacote superar 900 MiB, mantendo margem ante o limite de 1 GB do Pages.
+- A configuração do Pages passa de publicação legada da raiz para GitHub Actions; a URL pública permanece a mesma.
