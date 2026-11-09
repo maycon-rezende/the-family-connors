@@ -100,6 +100,14 @@ O sobrenome **Whitmore** e a trajetória de Lana descrita em `lana-presente.html
 
 Ariani se tornou uma líder nata. Sua inteligência, capacidade de negociação e firmeza ajudaram a manter o grupo unido quando força e armas já não eram suficientes.
 
+### Ariani — trajetória proposta para revisão
+
+O perfil de Ariani desenvolve sua experiência como advogada em negociação e inteligência de campo. A proposta acompanha a família formada com Mark, os gêmeos Pollyana e Nathan (nascidos antes do Dia D) e James (nascido depois), sem fixar idades ou contagens operacionais ainda não definidas.
+
+Na missão provisoriamente chamada **Frequência Morta**, uma transmissão repetida de um posto abandonado parece pedir ajuda usando o sinal dos Hellsings. Ariani reconhece que o ruído e as pausas são idênticos a cada repetição; o chamado é uma gravação montada para atrair o comboio a uma passagem vigiada. Ela convence Jack a redirecionar a equipe antes da emboscada. Depois, torna-se parte da análise de transmissões, mapas e relatos, complementando as decisões de Jack e o comando tático de Mark.
+
+Durante o confinamento no bunker, Ariani ajuda a mediar conflitos agravados pela escassez. No presente, sua principal dificuldade é carregar sozinha a responsabilidade por toda perda que poderia ter sido evitada. A missão, os acontecimentos e o conflito pessoal acima são **proposta narrativa revisável**, ainda sem confirmação do autor.
+
 ## Britney Connor
 
 Britney tem 45 anos. Conheceu Bobby Lee em um dos churrascos que Jack oferecia aos Hellsings na Mansão Connor, depois que Lee entrou para a equipe. Os dois demoraram a ficar juntos. Quando descobriu que esperava um filho dele, Britney saiu da casa de Mark e foi morar apenas com Jully. Ela e Lee se casaram mais tarde, ainda antes do Dia D.

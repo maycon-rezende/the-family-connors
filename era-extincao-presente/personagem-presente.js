@@ -99,14 +99,18 @@ const profiles = {
     focus: '52% 14%',
     intro:
       'Quando armas não bastam, Ariani encontra a palavra, a informação ou a fraqueza capaz de abrir o caminho.',
-    title: 'A voz',
-    accent: 'entre facções',
+    title: 'A frequência',
+    accent: 'sem voz',
     paragraphs: [
-      'Advogada antes do Dia D, Ariani levou para o novo mundo sua leitura de pessoas, conflitos e acordos. Ela negocia passagem, recursos e alianças sem esquecer que toda promessa agora pode esconder uma armadilha.',
-      'Sua liderança natural mantém o grupo unido quando o medo ameaça dividi-lo. Ao lado de Mark, protege Pollyana, Nathan e James Salvatore Connor — três filhos marcados por lados diferentes da história.',
+      'Antes do Dia D, Ariani era advogada. Nas salas de audiência, aprendeu que a primeira versão quase nunca conta tudo: o detalhe decisivo aparece na pausa, na palavra evitada, no interesse que ninguém declara. Com Mark, construiu uma família; Pollyana e Nathan já faziam parte dela quando o mundo caiu. O futuro ainda parecia algo que se podia organizar.',
+      'No Dia D, as instituições que davam força às palavras desapareceram. Contratos, tribunais e garantias já não protegiam ninguém. Ariani conservou, porém, o que sabia fazer: ouvir relatos incompatíveis, reconhecer o medo escondido numa ameaça e distinguir uma promessa possível de uma armadilha. Enquanto Mark ajudava a proteger o grupo, ela passou a ler as pessoas que as estradas colocavam diante dos Hellsings.',
+      'A missão que mudou seu lugar na equipe começou com uma frequência antiga. Um rádio num posto abandonado repetia um chamado com o sinal dos Hellsings; parecia uma voz pedindo ajuda. Ariani percebeu que as pausas e o ruído voltavam sempre no mesmo ponto. A transmissão era uma gravação. A equipe foi verificar o posto e encontrou o transmissor ligado, sem ninguém por perto. O sinal tentava atrair o comboio para uma passagem observada. Ariani convenceu Jack a mudar a rota antes que os Hellsings entrassem no corredor da emboscada. Naquela noite, sua leitura evitou o confronto.',
+      'Depois da Frequência Morta, ninguém mais a procurava apenas para negociar. Ariani passou a examinar transmissões, mapas e relatos: de onde vinha cada informação e quem ganharia se os Hellsings acreditassem nela. Sua palavra não substituía as decisões de Jack nem o comando tático de Mark; oferecia aos dois um quadro mais claro para tomá-las.',
+      'Durante o longo confinamento no bunker, ajudou a mediar a convivência quando o medo e a escassez transformavam cada decisão em disputa. James nasceu depois do Dia D. Com ele nos braços, a sobrevivência deixou de ser apenas manter a família viva: também era abrir espaço para que os filhos tivessem um futuro que não se resumisse ao desespero.',
+      'No presente, as vitórias de Ariani nem sempre se medem em tiros: uma passagem aberta, uma aliança que resiste por mais uma noite, uma informação falsa descoberta a tempo. Seu ponto cego é acreditar que, se analisar tudo o bastante, poderá impedir qualquer perda. Mark a ajuda a dividir esse peso. Ela segue responsável por dizer a verdade — inclusive quando a verdade fecha uma porta — e por deixar o grupo escolher sabendo o preço.',
     ],
     quote:
-      'No fim do mundo, a verdade vale menos que água. Por isso ela aprende quem está mentindo antes de negociar.',
+      'Não siga uma voz só porque ela chama pelo seu nome. Descubra primeiro quem ganha se você responder.',
     memory: 'img-hellsing/ariani-mark.png',
     memoryTitle: 'Força e razão',
     memoryText:

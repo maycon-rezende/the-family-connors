@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="ariani-opening-pending">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,12 +9,42 @@
       content="Dossiê do presente de Ariani Salvatore Connor: negociação, inteligência e liderança no fim do mundo."
     />
     <link rel="stylesheet" href="era-extincao-presente/personagem-presente.css" />
-    <link rel="stylesheet" href="era-extincao-presente/ariani-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/ariani-presente.css?v=4" />
     <link rel="stylesheet" href="css/present-responsive.css" />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <title>Ariani Salvatore Connor | Era da Extinção</title>
   </head>
   <body data-character="ariani">
+    <section
+      class="ariani-opening"
+      data-ariani-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="ariani-opening-title"
+      aria-describedby="ariani-opening-quote"
+    >
+      <video
+        class="ariani-opening__video"
+        data-ariani-opening-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-hellsing/ariani-presente.png"
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <source src="video/abertura-ariani-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="ariani-opening__shade" aria-hidden="true"></div>
+      <div class="ariani-opening__signal" aria-hidden="true"><i></i><b></b></div>
+      <div class="ariani-opening__copy">
+        <span class="ariani-opening__eyebrow">AS-04 // FREQUÊNCIA MORTA</span>
+        <p id="ariani-opening-quote">“Não siga uma voz só porque ela chama pelo seu nome. Descubra primeiro quem ganha se você responder.”</p>
+        <h1 id="ariani-opening-title">ARIANI <em>SALVATORE CONNOR.</em></h1>
+      </div>
+    </section>
+
     <nav class="profile-nav">
       <a href="index.html#sobreviventes"><b>Æ</b> ERA DA EXTINÇÃO</a
       ><span>ARQUIVO HELLSINGS // PRESENTE</span><a href="britney-presente.html">PRÓXIMO →</a>
@@ -124,7 +154,12 @@
       ><a href="index.html#sobreviventes">TODOS OS SOBREVIVENTES</a
       ><a href="britney-presente.html">BRITNEY →</a>
     </footer>
-    <script src="era-extincao-presente/personagem-presente.js"></script>
+    <audio data-character-theme autoplay loop preload="auto" hidden aria-hidden="true">
+      <source src="audio/theme-ariani-presente.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="js/personagem-theme.js?v=2" defer></script>
+    <script src="era-extincao-presente/ariani-opening.js?v=1" defer></script>
+    <script src="era-extincao-presente/personagem-presente.js?v=2"></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

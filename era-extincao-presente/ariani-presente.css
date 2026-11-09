@@ -7,6 +7,8 @@ body[data-character='ariani'] {
   --ariani-ink: #100b13;
   --ariani-paper: #eee2d1;
   --ariani-gold: #d6ad75;
+  --focus: 52% -3%;
+  --focus-mobile: 52% 0%;
   color: var(--ariani-paper);
   background: var(--ariani-ink);
 }
@@ -198,7 +200,7 @@ body[data-character='ariani'] .chapter {
 }
 
 body[data-character='ariani'] .chapter::before {
-  content: 'ACORDO // LEITURA DE CENÁRIO';
+  content: 'LORE // PROPOSTA REVISÁVEL';
   position: absolute;
   top: 2.4rem;
   right: 7vw;
@@ -253,7 +255,7 @@ body[data-character='ariani'] .chapter article {
 }
 
 body[data-character='ariani'] .chapter article::before {
-  content: 'RELATO // EVIDÊNCIA RECUPERADA';
+  content: 'CAPÍTULO // A FREQUÊNCIA MORTA';
   display: block;
   margin-bottom: 1.45rem;
   color: rgba(214, 173, 117, 0.76);
@@ -948,4 +950,157 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
   body[data-character='ariani'] .ariani-memories-entry__link span {
     transition: none !important;
   }
+}
+
+.ariani-opening[hidden] { display: none; }
+
+.ariani-opening {
+  position: fixed;
+  z-index: 140;
+  inset: 0;
+  display: none;
+  overflow: hidden;
+  isolation: isolate;
+  color: #f1e5d9;
+  background: #100b13;
+  opacity: 1;
+  transition: opacity 900ms ease, visibility 900ms ease;
+}
+
+html.ariani-opening-pending .ariani-opening { display: grid; }
+
+.ariani-opening__video,
+.ariani-opening__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ariani-opening__video {
+  z-index: -2;
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: saturate(.75) brightness(.69) contrast(1.08);
+  transform: scale(1.025);
+}
+
+.ariani-opening__shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(16, 11, 19, .94), rgba(16, 11, 19, .56) 43%, rgba(16, 11, 19, .08) 78%),
+    linear-gradient(0deg, rgba(16, 11, 19, .92), transparent 72%),
+    radial-gradient(circle at 72% 28%, rgba(227, 148, 169, .16), transparent 35%);
+}
+
+.ariani-opening__shade::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(227, 148, 169, .23);
+  margin: clamp(.7rem, 2vw, 1.4rem);
+  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(238, 215, 221, .035) 5px);
+  content: '';
+  pointer-events: none;
+}
+
+.ariani-opening__signal {
+  position: absolute;
+  top: 42%;
+  left: 70%;
+  display: grid;
+  width: clamp(9rem, 23vw, 19rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(227, 148, 169, .28);
+  border-radius: 50%;
+  color: #f1b1c2;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ariani-opening__signal::before,
+.ariani-opening__signal::after,
+.ariani-opening__signal i {
+  position: absolute;
+  border: 1px solid rgba(227, 148, 169, .25);
+  border-radius: 50%;
+  content: '';
+}
+
+.ariani-opening__signal::before { inset: 13%; }
+.ariani-opening__signal::after { inset: 28%; }
+.ariani-opening__signal i { inset: 43%; border-color: rgba(214, 173, 117, .65); }
+.ariani-opening__signal b {
+  width: .4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f1b1c2;
+  box-shadow: 0 0 1.3rem .35rem rgba(227, 148, 169, .62);
+  animation: ariani-opening-pulse 2.8s ease-in-out infinite;
+}
+
+.ariani-opening__copy {
+  position: absolute;
+  right: clamp(1.5rem, 8vw, 8rem);
+  bottom: clamp(3rem, 10vh, 7rem);
+  left: clamp(1.5rem, 9vw, 9rem);
+  max-width: 62rem;
+}
+
+.ariani-opening__eyebrow {
+  color: #e394a9;
+  font: 600 .6rem/1.6 'DM Mono', monospace;
+  letter-spacing: .2em;
+}
+
+.ariani-opening__copy p {
+  max-width: 48rem;
+  margin: 1.1rem 0 0;
+  color: rgba(241, 229, 217, .92);
+  font: italic 500 clamp(1rem, 2.1vw, 1.55rem)/1.55 'Playfair Display', Georgia, serif;
+  text-wrap: balance;
+}
+
+.ariani-opening__copy h1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .08em .22em;
+  margin: .8rem 0 0;
+  color: #f3e7d7;
+  font: 900 clamp(4rem, 11vw, 9rem)/.84 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: .015em;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, .5);
+}
+
+.ariani-opening__copy h1 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #e394a9;
+}
+
+.ariani-opening.is-leaving { visibility: hidden; opacity: 0; }
+
+@keyframes ariani-opening-pulse {
+  0%, 100% { opacity: .55; transform: scale(.75); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@media (max-width: 760px) {
+  .ariani-opening__video { object-position: 50% 50%; }
+  .ariani-opening__shade {
+    background:
+      linear-gradient(0deg, rgba(16, 11, 19, .96), rgba(16, 11, 19, .35) 72%, rgba(16, 11, 19, .16)),
+      linear-gradient(90deg, rgba(16, 11, 19, .4), transparent 85%);
+  }
+  .ariani-opening__signal { top: 38%; left: 50%; width: clamp(8rem, 42vw, 13rem); }
+  .ariani-opening__copy { right: 1.25rem; bottom: 12vh; left: 1.35rem; }
+  .ariani-opening__copy p { font-size: clamp(1rem, 4.3vw, 1.25rem); }
+  .ariani-opening__copy h1 { font-size: clamp(3.7rem, 16vw, 6.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ariani-opening,
+  .ariani-opening__video,
+  .ariani-opening__shade,
+  .ariani-opening__signal b { transition: none; animation: none; }
 }

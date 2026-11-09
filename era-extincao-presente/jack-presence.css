@@ -202,7 +202,7 @@ html.jack-opening-pending .jack-presence-intro { display: block; }
 }
 
 @media (max-width: 700px) {
-  .jack-presence-intro__video { object-position: 70% center; }
+  .jack-presence-intro__video { object-position: 50% center; }
   .jack-presence-intro__shade {
     background:
       linear-gradient(0deg, rgba(6, 5, 4, .96), rgba(6, 5, 4, .22) 74%),
