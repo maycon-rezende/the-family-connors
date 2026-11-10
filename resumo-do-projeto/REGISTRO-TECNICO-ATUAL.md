@@ -688,7 +688,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 
 ## Arquivo íntimo de Britney — 10 de novembro de 2026
 
-- `britney-presente.html` exibe duas imagens já preservadas de Britney com Bobby Lee, com legendas de rota compartilhada e descanso no acampamento. A galeria pessoal continua separada.
+- `britney-presente.html` exibe `britney-bobby-lee-mapa.png` e `britney-bobby-lee-patrulha.png`, imagens geradas com referências específicas para Britney e Bobby Lee. A galeria pessoal continua separada.
 - A carta para Mark foi ampliada em torno da gravidez, da saída da casa dele e da mudança de Britney para junto de Jully; evita tratar a distância como rompimento definitivo entre irmãos.
 - O botão **Diário de campo** abre páginas completas para leitura sem interação, cobrindo o churrasco na mansão de Jack, o acolhimento de Jully, o casamento com Bobby, o nascimento do filho depois do Dia D e a mudança da câmera para ferramenta de memória.
 - O diário lacrado é uma experiência separada. Três enigmas de resposta curta abrem fragmentos sobre Bobby, Jully e a câmera; as respostas ficam salvas em `localStorage` junto dos fragmentos BC-05 já existentes. Se o armazenamento estiver indisponível, os fragmentos resolvidos continuam abertos durante a visita atual.
