@@ -679,3 +679,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `scripts/build-pages.py` monta `_site/` a partir dos arquivos rastreados pelo Git, exclui somente material de desenvolvimento/documentação e converte PNGs para WebP de alta qualidade quando o resultado fica menor. As referências locais em HTML, CSS e JavaScript acompanham a extensão nova; imagens animadas, incompatíveis ou maiores permanecem PNG.
 - A conversão acontece somente no artefato de publicação. As imagens originais do repositório não são substituídas. `_site/` fica ignorado pelo Git e o processo interrompe a publicação se o pacote superar 900 MiB, mantendo margem ante o limite de 1 GB do Pages.
 - A configuração do Pages passa de publicação legada da raiz para GitHub Actions; a URL pública permanece a mesma.
+
+## Nova abertura de Ariani — 10 de novembro de 2026
+
+- `ariani-presente.html` usa `video/abertura-ariani-presente-v2.mp4` na abertura do perfil. A versão anterior permanece preservada no repositório, sem ser chamada pela página.
