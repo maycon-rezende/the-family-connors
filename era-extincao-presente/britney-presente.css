@@ -56,6 +56,247 @@ body[data-character='britney'] .britney-memories-entry p {
   line-height: 1.7;
 }
 
+body[data-character='britney'] .britney-couple-memories {
+  padding: clamp(5rem, 9vw, 9rem) 8vw;
+  border-top: 1px solid #df587033;
+  background:
+    radial-gradient(circle at 12% 18%, #df587018, transparent 28%),
+    linear-gradient(145deg, #0d080a, #160b10 55%, #090709);
+}
+
+body[data-character='britney'] .britney-couple-memories__heading {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+}
+
+body[data-character='britney'] .britney-couple-memories__heading h2 {
+  margin: .9rem 0 1.1rem;
+  color: #f1dde0;
+  font: 800 clamp(3.4rem, 7vw, 6.5rem)/.84 'Barlow Condensed';
+  text-transform: uppercase;
+}
+
+body[data-character='britney'] .britney-couple-memories__heading h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #df5870;
+}
+
+body[data-character='britney'] .britney-couple-memories__heading p {
+  max-width: 650px;
+  color: #d3c3c4;
+  line-height: 1.75;
+}
+
+body[data-character='britney'] .britney-couple-memories__grid {
+  display: grid;
+  max-width: 1240px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+body[data-character='britney'] .britney-couple-memories figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #df587055;
+  background: #11090d;
+  box-shadow: 0 24px 60px #0007;
+}
+
+body[data-character='britney'] .britney-couple-memories figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.76) contrast(1.04);
+  transition: filter .6s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+}
+
+body[data-character='britney'] .britney-couple-memories figure:hover img {
+  filter: saturate(1) contrast(1.04);
+  transform: scale(1.025);
+}
+
+body[data-character='britney'] .britney-couple-memories figcaption {
+  padding: 1.2rem clamp(1rem, 2vw, 1.6rem) 1.5rem;
+  border-top: 1px solid #df587033;
+}
+
+body[data-character='britney'] .britney-couple-memories figcaption span,
+.diary-entries article > span {
+  color: #df7990;
+  font: 700 .5rem/1.6 Cinzel, Georgia, serif;
+  letter-spacing: .14em;
+}
+
+body[data-character='britney'] .britney-couple-memories figcaption p {
+  max-width: 620px;
+  margin: .65rem 0 0;
+  color: #d5c4ca;
+  font: 500 1rem/1.65 'Playfair Display', Georgia, serif;
+}
+
+.britney-record {
+  box-sizing: border-box;
+  max-height: min(86svh, 960px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.britney-letter-copy p {
+  font: 500 clamp(1rem, 1.5vw, 1.12rem)/1.9 'Playfair Display', Georgia, serif;
+}
+
+.diary-reading-note {
+  padding: .9rem 1rem;
+  border-left: 2px solid #df5870;
+  background: #df58700c;
+  font-size: .9rem;
+}
+
+.diary-entries article {
+  margin: 1.5rem 0 1.8rem;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid #df587033;
+}
+
+.diary-entries article h3 {
+  margin: .5rem 0 .6rem;
+  color: #f0dfe1;
+  font: 700 clamp(1.5rem, 3vw, 2.2rem)/1 'Playfair Display', Georgia, serif;
+}
+
+.diary-entries article p { margin: 0; }
+
+.diary-open-enigmas {
+  display: flex;
+  width: 100%;
+  min-height: 3.6rem;
+  padding: .8rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #df587088;
+  background: linear-gradient(100deg, #df587019, #120a0e);
+  color: #f0dfe1;
+  font: 700 .56rem/1.5 Cinzel, Georgia, serif;
+  letter-spacing: .13em;
+  cursor: pointer;
+  transition: border-color .3s ease, background .3s ease, transform .3s ease;
+}
+
+.diary-open-enigmas:hover {
+  transform: translateY(-2px);
+  border-color: #ef9baa;
+  background: linear-gradient(100deg, #df587033, #170b11);
+}
+
+.diary-open-enigmas span { color: #df7990; font-size: 1.2rem; }
+
+.britney-enigma-board {
+  margin: 2rem 0 1.5rem;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid #df587055;
+  background: linear-gradient(145deg, #160a10, #0c080a);
+}
+
+.britney-enigma-board > h3 {
+  margin: .75rem 0 .5rem;
+  color: #f0dfe1;
+  font: 800 clamp(2rem, 5vw, 3.2rem)/.9 'Barlow Condensed';
+  text-transform: uppercase;
+}
+
+.britney-enigma-board > p {
+  max-width: 650px;
+  color: #c7b8bb;
+  font-size: .95rem;
+  line-height: 1.7;
+}
+
+.britney-enigma-list { display: grid; gap: .8rem; }
+
+.britney-enigma {
+  padding: 1rem;
+  border: 1px solid #df587033;
+  background: #0b080a;
+}
+
+.britney-enigma.is-solved { border-color: #df587077; background: #df58700c; }
+
+.britney-enigma > span {
+  color: #df7990;
+  font: 700 .47rem/1.5 Cinzel, Georgia, serif;
+  letter-spacing: .13em;
+}
+
+.britney-enigma h4 {
+  margin: .55rem 0;
+  color: #f0dfe1;
+  font: 700 1.25rem/1.2 'Playfair Display', Georgia, serif;
+}
+
+.britney-enigma p {
+  margin: .25rem 0 .8rem;
+  color: #d5c4ca;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.britney-enigma form label,
+.britney-enigma form small,
+.britney-enigma form output { display: block; }
+
+.britney-enigma form label {
+  margin-bottom: .35rem;
+  color: #df9aa8;
+  font: 700 .48rem Cinzel, Georgia, serif;
+  letter-spacing: .1em;
+}
+
+.britney-enigma form > div { display: flex; gap: .5rem; }
+
+.britney-enigma input {
+  min-width: 0;
+  flex: 1;
+  padding: .75rem .8rem;
+  border: 1px solid #df587055;
+  border-radius: 0;
+  outline: none;
+  background: #130b0f;
+  color: #f0dfe1;
+  font: 500 1rem 'DM Mono', monospace;
+}
+
+.britney-enigma input:focus-visible { border-color: #ef9baa; box-shadow: 0 0 0 2px #df587033; }
+
+.britney-enigma form button {
+  padding: .7rem .85rem;
+  border: 1px solid #df587088;
+  background: #df587014;
+  color: #f0dfe1;
+  font: 700 .47rem Cinzel, Georgia, serif;
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+
+.britney-enigma form button:hover { background: #df587033; border-color: #ef9baa; }
+.britney-enigma form small { margin-top: .45rem; color: #a99299; font-size: .75rem; line-height: 1.5; }
+.britney-enigma form output { min-height: 1.2rem; margin-top: .5rem; color: #df9aa8; font-size: .82rem; }
+.britney-enigma form.has-error input { border-color: #ee667e; }
+
+@media (max-width: 760px) {
+  body[data-character='britney'] .britney-couple-memories { padding: 5rem 1.2rem; }
+  body[data-character='britney'] .britney-couple-memories__heading h2 { font-size: 16vw; }
+  body[data-character='britney'] .britney-couple-memories__grid { grid-template-columns: 1fr; }
+  body[data-character='britney'] .britney-couple-memories figure img { aspect-ratio: 4 / 3; }
+  .britney-record { max-height: 88svh; }
+  .britney-enigma form > div { align-items: stretch; }
+  .britney-enigma form button { padding-inline: .6rem; }
+}
+
 body[data-character='britney'] .britney-memories-entry__link {
   display: inline-flex;
   align-items: center;

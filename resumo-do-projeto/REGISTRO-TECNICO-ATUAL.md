@@ -685,3 +685,11 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `ariani-presente.html` usa `video/abertura-ariani-presente-v2.mp4` na abertura do perfil. A versão anterior permanece preservada no repositório, sem ser chamada pela página.
 - O vídeo usa `object-fit: contain` em desktop e celular para não cortar a cena; as faixas laterais recebem o fundo escuro da identidade visual.
 - A sequência mantém nome e frase marcante ocultos enquanto o vídeo toca. Ao final, revela o nome de Ariani e depois a frase; só então a página principal aparece. O fluxo também trata erro de mídia, bloqueio de autoplay e tempo limite.
+
+## Arquivo íntimo de Britney — 10 de novembro de 2026
+
+- `britney-presente.html` exibe duas imagens já preservadas de Britney com Bobby Lee, com legendas de rota compartilhada e descanso no acampamento. A galeria pessoal continua separada.
+- A carta para Mark foi ampliada em torno da gravidez, da saída da casa dele e da mudança de Britney para junto de Jully; evita tratar a distância como rompimento definitivo entre irmãos.
+- O botão **Diário de campo** abre páginas completas para leitura sem interação, cobrindo o churrasco na mansão de Jack, o acolhimento de Jully, o casamento com Bobby, o nascimento do filho depois do Dia D e a mudança da câmera para ferramenta de memória.
+- O diário lacrado é uma experiência separada. Três enigmas de resposta curta abrem fragmentos sobre Bobby, Jully e a câmera; as respostas ficam salvas em `localStorage` junto dos fragmentos BC-05 já existentes. Se o armazenamento estiver indisponível, os fragmentos resolvidos continuam abertos durante a visita atual.
+- `era-extincao-presente/britney-presente.js` renderiza as páginas e enigmas, aceita variações de acentuação nas respostas e mantém os fragmentos compartilhados com os demais pontos de descoberta do projeto.
