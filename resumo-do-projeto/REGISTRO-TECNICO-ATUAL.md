@@ -683,3 +683,5 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 ## Nova abertura de Ariani — 10 de novembro de 2026
 
 - `ariani-presente.html` usa `video/abertura-ariani-presente-v2.mp4` na abertura do perfil. A versão anterior permanece preservada no repositório, sem ser chamada pela página.
+- O vídeo usa `object-fit: contain` em desktop e celular para não cortar a cena; as faixas laterais recebem o fundo escuro da identidade visual.
+- A sequência mantém nome e frase marcante ocultos enquanto o vídeo toca. Ao final, revela o nome de Ariani e depois a frase; só então a página principal aparece. O fluxo também trata erro de mídia, bloqueio de autoplay e tempo limite.

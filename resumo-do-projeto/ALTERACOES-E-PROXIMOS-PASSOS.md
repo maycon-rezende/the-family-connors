@@ -2,6 +2,7 @@
 
 ## Concluído
 
+- A abertura de Ariani agora exibe o vídeo inteiro em qualquer tela e revela o nome seguido da frase marcante somente depois do clipe.
 - Tela inicial reconstruída com narrativa cinematográfica e efeitos de extinção.
 - Páginas de Jack, Alice, Mark, Ariani, Britney e Jully reformuladas com identidades próprias.
 - Galerias individuais separadas e ampliação em tela cheia.

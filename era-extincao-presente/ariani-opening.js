@@ -11,11 +11,21 @@
 
   const pageRegions = [...document.querySelectorAll('.profile-nav, .profile-hero, main, .profile-footer')];
   let finished = false;
-  let closeTimer = window.setTimeout(closeOpening, 30000);
+  let revealTimer = window.setTimeout(revealCopy, 30000);
+  let closeTimer;
+
+  function revealCopy() {
+    if (finished || opening.classList.contains('is-revealing')) return;
+    window.clearTimeout(revealTimer);
+    video.pause();
+    opening.classList.add('is-revealing');
+    closeTimer = window.setTimeout(closeOpening, 5600);
+  }
 
   function closeOpening() {
     if (finished) return;
     finished = true;
+    window.clearTimeout(revealTimer);
     window.clearTimeout(closeTimer);
     video.pause();
     opening.classList.add('is-leaving');
@@ -30,7 +40,7 @@
   }
 
   function closeOnVideoError() {
-    closeOpening();
+    revealCopy();
   }
 
   opening.hidden = false;
@@ -39,13 +49,13 @@
   opening.focus({ preventScroll: true });
 
   video.muted = true;
-  video.addEventListener('ended', closeOpening, { once: true });
+  video.addEventListener('ended', revealCopy, { once: true });
   video.addEventListener('error', closeOnVideoError, { once: true });
   video.addEventListener('loadedmetadata', () => {
     if (!Number.isFinite(video.duration) || video.duration <= 0) return;
-    window.clearTimeout(closeTimer);
-    closeTimer = window.setTimeout(closeOpening, Math.min(video.duration * 1000 + 2200, 60000));
+    window.clearTimeout(revealTimer);
+    revealTimer = window.setTimeout(revealCopy, Math.min(video.duration * 1000 + 1500, 60000));
   }, { once: true });
 
-  video.play().catch(closeOpening);
+  video.play().catch(revealCopy);
 })();
