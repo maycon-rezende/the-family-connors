@@ -5,7 +5,7 @@ const profiles = {
     surname: 'Connor',
     age: '55 ANOS',
     role: 'LÍDER DO COMBOIO // FUNDADOR HELLSINGS',
-    hero: 'img-presente/personagens/jack-presente1.png',
+    hero: 'img-jack/jack-presente-5.png',
     focus: '50% 22%',
     intro:
       'Quando anunciaram os bombardeios, Jack ouviu no rádio os nomes de quem não chegaria ao bunker sem ajuda.',
