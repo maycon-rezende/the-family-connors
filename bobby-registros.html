@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#11140f" />
     <meta
       name="description"
-      content="Três registros visuais de Bobby Lee, sino-americano e integrante dos Hellsings antes do Dia D, preservados sem datas identificadas."
+          content="Seis registros visuais de Bobby Lee, sino-americano e integrante dos Hellsings, preservados sem datas identificadas."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="css/bobby-registros.css" />
@@ -22,10 +22,10 @@
     <main>
       <header class="archive-hero">
         <span class="archive-kicker">B-11 // ACERVO DE BOBBY LEE</span>
-        <h1>UM ROSTO.<br /><em>TRÊS REGISTROS.</em></h1>
+        <h1>UM ROSTO.<br /><em>SEIS REGISTROS.</em></h1>
         <p>
-          Este arquivo reúne três imagens de Bobby Lee. Elas mostram cenas externas e do
-          bunker, mas não trazem datas ou missões identificadas.
+          Este arquivo reúne seis imagens de Bobby Lee em retratos de campo, reconhecimento e
+          momentos no bunker. As datas e missões específicas não foram identificadas.
         </p>
         <span class="archive-status"><i></i> SEQUÊNCIA DE REGISTROS</span>
       </header>
@@ -46,14 +46,14 @@
           <img
             class="is-visible"
             data-bobby-image
-            src="img-presente/personagens/bobby-presente.png"
-            alt="Bobby Lee com equipamento de campo entre ruínas"
+            src="img-presente/personagens/bobby-lee-perfil.png"
+            alt="Retrato de campo de Bobby Lee no acampamento dos Hellsings"
           />
           <div class="bobby-stage__shade" aria-hidden="true"></div>
           <div class="bobby-stage__copy">
             <span data-bobby-record-code>B-11.1</span>
-            <strong data-bobby-record-title>Área externa</strong>
-            <p data-bobby-record-caption>Bobby Lee aparece com equipamento de campo entre ruínas; data não identificada.</p>
+            <strong data-bobby-record-title>Retrato de campo</strong>
+            <p data-bobby-record-caption>Bobby Lee no acampamento dos Hellsings; data não identificada.</p>
           </div>
           <button class="bobby-stage__button bobby-stage__button--previous" type="button" aria-label="Registro anterior" data-bobby-previous>←</button>
           <button class="bobby-stage__button bobby-stage__button--next" type="button" aria-label="Próximo registro" data-bobby-next>→</button>
@@ -63,21 +63,33 @@
 
         <div class="bobby-selector" role="group" aria-label="Selecionar registro de Bobby Lee">
           <button class="is-active" type="button" data-bobby-select aria-pressed="true">
+            <img src="img-presente/personagens/bobby-lee-perfil.png" alt="Prévia do retrato de campo de Bobby Lee" />
+            <span>RETRATO</span>
+          </button>
+          <button type="button" data-bobby-select aria-pressed="false">
+            <img src="img-presente/personagens/bobby-lee-reconhecimento.png" alt="Prévia de Bobby Lee em reconhecimento" />
+            <span>RECONHECIMENTO</span>
+          </button>
+          <button type="button" data-bobby-select aria-pressed="false">
+            <img src="img-presente/personagens/bobby-lee-inteligencia-bunker.png" alt="Prévia de Bobby Lee na sala de operações do bunker" />
+            <span>INTELIGÊNCIA</span>
+          </button>
+          <button type="button" data-bobby-select aria-pressed="false">
             <img src="img-presente/personagens/bobby-presente.png" alt="Prévia de Bobby Lee entre ruínas" />
-            <span>EXTERIOR</span>
+            <span>RUÍNAS</span>
           </button>
           <button type="button" data-bobby-select aria-pressed="false">
             <img src="img-presente/personagens/bobby-lee-presente.png" alt="Prévia de Bobby Lee no bunker" />
-            <span>BUNKER</span>
+            <span>BUNKER // ARQUIVO</span>
           </button>
           <button type="button" data-bobby-select aria-pressed="false">
             <img src="img-presente/personagens/quadro-bobby.png" alt="Prévia de seis registros reunidos de Bobby Lee" />
-            <span>QUADRO</span>
+            <span>COLAGEM</span>
           </button>
         </div>
 
         <footer class="bobby-carousel__footer">
-          <span data-bobby-count>01 / 03</span>
+          <span data-bobby-count>01 / 06</span>
           <span>B-11 // ARQUIVO PRESERVADO</span>
         </footer>
       </section>

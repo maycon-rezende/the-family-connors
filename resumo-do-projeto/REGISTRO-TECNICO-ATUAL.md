@@ -215,9 +215,10 @@ Brian aparece como `HLS-09` no arquivo de comando (`js/hellsings-command.js`) e 
 | --- | --- |
 | `bobby-presente.html` | Dossiê de Bobby Lee com a Unidade Jingwei, Rota das Lanternas, Janela de Cinzas e Linha Vermelha; inclui função de inteligência de campo e cronologia do encontro com Britney, gravidez, casa com Jully e casamento. O filho é dos dois. O destino de Lee após a queda segue sem confirmação. |
 | `era-extincao-presente/bobby-presente.css` | Identidade ferrugem/oliva/âmbar, retrato de capa sem recorte, cartões de operação e linha do tempo responsivos, com foco de teclado. |
-| `bobby-registros.html` | Galeria independente com dois retratos de Bobby Lee e uma colagem de seis cenas, sem datas nem missões atribuídas. |
+| `bobby-registros.html` | Galeria independente com seis registros de Bobby Lee: retrato de campo, reconhecimento, sala de operações, imagens anteriores e colagem; sem datas nem missões atribuídas. |
 | `css/bobby-registros.css` e `js/bobby-registros.js` | Imagens inteiras, ciclo de 6,5 s, setas, miniaturas, pausa por interação, foco e aba oculta, redução de movimento e ampliação em diálogo nativo com retorno de foco. |
-| `img-presente/personagens/bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png` | Dois retratos e uma colagem visualmente coerentes; as datas não estão identificadas. |
+| `img-presente/personagens/bobby-lee-perfil.png`, `bobby-lee-reconhecimento.png` e `bobby-lee-inteligencia-bunker.png` | Imagens novas de perfil, reconhecimento e trabalho de inteligência no bunker, geradas com a foto de referência de Bobby Lee. |
+| `img-presente/personagens/bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png` | Registros visuais anteriores e colagem de seis cenas; as datas não estão identificadas. |
 | `resumo-do-projeto/BOBBY-LEE-LORE.md` | Fonte narrativa detalhada; separa os fatos definidos pelo autor dos elementos criados nesta etapa a pedido dele. |
 
 A imagem `img-hellsing/britney-bobby.png` foi removida: o homem retratado com Britney é Joey, conforme confirmação do autor. As outras duas imagens semelhantes (`britney-marido.png` e `britney-boby-presente.png`) permanecem no acervo, mas foram retiradas dos dados da galeria para evitar atribuição incorreta a Bobby. Nenhuma delas deve ser usada como prova de relação romântica entre Joey e Britney.
