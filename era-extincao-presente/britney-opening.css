@@ -36,62 +36,14 @@ body.britney-opening-active {
   object-fit: contain;
   object-position: center;
   background: #0b080a;
-  filter: saturate(.78) brightness(.77) contrast(1.06);
+  filter: saturate(.9) brightness(.94) contrast(1.03);
 }
 
 .britney-opening__shade {
   z-index: 1;
   pointer-events: none;
-  background:
-    linear-gradient(0deg, rgba(11, 8, 10, .94), rgba(11, 8, 10, .16) 54%, rgba(11, 8, 10, .24)),
-    linear-gradient(90deg, rgba(11, 8, 10, .35), transparent 72%),
-    radial-gradient(ellipse at 76% 28%, rgba(223, 88, 112, .14), transparent 38%);
+  background: transparent;
   transition: background 900ms ease;
-}
-
-.britney-opening__shade::after {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(223, 88, 112, .22);
-  margin: clamp(.7rem, 2vw, 1.4rem);
-  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(238, 215, 221, .035) 5px);
-  content: '';
-}
-
-.britney-opening__signal {
-  position: absolute;
-  z-index: 2;
-  top: 40%;
-  left: 70%;
-  display: grid;
-  width: clamp(8rem, 20vw, 17rem);
-  aspect-ratio: 1;
-  place-items: center;
-  border: 1px solid rgba(223, 88, 112, .28);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.britney-opening__signal::before,
-.britney-opening__signal::after,
-.britney-opening__signal i {
-  position: absolute;
-  border: 1px solid rgba(223, 88, 112, .24);
-  border-radius: 50%;
-  content: '';
-}
-
-.britney-opening__signal::before { inset: 14%; }
-.britney-opening__signal::after { inset: 29%; }
-.britney-opening__signal i { inset: 44%; border-color: rgba(216, 160, 108, .62); }
-.britney-opening__signal b {
-  width: .4rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #df5870;
-  box-shadow: 0 0 1.3rem .35rem rgba(223, 88, 112, .58);
-  animation: britney-opening-pulse 2.8s ease-in-out infinite;
 }
 
 .britney-opening__copy {
@@ -141,16 +93,6 @@ body.britney-opening-active {
   transform: translateY(16px);
 }
 
-.britney-opening__coordinate {
-  position: absolute;
-  z-index: 3;
-  right: clamp(1.5rem, 3vw, 3rem);
-  bottom: clamp(1.5rem, 3vh, 2.5rem);
-  color: rgba(223, 121, 144, .78);
-  font: 600 .52rem/1.5 'DM Mono', monospace;
-  letter-spacing: .16em;
-}
-
 .britney-opening.is-revealing .britney-opening__copy { visibility: visible; }
 .britney-opening.is-revealing .britney-opening__eyebrow {
   opacity: 1;
@@ -169,35 +111,24 @@ body.britney-opening-active {
 }
 .britney-opening.is-revealing .britney-opening__shade {
   background:
-    linear-gradient(0deg, rgba(11, 8, 10, .88), rgba(11, 8, 10, .12) 54%, rgba(11, 8, 10, .2)),
-    linear-gradient(90deg, rgba(11, 8, 10, .34), transparent 72%),
-    radial-gradient(ellipse at 76% 28%, rgba(223, 88, 112, .12), transparent 38%);
+    linear-gradient(0deg, rgba(11, 8, 10, .76), transparent 72%),
+    linear-gradient(90deg, rgba(11, 8, 10, .28), transparent 72%);
 }
 .britney-opening.is-leaving { visibility: hidden; opacity: 0; }
-
-@keyframes britney-opening-pulse {
-  0%, 100% { opacity: .55; transform: scale(.75); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
 
 @media (max-width: 760px) {
   .britney-opening__video { object-fit: contain; object-position: center; }
   .britney-opening__shade {
-    background:
-      linear-gradient(0deg, rgba(11, 8, 10, .96), rgba(11, 8, 10, .28) 72%, rgba(11, 8, 10, .16)),
-      linear-gradient(90deg, rgba(11, 8, 10, .2), transparent 85%);
+    background: transparent;
   }
-  .britney-opening__signal { top: 35%; left: 50%; width: clamp(7rem, 38vw, 12rem); }
   .britney-opening__copy { right: 1.25rem; bottom: max(2.2rem, 8vh); left: 1.35rem; }
   .britney-opening__copy h2 { font-size: clamp(3.4rem, 15vw, 6rem); }
   .britney-opening__copy p { font-size: clamp(.95rem, 4vw, 1.2rem); }
-  .britney-opening__coordinate { right: 1.25rem; bottom: 1.1rem; font-size: .44rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .britney-opening,
   .britney-opening__shade,
-  .britney-opening__signal b,
   .britney-opening__copy h2,
   .britney-opening__copy p,
   .britney-opening__eyebrow { transition: none; animation: none; }
