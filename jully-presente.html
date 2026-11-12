@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="jully-opening-pending">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,9 +10,39 @@
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="era-extincao-presente/jully-presente.css?v=3" />
+    <link rel="stylesheet" href="era-extincao-presente/jully-opening.css?v=1" />
     <title>Jully Connor | Frequência Recuperada</title>
   </head>
   <body class="jully-present">
+    <section
+      class="jully-opening"
+      data-jully-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="jully-opening-title"
+      aria-describedby="jully-opening-quote"
+    >
+      <video
+        class="jully-opening__video"
+        data-jully-opening-video
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <source src="video/abertura-jully-presrnte.mp4" type="video/mp4" />
+      </video>
+      <div class="jully-opening__shade" aria-hidden="true"></div>
+      <div class="jully-opening__copy">
+        <span class="jully-opening__eyebrow">JC-06 // FREQUÊNCIA RECUPERADA</span>
+        <h2 id="jully-opening-title">JULLY <em>CONNOR.</em></h2>
+        <p id="jully-opening-quote">“Se essa frequência ainda existe, alguém ainda está tentando voltar para casa.”</p>
+        <span class="jully-opening__role">TECNOLOGIA DE CAMPO // COMUNICAÇÕES</span>
+      </div>
+    </section>
+
     <div class="jully-grid" aria-hidden="true"></div>
 
     <nav class="jully-nav" aria-label="Navegação do dossiê de Jully Connor">
@@ -174,6 +204,7 @@
       <source src="audio/theme-jully-presente.mp3" type="audio/mpeg" />
     </audio>
     <script src="js/personagem-theme.js" defer></script>
+    <script src="era-extincao-presente/jully-opening.js?v=1" defer></script>
     <script src="era-extincao-presente/jully-presente.js"></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
