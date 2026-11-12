@@ -34,6 +34,23 @@
     });
   });
 
+  const motionVideos = [...document.querySelectorAll('[data-jully-motion-video]')];
+  motionVideos.forEach((video) => {
+    const fitVideoFrame = () => {
+      const card = video.closest('.jully-motion__card');
+      card?.classList.toggle('jully-motion__card--portrait', video.videoHeight > video.videoWidth);
+    };
+
+    if (video.readyState >= 1) fitVideoFrame();
+    else video.addEventListener('loadedmetadata', fitVideoFrame, { once: true });
+
+    video.addEventListener('play', () => {
+      motionVideos.forEach((otherVideo) => {
+        if (otherVideo !== video) otherVideo.pause();
+      });
+    });
+  });
+
   const reveals = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(

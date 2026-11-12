@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const records = [
+  const originalRecords = [
     {
       code: 'JC-PRE-01',
       title: 'Estação de escuta',
@@ -88,6 +88,86 @@
     },
   ];
 
+  const supplementalImages = [
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Anel de noivado à luz da lanterna.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Guerreira ruiva em armadura pós-apocalíptica.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Guerreira ruiva em armadura púrpura.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully com jeans azuis de cintura alta.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully como Nina no comboio pós-apocalíptico.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor com top amarelo no acampamento.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor como Frost no comboio.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor como Vanessa no comboio.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor em traje formal de combate.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor em traje tático preto.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor entre caminhões e tendas.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor junto à barraca.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor na tenda ao entardecer.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no acampamento ao amanhecer.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no acampamento de sobrevivência.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no comboio de sobreviventes.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no comboio dos sobreviventes.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no comboio pós-apocalíptico.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no comboio pós-apocalíptico(1).png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully Connor no traje de Sindel.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully em traje gótico vinho e preto.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully no comboio pós-apocalíptico.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Jully no crepúsculo com traje tático roxo.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Ninja magenta no acampamento Hellsing.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Ninja magenta no acampamento pós-apocalíptico.png',
+    'img-jully-presente/02_Imagens_individuais_e_trajes/Sobrevivente ruiva no acampamento pós-apocalíptico.png',
+    'img-jully-presente/03_Na_cachoeira/Irmãs à margem da cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Irmãs e borboleta junto à cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Irmãs nadam lado a lado na cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Irmãs relaxando na cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Irmãs rindo na cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Irmãs sorrindo à beira da cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Jully Connor na cachoeira da floresta.png',
+    'img-jully-presente/03_Na_cachoeira/Jully Connor na cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Jully descobre uma cachoeira pós-apocalíptica.png',
+    'img-jully-presente/03_Na_cachoeira/Jully escreve à beira da cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Jully no poço da cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Jully pisa na água da cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Jully se prepara para nadar.png',
+    'img-jully-presente/03_Na_cachoeira/Mergulho tranquilo na cachoeira da floresta.png',
+    'img-jully-presente/03_Na_cachoeira/Olhar sereno diante da cachoeira.png',
+    'img-jully-presente/03_Na_cachoeira/Passo cauteloso na piscina da cachoeira.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Cunhadas na clínica do acampamento.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Encontro familiar ao pôr do sol.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Irmãos abraçados ao pôr do sol.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Irmãos caminhando juntos no acampamento.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Irmãos unidos ao pôr do sol.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Jully ajuda Alice na clínica do acampamento.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Quatro irmãos à luz da fogueira.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Quatro irmãos diante do horizonte.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Quatro irmãos diante do pôr do sol.png',
+    'img-jully-presente/04_Com_familia_e_outras_pessoas/Quatro irmãos no acampamento Hellsing.png',
+  ];
+
+  const supplementalRecords = supplementalImages.map((src, index) => {
+    const title = src.slice(src.lastIndexOf('/') + 1).replace(/\.png$/i, '');
+    const category = src.includes('/03_')
+      ? 'cachoeira'
+      : src.includes('/04_')
+        ? 'família'
+        : 'acampamento';
+    const captions = {
+      acampamento: 'Um recorte do presente de Jully, entre a vigília da base e as rotas do comboio.',
+      cachoeira: 'Longe dos alarmes, Jully e as irmãs encontram um raro intervalo de paz.',
+      família: 'Entre os Hellsings, os laços que Jully protege também encontram lugar neste arquivo.',
+    };
+
+    return {
+      code: 'JC-PRE-' + String(index + 13).padStart(2, '0'),
+      title,
+      caption: captions[category],
+      src,
+      alt: 'Registro do presente de Jully Connor: ' + title + '.',
+      thumbnail: category.toLocaleUpperCase('pt-BR'),
+    };
+  });
+
+  const records = [...originalRecords, ...supplementalRecords];
+
   const stage = document.querySelector('[data-record-stage]');
   if (!stage) return;
 
@@ -100,7 +180,8 @@
   const previous = stage.querySelector('[data-record-previous]');
   const next = stage.querySelector('[data-record-next]');
   const open = stage.querySelector('[data-record-open]');
-  const selectors = [...document.querySelectorAll('[data-record-select]')];
+  const selectorRail = document.querySelector('[data-record-selectors]');
+  let selectors = [];
   const dialog = document.querySelector('[data-record-lightbox]');
   const dialogImage = document.querySelector('[data-record-lightbox-image]');
   const dialogCode = document.querySelector('[data-record-lightbox-code]');
@@ -113,6 +194,35 @@
   let transition = 0;
 
   const digits = (value) => String(value).padStart(2, '0');
+
+  function renderSelectors() {
+    const fragment = document.createDocumentFragment();
+
+    records.forEach((record, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.dataset.recordSelect = String(index);
+      button.setAttribute('aria-pressed', String(index === 0));
+      button.setAttribute('aria-label', `Ver registro ${digits(index + 1)}: ${record.title}`);
+
+      const thumbnail = document.createElement('img');
+      thumbnail.src = record.src;
+      thumbnail.alt = '';
+      thumbnail.setAttribute('aria-hidden', 'true');
+      thumbnail.loading = 'lazy';
+      thumbnail.decoding = 'async';
+
+      const label = document.createElement('span');
+      const shortTitle = record.title.split(/\s+/).slice(0, 2).join(' ').toLocaleUpperCase('pt-BR');
+      label.textContent = `${digits(index + 1)} // ${record.thumbnail || shortTitle}`;
+
+      button.append(thumbnail, label);
+      fragment.append(button);
+    });
+
+    selectorRail.replaceChildren(fragment);
+    selectors = [...selectorRail.querySelectorAll('[data-record-select]')];
+  }
 
   function preloadNextRecord(index) {
     const nextRecord = records[(index + 1) % records.length];
@@ -170,6 +280,8 @@
     setRecord(index);
     startCycle();
   }
+
+  renderSelectors();
 
   previous.addEventListener('click', () => go(current - 1));
   next.addEventListener('click', () => go(current + 1));

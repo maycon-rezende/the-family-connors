@@ -377,7 +377,7 @@ a {
 
 .record-selector {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
   gap: 0.65rem;
   margin-top: 0.75rem;
 }
@@ -653,8 +653,8 @@ a {
   }
 
   .record-selector {
-    grid-template-columns: repeat(5, minmax(92px, 1fr));
-    overflow-x: auto;
+    grid-template-columns: repeat(auto-fill, minmax(102px, 1fr));
+    overflow: visible;
     padding-bottom: 0.35rem;
   }
 
