@@ -1,0 +1,306 @@
+body[data-distortion-mode] {
+  --hd-primary: 230, 82, 50;
+  --hd-secondary: 235, 188, 112;
+}
+
+body[data-distortion-mode="jack"] {
+  --hd-primary: 231, 73, 43;
+  --hd-secondary: 233, 182, 98;
+}
+
+body[data-distortion-mode="mark"] {
+  --hd-primary: 115, 211, 219;
+  --hd-secondary: 225, 239, 232;
+}
+
+body[data-distortion-mode="alice"] {
+  --hd-primary: 112, 211, 211;
+  --hd-secondary: 227, 147, 178;
+}
+
+body[data-distortion-mode="ariani"] {
+  --hd-primary: 213, 91, 147;
+  --hd-secondary: 242, 201, 207;
+}
+
+body[data-distortion-mode="britney"] {
+  --hd-primary: 224, 68, 50;
+  --hd-secondary: 217, 155, 99;
+}
+
+body[data-distortion-mode="jully"] {
+  --hd-primary: 141, 228, 244;
+  --hd-secondary: 183, 160, 255;
+}
+
+.hellsings-distortion-screen {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.01);
+  transition: opacity 140ms linear;
+}
+
+body.hellsings-distortion-ready .hellsings-distortion-screen {
+  opacity: 0.12;
+}
+
+.hellsings-distortion-screen::before,
+.hellsings-distortion-screen::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.hellsings-distortion-screen::before {
+  inset: 0;
+  opacity: 0.55;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0 4px,
+    rgba(var(--hd-primary), 0.12) 4px 5px
+  );
+}
+
+.hellsings-distortion-screen::after {
+  top: var(--hd-y, 42%);
+  left: -8%;
+  width: 116%;
+  height: var(--hd-height, 13%);
+  opacity: 0;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(var(--hd-primary), 0.24) 40%,
+      rgba(var(--hd-secondary), 0.13) 62%,
+      transparent
+    );
+  transform: translateX(var(--hd-shift, 0));
+}
+
+body.hellsings-distortion-active .hellsings-distortion-screen {
+  opacity: 0.72;
+}
+
+body.hellsings-distortion-active .hellsings-distortion-screen::before {
+  animation: hd-screen-flicker 430ms steps(3, end) both;
+}
+
+body.hellsings-distortion-active .hellsings-distortion-screen::after {
+  opacity: 0.86;
+}
+
+.hellsings-distortion-title {
+  will-change: transform, filter, text-shadow, clip-path;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="jack"] .hellsings-distortion-screen::after {
+  animation: hd-jack-tear 430ms steps(4, end) both;
+  clip-path: polygon(0 14%, 100% 0, 100% 82%, 0 100%);
+}
+
+body.hellsings-distortion-active[data-distortion-mode="mark"] .hellsings-distortion-screen::before {
+  background:
+    linear-gradient(90deg, transparent 0 49.8%, rgba(var(--hd-secondary), 0.15) 50%, transparent 50.2%),
+    repeating-linear-gradient(0deg, transparent 0 22px, rgba(var(--hd-primary), 0.11) 23px 24px);
+  animation: hd-mark-sweep 720ms ease-out both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="mark"] .hellsings-distortion-screen::after {
+  animation: hd-mark-band 720ms ease-in-out both;
+  height: 8%;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="alice"] .hellsings-distortion-screen::after {
+  inset: -25%;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: repeating-radial-gradient(
+    ellipse at 50% 48%,
+    transparent 0 7%,
+    rgba(var(--hd-primary), 0.12) 7.2% 7.45%,
+    transparent 7.7% 15%,
+    rgba(var(--hd-secondary), 0.1) 15.2% 15.4%,
+    transparent 15.7% 23%
+  );
+  animation: hd-alice-ripple 880ms ease-out both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="ariani"] .hellsings-distortion-screen::after {
+  height: 4%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--hd-secondary), 0.08) 20%,
+    rgba(var(--hd-primary), 0.34) 50%,
+    rgba(var(--hd-secondary), 0.08) 80%,
+    transparent
+  );
+  animation: hd-ariani-scan 540ms cubic-bezier(0.2, 0.75, 0.3, 1) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="britney"] .hellsings-distortion-screen::after {
+  height: 21%;
+  background:
+    linear-gradient(180deg, transparent 0 16%, rgba(var(--hd-primary), 0.25) 17% 37%, transparent 38% 60%, rgba(var(--hd-secondary), 0.17) 61% 80%, transparent 81%),
+    repeating-linear-gradient(90deg, transparent 0 9vw, rgba(var(--hd-primary), 0.14) 9.1vw 9.3vw);
+  animation: hd-britney-slice 520ms steps(3, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distortion-screen::before {
+  background:
+    repeating-linear-gradient(180deg, transparent 0 3px, rgba(var(--hd-primary), 0.16) 3px 4px),
+    repeating-linear-gradient(90deg, transparent 0 17vw, rgba(var(--hd-secondary), 0.08) 17.1vw 17.2vw);
+  animation: hd-jully-dropout 650ms steps(5, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distortion-screen::after {
+  height: 6%;
+  background: linear-gradient(180deg, transparent, rgba(var(--hd-secondary), 0.22), rgba(var(--hd-primary), 0.18), transparent);
+  animation: hd-jully-carrier 650ms steps(4, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="jack"] .hellsings-distortion-title {
+  animation: hd-name-jack 430ms steps(3, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="mark"] .hellsings-distortion-title {
+  animation: hd-name-mark 720ms ease-in-out both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="alice"] .hellsings-distortion-title {
+  animation: hd-name-alice 880ms ease-in-out both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="ariani"] .hellsings-distortion-title {
+  animation: hd-name-ariani 540ms steps(2, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="britney"] .hellsings-distortion-title {
+  animation: hd-name-britney 520ms steps(3, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distortion-title {
+  animation: hd-name-jully 650ms steps(4, end) both;
+}
+
+@keyframes hd-screen-flicker {
+  0%, 100% { opacity: 0.55; }
+  18% { opacity: 0.95; }
+  33% { opacity: 0.25; }
+  57% { opacity: 0.78; }
+  72% { opacity: 0.38; }
+}
+
+@keyframes hd-jack-tear {
+  0%, 100% { transform: translateX(0) skewX(0); }
+  18% { transform: translateX(-2.6%) skewX(-5deg); }
+  39% { transform: translateX(1.4%) skewX(2deg); }
+  61% { transform: translateX(-0.8%) skewX(-1deg); }
+}
+
+@keyframes hd-mark-sweep {
+  0% { background-position: 0 -60vh, 0 0; }
+  100% { background-position: 0 60vh, 0 0; }
+}
+
+@keyframes hd-mark-band {
+  0% { transform: translateY(-65vh); opacity: 0; }
+  25%, 72% { opacity: 0.78; }
+  100% { transform: translateY(70vh); opacity: 0; }
+}
+
+@keyframes hd-alice-ripple {
+  0% { transform: scale(0.35) rotate(-5deg); opacity: 0; filter: blur(7px); }
+  32% { opacity: 0.8; }
+  100% { transform: scale(1.05) rotate(2deg); opacity: 0; filter: blur(0); }
+}
+
+@keyframes hd-ariani-scan {
+  0% { transform: translateY(-55vh) scaleX(0.72); opacity: 0; }
+  22%, 72% { opacity: 0.9; }
+  100% { transform: translateY(65vh) scaleX(1.06); opacity: 0; }
+}
+
+@keyframes hd-britney-slice {
+  0%, 100% { transform: translateX(0) skewX(0); }
+  20% { transform: translateX(3%) skewX(7deg); }
+  42% { transform: translateX(-2%) skewX(-4deg); }
+  69% { transform: translateX(1%) skewX(2deg); }
+}
+
+@keyframes hd-jully-dropout {
+  0%, 100% { opacity: 0.55; }
+  20% { opacity: 0.08; }
+  39% { opacity: 0.9; }
+  56% { opacity: 0.2; }
+  73% { opacity: 0.78; }
+}
+
+@keyframes hd-jully-carrier {
+  0%, 100% { transform: translateY(45vh); opacity: 0; }
+  20%, 75% { opacity: 0.8; }
+  50% { transform: translateY(-5vh); }
+}
+
+@keyframes hd-name-jack {
+  0%, 100% { transform: translateX(0); filter: none; text-shadow: none; clip-path: inset(0); }
+  20% { transform: translateX(-0.035em) skewX(-4deg); text-shadow: 0.06em 0 rgba(231, 73, 43, 0.72), -0.035em 0 rgba(233, 182, 98, 0.62); clip-path: inset(0 0 53% 0); }
+  42% { transform: translateX(0.025em) skewX(2deg); clip-path: inset(46% 0 0 0); }
+  64% { transform: translateX(-0.01em); filter: contrast(1.3); clip-path: inset(15% 0 35% 0); }
+}
+
+@keyframes hd-name-mark {
+  0%, 100% { transform: translateY(0); filter: none; text-shadow: none; }
+  25% { transform: translateY(0.025em); text-shadow: 0.04em 0 rgba(115, 211, 219, 0.72), -0.03em 0 rgba(225, 239, 232, 0.52); }
+  52% { transform: translateY(-0.015em); filter: blur(0.35px) contrast(1.18); }
+  76% { transform: translateY(0.01em); text-shadow: -0.04em 0 rgba(115, 211, 219, 0.52); }
+}
+
+@keyframes hd-name-alice {
+  0%, 100% { transform: scaleX(1); filter: none; text-shadow: none; }
+  32% { transform: scaleX(0.985); filter: hue-rotate(9deg); text-shadow: 0.035em 0 rgba(112, 211, 211, 0.68), -0.025em 0 rgba(227, 147, 178, 0.58); }
+  68% { transform: scaleX(1.012); filter: blur(0.25px); }
+}
+
+@keyframes hd-name-ariani {
+  0%, 100% { transform: translateX(0) skewY(0); text-shadow: none; }
+  24% { transform: translateX(0.025em) skewY(-1deg); text-shadow: 0.045em 0 rgba(213, 91, 147, 0.72); }
+  51% { transform: translateX(-0.02em) skewY(0.8deg); clip-path: inset(0 0 48% 0); }
+  76% { transform: translateX(0.008em); clip-path: inset(36% 0 0 0); }
+}
+
+@keyframes hd-name-britney {
+  0%, 100% { transform: translateX(0); filter: none; text-shadow: none; clip-path: inset(0); }
+  18% { transform: translateX(0.035em) skewX(4deg); text-shadow: 0.055em 0 rgba(224, 68, 50, 0.75), -0.035em 0 rgba(217, 155, 99, 0.58); clip-path: inset(0 0 42% 0); }
+  44% { transform: translateX(-0.025em) skewX(-3deg); clip-path: inset(52% 0 0 0); }
+  71% { transform: translateX(0.012em); filter: contrast(1.25); clip-path: inset(20% 0 28% 0); }
+}
+
+@keyframes hd-name-jully {
+  0%, 100% { transform: translateY(0); filter: none; text-shadow: none; }
+  19% { transform: translateY(-0.018em); text-shadow: 0.04em 0 rgba(141, 228, 244, 0.75), -0.04em 0 rgba(183, 160, 255, 0.7); }
+  38% { transform: translateY(0.012em); filter: blur(0.4px); }
+  58% { transform: translateY(-0.008em); clip-path: inset(0 0 56% 0); }
+  79% { transform: translateY(0); clip-path: inset(42% 0 0 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.hellsings-distortion-ready .hellsings-distortion-screen {
+    opacity: 0.04;
+  }
+
+  .hellsings-distortion-screen::after {
+    display: none;
+  }
+
+  .hellsings-distortion-title {
+    will-change: auto;
+  }
+}
