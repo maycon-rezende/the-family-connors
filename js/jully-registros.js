@@ -44,6 +44,48 @@
       src: 'img-jully/jully-presente.png',
       alt: 'Jully Connor caminhando pelo acampamento dos Hellsings no presente',
     },
+    {
+      code: 'JC-PRE-07',
+      title: 'Um lugar para respirar',
+      caption: 'Do alto do acampamento, Jully mede a distância entre o que foi perdido e o que ainda pode ser reconstruído.',
+      src: 'img-hellsing/jully-presente.png',
+      alt: 'Jully observa o acampamento e a cidade ao longe',
+    },
+    {
+      code: 'JC-PRE-08',
+      title: 'Suprimentos para todos',
+      caption: 'Ela confere cada pacote antes de entregá-lo: no acampamento, cuidado também é saber dividir.',
+      src: 'img-hellsing/jully-presente1.png',
+      alt: 'Jully organiza suprimentos para uma pessoa no acampamento',
+    },
+    {
+      code: 'JC-PRE-09',
+      title: 'A rota compartilhada',
+      caption: 'Jully ensina a equipe a ler o mapa para que cada pessoa saiba onde encontrar abrigo e como voltar.',
+      src: 'img-hellsing/jully-presente-ensinando.png',
+      alt: 'Jully orienta jovens Hellsings ao redor de um mapa',
+    },
+    {
+      code: 'JC-PRE-10',
+      title: 'Cuidado que se aprende',
+      caption: 'Ela mostra como fazer um curativo com calma; amanhã, quem aprende hoje poderá cuidar de outra pessoa.',
+      src: 'img-hellsing/jully-ensinando.png',
+      alt: 'Jully ensina primeiros socorros a uma jovem no acampamento',
+    },
+    {
+      code: 'JC-PRE-11',
+      title: 'Pronta para seguir',
+      caption: 'Antes da próxima tarefa, Jully verifica o equipamento e mantém as mãos livres para ajudar.',
+      src: 'img-hellsing/jully-connor-presente.png',
+      alt: 'Jully Connor em pé no acampamento, pronta para uma missão',
+    },
+    {
+      code: 'JC-PRE-12',
+      title: 'O abrigo ainda respira',
+      caption: 'Entre mapas, ferramentas e luz baixa, ela encontra alguns minutos para reorganizar o próximo passo.',
+      src: 'img-hellsing/jull.png',
+      alt: 'Jully dentro de um abrigo, junto a mapas e equipamentos',
+    },
   ];
 
   const stage = document.querySelector('[data-record-stage]');
@@ -72,6 +114,13 @@
 
   const digits = (value) => String(value).padStart(2, '0');
 
+  function preloadNextRecord(index) {
+    const nextRecord = records[(index + 1) % records.length];
+    const preload = new Image();
+    preload.decoding = 'async';
+    preload.src = nextRecord.src;
+  }
+
   function setRecord(index, immediate = false) {
     current = (index + records.length) % records.length;
     const record = records[current];
@@ -93,7 +142,9 @@
       image.src = record.src;
       image.alt = record.alt;
       const reveal = () => {
-        if (token === transition) image.classList.add('is-visible');
+        if (token !== transition) return;
+        image.classList.add('is-visible');
+        preloadNextRecord(current);
       };
       if (image.complete) reveal();
       else image.addEventListener('load', reveal, { once: true });
@@ -152,11 +203,4 @@
 
   setRecord(0, true);
   startCycle();
-
-  window.setTimeout(() => {
-    records.slice(1).forEach((record) => {
-      const preload = new Image();
-      preload.src = record.src;
-    });
-  }, 1500);
 })();
