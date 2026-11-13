@@ -213,12 +213,14 @@ Brian aparece como `HLS-09` no arquivo de comando (`js/hellsings-command.js`) e 
 
 | Arquivo | Implementação |
 | --- | --- |
-| `bobby-presente.html` | Dossiê de Bobby Lee com a Unidade Jingwei, Rota das Lanternas, Janela de Cinzas e Linha Vermelha; inclui função de inteligência de campo e cronologia do encontro com Britney, gravidez, casa com Jully e casamento. O filho é dos dois. O destino de Lee após a queda segue sem confirmação. |
-| `era-extincao-presente/bobby-presente.css` | Identidade ferrugem/oliva/âmbar, retrato de capa sem recorte, cartões de operação e linha do tempo responsivos, com foco de teclado. |
-| `bobby-registros.html` | Galeria independente com seis registros de Bobby Lee: retrato de campo, reconhecimento, sala de operações, imagens anteriores e colagem; sem datas nem missões atribuídas. |
+| `bobby-presente.html` | Dossiê de Bobby Lee Yagami com a Unidade Jingwei, Rota das Lanternas, Janela de Cinzas e Linha Vermelha; usa `img-bobby-lee/bobby-lee-ajoelhado-chuva.png` como capa sem recorte, inclui a parceria com Naomi Yagami e a cronologia familiar. O destino de Lee após a queda segue sem confirmação. |
+| `era-extincao-presente/bobby-presente.css` | Identidade ferrugem/oliva/âmbar, retrato de capa sem recorte, cartões de operação, linha do tempo e bloco responsivo dos irmãos, com foco de teclado. |
+| `naomi-presente.html` | A seção dos irmãos registra Naomi como irmã mais velha, sino-americana e agente especial especializada em infiltração, com Bobby em inteligência de campo e extração. A imagem compartilhada é `img-naomi-presente/naomi-bobby-lee.png`. |
+| `bobby-registros.html` | Galeria independente com doze registros de Bobby Lee: seis novas cenas de campo, retrato, reconhecimento, sala de operações, ruínas, bunker e colagem; sem datas ou missões atribuídas. |
 | `css/bobby-registros.css` e `js/bobby-registros.js` | Imagens inteiras, ciclo de 6,5 s, setas, miniaturas, pausa por interação, foco e aba oculta, redução de movimento e ampliação em diálogo nativo com retorno de foco. |
 | `img-presente/personagens/bobby-lee-perfil.png`, `bobby-lee-reconhecimento.png` e `bobby-lee-inteligencia-bunker.png` | Imagens novas de perfil, reconhecimento e trabalho de inteligência no bunker, geradas com a foto de referência de Bobby Lee. |
 | `img-presente/personagens/bobby-presente.png`, `bobby-lee-presente.png` e `quadro-bobby.png` | Registros visuais anteriores e colagem de seis cenas; as datas não estão identificadas. |
+| `img-bobby-lee/` | Pasta individual com seis imagens novas enviadas pelo autor. O registro em que Lee está ajoelhado sob a chuva é a capa e a primeira imagem da galeria; outra variação ajoelhado foi adicionada ao final da sequência. |
 | `resumo-do-projeto/BOBBY-LEE-LORE.md` | Fonte narrativa detalhada; separa os fatos definidos pelo autor dos elementos criados nesta etapa a pedido dele. |
 
 A imagem `img-hellsing/britney-bobby.png` foi removida: o homem retratado com Britney é Joey, conforme confirmação do autor. As outras duas imagens semelhantes (`britney-marido.png` e `britney-boby-presente.png`) permanecem no acervo, mas foram retiradas dos dados da galeria para evitar atribuição incorreta a Bobby. Nenhuma delas deve ser usada como prova de relação romântica entre Joey e Britney.
@@ -556,7 +558,7 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `brian-presente.html` e `john-presente.html` agora mostram a trajetória, os tipos de operação, o balanço coletivo e uma frase de cada personagem. O fragmento de Brian é uma reconstrução literária proposta; as últimas palavras de John para Olivia são uma fala confirmada pelo autor.
 - `memorial.html` apresenta um resumo desse balanço junto às entradas de Brian e John. Contagens individuais de fracassos, pessoas salvas e infectados neutralizados seguem sem consolidação; a página explicita que dado ausente não equivale a zero.
 - O cartão de John em `index.html` passa a exibir **John B. Winchester**; nome completo e metadados usam **John Bertolai Winchester**.
-- Direção de lore anunciada pelo autor, ainda aguardando as fichas completas antes de alterar as páginas: Naomi Yagami é a irmã mais velha de Bobby Lee Yagami.
+- Em 13 de novembro, o autor confirmou e as páginas foram atualizadas: Naomi Yagami é a irmã mais velha de Bobby Lee Yagami. Ambos são sino-americanos e agentes especiais; Naomi é especialista em infiltração, e Lee atua em inteligência de campo, contrainteligência, comunicações e extração.
 
 ## Abertura solene do Memorial dos Hellsings — 6 de novembro de 2026
 

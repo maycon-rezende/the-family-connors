@@ -118,9 +118,11 @@ O filho de Britney e Bobby Lee nasceu depois do Dia D.
 
 Ele não nasceu no mundo que seus pais conheceram. Nasceu quando o mundo já havia se transformado em inferno.
 
-## Bobby Lee
+## Bobby Lee Yagami
 
-Bobby Lee é sino-americano e mantém suas raízes chinesas como parte mais forte de sua identidade. Atuou na Unidade Jingwei, agência chinesa fictícia de inteligência transnacional. Na operação Rota das Lanternas, escolheu retirar testemunhas em vez de manter a vigilância de uma rede de tráfico e foi afastado. Depois colaborou com os Hellsings em Janela de Cinzas (HLS-126); Jack o convidou a integrar a equipe antes do Dia D. Sua especialidade passou a ser inteligência de campo e extração de testemunhas. Já como Hellsing, participou de Linha Vermelha (HLS-131).
+Bobby Lee Yagami é sino-americano e mantém suas raízes chinesas como parte central de sua identidade. Atuou na Unidade Jingwei, agência chinesa fictícia de inteligência transnacional. Na operação Rota das Lanternas, escolheu retirar testemunhas em vez de manter a vigilância de uma rede de tráfico e foi afastado. Depois colaborou com os Hellsings em Janela de Cinzas (HLS-126); Jack o convidou a integrar a equipe antes do Dia D. Sua especialidade passou a ser inteligência de campo, contrainteligência, comunicações e extração de testemunhas. Já como Hellsing, participou de Linha Vermelha (HLS-131).
+
+Naomi Yagami é sua irmã mais velha. Os dois eram agentes especiais: ela se especializou em infiltração, enquanto Lee lia comunicações, antecipava mudanças no campo e mantinha uma saída aberta para a equipe. Em Janela de Cinzas, trabalharam juntos no resgate de testemunhas; a confiança entre eles ajudou Jack a reconhecer que as especialidades dos irmãos se completavam.
 
 Lee conheceu Britney em um churrasco da equipe na Mansão Connor. O relacionamento amadureceu aos poucos. Após a descoberta da gravidez, Britney saiu da casa de Mark e foi morar só com Jully; o casamento com Lee veio depois. Os dois já eram casados quando o Dia D chegou. Britney estava grávida na queda, e o filho deles nasceu depois. O caminho de Bobby após o colapso ainda não foi detalhado.
 

@@ -35,8 +35,8 @@
 2. **Mark Connor** — comando tático e agente de campo.
 3. **Alice Myers** — administração e contratos; não atua mais em campo.
 4. **John Bertolai Winchester** — agente especial do FBI na equipe de Jack; entre os Hellsings, tecnologia, armamentos e suporte tático.
-5. **Bobby Lee** — sino-americano, com forte vínculo com suas raízes chinesas; ex-agente da Unidade Jingwei. Entrou nos Hellsings antes do Dia D, após colaborar em Janela de Cinzas, e atua em inteligência de campo e extração de testemunhas.
-6. **Naomi Yagami** — agente japonesa; inteligência e análise como função provisória.
+5. **Bobby Lee Yagami** — sino-americano, com forte vínculo com suas raízes chinesas; ex-agente da Unidade Jingwei. Irmão mais novo de Naomi; ambos eram agentes especiais. Nos Hellsings, atua em inteligência de campo, contrainteligência, comunicações e extração de testemunhas.
+6. **Naomi Yagami** — irmã mais velha de Bobby e sino-americana, com fortes raízes chinesas. Agente especial e especialista em infiltração; sua atuação se completa com a inteligência de campo e a extração conduzidas por Lee.
 7. **Chloe** — reconhecimento e vigilância como função provisória; pele em tom marrom; sobrenome Bennett proposto para o núcleo familiar.
 8. **Luke Carver** — mapas, rotas e estratégia; pele em tom marrom; o autor passou a usar Carver para seu núcleo familiar, que tem raízes africanas.
 9. **Dimitri** — russo; intervenção e extração como função provisória.

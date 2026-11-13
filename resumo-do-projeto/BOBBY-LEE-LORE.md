@@ -2,7 +2,7 @@
 
 ## Origem desta versão
 
-O autor confirmou: Bobby Lee é sino-americano, preserva com especial força suas raízes chinesas, foi agente chinês e entrou nos Hellsings antes do Dia D. Ele conheceu Britney num dos churrascos que Jack oferecia à equipe na Mansão Connor. Os dois demoraram a ficar juntos. Ao descobrir que esperava um filho de Lee, Britney saiu da casa de Mark e foi morar apenas com Jully. Bobby e Britney se casaram depois disso, ainda antes do Dia D. O filho dos dois nasceu após a queda.
+O autor confirmou: Bobby Lee Yagami é sino-americano, preserva com especial força suas raízes chinesas, foi agente chinês e entrou nos Hellsings antes do Dia D. Naomi Yagami é sua irmã mais velha; ambos eram agentes especiais. Naomi se especializou em infiltração, enquanto Lee atuava em inteligência de campo, contrainteligência, comunicações e extração. Lee conheceu Britney num dos churrascos que Jack oferecia à equipe na Mansão Connor. Os dois demoraram a ficar juntos. Ao descobrir que esperava um filho de Lee, Britney saiu da casa de Mark e foi morar apenas com Jully. Bobby e Britney se casaram depois disso, ainda antes do Dia D. O filho dos dois nasceu após a queda.
 
 A **Unidade Jingwei**, as operações abaixo, a especialidade de Lee e os pequenos gestos do encontro foram criados nesta etapa a pedido do autor. A Jingwei é uma agência **fictícia deste universo**, não uma instituição real. Nomes, códigos e detalhes de missão podem ser refinados pelo autor sem alterar a sequência familiar confirmada.
 
@@ -22,9 +22,11 @@ Os civis saíram vivos, mas a agência perdeu o disfarce e a chance de acompanha
 
 ### Janela de Cinzas — HLS-126
 
-Fora da Jingwei, Lee soube que testemunhas ligadas à rota estavam sob ameaça. Os Hellsings, liderados por Jack Connor, tinham uma operação de resgate na Ásia. Lee conhecia os caminhos usados pela rede e ofereceu as informações necessárias para alcançar as pessoas antes de seus perseguidores. A equipe concluiu a retirada.
+Fora da Jingwei, Lee soube que testemunhas ligadas à rota estavam sob ameaça. Os Hellsings, liderados por Jack Connor, tinham uma operação de resgate na Ásia. Lee conhecia os caminhos usados pela rede e ofereceu as informações necessárias para alcançar as pessoas antes de seus perseguidores.
 
-Jack não o convidou por causa de um histórico impecável; convidou-o porque, sob pressão, Lee havia escolhido proteger testemunhas mesmo quando isso lhe custou a carreira. Lee entrou nos Hellsings **antes do Dia D**. Sua função passou a ser inteligência de campo e extração de testemunhas: localizar pessoas escondidas por redes clandestinas e preparar uma saída segura para elas. Isso complementava, sem substituir, o comando de Jack, a tática de Mark e as demais especialidades da equipe.
+Na operação, Naomi entrou no entreposto para localizar os civis. Lee ficou do lado de fora acompanhando as comunicações da guarda e planejando a extração. Quando a voz de Naomi desapareceu, ele percebeu que o silêncio veio no intervalo errado: ela havia mudado de frequência. Lee recalculou a passagem e manteve a saída aberta até a irmã voltar com as testemunhas. A equipe concluiu a retirada.
+
+Jack não o convidou por causa de um histórico impecável; convidou-o porque, sob pressão, Lee havia escolhido proteger testemunhas mesmo quando isso lhe custou a carreira. Ver os irmãos trabalhando juntos também mostrou a Jack que as especialidades deles se completavam: Naomi encontrava pessoas por dentro; Lee garantia uma rota para tirá-las de lá. Lee entrou nos Hellsings **antes do Dia D**. Sua função passou a ser inteligência de campo e extração de testemunhas: localizar pessoas escondidas por redes clandestinas e preparar uma saída segura para elas. Isso complementava, sem substituir, o comando de Jack, a tática de Mark e as demais especialidades da equipe.
 
 ### Linha Vermelha — HLS-131
 
@@ -53,3 +55,7 @@ O casamento já havia acontecido quando veio o Dia D. Britney estava grávida. O
 7. O Dia D começa com Britney grávida; o filho dos dois nasce depois.
 
 Não há datas exatas para as operações, o encontro ou o casamento. A ordem entre Linha Vermelha e o primeiro churrasco não é essencial ao cânone; ambos ocorreram depois do ingresso de Lee nos Hellsings e antes da gravidez.
+
+## Nota de representação cultural
+
+Bobby e Naomi são sino-americanos e mantêm fortes raízes chinesas. A região de origem da família, o dialeto e os costumes domésticos específicos ainda não foram definidos; as páginas não atribuem a eles tradições regionais sem essa decisão do autor.
