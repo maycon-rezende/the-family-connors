@@ -210,4 +210,12 @@ Os Hellsings enfrentarão e destruirão Dominus. Depois da batalha, encontrarão
 - A página pode apresentar essas competências como dados operacionais, mas missões, perdas e acontecimentos específicos continuam dependentes da lore oficial do autor.
 - Isolde Myers Connor possui novos registros visuais no presente, porém sua função definitiva ainda não foi estabelecida.
 
-Última atualização: 4 de novembro de 2026.
+## Hellen Wren — proposta narrativa do presente
+
+- Hellen foi agente de inteligência da CIA antes do Dia D. Sua experiência com observação, cobertura e leitura de comportamento tornou-se parte de sua função entre os Hellsings.
+- Depois do colapso das comunicações, passou a proteger rotas e identidades dos sobreviventes. Com Naomi, cruza sinais; com Joey, mantém uma saída de campo; como mãe, ensinou Leona a avaliar o ambiente e a não tratar combate como única resposta.
+- A **Operação Espelho**, mostrada como infiltração em um posto da Dominus, é uma proposta narrativa revisável: Hellen confirma que um chamado de evacuação aponta para uma rota comprometida e permite que um comboio mude de caminho.
+- Os registros não sustentam contagens confiáveis de missões, resgates ou abates. A página apresenta feitos qualitativos, sem inventar estatísticas.
+- `video/abertura-hellen-presente.mp4` abre o perfil. O título e a frase de Hellen surgem após o vídeo; a cena é exibida sem corte por `object-fit: contain`.
+
+Última atualização: 13 de novembro de 2026.

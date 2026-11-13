@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="hellen-opening-pending">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,10 +9,51 @@
       content="Dossiê de Hellen Wren: infiltração, disfarce e identidades apagadas no presente dos Hellsings."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="era-extincao-presente/hellen-opening.css?v=1" />
     <link rel="stylesheet" href="era-extincao-presente/hellen-presente.css" />
+    <script src="era-extincao-presente/hellen-opening.js?v=1" defer></script>
+    <noscript>
+      <style>
+        html.hellen-opening-pending body.hellen-wren > :not(.hellen-opening) { visibility: visible; }
+        html.hellen-opening-pending body.hellen-wren { overflow-x: hidden; overflow-y: auto; }
+        .hellen-opening { display: none !important; }
+      </style>
+    </noscript>
     <title>Hellen Wren | Identidades Perdidas</title>
   </head>
   <body class="hellen-wren">
+    <section
+      class="hellen-opening"
+      data-hellen-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="hellen-opening-title"
+      aria-describedby="hellen-opening-quote"
+      hidden
+    >
+      <div class="hellen-opening__backdrop" aria-hidden="true"></div>
+      <video
+        class="hellen-opening__video"
+        data-hellen-opening-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-hellsing/hellen-presente.png"
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <source src="video/abertura-hellen-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="hellen-opening__shade" aria-hidden="true"></div>
+      <div class="hellen-opening__copy">
+        <span class="hellen-opening__eyebrow">H-10 // OPERAÇÃO ESPELHO</span>
+        <p id="hellen-opening-quote">“Ninguém precisa saber que eu passei por aqui. Só precisam saber por onde sair.”</p>
+        <h2 id="hellen-opening-title">HELLEN <em>WREN.</em></h2>
+        <span class="hellen-opening__role">INTELIGÊNCIA DE CAMPO // HELLSINGS</span>
+      </div>
+    </section>
+
     <div class="hellen-grid" aria-hidden="true"></div>
 
     <nav class="hellen-nav" aria-label="Navegação do dossiê de Hellen Wren">
@@ -27,8 +68,8 @@
           <span class="hellen-kicker"><i></i> H-10 // INFILTRAÇÃO // ATIVA</span>
           <h1>HELLEN <em>WREN</em></h1>
           <p>
-            Algumas pessoas perderam suas casas. Hellen perdeu todos os nomes que já usou — e fez
-            de cada silêncio uma forma de proteger quem ficou.
+            Antes do Dia D, Hellen trabalhava na inteligência da CIA. Depois que as redes caíram,
+            transformou o que aprendera em coberturas, avisos e caminhos de volta para os Hellsings.
           </p>
           <div class="hellen-hero__metrics" aria-label="Resumo do arquivo">
             <span>STATUS // OPERACIONAL</span>
@@ -55,14 +96,23 @@
 
         <article class="hellen-identity__story" data-reveal>
           <p>
-            Quando governos, fronteiras e registros desapareceram, as antigas identidades de Hellen
-            tornaram-se armas contra quem ela ainda tentava proteger. Para impedir que fossem
-            rastreados, apagou os próprios arquivos e abandonou a última vida civil que possuía.
+            Antes do Dia D, Hellen servia na inteligência da CIA. Aprendeu a escutar o que uma
+            resposta escondia, perceber quando uma história não se sustentava e atravessar uma sala
+            sem transformar sua presença em notícia. Seus disfarces nunca foram personagens
+            perfeitos: eram ferramentas, usadas apenas pelo tempo necessário para abrir uma porta.
           </p>
           <p>
-            Hoje ela atravessa territórios inimigos usando vozes, roupas e histórias diferentes.
-            Cada missão exige que se torne outra pessoa — e torna mais difícil lembrar quem era antes
-            do mundo acabar.
+            O Dia D levou os canais de comando, os arquivos e a certeza de que alguém responderia do
+            outro lado do rádio. Hellen ficou com o que a formação não podia tirar dela: paciência,
+            leitura de ambiente e a capacidade de encontrar uma saída antes de entrar. Quando os
+            antigos registros começaram a expor os sobreviventes, apagou as identidades que poderiam
+            levar inimigos até sua família.
+          </p>
+          <p>
+            Entre os Hellsings, encontrou uma equipe que entendia o valor da informação — e o custo
+            de usá-la tarde demais. Com Naomi, passou a cruzar sinais e relatos; com Joey, aprendeu a
+            manter uma retirada aberta enquanto a missão ainda estava acontecendo. Em casa, ensinou
+            Leona a observar antes de avançar e a nunca confundir coragem com a obrigação de lutar.
           </p>
           <blockquote>“Se eles souberem meu nome, já chegaram perto demais.”</blockquote>
         </article>
@@ -71,12 +121,72 @@
           <span>FICHA TÉCNICA // H-10</span>
           <dl>
             <div><dt>NOME REGISTRADO</dt><dd>HELLEN WREN</dd></div>
+            <div><dt>ANTES DO DIA D</dt><dd>INTELIGÊNCIA // CIA</dd></div>
             <div><dt>ESPECIALIDADE</dt><dd>INFILTRAÇÃO / DISFARCE</dd></div>
             <div><dt>STATUS</dt><dd>OPERACIONAL</dd></div>
-            <div><dt>CÉLULA</dt><dd>OPERAÇÃO ESPELHO // N-05</dd></div>
+            <div><dt>PARCERIA DE CAMPO</dt><dd>NAOMI // N-05</dd></div>
+            <div><dt>VÍNCULO</dt><dd>JOEY MULLER // LEONA</dd></div>
           </dl>
-          <small>OS DEMAIS NOMES PERMANECEM CLASSIFICADOS.</small>
+          <small>REGISTROS DE MISSÃO INCOMPLETOS // SEM CONTAGEM CONFIÁVEL.</small>
         </aside>
+      </section>
+
+      <section class="hellen-chronicle" aria-labelledby="hellen-chronicle-title">
+        <header class="hellen-chronicle__head" data-reveal>
+          <div>
+            <span class="hellen-kicker">ARQUIVO NARRATIVO // ANTES DO DIA D ATÉ O PRESENTE</span>
+            <h2 id="hellen-chronicle-title">A MULHER<br /><em>POR TRÁS DOS NOMES.</em></h2>
+          </div>
+          <p>
+            O dossiê não guarda todas as operações. Guarda os momentos em que Hellen precisou
+            decidir o que uma informação podia salvar — e o que jamais deveria revelar.
+          </p>
+        </header>
+
+        <div class="hellen-chronicle__grid">
+          <article data-reveal>
+            <span>ANTES DO DIA D // CIA</span>
+            <h3>Aprender a desaparecer</h3>
+            <p>
+              Hellen não tratava uma cobertura como fantasia. Estudava hábitos, ritmos e as pequenas
+              contradições que denunciavam uma história mal contada. O melhor disfarce, dizia a
+              prática, era aquele que não pedia para ser admirado: apenas permitia que o trabalho
+              continuasse.
+            </p>
+          </article>
+          <article data-reveal>
+            <span>DEPOIS DO DIA D // SEM REDE</span>
+            <h3>Quando ninguém respondeu</h3>
+            <p>
+              As frequências oficiais morreram uma a uma. Hellen ainda tentou chamar seus contatos,
+              até entender que cada transmissão também podia apontar para quem a escutava. Ela
+              abandonou os códigos antigos e começou a proteger pessoas com mensagens curtas,
+              verificadas e difíceis de seguir até sua origem.
+            </p>
+          </article>
+          <article class="hellen-chronicle__feature" data-reveal>
+            <span>OPERAÇÃO ESPELHO // DOMINUS</span>
+            <h3>O sinal que parecia perfeito</h3>
+            <p>
+              Um chamado de evacuação repetia uma rota segura com precisão demais. Enquanto Naomi
+              comparava as frequências do lado de fora, Hellen entrou num posto da Dominus para
+              confirmar de onde vinha o sinal. Descobriu que a rota não levava para fora do alcance
+              da facção. Voltou com um aviso, não com troféus: o comboio mudou de caminho antes de
+              confiar na transmissão.
+            </p>
+            <small>RESULTADO PRESERVADO // ROTA ALTERADA A TEMPO</small>
+          </article>
+          <article data-reveal>
+            <span>LEONA // O QUE FICA EM CASA</span>
+            <h3>Ensinar também era proteger</h3>
+            <p>
+              Hellen ensinou a filha a ler um cômodo, reconhecer uma saída e perceber quando avançar
+              não era a escolha mais corajosa. Queria que Leona estivesse preparada para sobreviver,
+              mas que nunca acreditasse que precisava provar seu valor colocando a própria vida em
+              risco.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="hellen-skills" aria-labelledby="hellen-skills-title">
@@ -111,6 +221,39 @@
             <span>04</span>
             <h3>Operação Espelho</h3>
             <p>Ao lado de Naomi, transforma infiltração em inteligência para localizar o que tentaram esconder.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="hellen-feats" aria-labelledby="hellen-feats-title">
+        <header data-reveal>
+          <span class="hellen-kicker">FEITOS PRESERVADOS // REGISTROS PARCIAIS</span>
+          <h2 id="hellen-feats-title">O QUE ELA<br /><em>CONSEGUIU TRAZER DE VOLTA.</em></h2>
+          <p>
+            Não há planilha completa de missões nem total confiável de pessoas salvas. Os feitos
+            abaixo sobreviveram em relatos e rotas confirmadas pelos próprios Hellsings.
+          </p>
+        </header>
+        <div class="hellen-feats__grid">
+          <article data-reveal>
+            <span>01 // INTELIGÊNCIA</span>
+            <h3>Reconheceu a mentira no sinal</h3>
+            <p>Na Operação Espelho, confirmou que a mensagem de evacuação da Dominus conduzia o comboio a uma rota comprometida.</p>
+          </article>
+          <article data-reveal>
+            <span>02 // PROTEÇÃO</span>
+            <h3>Apagou o caminho até sua família</h3>
+            <p>Removeu dos arquivos os nomes e vínculos que poderiam transformar a história de Leona e Joey em uma pista para os inimigos.</p>
+          </article>
+          <article data-reveal>
+            <span>03 // CAMPO</span>
+            <h3>Nunca marcou só a entrada</h3>
+            <p>As anotações de Hellen começam pela volta. Uma equipe só recebe sua confirmação quando existe um caminho de retorno que ela própria verificou.</p>
+          </article>
+          <article data-reveal>
+            <span>04 // LEGADO</span>
+            <h3>Fez da atenção uma herança</h3>
+            <p>Com Naomi, ajudou a transformar sinais dispersos em informação útil. Com Leona, transformou experiência em preparo, sem ensinar que lutar é a única resposta.</p>
           </article>
         </div>
       </section>
@@ -164,7 +307,12 @@
       <a href="naomi-presente.html">Naomi →</a>
     </footer>
 
+    <audio data-character-theme autoplay loop preload="auto" hidden aria-hidden="true">
+      <source src="audio/theme-hellen-presente.mp3" type="audio/mpeg" />
+    </audio>
+
     <script src="era-extincao-presente/hellen-presente.js"></script>
+    <script src="js/personagem-theme.js" defer></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>

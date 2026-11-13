@@ -694,3 +694,11 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - O botão **Diário de campo** abre páginas completas para leitura sem interação, cobrindo o churrasco na mansão de Jack, o acolhimento de Jully, o casamento com Bobby, o nascimento do filho depois do Dia D e a mudança da câmera para ferramenta de memória.
 - O diário lacrado é uma experiência separada. Três enigmas de resposta curta abrem fragmentos sobre Bobby, Jully e a câmera; as respostas ficam salvas em `localStorage` junto dos fragmentos BC-05 já existentes. Se o armazenamento estiver indisponível, os fragmentos resolvidos continuam abertos durante a visita atual.
 - `era-extincao-presente/britney-presente.js` renderiza as páginas e enigmas, aceita variações de acentuação nas respostas e mantém os fragmentos compartilhados com os demais pontos de descoberta do projeto.
+
+## Dossiê presente de Hellen — 13 de novembro de 2026
+
+- `hellen-presente.html` agora abre com `video/abertura-hellen-presente.mp4`; o nome e a frase de Hellen aparecem no fim da cena antes da página principal.
+- `audio/theme-hellen-presente.mp3` toca em loop sem controles visíveis. `js/personagem-theme.js` tenta iniciar a faixa e retoma a tentativa após interação se o navegador bloquear o autoplay.
+- `era-extincao-presente/hellen-opening.css` mantém a cena inteira visível em tela larga e móvel, sem corte, com fundo ampliado desfocado. `hellen-opening.js` coordena reprodução, revelação, encerramento, falha de vídeo e preferência por movimento reduzido.
+- O dossiê ganhou a trajetória CIA → Dia D → Hellsings, uma cronologia, a Operação Espelho na Dominus e quatro feitos preservados. Estatísticas de missões e resgates ficam qualitativas porque não há contagem oficial.
+- A Operação Espelho é uma proposta narrativa revisável; não acrescenta contagens nem altera fatos previamente confirmados.

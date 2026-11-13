@@ -722,3 +722,11 @@
 - A **Travessia sem Faróis** ganhou relato completo: Mark volta com dois Hellsings para salvar um motorista ferido; a evacuação é concluída, com perda do veículo e da carga.
 - O painel registra estimativas revisáveis de 132 operações, 123 objetivos concluídos, nove redirecionamentos, zero fracassos oficiais, ~1.950 pessoas retiradas de risco, ~1.450 infectados neutralizados e 29 combatentes hostis mortos.
 - Os registros distinguem o contato de Mark com Hanson e Salazar por suas vidas militares, sem sugerir que Mark estivesse subordinado ao Major Hanson.
+
+# Dossiê presente de Hellen — 13 de novembro de 2026
+
+- A abertura do perfil usa `video/abertura-hellen-presente.mp4`. A cena fica centralizada e inteira; depois do vídeo aparecem uma frase, o nome Hellen Wren e sua função de inteligência de campo.
+- `audio/theme-hellen-presente.mp3` toca em loop na página, sem botão de áudio.
+- A página ganhou mais contexto sobre a experiência dela na CIA, a quebra das comunicações no Dia D, sua parceria de campo com Naomi e Joey e a formação de Leona.
+- A Operação Espelho apresenta Hellen infiltrando um posto da Dominus para identificar uma rota de evacuação comprometida e avisar Naomi. É uma proposta revisável criada nesta atualização.
+- O painel de feitos não inventa totais de operações, abates ou sobreviventes: os arquivos disponíveis não sustentam números para Hellen.

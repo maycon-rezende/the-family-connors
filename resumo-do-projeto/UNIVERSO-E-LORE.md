@@ -125,3 +125,9 @@ Os sobrenomes Bennett e os backgrounds pessoais foram criados para as páginas i
 - Brian morreu primeiro. Mais tarde, na fuga de um comboio, John foi mordido e Olivia foi arranhada. John havia preparado uma bomba como último recurso. Pai e filha ficaram na passagem, seguraram a horda e morreram juntos na explosão depois que todos os demais escaparam.
 - Amélia não ouviu a conversa final de John e Olivia. Após a perda, Naomi, Alice, Hellen e Ariani permaneceram ao lado dela; os demais Hellsings também lhe deram apoio.
 - As imagens de Amélia e John juntos são anteriores à morte dele. O retrato individual sem data não deve ser usado para afirmar uma fase específica. As reconstruções visuais em `img-amelia/` preservam a referência enviada pelo autor.
+
+## Hellen Wren — proposta narrativa do presente
+
+Hellen atuava na inteligência da CIA antes do Dia D. No presente dos Hellsings, sua experiência em observação, cobertura e leitura de comportamento serve para proteger pessoas, rotas e identidades. Trabalha em parceria com Naomi na leitura de sinais e com Joey na exploração de campo; como mãe de Leona, ensinou a filha a observar e procurar uma saída antes de avançar.
+
+A **Operação Espelho** é uma proposta revisável criada para ampliar o dossiê: durante a infiltração em um posto da Dominus, Hellen confirma que um chamado de evacuação aponta para uma rota comprometida e avisa Naomi a tempo de redirecionar o comboio. A história não fixa números de missões, vítimas ou resgates; esses dados continuam sem registro confiável.
