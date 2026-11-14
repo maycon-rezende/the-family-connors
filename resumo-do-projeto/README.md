@@ -48,6 +48,8 @@ Os Hellsings são uma unidade privada de operações especiais fundada por Jack 
 
 A organização possui retratos oficiais para toda a formação e uma base subterrânea apresentada em doze setores visuais. A tela principal contém um portal pela entrada secreta do bunker; a página dos Hellsings continua a transição pelo interior da instalação. O centro de comando também funciona como sistema narrativo, com indicadores operacionais, registros provisórios de missões, fórum interno e geração local de pré-contratos.
 
+- O dossiê de Dimitri agora registra o nome completo **Dimitri Volkov Belov**, o apelido **Dimmi**, sua passagem confirmada pela KGB e a relação com a filha Anya Belova (35). O texto explora o luto pela esposa e pela filha mais nova e a tensão entre protegê-la e respeitar sua autonomia, sem fixar nomes ou circunstâncias que ainda estão em aberto. A galeria independente reúne 16 registros, incluindo as treze novas imagens de `img-dimitri/`, sem duplicatas exatas.
+
 ## Aplicativo e identidade oficial — atualização de 24/08/2026
 
 - `hellsings-app/`: aplicativo mobile em Expo com abertura, comando, agentes, missões, bunker, arquivos secretos, diário e investigação interativa.

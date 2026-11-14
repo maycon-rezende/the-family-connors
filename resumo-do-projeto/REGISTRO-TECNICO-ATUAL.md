@@ -229,9 +229,9 @@ A imagem `img-hellsing/britney-bobby.png` foi removida: o homem retratado com Br
 
 | Arquivo | Implementação |
 | --- | --- |
-| `dimitri-arquivo.html` | Dossiê de Dimitri com origem russa confirmada; intervenção, extração e leitura de rota identificadas como hipóteses até a biografia oficial. |
-| `era-extincao-presente/dimitri-arquivo.css` e `.js` | Identidade exclusiva em aço, azul-gelo e vermelho profundo; ficha técnica, terminal interativo, cursor temático e responsividade. |
-| `dimitri-registros.html` | Arquivo independente dos três registros atuais: vigília, terreno aberto e imagem de Dimitri com Jack diante de um mapa, sem missão identificada. |
+| `dimitri-arquivo.html` | Dossiê de Dimitri Volkov Belov (Dimmi), ex-agente russo da KGB, vivo e viúvo; registra Anya Belova (35), a perda da esposa e da filha mais nova, e a relação entre proteção e autonomia. Não inventa função na KGB, nomes ou circunstâncias ainda abertos. |
+| `era-extincao-presente/dimitri-arquivo.css` e `.js` | Identidade exclusiva em aço, azul-gelo e vermelho profundo; ficha técnica, terminal interativo com fragmentos sobre família, Anya e KGB, cursor temático e responsividade. |
+| `dimitri-registros.html` | Arquivo independente com 16 registros: três imagens anteriores e treze novas cenas de Dimitri, Anya, família, mercado, acampamento e rotas. A galeria usa um carrossel e miniaturas em grade responsiva, sem impor cronologia. |
 | `css/dimitri-registros.css` e `js/dimitri-registros.js` | Carrossel de 6,5 s com `object-fit: contain`, controles de teclado, pausa por foco/mouse/aba oculta, redução de movimento e `<dialog>`. |
 
 Os links internos de Clhoe e John foram atualizados para `dimitri-arquivo.html`; o acesso **Abrir registros do presente** agora aponta para um arquivo existente e auditado.

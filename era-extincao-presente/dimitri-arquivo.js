@@ -13,9 +13,9 @@
     targets.forEach((target) => observer.observe(target));
   }
   const channels = [
-    { label: 'СЕВЕР // ROTA EM ANÁLISE', copy: 'Os registros disponíveis não identificam uma operação ou rota específica.' },
-    { label: 'СТАЛЬ // FUNÇÃO EM ANÁLISE', copy: 'Intervenção e extração permanecem hipóteses até a definição da biografia oficial.' },
-    { label: 'ВОЗВРАТ // CONTEXTO PENDENTE', copy: 'A imagem com Jack confirma o registro conjunto, mas não a missão ou o papel de cada agente.' },
+    { label: 'ПАМЯТЬ // FAMÍLIA', copy: 'Durante o apocalipse, Dimitri perdeu a esposa e a filha mais nova. Uma fotografia preserva as quatro pessoas que um dia couberam no mesmo retrato.' },
+    { label: 'АНЯ // 35 ANOS', copy: 'Anya negocia, avalia mercadorias e explora ruínas. Dimitri permanece ao lado dela e aprende a confiar nas escolhas da filha adulta.' },
+    { label: 'КГБ // PASSADO', copy: 'Dimitri foi agente da KGB antes do Dia D. O arquivo não revela sua função na agência nem como deixou o serviço.' },
   ];
   const label = document.querySelector('[data-dimitri-channel-label]');
   const copy = document.querySelector('[data-dimitri-channel-copy]');

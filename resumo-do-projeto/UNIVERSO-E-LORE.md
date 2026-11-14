@@ -39,7 +39,7 @@
 6. **Naomi Yagami** — irmã mais velha de Bobby e sino-americana, com fortes raízes chinesas. Agente especial e especialista em infiltração; sua atuação se completa com a inteligência de campo e a extração conduzidas por Lee.
 7. **Chloe** — reconhecimento e vigilância como função provisória; pele em tom marrom; sobrenome Bennett proposto para o núcleo familiar.
 8. **Luke Carver** — trabalhou com Jack na inteligência e tecnologia do FBI, com foco em rotas alternativas e desenvolvimento de armas e equipamentos. Permaneceu no FBI quando Jack saiu; alguns anos depois, aceitou o convite para integrar os Hellsings. No presente, combina inteligência, tecnologia e estratégia de campo. A família Carver tem raízes africanas; país e região de origem não foram definidos.
-9. **Dimitri** — russo; intervenção e extração como função provisória.
+9. **Dimitri Volkov Belov** — russo, ex-agente da KGB, vivo e viúvo; pai de Anya Belova (35), sua filha sobrevivente. A função que exercia na agência, sua saída, o posto operacional nos Hellsings e as circunstâncias das perdas continuam sem definição.
 10. **Brian Taylor** — veterano e rastreador; agente especial do FBI na equipe de Jack e antigo parceiro de John.
 11. **Hellen Wren** — infiltração e disfarce.
 12. **Joey Muller** — companheiro de Hellen Wren; exploração e recuperação de recursos em campo como função provisória.
@@ -69,7 +69,7 @@ Nos registros visuais, John é representado com pele em tom marrom, conforme a o
 - História completa dos descendentes.
 - Especialidades individuais dos descendentes ainda não definidas, exceto as funções já confirmadas de Diana, Mary e Nathan.
 - Detalhes das demais missões históricas dos Hellsings; Janela de Cinzas e Linha Vermelha agora têm participação definida de Bobby Lee.
-- Biografias completas de Naomi Yagami, Chloe Bennett, Dimitri e Joey Muller.
+- Aprofundar as biografias de Naomi Yagami, Chloe Bennett, Dimitri e Joey Muller; para Dimitri, ainda faltam a função na KGB, sua saída do serviço e os detalhes da perda da esposa e da filha mais nova.
 - Funções definitivas dos agentes ainda marcados como provisórios.
 - Estado do mundo no presente, destinos dos personagens envelhecidos, territórios, veículos e facções.
 - Geografia definitiva do atlas: os setores do mapa do site são rótulos provisórios sem escala, fronteiras ou coordenadas oficiais. As posições de missões e rotas ainda não registradas continuam desconhecidas.

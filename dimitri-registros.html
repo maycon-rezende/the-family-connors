@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090d13" />
     <meta
       name="description"
-      content="Três registros visuais de Dimitri no presente; sua função de campo permanece em análise."
+      content="Três registros visuais de Dimitri Volkov Belov, ex-agente da KGB e pai de Anya Belova."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="css/dimitri-registros.css" />
@@ -25,8 +25,8 @@
         <span class="dimitri-record-kicker"><i></i> ПРОТОКОЛ ВОЗВРАТА // ARQUIVO PRESERVADO</span>
         <h1>ONDE A ROTA<br /><em>NÃO DESISTE.</em></h1>
         <p>
-          Três registros do presente de Dimitri: acampamento, terreno aberto e um mapa ao lado de
-          Jack. A função de campo de Dimitri permanece em análise.
+          Dezesseis registros do presente de Dimitri: sobrevivência, negociação, família e caminhos
+ pelas ruínas. A sequência reúne cenas independentes, sem impor uma ordem cronológica.
         </p>
         <span class="dimitri-record-status"><i></i> LOOP DE REGISTROS ATIVO</span>
       </header>
@@ -35,7 +35,7 @@
         <div class="dimitri-carousel__head">
           <div>
             <span class="dimitri-record-kicker">ARQUIVO D-08 // LEITURA VISUAL</span>
-            <h2 id="dimitri-carousel-title">TRÊS CENAS.<br /><em>CONTEXTO EM ABERTO.</em></h2>
+            <h2 id="dimitri-carousel-title">16 REGISTROS.<br /><em>UMA VIDA EM FRAGMENTOS.</em></h2>
           </div>
           <p>
             Use as setas ou os registros abaixo. A sequência segue sozinha quando possível, e cada
@@ -75,10 +75,62 @@
             <img src="img-hellsing/dimitri-jack.png" alt="Prévia de Dimitri e Jack diante de um mapa" />
             <span>MAPA</span>
           </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Alerta no corredor em ruínas.png" alt="Prévia de Dimitri e Anya em um corredor em ruínas" />
+            <span>ALERTA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Café da manhã em família.png" alt="Prévia de Dimitri e sua família reunidos à mesa" />
+            <span>FAMÍLIA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Dimitri no mercado em ruínas.png" alt="Prévia de Dimitri procurando itens em um mercado destruído" />
+            <span>MERCADO</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Memórias compartilhadas ao entardecer.png" alt="Prévia de Dimitri e Anya com uma fotografia ao entardecer" />
+            <span>MEMÓRIA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Moedas por filtros e baterias.png" alt="Prévia de Dimitri trocando moedas por filtros e baterias" />
+            <span>TROCA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Negociação de suprimentos no mercado do deserto.png" alt="Prévia de Anya negociando suprimentos com Dimitri ao lado" />
+            <span>SUPRIMENTOS</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Negociação no posto de controle desértico.png" alt="Prévia de Dimitri conversando em um posto de controle" />
+            <span>POSTO</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Negociação no posto de controle do deserto.png" alt="Prévia de Dimitri e Anya negociando com uma viajante" />
+            <span>ACORDO</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Pai e filha exploram loja abandonada.png" alt="Prévia de Dimitri e Anya explorando uma loja abandonada" />
+            <span>EXPLORAÇÃO</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Risadas no acampamento de reparos.png" alt="Prévia de Dimitri rindo com um mecânico do acampamento" />
+            <span>ACAMPAMENTO</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Risos entre pai e filha no acampamento.png" alt="Prévia de Anya e Dimitri rindo juntos no acampamento" />
+            <span>PAI E FILHA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Rota difícil no capô empoeirado.png" alt="Prévia de Dimitri e uma companheira estudando uma rota sobre o capô" />
+            <span>ROTA</span>
+          </button>
+          <button type="button" data-dimitri-select aria-pressed="false">
+            <img src="img-dimitri/Surpresa à porta do prédio abandonado.png" alt="Prévia de Dimitri atento à entrada de um prédio abandonado" />
+            <span>À PORTA</span>
+          </button>
         </div>
 
         <footer class="dimitri-carousel__footer">
-          <span data-dimitri-count>01 / 03</span>
+          <span data-dimitri-count>01 / 16</span>
           <span>КОД ВОЗВРАТА // ARQUIVO PRESERVADO</span>
         </footer>
       </section>
@@ -98,5 +150,6 @@
 
     <script src="js/dimitri-registros.js"></script>
     <script src="js/site-cursor.js" defer></script>
-  </body>
+    <script src="js/page-navigation.js?v=1" defer></script>
+</body>
 </html>

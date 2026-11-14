@@ -767,3 +767,13 @@
 - A seção de memórias compartilhadas da página de Britney também inclui as três novas fotos de Bobby e Britney.
 - Luke e Hellen receberam as versões atuais de suas aberturas, trilhas e efeitos ambientais. A nova faixa de Jully continua sem controles visíveis e sua galeria usa o conjunto de imagens recém-adicionado.
 - As imagens de Darius foram realocadas para `img-faccoes/img-darius/` e o fundo do perfil aponta para o novo caminho.
+
+## Atualização de 14 de novembro de 2026 — ficha e dossiê de Dimitri
+
+- A ficha do autor confirmou **Dimitri Volkov Belov**, apelido **Dimmi**, russo, ex-agente da KGB, vivo e viúvo; sua filha sobrevivente é **Anya Belova**, de 35 anos.
+- O dossiê presente foi reescrito com cenas de negociação, busca de suprimentos, acampamento, exploração de ruínas e uma lembrança familiar ao entardecer. A narrativa desenvolve a relação entre o instinto protetor de Dimitri e a autonomia adulta de Anya.
+- A perda da esposa e da filha mais nova foi incorporada. Os nomes sugeridos na ficha, a função e saída de Dimitri da KGB, os detalhes das perdas, as missões e as contagens operacionais continuam sem definição oficial.
+- O terminal interativo agora apresenta fragmentos sobre a família, Anya e o passado na KGB. O arquivo visual mantém a imagem conjunta com Jack sem atribuir uma missão não identificada.
+- O dossiê e as notas de lore do projeto foram alinhados; a frase nova de Dimitri está marcada como proposta para revisão.
+- As treze imagens novas de `img-dimitri/` foram incorporadas à galeria independente, que agora possui dezesseis registros. Não há duplicatas exatas; cenas parecidas de negociação e acampamento mostram momentos diferentes.
+- As miniaturas se reorganizam em quatro colunas no desktop e duas no celular. A sequência do carrossel permanece sem cronologia definida.

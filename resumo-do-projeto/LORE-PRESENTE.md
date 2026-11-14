@@ -234,4 +234,14 @@ Luke e Imani já eram casados, e Asha e Nyla já tinham nascido antes do Dia D. 
 
 O perfil abre com `video/abertura-luke-presente.mp4`, sem áudio. Depois da cena aparecem a frase “Um plano só está pronto quando também sabemos como sair.”, o nome de Luke e sua função nos Hellsings. `audio/theme-luke-presente.mp3` toca em loop durante a navegação, sem controles visíveis. Poeira e rajadas de areia âmbar percorrem a página em movimento lento, respeitando a preferência por movimento reduzido.
 
+## Dimitri Volkov Belov
+
+Dimitri, chamado de **Dimmi**, é russo, ex-agente da KGB, está vivo e é viúvo no presente de *A Era da Extinção*, cerca de vinte anos depois do Dia D. Sua filha **Anya Belova**, de 35 anos, sobreviveu e caminha ao lado dele. Dimitri integra os Hellsings; sua função operacional dentro da organização ainda não foi especificada.
+
+Durante o apocalipse, ele perdeu a esposa e a filha mais nova. **Irina Sokolova** para a esposa e **Sofia**, apelidada **Sonia**, para a filha são apenas sugestões de nomes presentes na ficha; ainda não são nomes oficiais. Também seguem em aberto a idade e altura de Dimitri, a cidade de origem, sua função e trajetória na KGB, a forma como deixou o serviço e as circunstâncias das perdas.
+
+As cenas atuais mostram Dimmi negociando, procurando suprimentos, observando uma passagem, rindo com um mecânico no acampamento e conversando sobre uma rota. Com Anya, explora ruínas, encontra uma facção, avalia mercadorias e divide uma lembrança familiar ao entardecer. A direção narrativa proposta explora a dificuldade de protegê-la sem decidir por ela: Anya tem 35 anos e autonomia própria.
+
+A fotografia dos quatro à mesa é uma proposta visual da família no presente; não define a aparência jovem de Dimitri nem a cronologia das perdas. O arquivo visual independente reúne dezesseis imagens, incluindo treze novas cenas da pasta `img-dimitri/`; sua ordem não representa cronologia. As missões, contagens operacionais, nomes definitivos da esposa e da filha falecida e a ordem cronológica das cenas ainda não estão estabelecidos. O dossiê usa uma fala original como proposta narrativa, sujeita à revisão do autor.
+
 Última atualização: 14 de novembro de 2026.
