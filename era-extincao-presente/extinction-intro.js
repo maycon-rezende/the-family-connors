@@ -11,6 +11,7 @@
   const status = $('#introStatus');
   const cursor = $('.intro-cursor');
   const enterButton = $('[data-awaken]');
+  const skipButton = $('[data-skip-cinema]');
   const enterButtonLabel = enterButton.querySelector('span');
   const windGestureEvents = ['pointerdown', 'keydown', 'touchstart'];
   const I = (src, start, end, text = null, className = '') => ({ kind: 'img', src, start, end, text, className });
@@ -52,9 +53,9 @@
     I('img-intro/frame-23-pollyana.jpg', 94.62, 95.155, null, 'rapid'),
     I('img-intro/frame-28-hellen.jpg', 95.155, 95.704, null, 'rapid'),
     I('img-intro/frame-29-naomi.jpg', 95.704, 96.788, null, 'rapid'),
-    I('img-intro/frame-30-luke.jpg', 96.788, 98.455, null, 'rapid focus-luke fit-contain'),
-    I('img-intro/frame-26-john.jpg', 98.455, 99.07, null, 'rapid fit-contain focus-john'),
-    I('img-intro/frame-27-brian.jpg', 99.07, 99.819, null, 'rapid fit-contain focus-brian'),
+    I('img-hellsing/luke-presente.png', 96.788, 98.455, null, 'rapid focus-luke fit-contain'),
+    I('img-hellsing/john-presente.png', 98.455, 99.07, null, 'rapid fit-contain focus-john'),
+    I('img-hellsing/brian-presente.png', 99.07, 99.819, null, 'rapid fit-contain focus-brian'),
     I('img-intro/frame-25-jack-dimitri.jpg', 99.819, 100, null, 'rapid fit-contain focus-dimitri'),
     // O trecho "No strings on me" do Doom começa em 08s do vídeo.
     // O trailer marca 01:41; soltamos o Doom um segundo antes, em 01:40 (100s).
@@ -242,12 +243,19 @@
     status.textContent = 'TRANSMISSÃO CONCLUÍDA';
     startWind();
   }
-  function enter() {
+  function enter(skipTrailer = false) {
     if (leaving) return; leaving = true;
+    skipButton.disabled = true;
+    enterButton.disabled = true;
     removeWindGestureListeners();
     audio.pause(); windAudio?.pause(); awakening.classList.add('is-leaving');
     try { sessionStorage.setItem('ede-intro-liberada', 'sim'); } catch {}
-    setTimeout(() => { location.href = 'index.html?intro=concluida'; }, 1700);
+    const destination = 'index.html?intro=concluida';
+    if (skipTrailer) {
+      location.replace(destination);
+      return;
+    }
+    setTimeout(() => { location.href = destination; }, 1700);
   }
   build(); prepareTitle();
   enterButton.hidden = true;
@@ -255,8 +263,8 @@
   audio.addEventListener('play', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(render); });
   audio.addEventListener('pause', () => nodes[current]?.querySelector('video')?.pause());
   $('[data-start-cinema]').addEventListener('click', start);
-  $('[data-skip-cinema]').addEventListener('click', finish);
-  enterButton.addEventListener('click', enter);
+  skipButton.addEventListener('click', () => enter(true));
+  enterButton.addEventListener('click', () => enter());
   if (cursor && matchMedia('(pointer: fine)').matches) {
     addEventListener('pointermove', (event) => {
       cursor.style.opacity = '1';
