@@ -86,6 +86,27 @@
       src: 'img-bobby-lee/bobby-lee-luto-chuva-katana.png',
       alt: 'Bobby Lee ajoelhado sob a chuva, em silêncio, segurando a katana com as duas mãos',
     },
+    {
+      code: 'B-11.13',
+      title: 'Um lugar seguro',
+      caption: 'Bobby abraça Britney à luz da fogueira no acampamento; um instante de descanso entre as rondas.',
+      src: 'img-hellsing/bobby&brit.png',
+      alt: 'Bobby Lee abraça Britney e beija sua testa junto à fogueira do acampamento',
+    },
+    {
+      code: 'B-11.14',
+      title: 'Farmácia abandonada',
+      caption: 'Lee mantém a entrada sob observação enquanto Britney confere o material médico encontrado.',
+      src: 'img-hellsing/bobby&brit1.png',
+      alt: 'Bobby Lee vigia a entrada de uma farmácia abandonada enquanto Britney confere um pacote médico',
+    },
+    {
+      code: 'B-11.15',
+      title: 'Depois da ronda',
+      caption: 'Britney e Bobby dividem uma pausa junto à fogueira, depois de deixarem a vigilância com o restante grupo.',
+      src: 'img-hellsing/bobby&brit2.png',
+      alt: 'Bobby Lee e Britney descansam juntos à mesa perto da fogueira do acampamento',
+    },
   ];
 
   const stage = document.querySelector('[data-bobby-stage]');

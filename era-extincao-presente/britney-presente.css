@@ -92,7 +92,7 @@ body[data-character='britney'] .britney-couple-memories__grid {
   display: grid;
   max-width: 1240px;
   margin: 0 auto;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -249,6 +249,40 @@ body[data-character='britney'] .britney-couple-memories figcaption p {
 .britney-enigma form small,
 .britney-enigma form output { display: block; }
 
+/* Sinais de colapso no perímetro: cinza no ar e falhas breves no canal. */
+body[data-character='britney']::before {
+  opacity: 0.1;
+}
+
+body[data-character='britney']::after {
+  content: '';
+  position: fixed;
+  z-index: 19;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.055;
+  background:
+    linear-gradient(108deg, transparent 0 64%, rgba(223, 88, 112, 0.1) 70%, transparent 76%),
+    repeating-linear-gradient(0deg, transparent 0 13px, rgba(216, 160, 108, 0.035) 14px, transparent 15px 30px);
+  mix-blend-mode: screen;
+  animation: britney-perimeter-loss 18s steps(1, end) infinite;
+}
+
+@keyframes britney-perimeter-loss {
+  0%, 61%, 66%, 100% { opacity: 0.055; transform: none; }
+  62% { opacity: 0.15; transform: translateX(-0.12%); }
+  63% { opacity: 0.025; transform: translateX(0.08%); }
+  64% { opacity: 0.11; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-character='britney']::after,
+  body[data-character='britney'] .profile-hero > img,
+  body[data-character='britney'] .profile-hero::after {
+    animation: none !important;
+  }
+}
+
 .britney-enigma form label {
   margin-bottom: .35rem;
   color: #df9aa8;
@@ -323,5 +357,12 @@ body[data-character='britney'] .britney-memories-entry__link:hover span { transf
   body[data-character='britney'] .britney-memories-entry p { font-size:.95rem; line-height:1.65; }
   body[data-character='britney'] .britney-memories-entry__link { margin-top:2rem; font-size:.47rem; }
 }
+
+@media (max-width: 1000px) and (min-width: 761px) {
+  body[data-character='britney'] .britney-couple-memories__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .connor-cursor-core{background:#e58a9f;box-shadow:0 0 9px 2px #df5870aa,0 0 24px #bd426c66}.connor-cursor-ring{border-color:#df587088;background:radial-gradient(circle,#df58701d,transparent 65%);box-shadow:0 0 28px #0005,inset 0 0 15px #df587022}.connor-cursor-ring:before,.connor-cursor-ring:after{background:#df587088}.connor-cursor-ring:before{box-shadow:40px 0 #df587088}.connor-cursor-ring:after{box-shadow:0 40px #df587088}.connor-cursor-ring.is-interactive{border-color:#f09aaa;background:radial-gradient(circle,#df587033,transparent 66%)}.connor-cursor-dust{background:rgba(229,138,159,var(--alpha));box-shadow:0 0 8px #df5870aa}.britney-gallery-section .gallery{grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:34px;gap:12px;align-items:stretch}.britney-gallery-section .gallery figure,.britney-gallery-section .gallery figure:first-child{height:auto;grid-column:auto;grid-row:auto}.britney-gallery-section .gallery figure:nth-child(1){grid-column:span 7;grid-row:span 17}.britney-gallery-section .gallery figure:nth-child(2){grid-column:span 5;grid-row:span 11}.britney-gallery-section .gallery figure:nth-child(3){grid-column:span 5;grid-row:span 11}.britney-gallery-section .gallery figure:nth-child(4){grid-column:span 7;grid-row:span 17}.britney-gallery-section .gallery figure:nth-child(odd) img{object-position:center 18%}.britney-gallery-section .gallery figure:nth-child(even) img{object-position:center 28%}.britney-gallery-section .gallery figcaption{padding-bottom:1.2rem}@media(max-width:760px){.britney-gallery-section .gallery{grid-template-columns:1fr;grid-auto-rows:auto;gap:10px}.britney-gallery-section .gallery figure,.britney-gallery-section .gallery figure:nth-child(n){grid-column:auto;grid-row:auto;height:116vw}.britney-gallery-section .gallery figure:first-child,.britney-gallery-section .gallery figure:nth-child(4){height:125vw}}
 .britney-photo-memories{background:linear-gradient(135deg,#10080c,#1a0d13)}.britney-photo-memories .gallery-heading{border-left:2px solid #df5870;padding-left:1.3rem}.photo-album-label{max-width:1150px;margin:0 auto 1rem;display:flex;justify-content:space-between;gap:1rem;color:#df9aa8;font:700 .5rem Cinzel;letter-spacing:.16em}.photo-album-label i{color:#b98591;font-style:normal}.britney-photo-memories .gallery{grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:34px;gap:12px;align-items:stretch}.britney-photo-memories .gallery figure,.britney-photo-memories .gallery figure:first-child{height:auto;grid-column:auto;grid-row:auto}.britney-photo-memories .gallery figure:nth-child(1){grid-column:span 7;grid-row:span 17}.britney-photo-memories .gallery figure:nth-child(2){grid-column:span 5;grid-row:span 11}.britney-photo-memories .gallery figure:nth-child(3){grid-column:span 5;grid-row:span 11}.britney-photo-memories .gallery figure:nth-child(4){grid-column:span 7;grid-row:span 17}@media(max-width:760px){.photo-album-label{display:block;line-height:1.8}.photo-album-label i{display:block}.britney-photo-memories .gallery{grid-template-columns:1fr;grid-auto-rows:auto;gap:10px}.britney-photo-memories .gallery figure,.britney-photo-memories .gallery figure:nth-child(n){grid-column:auto;grid-row:auto;height:116vw}.britney-photo-memories .gallery figure:first-child,.britney-photo-memories .gallery figure:nth-child(4){height:125vw}}

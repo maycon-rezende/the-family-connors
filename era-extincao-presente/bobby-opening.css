@@ -1,0 +1,154 @@
+body.bobby-page .bobby-opening[hidden] {
+  display: none !important;
+}
+
+body.bobby-page .bobby-opening {
+  position: fixed;
+  z-index: 1100;
+  inset: 0;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  isolation: isolate;
+  background: #0c0d0a;
+  opacity: 1;
+  transition: opacity 900ms cubic-bezier(.2, .7, .2, 1);
+}
+
+body.bobby-page .bobby-opening.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.bobby-page .bobby-opening__backdrop,
+body.bobby-page .bobby-opening__video,
+body.bobby-page .bobby-opening__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.bobby-page .bobby-opening__backdrop {
+  z-index: -3;
+  background: url('../img-bobby-lee/bobby-lee-ajoelhado-chuva.png') center / cover no-repeat;
+  filter: blur(22px) brightness(.31) saturate(.7);
+  transform: scale(1.06);
+}
+
+body.bobby-page .bobby-opening__video {
+  z-index: -2;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+body.bobby-page .bobby-opening__shade {
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 4px, rgba(231, 187, 120, .035) 5px),
+    linear-gradient(90deg, rgba(12, 13, 10, .62), rgba(12, 13, 10, .08) 66%, rgba(12, 13, 10, .22)),
+    linear-gradient(0deg, rgba(12, 13, 10, .72), transparent 48%, rgba(12, 13, 10, .18));
+}
+
+body.bobby-page .bobby-opening__copy {
+  position: absolute;
+  right: 1.5rem;
+  bottom: clamp(2rem, 8vh, 6rem);
+  left: clamp(1.5rem, 7vw, 7rem);
+  max-width: 820px;
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+body.bobby-page .bobby-opening.is-revealing .bobby-opening__copy {
+  animation: bobby-opening-arrival 850ms cubic-bezier(.2, .7, .2, 1) both;
+}
+
+body.bobby-page .bobby-opening__eyebrow,
+body.bobby-page .bobby-opening__copy > p {
+  color: var(--bobby-amber, #e7bb78);
+  font: 500 .58rem/1.55 'DM Mono', Consolas, monospace;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+body.bobby-page .bobby-opening__eyebrow i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: .55rem;
+  border-radius: 50%;
+  background: var(--bobby-rust, #ce8659);
+  box-shadow: 0 0 14px rgba(206, 134, 89, .9);
+}
+
+body.bobby-page .bobby-opening__copy h2 {
+  margin: .8rem 0 .65rem;
+  color: var(--bobby-paper, #f1ecdc);
+  font: 800 clamp(3.8rem, 10vw, 9rem)/.82 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+  text-shadow: 0 0 32px rgba(231, 187, 120, .16);
+}
+
+body.bobby-page .bobby-opening__copy h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #D3A0E1;
+  text-shadow: 0 0 27px rgba(205, 133, 229, .22);
+}
+
+body.bobby-page .bobby-opening__copy > p {
+  margin: 0;
+  color: var(--bobby-olive, #b3b88a);
+}
+
+body.bobby-page.bobby-opening-active {
+  overflow: hidden;
+}
+
+@keyframes bobby-opening-arrival {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  body.bobby-page .bobby-opening__copy {
+    right: 1.15rem;
+    bottom: max(2rem, env(safe-area-inset-bottom));
+    left: 1.15rem;
+  }
+
+  body.bobby-page .bobby-opening__copy h2 {
+    font-size: clamp(3.1rem, 16vw, 5.8rem);
+  }
+
+  body.bobby-page .bobby-opening__eyebrow,
+  body.bobby-page .bobby-opening__copy > p {
+    font-size: .47rem;
+    letter-spacing: .14em;
+  }
+
+  body.bobby-page .bobby-opening__shade {
+    background:
+      repeating-linear-gradient(0deg, transparent 0 4px, rgba(231, 187, 120, .035) 5px),
+      linear-gradient(0deg, rgba(12, 13, 10, .76), rgba(12, 13, 10, .05) 72%),
+      linear-gradient(90deg, rgba(12, 13, 10, .18), transparent 70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.bobby-page .bobby-opening {
+    transition: none;
+  }
+
+  body.bobby-page .bobby-opening.is-revealing .bobby-opening__copy {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

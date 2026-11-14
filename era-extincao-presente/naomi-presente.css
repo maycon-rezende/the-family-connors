@@ -210,7 +210,7 @@ a {
   z-index: -2;
   inset: -12%;
   content: '';
-  background: url('../img-hellsing/naomi-presente.png') center / cover no-repeat;
+  background: url('../img-naomi-presente/galeria/01-naomi-sozinha/naomi-056-naomi-em-traje-kitana-realismo.jpg') center / cover no-repeat;
   filter: blur(28px) brightness(0.32) saturate(0.68);
   transform: scale(1.08);
 }

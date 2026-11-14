@@ -1,0 +1,9 @@
+Duplicatas separadas da seleção para a galeria da Naomi.
+
+Cópias exatas das imagens já existentes na galeria:
+NAOMI_004_naomi_em_traje_escuro.png = img-naomi-presente/indo-ate-jack.png
+NAOMI_012_retrato_com_traje_azul_e_preto.png = img-naomi-presente/roupa-nova.png
+
+Variantes visuais quase idênticas; mantida a outra versão:
+NAOMI_031_naomi_no_penhasco_com_katanas.png = mantida NAOMI_034_katanas_maiores_no_penhasco.png
+NAOMI_045_os_irmaos_entre_os_sobreviventes.png = mantida NAOMI_050_naomi_e_bobby_escoltando_sobreviventes.png

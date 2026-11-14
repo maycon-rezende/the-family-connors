@@ -9,11 +9,41 @@
       content="Bobby Lee Yagami: ex-agente da Unidade Jingwei, inteligência de campo dos Hellsings e irmão mais novo de Naomi Yagami."
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/bobby-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/bobby-presente.css?v=2" />
+    <link rel="stylesheet" href="era-extincao-presente/bobby-opening.css?v=2" />
     <title>Bobby Lee Yagami | Arquivo Hellsings</title>
   </head>
   <body class="bobby-page">
     <div class="bobby-atmosphere" aria-hidden="true"></div>
+    <section
+      class="bobby-opening"
+      data-bobby-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="bobby-opening-title"
+      aria-describedby="bobby-opening-description"
+      hidden
+    >
+      <div class="bobby-opening__backdrop" aria-hidden="true"></div>
+      <video
+        class="bobby-opening__video"
+        data-bobby-opening-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-bobby-lee/bobby-lee-ajoelhado-chuva.png"
+        aria-hidden="true"
+      >
+        <source src="video/abertura-lee-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="bobby-opening__shade" aria-hidden="true"></div>
+      <div class="bobby-opening__copy">
+        <span class="bobby-opening__eyebrow"><i></i> B-11 // REGISTRO DE CAMPO // HELLSINGS</span>
+        <h2 id="bobby-opening-title">BOBBY LEE <em>YAGAMI.</em></h2>
+        <p id="bobby-opening-description">AGENTE ESPECIAL // INTELIGÊNCIA DE CAMPO</p>
+      </div>
+    </section>
 
     <nav class="bobby-nav" aria-label="Navegação do arquivo de Bobby Lee Yagami">
       <a href="brian-presente.html">← Memorial de Brian</a>
@@ -175,7 +205,12 @@
       <a href="joey-presente.html">Joey →</a>
     </footer>
 
+    <audio data-character-theme autoplay loop preload="auto" hidden aria-hidden="true">
+      <source src="audio/theme-lee-presente.mp3" type="audio/mpeg" />
+    </audio>
     <script src="js/site-cursor.js" defer></script>
+    <script src="js/personagem-theme.js?v=2" defer></script>
+    <script src="era-extincao-presente/bobby-opening.js?v=1" defer></script>
     <script src="js/bobby-effects.js" defer></script>
   </body>
 </html>
