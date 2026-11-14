@@ -102,7 +102,7 @@ body.family-profile {
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
 /* Paletas individuais dos membros da família, sem compartilhar acentos entre perfis. */
-body.profile-darius { --profile-ink: #171716; --profile-deep: #28211f; --profile-panel: #352a27; --profile-paper: #f3e7d8; --profile-accent: #d56a4f; --profile-secondary: #9cbbb2; --profile-source: url('../img-darius/darius-presente-radio.png'); --profile-position: center 38%; }
+body.profile-darius { --profile-ink: #171716; --profile-deep: #28211f; --profile-panel: #352a27; --profile-paper: #f3e7d8; --profile-accent: #d56a4f; --profile-secondary: #9cbbb2; --profile-source: url('../img-faccoes/img-darius/darius-presente-radio.png'); --profile-position: center 38%; }
 body.profile-micah { --profile-ink: #0d1424; --profile-deep: #14213b; --profile-panel: #1c2d4c; --profile-paper: #ecf0f4; --profile-accent: #5d89ff; --profile-secondary: #d2e66c; --profile-source: url('../img-micah/micah-presente-mensageiro.png'); --profile-position: center 34%; }
 body.profile-imani { --profile-ink: #10201f; --profile-deep: #18302e; --profile-panel: #21413e; --profile-paper: #f2e9dd; --profile-accent: #65c2b2; --profile-secondary: #efa17f; --profile-source: url('../img-imani/imani-presente-educacao.png'); --profile-position: center 35%; }
 body.profile-asha { --profile-ink: #171c20; --profile-deep: #242f36; --profile-panel: #33434d; --profile-paper: #edf0e5; --profile-accent: #c5dc58; --profile-secondary: #83a5bc; --profile-source: url('../img-asha/asha-presente-reparo.png'); --profile-position: center 35%; }
