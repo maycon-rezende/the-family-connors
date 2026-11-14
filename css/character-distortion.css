@@ -33,6 +33,11 @@ body[data-distortion-mode="jully"] {
   --hd-secondary: 183, 160, 255;
 }
 
+body[data-distortion-mode="hellen"] {
+  --hd-primary: 142, 167, 163;
+  --hd-secondary: 209, 132, 80;
+}
+
 .hellsings-distortion-screen {
   position: fixed;
   z-index: 90;
@@ -166,6 +171,23 @@ body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distor
   animation: hd-jully-carrier 650ms steps(4, end) both;
 }
 
+body.hellsings-distortion-active[data-distortion-mode="hellen"] .hellsings-distortion-screen::before {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(var(--hd-secondary), 0.11) 49%, rgba(var(--hd-primary), 0.16) 50%, transparent 52%),
+    repeating-linear-gradient(0deg, transparent 0 8px, rgba(var(--hd-primary), 0.09) 9px 10px),
+    radial-gradient(ellipse at 68% 44%, rgba(var(--hd-secondary), 0.1), transparent 48%);
+  animation: hd-hellen-static 760ms steps(3, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="hellen"] .hellsings-distortion-screen::after {
+  height: 17%;
+  background:
+    linear-gradient(180deg, transparent, rgba(var(--hd-primary), 0.12) 25%, rgba(var(--hd-secondary), 0.19) 51%, rgba(var(--hd-primary), 0.08) 72%, transparent),
+    repeating-linear-gradient(90deg, transparent 0 19vw, rgba(var(--hd-secondary), 0.08) 19.2vw 19.4vw);
+  filter: blur(1px);
+  animation: hd-hellen-slip 760ms ease-in-out both;
+}
+
 body.hellsings-distortion-active[data-distortion-mode="jack"] .hellsings-distortion-title {
   animation: hd-name-jack 430ms steps(3, end) both;
 }
@@ -188,6 +210,10 @@ body.hellsings-distortion-active[data-distortion-mode="britney"] .hellsings-dist
 
 body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distortion-title {
   animation: hd-name-jully 650ms steps(4, end) both;
+}
+
+body.hellsings-distortion-active[data-distortion-mode="hellen"] .hellsings-distortion-title {
+  animation: hd-name-hellen 760ms ease-in-out both;
 }
 
 @keyframes hd-screen-flicker {
@@ -249,6 +275,20 @@ body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distor
   50% { transform: translateY(-5vh); }
 }
 
+@keyframes hd-hellen-static {
+  0%, 100% { opacity: 0.55; background-position: 0 0, 0 0, 0 0; }
+  23% { opacity: 0.92; background-position: 2.5vw 0, 0 1px, 0 0; }
+  47% { opacity: 0.28; background-position: -1vw 0, 0 -1px, 0 0; }
+  71% { opacity: 0.78; background-position: 0.6vw 0, 0 0, 0 0; }
+}
+
+@keyframes hd-hellen-slip {
+  0%, 100% { transform: translateX(0) skewY(0); opacity: 0; }
+  18% { transform: translateX(1.2%) skewY(-0.6deg); opacity: 0.74; }
+  46% { transform: translateX(-0.8%) skewY(0.35deg); opacity: 0.9; }
+  74% { transform: translateX(0.35%) skewY(0); opacity: 0.58; }
+}
+
 @keyframes hd-name-jack {
   0%, 100% { transform: translateX(0); filter: none; text-shadow: none; clip-path: inset(0); }
   20% { transform: translateX(-0.035em) skewX(-4deg); text-shadow: 0.06em 0 rgba(231, 73, 43, 0.72), -0.035em 0 rgba(233, 182, 98, 0.62); clip-path: inset(0 0 53% 0); }
@@ -289,6 +329,13 @@ body.hellsings-distortion-active[data-distortion-mode="jully"] .hellsings-distor
   38% { transform: translateY(0.012em); filter: blur(0.4px); }
   58% { transform: translateY(-0.008em); clip-path: inset(0 0 56% 0); }
   79% { transform: translateY(0); clip-path: inset(42% 0 0 0); }
+}
+
+@keyframes hd-name-hellen {
+  0%, 100% { transform: translateX(0); filter: none; text-shadow: none; clip-path: inset(0); }
+  24% { transform: translateX(-0.012em); filter: blur(0.3px); text-shadow: 0.035em 0 rgba(142, 167, 163, 0.62); clip-path: inset(0 0 42% 0); }
+  49% { transform: translateX(0.018em) skewX(-1deg); clip-path: inset(47% 0 0 0); }
+  73% { transform: translateX(-0.006em); filter: contrast(1.16); text-shadow: -0.025em 0 rgba(209, 132, 80, 0.55); clip-path: inset(13% 0 29% 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {

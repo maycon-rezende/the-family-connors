@@ -2,6 +2,64 @@
   display: none;
 }
 
+.hellen-dust {
+  position: fixed;
+  z-index: 80;
+  inset: -8%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.14;
+  mix-blend-mode: screen;
+  background-image:
+    radial-gradient(1.2px 1.2px at 8% 18%, rgba(226, 210, 185, 0.82) 48%, transparent 100%),
+    radial-gradient(1px 1px at 23% 72%, rgba(209, 132, 80, 0.72) 48%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 47% 36%, rgba(226, 210, 185, 0.74) 48%, transparent 100%),
+    radial-gradient(1px 1px at 68% 84%, rgba(142, 167, 163, 0.8) 48%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 91% 24%, rgba(226, 210, 185, 0.65) 48%, transparent 100%);
+  background-size: 31vw 37vh, 43vw 51vh, 37vw 42vh, 46vw 49vh, 39vw 34vh;
+  animation: hellen-dust-shift 37s linear infinite alternate;
+}
+
+.hellen-dust::before,
+.hellen-dust::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 12% 43%, rgba(226, 210, 185, 0.75) 48%, transparent 100%),
+    radial-gradient(1.4px 1.4px at 39% 15%, rgba(209, 132, 80, 0.7) 48%, transparent 100%),
+    radial-gradient(1px 1px at 76% 59%, rgba(226, 210, 185, 0.8) 48%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 88% 91%, rgba(142, 167, 163, 0.75) 48%, transparent 100%);
+  background-size: 41vw 46vh, 37vw 38vh, 45vw 53vh, 33vw 42vh;
+}
+
+.hellen-dust::before {
+  opacity: 0.65;
+  animation: hellen-dust-rise 29s linear infinite;
+}
+
+.hellen-dust::after {
+  opacity: 0.32;
+  filter: blur(0.6px);
+  animation: hellen-dust-float 43s ease-in-out infinite alternate;
+}
+
+@keyframes hellen-dust-shift {
+  from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
+  to { background-position: 5vw -4vh, -4vw 3vh, 3vw -5vh, -5vw -2vh, 4vw 4vh; }
+}
+
+@keyframes hellen-dust-rise {
+  from { transform: translate3d(0, 3vh, 0); }
+  to { transform: translate3d(-2vw, -5vh, 0); }
+}
+
+@keyframes hellen-dust-float {
+  from { transform: translate3d(1vw, -1vh, 0); opacity: 0.18; }
+  to { transform: translate3d(-1vw, 2vh, 0); opacity: 0.48; }
+}
+
 html.hellen-opening-pending,
 html.hellen-opening-pending body.hellen-wren {
   overflow: hidden;
@@ -326,6 +384,12 @@ html.hellen-opening-pending body.hellen-wren > :not(.hellen-opening) {
   .hellen-opening__copy,
   .hellen-feats__grid article {
     transition: none;
+  }
+
+  .hellen-dust,
+  .hellen-dust::before,
+  .hellen-dust::after {
+    animation: none;
   }
 
   .hellen-feats__grid article:hover {

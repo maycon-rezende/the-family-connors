@@ -10,6 +10,7 @@
     ariani: { min: 4600, max: 7600, duration: 540 },
     britney: { min: 5600, max: 9000, duration: 520 },
     jully: { min: 3900, max: 6800, duration: 650 },
+    hellen: { min: 8500, max: 14200, duration: 760 },
   };
   const preset = presets[mode];
 
