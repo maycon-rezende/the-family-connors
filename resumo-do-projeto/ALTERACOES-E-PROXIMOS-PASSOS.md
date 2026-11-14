@@ -727,6 +727,43 @@
 
 - A abertura do perfil usa `video/abertura-hellen-presente.mp4`. A cena fica centralizada e inteira; depois do vídeo aparecem uma frase, o nome Hellen Wren e sua função de inteligência de campo.
 - `audio/theme-hellen-presente.mp3` toca em loop na página, sem botão de áudio.
+- A tela tem distorções breves no nome e na imagem, em paleta fumaça/latão; partículas sutis simulam poeira suspensa pelo arquivo.
 - A página ganhou mais contexto sobre a experiência dela na CIA, a quebra das comunicações no Dia D, sua parceria de campo com Naomi e Joey e a formação de Leona.
 - A Operação Espelho apresenta Hellen infiltrando um posto da Dominus para identificar uma rota de evacuação comprometida e avisar Naomi. É uma proposta revisável criada nesta atualização.
 - O painel de feitos não inventa totais de operações, abates ou sobreviventes: os arquivos disponíveis não sustentam números para Hellen.
+
+## Atualização de 13 de novembro de 2026 — dossiê presente de Luke
+
+- A página agora conta a trajetória de Luke da inteligência e tecnologia do FBI aos Hellsings, incluindo seu trabalho com rotas alternativas e o desenvolvimento de armas e equipamentos.
+- O bloco do hero foi centralizado verticalmente para deixar o nome de Luke mais alto e visível ao abrir a página.
+- O hero mobile subiu mais, e a seção de inteligência passa a empilhar o título antes de sobrepor o texto em telas intermediárias.
+- Foi incluída a Operação Resgate: Jack conduz o resgate do filho sequestrado do governador. O autor definiu esse acontecimento; os pormenores da missão e sua posição exata na cronologia estão marcados como revisáveis.
+- A cronologia segue pelo convite de Jack, o Dia D, a chegada ao bunker pela passagem que somente Jack conhecia e o trabalho de Luke em inteligência, tecnologia e rotas no presente.
+- Os registros não apresentam números de missões nem de pessoas salvas sem confirmação do autor. `video/abertura-luke-presente.mp4` é a abertura silenciosa, e `audio/theme-luke-presente.mp3` toca em loop na página sem controles.
+- O perfil ganhou camadas animadas de poeira e rajadas de areia âmbar, leves, sem bloquear a interação e desativadas para quem prefere movimento reduzido.
+
+## Atualização de 13 de novembro de 2026 — Bobby Lee Yagami e Naomi Yagami
+
+- O dossiê de Bobby agora usa o nome completo **Bobby Lee Yagami** e apresenta Naomi como sua irmã mais velha. Ambos são sino-americanos e agentes especiais; Naomi se especializou em infiltração, enquanto Lee atua com inteligência de campo, contrainteligência, comunicações e extração.
+- A operação **Janela de Cinzas (HLS-126)** ganhou a participação conjunta dos irmãos: Naomi localiza as testemunhas dentro do entreposto e Lee acompanha as comunicações e mantém a rota de saída aberta. O perfil e a seção dos irmãos em `naomi-presente.html` se conectam por `img-naomi-presente/naomi-bobby-lee.png`.
+- `resumo-do-projeto/BOBBY-LEE-LORE.md`, `LORE-PRESENTE.md`, `UNIVERSO-E-LORE.md` e `REGISTRO-TECNICO-ATUAL.md` registram a atualização. As especificidades regionais da cultura familiar continuam em aberto.
+
+## Atualização de 13 de novembro de 2026 — novas imagens de Bobby Lee
+
+- Cinco imagens enviadas pelo autor foram organizadas em `img-bobby-lee/`; não havia cópias exatas entre os registros visuais antigos.
+- `bobby-presente.html` usa o retrato de Lee ajoelhado sob a chuva como capa. A imagem permanece inteira, sem corte.
+- As cinco imagens entraram em `bobby-registros.html`; a galeria passa a reunir onze registros, preservando também as seis imagens anteriores.
+
+### Acréscimo de imagem — 13 de novembro de 2026
+
+- Uma nova variação de Bobby ajoelhado sob a chuva, com as duas mãos sobre a katana, foi adicionada como `img-bobby-lee/bobby-lee-luto-chuva-katana.png` e incluída na galeria. Não é uma cópia exata da capa.
+- A galeria agora reúne doze registros; a capa continua sendo a primeira versão ajoelhada já escolhida pelo autor.
+
+## Atualização de 14 de novembro de 2026 — páginas e arquivos visuais
+
+- A galeria de Naomi chegou a 88 registros com 53 imagens novas otimizadas; quatro duplicatas ou variações próximas foram separadas e listadas no arquivo de duplicatas.
+- A capa do perfil de Naomi agora mostra seu traje inspirado na Kitana sem cortar a imagem.
+- A página de Bobby Lee recebeu a abertura em vídeo, a música `theme-lee-presente` e o sobrenome Yagami com o mesmo contorno lilás da Naomi; o álbum dele passou a quinze registros com três novas fotos com Britney.
+- A seção de memórias compartilhadas da página de Britney também inclui as três novas fotos de Bobby e Britney.
+- Luke e Hellen receberam as versões atuais de suas aberturas, trilhas e efeitos ambientais. A nova faixa de Jully continua sem controles visíveis e sua galeria usa o conjunto de imagens recém-adicionado.
+- As imagens de Darius foram realocadas para `img-faccoes/img-darius/` e o fundo do perfil aponta para o novo caminho.

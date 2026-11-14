@@ -220,4 +220,18 @@ Os Hellsings enfrentarão e destruirão Dominus. Depois da batalha, encontrarão
 - Os registros não sustentam contagens confiáveis de missões, resgates ou abates. A página apresenta feitos qualitativos, sem inventar estatísticas.
 - `video/abertura-hellen-presente.mp4` abre o perfil. O título e a frase de Hellen surgem após o vídeo; a cena é exibida sem corte por `object-fit: contain`.
 
-Última atualização: 13 de novembro de 2026.
+## Luke Carver — do FBI aos Hellsings
+
+Luke trabalhou com Jack na inteligência e tecnologia do FBI. Analisava caminhos e rotas alternativas, além de criar e aperfeiçoar armas e equipamentos para as necessidades de campo. É reconhecido como perito em sua especialidade. Quando Jack saiu do FBI, Luke permaneceu no Bureau; alguns anos depois, aceitou o convite de Jack para integrar os Hellsings que ele estava formando. Os dois mantiveram uma relação de confiança construída no trabalho conjunto.
+
+### Operação Resgate
+
+O filho do governador foi sequestrado, e Jack conduziu a missão para resgatá-lo. A narrativa de Luke apresenta sua contribuição na inteligência da operação: preparar rotas alternativas e opções de retirada caso o plano inicial deixasse de funcionar. O sequestro e o resgate por Jack foram definidos pelo autor. A participação detalhada de Luke, os demais acontecimentos e o ponto exato da cronologia — ainda no FBI ou já nos primeiros anos dos Hellsings — são uma reconstrução revisável.
+
+### Dia D e presente
+
+Luke e Imani já eram casados, e Asha e Nyla já tinham nascido antes do Dia D. Quando Jack ordenou a ida ao bunker, saiu para buscar a família Carver, Naomi, Joey e outras pessoas que ainda estavam no caminho. A passagem secreta para o bunker era conhecida apenas por Jack; Luke seguiu a liderança dele com a família. Depois do longo confinamento, Luke levou sua experiência de inteligência, tecnologia e planejamento de rotas para a sobrevivência na superfície. Missões e totais de pessoas salvas ainda não têm números oficiais.
+
+O perfil abre com `video/abertura-luke-presente.mp4`, sem áudio. Depois da cena aparecem a frase “Um plano só está pronto quando também sabemos como sair.”, o nome de Luke e sua função nos Hellsings. `audio/theme-luke-presente.mp3` toca em loop durante a navegação, sem controles visíveis. Poeira e rajadas de areia âmbar percorrem a página em movimento lento, respeitando a preferência por movimento reduzido.
+
+Última atualização: 14 de novembro de 2026.

@@ -703,4 +703,29 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `audio/theme-hellen-presente.mp3` toca em loop sem controles visíveis. `js/personagem-theme.js` tenta iniciar a faixa e retoma a tentativa após interação se o navegador bloquear o autoplay.
 - `era-extincao-presente/hellen-opening.css` mantém a cena inteira visível em tela larga e móvel, sem corte, com fundo ampliado desfocado. `hellen-opening.js` coordena reprodução, revelação, encerramento, falha de vídeo e preferência por movimento reduzido.
 - O dossiê ganhou a trajetória CIA → Dia D → Hellsings, uma cronologia, a Operação Espelho na Dominus e quatro feitos preservados. Estatísticas de missões e resgates ficam qualitativas porque não há contagem oficial.
+- A página também ganhou distorções breves em tom fumaça/latão e partículas de poeira em movimento lento, respeitando `prefers-reduced-motion`.
 - A Operação Espelho é uma proposta narrativa revisável; não acrescenta contagens nem altera fatos previamente confirmados.
+
+## Dossiê presente de Luke — 13 de novembro de 2026
+
+- `luke-presente.html` agora reúne a trajetória de Luke desde o FBI até o presente: inteligência e tecnologia ao lado de Jack, rotas alternativas, desenvolvimento de armas e equipamentos, permanência no Bureau após a saída de Jack e convite posterior para os Hellsings.
+- O bloco principal do perfil foi centralizado verticalmente para trazer o nome de Luke para cima e evitar que ele fique junto ao limite inferior da primeira tela.
+- Na revisão móvel, o conteúdo do hero subiu mais; a seção “Inteligência em movimento” empilha título e texto até 1024px para impedir sobreposição em larguras intermediárias.
+- A cronologia inclui a **Operação Resgate**, em que Jack recupera o filho sequestrado do governador. O núcleo da missão foi fornecido pelo autor; a contribuição detalhada de Luke por inteligência de rotas é apresentada como reconstrução revisável. O período exato da operação, os participantes e o local permanecem abertos.
+- O perfil conecta a experiência profissional à fuga para o bunker e à sobrevivência depois do confinamento. Mantém a passagem secreta como conhecimento exclusivo de Jack e preserva a cronologia familiar confirmada: Luke e Imani já eram casados, e Asha e Nyla já tinham nascido antes do Dia D.
+- `era-extincao-presente/luke-presente.css` dá estilo responsivo à nova linha do tempo. Os dados de missões e pessoas salvas permanecem sem totais inventados.
+- `video/abertura-luke-presente.mp4` agora abre o perfil em tela cheia, com o vídeo inteiro visível em desktop e celular. Ao final, surgem a frase de Luke, seu nome e sua função antes da página aparecer. A reprodução do vídeo é silenciosa.
+- `era-extincao-presente/luke-opening.css` e `luke-opening.js` controlam enquadramento, revelação e encerramento da abertura, com fallback para falha de mídia, Escape e preferência por movimento reduzido.
+- `audio/theme-luke-presente.mp3` toca em loop ao entrar no perfil, sem controle visível, usando `js/personagem-theme.js` para tentar iniciar a reprodução e retomá-la após interação se o navegador bloquear autoplay.
+- `era-extincao-presente/luke-presente.css` cria poeira e rajadas de areia em tons âmbar por toda a página; a camada não bloqueia cliques e respeita `prefers-reduced-motion`.
+
+## Atualização de 14 de novembro de 2026 — áudio e imagens do presente
+
+- A galeria de Naomi passou a reunir 88 registros. Entraram 53 imagens inéditas otimizadas em JPEG; quatro duplicatas ou variações próximas ficaram separadas em `img-naomi-presente/Fotos/05_Duplicadas/` com suas correspondências documentadas.
+- A capa de Naomi agora mostra o retrato de corpo inteiro com traje inspirado na Kitana. A imagem usa `object-fit: contain`, e o fundo desfocado usa o mesmo retrato.
+- Bobby Lee ganhou a abertura `video/abertura-lee-presente.mp4`, seguida pela revelação de seu nome, e a música `audio/theme-lee-presente.mp3` em loop sem controles visíveis. `js/personagem-theme.js` tenta iniciar o autoplay e tenta novamente após interação quando necessário.
+- O sobrenome Yagami na página e na abertura de Bobby agora recebe o mesmo contorno lilás e brilho do sobrenome de Naomi.
+- Três imagens novas do casal foram adicionadas à galeria de Bobby, que agora tem quinze registros, e à seção de memórias compartilhadas em `britney-presente.html`. A grade responsiva usa três, duas ou uma coluna conforme a largura da tela.
+- Os perfis de Luke e Hellen receberam as aberturas e efeitos registrados nesta atualização do projeto; Luke usa `video/abertura2-luke-presente.mp4` e `audio/theme2-luke-presente.mp3`, enquanto Hellen usa seu vídeo, tema musical e efeitos de poeira/interferência.
+- As galerias de Jully e os efeitos de distorção das páginas individuais usam seus novos arquivos e referências de mídia. O áudio atualizado de Jully permanece em loop, sem controle visual.
+- As imagens de Darius estão sob `img-faccoes/img-darius/`; o perfil visual usa essa nova localização.
