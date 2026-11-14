@@ -4,181 +4,161 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#101912" />
-    <meta
-      name="description"
-      content="Dossiê de Luke Carver: mapas, rotas, estratégia e sobrevivência de campo no presente dos Hellsings."
-    />
+    <meta name="description" content="Dossiê de Luke Carver: inteligência, tecnologia, rotas e sobrevivência entre o FBI e os Hellsings." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/luke-presente.css" />
-    <title>Luke Carver | Rotas Mortas</title>
+    <link rel="stylesheet" href="era-extincao-presente/luke-presente.css?v=20261113-luke-signal" />
+    <link rel="stylesheet" href="era-extincao-presente/luke-opening.css" />
+    <script src="era-extincao-presente/luke-opening.js" defer></script>
+    <title>Luke Carver | Inteligência e Rotas</title>
   </head>
   <body class="luke-routes">
     <div class="luke-topography" aria-hidden="true"></div>
-
+    <div class="luke-dust" aria-hidden="true"></div>
+    <div class="luke-frequency-interference" data-luke-interference aria-hidden="true"></div>
+    <section
+      class="luke-opening"
+      data-luke-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="luke-opening-title"
+      aria-describedby="luke-opening-quote"
+      hidden
+    >
+      <div class="luke-opening__backdrop" aria-hidden="true"></div>
+      <video
+        class="luke-opening__video"
+        data-luke-opening-video
+        muted
+        playsinline
+        autoplay
+        preload="auto"
+        poster="img-hellsing/luke-presente.png"
+        aria-label="Abertura cinematográfica de Luke Carver"
+      >
+        <source src="video/abertura2-luke-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="luke-opening__shade" aria-hidden="true"></div>
+      <div class="luke-opening__copy">
+        <span class="luke-opening__eyebrow">L-06 // INTELIGÊNCIA E TECNOLOGIA</span>
+        <p id="luke-opening-quote">“Um plano só está pronto quando também sabemos como sair.”</p>
+        <h2 id="luke-opening-title">LUKE <em>CARVER.</em></h2>
+        <span class="luke-opening__role">INTELIGÊNCIA DE CAMPO // HELLSINGS</span>
+      </div>
+      <span class="luke-opening__file" aria-hidden="true">ARQUIVO HELLSINGS // L-06</span>
+    </section>
     <nav class="luke-nav" aria-label="Navegação do dossiê de Luke">
-      <a href="naomi-presente.html">← Naomi</a>
-      <span>ARQUIVO HELLSINGS // L-06</span>
-      <a href="index.html#sobreviventes">Sobreviventes →</a>
+      <a href="naomi-presente.html">← Naomi</a><span>ARQUIVO HELLSINGS // L-06</span><a href="index.html#sobreviventes">Sobreviventes →</a>
     </nav>
-
     <main>
       <header class="luke-hero">
         <div class="luke-hero__copy" data-reveal>
-          <span class="luke-kicker"><i></i> L-06 // CAMPO // ATIVO</span>
-          <h1>LUKE <em>RETORNA.</em></h1>
-          <p>
-            Ele conhece os caminhos seguros. A parte difícil não é encontrar a saída — é carregar
-            cada pessoa que não chegou até ela.
-          </p>
-          <div class="luke-hero__metrics" aria-label="Resumo do arquivo">
-            <span>STATUS // OPERACIONAL</span>
-            <span>FUNÇÃO // ROTAS</span>
-            <span>CAMPO // ESTRATÉGIA</span>
-          </div>
+          <span class="luke-kicker"><i></i> L-06 // INTELIGÊNCIA E TECNOLOGIA // ATIVO</span>
+          <h1>LUKE <em>CARVER.</em></h1>
+          <p>Antes de abrir uma porta, ele já encontrou três caminhos até ela — e preparou o equipamento para que todos possam voltar.</p>
+          <div class="luke-hero__metrics" aria-label="Resumo do arquivo"><span>ORIGEM // FBI</span><span>FUNÇÃO // INTELIGÊNCIA</span><span>ESPECIALIDADE // ROTAS E EQUIPAMENTO</span></div>
         </div>
-
         <div class="luke-hero__media" data-reveal>
-          <img
-            src="img-hellsing/luke-presente.png"
-            alt="Luke reparando equipamento de campo entre ruínas"
-          />
+          <img src="img-hellsing/luke-presente.png" alt="Luke Carver trabalhando com equipamento de campo entre as ruínas" />
           <span class="luke-hero__file" aria-hidden="true">L-06</span>
         </div>
       </header>
 
       <section class="luke-aftermath" aria-labelledby="luke-aftermath-title">
-        <div class="luke-section-heading" data-reveal>
-          <span class="luke-kicker">DEPOIS DO DIA D // LEITURA DE TERRENO</span>
-          <h2 id="luke-aftermath-title">RUÍNAS VIRARAM<br /><em>CAMINHOS.</em></h2>
-        </div>
-
+        <div class="luke-section-heading" data-reveal><span class="luke-kicker">ARQUIVO PESSOAL // DO FBI AO PRESENTE</span><h2 id="luke-aftermath-title">INTELIGÊNCIA<br /><em>EM MOVIMENTO.</em></h2></div>
         <article class="luke-aftermath__story" data-reveal>
-          <p>
-            Luke passou os primeiros anos guiando civis por túneis, florestas queimadas e cidades
-            sem nome. Aprendeu a ler vento, ferrugem e silêncio como outros liam mapas.
-          </p>
-          <p>
-            Cada rota segura nasceu de uma travessia que não foi. As marcas em seu mapa representam
-            pessoas, abrigos e equipes que desapareceram antes que pudesse retornar.
-          </p>
-          <blockquote>“Encontrar a saída é fácil. Difícil é aceitar quem não chegou até ela.”</blockquote>
+          <p>Luke trabalhou na inteligência e na área de tecnologia do FBI ao lado de Jack. Lia caminhos, planejava rotas alternativas e desenvolvia armas e equipamentos para as necessidades reais de campo. Era perito no que fazia: não se satisfazia com uma solução que funcionasse apenas uma vez ou dependesse de uma única saída.</p>
+          <p>Quando Jack deixou o FBI, Luke permaneceu no Bureau. A amizade dos dois não dependia da mesma insígnia; continuaram se entendendo com a confiança de quem já havia dividido decisões difíceis. Anos depois, Jack voltou com uma proposta: ocupar um lugar na organização que estava montando. Luke aceitou e levou para os Hellsings o conhecimento técnico, a inteligência de rotas e a capacidade de transformar uma ideia em ferramenta.</p>
+          <blockquote>“Um plano só está pronto quando também sabemos como sair.”</blockquote>
         </article>
-
         <aside class="luke-aftermath__card" data-reveal aria-label="Ficha técnica de Luke">
           <span>FICHA TÉCNICA // L-06</span>
-          <dl>
-            <div><dt>NOME REGISTRADO</dt><dd>LUKE CARVER</dd></div>
-            <div><dt>FUNÇÃO ATUAL</dt><dd>MAPAS / ROTAS / ESTRATÉGIA</dd></div>
-            <div><dt>ESPECIALIDADE</dt><dd>CAMPO / SOBREVIVÊNCIA</dd></div>
-            <div><dt>CÉLULA</dt><dd>FORMAÇÃO DE CAMPO</dd></div>
-          </dl>
-          <small>COORDENADAS SENSÍVEIS NÃO SÃO TRANSMITIDAS PELO RÁDIO.</small>
+          <dl><div><dt>NOME REGISTRADO</dt><dd>LUKE CARVER</dd></div><div><dt>FORMAÇÃO</dt><dd>INTELIGÊNCIA / TECNOLOGIA FBI</dd></div><div><dt>ESPECIALIDADE</dt><dd>ROTAS / EQUIPAMENTO</dd></div><div><dt>FUNÇÃO ATUAL</dt><dd>ESTRATÉGIA DE CAMPO</dd></div></dl>
+          <small>PROJETOS E ROTAS SENSÍVEIS // ACESSO RESTRITO</small>
         </aside>
       </section>
 
-      <section class="luke-skills" aria-labelledby="luke-skills-title">
-        <header class="luke-skills__head" data-reveal>
-          <div>
-            <span class="luke-kicker">PROTOCOLOS DE TRAVESSIA</span>
-            <h2 id="luke-skills-title">NÃO É SÓ<br /><em>CHEGAR VIVO.</em></h2>
-          </div>
-          <p>
-            Rotas não são linhas num papel. Para Luke, cada uma é uma decisão sobre quem vai
-            atravessar, o que pode ser levado e quando é preciso voltar.
-          </p>
-        </header>
+      <section class="luke-career" aria-labelledby="luke-career-title">
+        <div class="luke-career__header" data-reveal>
+          <span class="luke-kicker">CRONOLOGIA OPERACIONAL // L-06</span>
+          <h2 id="luke-career-title">CADA CAMINHO<br /><em>COMEÇA ANTES.</em></h2>
+          <p>A trajetória de Luke não começa com o colapso. Começa nos anos em que ele e Jack aprenderam a confiar no trabalho um do outro, muito antes de existir um bunker ou um mapa das ruínas.</p>
+        </div>
+        <div class="luke-career__timeline">
+          <article class="luke-career__entry" data-reveal><span class="luke-career__index">01 // FBI</span><div>
+            <h3>O homem por trás das rotas</h3>
+            <p>No FBI, Luke atuava em inteligência e tecnologia. Enquanto Jack conduzia a equipe, Luke procurava acessos alternativos, avaliava os caminhos de entrada e saída e preparava soluções para que uma mudança de cenário não deixasse os agentes sem opção. Seu trabalho era pensar no terreno antes de a equipe pisar nele.</p>
+            <p>Também criava e aperfeiçoava armas e equipamentos para uso operacional. Para Luke, inventar não era exibir uma peça nova: era resolver um problema concreto, testar limites e garantir que a ferramenta continuasse útil quando o plano original falhasse.</p>
+          </div></article>
+          <article class="luke-career__entry luke-career__entry--resgate" data-reveal><span class="luke-career__index">02 // MISSÃO MARCANTE</span><div>
+            <span class="luke-career__proposal">OPERAÇÃO RESGATE // RECONSTRUÇÃO NARRATIVA REVISÁVEL</span>
+            <h3>Uma vida entre a equipe e a saída</h3>
+            <p>O filho do governador foi sequestrado, e Jack assumiu a missão de trazê-lo de volta. Luke trabalhou a inteligência da operação: em vez de entregar à equipe uma única linha no mapa, preparou caminhos alternativos e considerou como retirar o garoto caso a chegada ou a saída planejada deixasse de ser possível.</p>
+            <p>Quando a situação mudou, Jack confiou nas informações de Luke e ajustou a abordagem. O resgate terminou com o filho do governador de volta em segurança. A missão passou a ser lembrada não por uma demonstração de força, mas pelo modo como os dois completaram o trabalho sem deixar a equipe presa a um plano que já não servia.</p>
+            <p class="luke-career__note">O sequestro e o resgate conduzido por Jack são o núcleo definido para esta missão. Ainda ficam abertos o local, a duração, os participantes adicionais, os detalhes da operação e se ela ocorreu no FBI ou nos primeiros anos dos Hellsings.</p>
+          </div></article>
+          <article class="luke-career__entry" data-reveal><span class="luke-career__index">03 // O CONVITE</span><div>
+            <h3>Jack saiu. Luke ficou.</h3>
+            <p>Quando Jack deixou o FBI, Luke continuou no Bureau. Alguns anos depois, Jack o procurou de novo: estava formando os Hellsings e queria Luke ao seu lado. A oferta não precisou de um discurso longo. Os dois já conheciam o valor do trabalho um do outro e sabiam que a confiança construída no FBI sobreviveria à mudança de uniforme.</p>
+            <p>Luke aceitou. Entre os Hellsings, passou a unir inteligência, leitura de rotas e desenvolvimento de equipamentos em uma estrutura independente, criada por Jack para cumprir missões que exigiam preparo, discrição e responsabilidade.</p>
+          </div></article>
+          <article class="luke-career__entry" data-reveal><span class="luke-career__index">04 // DIA D</span><div>
+            <h3>O mapa antigo deixou de valer</h3>
+            <p>Com o Dia D, as rotas mudaram de sentido. Ruas ficaram bloqueadas, comunicações caíram e cada plano dependia de sinais que podiam desaparecer. Luke levou ao novo cenário a mesma disciplina que usava no FBI: conferir o caminho, preparar uma alternativa e não confundir uma linha desenhada com uma garantia.</p>
+            <p>Quando Jack ordenou a ida ao bunker, Luke estava com Imani e as filhas, Asha e Nyla. Jack saiu para buscar a família Carver, Naomi, Joey e outras pessoas que ainda estavam no caminho. Luke manteve os seus juntos e avançou com o grupo. A passagem secreta que permitiu chegar ao bunker era conhecida apenas por Jack; Luke não a descobriu, confiou na liderança dele e seguiu pelo acesso indicado.</p>
+          </div></article>
+          <article class="luke-career__entry" data-reveal><span class="luke-career__index">05 // BUNKER E EXTINÇÃO</span><div>
+            <h3>Quando sobreviver virou um trabalho coletivo</h3>
+            <p>Durante o longo confinamento, o conhecimento de Luke em tecnologia ganhou outro propósito: manter equipamentos úteis, organizar informações e ajudar a equipe a entender os acessos do bunker. Quando os Hellsings voltaram à superfície, os mapas do mundo anterior já não bastavam. Ele passou a observar o terreno, registrar mudanças e traçar rotas que pudessem ser verificadas por quem viesse depois.</p>
+            <p>No presente, Luke ajuda a planejar deslocamentos, reconhecer passagens e decidir quando contornar ou recuar. Seus registros distinguem abrigo confirmado, rota instável e lugar de onde alguém não retornou. Ele não transforma ausência em estatística: conserva a marca para que ninguém seja esquecido.</p>
+          </div></article>
+        </div>
+        <div class="luke-career__record" data-reveal><span>REGISTRO DE SERVIÇO // NÚMEROS NÃO CONSOLIDADOS</span><p>O arquivo confirma funções e operações marcantes, mas não contém totais confiáveis de missões, fracassos ou pessoas salvas por Luke. As contagens ficam em aberto até serem definidas na história.</p></div>
+      </section>
 
+      <section class="luke-skills" aria-labelledby="luke-skills-title">
+        <header class="luke-skills__head" data-reveal><div><span class="luke-kicker">COMPETÊNCIAS PRESERVADAS</span><h2 id="luke-skills-title">NÃO É SÓ<br /><em>CHEGAR VIVO.</em></h2></div><p>Inteligência, tecnologia e leitura de campo servem ao mesmo propósito: manter uma alternativa quando a primeira resposta deixa de funcionar.</p></header>
         <div class="luke-skills__grid">
-          <article data-reveal>
-            <span>01</span>
-            <h3>Leitura de terreno</h3>
-            <p>Vento, ferrugem e silêncio revelam o que uma rota ainda não contou.</p>
-          </article>
-          <article data-reveal>
-            <span>02</span>
-            <h3>Mapas e rotas</h3>
-            <p>Marca passagens seguras e remove coordenadas quando elas passam a ameaçar alguém.</p>
-          </article>
-          <article data-reveal>
-            <span>03</span>
-            <h3>Sobrevivência de campo</h3>
-            <p>Mantém a travessia possível quando abrigo, comunicação e tecnologia falham.</p>
-          </article>
-          <article data-reveal>
-            <span>04</span>
-            <h3>Formação de campo</h3>
-            <p>Ao lado de Hellen e Naomi, transforma informação, cobertura e terreno em uma saída.</p>
-          </article>
+          <article data-reveal><span>01</span><h3>Inteligência de rotas</h3><p>Analisa acessos, alternativas e pontos de saída antes de mover a equipe.</p></article>
+          <article data-reveal><span>02</span><h3>Invenção de campo</h3><p>Desenvolve e aperfeiçoa armas e equipamentos para necessidades operacionais reais.</p></article>
+          <article data-reveal><span>03</span><h3>Adaptação técnica</h3><p>Recupera, ajusta e mantém ferramentas úteis quando a tecnologia convencional falha.</p></article>
+          <article data-reveal><span>04</span><h3>Estratégia conjunta</h3><p>Transforma informação em opções claras para Jack e para a equipe em campo.</p></article>
         </div>
       </section>
 
       <section class="luke-terminal" aria-labelledby="luke-terminal-title">
-        <div class="luke-terminal__image" data-reveal>
-          <img
-            src="img-hellsing/hellen-naomi-luke-presente.png"
-            alt="Hellen Wren, Naomi e Luke analisando equipamento e rotas de campo"
-          />
-        </div>
+        <div class="luke-terminal__image" data-reveal><img src="img-hellsing/hellen-naomi-luke-presente.png" alt="Hellen Wren, Naomi e Luke analisando equipamento e rotas de campo" /></div>
         <div class="luke-terminal__copy" data-reveal>
-          <span class="luke-kicker">MAPA DE CAMPO // ACESSO PARCIAL</span>
-          <h2 id="luke-terminal-title">TODA ROTA<br /><em>COBRA ALGO.</em></h2>
-          <p>
-            Luke não trata um mapa como promessa. Cada linha confirma uma passagem possível, mas
-            também registra o que ficou fora dela.
-          </p>
-          <div class="luke-terminal__readout" aria-live="polite">
-            <span data-luke-channel-label>ROTA NORTE // TRÊS SAÍDAS CONFIRMADAS</span>
-            <strong data-luke-channel-copy>
-              A rota norte permanece limpa por enquanto. O campo muda; a equipe precisa mudar junto.
-            </strong>
+          <span class="luke-kicker">MAPA DE CAMPO // ACESSO PARCIAL</span><h2 id="luke-terminal-title">TODA ROTA<br /><em>COBRA ALGO.</em></h2>
+          <p>Luke não trata um mapa como promessa. Cada linha confirma uma passagem possível, mas também registra o que ficou fora dela.</p>
+          <div class="luke-terminal__readout" aria-live="polite"><span data-luke-channel-label>ROTA NORTE // TRÊS SAÍDAS CONFIRMADAS</span><strong data-luke-channel-copy>A rota norte permanece limpa por enquanto. O campo muda; a equipe precisa mudar junto.</strong></div>
+          <div class="luke-radio" data-luke-radio data-signal="clear" aria-label="Receptor de rádio de campo">
+            <div class="luke-radio__readout"><span>RECEPTOR DE CAMPO // SINTONIA ATIVA</span><strong><span data-luke-frequency>146.8</span><small>MHz</small></strong></div>
+            <div class="luke-radio__meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <span class="luke-radio__status"><i></i><span data-luke-radio-status aria-live="polite">ESCUTA ATIVA // SINAL FRACO</span></span>
           </div>
-          <div class="luke-terminal__controls" aria-label="Selecionar leitura de rota">
-            <button class="is-active" type="button" data-luke-channel="0">NORTE</button>
-            <button type="button" data-luke-channel="1">TRAVESSIA</button>
-            <button type="button" data-luke-channel="2">L-0</button>
-          </div>
+          <div class="luke-terminal__controls" aria-label="Selecionar leitura de rota"><button class="is-active" type="button" data-luke-channel="0">NORTE</button><button type="button" data-luke-channel="1">TRAVESSIA</button><button type="button" data-luke-channel="2">L-0</button></div>
         </div>
       </section>
 
       <section class="luke-family" aria-labelledby="luke-family-title">
-        <figure class="luke-family__media" data-reveal>
-          <img src="img-hellsing/luke-presente-familia.png" alt="Luke Carver ao lado de sua família no presente" />
-          <figcaption>ARQUIVO PROTEGIDO // COORDENADAS OCULTAS</figcaption>
-        </figure>
-        <div class="luke-family__copy" data-reveal>
-          <span class="luke-kicker">O QUE PERMANECEU // ACESSO RESTRITO</span>
-          <h2 id="luke-family-title">O MOTIVO<br /><em>PARA VOLTAR.</em></h2>
-          <p>
-            Luke e Imani já eram casados e tinham Asha e Nyla antes do Dia D. Suas raízes são
-            africanas. Agora ele não marca a família nos mapas nem repete pelo rádio onde estão;
-            algumas rotas existem apenas para mantê-los longe da guerra.
-          </p>
-          <a href="luke-familia.html">ABRIR ARQUIVO DE LUKE CARVER E SUA FAMÍLIA <b>→</b></a>
-        </div>
+        <figure class="luke-family__media" data-reveal><img src="img-hellsing/luke-presente-familia.png" alt="Luke Carver ao lado de sua família no presente" /><figcaption>ARQUIVO PROTEGIDO // COORDENADAS OCULTAS</figcaption></figure>
+        <div class="luke-family__copy" data-reveal><span class="luke-kicker">O QUE PERMANECEU // ACESSO RESTRITO</span><h2 id="luke-family-title">O MOTIVO<br /><em>PARA VOLTAR.</em></h2>
+          <p>Luke e Imani já eram casados e tinham Asha e Nyla antes do Dia D. Suas raízes são africanas. Agora ele não marca a família nos mapas nem repete pelo rádio onde estão; algumas rotas existem apenas para mantê-los longe da guerra.</p>
+          <a href="luke-familia.html">ABRIR ARQUIVO DE LUKE CARVER E SUA FAMÍLIA <b>→</b></a></div>
       </section>
 
       <section class="luke-records" aria-labelledby="luke-records-title">
-        <div data-reveal>
-          <span class="luke-kicker">ARQUIVO VISUAL // PRESENTE</span>
-          <h2 id="luke-records-title">SETE REGISTROS.<br /><em>UMA DIREÇÃO.</em></h2>
-          <p>
-            Equipamento, vínculos e trabalho de campo: os registros preservados mostram os caminhos
-            que Luke ajuda a manter abertos.
-          </p>
-        </div>
-        <a class="luke-records__link" href="luke-registros.html" data-reveal>
-          <span>ABRIR REGISTROS DO PRESENTE</span><b>→</b><small>L-06 // MAPA PRESERVADO</small>
-        </a>
+        <div data-reveal><span class="luke-kicker">ARQUIVO VISUAL // PRESENTE</span><h2 id="luke-records-title">SETE REGISTROS.<br /><em>UMA DIREÇÃO.</em></h2><p>Equipamento, vínculos e trabalho de campo: os registros preservados mostram os caminhos que Luke ajuda a manter abertos.</p></div>
+        <a class="luke-records__link" href="luke-registros.html" data-reveal><span>ABRIR REGISTROS DO PRESENTE</span><b>→</b><small>L-06 // MAPA PRESERVADO</small></a>
       </section>
     </main>
-
-    <footer class="luke-footer">
-      <a href="naomi-presente.html">← Naomi</a>
-      <a href="faccao-hellsings-presente.html">Base Hellsings</a>
-      <a href="index.html#sobreviventes">Sobreviventes →</a>
-    </footer>
-
-    <script src="era-extincao-presente/luke-presente.js"></script>
+    <footer class="luke-footer"><a href="naomi-presente.html">← Naomi</a><a href="faccao-hellsings-presente.html">Base Hellsings</a><a href="index.html#sobreviventes">Sobreviventes →</a></footer>
+    <audio data-character-theme autoplay loop preload="auto" hidden aria-hidden="true">
+      <source src="audio/theme2-luke-presente.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="js/personagem-theme.js" defer></script>
+    <script src="era-extincao-presente/luke-presente.js?v=20261113-luke-signal"></script>
     <script src="js/site-cursor.js" defer></script>
   </body>
 </html>
