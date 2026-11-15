@@ -777,3 +777,9 @@
 - O dossiê e as notas de lore do projeto foram alinhados; a frase nova de Dimitri está marcada como proposta para revisão.
 - As treze imagens novas de `img-dimitri/` foram incorporadas à galeria independente, que agora possui dezesseis registros. Não há duplicatas exatas; cenas parecidas de negociação e acampamento mostram momentos diferentes.
 - As miniaturas se reorganizam em quatro colunas no desktop e duas no celular. A sequência do carrossel permanece sem cronologia definida.
+
+## Atualização de 15 de novembro de 2026 — abertura e efeitos de Dimitri
+
+- `dimitri-arquivo.html` recebeu a abertura com `video/abertura-dimitri-presente.mp4`. O vídeo é mudo e inteiro; a frase, o nome e a função aparecem depois da cena.
+- Poeira fria em movimento, varredura e falhas breves de sinal foram adicionadas à página. Os efeitos não bloqueiam interação e atendem `prefers-reduced-motion`.
+- A atualização foi publicada em `main` no commit `1e4956f`.

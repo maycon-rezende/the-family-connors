@@ -49,6 +49,7 @@ Os Hellsings são uma unidade privada de operações especiais fundada por Jack 
 A organização possui retratos oficiais para toda a formação e uma base subterrânea apresentada em doze setores visuais. A tela principal contém um portal pela entrada secreta do bunker; a página dos Hellsings continua a transição pelo interior da instalação. O centro de comando também funciona como sistema narrativo, com indicadores operacionais, registros provisórios de missões, fórum interno e geração local de pré-contratos.
 
 - O dossiê de Dimitri agora registra o nome completo **Dimitri Volkov Belov**, o apelido **Dimmi**, sua passagem confirmada pela KGB e a relação com a filha Anya Belova (35). O texto explora o luto pela esposa e pela filha mais nova e a tensão entre protegê-la e respeitar sua autonomia, sem fixar nomes ou circunstâncias que ainda estão em aberto. A galeria independente reúne 16 registros, incluindo as treze novas imagens de `img-dimitri/`, sem duplicatas exatas.
+- O dossiê de Dimitri abre com `video/abertura-dimitri-presente.mp4`, em tela cheia e sem áudio; frase, nome e função surgem ao fim. A página também tem poeira em movimento e breves interferências de sinal, sem bloquear a navegação e respeitando movimento reduzido. Publicado em `main` no commit `1e4956f`.
 
 ## Aplicativo e identidade oficial — atualização de 24/08/2026
 
@@ -75,6 +76,7 @@ A organização possui retratos oficiais para toda a formação e uma base subte
 - [GUIA-TECNICO-INTRO.md](GUIA-TECNICO-INTRO.md): passo a passo da intro, código, sincronização, efeitos, mídias e pontos de manutenção.
 - [GUIA-TECNICO-HERDEIROS.md](GUIA-TECNICO-HERDEIROS.md): ordem oficial, páginas, cursores, efeitos e galerias dos descendentes.
 - [REGISTRO-TECNICO-ATUAL.md](REGISTRO-TECNICO-ATUAL.md): mapa detalhado das páginas, código, comandos, validação, galerias e manutenção atual.
+- [ATUALIZACAO-2026-11-15-DIMITRI.md](ATUALIZACAO-2026-11-15-DIMITRI.md): abertura em vídeo, efeitos de atmosfera e publicação do dossiê de Dimitri.
 - [ESCOPO-ATLAS-REGIOES.md](ESCOPO-ATLAS-REGIOES.md): planejamento narrativo e técnico da página independente de regiões e rotas.
 - [ROTA-BRADDOCK-PROPOSTA.md](ROTA-BRADDOCK-PROPOSTA.md): proposta revisável para o encontro presencial de Mick com os Hellsings, uma operação seguinte e a ligação com a busca pela terra livre.
 
@@ -100,10 +102,16 @@ Com Node.js instalado, execute `node scripts/auditar-site.js` na raiz do projeto
 - Acessibilidade compartilhada inclui foco visível, navegação de teclado, semântica do menu móvel e suporte a `prefers-reduced-motion`.
 - Antes do domínio público, substituir as mídias temporárias e concluir o checklist de direitos em `DIREITOS-AUTORais.md`; só depois solicitar o AdSense.
 
-Última atualização: 9 de novembro de 2026.
+Última atualização: 15 de novembro de 2026.
 
 ## Abertura do Jack — 9 de novembro de 2026
 
 - `jack-presente.html` usa `video/abertura2-jack-presente.mp4` na sequência de presença, mantendo a faixa `audio/theme-jack-presente.mp3` como único áudio.
 - O vídeo dura aproximadamente 10 segundos, fica sem loop e começa conforme a duração da faixa para terminar junto com a entrada musical aos 14 segundos. A sequência de frases e o surgimento do nome permanecem sincronizados pelo áudio.
 - `img-presente/jack-abertura-acampamento-v2.png` aparece como quadro de carregamento correspondente à cena do acampamento à luz do dia.
+
+## Atualização de Dimitri — 15 de novembro de 2026
+
+- A página ganhou abertura em vídeo com revelação da frase, do nome e da função de Dimitri ao final da cena.
+- Poeira suspensa, varredura e falhas sutis de sinal dão movimento à página inteira sem bloquear cliques; a animação respeita `prefers-reduced-motion`.
+- O dossiê e a abertura foram publicados em `main`, no commit `1e4956f`.

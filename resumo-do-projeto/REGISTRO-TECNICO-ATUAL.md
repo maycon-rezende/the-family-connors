@@ -1,6 +1,6 @@
 # Registro técnico atual — A Era da Extinção
 
-Atualizado em **9 de novembro de 2026**.
+Atualizado em **15 de novembro de 2026**.
 
 Este documento é o mapa operacional do projeto no estado atual. Ele registra o que já foi implementado, onde cada parte do código vive, como as páginas conversam entre si, quais comandos foram usados para validar o site e como continuar o trabalho sem apagar a identidade visual já construída.
 
@@ -718,6 +718,13 @@ Antes de `git add -A`, conferir arquivos novos e garantir que nenhum vídeo/arqu
 - `era-extincao-presente/luke-opening.css` e `luke-opening.js` controlam enquadramento, revelação e encerramento da abertura, com fallback para falha de mídia, Escape e preferência por movimento reduzido.
 - `audio/theme-luke-presente.mp3` toca em loop ao entrar no perfil, sem controle visível, usando `js/personagem-theme.js` para tentar iniciar a reprodução e retomá-la após interação se o navegador bloquear autoplay.
 - `era-extincao-presente/luke-presente.css` cria poeira e rajadas de areia em tons âmbar por toda a página; a camada não bloqueia cliques e respeita `prefers-reduced-motion`.
+
+## Dossiê e abertura de Dimitri — 15 de novembro de 2026
+
+- `dimitri-arquivo.html` monta a abertura cinematográfica e carrega a camada visual da página. `era-extincao-presente/dimitri-opening.css` e `dimitri-opening.js` controlam o vídeo `video/abertura-dimitri-presente.mp4`, a revelação da frase/nome/função, o encerramento e o estado de sessão. O vídeo fica mudo, centralizado em `contain`, e respeita movimento reduzido.
+- `era-extincao-presente/dimitri-arquivo.css` e `dimitri-arquivo.js` criam partículas de poeira fria em canvas, linhas de varredura e breves falhas horizontais de sinal. A camada usa `pointer-events: none`; a taxa de partículas é limitada e a animação pausa quando a aba fica oculta.
+- Com movimento reduzido, as partículas ficam estáticas e as animações de interferência são desativadas.
+- A publicação foi feita em `main` no commit `1e4956f`, com os seis arquivos da página e da abertura de Dimitri, incluindo o vídeo.
 
 ## Atualização de 14 de novembro de 2026 — áudio e imagens do presente
 
