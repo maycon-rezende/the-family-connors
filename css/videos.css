@@ -185,6 +185,42 @@ main {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+.sequence-archive {
+  margin-top: 7rem;
+}
+.sequence-heading {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+.sequence-heading > span {
+  color: var(--gold);
+  font:
+    600 0.45rem/1 'Cinzel',
+    serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.sequence-heading h2 {
+  margin: 1rem 0;
+  color: var(--bone);
+  font:
+    400 clamp(2.8rem, 7vw, 5rem) / 0.95 'Bebas Neue',
+    sans-serif;
+}
+.sequence-heading p {
+  color: var(--ash);
+  line-height: 1.7;
+}
+.sequence-file {
+  border-color: rgba(201, 150, 58, 0.3);
+}
+.sequence-file .video-info {
+  border-left-color: rgba(201, 150, 58, 0.25);
+}
+.sequence-file .video-info > span {
+  color: var(--gold);
+}
 .future-files {
   margin-top: 4rem;
   padding: 3rem;
@@ -204,6 +240,9 @@ main {
   .video-info {
     border-left: 0;
     border-top: 1px solid rgba(212, 120, 154, 0.14);
+  }
+  .sequence-file .video-info {
+    border-top-color: rgba(201, 150, 58, 0.25);
   }
   .video-shell {
     min-height: 320px;
