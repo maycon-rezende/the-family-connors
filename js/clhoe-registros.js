@@ -44,6 +44,48 @@
       src: 'img-hellsing/clhoe-familia-presente.png',
       alt: 'Chloe com Darius e Micah no presente',
     },
+    {
+      code: 'C-07.7',
+      title: 'Conferência de suprimentos',
+      caption: 'Chloe examina um frasco antes de guardá-lo no posto de atendimento.',
+      src: 'img-hellsing/clhoe-presente1.png',
+      alt: 'Chloe inspecionando um frasco de medicamento no acampamento',
+    },
+    {
+      code: 'C-07.8',
+      title: 'Cuidado sob a lona',
+      caption: 'Chloe protege o ferimento de uma sobrevivente enquanto o posto continua em atividade.',
+      src: 'img-hellsing/clhoe-presente2.png',
+      alt: 'Chloe fazendo um curativo no braço de uma sobrevivente',
+    },
+    {
+      code: 'C-07.9',
+      title: 'Kit de campo',
+      caption: 'Com o kit aberto, Chloe separa o que será necessário para atender quem chegou ferido.',
+      src: 'img-hellsing/clhoe-presente3.png',
+      alt: 'Chloe organizando materiais médicos para uma sobrevivente ferida',
+    },
+    {
+      code: 'C-07.10',
+      title: 'Depois do atendimento',
+      caption: 'Chloe acompanha uma sobrevivente pelo acampamento após o cuidado inicial.',
+      src: 'img-hellsing/clhoe-presente4.png',
+      alt: 'Chloe caminhando pelo acampamento ao lado de uma sobrevivente',
+    },
+    {
+      code: 'C-07.11',
+      title: 'Faixa renovada',
+      caption: 'Chloe ajusta o curativo de uma pessoa ferida no posto de campo.',
+      src: 'img-hellsing/chloe-presente2.png',
+      alt: 'Chloe enfaixando a perna de uma pessoa ferida',
+    },
+    {
+      code: 'C-07.12',
+      title: 'Posto de cuidado',
+      caption: 'Entre os suprimentos médicos, Chloe se prepara para continuar atendendo o grupo.',
+      src: 'img-hellsing/clhoe-familia-presente2.png',
+      alt: 'Chloe em pé no posto médico do acampamento',
+    },
   ];
 
   const stage = document.querySelector('[data-watch-stage]');

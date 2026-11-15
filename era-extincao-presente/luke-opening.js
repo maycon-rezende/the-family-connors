@@ -5,6 +5,18 @@
   const video = opening?.querySelector('[data-luke-opening-video]');
   if (!opening || !video) return;
 
+  const openingKey = 'ede-profile-opening-seen:luke';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    opening.hidden = true;
+    video.pause();
+    document.body.classList.remove('luke-opening-active');
+    return;
+  }
+
   const pageRegions = [...document.querySelectorAll('.luke-nav, main, .luke-footer')];
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -16,6 +28,9 @@
   function closeOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(revealTimer);
     window.clearTimeout(closeTimer);
     video.pause();

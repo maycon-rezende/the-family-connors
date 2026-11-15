@@ -5,6 +5,18 @@
   const video = opening?.querySelector('[data-bobby-opening-video]');
   if (!opening || !video) return;
 
+  const openingKey = 'ede-profile-opening-seen:bobby';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    opening.hidden = true;
+    video.pause();
+    document.body.classList.remove('bobby-opening-active');
+    return;
+  }
+
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const pageRegions = [
@@ -18,6 +30,9 @@
   function finishOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(revealTimer);
     window.clearTimeout(fallbackTimer);
     video.pause();

@@ -5,6 +5,18 @@
   const video = opening?.querySelector('[data-naomi-opening-video]');
   if (!opening || !video) return;
 
+  const openingKey = 'ede-profile-opening-seen:naomi';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    opening.hidden = true;
+    video.pause();
+    document.body.classList.remove('naomi-opening-active');
+    return;
+  }
+
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reducedMotion) return;
 
@@ -15,6 +27,9 @@
   function finishOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(fallbackTimer);
     video.pause();
     opening.classList.add('is-leaving');

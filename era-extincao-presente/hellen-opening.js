@@ -6,6 +6,7 @@
   const video = opening?.querySelector('[data-hellen-opening-video]');
   const pageRegions = [...document.querySelectorAll('.hellen-grid, .hellen-nav, main, .hellen-footer')];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const openingKey = 'ede-profile-opening-seen:hellen';
 
   const clearOpening = () => {
     root.classList.remove('hellen-opening-pending');
@@ -19,6 +20,15 @@
     return;
   }
 
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    clearOpening();
+    return;
+  }
+
   let finished = false;
   let revealTimer;
   let closeTimer;
@@ -26,6 +36,9 @@
   function closeOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(revealTimer);
     window.clearTimeout(closeTimer);
     video.pause();

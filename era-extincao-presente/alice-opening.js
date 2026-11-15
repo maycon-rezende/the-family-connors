@@ -7,6 +7,19 @@
     documentRoot.classList.remove('alice-opening-pending');
     return;
   }
+
+  const openingKey = 'ede-profile-opening-seen:alice';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    opening.hidden = true;
+    opening.querySelector('video')?.pause();
+    documentRoot.classList.remove('alice-opening-pending');
+    document.body.classList.remove('alice-opening-active');
+    return;
+  }
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     documentRoot.classList.remove('alice-opening-pending');
     return;
@@ -25,6 +38,9 @@
   function closeOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(closeTimer);
     video.pause();
     opening.classList.add('is-leaving');

@@ -36,8 +36,9 @@ a { color:inherit; }
 .john-hero__copy { display:flex; flex-direction:column; justify-content:flex-end; padding:clamp(5rem,10vw,9rem) clamp(1.5rem,6.5vw,7rem) clamp(3rem,8vw,7rem); }
 .john-kicker { display:block; color:var(--john-cyan); font:500 .5rem/1.35 'DM Mono',monospace; letter-spacing:.2em; text-transform:uppercase; }
 .john-kicker i { display:inline-block; width:7px; height:7px; margin-right:.55rem; border-radius:50%; background:var(--john-copper); box-shadow:0 0 12px var(--john-copper); animation:john-pulse 1.8s ease-in-out infinite; }
-.john-hero h1 { margin:1rem 0 1.35rem; color:var(--john-paper); font:800 clamp(5.35rem,10vw,10.3rem)/.73 'Barlow Condensed',sans-serif; letter-spacing:-.058em; text-transform:uppercase; }
+.john-hero h1 { margin:1rem 0 1rem; color:var(--john-paper); font:800 clamp(4.8rem,8.4vw,8.8rem)/.78 'Barlow Condensed',sans-serif; letter-spacing:-.058em; text-transform:uppercase; }
 .john-hero h1 em { display:block; color:transparent; font-style:normal; -webkit-text-stroke:1px var(--john-cyan); text-shadow:0 0 29px rgba(150,217,225,.21); }
+.john-hero__copy>.john-hero__epithet { max-width:none; margin:0 0 .8rem; color:var(--john-copper); font:500 .53rem/1.4 'DM Mono',monospace; letter-spacing:.2em; }
 .john-hero__copy>p { max-width:590px; margin:0; color:#d6dfdb; font:500 clamp(1rem,1.35vw,1.12rem)/1.72 Manrope,Arial,sans-serif; }
 .john-hero__metrics { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:2rem; }.john-hero__metrics span { padding:.72rem .78rem; border:1px solid rgba(150,217,225,.36); background:rgba(12,26,34,.72); color:#d7edf0; font:500 .45rem/1.2 'DM Mono',monospace; letter-spacing:.11em; }
 .john-memorial-link { align-self:flex-start; display:inline-flex; align-items:center; gap:1.2rem; margin-top:1rem; padding:.75rem .85rem; border:1px solid rgba(214,154,88,.48); background:rgba(8,16,21,.72); color:#e8d3b6; font:500 .48rem/1.35 'DM Mono',monospace; letter-spacing:.12em; text-decoration:none; transition:border-color .2s,background .2s; }.john-memorial-link:hover,.john-memorial-link:focus-visible { border-color:var(--john-cyan); background:rgba(150,217,225,.1); }.john-memorial-link span { color:var(--john-copper); }
@@ -75,3 +76,4 @@ a { color:inherit; }
 .john-family__media figcaption { position:absolute; z-index:1; right:1.2rem; bottom:1rem; left:1.2rem; color:#f1dfc7; font:500 .48rem/1.5 'DM Mono',monospace; letter-spacing:.13em; text-align:right; }
 @media (max-width:1000px) { .john-family { grid-template-columns:1fr; }.john-family__copy { padding:4rem max(1.35rem,7vw); }.john-family__media,.john-family__media img { min-height:clamp(360px,60vw,590px); } }
 @media (max-width:760px) { .john-family__copy { padding:4.3rem 1.25rem; }.john-family__copy h2 { font-size:clamp(3.4rem,15vw,5.3rem); }.john-family__copy p { font-size:.93rem; }.john-family__note { font-size:.42rem; }.john-family__media,.john-family__media img { min-height:280px; height:68vw; max-height:430px; }.john-family__media figcaption { font-size:.42rem; } }
+@media (max-width:760px) { .john-hero h1 { font-size:clamp(3.5rem,15vw,5.6rem); } }

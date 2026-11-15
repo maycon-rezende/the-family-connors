@@ -7,10 +7,16 @@
   const enterMemorial = dedication?.querySelector('[data-memorial-enter]');
   const pageContent = document.querySelectorAll('.memorial-nav, main, .memorial-footer');
   const musicPositionKey = 'hellsings-memorial-theme-position';
+  const dedicationSeenKey = 'ede-memorial-dedication-seen';
   let dedicationTimer;
 
   const closeDedication = () => {
     if (!dedication || dedication.hidden || dedication.classList.contains('is-leaving')) return;
+    try {
+      sessionStorage.setItem(dedicationSeenKey, '1');
+    } catch {
+      // A dedicatória ainda fecha mesmo quando o armazenamento da sessão está indisponível.
+    }
     window.clearTimeout(dedicationTimer);
     dedication.classList.add('is-leaving');
     document.body.classList.remove('memorial-intro-active');
@@ -32,14 +38,26 @@
   };
 
   if (dedication) {
-    dedication.hidden = false;
-    dedication.classList.add('is-visible');
-    document.body.classList.add('memorial-intro-active');
-    pageContent.forEach((element) => element.setAttribute('inert', ''));
-    enterMemorial?.focus({ preventScroll: true });
-    enterMemorial?.addEventListener('click', closeDedication);
-    document.addEventListener('keydown', skipDedicationOnEscape);
-    dedicationTimer = window.setTimeout(closeDedication, 10500);
+    let dedicationAlreadySeen = false;
+    try {
+      dedicationAlreadySeen = sessionStorage.getItem(dedicationSeenKey) === '1';
+    } catch {
+      // Sem armazenamento, a dedicatória aparece normalmente nesta visita.
+    }
+    if (dedicationAlreadySeen) {
+      dedication.hidden = true;
+      document.body.classList.remove('memorial-intro-active');
+      pageContent.forEach((element) => element.removeAttribute('inert'));
+    } else {
+      dedication.hidden = false;
+      dedication.classList.add('is-visible');
+      document.body.classList.add('memorial-intro-active');
+      pageContent.forEach((element) => element.setAttribute('inert', ''));
+      enterMemorial?.focus({ preventScroll: true });
+      enterMemorial?.addEventListener('click', closeDedication);
+      document.addEventListener('keydown', skipDedicationOnEscape);
+      dedicationTimer = window.setTimeout(closeDedication, 10500);
+    }
   }
 
   if (!music) return;

@@ -4,6 +4,20 @@
   const documentRoot = document.documentElement;
   const opening = document.querySelector('[data-ariani-opening]');
   const video = opening?.querySelector('[data-ariani-opening-video]');
+  const openingKey = 'ede-profile-opening-seen:ariani';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    if (opening) {
+      opening.hidden = true;
+      video?.pause();
+    }
+    documentRoot.classList.remove('ariani-opening-pending');
+    document.body.classList.remove('ariani-opening-active');
+    return;
+  }
   if (!opening || !video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     documentRoot.classList.remove('ariani-opening-pending');
     return;
@@ -25,6 +39,9 @@
   function closeOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(revealTimer);
     window.clearTimeout(closeTimer);
     video.pause();

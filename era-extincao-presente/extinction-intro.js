@@ -236,14 +236,17 @@
     if (finalSequenceStarted) return;
     finalSequenceStarted = true;
     started = true; audio.pause(); current = scenes.length - 1; load(current);
+    skipButton.hidden = true;
     enterButton.hidden = true;
     nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
     copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
     awakening.classList.add('is-running', 'is-finished');
-    status.textContent = 'TRANSMISSÃO CONCLUÍDA';
-    startWind();
+    status.textContent = 'SINAL FINAL // O VENTO SE APROXIMA';
+    window.setTimeout(() => {
+      if (!leaving) startWind();
+    }, 3000);
   }
-  function enter(skipTrailer = false) {
+  function enter() {
     if (leaving) return; leaving = true;
     skipButton.disabled = true;
     enterButton.disabled = true;
@@ -251,10 +254,6 @@
     audio.pause(); windAudio?.pause(); awakening.classList.add('is-leaving');
     try { sessionStorage.setItem('ede-intro-liberada', 'sim'); } catch {}
     const destination = 'index.html?intro=concluida';
-    if (skipTrailer) {
-      location.replace(destination);
-      return;
-    }
     setTimeout(() => { location.href = destination; }, 1700);
   }
   build(); prepareTitle();
@@ -263,7 +262,7 @@
   audio.addEventListener('play', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(render); });
   audio.addEventListener('pause', () => nodes[current]?.querySelector('video')?.pause());
   $('[data-start-cinema]').addEventListener('click', start);
-  skipButton.addEventListener('click', () => enter(true));
+  skipButton.addEventListener('click', finish);
   enterButton.addEventListener('click', () => enter());
   if (cursor && matchMedia('(pointer: fine)').matches) {
     addEventListener('pointermove', (event) => {

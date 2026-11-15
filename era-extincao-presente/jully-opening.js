@@ -10,6 +10,18 @@
     if (opening) opening.hidden = true;
   };
 
+  const openingKey = 'ede-profile-opening-seen:jully';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    removePendingState();
+    document.body.classList.remove('jully-opening-active');
+    video?.pause();
+    return;
+  }
+
   if (!opening || !video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     removePendingState();
     return;
@@ -31,6 +43,9 @@
   function closeOpening() {
     if (finished) return;
     finished = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     window.clearTimeout(revealTimer);
     window.clearTimeout(closeTimer);
     video.pause();

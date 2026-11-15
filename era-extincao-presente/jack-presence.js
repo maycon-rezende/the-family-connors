@@ -10,6 +10,19 @@
     return;
   }
 
+  const openingKey = 'ede-profile-opening-seen:jack';
+  let openingAlreadySeen = false;
+  try {
+    openingAlreadySeen = sessionStorage.getItem(openingKey) === '1';
+  } catch (_) {}
+  if (openingAlreadySeen) {
+    intro.hidden = true;
+    video.pause();
+    documentRoot.classList.remove('jack-opening-pending');
+    document.body.classList.remove('jack-opening-active');
+    return;
+  }
+
   const MUSIC_CUE_SECONDS = 14;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let sequenceStarted = false;
@@ -22,6 +35,9 @@
   function releaseIntro() {
     if (introReleased) return;
     introReleased = true;
+    try {
+      sessionStorage.setItem(openingKey, '1');
+    } catch (_) {}
     if (releaseFailsafe) window.clearTimeout(releaseFailsafe);
     intro.classList.add('is-portrait', 'is-releasing');
     window.setTimeout(() => {

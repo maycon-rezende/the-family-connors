@@ -10,10 +10,44 @@
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="era-extincao-presente/clhoe-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/clhoe-opening.css?v=1" />
+    <script src="era-extincao-presente/clhoe-opening.js?v=1" defer></script>
     <title>Chloe Bennett | Perímetro Vivo</title>
   </head>
   <body class="clhoe-watch">
     <div class="clhoe-skyline" aria-hidden="true"></div>
+    <section
+      class="clhoe-opening"
+      data-clhoe-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="clhoe-opening-title"
+      aria-describedby="clhoe-opening-quote"
+      hidden
+    >
+      <div class="clhoe-opening__backdrop" aria-hidden="true"></div>
+      <video
+        class="clhoe-opening__video"
+        data-clhoe-opening-video
+        muted
+        playsinline
+        autoplay
+        preload="auto"
+        poster="img-hellsing/clhoe-presente.png"
+        aria-hidden="true"
+      >
+        <source src="video/abertura-chloe-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="clhoe-opening__shade" aria-hidden="true"></div>
+      <div class="clhoe-opening__copy">
+        <span class="clhoe-opening__eyebrow">C-07 // RECONHECIMENTO // CAMPO</span>
+        <p id="clhoe-opening-quote">“Enquanto alguém ainda puder voltar para casa, o perímetro continua de pé.”</p>
+        <h2 id="clhoe-opening-title">CHLOE <em>BENNETT.</em></h2>
+        <span class="clhoe-opening__role">VIGILÂNCIA // CUIDADO DE CAMPO // HELLSINGS</span>
+      </div>
+      <span class="clhoe-opening__file" aria-hidden="true">ARQUIVO HELLSINGS // C-07</span>
+    </section>
 
     <nav class="clhoe-nav" aria-label="Navegação do dossiê de Chloe Bennett">
       <a href="luke-presente.html">← Luke</a>
@@ -179,7 +213,7 @@
       <section class="clhoe-records" aria-labelledby="clhoe-records-title">
         <div data-reveal>
           <span class="clhoe-kicker">ARQUIVO VISUAL // PRESENTE</span>
-          <h2 id="clhoe-records-title">SEIS REGISTROS.<br /><em>UM LAR PROTEGIDO.</em></h2>
+          <h2 id="clhoe-records-title">DOZE REGISTROS.<br /><em>UM LAR PROTEGIDO.</em></h2>
           <p>
             O cuidado, a vigília e os vínculos que Chloe mantém vivos — agora com os registros da
             família preservados no mesmo arquivo.
@@ -197,7 +231,12 @@
       <a href="dimitri-arquivo.html">Dimitri →</a>
     </footer>
 
+    <audio data-character-theme autoplay loop preload="auto" hidden aria-hidden="true">
+      <source src="audio/theme-chloe-presente.mp3" type="audio/mpeg" />
+    </audio>
     <script src="era-extincao-presente/clhoe-presente.js"></script>
+    <script src="js/personagem-theme.js" defer></script>
     <script src="js/site-cursor.js" defer></script>
+  <script src="js/page-navigation.js?v=1" defer></script>
   </body>
 </html>
