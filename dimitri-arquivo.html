@@ -6,12 +6,49 @@
     <meta name="theme-color" content="#090d13" />
     <meta name="description" content="Dossiê de Dimitri Volkov Belov: ex-agente russo da KGB, sobrevivente e pai de Anya Belova." />
     <link rel="stylesheet" href="css/site-cursor.css" />
-    <link rel="stylesheet" href="era-extincao-presente/dimitri-arquivo.css" />
+    <link rel="stylesheet" href="era-extincao-presente/dimitri-arquivo.css?v=20261115-atmosphere" />
     <link rel="stylesheet" href="css/present-responsive.css" />
+    <link rel="stylesheet" href="era-extincao-presente/dimitri-opening.css?v=1" />
+    <script src="era-extincao-presente/dimitri-opening.js?v=1" defer></script>
     <title>Dimitri | Código de Retorno</title>
   </head>
   <body class="dimitri-file">
     <div class="dimitri-grid" aria-hidden="true"></div>
+    <div class="dimitri-atmosphere" aria-hidden="true">
+      <canvas data-dimitri-particles></canvas>
+    </div>
+    <section
+      class="dimitri-opening"
+      data-dimitri-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="dimitri-opening-title"
+      aria-describedby="dimitri-opening-quote"
+      hidden
+    >
+      <div class="dimitri-opening__backdrop" aria-hidden="true"></div>
+      <video
+        class="dimitri-opening__video"
+        data-dimitri-opening-video
+        muted
+        playsinline
+        autoplay
+        preload="auto"
+        poster="img-hellsing/dimitri-presente.png"
+        aria-hidden="true"
+      >
+        <source src="video/abertura-dimitri-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="dimitri-opening__shade" aria-hidden="true"></div>
+      <div class="dimitri-opening__copy">
+        <span class="dimitri-opening__eyebrow">D-08 // EX-KGB // SOBREVIVENTE</span>
+        <p id="dimitri-opening-quote">“Não vou escolher o caminho por você, Anya. Só vou garantir que ainda haja um caminho de volta.”</p>
+        <h2 id="dimitri-opening-title">DIMITRI <em>VOLKOV<br />BELOV.</em></h2>
+        <span class="dimitri-opening__role">PAI // EX-AGENTE DA KGB // HELLSINGS</span>
+      </div>
+      <span class="dimitri-opening__file" aria-hidden="true">ARQUIVO HELLSINGS // D-08</span>
+    </section>
     <nav class="dimitri-nav" aria-label="Navegação do dossiê de Dimitri">
       <a href="clhoe-presente.html">← Chloe</a>
       <span>ARQUIVO HELLSINGS // D-08</span>
@@ -101,7 +138,7 @@
       </section>
     </main>
     <footer class="dimitri-footer"><a href="clhoe-presente.html">← Chloe</a><a href="faccao-hellsings-presente.html">Base Hellsings</a><a href="john-presente.html">Memorial de John →</a></footer>
-    <script src="era-extincao-presente/dimitri-arquivo.js?v=20261114-dimitri-lore"></script>
+    <script src="era-extincao-presente/dimitri-arquivo.js?v=20261115-atmosphere"></script>
     <script src="js/site-cursor.js" defer></script>
     <script src="js/page-navigation.js?v=1" defer></script>
 </body>
