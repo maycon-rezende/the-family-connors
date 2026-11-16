@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="joey-opening-pending">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,9 +10,51 @@
     />
     <link rel="stylesheet" href="css/site-cursor.css" />
     <link rel="stylesheet" href="era-extincao-presente/joey-presente.css" />
+    <link rel="stylesheet" href="era-extincao-presente/joey-opening.css" />
+    <script src="era-extincao-presente/joey-opening.js" defer></script>
+    <noscript>
+      <style>
+        html.joey-opening-pending body.joey-route > :not(.joey-opening) { visibility: visible; }
+        html.joey-opening-pending body.joey-route { overflow-x: hidden; overflow-y: auto; }
+        .joey-opening { display: none !important; }
+      </style>
+    </noscript>
     <title>Joey Muller | Rota de Retorno</title>
   </head>
   <body class="joey-route">
+    <section
+      class="joey-opening"
+      data-joey-opening
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="joey-opening-title"
+      aria-describedby="joey-opening-description"
+      hidden
+    >
+      <div class="joey-opening__backdrop" aria-hidden="true"></div>
+      <video
+        class="joey-opening__video"
+        data-joey-opening-video
+        muted
+        playsinline
+        preload="auto"
+        poster="img-hellsing/joey-presente.png"
+        aria-hidden="true"
+      >
+        <source src="video/abertura-joey-presente.mp4" type="video/mp4" />
+      </video>
+      <div class="joey-opening__shade" aria-hidden="true"></div>
+      <div class="joey-opening__copy">
+        <span class="joey-opening__eyebrow">J-12 // ARQUIVO HELLSINGS</span>
+        <p id="joey-opening-description">
+          Onde o mundo só enxerga ruínas, Joey procura uma entrada, um recurso e o caminho que
+          permite que ele e Hellen voltem.
+        </p>
+        <h2 id="joey-opening-title">JOEY <em>MULLER.</em></h2>
+        <span class="joey-opening__role">EXPLORAÇÃO / RETORNO // ATIVO</span>
+      </div>
+    </section>
     <div class="joey-terrain" aria-hidden="true"></div>
 
     <nav class="joey-nav" aria-label="Navegação do dossiê de Joey Muller">
