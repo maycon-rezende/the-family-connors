@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#071011" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="Registro selado KS-09." />
+    <link rel="stylesheet" href="css/site-cursor.css" />
+    <link rel="stylesheet" href="era-extincao-presente/kelly-presente.css?v=5" />
+    <link rel="stylesheet" href="era-extincao-presente/kelly-archive-gate.css?v=1" />
+    <title>KS-09 // Registro selado</title>
+  </head>
+  <body class="kelly-page kelly-vault-page">
+    <div class="kelly-atmosphere" aria-hidden="true">
+      <div class="kelly-atmosphere__aurora"></div>
+      <canvas class="kelly-atmosphere__particles"></canvas>
+      <div class="kelly-atmosphere__grain"></div>
+    </div>
+
+    <nav class="vault-nav" aria-label="Navegação do registro selado">
+      <a href="kelly-presente.html">← DOSSIÊ KS-01</a>
+      <span>ARQUIVO NÃO INDEXADO // KS-09</span>
+    </nav>
+
+    <main class="vault-main">
+      <header class="vault-heading">
+        <p class="vault-kicker"><i aria-hidden="true"></i> ACESSO RESTRITO // REGISTRO PESSOAL</p>
+        <h1>O que foi <em>selado.</em></h1>
+        <p>Este arquivo não consta no índice comum. Duas etapas separam os registros do acesso aberto.</p>
+      </header>
+
+      <section class="vault-panel" aria-labelledby="vault-lock-title">
+        <div class="vault-panel__seal" aria-hidden="true">K<br /><span>09</span></div>
+        <p class="vault-panel__eyebrow">CAMADA 01 // ENIGMA DE INVENTÁRIO</p>
+        <h2 id="vault-lock-title">Resolva o selo.</h2>
+
+        <form class="vault-form" data-vault-puzzle-form>
+          <label for="vault-answer">O álbum aberto guarda 4 registros. O arquivo selado guarda 9. Quantos registros a mais há no arquivo selado?</label>
+          <div class="vault-form__row">
+            <input id="vault-answer" name="answer" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="2" aria-describedby="vault-puzzle-status" required />
+            <button type="submit">VALIDAR SELO <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="vault-status" id="vault-puzzle-status" data-vault-puzzle-status role="status" aria-live="polite"></p>
+        </form>
+
+        <form class="vault-form" data-vault-password-form hidden>
+          <label for="vault-password">Camada 02 // senha de acesso</label>
+          <div class="vault-form__row">
+            <input id="vault-password" name="password" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="vault-password-status" required />
+            <button type="submit">ABRIR ARQUIVO <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="vault-status" id="vault-password-status" data-vault-password-status role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="vault-panel__note">O enigma libera a fechadura externa. A senha descriptografa os registros.</p>
+      </section>
+
+      <section class="vault-gallery" data-vault-gallery hidden aria-labelledby="vault-gallery-title">
+        <div class="vault-gallery__heading">
+          <p class="vault-kicker">ACESSO CONFIRMADO // KS-09</p>
+          <h2 id="vault-gallery-title">Fragmentos pessoais.</h2>
+        </div>
+        <div class="vault-gallery__grid" data-vault-grid></div>
+      </section>
+    </main>
+
+    <footer class="vault-footer">
+      <a href="kelly-presente.html">← RETORNAR AO DOSSIÊ</a>
+      <span>SELO RESTAURADO // OS ARQUIVOS VOLTAM A DORMIR AO FECHAR A PÁGINA</span>
+    </footer>
+
+    <script src="js/site-cursor.js" defer></script>
+    <script src="era-extincao-presente/kelly-archive-gate.js?v=1" defer></script>
+  </body>
+</html>
