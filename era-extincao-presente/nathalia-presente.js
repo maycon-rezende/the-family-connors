@@ -32,5 +32,5 @@
     document.addEventListener('pointerleave',()=>{cursor.style.opacity='0'});
     document.querySelectorAll('a,button').forEach(target=>{target.addEventListener('pointerenter',()=>cursor.classList.add('is-target'));target.addEventListener('pointerleave',()=>cursor.classList.remove('is-target'))});
   }
-  activate(0);
+  if(frames.length)activate(0);
 })();

@@ -28,6 +28,7 @@
   const stop = () => clearInterval(timer);
   const play = () => {
     stop();
+    if (!slides.length || !carousel) return;
     if (!reduced.matches) timer = setInterval(() => show(index + 1), 5400);
   };
   const move = (step) => { show(index + step); play(); };
@@ -42,8 +43,10 @@
     const distance = event.changedTouches[0].clientX - touchX;
     if (Math.abs(distance) > 45) move(distance > 0 ? -1 : 1);
   }, { passive: true });
-  show(0);
-  play();
+  if (slides.length && carousel) {
+    show(0);
+    play();
+  }
 
   const videoShell = document.querySelector('[data-sally-video]');
   const video = videoShell?.querySelector('video');
