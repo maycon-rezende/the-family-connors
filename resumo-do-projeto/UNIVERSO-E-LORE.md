@@ -85,8 +85,6 @@ Nos registros visuais, John é representado com pele em tom marrom, conforme a o
 - **Doomsday e A Era da Extinção pertencem ao mesmo universo**, em etapas diferentes: o primeiro acompanha o Dia D; a segunda se passa depois, no mundo devastado.
 - Jack falou com Mick e o convidou a encontrar os Hellsings. A comunicação foi interrompida antes do encontro. Depois, os Hellsings procuraram o grupo de Doomsday; o encontro entre eles ainda acontecerá na história e não deve ser apresentado como passado concluído. A data do contato não foi definida.
 - Mark serviu na Marinha e deixou o serviço depois de cumprir seu tempo, antes do Dia D. O Major James Hanson e o Coronel Samuel Salazar o conhecem por sua vida militar; Mark não era subordinado de Hanson. Os arquivos públicos de Doomsday identificam Hanson ligado a uma instalação militar e Salazar no Pentágono durante os registros do Dia D. Os destinos posteriores dos dois não estão confirmados.
-- A ligação entre os sites agora aparece como um portal recíproco: a home de DoomsDay aponta para **A Era da Extinção**; a cronologia da Extinção abre o arquivo do Dia D. Isso não antecipa o encontro entre Mick e os Hellsings.
-- Os **Arquivos isolados** de DoomsDay fazem referências curtas a Jack Connor como mentor de Mick, a Mark Connor nas lembranças de serviço de Hanson e à Dra. Alice Myers Connor, que ajudou Mei durante a gravidez de Chris. A notícia sobre os Hellsings permanece interrompida antes de identificar o que foi capturado.
 - A grafia oficial do sobrenome de Mick é **Braddock**, com dois “d”. A página pública de Doomsday ainda mostra “Bradock”; o autor planeja corrigi-la. Os materiais locais usam a grafia oficial **Braddock**.
 
 ## Direção confirmada para o final — spoiler
