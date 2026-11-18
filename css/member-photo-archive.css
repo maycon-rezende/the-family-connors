@@ -66,4 +66,18 @@ body.profile-nyla { --photo-accent: #91bc83; } body.sally-page { --photo-accent:
 .new-member-profile { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: min(1380px, calc(100% - 2rem)); margin: auto; padding: 0 0 5rem; } .new-member-profile article { padding: clamp(1.3rem, 3vw, 2.5rem); border: 1px solid color-mix(in srgb, var(--photo-accent) 30%, transparent); background: rgba(255,255,255,.025); } .new-member-profile ul { padding-left: 1.2rem; color: #d8d5cb; line-height: 1.9; } .new-member-profile blockquote { margin: 1.5rem 0 0; color: var(--photo-accent); font: italic clamp(1.2rem, 2.3vw, 1.8rem)/1.45 Georgia, serif; }
 @media (max-width: 780px) { .member-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .member-photo-nav span, .member-photo-footer span, .new-member-nav span, .new-member-footer span { display: none; } .member-photo-nav, .member-photo-footer, .new-member-nav, .new-member-footer { padding: .8rem 1rem; } .new-member-hero { grid-template-columns: 1fr; } .new-member-portrait { width: 100%; max-width: 660px; margin: auto; } .new-member-timeline { grid-template-columns: 1fr; } .new-member-timeline > header { position: static; } .new-member-profile { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .member-photo-main, .new-member-hero, .new-member-timeline, .new-member-profile, .new-member-proposal { width: calc(100% - 1.2rem); } .member-photo-grid { grid-template-columns: 1fr; } .member-photo-card__image { height: min(78svh, 560px); } .member-photo-album > header { align-items: start; flex-direction: column; } .member-photo-lightbox { width: 100vw; height: 100dvh; padding: 3.5rem .4rem 4.5rem; border: 0; } .member-photo-lightbox__step--prev { left: .2rem; } .member-photo-lightbox__step--next { right: .2rem; } .member-photo-lightbox > p { bottom: .7rem; left: .7rem; max-width: 75%; font-size: .85rem; } .member-photo-lightbox > small { right: .7rem; bottom: .7rem; } .new-member-hero h1 { font-size: clamp(3.5rem, 20vw, 6rem); } }
+
+.new-member--ember, .archive--ember { --photo-accent: #d17b52; }
+.new-member--radio, .archive--radio { --photo-accent: #d2ae5f; }
+.new-member--water, .archive--water { --photo-accent: #67b8b1; }
+.new-member--forge, .archive--forge { --photo-accent: #e0b14f; }
+.new-member--wine, .archive--wine { --photo-accent: #b66b63; }
+.new-member--dusk, .archive--dusk { --photo-accent: #8c9fc7; }
+.new-member--signal, .archive--signal { --photo-accent: #e18b53; }
+.new-member--archive, .archive--archive { --photo-accent: #c5ad7a; }
+.new-member--hearth, .archive--hearth { --photo-accent: #cb7057; }
+.new-member--beacon, .archive--beacon { --photo-accent: #f0b949; }
+.new-member--seed, .archive--seed { --photo-accent: #9cb17a; }
+.new-member--steel, .archive--steel { --photo-accent: #7fb3c1; }
+.new-member--sand, .archive--sand { --photo-accent: #d19b63; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

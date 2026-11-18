@@ -66,6 +66,9 @@ a { color: inherit; }
 .member-card--amelia figure img { object-position: center 28%; }
 .member-card--kelly { --member-accent: #9bd9c9; border-color: rgba(155, 217, 201, .34); background: linear-gradient(145deg, rgba(12, 28, 28, .97), rgba(7, 11, 15, .99)); }
 .member-card--kelly h3 em { color: #83b8d1; }
+.member-card--new { border-color: color-mix(in srgb, var(--member-accent) 34%, transparent); background: linear-gradient(145deg, color-mix(in srgb, var(--member-accent) 7%, #171310), rgba(10, 9, 8, .98)); }
+.member-card--new h3 { color: var(--member-accent); }
+.member-card--new figure img { object-fit: contain; object-position: center; background: #080a09; }
 .member-card--kelly figure img { object-position: center 28%; }
 .member-card__body > p { margin: 0; color: #b9b0a2; font-size: .9rem; line-height: 1.7; }
 .member-card__eras { display: grid; width: 100%; gap: .65rem; margin: 1.4rem 0; padding: .8rem 0; border-block: 1px solid rgba(206,151,94,.18); color: #8e877b; font-size: .48rem; }
