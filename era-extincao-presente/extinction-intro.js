@@ -198,7 +198,6 @@
     revealEnterButton('ENTRAR NO SITE');
   }
   function startWind() {
-    enterButton.hidden = true;
     removeWindGestureListeners();
     if (!windAudio || windAudio.error) {
       status.textContent = 'EFEITO INDISPONÍVEL // ACESSO LIBERADO';
@@ -216,6 +215,8 @@
     windAudio.addEventListener('ended', completeWind, { once: true });
     windAudio.addEventListener('error', completeWind, { once: true });
     windAudio.addEventListener('playing', revealButtonDuringWind, { once: true });
+    revealEnterButton('ENTRAR NO SITE');
+    status.textContent = 'EFEITO DE VENTO // ATIVO';
 
     try {
       const playback = windAudio.play();
@@ -232,19 +233,29 @@
       waitForWindGesture();
     }
   }
-  function finish() {
+  function finish(skipImmediately = false) {
     if (finalSequenceStarted) return;
     finalSequenceStarted = true;
-    started = true; audio.pause(); current = scenes.length - 1; load(current);
+    started = false;
+    cancelAnimationFrame(raf);
+    audio.pause();
+    nodes[current]?.querySelector('video')?.pause();
+    current = scenes.length - 1;
+    load(current);
     skipButton.hidden = true;
     enterButton.hidden = true;
     nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
     copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
     awakening.classList.add('is-running', 'is-finished');
+    if (skipImmediately) awakening.classList.add('is-skipped');
     status.textContent = 'SINAL FINAL // O VENTO SE APROXIMA';
-    window.setTimeout(() => {
-      if (!leaving) startWind();
-    }, 3000);
+    if (skipImmediately) {
+      startWind();
+    } else {
+      window.setTimeout(() => {
+        if (!leaving) startWind();
+      }, 3000);
+    }
   }
   function enter() {
     if (leaving) return; leaving = true;
@@ -258,11 +269,11 @@
   }
   build(); prepareTitle();
   enterButton.hidden = true;
-  audio.addEventListener('ended', finish, { once: true });
+  audio.addEventListener('ended', () => finish(false), { once: true });
   audio.addEventListener('play', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(render); });
   audio.addEventListener('pause', () => nodes[current]?.querySelector('video')?.pause());
   $('[data-start-cinema]').addEventListener('click', start);
-  skipButton.addEventListener('click', finish);
+  skipButton.addEventListener('click', () => finish(true));
   enterButton.addEventListener('click', () => enter());
   if (cursor && matchMedia('(pointer: fine)').matches) {
     addEventListener('pointermove', (event) => {
