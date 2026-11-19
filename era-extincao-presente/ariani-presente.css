@@ -696,7 +696,7 @@ body[data-character='ariani'] .ariani-scenes__head > p {
 
 body[data-character='ariani'] .ariani-scenes__grid {
   display: grid;
-  grid-template-columns: minmax(0, 920px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
   gap: 12px;
 }

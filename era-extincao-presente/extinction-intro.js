@@ -239,12 +239,14 @@
     started = false;
     cancelAnimationFrame(raf);
     audio.pause();
-    nodes[current]?.querySelector('video')?.pause();
-    current = scenes.length - 1;
-    load(current);
+    nodes.forEach((node) => node.querySelector('video')?.pause());
+    if (!skipImmediately) {
+      current = scenes.length - 1;
+      load(current);
+      nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
+    }
     skipButton.hidden = true;
     enterButton.hidden = true;
-    nodes.forEach((node, i) => node.classList.toggle('is-active', i === current));
     copy.classList.add('is-suppressed'); finalCard.classList.add('is-visible');
     awakening.classList.add('is-running', 'is-finished');
     if (skipImmediately) awakening.classList.add('is-skipped');
