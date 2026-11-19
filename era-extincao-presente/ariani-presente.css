@@ -632,6 +632,150 @@ body[data-character='ariani'] .ariani-case p {
   font: 500 0.96rem/1.62 'Manrope', Arial, sans-serif;
 }
 
+/* Cenas adicionais: trechos de vídeo separados da abertura do perfil. */
+body[data-character='ariani'] .ariani-scenes {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) 7vw;
+  border-bottom: 1px solid rgba(237, 165, 185, 0.2);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(141, 56, 88, 0.2), transparent 24%),
+    linear-gradient(130deg, #0f0a12, #21111d 54%, #120c15);
+}
+
+body[data-character='ariani'] .ariani-scenes::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 7%, rgba(237, 165, 185, 0.15) 7.08% 7.16%, transparent 7.24%),
+    repeating-linear-gradient(0deg, transparent 0 35px, rgba(237, 165, 185, 0.035) 36px 37px);
+  content: '';
+  pointer-events: none;
+}
+
+body[data-character='ariani'] .ariani-scenes__head,
+body[data-character='ariani'] .ariani-scenes__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+body[data-character='ariani'] .ariani-scenes__head {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr;
+  align-items: end;
+  gap: 3rem;
+  margin-bottom: clamp(2.3rem, 5vw, 4rem);
+}
+
+body[data-character='ariani'] .ariani-scenes__head h2 {
+  max-width: 720px;
+  margin: 0.78rem 0 0;
+  color: #f1e1da;
+  font: 800 clamp(3rem, 7.6vw, 7rem) / 0.82 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+body[data-character='ariani'] .ariani-scenes__head h2 em {
+  display: block;
+  color: #efa1b6;
+  font-style: normal;
+  text-shadow: 0 0 22px rgba(237, 165, 185, 0.2);
+}
+
+body[data-character='ariani'] .ariani-scenes__head > p {
+  max-width: 440px;
+  margin: 0 0 0.25rem;
+  padding-left: 1.2rem;
+  border-left: 1px solid rgba(214, 173, 117, 0.48);
+  color: #d7bec3;
+  font: 500 0.98rem/1.65 'Manrope', Arial, sans-serif;
+}
+
+body[data-character='ariani'] .ariani-scenes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+body[data-character='ariani'] .ariani-scene {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(237, 165, 185, 0.24);
+  background: linear-gradient(150deg, rgba(39, 17, 31, 0.94), rgba(12, 8, 13, 0.98));
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+body[data-character='ariani'] .ariani-scene:hover {
+  transform: translateY(-4px);
+  border-color: rgba(237, 165, 185, 0.62);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.32), 0 0 24px rgba(237, 165, 185, 0.09);
+}
+
+body[data-character='ariani'] .ariani-scene__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #080609;
+  border-bottom: 1px solid rgba(237, 165, 185, 0.3);
+}
+
+body[data-character='ariani'] .ariani-scene__frame::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(237, 165, 185, 0.16);
+  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(238, 215, 221, 0.025) 5px);
+  content: '';
+  pointer-events: none;
+}
+
+body[data-character='ariani'] .ariani-scene__frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #080609;
+}
+
+body[data-character='ariani'] .ariani-scene__signal {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+  padding: 0.48rem 0.58rem;
+  border: 1px solid rgba(237, 165, 185, 0.44);
+  background: rgba(16, 11, 19, 0.78);
+  color: #f1c3ce;
+  font: 500 0.46rem/1 'DM Mono', monospace;
+  letter-spacing: 0.14em;
+  pointer-events: none;
+}
+
+body[data-character='ariani'] .ariani-scene__copy {
+  padding: clamp(1.15rem, 2vw, 1.65rem);
+}
+
+body[data-character='ariani'] .ariani-scene__copy > span {
+  color: #edbd91;
+  font: 500 0.46rem/1.5 'DM Mono', monospace;
+  letter-spacing: 0.14em;
+}
+
+body[data-character='ariani'] .ariani-scene__copy h3 {
+  margin: 0.75rem 0 0.55rem;
+  color: #f0ddda;
+  font: 600 clamp(1.65rem, 2.4vw, 2.2rem) / 1.05 'Playfair Display', Georgia, serif;
+}
+
+body[data-character='ariani'] .ariani-scene__copy p {
+  margin: 0;
+  color: #d2b8be;
+  font: 500 0.9rem/1.55 'Manrope', Arial, sans-serif;
+}
+
 body[data-character='ariani'] .memory {
   min-height: clamp(630px, 80svh, 840px);
   padding: clamp(2rem, 7vw, 7rem);
@@ -798,7 +942,17 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
     gap: 1.2rem;
   }
 
-  body[data-character='ariani'] .ariani-cases__head > p { max-width: 620px; }
+  body[data-character='ariani'] .ariani-scenes__head {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  body[data-character='ariani'] .ariani-scenes__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body[data-character='ariani'] .ariani-cases__head > p,
+  body[data-character='ariani'] .ariani-scenes__head > p { max-width: 620px; }
 }
 
 @media (max-width: 760px) {
@@ -865,6 +1019,7 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
   body[data-character='ariani'] .chapter,
   body[data-character='ariani'] .ariani-technical,
   body[data-character='ariani'] .ariani-cases,
+  body[data-character='ariani'] .ariani-scenes,
   body[data-character='ariani'] .ariani-memories-entry {
     padding: 4.5rem 1.25rem;
   }
@@ -881,6 +1036,7 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
 
   body[data-character='ariani'] .ariani-technical__head,
   body[data-character='ariani'] .ariani-cases__head,
+  body[data-character='ariani'] .ariani-scenes__head,
   body[data-character='ariani'] .ariani-memories-entry {
     display: block;
   }
@@ -890,7 +1046,8 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
   }
 
   body[data-character='ariani'] .ariani-technical__grid,
-  body[data-character='ariani'] .ariani-cases__grid {
+  body[data-character='ariani'] .ariani-cases__grid,
+  body[data-character='ariani'] .ariani-scenes__grid {
     grid-template-columns: 1fr;
   }
 
@@ -906,6 +1063,11 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
   body[data-character='ariani'] .ariani-principles ol { grid-template-columns: 1fr; }
 
   body[data-character='ariani'] .ariani-cases__head > p {
+    margin-top: 1.35rem;
+    font-size: 0.93rem;
+  }
+
+  body[data-character='ariani'] .ariani-scenes__head > p {
     margin-top: 1.35rem;
     font-size: 0.93rem;
   }
@@ -947,7 +1109,8 @@ body[data-character='ariani'] .profile-footer a { color: #edbd91; }
   body[data-character='ariani'] .ariani-case,
   body[data-character='ariani'] .ariani-case::before,
   body[data-character='ariani'] .ariani-memories-entry__link,
-  body[data-character='ariani'] .ariani-memories-entry__link span {
+  body[data-character='ariani'] .ariani-memories-entry__link span,
+  body[data-character='ariani'] .ariani-scene {
     transition: none !important;
   }
 }
