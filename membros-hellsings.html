@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Arquivos individuais de membros, familiares e pessoas ligadas aos Hellsings." />
     <title>Membros dos Hellsings — A Era da Extinção</title>
-    <link rel="stylesheet" href="era-extincao-presente/membros-hellsings.css?v=12" />
+    <link rel="stylesheet" href="era-extincao-presente/membros-hellsings.css?v=13" />
     <link rel="stylesheet" href="css/site-cursor.css" />
   </head>
   <body class="members-page">
@@ -25,21 +25,40 @@
         </div>
         <aside class="members-stamp" aria-label="Estado do arquivo">
           <span>REGISTROS ABERTOS</span>
-          <b>12</b>
-          <small>PERFIS INDIVIDUAIS</small>
+          <b data-member-total>28</b>
+          <small>PERFIS NO ARQUIVO</small>
         </aside>
       </header>
 
-      <section class="members-roster" aria-labelledby="members-roster-title">
+      <section class="members-roster" id="members-directory" aria-labelledby="members-roster-title">
         <header class="members-roster__heading">
           <div>
-            <p class="members-kicker">NÚCLEO CONECTADO // ARQUIVOS ATIVOS</p>
+            <p class="members-kicker">PESSOAS E VÍNCULOS // ARQUIVO GERAL</p>
             <h2 id="members-roster-title">Pessoas que<br /><em>fazem parte.</em></h2>
           </div>
           <p>Os retratos seguem a época a que pertencem. Quando o arquivo ainda não tem imagens de um período, o registro informa sem misturar fotos de outras fases.</p>
         </header>
 
-        <div class="members-grid">
+        <section class="members-controls" aria-label="Busca e filtros dos membros">
+          <label class="members-search" for="memberSearch">
+            <span>BUSCAR NO ARQUIVO</span>
+            <input id="memberSearch" type="search" placeholder="Nome, função ou vínculo..." autocomplete="off" aria-controls="members-directory" />
+          </label>
+          <div class="members-filters" role="group" aria-label="Filtrar arquivos">
+            <button type="button" class="members-filter is-active" data-member-filter="all" aria-pressed="true">TODOS <b data-filter-count="all">28</b></button>
+            <button type="button" class="members-filter" data-member-filter="archive" aria-pressed="false">PESSOAS E VÍNCULOS <b data-filter-count="archive">12</b></button>
+            <button type="button" class="members-filter" data-member-filter="newcomers" aria-pressed="false">NOVOS CODINOMES <b data-filter-count="newcomers">16</b></button>
+          </div>
+          <p class="members-filter-status" id="memberFilterStatus" role="status" aria-live="polite">Carregando arquivos...</p>
+          <p class="members-lore-note">Fichas com o selo <strong>PROPOSTA DE LORE</strong> continuam em desenvolvimento e podem ser revisadas.</p>
+        </section>
+
+        <section class="members-group" data-member-group="archive" aria-labelledby="members-group-archive">
+          <header class="members-group__heading">
+            <div><p class="members-kicker">ARQUIVOS PESSOAIS // PESSOAS E VÍNCULOS</p><h3 id="members-group-archive">Vidas ligadas ao comboio</h3></div>
+            <span class="members-group__count"><b data-member-count="archive">12</b> REGISTROS</span>
+          </header>
+          <div class="members-grid">
           <a class="member-card member-card--lana" href="lana-presente.html">
             <figure>
               <img src="img-hellsing/lana-presente.png" alt="Lana Whitmore no presente dos Hellsings" loading="lazy" />
@@ -207,6 +226,15 @@
               <strong>ABRIR DOSSIÊ <i aria-hidden="true">→</i></strong>
             </div>
           </a>
+          </div>
+        </section>
+
+        <section class="members-group" data-member-group="newcomers" aria-labelledby="members-group-newcomers">
+          <header class="members-group__heading">
+            <div><p class="members-kicker">NOVOS CODINOMES // FUNÇÕES DE CAMPO</p><h3 id="members-group-newcomers">Novas funções de campo</h3></div>
+            <span class="members-group__count"><b data-member-count="newcomers">16</b> REGISTROS</span>
+          </header>
+          <div class="members-grid">
 <a class='member-card member-card--sutura' href='sutura-presente.html'><figure><img src='img-sutura/sutura-presente.png' alt='Retrato sem máscara de Sutura no presente' loading='lazy' /><figcaption>NOVO MEMBRO // SOCORRISTA DE CAMPO</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Sutura</h3><p>Quando alguém cai, Sutura fica ao lado até que os dois encontrem uma saída.</p><div class='member-card__eras'><span>IDADE <b>29 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
 <a class='member-card member-card--lacre' href='lacre-presente.html'><figure><img src='img-lacre/lacre-presente.png' alt='Retrato sem máscara de Lacre no presente' loading='lazy' /><figcaption>NOVO MEMBRO // LOGÍSTICA E CONTROLE DE SUPRIMENTOS</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Lacre</h3><p>Lacre registra cada caixa porque sabe que confiança também precisa de organização.</p><div class='member-card__eras'><span>IDADE <b>32 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
 <a class='member-card member-card--afiador' href='afiador-presente.html'><figure><img src='img-afiador/afiador-presente.png' alt='Retrato sem máscara de Afiador no presente' loading='lazy' /><figcaption>NOVO MEMBRO // MANUTENÇÃO DE FERRAMENTAS E EQUIPAMENTO DE CAMPO</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Afiador</h3><p>Afiador não inventa uma saída nova; ele faz a ferramenta que existe continuar funcionando.</p><div class='member-card__eras'><span>IDADE <b>30 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
@@ -223,7 +251,9 @@
 <a class='member-card member-card--new' style='--member-accent:#9cb17a' href='semente-presente.html'><figure><img src='img-semente/semente-presente.png' alt='Estudo visual de Semente no presente' loading='lazy' /><figcaption>NOVO MEMBRO // CULTIVO E RESERVA DE SEMENTES</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Semente</h3><p>Semente cuida dos pequenos cultivos e da reserva de sementes. Sua máscara integral traz um broto pintado: um lembrete de que a sobrevivência também depende do que pode voltar a crescer.</p><div class='member-card__eras'><span>IDADE <b>32 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
 <a class='member-card member-card--new' style='--member-accent:#7fb3c1' href='chave-presente.html'><figure><img src='img-chave/chave-presente.png' alt='Estudo visual de Chave no presente' loading='lazy' /><figcaption>NOVO MEMBRO // ACESSOS MECÂNICOS E SEGURANÇA DE ABRIGOS</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Chave</h3><p>Chave cuida de fechaduras, travas e acessos mecânicos. A máscara integral tem um emblema de fechadura e acompanha sua função de manter os abrigos protegidos sem bloquear rotas de saída.</p><div class='member-card__eras'><span>IDADE <b>34 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
 <a class='member-card member-card--new' style='--member-accent:#d19b63' href='mastim-presente.html'><figure><img src='img-mastim/mastim-presente.png' alt='Estudo visual de Mastim no presente' loading='lazy' /><figcaption>NOVO MEMBRO // BUSCA E RESGATE COM CÃES</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Mastim</h3><p>Mastim trabalha com cães de busca e resgate. A máscara integral leva um emblema canino e protege o rosto em ambientes de poeira, enquanto a parceria com os animais é construída com treino e cuidado.</p><div class='member-card__eras'><span>IDADE <b>35 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
-        </div>
+          </div>
+        </section>
+        <p class="members-empty" hidden>Nenhum perfil encontrado. Ajuste a busca ou escolha outro filtro.</p>
       </section>
     </main>
 
@@ -233,6 +263,7 @@
     </footer>
     <script src="js/site-cursor.js" defer></script>
     <script src="js/members-sandstorm.js?v=1" defer></script>
+    <script src="js/members-roster.js?v=1" defer></script>
     <script src="js/page-navigation.js?v=1" defer></script>
 </body>
 </html>
