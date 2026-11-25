@@ -44,9 +44,16 @@
       if (isVisible) visibleCount += 1;
     });
 
+    const hasScopedView = activeFilter !== "all" || Boolean(query);
     groups.forEach((group) => {
       const hasVisibleCards = Array.from(group.querySelectorAll(".member-card")).some((card) => !card.hidden);
-      group.hidden = !hasVisibleCards;
+      group.hidden = hasScopedView && !hasVisibleCards;
+
+      if (query) {
+        group.open = hasVisibleCards;
+      } else if (activeFilter !== "all") {
+        group.open = group.dataset.memberGroup === activeFilter;
+      }
     });
 
     if (emptyState) emptyState.hidden = visibleCount !== 0;
@@ -54,7 +61,7 @@
       status.textContent = visibleCount === 0
         ? "Nenhum perfil encontrado. Ajuste a busca ou escolha outro filtro."
         : activeFilter === "all" && !query
-          ? `Exibindo todos os ${visibleCount} perfis.`
+          ? `${visibleCount} perfis no arquivo. Abra um grupo para explorar ou busque um nome.`
           : `Exibindo ${visibleCount} de ${cards.length} perfis.`;
     }
 

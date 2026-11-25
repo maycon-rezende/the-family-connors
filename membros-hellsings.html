@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Arquivos individuais de membros, familiares e pessoas ligadas aos Hellsings." />
     <title>Membros dos Hellsings — A Era da Extinção</title>
-    <link rel="stylesheet" href="era-extincao-presente/membros-hellsings.css?v=13" />
+    <link rel="stylesheet" href="era-extincao-presente/membros-hellsings.css?v=14" />
     <link rel="stylesheet" href="css/site-cursor.css" />
   </head>
   <body class="members-page">
@@ -53,11 +53,12 @@
           <p class="members-lore-note">Fichas com o selo <strong>PROPOSTA DE LORE</strong> continuam em desenvolvimento e podem ser revisadas.</p>
         </section>
 
-        <section class="members-group" data-member-group="archive" aria-labelledby="members-group-archive">
-          <header class="members-group__heading">
-            <div><p class="members-kicker">ARQUIVOS PESSOAIS // PESSOAS E VÍNCULOS</p><h3 id="members-group-archive">Vidas ligadas ao comboio</h3></div>
+        <details class="members-group" data-member-group="archive">
+          <summary class="members-group__heading">
+            <span class="members-kicker">ARQUIVOS PESSOAIS // PESSOAS E VÍNCULOS</span>
+            <h3 id="members-group-archive">Vidas ligadas ao comboio</h3>
             <span class="members-group__count"><b data-member-count="archive">12</b> REGISTROS</span>
-          </header>
+          </summary>
           <div class="members-grid">
           <a class="member-card member-card--lana" href="lana-presente.html">
             <figure>
@@ -227,13 +228,14 @@
             </div>
           </a>
           </div>
-        </section>
+        </details>
 
-        <section class="members-group" data-member-group="newcomers" aria-labelledby="members-group-newcomers">
-          <header class="members-group__heading">
-            <div><p class="members-kicker">NOVOS CODINOMES // FUNÇÕES DE CAMPO</p><h3 id="members-group-newcomers">Novas funções de campo</h3></div>
+        <details class="members-group" data-member-group="newcomers">
+          <summary class="members-group__heading">
+            <span class="members-kicker">NOVOS CODINOMES // FUNÇÕES DE CAMPO</span>
+            <h3 id="members-group-newcomers">Novas funções de campo</h3>
             <span class="members-group__count"><b data-member-count="newcomers">16</b> REGISTROS</span>
-          </header>
+          </summary>
           <div class="members-grid">
 <a class='member-card member-card--sutura' href='sutura-presente.html'><figure><img src='img-sutura/sutura-presente.png' alt='Retrato sem máscara de Sutura no presente' loading='lazy' /><figcaption>NOVO MEMBRO // SOCORRISTA DE CAMPO</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Sutura</h3><p>Quando alguém cai, Sutura fica ao lado até que os dois encontrem uma saída.</p><div class='member-card__eras'><span>IDADE <b>29 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
 <a class='member-card member-card--lacre' href='lacre-presente.html'><figure><img src='img-lacre/lacre-presente.png' alt='Retrato sem máscara de Lacre no presente' loading='lazy' /><figcaption>NOVO MEMBRO // LOGÍSTICA E CONTROLE DE SUPRIMENTOS</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Lacre</h3><p>Lacre registra cada caixa porque sabe que confiança também precisa de organização.</p><div class='member-card__eras'><span>IDADE <b>32 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
@@ -252,7 +254,7 @@
 <a class='member-card member-card--new' style='--member-accent:#7fb3c1' href='chave-presente.html'><figure><img src='img-chave/chave-presente.png' alt='Estudo visual de Chave no presente' loading='lazy' /><figcaption>NOVO MEMBRO // ACESSOS MECÂNICOS E SEGURANÇA DE ABRIGOS</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Chave</h3><p>Chave cuida de fechaduras, travas e acessos mecânicos. A máscara integral tem um emblema de fechadura e acompanha sua função de manter os abrigos protegidos sem bloquear rotas de saída.</p><div class='member-card__eras'><span>IDADE <b>34 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
 <a class='member-card member-card--new' style='--member-accent:#d19b63' href='mastim-presente.html'><figure><img src='img-mastim/mastim-presente.png' alt='Estudo visual de Mastim no presente' loading='lazy' /><figcaption>NOVO MEMBRO // BUSCA E RESGATE COM CÃES</figcaption></figure><div class='member-card__body'><span class='member-card__tag'>PROPOSTA DE LORE // REVISÁVEL</span><h3>Mastim</h3><p>Mastim trabalha com cães de busca e resgate. A máscara integral leva um emblema canino e protege o rosto em ambientes de poeira, enquanto a parceria com os animais é construída com treino e cuidado.</p><div class='member-card__eras'><span>IDADE <b>35 ANOS</b></span><span>FOTOGRAFIAS <b>ARQUIVO SEPARADO</b></span></div><strong>ABRIR DOSSIÊ <i aria-hidden='true'>→</i></strong></div></a>
           </div>
-        </section>
+        </details>
         <p class="members-empty" hidden>Nenhum perfil encontrado. Ajuste a busca ou escolha outro filtro.</p>
       </section>
     </main>
@@ -263,7 +265,7 @@
     </footer>
     <script src="js/site-cursor.js" defer></script>
     <script src="js/members-sandstorm.js?v=1" defer></script>
-    <script src="js/members-roster.js?v=1" defer></script>
+    <script src="js/members-roster.js?v=2" defer></script>
     <script src="js/page-navigation.js?v=1" defer></script>
 </body>
 </html>
