@@ -258,3 +258,70 @@ a { color: inherit; }
   .members-group__heading::after { width: 1.7rem; height: 1.7rem; }
   .member-card { grid-template-columns: 5rem minmax(0, 1fr); }
 }
+
+.relationship-map { margin: 0 0 2rem; padding: clamp(1rem, 2vw, 1.6rem); border: 1px solid var(--member-line); background: linear-gradient(145deg, rgba(27, 21, 16, .97), rgba(8, 8, 7, .98)); }
+.relationship-map[hidden], .relationship-map__empty[hidden], .relationship-cluster[hidden] { display: none !important; }
+.relationship-map__header { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--member-line); }
+.relationship-map__header .members-kicker { margin-bottom: .65rem; }
+.relationship-map__header h3 { margin: 0; color: var(--member-ink); font: 800 clamp(2.5rem, 5vw, 4rem)/.9 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.relationship-map__header p:last-child { max-width: 48rem; margin: .8rem 0 0; color: var(--member-dim); font-size: 1rem; line-height: 1.6; }
+.relationship-map__back { min-height: 2.9rem; flex: 0 0 auto; padding: .7rem .9rem; border: 1px solid var(--member-line); color: var(--member-ink); background: transparent; cursor: pointer; font: 500 .78rem/1.3 'DM Mono', Consolas, monospace; letter-spacing: .07em; }
+.relationship-map__back:hover, .relationship-map__back:focus-visible { border-color: var(--member-accent); color: var(--member-accent); }
+.relationship-map__back:focus-visible { outline: 2px solid var(--member-accent); outline-offset: 3px; }
+.relationship-map__legend { display: flex; flex-wrap: wrap; gap: .8rem 1.3rem; padding: 1rem 0; color: var(--member-dim); font: 500 .8rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .04em; }
+.relationship-map__legend > span { display: inline-flex; align-items: center; gap: .5rem; }
+.relationship-map__legend-line { display: inline-block; width: 2rem; border-top: 1px solid #d4bd91; }
+.relationship-map__legend-line--proposal { width: 1.1rem; height: .75rem; border: 1px dashed #d3a260; }
+.relationship-map__legend-line--unclear { border-top: 2px dotted #9baeb2; }
+.relationship-map__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.relationship-cluster { --relationship-accent: #ccb58c; min-width: 0; padding: 1rem; border: 1px solid color-mix(in srgb, var(--relationship-accent) 42%, transparent); background: linear-gradient(135deg, color-mix(in srgb, var(--relationship-accent) 5%, #15120e), rgba(8, 8, 7, .96)); }
+.relationship-cluster--proposed { --relationship-accent: #d3a260; border-style: dashed; }
+.relationship-cluster--journeys { --relationship-accent: #9db1ad; }
+.relationship-cluster__heading { display: flex; align-items: start; justify-content: space-between; gap: .8rem; margin-bottom: .8rem; }
+.relationship-cluster__heading > div > span { color: var(--relationship-accent); font: 500 .75rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .06em; text-transform: uppercase; }
+.relationship-cluster__heading h4 { margin: .35rem 0 0; color: var(--member-ink); font: 700 clamp(1.35rem, 2.2vw, 1.8rem)/1.1 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.relationship-cluster__heading > b { flex: 0 0 auto; padding: .35rem .45rem; border: 1px solid color-mix(in srgb, var(--relationship-accent) 50%, transparent); color: var(--relationship-accent); font: 500 .75rem/1.3 'DM Mono', Consolas, monospace; letter-spacing: .04em; }
+.relationship-tree { position: relative; padding: .8rem 0 .2rem; border-top: 1px solid color-mix(in srgb, var(--relationship-accent) 24%, transparent); }
+.relationship-tree--compact { padding-top: .75rem; }
+.relationship-tree__pair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: .55rem; }
+.relationship-node { position: relative; display: flex; min-width: 0; min-height: 3rem; align-items: center; justify-content: center; padding: .65rem .55rem; border: 1px solid color-mix(in srgb, var(--relationship-accent) 48%, transparent); color: var(--member-ink); background: rgba(8, 8, 7, .8); font-size: .9rem; line-height: 1.3; text-align: center; text-decoration: none; transition: border-color .2s ease, color .2s ease, opacity .2s ease, box-shadow .2s ease; }
+a.relationship-node:hover, a.relationship-node:focus-visible { border-color: var(--relationship-accent); color: var(--relationship-accent); box-shadow: 0 0 1.2rem color-mix(in srgb, var(--relationship-accent) 14%, transparent); }
+a.relationship-node:focus-visible { outline: 2px solid var(--relationship-accent); outline-offset: 2px; }
+.relationship-node--context { color: #c2b8a8; }
+.relationship-node--pending { border-style: dashed; }
+.relationship-node.is-dimmed { opacity: .42; }
+.relationship-node.is-match { border-color: var(--relationship-accent); color: #fff2cf; box-shadow: 0 0 1.2rem color-mix(in srgb, var(--relationship-accent) 30%, transparent); }
+.relationship-edge { display: inline-flex; max-width: 12rem; align-items: center; gap: .35rem; color: var(--relationship-accent); font: 500 .78rem/1.35 'DM Mono', Consolas, monospace; letter-spacing: .02em; text-align: center; }
+.relationship-edge::before, .relationship-edge::after { width: clamp(.35rem, 1.4vw, 1rem); border-top: 1px solid var(--relationship-accent); content: ''; }
+.relationship-edge--proposal::before, .relationship-edge--proposal::after { border-top-style: dashed; }
+.relationship-edge--unclear::before, .relationship-edge--unclear::after { border-top: 2px dotted var(--relationship-accent); }
+.relationship-tree--proposed { --relationship-accent: #d3a260; }
+.relationship-tree--proposed .relationship-node { border-style: dashed; }
+.relationship-tree__children { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); gap: .55rem; margin: 1.45rem .25rem 0; padding-top: 1.05rem; border-top: 1px solid var(--relationship-accent); }
+.relationship-tree__children::before { position: absolute; top: -1.1rem; left: 50%; height: 1.1rem; border-left: 1px solid var(--relationship-accent); content: ''; }
+.relationship-tree__children .relationship-node::before { position: absolute; top: -1.1rem; left: 50%; height: 1.1rem; border-left: 1px solid var(--relationship-accent); content: ''; }
+.relationship-tree--proposed .relationship-tree__children { border-top-style: dashed; }
+.relationship-tree--proposed .relationship-tree__children::before, .relationship-tree--proposed .relationship-tree__children .relationship-node::before { border-left-style: dashed; }
+.relationship-tree__children--single { grid-template-columns: minmax(9rem, 1fr); max-width: 18rem; margin-inline: auto; }
+.relationship-tree__caption { margin: .45rem 0 0; color: var(--relationship-accent); font: 500 .75rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .04em; text-align: center; text-transform: uppercase; }
+.relationship-path { display: grid; justify-items: center; gap: .25rem; padding: .25rem 0; }
+.relationship-path .relationship-node { width: min(100%, 24rem); }
+.relationship-path .relationship-edge { min-height: 1.25rem; }
+.relationship-path .relationship-edge::before, .relationship-path .relationship-edge::after { width: 1px; height: .55rem; border-top: 0; border-left: 1px solid var(--relationship-accent); }
+.relationship-map__empty { margin: 1rem 0 0; padding: 1.3rem; border: 1px dashed var(--member-line); color: var(--member-dim); font-size: 1rem; text-align: center; }
+
+@media (max-width: 760px) {
+  .relationship-map__header { align-items: start; flex-direction: column; }
+  .relationship-map__grid { grid-template-columns: 1fr; }
+  .relationship-map__back { width: 100%; }
+}
+@media (max-width: 420px) {
+  .relationship-map { padding: .8rem; }
+  .relationship-cluster { padding: .8rem; }
+  .relationship-cluster__heading { flex-direction: column; }
+  .relationship-tree__pair { grid-template-columns: minmax(0, 1fr); gap: .45rem; }
+  .relationship-edge { justify-content: center; }
+  .relationship-edge::before, .relationship-edge::after { width: 1px; height: .45rem; border-top: 0; border-left: 1px solid var(--relationship-accent); }
+  .relationship-edge--proposal::before, .relationship-edge--proposal::after { border-left-style: dashed; }
+  .relationship-edge--unclear::before, .relationship-edge--unclear::after { border-left: 2px dotted var(--relationship-accent); }
+}

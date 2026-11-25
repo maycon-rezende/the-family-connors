@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090807" />
     <meta name="description" content="Arquivos individuais de membros, familiares e pessoas ligadas aos Hellsings." />
     <title>Membros dos Hellsings — A Era da Extinção</title>
-    <link rel="stylesheet" href="era-extincao-presente/membros-hellsings.css?v=14" />
+    <link rel="stylesheet" href="era-extincao-presente/membros-hellsings.css?v=15" />
     <link rel="stylesheet" href="css/site-cursor.css" />
   </head>
   <body class="members-page">
@@ -46,14 +46,155 @@
           </label>
           <div class="members-filters" role="group" aria-label="Filtrar arquivos">
             <button type="button" class="members-filter is-active" data-member-filter="all" aria-pressed="true">TODOS <b data-filter-count="all">28</b></button>
-            <button type="button" class="members-filter" data-member-filter="archive" aria-pressed="false">PESSOAS E VÍNCULOS <b data-filter-count="archive">12</b></button>
+            <button type="button" class="members-filter" data-member-filter="archive" aria-controls="members-relationship-map" aria-expanded="false" aria-pressed="false">PESSOAS E VÍNCULOS <b>MAPA</b></button>
             <button type="button" class="members-filter" data-member-filter="newcomers" aria-pressed="false">NOVOS CODINOMES <b data-filter-count="newcomers">16</b></button>
           </div>
           <p class="members-filter-status" id="memberFilterStatus" role="status" aria-live="polite">Carregando arquivos...</p>
           <p class="members-lore-note">Fichas com o selo <strong>PROPOSTA DE LORE</strong> continuam em desenvolvimento e podem ser revisadas.</p>
         </section>
 
-        <details class="members-group" data-member-group="archive">
+        <section class="relationship-map" id="members-relationship-map" aria-labelledby="relationship-map-title" hidden>
+          <header class="relationship-map__header">
+            <div>
+              <p class="members-kicker">ARQUIVO H // LIGAÇÕES ENTRE VIDAS</p>
+              <h3 id="relationship-map-title">Mapa de vínculos</h3>
+              <p>Abra um nome para acessar seu dossiê. Linhas contínuas mostram vínculos confirmados; traços indicam informações em aberto, e pontos marcam relações cujo tipo ainda precisa ser definido.</p>
+            </div>
+            <button type="button" class="relationship-map__back" data-map-show-cards aria-controls="archive-members">VER FICHAS INDIVIDUAIS</button>
+          </header>
+
+          <div class="relationship-map__legend" aria-label="Legenda das relações">
+            <span><i class="relationship-map__legend-line"></i> VÍNCULO CONFIRMADO</span>
+            <span><i class="relationship-map__legend-line relationship-map__legend-line--proposal"></i> DADO EM ABERTO</span>
+            <span><i class="relationship-map__legend-line relationship-map__legend-line--unclear"></i> TIPO DE RELAÇÃO A CONFIRMAR</span>
+          </div>
+
+          <div class="relationship-map__grid" id="relationshipMapClusters">
+            <article class="relationship-cluster relationship-cluster--confirmed" data-map-cluster>
+              <header class="relationship-cluster__heading">
+                <div><span>UNIÕES E PARENTESCOS DEFINIDOS</span><h4>Casais e filhos</h4></div>
+                <b>CONFIRMADO</b>
+              </header>
+
+              <div class="relationship-tree">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="john-memorial.html">John Bertolai Winchester</a>
+                  <span class="relationship-edge">CASADOS</span>
+                  <a class="relationship-node" data-map-node href="amelia-arquivo.html">Amélia Winchester</a>
+                </div>
+                <div class="relationship-tree__children">
+                  <span class="relationship-node relationship-node--context" data-map-node>Henry · 34 anos</span>
+                  <span class="relationship-node relationship-node--context" data-map-node>Samuel · 27 anos</span>
+                  <span class="relationship-node relationship-node--context" data-map-node>Olivia · 5 anos · falecida</span>
+                </div>
+                <p class="relationship-tree__caption">FILHOS DE JOHN E AMÉLIA</p>
+              </div>
+
+              <div class="relationship-tree relationship-tree--compact">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="alucard-presente.html">Alucard Myers Connor</a>
+                  <span class="relationship-edge">CASADOS</span>
+                  <a class="relationship-node" data-map-node href="nathalia-presente.html">Sophie Romanoff</a>
+                </div>
+              </div>
+
+              <div class="relationship-tree relationship-tree--compact">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="nathan-presente.html">Nathan Salvatore Connor</a>
+                  <span class="relationship-edge">CASADOS</span>
+                  <a class="relationship-node" data-map-node href="lana-presente.html">Lana Whitmore</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="relationship-cluster relationship-cluster--confirmed" data-map-cluster>
+              <header class="relationship-cluster__heading">
+                <div><span>VÍNCULOS DEFINIDOS</span><h4>Família Muller-Wren</h4></div>
+                <b>CONFIRMADO</b>
+              </header>
+
+              <div class="relationship-tree">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="joey-presente.html">Joey Muller</a>
+                  <span class="relationship-edge">PAIS DE</span>
+                  <a class="relationship-node" data-map-node href="hellen-presente.html">Hellen Wren</a>
+                </div>
+                <div class="relationship-tree__children relationship-tree__children--single">
+                  <a class="relationship-node" data-map-node href="leona-presente.html">Leona</a>
+                </div>
+                <p class="relationship-tree__caption">FILHA DE JOEY E HELLEN</p>
+              </div>
+            </article>
+
+            <article class="relationship-cluster relationship-cluster--confirmed" data-map-cluster>
+              <header class="relationship-cluster__heading">
+                <div><span>FAMÍLIAS COM VÍNCULOS DEFINIDOS</span><h4>Famílias antes do Dia D</h4></div>
+                <b>CONFIRMADO</b>
+              </header>
+
+              <div class="relationship-tree">
+                <div class="relationship-tree__pair">
+                  <span class="relationship-node relationship-node--context relationship-node--pending" data-map-node>Chloe · sobrenome a definir</span>
+                  <span class="relationship-edge">CASADOS ANTES DO DIA D</span>
+                  <a class="relationship-node" data-map-node href="darius-bennett.html">Darius Bennett</a>
+                </div>
+                <div class="relationship-tree__children relationship-tree__children--single">
+                  <a class="relationship-node" data-map-node href="micah-bennett.html">Micah Bennett</a>
+                </div>
+                <p class="relationship-tree__caption">FILHO DE CHLOE E DARIUS · NASCEU ANTES DO DIA D</p>
+              </div>
+
+              <div class="relationship-tree">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="luke-presente.html">Luke Carver</a>
+                  <span class="relationship-edge">CASADOS ANTES DO DIA D</span>
+                  <a class="relationship-node" data-map-node href="imani-carver.html">Imani Carver</a>
+                </div>
+                <div class="relationship-tree__children">
+                  <a class="relationship-node" data-map-node href="asha-carver.html">Asha Carver</a>
+                  <a class="relationship-node" data-map-node href="nyla-carver.html">Nyla Carver</a>
+                </div>
+                <p class="relationship-tree__caption">FILHAS DE LUKE E IMANI · NASCERAM ANTES DO DIA D</p>
+              </div>
+            </article>
+
+            <article class="relationship-cluster relationship-cluster--journeys" data-map-cluster>
+              <header class="relationship-cluster__heading">
+                <div><span>ALIANÇAS E TRAJETÓRIAS</span><h4>Laços fora da árvore familiar</h4></div>
+                <b>VÍNCULOS DIVERSOS</b>
+              </header>
+
+              <div class="relationship-tree relationship-tree--compact">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="sally-presente.html">Sally Ward</a>
+                  <span class="relationship-edge relationship-edge--unclear">VÍNCULO CITADO · TIPO A DETALHAR</span>
+                  <a class="relationship-node" data-map-node href="nicolai-presente.html">Nicolai</a>
+                </div>
+              </div>
+
+              <div class="relationship-tree relationship-tree--compact">
+                <div class="relationship-tree__pair">
+                  <a class="relationship-node" data-map-node href="hilary-caldwell-ashford.html">Hilary Caldwell Ashford</a>
+                  <span class="relationship-edge relationship-edge--unclear">ACOLHIMENTO CITADO</span>
+                  <span class="relationship-node relationship-node--context" data-map-node>Grupo Connor · sem parentesco definido</span>
+                </div>
+              </div>
+
+              <div class="relationship-tree relationship-tree--compact">
+                <div class="relationship-path">
+                  <span class="relationship-node relationship-node--context" data-map-node>Facção do Sal</span>
+                  <span class="relationship-edge">ORIGEM DE KELLY</span>
+                  <a class="relationship-node" data-map-node href="kelly-presente.html">Kelly Sullivan</a>
+                  <span class="relationship-edge">ESCOLHEU SEGUIR COM</span>
+                  <span class="relationship-node relationship-node--context" data-map-node>Hellsings</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="relationship-map__empty" hidden>Nenhum ramo combina com essa busca.</p>
+        </section>
+
+        <details class="members-group" id="archive-members" data-member-group="archive">
           <summary class="members-group__heading">
             <span class="members-kicker">ARQUIVOS PESSOAIS // PESSOAS E VÍNCULOS</span>
             <h3 id="members-group-archive">Vidas ligadas ao comboio</h3>
