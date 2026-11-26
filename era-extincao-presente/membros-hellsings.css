@@ -325,3 +325,78 @@ a.relationship-node:focus-visible { outline: 2px solid var(--relationship-accent
   .relationship-edge--proposal::before, .relationship-edge--proposal::after { border-left-style: dashed; }
   .relationship-edge--unclear::before, .relationship-edge--unclear::after { border-left: 2px dotted var(--relationship-accent); }
 }
+
+/* Árvore da Vida: um registro pessoal com ramos navegáveis de relações. */
+.life-tree__controls { display: grid; grid-template-columns: minmax(15rem, .8fr) minmax(0, 1.2fr); align-items: end; gap: 1rem; padding: .35rem 0 1.35rem; }
+.life-tree__controls label { display: grid; gap: .45rem; color: var(--member-accent); font: 500 .72rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .08em; }
+.life-tree__controls select { width: 100%; min-height: 3rem; padding: .65rem .8rem; border: 1px solid var(--member-line); border-radius: 0; color: var(--member-ink); background: #100e0b; font: 500 .95rem/1.35 'DM Mono', Consolas, monospace; }
+.life-tree__controls select:focus-visible { outline: 2px solid var(--member-accent); outline-offset: 2px; }
+.life-tree__controls > p { margin: 0 0 .25rem; color: var(--member-dim); font: 500 .78rem/1.45 'DM Mono', Consolas, monospace; text-align: right; }
+.life-tree__origin { position: relative; width: min(100%, 42rem); margin: 0 auto; padding: 1rem; border: 1px solid rgba(209, 159, 85, .58); background: radial-gradient(ellipse at 50% 0, rgba(189, 123, 48, .12), transparent 68%), #100d0a; }
+.life-tree__origin-label { display: block; margin-bottom: .75rem; color: var(--member-accent); font: 500 .7rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .12em; text-align: center; }
+.life-tree__root-card { display: grid; grid-template-columns: 5rem minmax(0, 1fr); align-items: center; gap: 1rem; }
+.life-tree__root-avatar, .life-tree__avatar { display: grid; overflow: hidden; place-items: center; flex: 0 0 auto; border: 1px solid rgba(209, 159, 85, .58); color: var(--member-accent); background: #1a1510; font: 700 1rem/1 'DM Mono', Consolas, monospace; }
+.life-tree__root-avatar { width: 5rem; aspect-ratio: 1; }
+.life-tree__root-avatar img, .life-tree__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.life-tree__root-copy { min-width: 0; }
+.life-tree__root-copy .members-kicker { margin: 0 0 .3rem; color: var(--member-accent); font-size: .63rem; }
+.life-tree__root-copy h4 { margin: 0; color: var(--member-ink); font: 800 clamp(1.7rem, 4vw, 2.8rem)/.95 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.life-tree__root-copy > p:not(.members-kicker) { margin: .6rem 0; color: var(--member-dim); font-size: .9rem; line-height: 1.5; }
+.life-tree__root-link, .life-tree__action { display: inline-flex; min-height: 2.35rem; align-items: center; justify-content: center; gap: .5rem; padding: .55rem .7rem; border: 1px solid rgba(209, 159, 85, .52); color: var(--member-ink); background: rgba(10, 9, 8, .55); font: 500 .68rem/1.3 'DM Mono', Consolas, monospace; letter-spacing: .04em; text-decoration: none; }
+.life-tree__root-link:hover, .life-tree__action:hover, .life-tree__action:focus-visible { border-color: var(--member-accent); color: var(--member-accent); }
+.life-tree__root-link:focus-visible, .life-tree__action:focus-visible { outline: 2px solid var(--member-accent); outline-offset: 2px; }
+.life-tree__trunk { width: 1px; height: 2.5rem; margin: 0 auto; background: linear-gradient(var(--member-accent), rgba(209, 159, 85, .18)); }
+.life-tree__branches { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: .9rem; }
+.life-tree__branch { --branch-color: #d0ad72; min-width: 0; border: 1px solid color-mix(in srgb, var(--branch-color) 34%, transparent); background: linear-gradient(150deg, color-mix(in srgb, var(--branch-color) 5%, #13100d), rgba(8, 8, 7, .96)); }
+.life-tree__branch[data-kind="friendship"] { --branch-color: #a7b9b1; }
+.life-tree__branch[data-kind="team"] { --branch-color: #96a9c6; }
+.life-tree__branch[data-kind="rescue"] { --branch-color: #d58f62; }
+.life-tree__branch[data-kind="faction"] { --branch-color: #c88052; }
+.life-tree__branch[data-kind="archive"] { --branch-color: #a7a08f; }
+.life-tree__branch > header { position: relative; display: grid; grid-template-columns: 2.5rem minmax(0, 1fr) auto; align-items: center; gap: .65rem; padding: .8rem; border-bottom: 1px solid color-mix(in srgb, var(--branch-color) 23%, transparent); }
+.life-tree__branch > header::before { position: absolute; top: -2.5rem; left: 50%; height: 2.5rem; border-left: 1px solid color-mix(in srgb, var(--branch-color) 65%, transparent); content: ''; }
+.life-tree__branch-symbol { display: grid; width: 2.3rem; aspect-ratio: 1; place-items: center; border: 1px solid color-mix(in srgb, var(--branch-color) 55%, transparent); border-radius: 50%; color: var(--branch-color); font-size: 1.1rem; }
+.life-tree__branch > header small { color: var(--branch-color); font: 500 .58rem/1.3 'DM Mono', Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.life-tree__branch > header h5 { margin: .18rem 0 0; color: var(--member-ink); font: 700 1.3rem/1.05 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.life-tree__branch > header > b { color: var(--branch-color); font: 500 .7rem/1 'DM Mono', Consolas, monospace; }
+.life-tree__nodes { display: grid; gap: .5rem; padding: .65rem; }
+.life-tree__link { min-width: 0; border: 1px solid color-mix(in srgb, var(--branch-color) 30%, transparent); background: rgba(5, 5, 4, .48); }
+.life-tree__link[data-status="proposal"] { border-style: dashed; }
+.life-tree__link[data-status="unclear"] { border-style: dotted; }
+.life-tree__link > summary { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr) 1rem; align-items: center; gap: .6rem; min-height: 3.8rem; padding: .45rem .55rem; cursor: pointer; list-style: none; }
+.life-tree__link > summary::-webkit-details-marker { display: none; }
+.life-tree__avatar { width: 2.4rem; aspect-ratio: 1; font-size: .7rem; }
+.life-tree__link-main { display: grid; gap: .2rem; min-width: 0; }
+.life-tree__link-main b { overflow-wrap: anywhere; color: var(--member-ink); font-size: .91rem; line-height: 1.2; }
+.life-tree__link-main small { color: var(--branch-color); font: 500 .57rem/1.35 'DM Mono', Consolas, monospace; letter-spacing: .035em; }
+.life-tree__chevron { color: var(--branch-color); font: 500 1rem/1 'DM Mono', Consolas, monospace; transition: transform .2s ease; }
+.life-tree__link[open] .life-tree__chevron { transform: rotate(45deg); }
+.life-tree__link > summary:focus-visible { outline: 2px solid var(--branch-color); outline-offset: 2px; }
+.life-tree__detail { padding: .1rem .7rem .75rem 3.55rem; }
+.life-tree__detail > p { margin: 0 0 .6rem; color: var(--member-dim); font-size: .82rem; line-height: 1.55; }
+.life-tree__status { display: inline-flex; margin-bottom: .65rem; color: var(--branch-color); font: 500 .57rem/1.4 'DM Mono', Consolas, monospace; letter-spacing: .06em; }
+.life-tree__status[data-status="proposal"] { color: #e0b16a; }
+.life-tree__status[data-status="unclear"] { color: #a8b6b5; }
+.life-tree__actions { display: flex; flex-wrap: wrap; gap: .45rem; }
+.life-tree__action { min-height: 2.1rem; padding: .4rem .5rem; font-size: .59rem; }
+.life-tree__action--quiet { border-style: dotted; color: var(--member-dim); background: transparent; cursor: pointer; }
+.life-tree__no-dossier { display: inline-flex; align-items: center; min-height: 2.1rem; color: var(--member-dim); font: 500 .56rem/1.3 'DM Mono', Consolas, monospace; }
+
+@media (max-width: 760px) {
+  .life-tree__controls { grid-template-columns: 1fr; }
+  .life-tree__controls > p { text-align: left; }
+  .life-tree__branches { grid-template-columns: 1fr; gap: .7rem; padding-left: .7rem; border-left: 1px solid rgba(209, 159, 85, .35); }
+  .life-tree__branch > header::before { display: none; }
+  .life-tree__origin { padding: .8rem; }
+}
+@media (max-width: 420px) {
+  .life-tree__root-card { grid-template-columns: 3.6rem minmax(0, 1fr); gap: .7rem; }
+  .life-tree__root-avatar { width: 3.6rem; }
+  .life-tree__root-copy > p:not(.members-kicker) { font-size: .8rem; }
+  .life-tree__detail { padding-left: .7rem; }
+  .life-tree__actions { align-items: stretch; flex-direction: column; }
+  .life-tree__action { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .life-tree__chevron { transition: none; }
+}
